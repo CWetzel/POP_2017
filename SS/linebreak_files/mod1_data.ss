@@ -1,1779 +1,826 @@
-#V3.24u
-#C data file for China rockfish North of 4010
-#C adding multiple new data sources to approximate XDB-SRA model
-#C 1) extended time series of catch to match southern model (for combining,
-#  later)
-#C 2) Combined Northern OR commercial (live+dead)
-#C 3) Combined Southern WA rec (PC+PR)
-#_observed data:
-1900 #_styr -- extended to match southern model start year
-2014 #_endyr
+#V3.30.0.0-trans
+#_SS-V3.30.0.0-trans;_2016_10_13;_Stock_Synthesis_by_Richard_Methot_(NOAA)_
+# using_ADMB_11.2
+#_SS-V3.30.0.0-trans;user_support_available_at:NMFS.Stock.Synthesis@noaa.go
+# v
+#_SS-V3.30.0.0-trans;user_info_available_at:https://vlab.ncep.noaa.gov/grou
+# p/stock-synthesis
+#_Start_time: Wed Oct 26 08:41:30 2016
+#_Number_of_datafiles: 1
+
+#_observed data: 
+#V3.30.0.0-trans
+1940 #_styr
+2010 #_endyr
 1 #_nseas
-12 #_months/season
-1  #_spawn_seas
-3  #_Nfleet
-0  #_Nsurveys
-1  #_N_areas
-## fleet names (second cut on June 7, 2015)
-1_WA_SouthernWA_Rec_PCPR%2_WA_NorthernWA_Rec_PC%3_WA_NorthernWA_Rec_PR
-## 12_WA_SouthernWA_Rec_PCPR
-## 13_WA_NorthernWA_Rec_PC
-## 14_WA_NorthernWA_Rec_PR
-# following values are 1 per catch or survey fleet
-0.5 0.5 0.5 #_surveytiming_in_season -- mid-year, not exactly like XDB-SRA
-  1   1   1 #_area_assignments_for_each_fishery_and_survey
-# following values are 1 per catch fleet
-  1   1   1 #_units of catch:  1=bio; 2=num
-0.1 0.1 0.1 #_se of log(catch) only used for init_eq_catch and for Fmethod 
-# 2 and 3; use -1 for discard only fleets
+ 12 #_months/season
+2 #_N_subseasons(even number, minimum is 2)
+1 #_spawn_month
 2 #_Ngenders
-80 #_Nages
-  0   0   0 #_init_equil_catch_for_each_fishery
-115 #_N_lines_of_catch_to_read
-#_catch_biomass(mtons):_columns_are_fisheries,year,season
-# this file has catch in SS format based on formulas in the adjacent Google
-#  Doc "Catch Pivot" worksheet
-#fleet12 fleet13 fleet14 Year Season #
- 0      0       0       1900    1       #
- 0      0       0       1901    1       #
- 0      0       0       1902    1       #
- 0      0       0       1903    1       #
- 0      0       0       1904    1       #
- 0      0       0       1905    1       #
- 0      0       0       1906    1       #
- 0      0       0       1907    1       #
- 0      0       0       1908    1       #
- 0      0       0       1909    1       #
- 0      0       0       1910    1       #
- 0      0       0       1911    1       #
- 0      0       0       1912    1       #
- 0      0       0       1913    1       #
- 0      0       0       1914    1       #
- 0      0       0       1915    1       #
- 0      0       0       1916    1       #
- 0      0       0       1917    1       #
- 0      0       0       1918    1       #
- 0      0       0       1919    1       #
- 0      0       0       1920    1       #
- 0      0       0       1921    1       #
- 0      0       0       1922    1       #
- 0      0       0       1923    1       #
- 0      0       0       1924    1       #
- 0      0       0       1925    1       #
- 0      0       0       1926    1       #
- 0      0       0       1927    1       #
- 0      0       0       1928    1       #
- 0      0       0       1929    1       #
- 0      0       0       1930    1       #
- 0      0       0       1931    1       #
- 0      0       0       1932    1       #
- 0      0       0       1933    1       #
- 0      0       0       1934    1       #
- 0      0       0       1935    1       #
- 0      0       0       1936    1       #
- 0      0       0       1937    1       #
- 0      0       0       1938    1       #
- 0      0       0       1939    1       #
- 0      0       0       1940    1       #
- 0      0       0       1941    1       #
- 0      0       0       1942    1       #
- 0      0       0       1943    1       #
- 0      0       0       1944    1       #
- 0      0       0       1945    1       #
- 0      0       0       1946    1       #
- 0      0       0       1947    1       #
- 0      0       0       1948    1       #
- 0      0       0       1949    1       #
- 0      0       0       1950    1       #
- 0      0       0       1951    1       #
- 0      0       0       1952    1       #
- 0      0       0       1953    1       #
- 0      0       0       1954    1       #
- 0      0       0       1955    1       #
- 0      0       0       1956    1       #
- 0      0       0       1957    1       #
- 0      0       0       1958    1       #
- 0      0       0       1959    1       #
- 0      0       0       1960    1       #
- 0      0       0       1961    1       #
- 0      0       0       1962    1       #
- 0      0       0       1963    1       #
- 0      0       0       1964    1       #
- 0      0       0       1965    1       #
- 0      0       0       1966    1       #
- 0      0.27    1.04    1967    1       #
- 0.02   0.32    1.25    1968    1       #
- 0.04   0.37    1.45    1969    1       #
- 0.06   0.43    1.66    1970    1       #
- 0.08   0.48    1.87    1971    1       #
- 0.10   0.53    2.08    1972    1       #
- 0.11   0.59    2.29    1973    1       #
- 0.13   0.64    2.49    1974    1       #
- 0.15   0.69    2.7     1975    1       #
- 0.02   0.38    1.48    1976    1       #
- 0.01   0.29    1.12    1977    1       #
- 0.06   0.78    3.02    1978    1       #
- 0.01   0.62    2.4     1979    1       #
- 0.02   0.53    2.04    1980    1       #
- 0.06   0.47    1.83    1981    1       #
- 0.05   0.56    2.18    1982    1       #
- 0.00   0.62    2.42    1983    1       #
- 0.11   0.67    2.62    1984    1       #
- 0.06   0.68    2.64    1985    1       #
- 0.16   0.78    3.02    1986    1       #
- 0.20   1.03    3.73    1987    1       #
- 0.24   1.28    4.45    1988    1       #
- 0.27   1.54    5.16    1989    1       #
- 0.31   1.79    5.88    1990    1       #
- 0.23   0.51    3.58    1991    1       #
- 0.35   1.46    5.81    1992    1       #
- 0.32   1.13    5.08    1993    1       #
- 0.32   1.18    3.24    1994    1       #
- 0.10   0.6     3.43    1995    1       #
- 0.12   0.45    2.29    1996    1       #
- 0.19   0.4     2.13    1997    1       #
- 0.26   0.08    1.65    1998    1       #
- 0.06   0.09    2.35    1999    1       #
- 0.10   0.41    2.51    2000    1       #
- 0.25   0.25    3.13    2001    1       #
- 0.09   0.23    2.17    2002    1       #
- 0.09   0.12    2.18    2003    1       #
- 0.12   0.14    1.97    2004    1       #
- 0.03   0.19    2.46    2005    1       #
- 0.03   0.08    2.2     2006    1       #
- 0.07   0.15    2.73    2007    1       #
- 0.17   0.31    2.68    2008    1       #
- 0.07   0.17    2.55    2009    1       #
- 0.19   0.13    3.36    2010    1       #
- 0.07   0.17    3.02    2011    1       #
- 0.08   0.25    2.63    2012    1       #
- 0.07   0.27    3.06    2013    1       #
- 0.04   0.3     2.68    2014    1       #
+40 #_Nages=accumulator age
+1 #_N_areas
+7 #_Nfleets (including surveys)
+#_fleet_type: 1=catch fleet; 2=bycatch only fleet; 3=survey; 4=ignore 
+#_survey_timing: -1=for use of catch-at-age to override the month value ass
+# ociated with a datum 
+#_fleet_area:  area the fleet/survey operates in 
+#_units of catch:  1=bio; 2=num (ignored for surveys; their units read late
+# r)
+#_catch_mult: 0=no; 1=yes
+#_rows are fleets
+#_fleet_type, timing, area, units, need_catch_mult fleetname
+ 1 0.5 1 1 0 Fishery  # 1
+ 3 0.5 1 2 0 POP  # 2
+ 3 0.5 1 2 0 EarlyTriennial  # 3
+ 3 0.5 1 2 0 LateTriennial  # 4
+ 3 0.5 1 2 0 AFSCSlope  # 5
+ 3 0.5 1 2 0 NWFSCSlope  # 6
+ 3 0.5 1 2 0 NWFSCcombo  # 7
+#_Catch data: yr, seas, fleet, catch, catch_se
+#_catch_se:  standard error of log(catch); can be overridden in control fil
+# e with detailed F input
+-999 1 1 0 0.05
+1940 1 1 12 0.05
+1941 1 1 18 0.05
+1942 1 1 32 0.05
+1943 1 1 114 0.05
+1944 1 1 200 0.05
+1945 1 1 303 0.05
+1946 1 1 239 0.05
+1947 1 1 203 0.05
+1948 1 1 217 0.05
+1949 1 1 570 0.05
+1950 1 1 830 0.05
+1951 1 1 1012 0.05
+1952 1 1 2338 0.05
+1953 1 1 1708 0.05
+1954 1 1 2465 0.05
+1955 1 1 1899 0.05
+1956 1 1 3085 0.05
+1957 1 1 2638 0.05
+1958 1 1 2064 0.05
+1959 1 1 1314 0.05
+1960 1 1 2238 0.05
+1961 1 1 3167 0.05
+1962 1 1 4200 0.05
+1963 1 1 5576 0.05
+1964 1 1 5927 0.05
+1965 1 1 7491 0.05
+1966 1 1 18769 0.05
+1967 1 1 14463 0.05
+1968 1 1 9125 0.05
+1969 1 1 1948 0.05
+1970 1 1 2344 0.05
+1971 1 1 2084 0.05
+1972 1 1 2030 0.05
+1973 1 1 2862 0.05
+1974 1 1 2466 0.05
+1975 1 1 1400 0.05
+1976 1 1 1784 0.05
+1977 1 1 1711 0.05
+1978 1 1 2337 0.05
+1979 1 1 1892 0.05
+1980 1 1 2120 0.05
+1981 1 1 1395 0.05
+1982 1 1 1086 0.05
+1983 1 1 1631 0.05
+1984 1 1 1648 0.05
+1985 1 1 1485 0.05
+1986 1 1 1433 0.05
+1987 1 1 1120 0.05
+1988 1 1 1409 0.05
+1989 1 1 1440 0.05
+1990 1 1 1091 0.05
+1991 1 1 1428 0.05
+1992 1 1 1394 0.05
+1993 1 1 1258 0.05
+1994 1 1 1047 0.05
+1995 1 1 845 0.05
+1996 1 1 780 0.05
+1997 1 1 639 0.05
+1998 1 1 636 0.05
+1999 1 1 509 0.05
+2000 1 1 133 0.05
+2001 1 1 264 0.05
+2002 1 1 150 0.05
+2003 1 1 134 0.05
+2004 1 1 122 0.05
+2005 1 1 64 0.05
+2006 1 1 72 0.05
+2007 1 1 132 0.05
+2008 1 1 86 0.05
+2009 1 1 95 0.05
+2010 1 1 91 0.05
+-9999 0 0 0 0
 #
-34 #_N_cpue_and_surveyabundance_observations
-#_Units:  0=numbers; 1=biomass; 2=F
+ #_CPUE_and_surveyabundance_observations
+#_Units:  0=numbers; 1=biomass; 2=F; >=30 for special types
 #_Errtype:  -1=normal; 0=lognormal; >0=T
 #_Fleet Units Errtype
-1      0     0 # 12_WA_SouthernWA_Rec_PCPR
-2      0     0 # 13_WA_NorthernWA_Rec_PC
-3      0     0 # 14_WA_NorthernWA_Rec_PR
-
-
-### Washington Rec CPUE (lognormal) - only use one of the following
-### Index with Stevens-MacCall filtering and all positives retained
-### Assigned to fleet: "14_WA_NorthernWA_Rec_PC"
-#_year seas index obs err (CV)
-1981 1  3 0.694 0.154 # WA Rec CPUE
-1982 1  3 0.54 0.105 # WA Rec CPUE
-1983 1  3 0.643 0.098 # WA Rec CPUE
-1984 1  3 0.5 0.071 # WA Rec CPUE
-1985 1  3 0.736 0.059 # WA Rec CPUE
-1986 1  3 0.616 0.077 # WA Rec CPUE
-1987 1  3 0.486 0.06 # WA Rec CPUE
-1988 1  3 0.587 0.064 # WA Rec CPUE
-1989 1  3 0.666 0.051 # WA Rec CPUE
-1990 1  3 0.801 0.056 # WA Rec CPUE
-1991 1  3 0.665 0.066 # WA Rec CPUE
-1992 1  3 0.704 0.109 # WA Rec CPUE
-1993 1  3 0.63 0.057 # WA Rec CPUE
-1994 1  3 0.648 0.054 # WA Rec CPUE
-1995 1  3 0.59 0.051 # WA Rec CPUE
-1996 1  3 0.389 0.06 # WA Rec CPUE
-1997 1  3 0.368 0.067 # WA Rec CPUE
-1998 1  3 0.402 0.075 # WA Rec CPUE
-1999 1  3 0.403 0.081 # WA Rec CPUE
-2000 1  3 0.52 0.071 # WA Rec CPUE
-2001 1  3 0.594 0.068 # WA Rec CPUE
-2002 1  3 0.521 0.077 # WA Rec CPUE
-2003 1  3 0.472 0.087 # WA Rec CPUE
-2004 1  3 0.435 0.093 # WA Rec CPUE
-2005 1  3 0.427 0.065 # WA Rec CPUE
-2006 1  3 0.48 0.081 # WA Rec CPUE
-2007 1  3 0.655 0.113 # WA Rec CPUE
-2008 1  3 0.655 0.07 # WA Rec CPUE
-2009 1  3 0.635 0.081 # WA Rec CPUE
-2010 1  3 0.711 0.111 # WA Rec CPUE
-2011 1  3 0.726 0.075 # WA Rec CPUE
-2012 1  3 0.631 0.104 # WA Rec CPUE
-2013 1  3 0.713 0.078 # WA Rec CPUE
-2014 1  3 0.603 0.103 # WA Rec CPUE
-
-0 #_N_fleets_with_discard
+1 1 0 # Fishery
+2 1 0 # POP
+3 1 0 # EarlyTriennial
+4 1 0 # LateTriennial
+5 1 0 # AFSCSlope
+6 1 0 # NWFSCSlope
+7 1 0 # NWFSCcombo
+#_yr month fleet obs stderr
+1956 7 1 0.4 0.4 #_ Fishery
+1957 7 1 0.3 0.4 #_ Fishery
+1958 7 1 0.32 0.4 #_ Fishery
+1959 7 1 0.29 0.4 #_ Fishery
+1960 7 1 0.28 0.4 #_ Fishery
+1961 7 1 0.31 0.4 #_ Fishery
+1962 7 1 0.29 0.4 #_ Fishery
+1963 7 1 0.34 0.4 #_ Fishery
+1964 7 1 0.35 0.4 #_ Fishery
+1965 7 1 0.55 0.4 #_ Fishery
+1966 7 1 0.47 0.4 #_ Fishery
+1967 7 1 0.3 0.4 #_ Fishery
+1968 7 1 0.17 0.4 #_ Fishery
+1969 7 1 0.178 0.4 #_ Fishery
+1970 7 1 0.175 0.4 #_ Fishery
+1971 7 1 0.2034 0.4 #_ Fishery
+1972 7 1 0.1984 0.4 #_ Fishery
+1973 7 1 0.1144 0.4 #_ Fishery
+1979 7 2 30872 0.1885 #_ POP
+1985 7 2 15909 0.1935 #_ POP
+1980 7 3 8208 0.1735 #_ EarlyTriennial
+1983 7 3 6390 0.1346 #_ EarlyTriennial
+1986 7 3 5303 0.3214 #_ EarlyTriennial
+1989 7 3 6636 0.3075 #_ EarlyTriennial
+1992 7 3 3568 0.2926 #_ EarlyTriennial
+1995 7 4 1827 0.4308 #_ LateTriennial
+1998 7 4 6477 0.5482 #_ LateTriennial
+2001 7 4 2753 0.575 #_ LateTriennial
+2004 7 4 6250 0.5001 #_ LateTriennial
+1996 7 5 4621 0.2176 #_ AFSCSlope
+1997 7 5 1768 0.4163 #_ AFSCSlope
+1999 7 5 12094 0.3758 #_ AFSCSlope
+2000 7 5 2971 0.2948 #_ AFSCSlope
+2001 7 5 15631 0.408 #_ AFSCSlope
+1999 7 6 2558 0.8026 #_ NWFSCSlope
+2000 7 6 3991 0.8601 #_ NWFSCSlope
+2001 7 6 4495 0.794 #_ NWFSCSlope
+2002 7 6 2213 0.8318 #_ NWFSCSlope
+2003 7 7 25088 0.5585 #_ NWFSCcombo
+2004 7 7 5348 0.5496 #_ NWFSCcombo
+2005 7 7 9351 0.607 #_ NWFSCcombo
+2006 7 7 13090 0.6995 #_ NWFSCcombo
+2007 7 7 3674 0.5535 #_ NWFSCcombo
+2008 7 7 6462 0.6245 #_ NWFSCcombo
+2009 7 7 12014 0.6788 #_ NWFSCcombo
+2010 7 7 19047 0.665 #_ NWFSCcombo
+-9999 1 1 1 1 # terminator for survey observations 
+#
+1 #_N_fleets_with_discard
 #_discard_units (1=same_as_catchunits(bio/num); 2=fraction; 3=numbers)
 #_discard_errtype:  >0 for DF of T-dist(read CV below); 0 for normal with C
 # V; -1 for normal with se; -2 for lognormal
-#Fleet Disc_units err_type
-0 #N discard obs
-#_year seas index obs err
+# note, only have units and errtype for fleets with discard 
+#_Fleet units errtype
+1 2 0 # Fishery
+#_yr month fleet obs stderr
+1986 7 1 0.05 0.3 #_ Fishery
+1992 7 1 0.1 0.3 #_ Fishery
+2002 7 1 0.155 0.109 #_ Fishery
+2003 7 1 0.157 0.125 #_ Fishery
+2004 7 1 0.192 0.109 #_ Fishery
+2005 7 1 0.175 0.16 #_ Fishery
+2006 7 1 0.135 0.104 #_ Fishery
+2007 7 1 0.172 0.14 #_ Fishery
+2008 7 1 0.362 0.078 #_ Fishery
+2009 7 1 0.518 0.076 #_ Fishery
+-9999 0 0 0.0 0.0 # terminator for discard data 
 #
-0 #_N_meanbodywt_obs
-30 #_DF_for_meanbodywt_T-distribution_like
-
-2  # length bin method: 1=use databins; 2=generate from binwidth,min,max be
-# low; 3=read vector
-2  # binwidth for population size comp
-8  # minimum size in the population (lower edge of first bin and size at ag
-# e 0.00)
-50 # maximum size in the population (lower edge of last bin)
-
--0.0001 #_comp_tail_compression
-1e-003 #_add_to_comp
-0 #_combine males into females at or below this bin number
-15 #_N_LengthBins
-18 20 22 24 26 28 30 32 34 36 38 40 42 44 46
-
-38 #_N_Length_obs
-
-### WA Rec, South, All modes combined (represent 4% of WA removals, 1969-20
-# 14)
-### initially assigning to fleet: "12_WA_SouthernWA_Rec_PCPR"
-#Yr     Seas    Flt/Svy Gender  Part    Nsamp   18cm    20cm    22cm    24c
-# m    26cm    28cm    30cm    32cm    34cm    36cm    38cm    40cm    42cm
-#     44cm    46cm+   repeat
-1981    1       1       0       2       8       0       0       0       0  
-     2       1       2       0       2       1       0       0       0     
-  0       0       0       0       0       0       2       1       2       0
-       2       1       0       0       0       0       0
-2002    1       1       0       2       31      0       0       0       0  
-     2       5       0       8       7       8       1       0       0     
-  0       0       0       0       0       0       2       5       0       8
-       7       8       1       0       0       0       0
-2003    1       1       0       2       32      0       0       0       0  
-     3       5       4       4       6       8       1       0       1     
-  0       0       0       0       0       0       3       5       4       4
-       6       8       1       0       1       0       0
-2004    1       1       0       2       25      0       1       1       0  
-     3       5       7       2       4       2       0       0       0     
-  0       0       0       1       1       0       3       5       7       2
-       4       2       0       0       0       0       0
-2005    1       1       0       2       5       0       0       0       0  
-     1       1       1       2       0       0       0       0       0     
-  0       0       0       0       0       0       1       1       1       2
-       0       0       0       0       0       0       0
-2006    1       1       0       2       11      0       1       1       1  
-     0       0       1       3       3       1       0       0       0     
-  0       0       0       1       1       1       0       0       1       3
-       3       1       0       0       0       0       0
-2007    1       1       0       2       35      0       0       0       0  
-     0       2       2       9       11      3       3       1       2     
-  2       0       0       0       0       0       0       2       2       9
-       11      3       3       1       2       2       0
-2008    1       1       0       2       8       0       0       0       0  
-     0       0       2       1       2       2       1       0       0     
-  0       0       0       0       0       0       0       0       2       1
-       2       2       1       0       0       0       0
-2009    1       1       0       2       23      0       0       0       1  
-     1       2       1       3       3       2       3       2       3     
-  2       0       0       0       0       1       1       2       1       3
-       3       2       3       2       3       2       0
-2010    1       1       0       2       20      0       0       0       0  
-     0       2       3       3       7       4       0       0       0     
-  1       0       0       0       0       0       0       2       3       3
-       7       4       0       0       0       1       0
-2011    1       1       0       2       19      0       0       0       0  
-     2       6       6       2       1       2       0       0       0     
-  0       0       0       0       0       0       2       6       6       2
-       1       2       0       0       0       0       0
-2012    1       1       0       2       14      0       0       1       0  
-     0       1       2       2       5       1       1       0       0     
-  0       1       0       0       1       0       0       1       2       2
-       5       1       1       0       0       0       1
-2013    1       1       0       2       16      0       0       0       0  
-     0       3       1       2       3       5       2       0       0     
-  0       0       0       0       0       0       0       3       1       2
-       3       5       2       0       0       0       0
-2014    1       1       0       2       18      0       0       0       0  
-     0       0       2       1       3       10      2       0       0     
-  0       0       0       0       0       0       0       0       2       1
-       3       10      2       0       0       0       0
-
-### WA Rec, North, All modes combined (represent 96% of WA removals, 1969-2
-# 014)
-### initially assigning to fleet: "14_WA_NorthernWA_Rec_PR"
-### ("WA_Rec_PC" has more catch than "WA_Rec_PC" but likely both will share
-#  selectivity)
-#Yr     Seas    Flt/Svy Gender  Part    Nsamp   18cm    20cm    22cm    24c
-# m    26cm    28cm    30cm    32cm    34cm    36cm    38cm    40cm    42cm
-#     44cm    46cm+   repeat
-1979    1       3       0       2       40      0       0       0       0  
-     0       1       11      14      11      1       1       1       0     
-  0       0       0       0       0       0       0       1       11      1
-4      11      1       1       1       0       0       0
-1980    1       3       0       2       2       0       0       0       0  
-     0       0       1       1       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       1       1
-       0       0       0       0       0       0       0
-1981    1       3       0       2       16      0       0       0       0  
-     0       0       1       2       3       0       3       3       1     
-  0       3       0       0       0       0       0       0       1       2
-       3       0       3       3       1       0       3
-1983    1       3       0       2       2       0       0       0       0  
-     0       0       0       0       2       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       2       0       0       0       0       0       0
-1995    1       3       0       2       36      0       0       0       0  
-     0       4       8       12      9       3       0       0       0     
-  0       0       0       0       0       0       0       4       8       1
-2      9       3       0       0       0       0       0
-1996    1       3       0       2       16      0       0       0       0  
-     1       3       3       5       3       0       0       1       0     
-  0       0       0       0       0       0       1       3       3       5
-       3       0       0       1       0       0       0
-1997    1       3       0       2       9       0       0       0       0  
-     0       1       0       1       2       2       1       2       0     
-  0       0       0       0       0       0       0       1       0       1
-       2       2       1       2       0       0       0
-1998    1       3       0       2       58      0       0       0       0  
-     0       5       6       19      17      11      0       0       0     
-  0       0       0       0       0       0       0       5       6       1
-9      17      11      0       0       0       0       0
-1999    1       3       0       2       180     0       0       0       1  
-     2       10      36      65      46      17      3       0       0     
-  0       0       0       0       0       1       2       10      36      6
-5      46      17      3       0       0       0       0
-2000    1       3       0       2       55      0       0       0       0  
-     2       5       10      13      20      3       2       0       0     
-  0       0       0       0       0       0       2       5       10      1
-3      20      3       2       0       0       0       0
-2001    1       3       0       2       38      0       0       0       1  
-     1       2       10      11      9       1       1       2       0     
-  0       0       0       0       0       1       1       2       10      1
-1      9       1       1       2       0       0       0
-2002    1       3       0       2       38      0       0       0       0  
-     0       3       4       19      5       4       2       0       1     
-  0       0       0       0       0       0       0       3       4       1
-9      5       4       2       0       1       0       0
-2003    1       3       0       2       28      0       0       0       0  
-     0       3       8       8       5       2       2       0       0     
-  0       0       0       0       0       0       0       3       8       8
-       5       2       2       0       0       0       0
-2004    1       3       0       2       198     0       0       1       0  
-     3       9       35      53      56      25      14      2       0     
-  0       0       0       0       1       0       3       9       35      5
-3      56      25      14      2       0       0       0
-2005    1       3       0       2       358     0       0       2       1  
-     1       16      49      109     106     42      27      5       0     
-  0       0       0       0       2       1       1       16      49      1
-09     106     42      27      5       0       0       0
-2006    1       3       0       2       266     0       0       0       0  
-     0       10      39      87      84      29      12      3       0     
-  0       2       0       0       0       0       0       10      39      8
-7      84      29      12      3       0       0       2
-2007    1       3       0       2       185     0       0       0       0  
-     2       5       24      48      60      31      12      3       0     
-  0       0       0       0       0       0       2       5       24      4
-8      60      31      12      3       0       0       0
-2008    1       3       0       2       135     0       0       0       3  
-     3       8       19      40      45      14      2       1       0     
-  0       0       0       0       0       3       3       8       19      4
-0      45      14      2       1       0       0       0
-2009    1       3       0       2       95      0       1       0       0  
-     1       7       14      28      22      14      4       2       1     
-  1       0       0       1       0       0       1       7       14      2
-8      22      14      4       2       1       1       0
-2010    1       3       0       2       58      0       2       0       0  
-     0       1       6       12      15      9       6       6       0     
-  0       1       0       2       0       0       0       1       6       1
-2      15      9       6       6       0       0       1
-2011    1       3       0       2       163     0       0       0       1  
-     1       2       10      30      42      41      25      9       2     
-  0       0       0       0       0       1       1       2       10      3
-0      42      41      25      9       2       0       0
-2012    1       3       0       2       63      0       0       0       0  
-     1       0       3       15      13      12      10      8       1     
-  0       0       0       0       0       0       1       0       3       1
-5      13      12      10      8       1       0       0
-2013    1       3       0       2       156     0       0       0       0  
-     0       7       14      40      39      40      10      5       0     
-  1       0       0       0       0       0       0       7       14      4
-0      39      40      10      5       0       1       0
-2014    1       3       0       2       423     0       0       0       0  
-     2       6       15      81      128     126     51      12      2     
-  0       0       0       0       0       0       2       6       15      8
-1      128     126     51      12      2       0       0
-
-
-47 #_N_age_bins
-4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 
-31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
-2 #_N_ageerror_definitions
-# Default ageing error matrix (1st row is expected age, 2nd is standard dev
-# iation of age readings)
-# Age 0 Age 1   Age 2   Age 3   Age 4   Age 5   Age 6   Age 7   Age 8   Age
-#  9   Age 10  Age 11  Age 12  Age 13  Age 14  Age 15  Age 16  Age 17  Age 
-# 18  Age 19  Age 20  Age 21  Age 22  Age 23  Age 24  Age 25  Age 26  Age 2
-# 7  Age 28  Age 29  Age 30  Age 31  Age 32  Age 33  Age 34  Age 35  Age 36
-#   Age 37  Age 38  Age 39  Age 40  Age 41  Age 42  Age 43  Age 44  Age 45 
-#  Age 46  Age 47  Age 48  Age 49  Age 50  Age 51  Age 52  Age 53  Age 54  
-# Age 55  Age 56  Age 57  Age 58  Age 59  Age 60  Age 61  Age 62  Age 63  A
-# ge 64  Age 65  Age 66  Age 67  Age 68  Age 69  Age 70  Age 71  Age 72  Ag
-# e 73  Age 74  Age 75  Age 76  Age 77  Age 78  Age 79  Age 80  ### Age 81 
-#      Age 82  Age 83  Age 84  Age 85  Age 86  Age 87  Age 88  Age 89  Age 
-0.5     1.5     2.5     3.5     4.5     5.5     6.5     7.5     8.5     9.5
-     10.5    11.5    12.5    13.5    14.5    15.5    16.5    17.5    18.5  
-  19.5    20.5    21.5    22.5    23.5    24.5    25.5    26.5    27.5    2
-8.5    29.5    30.5    31.5    32.5    33.5    34.5    35.5    36.5    37.5
-    38.5    39.5    40.5    41.5    42.5    43.5    44.5    45.5    46.5   
- 47.5    48.5    49.5    50.5    51.5    52.5    53.5    54.5    55.5    56
-.5    57.5    58.5    59.5    60.5    61.5    62.5    63.5    64.5    65.5 
-   66.5    67.5    68.5    69.5    70.5    71.5    72.5    73.5    74.5    
-75.5    76.5    77.5    78.5    79.5    80.5    ### 81.5        82.5    83.
-# 5    84.5    85.5    86.5    87.5    88.5    89.5    90.5    #Expected_ag
-0.0968  0.0968  0.1936  0.2904  0.3872  0.4840  0.5807  0.6775  0.7743  0.8
-711  0.9679  1.0647  1.1615  1.2583  1.3551  1.4519  1.5487  1.6455  1.7422
-  1.8390  1.9358  2.0326  2.1294  2.2262  2.3230  2.4198  2.5166  2.6134  2
-.7102  2.8070  2.9037  3.0005  3.0973  3.1941  3.2909  3.3877  3.4845  3.58
-13  3.6781  3.7749  3.8717  3.9684  4.0652  4.1620  4.2588  4.3556  4.4524 
- 4.5492  4.6460  4.7428  4.8396  4.9364  5.0332  5.1299  5.2267  5.3235  5.
-4203  5.5171  5.6139  5.7107  5.8075  5.9043  6.0011  6.0979  6.1946  6.291
-4  6.3882  6.4850  6.5818  6.6786  6.7754  6.8722  6.9690  7.0658  7.1626  
-7.2594  7.3561  7.4529  7.5497  7.6465  7.7433  ### 7.8401      7.9369  8.0
-# 337  8.1305  8.2273  8.3241  8.4209  8.5176  8.6144  8.7112  #SD
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                ###
-# Ageing error for ages associated with early years from former NWFSC age r
-# eader (1st row is expected age, 2nd is standard deviation of age readings
-# )                                                                        
-#                                                                          
-#                                                                          
-#                                                                          
-#                                                                          
-#                                                                          
-#                                                               ###
-# Age 0 Age 1   Age 2   Age 3   Age 4   Age 5   Age 6   Age 7   Age 8   Age
-#  9   Age 10  Age 11  Age 12  Age 13  Age 14  Age 15  Age 16  Age 17  Age 
-# 18  Age 19  Age 20  Age 21  Age 22  Age 23  Age 24  Age 25  Age 26  Age 2
-# 7  Age 28  Age 29  Age 30  Age 31  Age 32  Age 33  Age 34  Age 35  Age 36
-#   Age 37  Age 38  Age 39  Age 40  Age 41  Age 42  Age 43  Age 44  Age 45 
-#  Age 46  Age 47  Age 48  Age 49  Age 50  Age 51  Age 52  Age 53  Age 54  
-# Age 55  Age 56  Age 57  Age 58  Age 59  Age 60  Age 61  Age 62  Age 63  A
-# ge 64  Age 65  Age 66  Age 67  Age 68  Age 69  Age 70  Age 71  Age 72  Ag
-# e 73  Age 74  Age 75  Age 76  Age 77  Age 78  Age 79  Age 80  ### Age 81 
-#      Age 82  Age 83  Age 84  Age 85  Age 86  Age 87  Age 88  Age 89  Age 
-0.43    1.29    2.16    3.02    3.88    4.75    5.61    6.47    7.33    8.2
-0    9.06    9.92    10.79   11.65   12.51   13.37   14.24   15.10   15.96 
-  16.83   17.69   18.55   19.41   20.28   21.14   22.00   22.86   23.73   2
-4.59   25.45   26.32   27.18   28.04   28.90   29.77   30.63   31.49   32.3
-6   33.22   34.08   34.94   35.81   36.67   37.53   38.40   39.26   40.12  
- 40.98   41.85   42.71   43.57   44.44   45.30   46.16   47.02   47.89   48
-.75   49.61   50.47   51.34   52.20   53.06   53.93   54.79   55.65   56.51
-   57.38   58.24   59.10   59.97   60.83   61.69   62.55   63.42   64.28   
-65.14   66.01   66.87   67.73   68.59   69.46   ### 70.32       71.18   72.
-# 05   72.91   73.77   74.63   75.50   76.36   77.22   78.09   #Expected_ag
-0.0968  0.0968  0.1936  0.2904  0.3872  0.4840  0.5807  0.6775  0.7743  0.8
-711  0.9679  1.0647  1.1615  1.2583  1.3551  1.4519  1.5487  1.6455  1.7422
-  1.8390  1.9358  2.0326  2.1294  2.2262  2.3230  2.4198  2.5166  2.6134  2
-.7102  2.8070  2.9037  3.0005  3.0973  3.1941  3.2909  3.3877  3.4845  3.58
-13  3.6781  3.7749  3.8717  3.9684  4.0652  4.1620  4.2588  4.3556  4.4524 
- 4.5492  4.6460  4.7428  4.8396  4.9364  5.0332  5.1299  5.2267  5.3235  5.
-4203  5.5171  5.6139  5.7107  5.8075  5.9043  6.0011  6.0979  6.1946  6.291
-4  6.3882  6.4850  6.5818  6.6786  6.7754  6.8722  6.9690  7.0658  7.1626  
-7.2594  7.3561  7.4529  7.5497  7.6465  7.7433  ### 7.8401      7.9369  8.0
-# 337  8.1305  8.2273  8.3241  8.4209  8.5176  8.6144  8.7112  #SD
-
-123 #_N_Agecomp_obs
-3 #_Lbin_method: 1=poplenbins; 2=datalenbins; 3=lengths
-0 #_combine males into females at or below this bin number
-
-### WA Rec, South, All modes combined
-### initially assigning to fleet: "12_WA_SouthernWA_Rec_PCPR"
-#Yr     Seas    Flt/Svy Gender  Part    AgeError        LbinLo  LbinHi  Nsa
-# mp   4yrs    5yrs    6yrs    7yrs    8yrs    9yrs    10yrs   11yrs   12yr
-# s   13yrs   14yrs   15yrs   16yrs   17yrs   18yrs   19yrs   20yrs   21yrs
-#    22yrs   23yrs   24yrs   25yrs   26yrs   27yrs   28yrs   29yrs   30yrs 
-#   31yrs   32yrs   33yrs   34yrs   35yrs   36yrs   37yrs   38yrs   39yrs  
-#  40yrs   41yrs   42yrs   43yrs   44yrs   45yrs   46yrs   47yrs   48yrs   
-# 49yrs   50+yrs  repeat
-2014    1       -1      0       0       1       -1      -1      15      0  
-     0       0       0       1       0       0       0       0       0     
-  0       0       0       1       1       1       0       0       0       1
-       1       0       0       1       1       1       2       0       0   
-    0       0       1       0       1       0       0       0       0      
- 0       0       1       1       0       0       0       0       0       0 
-      0       0       0       1       0       0       0       0       0    
-   0       0       0       1       1       1       0       0       0       
-1       1       0       0       1       1       1       2       0       0  
-     0       0       1       0       1       0       0       0       0     
-
-### WA Rec, North, All modes combined
-### initially assigning to fleet: "14_WA_NorthernWA_Rec_PR"
-### NOTE: setting fleet number negative to exclude from likelihood
-###       to avoid double counting with conditional age-at-length values
-###       entered below
-#Yr     Seas    Flt/Svy Gender  Part    AgeErr  LbinLo  LbinHi  Nsamp   4yr
-# s    5yrs    6yrs    7yrs    8yrs    9yrs    10yrs   11yrs   12yrs   13yr
-# s   14yrs   15yrs   16yrs   17yrs   18yrs   19yrs   20yrs   21yrs   22yrs
-#    23yrs   24yrs   25yrs   26yrs   27yrs   28yrs   29yrs   30yrs   31yrs 
-#   32yrs   33yrs   34yrs   35yrs   36yrs   37yrs   38yrs   39yrs   40yrs  
-#  41yrs   42yrs   43yrs   44yrs   45yrs   46yrs   47yrs   48yrs   49yrs   
-# 50+yrs  repeat
-1998    1        -3     0       2       1       -1      -1      50      0  
-     0       0       0       0       2       1       1       1       2     
-  1       1       3       5       4       5       4       3       2       2
-       1       0       1       2       0       0       0       0       1   
-    0       0       0       2       0       3       0       0       0      
- 1       0       0       0       0       0       0       0       2       0 
-      0       0       0       0       2       1       1       1       2    
-   1       1       3       5       4       5       4       3       2       
-2       1       0       1       2       0       0       0       0       1  
-     0       0       0       2       0       3       0       0       0     
-1999    1        -3     0       2       1       -1      -1      55      0  
-     0       0       0       1       3       4       5       0       4     
-  3       3       3       2       3       4       4       1       3       0
-       1       1       0       2       0       0       0       1       0   
-    1       0       0       0       1       0       0       0       0      
- 0       1       1       0       0       0       0       1       2       0 
-      0       0       0       1       3       4       5       0       4    
-   3       3       3       2       3       4       4       1       3       
-0       1       1       0       2       0       0       0       1       0  
-     1       0       0       0       1       0       0       0       0     
-2000    1        -3     0       2       1       -1      -1      55      0  
-     0       0       0       0       0       2       3       4       4     
-  0       2       1       1       2       2       4       2       4       1
-       1       2       0       0       0       0       2       1       0   
-    0       1       1       1       1       1       1       2       1      
- 0       2       1       0       0       0       0       0       5       0 
-      0       0       0       0       0       2       3       4       4    
-   0       2       1       1       2       2       4       2       4       
-1       1       2       0       0       0       0       2       1       0  
-     0       1       1       1       1       1       1       2       1     
-2001    1        -3     0       2       1       -1      -1      26      0  
-     1       0       1       0       0       0       4       3       0     
-  1       2       3       2       1       0       0       0       0       0
-       0       0       0       0       1       0       0       1       0   
-    0       0       1       1       0       0       0       0       0      
- 0       0       0       0       0       0       0       1       3       0 
-      1       0       1       0       0       0       4       3       0    
-   1       2       3       2       1       0       0       0       0       
-0       0       0       0       0       1       0       0       1       0  
-     0       0       1       1       0       0       0       0       0     
-2002    1        -3     0       2       1       -1      -1      11      0  
-     0       0       0       0       0       0       4       1       1     
-  2       0       1       0       1       0       0       1       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       4       1       1    
-   2       0       1       0       1       0       0       1       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-#2003   1        -3     0       2       1       -1      -1      0       0  
-#      0       0       0       0       0       0       0       0       0   
-#     0       0       0       0       0       0       0       0       0    
-#    0       0       0       0       0       0       0       0       0     
-#   0       0       0       0       0       0       0       0       0      
-#  0       0       0       0       0       0       0       0       0       
-# 0       0       0       0       0       0       0       0       0       0
-#        0       0       0       0       0       0       0       0       0 
-#       0       0       0       0       0       0       0       0       0  
-#      0       0       0       0       0       0       0       0       0   
-2004    1        -3     0       2       1       -1      -1      171     0  
-     0       0       1       5       9       10      5       4       10    
-  7       12      10      10      4       6       5       9       8       9
-       6       10      9       3       3       3       4       1       1   
-    0       0       0       2       0       0       0       0       1      
- 2       0       0       0       0       0       0       1       1       0 
-      0       0       1       5       9       10      5       4       10   
-   7       12      10      10      4       6       5       9       8       
-9       6       10      9       3       3       3       4       1       1  
-     0       0       0       2       0       0       0       0       1     
-2005    1        -3     0       2       1       -1      -1      206     0  
-     0       1       3       7       14      9       10      14      9     
-  11      18      9       12      11      6       5       6       4       1
-0      4       5       3       7       5       3       1       1       2   
-    0       0       2       0       2       2       0       1       1      
- 0       1       0       0       0       1       0       1       5       0 
-      0       1       3       7       14      9       10      14      9    
-   11      18      9       12      11      6       5       6       4       
-10      4       5       3       7       5       3       1       1       2  
-     0       0       2       0       2       2       0       1       1     
-2006    1        -3     0       2       1       -1      -1      88      0  
-     0       0       0       3       0       3       9       4       7     
-  3       8       5       8       2       4       5       2       5       5
-       1       0       3       0       3       2       0       0       0   
-    0       1       0       0       0       0       0       2       0      
- 0       1       0       0       1       0       0       0       1       0 
-      0       0       0       3       0       3       9       4       7    
-   3       8       5       8       2       4       5       2       5       
-5       1       0       3       0       3       2       0       0       0  
-     0       1       0       0       0       0       0       2       0     
-2007    1        -3     0       2       1       -1      -1      119     0  
-     0       0       1       2       1       2       5       1       6     
-  6       3       3       8       6       5       4       4       7       3
-       10      3       5       2       3       1       4       5       4   
-    0       0       0       0       2       0       0       1       0      
- 2       0       0       2       0       0       1       0       7       0 
-      0       0       1       2       1       2       5       1       6    
-   6       3       3       8       6       5       4       4       7       
-3       10      3       5       2       3       1       4       5       4  
-     0       0       0       0       2       0       0       1       0     
-2008    1        -3     0       2       1       -1      -1      73      0  
-     1       0       0       1       2       2       3       6       5     
-  4       3       3       3       5       3       9       1       2       0
-       4       3       2       2       1       2       1       1       0   
-    0       1       0       0       0       0       0       1       1      
- 0       0       0       0       0       0       0       0       1       0 
-      1       0       0       1       2       2       3       6       5    
-   4       3       3       3       5       3       9       1       2       
-0       4       3       2       2       1       2       1       1       0  
-     0       1       0       0       0       0       0       1       1     
-2009    1        -3     0       2       1       -1      -1      22      0  
-     0       0       0       0       2       2       0       2       0     
-  3       1       0       0       0       0       0       0       1       1
-       0       1       1       0       2       0       1       0       3   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       2       2       0       2       0    
-   3       1       0       0       0       0       0       0       1       
-1       0       1       1       0       2       0       1       0       3  
-     0       0       0       0       0       0       0       0       0     
-2010    1        -3     0       2       1       -1      -1      22      0  
-     0       0       0       0       1       1       1       0       0     
-  2       3       1       0       1       1       0       0       1       0
-       2       1       0       1       0       0       1       0       3   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       1       1       1       0       0    
-   2       3       1       0       1       1       0       0       1       
-0       2       1       0       1       0       0       1       0       3  
-     0       0       0       0       0       0       0       0       0     
-2011    1        -3     0       2       1       -1      -1      50      0  
-     0       0       0       0       1       0       0       0       0     
-  1       2       2       2       3       2       2       3       2       1
-       4       5       4       1       2       0       1       2       2   
-    2       0       2       0       0       1       1       0       0      
- 0       0       0       0       0       0       0       0       2       0 
-      0       0       0       0       1       0       0       0       0    
-   1       2       2       2       3       2       2       3       2       
-1       4       5       4       1       2       0       1       2       2  
-     2       0       2       0       0       1       1       0       0     
-2012    1        -3     0       2       1       -1      -1      24      0  
-     0       0       0       0       0       0       1       0       0     
-  0       0       0       0       3       1       1       0       3       2
-       1       1       1       1       2       2       0       1       2   
-    1       0       1       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       0       0    
-   0       0       0       0       3       1       1       0       3       
-2       1       1       1       1       2       2       0       1       2  
-     1       0       1       0       0       0       0       0       0     
-2013    1        -3     0       2       1       -1      -1      11      0  
-     0       0       1       0       0       1       0       0       0     
-  0       0       0       1       0       0       0       3       2       1
-       0       0       0       0       0       0       1       0       0   
-    0       1       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       1       0       0       0    
-   0       0       0       1       0       0       0       3       2       
-1       0       0       0       0       0       0       1       0       0  
-     0       1       0       0       0       0       0       0       0     
-2014    1        -3     0       2       1       -1      -1      398     0  
-     0       0       1       1       3       4       10      11      11    
-  13      3       7       13      15      17      18      15      19      2
-4      28      21      10      11      12      13      15      12      12  
-    10      7       13      9       7       3       3       2       1      
- 0       1       3       0       1       1       0       1       17      0 
-      0       0       1       1       3       4       10      11      11   
-   13      3       7       13      15      17      18      15      19      
-24      28      21      10      11      12      13      15      12      12 
-     10      7       13      9       7       3       3       2       1     
-
-
-##### conditional age-at-length observations
-
-### WA Rec, North, All modes combined (represent 96% of landings)
-### initially assigning to fleet: "14_WA_NorthernWA_Rec_PR"
-#Yr     Seas    Flt/Svy Gender  Part    AgeErr  LbinLo  LbinHi  Nsamp   4yr
-# s    5yrs    6yrs    7yrs    8yrs    9yrs    10yrs   11yrs   12yrs   13yr
-# s   14yrs   15yrs   16yrs   17yrs   18yrs   19yrs   20yrs   21yrs   22yrs
-#    23yrs   24yrs   25yrs   26yrs   27yrs   28yrs   29yrs   30yrs   31yrs 
-#   32yrs   33yrs   34yrs   35yrs   36yrs   37yrs   38yrs   39yrs   40yrs  
-#  41yrs   42yrs   43yrs   44yrs   45yrs   46yrs   47yrs   48yrs   49yrs   
-# 50yrs   repeat
-1998    1       3       0       2       1       28      28      5       0  
-     0       0       0       0       2       0       1       1       1     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       2       0       1       1       1    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1998    1       3       0       2       1       30      30      6       0  
-     0       0       0       0       0       0       0       0       1     
-  0       0       1       1       0       1       0       1       1       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       1    
-   0       0       1       1       0       1       0       1       1       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1998    1       3       0       2       1       32      32      19      0  
-     0       0       0       0       0       0       0       0       0     
-  1       1       2       3       3       2       2       0       0       0
-       1       0       0       1       0       0       0       0       1   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   1       1       2       3       3       2       2       0       0       
-0       1       0       0       1       0       0       0       0       1  
-     0       0       0       0       0       0       0       0       0     
-1998    1       3       0       2       1       34      34      13      0  
-     0       0       0       0       0       1       0       0       0     
-  0       0       0       1       1       2       0       2       0       2
-       0       0       1       1       0       0       0       0       0   
-    0       0       0       0       0       2       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       0       0       0    
-   0       0       0       1       1       2       0       2       0       
-2       0       0       1       1       0       0       0       0       0  
-     0       0       0       0       0       2       0       0       0     
-1998    1       3       0       2       1       36      36      7       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       2       0       1       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       2       0       1       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       2       0       1       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       2       0       1       0       0       0     
-1999    1       3       0       2       1       26      26      2       0  
-     0       0       0       0       1       1       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       1       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1999    1       3       0       2       1       28      28      2       0  
-     0       0       0       0       0       1       1       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       1       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1999    1       3       0       2       1       30      30      10      0  
-     0       0       0       1       2       1       2       0       1     
-  0       0       0       0       1       1       0       0       0       0
-       0       0       0       1       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       2       1       2       0       1    
-   0       0       0       0       1       1       0       0       0       
-0       0       0       0       1       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1999    1       3       0       2       1       32      32      25      0  
-     0       0       0       0       0       1       2       0       3     
-  3       3       1       2       1       1       2       1       3       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       1       0       0       0       0       0       1       0       0 
-      0       0       0       0       0       1       2       0       3    
-   3       3       1       2       1       1       2       1       3       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-1999    1       3       0       2       1       34      34      11      0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       2       0       1       1       2       0       0       0
-       0       1       0       1       0       0       0       1       0   
-    0       0       0       0       1       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       2       0       1       1       2       0       0       
-0       0       1       0       1       0       0       0       1       0  
-     0       0       0       0       1       0       0       0       0     
-1999    1       3       0       2       1       36      36      4       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       1       0       0       0       0
-       1       0       0       0       0       0       0       0       0   
-    1       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       1       0       0       0       
-0       1       0       0       0       0       0       0       0       0  
-     1       0       0       0       0       0       0       0       0     
-1999    1       3       0       2       1       38      38      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       1       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2000    1       3       0       2       1       26      26      2       0  
-     0       0       0       0       0       1       0       1       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       0       1       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2000    1       3       0       2       1       28      28      5       0  
-     0       0       0       0       0       0       2       0       1     
-  0       1       0       0       0       0       0       0       0       0
-       1       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       2       0       1    
-   0       1       0       0       0       0       0       0       0       
-0       1       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2000    1       3       0       2       1       30      30      10      0  
-     0       0       0       0       0       1       1       1       2     
-  0       0       0       0       0       1       1       0       1       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       1       1       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       1       1       2    
-   0       0       0       0       0       1       1       0       1       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       1       1       0       0     
-2000    1       3       0       2       1       32      32      13      0  
-     0       0       0       0       0       0       0       2       1     
-  0       0       0       1       1       0       2       2       1       0
-       0       0       0       0       0       0       1       0       0   
-    0       0       0       0       0       0       0       1       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       2       1    
-   0       0       0       1       1       0       2       2       1       
-0       0       0       0       0       0       0       1       0       0  
-     0       0       0       0       0       0       0       1       0     
-2000    1       3       0       2       1       34      34      20      0  
-     0       0       0       0       0       0       0       0       0     
-  0       1       1       0       1       1       1       0       2       0
-       0       2       0       0       0       0       1       1       0   
-    0       1       1       1       0       0       0       1       1      
- 0       2       0       0       0       0       0       0       2       0 
-      0       0       0       0       0       0       0       0       0    
-   0       1       1       0       1       1       1       0       2       
-0       0       2       0       0       0       0       1       1       0  
-     0       1       1       1       0       0       0       1       1     
-2000    1       3       0       2       1       36      36      3       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       1
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       1       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-1       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2000    1       3       0       2       1       38      38      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       1       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       1       0       0       0       0     
-2001    1       3       0       2       1       24      24      1       0  
-     1       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      1       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       26      26      1       0  
-     0       0       1       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       28      28      2       0  
-     0       0       0       0       0       0       0       2       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       2       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       30      30      7       0  
-     0       0       0       0       0       0       4       1       0     
-  0       1       1       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       4       1       0    
-   0       1       1       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       32      32      6       0  
-     0       0       0       0       0       0       0       0       0     
-  1       0       1       2       1       0       0       0       0       0
-       0       0       0       0       0       0       0       1       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   1       0       1       2       1       0       0       0       0       
-0       0       0       0       0       0       0       0       1       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       34      34      6       0  
-     0       0       0       0       0       0       0       0       0     
-  0       1       1       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       1       1       0       0       0       0       0      
- 0       0       0       0       0       0       0       1       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       1       1       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       1       1       0       0       0       0       0     
-2001    1       3       0       2       1       36      36      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       1       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       1       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       38      38      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2001    1       3       0       2       1       40      40      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2002    1       3       0       2       1       28      28      1       0  
-     0       0       0       0       0       0       0       0       0     
-  1       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   1       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2002    1       3       0       2       1       30      30      2       0  
-     0       0       0       0       0       0       2       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       2       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2002    1       3       0       2       1       32      32      8       0  
-     0       0       0       0       0       0       2       1       1     
-  1       0       1       0       1       0       0       1       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       2       1       1    
-   1       0       1       0       1       0       0       1       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       22      22      1       0  
-     0       0       1       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       26      26      3       0  
-     0       0       0       1       1       1       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       1       1       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       28      28      5       0  
-     0       0       0       1       1       0       0       0       1     
-  0       0       0       0       0       0       1       1       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       1       0       0       0       1    
-   0       0       0       0       0       0       1       1       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       30      30      32      0  
-     0       0       0       2       1       3       1       2       0     
-  1       2       4       1       1       1       1       3       3       2
-       0       1       1       1       0       1       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       2       1       3       1       2       0    
-   1       2       4       1       1       1       1       3       3       
-2       0       1       1       1       0       1       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       32      32      48      0  
-     0       0       0       1       6       4       3       1       6     
-  3       4       2       4       0       2       0       3       3       1
-       1       1       1       1       0       0       0       0       1   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       6       4       3       1       6    
-   3       4       2       4       0       2       0       3       3       
-1       1       1       1       1       0       0       0       0       1  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       34      34      46      0  
-     0       0       0       0       0       2       1       0       2     
-  3       4       0       4       3       1       1       1       2       3
-       2       5       5       0       2       2       1       0       0   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       2       1       0       2    
-   3       4       0       4       3       1       1       1       2       
-3       2       5       5       0       2       2       1       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       36      36      20      0  
-     0       0       0       0       0       0       0       1       1     
-  0       2       3       0       0       2       2       0       0       3
-       0       0       2       0       1       0       2       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       1       0       0 
-      0       0       0       0       0       0       0       1       1    
-   0       2       3       0       0       2       2       0       0       
-3       0       0       2       0       1       0       2       0       0  
-     0       0       0       0       0       0       0       0       0     
-2004    1       3       0       2       1       38      38      14      0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       1       1       0       0       0       1       0       0
-       3       3       0       1       0       0       1       0       0   
-    0       0       0       1       0       0       0       0       1      
- 1       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       1       1       0       0       0       1       0       
-0       3       3       0       1       0       0       1       0       0  
-     0       0       0       1       0       0       0       0       1     
-2004    1       3       0       2       1       40      40      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       1       0   
-    0       0       0       1       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       1       0  
-     0       0       0       1       0       0       0       0       0     
-2005    1       3       0       2       1       22      22      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       2       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       2       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2005    1       3       0       2       1       26      26      1       0  
-     0       0       0       1       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2005    1       3       0       2       1       28      28      12      0  
-     0       1       1       2       2       1       0       2       0     
-  2       0       0       1       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       1       1       2       2       1       0       2       0    
-   2       0       0       1       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2005    1       3       0       2       1       30      30      31      0  
-     0       0       0       1       6       4       1       2       1     
-  0       1       3       4       1       2       1       1       0       1
-       1       0       1       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       6       4       1       2       1    
-   0       1       3       4       1       2       1       1       0       
-1       1       0       1       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2005    1       3       0       2       1       32      32      60      0  
-     0       0       2       3       5       3       6       7       3     
-  3       3       4       2       5       3       2       0       0       2
-       1       1       0       1       2       0       0       0       0   
-    0       0       0       0       0       1       0       0       1      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       2       3       5       3       6       7       3    
-   3       3       4       2       5       3       2       0       0       
-2       1       1       0       1       2       0       0       0       0  
-     0       0       0       0       0       1       0       0       1     
-2005    1       3       0       2       1       34      34      60      0  
-     0       0       0       0       1       1       1       2       4     
-  3       9       1       4       3       1       1       4       3       5
-       2       3       1       3       2       1       1       0       0   
-    0       0       1       0       1       0       0       1       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       1       1       1       2       4    
-   3       9       1       4       3       1       1       4       3       
-5       2       3       1       3       2       1       1       0       0  
-     0       0       1       0       1       0       0       1       0     
-2005    1       3       0       2       1       36      36      22      0  
-     0       0       0       0       0       0       1       1       1     
-  2       2       0       1       2       0       1       1       0       1
-       0       1       0       3       1       1       0       0       0   
-    0       0       0       0       0       1       0       0       0      
- 0       0       0       0       0       0       0       1       1       0 
-      0       0       0       0       0       0       1       1       1    
-   2       2       0       1       2       0       1       1       0       
-1       0       1       0       3       1       1       0       0       0  
-     0       0       0       0       0       1       0       0       0     
-2005    1       3       0       2       1       38      38      15      0  
-     0       0       0       0       0       0       1       0       0     
-  1       1       1       0       0       0       0       0       0       1
-       0       0       1       0       0       1       0       1       1   
-    0       0       1       0       1       0       0       0       0      
- 0       1       0       0       0       0       0       0       3       0 
-      0       0       0       0       0       0       1       0       0    
-   1       1       1       0       0       0       0       0       0       
-1       0       0       1       0       0       1       0       1       1  
-     0       0       1       0       1       0       0       0       0     
-2005    1       3       0       2       1       40      40      3       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       1       0
-       0       0       0       0       0       0       0       0       1   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       1       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       1       
-0       0       0       0       0       0       0       0       0       1  
-     0       0       0       0       0       0       0       0       0     
-2006    1       3       0       2       1       28      28      5       0  
-     0       0       0       1       0       1       2       0       0     
-  0       1       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       0       1       2       0       0    
-   0       1       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2006    1       3       0       2       1       30      30      12      0  
-     0       0       0       0       0       2       0       0       1     
-  2       1       0       4       1       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       1       0       0       0       0       0 
-      0       0       0       0       0       2       0       0       1    
-   2       1       0       4       1       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2006    1       3       0       2       1       32      32      33      0  
-     0       0       0       2       0       0       6       3       3     
-  0       2       2       1       0       2       4       0       3       0
-       1       0       1       0       2       0       0       0       0   
-    0       0       0       0       0       0       0       1       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       2       0       0       6       3       3    
-   0       2       2       1       0       2       4       0       3       
-0       1       0       1       0       2       0       0       0       0  
-     0       0       0       0       0       0       0       1       0     
-2006    1       3       0       2       1       34      34      25      0  
-     0       0       0       0       0       0       1       0       2     
-  1       4       1       2       1       1       1       0       2       4
-       0       0       1       0       1       1       0       0       0   
-    0       1       0       0       0       0       0       1       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       0       2    
-   1       4       1       2       1       1       1       0       2       
-4       0       0       1       0       1       1       0       0       0  
-     0       1       0       0       0       0       0       1       0     
-2006    1       3       0       2       1       36      36      8       0  
-     0       0       0       0       0       0       0       0       1     
-  0       0       2       0       0       1       0       2       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       1       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       1    
-   0       0       2       0       0       1       0       2       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2006    1       3       0       2       1       38      38      4       0  
-     0       0       0       0       0       0       0       1       0     
-  0       0       0       1       0       0       0       0       0       1
-       0       0       0       0       0       1       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       1       0    
-   0       0       0       1       0       0       0       0       0       
-1       0       0       0       0       0       1       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2006    1       3       0       2       1       40      40      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       1       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       1       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2007    1       3       0       2       1       26      26      2       0  
-     0       0       0       1       0       0       0       0       0     
-  1       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       0       0       0       0       0    
-   1       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2007    1       3       0       2       1       28      28      3       0  
-     0       0       1       0       0       0       1       0       0     
-  0       0       1       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       0       1       0       0    
-   0       0       1       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2007    1       3       0       2       1       30      30      10      0  
-     0       0       0       0       1       1       1       0       2     
-  1       0       0       1       1       1       0       0       1       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       1       1       0       2    
-   1       0       0       1       1       1       0       0       1       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2007    1       3       0       2       1       32      32      33      0  
-     0       0       0       0       0       0       1       0       4     
-  2       2       0       2       2       1       0       2       1       3
-       2       2       3       1       1       0       2       0       1   
-    0       0       0       0       0       0       0       1       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       0       4    
-   2       2       0       2       2       1       0       2       1       
-3       2       2       3       1       1       0       2       0       1  
-     0       0       0       0       0       0       0       1       0     
-2007    1       3       0       2       1       34      34      46      0  
-     0       0       0       1       0       1       2       1       0     
-  2       1       2       4       3       2       2       2       3       0
-       7       1       1       0       1       1       0       1       3   
-    0       0       0       0       1       0       0       0       0      
- 1       0       0       1       0       0       0       0       2       0 
-      0       0       0       1       0       1       2       1       0    
-   2       1       2       4       3       2       2       2       3       
-0       7       1       1       0       1       1       0       1       3  
-     0       0       0       0       1       0       0       0       0     
-2007    1       3       0       2       1       36      36      15      0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       1       0       1       1       0       1       0
-       0       0       1       1       1       0       2       2       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       1       0       3       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       1       0       1       1       0       1       
-0       0       0       1       1       1       0       2       2       0  
-     0       0       0       0       0       0       0       0       0     
-2007    1       3       0       2       1       38      38      9       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       1       0       1       0
-       1       0       0       0       0       0       0       2       0   
-    0       0       0       0       1       0       0       0       0      
- 1       0       0       1       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       1       0       1       
-0       1       0       0       0       0       0       0       2       0  
-     0       0       0       0       1       0       0       0       0     
-2007    1       3       0       2       1       40      40      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       24      24      1       0  
-     0       0       0       0       0       1       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       26      26      2       0  
-     1       0       0       0       1       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      1       0       0       0       1       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       28      28      3       0  
-     0       0       0       0       1       1       0       0       1     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       1       0       0       1    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       30      30      7       0  
-     0       0       0       0       0       0       0       3       1     
-  0       0       0       0       1       0       0       0       0       0
-       0       1       0       1       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       3       1    
-   0       0       0       0       1       0       0       0       0       
-0       0       1       0       1       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       32      32      24      0  
-     0       0       0       1       0       0       3       2       2     
-  1       2       3       1       1       1       3       0       0       0
-       2       0       1       0       0       1       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       0       0       3       2       2    
-   1       2       3       1       1       1       3       0       0       
-0       2       0       1       0       0       1       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2008    1       3       0       2       1       34      34      28      0  
-     0       0       0       0       0       0       0       1       1     
-  3       0       0       2       2       1       6       1       2       0
-       2       2       0       0       0       1       1       1       0   
-    0       1       0       0       0       0       0       0       1      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       1       1    
-   3       0       0       2       2       1       6       1       2       
-0       2       2       0       0       0       1       1       1       0  
-     0       1       0       0       0       0       0       0       1     
-2008    1       3       0       2       1       36      36      7       0  
-     0       0       0       0       0       0       0       0       0     
-  0       1       0       0       1       1       0       0       0       0
-       0       0       1       0       1       0       0       0       0   
-    0       0       0       0       0       0       0       1       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       1       0       0       1       1       0       0       0       
-0       0       0       1       0       1       0       0       0       0  
-     0       0       0       0       0       0       0       1       0     
-2008    1       3       0       2       1       40      40      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       1       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       1       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2009    1       3       0       2       1       28      28      1       0  
-     0       0       0       0       1       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2009    1       3       0       2       1       30      30      6       0  
-     0       0       0       0       0       1       0       0       0     
-  2       1       0       0       0       0       0       0       1       0
-       0       0       0       0       1       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       0       0       0    
-   2       1       0       0       0       0       0       0       1       
-0       0       0       0       0       1       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2009    1       3       0       2       1       32      32      10      0  
-     0       0       0       0       1       1       0       1       0     
-  1       0       0       0       0       0       0       0       0       1
-       0       1       1       0       0       0       1       0       2   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       1       0       1       0    
-   1       0       0       0       0       0       0       0       0       
-1       0       1       1       0       0       0       1       0       2  
-     0       0       0       0       0       0       0       0       0     
-2009    1       3       0       2       1       34      34      4       0  
-     0       0       0       0       0       0       0       1       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       1       0       0       0       1   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       1       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       1       0       0       0       1  
-     0       0       0       0       0       0       0       0       0     
-2009    1       3       0       2       1       42      42      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       20      20      1       0  
-     0       0       0       0       0       0       0       0       0     
-  1       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   1       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       30      30      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       1       0       0       0       0       0       0       0       0
-       0       1       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       1       0       0       0       0       0       0       0       
-0       0       1       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       32      32      8       0  
-     0       0       0       0       1       1       0       0       0     
-  0       2       1       0       1       0       0       0       0       0
-       1       0       0       1       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       1       0       0       0    
-   0       2       1       0       1       0       0       0       0       
-0       1       0       0       1       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       34      34      7       0  
-     0       0       0       0       0       0       1       0       0     
-  1       0       0       0       0       1       0       0       1       0
-       0       0       0       0       0       0       1       0       2   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       0       0    
-   1       0       0       0       0       1       0       0       1       
-0       0       0       0       0       0       0       1       0       2  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       36      36      3       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       1       0       0       0       0       0       0       0       1   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       1       0       0       0       0       0       0       0       1  
-     0       0       0       0       0       0       0       0       0     
-2010    1       3       0       2       1       40      40      1       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 1       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2011    1       3       0       2       1       30      30      4       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       2       0       0       0       0       0
-       1       1       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       2       0       0       0       0       
-0       1       1       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2011    1       3       0       2       1       32      32      16      0  
-     0       0       0       0       1       0       0       0       0     
-  0       2       2       1       0       1       0       1       0       1
-       1       2       0       0       1       0       0       0       0   
-    1       0       1       0       0       1       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       1       0       0       0       0    
-   0       2       2       1       0       1       0       1       0       
-1       1       2       0       0       1       0       0       0       0  
-     1       0       1       0       0       1       0       0       0     
-2011    1       3       0       2       1       34      34      19      0  
-     0       0       0       0       0       0       0       0       0     
-  1       0       0       1       1       1       1       2       2       0
-       0       1       4       0       1       0       0       1       1   
-    1       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   1       0       0       1       1       1       1       2       2       
-0       0       1       4       0       1       0       0       1       1  
-     1       0       0       0       0       0       0       0       0     
-2011    1       3       0       2       1       36      36      7       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       1       0       0       0
-       1       1       0       1       0       0       0       1       1   
-    0       0       0       0       0       0       1       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       1       0       0       
-0       1       1       0       1       0       0       0       1       1  
-     0       0       0       0       0       0       1       0       0     
-2011    1       3       0       2       1       38      38      4       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       1       0       0       0       0       0       1       0       0   
-    0       0       1       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       1       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       1       0       0       0       0       0       1       0       0  
-     0       0       1       0       0       0       0       0       0     
-2012    1       3       0       2       1       30      30      2       0  
-     0       0       0       0       0       0       1       0       0     
-  0       0       0       0       0       0       1       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       0       0    
-   0       0       0       0       0       0       1       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2012    1       3       0       2       1       32      32      8       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       2       1       0       0       2       1
-       0       0       0       0       0       0       0       0       1   
-    1       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       2       1       0       0       2       
-1       0       0       0       0       0       0       0       0       1  
-     1       0       0       0       0       0       0       0       0     
-2012    1       3       0       2       1       34      34      7       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       1
-       0       1       0       1       1       1       0       1       1   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-1       0       1       0       1       1       1       0       1       1  
-     0       0       0       0       0       0       0       0       0     
-2012    1       3       0       2       1       36      36      5       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       1       0       0       0       0       0
-       1       0       1       0       1       1       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       1       0       0       0       0       
-0       1       0       1       0       1       1       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2012    1       3       0       2       1       38      38      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       1       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       1       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       1       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       1       0       0       0       0       0       0     
-2013    1       3       0       2       1       28      28      1       0  
-     0       0       0       0       0       1       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       1       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2013    1       3       0       2       1       32      32      4       0  
-     0       0       1       0       0       0       0       0       0     
-  0       0       0       1       0       0       0       1       0       1
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       0       0       0       0    
-   0       0       0       1       0       0       0       1       0       
-1       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2013    1       3       0       2       1       34      34      4       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       1       2       0
-       0       0       0       0       0       0       1       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       1       2       
-0       0       0       0       0       0       0       1       0       0  
-     0       0       0       0       0       0       0       0       0     
-2013    1       3       0       2       1       36      36      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       1       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       1       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       1       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       1       0       0       0       0       0       0       0     
-2014    1       3       0       2       1       26      26      2       0  
-     0       0       1       0       0       1       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       1       0       0       1       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2014    1       3       0       2       1       28      28      5       0  
-     0       0       0       0       0       0       1       3       1     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       1       3       1    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2014    1       3       0       2       1       30      30      14      0  
-     0       0       0       1       1       0       2       0       2     
-  0       1       0       2       0       1       0       0       0       2
-       1       0       0       0       1       0       0       0       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       1       1       0       2       0       2    
-   0       1       0       2       0       1       0       0       0       
-2       1       0       0       0       1       0       0       0       0  
-     0       0       0       0       0       0       0       0       0     
-2014    1       3       0       2       1       32      32      76      0  
-     0       0       0       0       0       2       4       3       7     
-  4       0       3       6       3       2       4       3       4       6
-       6       5       0       1       0       2       1       1       4   
-    1       0       0       2       0       0       0       0       0      
- 0       0       0       0       1       0       0       0       1       0 
-      0       0       0       0       0       2       4       3       7    
-   4       0       3       6       3       2       4       3       4       
-6       6       5       0       1       0       2       1       1       4  
-     1       0       0       2       0       0       0       0       0     
-2014    1       3       0       2       1       34      34      118     0  
-     0       0       0       0       2       0       3       3       0     
-  5       1       3       3       8       5       5       3       4       9
-       9       5       6       4       3       4       5       4       1   
-    0       2       6       3       5       1       1       1       1      
- 0       0       1       0       0       1       0       0       1       0 
-      0       0       0       0       2       0       3       3       0    
-   5       1       3       3       8       5       5       3       4       
-9       9       5       6       4       3       4       5       4       1  
-     0       2       6       3       5       1       1       1       1     
-2014    1       3       0       2       1       36      36      121     0  
-     0       0       0       0       0       1       0       2       1     
-  3       1       1       2       4       7       8       8       9       5
-       7       5       2       3       7       5       5       4       5   
-    6       0       3       3       1       1       1       1       0      
- 0       1       1       0       0       0       0       0       8       0 
-      0       0       0       0       0       1       0       2       1    
-   3       1       1       2       4       7       8       8       9       
-5       7       5       2       3       7       5       5       4       5  
-     6       0       3       3       1       1       1       1       0     
-2014    1       3       0       2       1       38      38      49      0  
-     0       0       0       0       0       0       0       0       0     
-  1       0       0       0       0       2       1       1       1       2
-       2       5       2       3       1       2       2       2       1   
-    3       3       4       1       1       1       1       0       0      
- 0       0       1       0       0       0       0       1       5       0 
-      0       0       0       0       0       0       0       0       0    
-   1       0       0       0       0       2       1       1       1       
-2       2       5       2       3       1       2       2       2       1  
-     3       3       4       1       1       1       1       0       0     
-2014    1       3       0       2       1       40      40      11      0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       1       0
-       3       1       0       0       0       0       1       0       1   
-    0       2       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       2       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       1       
-0       3       1       0       0       0       0       1       0       1  
-     0       2       0       0       0       0       0       0       0     
-2014    1       3       0       2       1       42      42      2       0  
-     0       0       0       0       0       0       0       0       0     
-  0       0       0       0       0       0       0       0       0       0
-       0       0       0       0       0       0       1       1       0   
-    0       0       0       0       0       0       0       0       0      
- 0       0       0       0       0       0       0       0       0       0 
-      0       0       0       0       0       0       0       0       0    
-   0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       1       1       0  
-     0       0       0       0       0       0       0       0       0     
-
-0 #_N_MeanSize-at-Age_obs
-#Yr Seas Flt/Svy Gender Part Ageerr Ignore datavector(female-male)
-#                                          samplesize(female-male)
-# 1971 1 1 3 0 1 2 29.8931 40.6872 44.7411 50.027 52.5794 56.1489 57.1033 6
-# 1.1728 61.7417 63.368 64.4088 65.6889 67.616 68.5972 69.9177 71.0443 72.3
-# 609 32.8188 39.5964 43.988 50.1693 53.1729 54.9822 55.3463 60.3509 60.743
-# 9 62.3432 64.3224 65.1032 64.1965 66.7452 67.5154 70.8749 71.2768 20 20 2
-# 0 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
-#  20 20 20 20 20 20 20
-
+0 #_use meanbodysize_data (0/1)
+#_COND_30 #_DF_for_meanbodysize_T-distribution_like
+# note:  use positive partition value for mean body wt, negative partition 
+# for mean body length 
+#_yr month fleet part obs stderr
+#  -9999 0 0 0 0 0 # terminator for mean body size data 
+#
+# set up population length bin structure (note - irrelevant if not using si
+# ze data and using empirical wtatage
+2 # length bin method: 1=use databins; 2=generate from binwidth,min,max bel
+# ow; 3=read vector
+1 # binwidth for population size comp 
+5 # minimum size in the population (lower edge of first bin and size at age
+#  0.00) 
+50 # maximum size in the population (lower edge of last bin) 
+1 # use length composition data (0/1)
+#_mintailcomp: upper and lower distribution for females and males separatel
+# y are accumulated until exceeding this level.
+#_addtocomp:  after accumulation of tails; this value added to all bins
+#_males and females treated as combined gender below this bin number 
+#_compressbins: accumulate upper tail by this number of bins; acts simultan
+# eous with mintailcomp; set=0 for no forced accumulation
+#_Comp_Error:  0=multinomial, 1=dirichlet
+#_Comp_Error2:  parm number  for dirichlet
+#_mintailcomp_addtocomp_combM+F_CompressBins_CompError_ParmSelect
+-1 0.001 0 0 0 0 #_fleet:1_Fishery
+-1 0.001 0 0 0 0 #_fleet:2_POP
+-1 0.001 0 0 0 0 #_fleet:3_EarlyTriennial
+-1 0.001 0 0 0 0 #_fleet:4_LateTriennial
+-1 0.001 0 0 0 0 #_fleet:5_AFSCSlope
+-1 0.001 0 0 0 0 #_fleet:6_NWFSCSlope
+-1 0.001 0 0 0 0 #_fleet:7_NWFSCcombo
+# sex codes:  0=combined; 1=use female only; 2=use male only; 3=use both as
+#  joint sexxlength distribution
+# partition codes:  (0=combined; 1=discard; 2=retained
+37 #_N_LengthBins; then enter lower edge of each length bin
+ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+ 36 37 38 39 40 41 42 43 44 45 46 47
+#_yr month fleet sex part Nsamp datavector(female-male)
+ 2003 7 1 0 1 7 0 0 0 0 0 0 0 0.099268 0 0 0 0 0 0 0 0 0 0 0 0.024858 0.024
+858 0.024858 0 0.024858 0.108242 0.157959 0.198867 0.101564 0.149151 0.0336
+67 0 0.051848 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0
+ 2004 7 1 0 1 41 0 0 0 0 0 0 0.000332 0.042976 0.02182 0.042976 0.109098 0.
+085952 0.003027 0.003599 0.070067 0.033751 0.013286 0.014446 0.013981 0.004
+962 0.045846 0.029158 0.008677 0.008941 0.016387 0.018691 0.06715 0.067534 
+0.079175 0.028361 0.041902 0.020814 0.037757 0.012599 0.025199 0.009285 0.0
+2225 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0
+ 2005 7 1 0 1 60 0 0 0 0 0 0 0 0.001933 0 0 0.005491 0.004859 0.000722 0.00
+7069 0.008452 0.024192 0.037272 0.053717 0.036612 0.07207 0.030571 0.04715 
+0.044088 0.057648 0.078843 0.087327 0.099866 0.069904 0.123314 0.040208 0.0
+37169 0.026946 0.004577 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 2006 7 1 0 1 69 0 0 0 0 0 0 0 0 0.000669 0 0 0.001338 0.000669 0 0.01825 0
+.009364 0.007692 0.041068 0.061535 0.103198 0.0949 0.194756 0.083322 0.1022
+83 0.043621 0.0537 0.041737 0.041837 0.026086 0.049897 0.005351 0.013511 0.
+000669 0.003879 0.000669 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 2007 7 1 0 1 75 0.004496 0.012367 0 0.006183 0 0 0.007089 0.012412 0.02327
+8 0.02429 0.032642 0.028324 0.004395 0.012289 0.015798 0.014982 0.023285 0.
+038411 0.036515 0.059363 0.049491 0.181454 0.09929 0.102014 0.054853 0.0279
+22 0.023406 0.020556 0.006959 0.045833 0.008416 0.006712 0.007441 0.007884 
+0.00032 0 0.001332 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0
+ 2008 7 1 0 1 44 0 0 0 0 0 0 0 0 0 0.000225 0 0.005123 0.002112 0.004584 0.
+010291 0.008089 0.020806 0.02512 0.017256 0.026951 0.051565 0.038826 0.0289
+4 0.139081 0.062273 0.120497 0.035087 0.155124 0.15764 0.011369 0.008403 0.
+035186 0.034467 0 0.000315 0.000449 0.000225 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 2009 7 1 0 1 153 4e-005 0 4e-005 0 0 0 8.5e-005 0 4e-005 0 0.000122 0.0010
+58 0.000389 0.000472 0.000217 0.001653 0.001774 0.022142 0.007227 0.026314 
+0.011785 0.038548 0.064999 0.071751 0.175772 0.098597 0.137575 0.11683 0.09
+1672 0.038283 0.045563 0.016017 0.011706 0.006116 0.001804 0.005246 0.00616
+5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 1966 7 1 3 2 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8403 4202 8403 1260
+5 25210 33613 67227 50420 75630 75630 58824 37815 29412 16807 16807 12605 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25210 21008 16807 46218 67227 54
+622 96639 54622 33613 33613 12605 4202 0 0 0 0
+ 1967 7 1 3 2 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1051 1780 2745 4847 2745 1
+780 2900 10295 19426 23672 44411 29608 32451 32296 49949 62842 48187 71090 
+48385 23219 5036 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2021 1051 1694 2750 2102 4
+530 8473 9596 34058 56064 62544 69866 79007 51809 46997 27783 9979 4635 129
+1 5036 0
+ 1968 7 1 3 2 19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 240 0 1727 240 1102 5809 7
+802 43696 47020 72067 78176 93037 79043 32628 32431 19925 19029 6577 3250 2
+642 721 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 240 6284 6363 14711 44491 621
+68 83245 76735 65010 39590 27686 14631 7907 2208 240 1329 0 0
+ 1969 7 1 3 2 24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1109 0 2218 1109 1109 66
+36 12178 21116 59186 65386 78137 75676 70148 46403 25931 22686 15051 15548 
+2842 1733 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1109 2218 5417 11810 12116 47
+617 63599 71105 78625 60690 41755 35835 30446 9991 2599 866 0 0 0
+ 1970 7 1 3 2 79 0 0 0 0 0 0 0 0 0 0 0 0 1199 0 1799 140 1199 3598 3738 759
+5 7231 16302 32306 49574 58117 70183 36695 36345 22458 22909 23028 34259 40
+226 52146 24815 12133 2998 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1199 1199 3598 6596 
+4197 6396 18322 16130 53876 66868 59231 53168 35269 25619 24825 16187 19521
+ 13332 9875 1799 1199 600 0
+ 1972 7 1 3 2 147 0 0 0 0 0 0 0 0 0 0 0 100 561 0 660 561 2243 1752 4267 70
+64 9921 10909 26663 32661 40323 58145 47971 52859 36057 22112 25450 28077 3
+8236 30197 23568 14407 3970 0 0 0 0 0 0 0 318 0 0 0 0 561 100 0 561 1266 38
+98 5647 6730 6244 15101 34696 54622 55678 65905 58218 39894 31464 28989 318
+61 24861 9146 3491 1917 100 0
+ 1973 7 1 3 2 117 0 0 0 0 0 0 0 0 0 0 171 1325 593 1866 484 1095 2655 2786 
+3888 5248 11155 12170 22240 32441 41074 46014 58587 62671 44209 32159 24939
+ 22438 17205 21344 20667 13102 9580 0 0 0 0 0 0 0 0 0 0 470 970 0 199 1105 
+1352 2138 2450 6120 7641 7118 12468 28473 44161 70088 87187 67938 49520 330
+06 23438 17788 12833 6059 4295 939 0 138
+ 1974 7 1 3 2 138 0 0 0 356 0 0 0 0 0 0 0 0 0 0 224 196 468 1617 538 1014 2
+328 7037 18668 32830 49333 63970 62141 59473 46228 37783 31231 23929 15355 
+18173 16266 10861 5437 0 0 0 0 0 0 0 0 0 0 0 0 0 110 0 765 1559 112 1016 15
+56 2568 13721 24052 48712 75471 89068 74895 50758 49631 23585 15026 13720 6
+259 1449 158 0 356
+ 1976 7 1 3 2 140 0 0 0 0 0 0 0 0 0 0 0 0 0 0 396 225 396 3458 12957 40510 
+47586 49318 33845 22845 25139 32353 40484 46151 36839 36590 28250 20002 201
+39 12507 11323 5674 2503 0 0 0 0 0 0 0 0 0 0 0 0 225 0 0 0 1864 3983 21494 
+50659 63016 41876 27043 26138 32460 46614 46866 33983 33430 20486 10579 553
+8 3284 918 52 0 0
+ 1977 7 1 3 2 208 3 0 0 0 0 0 0 0 0 0 0 0 0 160 0 0 0 894 2993 6385 21464 4
+0710 60098 47331 28898 29603 36525 39723 43119 39240 33825 30100 24715 1920
+2 15850 13090 5402 3 0 0 0 0 0 0 0 0 0 0 0 82 365 97 130 1491 1520 5871 137
+49 43587 69750 52759 42592 35413 33985 39657 38317 32039 22125 13953 6574 4
+202 1461 735 216 0
+ 1978 7 1 3 2 330 0 0 0 0 0 0 0 0 0 0 0 269 0 0 313 1464 879 1426 1803 2493
+ 5656 11095 16573 30969 41418 35605 34816 32079 36677 42091 38870 43927 412
+08 33340 32995 16963 9727 0 0 0 0 0 0 0 0 0 0 0 0 0 269 269 667 467 1802 18
+18 3466 7718 17045 34636 43587 40105 46365 47948 49484 61589 52547 35698 22
+664 10734 7034 1140 206 86
+ 1979 7 1 3 2 239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 309 570 409 2683 1197 7
+857 15690 32524 52417 54911 60259 54575 54491 54573 51094 51919 32074 32575
+ 13410 10101 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 832 0 329 5630 8384 13978 30
+890 51882 62565 64648 48975 42172 35358 18193 18178 7930 3619 1858 542 389
+ 1980 7 1 3 2 388 0 0 0 0 0 0 0 0 0 0 0 62 0 0 0 0 215 0 570 795 2440 3799 
+5244 10852 24618 52953 68792 88112 66519 62771 48382 44336 34800 28474 2761
+2 13354 6096 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 109 438 1420 2453 6546 13964
+ 36527 58672 52643 58707 45935 41588 31217 25015 17304 10810 3985 827 654 3
+90
+ 1989 7 1 3 2 92 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1474 5722 4695 1702 
+12722 28847 38887 59881 66760 75158 85136 40910 33082 24286 13167 6143 8400
+ 4366 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 740 0 0 0 4034 9139 23334 26272 47000
+ 64817 89962 81271 66228 31326 17814 19251 5181 740 1549 0 0
+ 1990 7 1 3 2 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2281 2694 4337 6611 1122
+3 14154 21498 44770 51126 55685 50238 53506 35184 21506 32318 40314 28984 8
+524 11357 4454 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7038 7263 0 16140 20454 
+49252 45840 54631 58568 80667 54335 50474 29601 15704 3832 5437 0 0 0
+ 1991 7 1 3 2 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4651 0 14370 9513 
+41098 45224 58736 59253 59325 31865 18761 38278 37683 27852 50773 22029 264
+97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9092 42328 18926 51620 88799 6
+1531 54262 41568 33569 14651 23277 14469 0 0 0 0
+ 1995 7 1 3 2 308 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 3200 6357 8562 12
+092 24399 29167 54982 59997 53071 42701 49535 38218 31620 19905 18439 14323
+ 12789 8769 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1075 2349 3908 11569 17430 21
+545 31636 55137 78820 90486 78184 50974 24446 18404 9295 8749 6701 302 0 41
+9
+ 1996 7 1 3 2 439 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14 934 434 3522 5309 3695
+ 17705 21700 34633 37790 55034 52923 46754 56533 51107 42149 24091 23880 18
+789 13301 18844 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2152 934 1659 2825 4890 871
+7 19364 33376 43952 66359 65939 71694 54128 41612 26464 12843 8214 2407 104
+6 1068 1216
+ 1997 7 1 3 2 519 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 390 2250 4207 10187 245
+42 21462 31315 33342 37586 44812 44497 35358 42462 45008 33218 27358 15815 
+17264 12193 8486 0 0 0 0 0 0 0 0 0 0 0 466 466 0 0 0 0 684 3002 8134 10700 
+23821 32857 42316 49877 55633 69955 61004 62125 34705 23106 12593 9898 4015
+ 1977 369 543
+ 1998 7 1 3 2 376 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 150 0 0 149 2624 3861 20491
+ 36025 40360 50467 48871 38031 40777 38900 41937 43392 33433 31035 22370 20
+479 12168 5272 0 0 0 0 0 0 0 0 0 0 0 0 631 0 0 0 0 0 2859 4526 17422 35742 
+43234 46274 42909 51739 60437 45715 44457 31100 20920 11579 5927 1756 832 4
+81 670
+ 1979 7 2 3 0 611 0 0 0 0 0 0.421107 0.421107 0.00301678 0 0.0229528 0.0268
+327 0.203023 0.2116 0.872347 0.558927 0.657959 0.764536 1.01267 1.16184 1.5
+0204 0.971091 1.31142 2.17143 2.81059 3.70826 3.68565 4.48767 4.37336 4.437
+37 4.1511 3.39968 3.40792 2.47569 1.59332 1.1688 0.702246 0.546108 0 0 0 0 
+0 0.00592514 0.729552 0.689087 0 0.0492013 0.527251 0.893945 0.201115 1.012
+83 0.574839 0.808092 0.824117 0.690304 1.41106 1.08811 1.16618 2.18614 3.14
+654 3.04665 4.14687 4.51417 4.32223 3.64632 3.7722 2.72342 2.00376 0.921236
+ 0.68802 0.439843 0.236849 0.138006 0.154463
+ 1980 7 3 3 0 137 0 0 0 0 0 0 0.0160809 0.0160809 0.0482426 0.0741135 0.156
+219 0.167052 0.208877 0.362581 0.471166 0.595449 0.87733 1.02287 1.96822 2.
+69638 2.28913 3.13971 1.18935 1.44986 1.92987 1.37693 2.0768 1.697 1.48044 
+3.11259 3.16319 4.19561 2.587 2.58993 2.86986 1.82351 1.3699 0 0 0 0 0 0 0.
+0208667 0.110951 0.0735416 0.0670548 0.117537 0.269906 0.473277 1.07896 0.5
+01813 0.954232 1.34099 1.41706 2.11237 2.55468 2.51528 3.04111 2.08787 2.01
+522 2.38576 2.42798 3.23058 5.49412 6.55853 4.66805 2.62674 1.94711 1.53579
+ 0.818013 0.0751369 0.391958 0.0661661
+ 1983 7 3 3 0 215 0 0 0 0 0 0 0.0707672 0.395422 0.273987 0.633532 0.698268
+ 0.717978 0.73512 0.982693 0.727298 0.860378 0.603219 0.711333 0.326526 0.4
+66462 0.430776 0.330975 0.305542 0.396545 0.527959 0.915001 1.52267 1.79537
+ 1.26488 2.45138 2.12565 3.17231 5.05271 6.36562 6.38228 4.72522 2.29463 0 
+0 0 0 0.0201621 0.0468923 0.104316 0.168664 1.10618 1.41774 0.473344 0.9753
+19 1.05585 1.18236 1.15394 1.16153 1.15701 0.442815 0.334122 0.409533 0.365
+659 0.264186 0.733543 0.754022 1.29042 2.29007 3.60255 3.60584 5.34432 6.44
+448 5.70293 5.53833 2.68347 1.3713 0.352701 0.10431 0.0796066
+ 1986 7 3 3 0 83 0 0 0 0 0 0.0618072 0.0626915 0.436188 0.248997 0.418085 0
+.531491 0.0123317 0.498737 0.397335 0.633511 0.830111 4.19762 2.82459 3.187
+86 4.07589 2.60169 1.31968 2.84411 1.78498 2.70859 0.996586 1.71713 1.33781
+ 0.998412 1.1296 0.604618 1.21458 0.953156 2.04489 1.85538 1.22082 0.707552
+ 0 0.0626915 0 0 0.0746678 0.0626915 0.0618072 0.388125 0.388125 2.39483 1.
+15895 0.833484 0.71978 0.549383 0.475817 1.01405 3.48356 2.70958 3.10369 3.
+78321 3.20012 2.53044 2.62305 3.32003 4.35326 1.53851 2.29648 3.15114 2.883
+98 2.3301 2.47991 1.85195 0.944602 0.4738 0.243396 0 0.0579742
+ 1996 7 5 3 0 169 0 0 0 0 0 0.0579929 0 0 0.556341 0.35758 0.613235 0.06632
+83 0.0987724 0 0.0601708 0.126499 0.114819 0.309692 0.985768 1.35644 2.3034
+ 1.26431 1.4379 1.26201 1.80391 2.62826 2.49332 2.91673 3.49944 2.84204 2.1
+8331 2.25662 1.87966 2.03966 1.16366 0.674946 0.282989 0 0 0 0 0 0 0 0.1686
+85 0.726392 1.01849 0.365915 0.2802 0 0.0663283 0.052198 0.136305 0.263339 
+0.497724 4.21973 3.07193 6.16564 1.96582 2.78826 2.27895 4.01091 4.43373 6.
+74803 7.71754 7.67962 3.67863 2.48963 0.789727 0.336873 0.247904 0 0.066928
+3 0.0987724
+ 1997 7 5 3 0 46 0 0 0 0 0.299954 0 0 0 0 1.02157 1.31198 1.79972 3.8994 5.
+52089 7.92052 3.42121 0.599908 0.299954 0.299954 0.820033 0.72162 0.573478 
+0.460084 0.61627 0.727498 0.812438 0.149091 0.157682 0.149091 0 0.421666 0.
+280699 0 0 0 0.788831 0 0 0 0 0 0 0 0 0 0.72162 0.299954 3.29949 2.99954 7.
+77685 11.9416 15.0961 4.32107 1.79972 0.299954 0.195386 0.756197 1.29286 3.
+23275 1.50009 0.539863 2.65316 2.00286 2.2694 1.89155 1.41861 0.157682 0 0.
+16013 0 0.299954 0 0 0
+ 1999 7 5 3 0 103 0.419994 0 0 0 0 0 0 0 0 0 0 0.127027 0.190541 0.127027 0
+.363409 0.331231 1.14681 1.16448 0.727348 1.83188 1.17968 0.109354 0.785815
+ 2.12121 4.61025 5.84775 5.25734 4.71396 2.29672 1.39946 1.1767 0.340767 0.
+109354 0.25916 0.501206 0.24885 0.237193 0 0 0 0 0 0 0 0 0 0.317569 0 0.299
+895 0.127027 1.24567 1.55732 1.09769 1.54964 1.24595 1.89957 1.15498 0.9493
+41 2.66821 6.28862 10.2566 10.1628 8.83858 4.78041 4.029 2.47768 0.986258 0
+.269794 0.172868 0 0 0 0 0
+ 2000 7 5 3 0 47 0 0 0.270268 0.39052 0.78104 0 0 0 1.35134 0.540536 1.6216
+1 0 0.540536 0.810804 0.270268 1.08107 0.270268 0.270268 2.22089 4.16222 3.
+17096 2.1424 1.47928 1.47928 1.09943 1.47034 4.54902 3.06443 2.84681 3.2798
+5 1.76493 0.95898 0.802018 0 0.367269 0.367269 0 0 0 0.39052 1.44183 0.7810
+4 0.282336 0.270268 0.270268 0.540536 4.05402 1.08107 0.270268 1.08107 0.54
+0536 0.270268 0.540536 0 0.295856 1.4281 2.26672 1.62577 2.77495 3.175 4.26
+632 7.19803 7.89048 4.24098 4.60009 2.05255 1.94469 0.145023 0.295856 0.561
+13 0 0 0 0
+ 2001 7 5 3 0 86 0 0 0 0 0 0 0 0.126708 0.126708 0.567433 0.220362 0 0 0.05
+71889 0 0 0 0.0660195 0.0660195 0.132039 0.792002 1.98433 2.71391 6.29261 3
+.35449 5.62384 14.7615 6.90201 3.53363 2.73481 0.778586 1.77044 0.528516 0.
+0571889 0.0571889 0.894272 0.734813 0 0 0 0 0 0 0 0 0 0.80843 0.661087 0 0.
+0660195 0.132039 0.0660195 0 0 0.0571889 0.132039 0.0571889 2.04183 1.90108
+ 6.41163 11.1503 9.89214 6.55394 2.14223 2.38112 0.259596 0.409458 0 0 0 0 
+0 0 0
+-9999 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 
+#
+35 #_N_age_bins
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+ 29 30 31 32 33 34 35
+1 #_N_ageerror_definitions
+ 0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5
+ 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5
+ 32.5 33.5 34.5 35.5 36.5 37.5 38.5 39.5 40.5
+ 0.064 0.064 0.128 0.192 0.256 0.32 0.384 0.448 0.512 0.576 0.64 0.704 0.76
+8 0.832 0.896 0.96 1.024 1.088 1.152 1.216 1.28 1.344 1.408 1.472 1.536 1.6
+ 1.664 1.728 1.792 1.856 1.92 1.984 2.048 2.112 2.176 2.24 2.304 2.368 2.43
+2 2.496 2.56
+#_mintailcomp: upper and lower distribution for females and males separatel
+# y are accumulated until exceeding this level.
+#_addtocomp:  after accumulation of tails; this value added to all bins
+#_males and females treated as combined gender below this bin number 
+#_compressbins: accumulate upper tail by this number of bins; acts simultan
+# eous with mintailcomp; set=0 for no forced accumulation
+#_Comp_Error:  0=multinomial, 1=dirichlet
+#_Comp_Error2:  parm number  for dirichlet
+#_mintailcomp_addtocomp_combM+F_CompressBins_CompError_ParmSelect
+-1 0.001 0 0 0 0 #_fleet:1_Fishery
+-1 0.001 0 0 0 0 #_fleet:2_POP
+-1 0.001 0 0 0 0 #_fleet:3_EarlyTriennial
+-1 0.001 0 0 0 0 #_fleet:4_LateTriennial
+-1 0.001 0 0 0 0 #_fleet:5_AFSCSlope
+-1 0.001 0 0 0 0 #_fleet:6_NWFSCSlope
+-1 0.001 0 0 0 0 #_fleet:7_NWFSCcombo
+3 #_Lbin_method_for_Age_Data: 1=poplenbins; 2=datalenbins; 3=lengths
+# sex codes:  0=combined; 1=use female only; 2=use male only; 3=use both as
+#  joint sexxlength distribution
+# partition codes:  (0=combined; 1=discard; 2=retained
+#_yr month fleet sex part ageerr Lbin_lo Lbin_hi Nsamp datavector(female-ma
+# le)
+ 1971 7 1 3 2 1 -1 -1 50 0 0 0 1 1 3 12 41 85 118 69 42 19 24 12 10 12 24 1
+4 17 11 10 8 1 3 3 3 1 1 6 1 5 5 5 34 0 0 0 0 2 3 19 44 95 82 64 29 27 14 1
+0 15 9 9 19 16 8 14 11 6 6 2 2 1 2 3 2 0 0 0 16
+ 1975 7 1 3 2 1 -1 -1 64 0 0 0 0 4 5 8 14 22 54 62 62 82 69 40 16 13 8 12 8
+ 13 10 10 12 4 9 5 4 1 2 4 1 2 1 32 0 0 0 2 4 7 11 13 22 40 56 64 47 48 32 
+10 9 6 1 5 3 3 5 4 1 2 1 4 0 1 0 0 1 1 5
+ 1981 7 1 3 2 1 -1 -1 67 0 0 0 0 0.00404714 0.0135818 0.00811494 0.0137754 
+0.0210003 0.0377673 0.0295907 0.0293581 0.0220336 0.0243744 0.040245 0.0249
+519 0.0198509 0.0257311 0.0189026 0.0169685 0.00742841 0.012901 0.0033795 0
+.0118256 0.00607826 0.00267712 0.00269287 0.00202062 0.0077938 0.00644115 0
+.00139067 0.00138477 0.00309048 0.00201933 0.036704 0 0 0 0 0.000679438 0.0
+108962 0.0118614 0.0190193 0.0206069 0.0632808 0.0633315 0.0567635 0.034792
+7 0.0306471 0.0358372 0.0368514 0.0146575 0.0301356 0.0174301 0.0106011 0.0
+0988138 0.00400695 0.00611179 0.00402989 0.00652221 0.000662073 0.00276376 
+0.00578793 0.00514322 0.000711231 0.00203831 0.00618096 0.00376402 0.006180
+96 0.0207024
+ 1982 7 1 3 2 1 -1 -1 281 0 0 0 0 0.002133 0.00633731 0.0101806 0.0139678 0
+.0187537 0.0428652 0.0635334 0.0525654 0.0326669 0.0298195 0.0159016 0.0129
+988 0.0177752 0.0176611 0.0201746 0.0160997 0.00992316 0.0287421 0.00770521
+ 0.00816547 0.00778021 0.0083981 0.00619635 0.00752214 0.00818713 0.0059707
+1 0.00588224 0.00592869 0.0040142 0.00529777 0.0469571 0 0 0 0 0.00045301 0
+.00414307 0.00780961 0.0137223 0.0193575 0.0260648 0.0421599 0.0419243 0.03
+71274 0.0245195 0.0188804 0.0223248 0.018367 0.0161965 0.0167241 0.0169538 
+0.0187588 0.00716271 0.00401399 0.00706701 0.00767709 0.00872869 0.00775179
+ 0.00724985 0.00865296 0.00342902 0.00232064 0.00620426 0.00269947 0.003437
+12 0.0380141
+ 1983 7 1 3 2 1 -1 -1 233 0 0 0 0.00115817 0.00186341 0.00781425 0.0172433 
+0.0247612 0.0183173 0.0187423 0.0272781 0.0427469 0.0336626 0.0221579 0.016
+4992 0.0127553 0.0111104 0.0126944 0.0152083 0.0144933 0.0160771 0.00862412
+ 0.00836073 0.00823763 0.00520759 0.00303873 0.00906433 0.0103445 0.0061180
+7 0.00876701 0.00870798 0.00849246 0.00550429 0.00625077 0.0885274 0 0 0 0.
+000794267 0.00538459 0.00684318 0.0208024 0.0236601 0.0220731 0.0171749 0.0
+304826 0.043727 0.0482119 0.0295071 0.0212407 0.0157566 0.0138412 0.0180144
+ 0.0142297 0.0190489 0.0142496 0.0100476 0.00619671 0.00530911 0.00721689 0
+.00365023 0.00899375 0.0059245 0.00900897 0.00881555 0.00783183 0.0054578 0
+.0029683 0.0051237 0.048584
+ 1984 7 1 3 2 1 -1 -1 187 0 0 0 0 0.00157238 0.00379243 0.00733366 0.010623
+1 0.0223249 0.017673 0.0131205 0.0302961 0.0409202 0.0388159 0.0316282 0.02
+68906 0.010829 0.014137 0.00959333 0.0129589 0.0103457 0.00743618 0.0070931
+1 0.00559187 0.00809763 0.00518061 0.00489721 0.00623529 0.00575982 0.00489
+283 0.00456195 0.00754014 0.00459241 0.0038719 0.0795289 0 0 0 0 0.00058672
+9 0.00401475 0.00695512 0.0148996 0.0277977 0.0355823 0.0281533 0.042749 0.
+0414476 0.03643 0.0405862 0.0242813 0.0157417 0.0168364 0.0110356 0.016429 
+0.0137144 0.00716519 0.0104627 0.00957041 0.00655739 0.00520425 0.00927967 
+0.00461051 0.00263269 0.00623174 0.00542077 0.0116449 0.00763503 0.00460442
+ 0.0736045
+ 1985 7 1 3 2 1 -1 -1 99 0 0 0.000247835 0 0.00199067 0.00610523 0.0143149 
+0.0142492 0.0213599 0.0111939 0.0134881 0.0184485 0.0102727 0.0237993 0.017
+4993 0.0180474 0.012022 0.011288 0.00926444 0.00688004 0.00814859 0.0051855
+3 0.0105323 0.0110348 0.00756593 0.00994473 0.0107002 0.00195364 0.00458332
+ 0.00381881 0.00611178 0.00350421 0.00295929 0.0116696 0.0950421 0 0 0 0 0.
+00110019 0.0075892 0.0126952 0.0188163 0.0169527 0.0280331 0.0179256 0.0214
+725 0.0207544 0.0310506 0.0304282 0.0282721 0.0335502 0.0243406 0.0214421 0
+.0139965 0.0139976 0.0136459 0.021124 0.0228292 0.028383 0.0106542 0.008447
+23 0.00887204 0.00427335 0.00419084 0.00813057 0.0114825 0.00703564 0.00338
+514 0.101903
+ 1986 7 1 3 2 1 -1 -1 85 0 0 0.000678286 0.00135657 0.00385594 0.00391172 0
+.0300169 0.0537723 0.0533961 0.0355844 0.0154634 0.0226774 0.0104581 0.0186
+724 0.0183772 0.0301819 0.021404 0.0132344 0.00884521 0.012398 0.0096323 0.
+0133099 0.00809913 0.010679 0.0240931 0.0205524 0.00474203 0.00432782 0.008
+21303 0.00527412 0.00536829 0.007196 0.0038113 0.00869652 0.0925904 0 0 0 0
+.000734067 0.00163213 0.00471541 0.0237728 0.0424816 0.0418597 0.015369 0.0
+176729 0.0100342 0.00595327 0.00591755 0.0136547 0.0185966 0.0211339 0.0137
+597 0.00886937 0.0122925 0.00853479 0.0141186 0.00978028 0.0160587 0.012063
+ 0.0155178 0.00908895 0.00579189 0.00264553 0.00273323 0.00382399 0.0041165
+1 0.00404208 0.00229478 0.0500711
+ 1987 7 1 3 2 1 -1 -1 108 0 0 0 0 0 0.00131188 0.0145449 0.0335031 0.063666
+ 0.0578976 0.0311336 0.0221651 0.0132387 0.0113063 0.011584 0.0157152 0.009
+99899 0.0189748 0.0153756 0.00876061 0.0123447 0.00561425 0.0150111 0.01050
+35 0.0177062 0.0140458 0.0113077 0.0136457 0.00850931 0.00365934 0.00752388
+ 0.0119076 0.00492019 0.00483156 0.118503 0 0 0 0 0.00198961 0.00185987 0.0
+10985 0.0316143 0.0418732 0.0312819 0.032389 0.0167871 0.00330841 0.012281 
+0.0120472 0.00965342 0.0185566 0.0167813 0.00918125 0.0120507 0.00457697 0.
+00411008 0.00906515 0.00740426 0.016315 0.0065347 0.0130534 0.00626436 0.00
+533258 0.00151443 0.0088458 0.00156774 0.00657401 0.00138708 0.0556047
+ 1988 7 1 3 2 1 -1 -1 17 0 0 0 0 0 0 0.0102522 0.0193173 0.0466009 0.049109
+3 0.0856115 0.0326522 0.0138398 0.0132013 0.0206385 0.00541326 0.00270663 0
+.0138398 0 0.00811989 0.029065 0.00811989 0.00541326 0.00270663 0 0.0138398
+ 0.0263584 0.0108265 0.0165464 0.00818407 0 0 0 0 0.103346 0 0 0 0 0 0 0.01
+11332 0.0193173 0.0486248 0.0317262 0.0801084 0.0639385 0.0386589 0.0061601
+9 0 0.00616019 0.00950529 0.00206815 0.00409203 0.010935 0.0152695 0.006160
+19 0 0 0.00409203 0.0177336 0.00206815 0.00477479 0 0.00206815 0 0 0 0.0020
+6815 0.0676292
+ 1994 7 1 3 2 1 -1 -1 33 0 0 0 0 0 0.00537117 0.00427334 0.0120506 0.034660
+9 0.0352971 0.0203869 0.033833 0.0314128 0.0367554 0.00964451 0.0243799 0.0
+0537117 0 0.0103106 0 0 0.0103079 0.00523102 0.0101537 0.0153847 0.00950436
+ 0 0.00523102 0.00507686 0.00523102 0.00950436 0.0159062 0.00523377 0.01030
+79 0.0383893 0 0 0 0 0 0.0185386 0.000960432 0.00786336 0.0330111 0.0616652
+ 0.038486 0.0600476 0.091774 0.0580088 0.0231636 0.0178022 0.038709 0.01494
+85 0.0170068 0.00815767 0.00705984 0.000960432 0.0116356 0.000960432 0.0096
+4451 0 0.0118634 0 0 0.0027865 0.00705984 0.00537117 0.0027865 0 0.0405194
+ 1999 7 1 3 2 1 -1 -1 95 0 0 0 0 0.00771515 0.00640714 0.0112693 0.0463809 
+0.0322808 0.0752348 0.0619468 0.0464111 0.0144639 0.0134558 0.0161766 0.011
+2297 0.0178297 0.0110403 0.00965799 0.0115896 0.0104016 0.0154115 0.0044830
+2 0.0144376 0.00459259 0.00399205 0.000751616 0.000966322 0.00108588 0.0013
+8537 0.00488608 0.00263904 0.00374773 0.00474983 0.0438717 0 0 0 0 0 0.0066
+1242 0.00336933 0.0261508 0.0522488 0.0976392 0.0496136 0.035771 0.0273011 
+0.0310184 0.0175312 0.00789244 0.0256161 0.0250709 0.01022 0.0123165 0.0072
+2364 0.00662842 0.00390904 0.00106059 0.00223597 0.000596942 0.00184007 0.0
+0261606 0 0.0012276 0.00336433 0.00143167 0.00220472 0.00469072 0.0221072
+ 2000 7 1 3 2 1 -1 -1 91 0 0 0 0 0.00462133 0.00508648 0 0.00543023 0.02245
+16 0.0368663 0.0307416 0.0390278 0.023537 0.0432651 0.0307262 0.03669 0.017
+2341 0.0192211 0.0049783 0.00548715 0.00469453 0.00582511 0.0123099 0.01500
+7 0 0.0041931 0.00330126 0.00660253 0.00554302 0.0134185 0.00797751 0.00497
+718 0 0.00567506 0.0406439 0 0 0 0 0.00133865 0.00961709 0.000650737 0.0049
+9577 0.0180131 0.0306899 0.0526921 0.0267985 0.0391578 0.0427263 0.0320437 
+0.0444976 0.0283458 0.0308619 0.0125843 0.0144038 0.00544317 0.00646096 0.0
+135609 0.000741264 0.00404253 0.00857783 0.00432644 0.00387327 0.00804198 0
+.0106739 0.00383546 0.00453992 0.0076636 0.00579808 0.0674707
+ 2001 7 1 3 2 1 -1 -1 218 0 0 0 0.000808258 0.00350201 0.0151938 0.0296607 
+0.00760609 0.018073 0.034222 0.0382231 0.0396349 0.0404553 0.0194551 0.0173
+801 0.0178749 0.0233117 0.0185714 0.00603988 0.0096286 0.0051298 0.00280304
+ 0.0138435 0.00487733 0.00533942 0.00473503 0.00338683 0.00129074 0.0013382
+2 0.00789943 0.00706822 0.00482374 0.00404889 0.00335445 0.038822 0 0 0 0 0
+.00580165 0.0213444 0.0254745 0.0190592 0.0151489 0.0318798 0.0344917 0.068
+6997 0.0624368 0.0279895 0.0235497 0.0259772 0.00887882 0.029954 0.0111619 
+0.0127118 0.0121542 0.00423502 0.00743307 0.0039227 0.0140069 0.00677034 0.
+00451679 0.00497903 0.00489066 0.00386166 0.0150728 0.00665435 0.00272246 0
+.00483416 0.0309847
+ 2002 7 1 3 2 1 -1 -1 223 0 0 0 0.000577661 0.00171436 0.00540623 0.0338637
+ 0.0244426 0.0132871 0.0152273 0.0331343 0.0305321 0.0353067 0.0325495 0.01
+84043 0.00707861 0.00670111 0.00603008 0.00956337 0.0105842 0.011891 0.0112
+842 0.0099127 0.000777828 0.0115012 0.00228709 0.00194447 0.00427045 0 0.00
+468071 0.00584245 0.00221844 0.00420037 0.0103403 0.0265064 0 0 0 0 0 0.004
+21214 0.032254 0.0436706 0.0332999 0.0274579 0.0650392 0.0558801 0.0739198 
+0.0407943 0.0185947 0.0267555 0.01538 0.0262143 0.0171108 0.0106306 0.01518
+58 0.00978734 0.00350958 0.00993759 0.0116287 0.00431773 0.00110615 0.00199
+688 0.00197276 0.00137665 0.00446405 0.00614531 0.00462153 0.00432073 0.036
+3548
+ 2003 7 1 3 2 1 -1 -1 197 0 0.000538995 0.0140139 0.00210396 0.00298484 0.0
+00103549 0.001221 0.0160632 0.0294194 0.0320453 0.0270776 0.0384518 0.03605
+64 0.0391462 0.0258451 0.0176712 0.0325062 0.0291514 0.0130032 0.0235741 0.
+0149479 0.0132681 0.00663774 0.00462131 0.00880165 0.00299396 0.00193764 0.
+0109172 0.00231163 0.00731873 0.000943181 0.00100991 0.00489552 0.00347038 
+0.029528 0 0 0.00323397 0.000103549 0.00125442 0 0.0085445 0.0189353 0.0244
+202 0.012768 0.0284219 0.0397798 0.0416885 0.0341656 0.0482715 0.0266455 0.
+0224615 0.0278156 0.00854886 0.0153009 0.0101544 0.0106577 0.00879375 0.004
+57906 0.00793575 0.00828845 0.0124976 0.00489211 0.0080044 0.00735362 0.004
+49975 0.004984 0.00575436 0.00893653 0.0357286
+ 2004 7 1 3 2 1 -1 -1 122 0 0 0 0 0.00348408 0.004823 0.00894742 0.00332042
+ 0.0278028 0.0434854 0.0208411 0.0148066 0.0137181 0.020254 0.0352977 0.019
+695 0.031414 0.0159665 0.0305249 0.017687 0.0198266 0.0237654 0.0100849 0.0
+0365831 0.00754597 0.00544412 0.00721964 0.00374072 0.00168566 0.0057438 0.
+00243698 0.00160126 0.000544288 0.0058051 0.0325558 0 0 0 0 0 0.004823 0.00
+159062 0.011571 0.0229048 0.0270898 0.0271468 0.0256089 0.0521255 0.0336556
+ 0.0433004 0.0328656 0.0205525 0.0250788 0.0253681 0.0173316 0.00944629 0.0
+11462 0.0109554 0.0162403 0.00751013 0.0177832 0.00623214 0.0137792 0.00569
+058 0.0055562 0.00330597 0.00961799 0.0110292 0.00249921 0.0541526
+ 2005 7 1 3 2 1 -1 -1 162 0.00120203 0 0 0 0.00178014 0.0132879 0.0090509 0
+.00844524 0.0203201 0.0307857 0.0299353 0.0141185 0.0283709 0.0184266 0.032
+4962 0.0301638 0.00934959 0.0204441 0.0170098 0.0112024 0.0096742 0.0079767
+8 0.0117468 0.0121822 0.0129785 0.0120557 0.0108643 0.00526517 0.00299804 0
+.00615547 0.00216406 0.00517564 0.0124884 0.00182357 0.0470703 0 0 0 0 0.00
+555997 0.0128572 0.0160718 0.00187875 0.0186159 0.0322584 0.0412818 0.03544
+92 0.0199862 0.0293429 0.0289996 0.0343099 0.0194335 0.011754 0.0176922 0.0
+196097 0.0171053 0.00510404 0.0162903 0.0188956 0.0177902 0.00703433 0.0189
+89 0.00342556 0.00903009 0.00856553 0.00695413 0.00814172 0.00801791 0.0025
+8417 0.049963
+ 2006 7 1 3 2 1 -1 -1 222 0 0 0 0 0.00373037 0.0248413 0.0327697 0.0269515 
+0.0161448 0.0248217 0.029807 0.0215826 0.0213187 0.0260314 0.0233865 0.0355
+951 0.019156 0.0194567 0.0246936 0.0172518 0.0112422 0.0242372 0.00377459 0
+.00805339 0.0111603 0.007767 0.00571208 0.00969157 0.00342244 0.0153442 0.0
+0262653 0.00676138 0.00223334 0.00225137 0.0603728 0 0 0.000163878 0.000163
+878 0.00458054 0.0107195 0.0217092 0.0149363 0.0219556 0.0267529 0.0358955 
+0.0298267 0.0335825 0.0146305 0.0267482 0.0242328 0.0322252 0.0165164 0.023
+1586 0.0110577 0.0101397 0.0155014 0.00493127 0.00662782 0.00517926 0.00616
+945 0.00691564 0.00739881 0.00203177 0.00789868 0.00659006 0.00257895 0.003
+20599 0.00137975 0.0224066
+ 2007 7 1 3 2 1 -1 -1 310 0 0 0 7.47e-005 0.00144589 0.0194582 0.0401468 0.
+0437291 0.0339052 0.0157581 0.0247625 0.023835 0.0298977 0.0198229 0.019402
+5 0.019352 0.0166799 0.0153841 0.0161865 0.0174663 0.0115943 0.00749504 0.0
+108257 0.00731441 0.0098793 0.00751534 0.00429162 0.00284041 0.00106328 0.0
+085387 0.00305822 0.00194165 0.00252644 0.00116135 0.0361455 0 0 0 5.33e-00
+5 0.00239319 0.0183891 0.0419972 0.0486514 0.0295986 0.0275592 0.0316117 0.
+0281836 0.0244153 0.0225655 0.021786 0.0270733 0.0243035 0.0251153 0.010886
+9 0.015763 0.011777 0.011746 0.00960126 0.00636736 0.0124984 0.00483543 0.0
+0355341 0.00600756 0.00353781 0.00654487 0.00460301 0.00345673 0.00349228 0
+.00336892 0.0347653
+ 2008 7 1 3 2 1 -1 -1 167 0 0 0 0 0.00040494 0 0.00704864 0.0247757 0.03506
+57 0.0270737 0.0295871 0.0323289 0.0274303 0.022773 0.0232008 0.00995862 0.
+019773 0.0118994 0.0128412 0.0140016 0.0141831 0.0141566 0.0172684 0.013760
+3 0.00917899 0.00570688 0.00206422 0.00274825 0.00591926 0.00310583 0.00335
+036 0.00108799 0.00586779 0 0.0410011 0 0 0 0 0 0.00450054 0.00775082 0.023
+7393 0.0545221 0.0389926 0.029374 0.0298225 0.0301954 0.0166105 0.0131255 0
+.0179777 0.0247257 0.0289996 0.00893798 0.0246551 0.0141893 0.0110036 0.010
+7391 0.0269465 0.0169069 0.00973644 0.00949791 0.00764306 0.00962328 0.0120
+122 0.00753345 0.00494045 0.00872556 0.00347486 0.0555363
+ 2009 7 1 3 2 1 -1 -1 290 0 0 0 0 0 0.00279875 0.00974806 0.0220168 0.08669
+07 0.0596469 0.0310607 0.0138818 0.0134161 0.0139793 0.016935 0.017103 0.00
+796086 0.00696166 0.0145744 0.0187531 0.0146334 0.00735501 0.00983659 0.011
+2499 0.013464 0.00825441 0.0134648 0.010098 0.00423832 0.0076659 0.00169819
+ 0.00414421 0.00282726 0.00353155 0.0379777 0 0 0 0 0 0.000453922 0.010299 
+0.0175443 0.0508605 0.0465298 0.0358917 0.0279641 0.026783 0.020191 0.01502
+59 0.0149576 0.0183957 0.0122906 0.0175824 0.018156 0.0117185 0.0110943 0.0
+188378 0.00819866 0.0139323 0.010237 0.0146244 0.00699415 0.00688891 0.0062
+2387 0.00450335 0.00334177 0.00857464 0.00265996 0.0532786
+ 2010 7 1 3 2 1 -1 -1 226 0 0 0 0 0 0 0.0023072 0.0215409 0.0263786 0.08304
+57 0.042092 0.0403396 0.0163958 0.0155166 0.0192622 0.0149828 0.0235971 0.0
+16854 0.0124985 0.0133149 0.0118112 0.0184944 0.00947991 0.0142685 0.002045
+07 0.00401775 0.00460206 0.00278203 0.000905591 0.00223404 0.000506361 0.00
+0853701 0.00425824 0.00265169 0.0262438 0 0 0 0 0 0 0.0049078 0.0340997 0.0
+512929 0.0851691 0.0460493 0.0375573 0.030877 0.0239983 0.0190039 0.0117208
+ 0.00950067 0.0140781 0.0127624 0.0301408 0.0205339 0.0106469 0.0100559 0.0
+111855 0.0045636 0.0131684 0.00295342 0.00782762 0.00512808 0.00960994 0.00
+18232 0.0024087 0.0029313 0.00261828 0.030107
+ 1985 7 2 3 0 1 -1 -1 142 0 0.0188623 0.616846 0.484427 1.66151 1.55461 0.5
+35235 0.591937 1.11089 3.39236 2.73841 1.63372 2.915 1.27223 1.8279 0.65507
+4 0.43516 1.02727 0.7028 1.03548 1.29137 1.4468 0.914557 1.05016 0.42921 0.
+504556 0.244201 1.2354 0.759142 0.542019 1.03185 1.03554 1.68261 0.649933 1
+3.1083 0 0.334837 0.899185 0.927749 1.27122 1.66932 0.61441 0.330146 1.5205
+6 2.61785 2.72031 1.02248 2.57188 2.94568 2.01608 0.81075 1.16974 1.23107 1
+.17579 1.54749 0.756586 1.03826 0.569954 0.512358 0.388007 0.0857659 0.2363
+16 0.557694 1.00755 0.613097 1.12475 0.546092 1.54829 1.28516 12.1981
+ 1989 7 3 3 0 1 -1 -1 98 0.223111 0.630218 1.02264 6.47902 5.77291 1.49496 
+1.31459 14.4893 2.62535 3.17217 2.59122 2.83027 0.647361 0.278089 0.0393468
+ 0.05907 0.0675815 0.0910973 0.124482 0.113466 0.0339585 0.309827 0.796628 
+1.59525 0.113466 0.81957 0.205833 0.0339585 0.0785979 0 0.0339585 0.0339585
+ 0 0.075264 1.88877 0.230594 0.65444 1.69817 8.86818 2.88103 4.78349 4.9206
+4 5.49403 2.38972 2.41787 2.20235 1.63928 1.12103 0.166872 0.136646 0.13324
+9 0.785612 0.906424 0.234278 0.120813 0.900736 0.309827 0.7946 0.292264 1.6
+8469 1.59525 1.53466 0.0695754 0 0.0888395 0 0.075264 0.0308543 0 0.753413
+ 1992 7 3 3 0 1 -1 -1 66 0 0.543978 0.942175 5.46607 9.38086 0.757799 2.616
+38 2.11764 0.901493 2.48853 2.69149 4.93068 0.040228 1.39504 0.0384528 1.36
+18 0 0 0 0 1.16472 1.16472 1.16472 0 1.3618 0 0 0.197077 1.16472 0.197077 0
+.197077 0.662931 0.0400563 0 4.17061 0 0.558419 0.928371 5.88791 6.22245 2.
+22314 1.1201 1.718 0.541837 1.24626 11.02 1.95334 8.58043 2.50624 1.62537 0
+.268777 0 0.0391294 0 0 1.16472 0.330221 0.330221 1.26462 0.230324 0 2.3294
+4 0.269454 0 0.0359264 0.0400563 0 0.0384528 0 0.368674
+ 1995 7 4 3 0 1 -1 -1 75 0 0 0.485716 6.00939 1.74939 1.76748 2.12167 2.311
+49 2.42846 0.675481 5.01533 5.23598 3.17395 0.973073 3.33018 6.07761 2.3056
+8 2.24446 6.20051 0.142852 0.045492 0 0.142852 2.00414 0.215419 0.204535 0.
+450788 0.522285 0 0.142852 2.09026 0.450788 0.579013 0.338193 6.49706 0 0 0
+.323811 2.99903 2.37874 1.17454 1.74229 1.45867 2.76879 0.728098 0.678252 0
+.045492 2.43281 5.89897 1.88483 2.81866 1.02435 0.0616832 0.204535 0 0.3582
+71 0.723238 0.242903 0.215419 0.142852 0.242903 0.211232 0 0.142852 0.10005
+1 0 0 0.487742 0.285704 2.2909
+ 1998 7 4 3 0 1 -1 -1 75 0 0.0528537 2.49341 6.12709 0.895168 1.37105 7.088
+98 2.08694 1.52866 4.04676 1.71036 3.72137 1.00343 3.78514 4.64022 1.1444 3
+.18814 1.67341 0.461892 0 1.42796 1.69825 0.435076 0 0 0.493693 0 0.585387 
+0 0.828098 0.515411 0.0434356 0.61642 0.0803341 1.84777 0 0.0479891 3.60533
+ 6.19851 0.951269 1.34127 2.7879 2.93794 2.45785 0.467602 2.20256 6.68528 2
+.46364 1.17964 2.50194 0.803693 0.99288 0.318992 4.32787 0.601298 0 0 0 0.2
+45889 0 0.245889 0 0.855692 0.166221 0 0 0 0 0 0.0217178
+ 2001 7 4 3 0 1 -1 -1 93 1.06317 5.92396 7.1045 3.25736 2.80233 11.7906 15.
+4906 1.34669 0 1.76947 0.0791362 1.76064 0 0.424132 0.336313 1.08443 1.4888
+2 0.672627 0.672627 0.391977 0 0.336313 0.336313 0.336313 0.0383969 0.33631
+3 0.336313 0.672627 0.0439753 0.0556638 0.082252 0 0.336313 0 5.10568 1.750
+7 3.72245 4.36449 2.96255 2.76226 9.36569 1.34254 2.02567 0.0776672 0.11693
+7 2.10334 0.166879 0.376275 0.0399611 0.0383969 0.0383969 0.0398659 0.03839
+69 0.630915 0.0777063 0.0383969 0 1.47099 0.158103 0 0 0.0782629 0 0 0.0398
+659 0.0398659 0 0 0 0.657531
+ 2004 7 4 3 0 1 -1 -1 89 0 0.0631374 3.15527 9.017 15.8536 2.00313 0.095856
+6 0.989259 2.24775 2.2911 3.60656 2.4599 0.779381 1.43957 0.295558 1.44414 
+1.8598 1.1994 4.45137 0.0563985 1.38741 1.3909 0.0277053 1.38347 1.11284 0.
+284348 0.270626 0.0501369 0.100274 0.0501369 0.0865516 0 0.0865516 0.320763
+ 0.508259 0.0319743 0.0959877 2.77566 7.17735 7.92433 2.75606 0.273034 0.05
+93483 2.12041 0.32095 0.53175 1.2081 1.58127 0.261917 1.16235 1.70636 0.741
+739 1.17896 0.717512 1.32081 1.3804 0.0242035 0 0.0728293 0 1.12883 1.58869
+ 0.101444 0.69682 0 0.101414 0.10684 0.0364147 0.136689 0.311372
+ 2001 7 6 3 0 1 -1 -1 27 0 0 0 0 0 0 0 0 0 0 0.135366 0.278441 1.30855 0.37
+2109 1.89155 0.683608 3.63216 1.30855 1.18529 0.376272 1.70898 0 2.60837 0 
+0 0 0.156155 1.15887 0 0.12974 2.18154 0 0.12974 0 4.43165 0 1.0745 0 0 0 0
+ 1.02913 3.08741 0 4.82656 0 4.82274 6.88163 0.751164 2.34416 4.96242 5.808
+47 5.37291 4.35249 1.9884 1.83224 0.435563 0.291158 0.409161 1.7025 2.46743
+ 0.156155 0.279421 1.85114 1.02913 0 1.02913 0.382746 0 17.1553
+ 2002 7 6 3 0 1 -1 -1 42 0 1.42261 3.22029 1.05348 0.738267 1.1074 4.83602 
+6.94298 3.28636 1.31477 3.20824 5.00604 3.4806 1.03317 3.55419 2.05937 2.28
+958 1.82423 0.637642 0 0.395529 0.250035 0.791057 0.242113 0.664128 0 0.395
+529 0 0 0 0 0.422016 0 0.395529 2.72821 0 1.47653 2.46955 0.718693 0.684345
+ 1.42261 3.31388 2.73738 0.630424 4.49126 2.09457 3.75722 2.68952 2.29295 1
+.52828 2.72288 0.645563 1.21261 0.791057 0.999557 1.0147 1.68448 1.0147 0.7
+91149 0.395529 0.619168 0.521632 0.250035 0 0 0 0 0 0.422016 3.30832
+ 2003 7 7 3 0 1 -1 -1 72 0 0.102924 1.56866 3.76894 0.417967 0.207864 0.814
+736 3.57369 3.26387 3.97103 2.63657 7.10549 4.89569 3.79677 2.22406 4.12144
+ 0.201351 2.42978 0.55042 0.14798 0.0210445 0.806071 0 0 0 0.106244 0 0.571
+167 0.0266671 0.0293601 0.0268699 0.0266671 0.0344794 0.0228661 2.2219 0 0.
+0651541 1.9993 5.0953 0.470959 0 0.31981 5.47499 3.90033 2.04739 2.25303 2.
+55837 4.26896 4.78446 3.35628 3.92364 1.01929 0.36221 0.314469 0.606886 2.1
+8591 0.459169 0.990096 0.0533717 0.594597 0.116952 0 0.235455 0 0.127833 0.
+125767 0.0800313 0 0.0800313 2.43739
+ 2004 7 7 3 0 1 -1 -1 44 0 0.222597 1.53797 7.78899 3.09403 0 0 0 0.470746 
+0 0 0.332692 2.11678 3.41296 4.23356 3.31717 2.29752 2.90941 4.32729 1.1365
+7 2.36099 8.46711 0.969802 2.11678 2.11678 0 0.36118 0 0 0 0 0.244205 0 0 0
+.563 0 0 0.327766 2.51648 5.25657 0 2.11678 0.116886 0.369873 2.3592 0 0.36
+9873 0.109075 2.47796 0 5.99598 2.90941 0 0 2.51649 3.08658 4.23356 0.96980
+2 0.244205 0 0 1.42208 1.21401 0.36118 0 0 0.35328 0 0.244205 6.03065
+ 2005 7 7 3 0 1 -1 -1 53 0.0479312 0.0479312 0 0 2.76573 6.56215 2.94839 0.
+111973 0.0912535 3.9061 4.07584 0.0978769 6.02923 0 7.5859 0.10271 2.70088 
+0.186439 0.0961608 0.0478853 0.762336 0.103685 0.0957705 0 0.0478853 0.1436
+62 0 0.709463 0.765579 0.0871267 0 0.0478853 0.757348 0.139139 2.36569 0.23
+965 0.237716 0.0472826 0.0943988 1.64895 6.73026 0.378364 1.23209 13.9692 6
+.68632 5.44991 4.11643 0.882322 0.211515 5.2674 0.286347 0.799281 0 0.82938
+6 1.45778 0.0478853 0 0.0638068 0 0.2535 2.68159 0.0898186 0 0 0.108673 0.0
+877064 0.101935 0.102658 0.261311 2.20656
+ 2006 7 7 3 0 1 -1 -1 50 0.0951259 0.422643 0.102208 1.61964 4.88902 1.2603
+1 3.22802 0.518946 0.367617 1.27593 0.427044 0.244604 0.326661 1.27651 0.37
+6053 2.66983 1.97633 0.363765 1.67147 1.4603 0.0616609 1.67147 0.0537102 0 
+0 2.31301 0 0 0.547419 0 1.21485 0 0.0591554 0 2.88564 0.0951259 0.15724 0.
+183831 0.758898 0.959348 4.27772 6.84653 1.7914 1.82373 2.88631 3.77133 6.9
+9096 3.46342 0 3.34349 6.04836 3.85887 0 0.853262 0.457751 2.40313 0 0.3960
+9 0.871865 2.88632 4.95501 0.39609 0 2.12864 0.445595 0.0591554 0.457172 0.
+0433609 0.39609 2.61498
+ 2007 7 7 3 0 1 -1 -1 74 0 2.54612 5.44888 0.4066 2.41567 3.85843 4.05452 1
+.51728 1.82244 0.575853 0.517752 0.625727 1.23505 0.416765 0.320101 0.40906
+5 0 1.42009 0.510053 0.401445 0 0.422605 0.208962 1.12112 0.180855 0.387391
+ 0 0.90865 0 0 0.110322 0 0 0.296964 0.920542 0 2.20743 5.22111 0.493164 1.
+39036 2.88224 3.86972 2.945 6.00334 2.72053 2.5093 1.717 3.13923 2.12318 0.
+710881 2.34862 1.52504 2.53825 1.01313 2.83043 0.216583 2.21525 2.12717 1.2
+0817 1.12207 1.01378 0.90865 1.00435 1.00964 0 0 0.334511 0 1.11006 6.48257
+ 2008 7 7 3 0 1 -1 -1 60 0 0.240763 2.27759 3.42278 0.594642 1.09157 1.8243
+1 6.54132 2.81717 1.93343 2.39136 1.60565 0.509029 0.848389 0.955601 2.4628
+6 2.11654 0.100917 1.79786 2.83256 0.66517 1.69678 1.21808 0.59095 1.25715 
+1.04141 0.949469 0 0 0.295475 0.59095 0 0.369695 0 1.7491 0 0.120381 2.2410
+4 4.98007 0.976471 0.207258 0.615239 1.68364 2.33736 0.481079 2.27963 1.910
+45 1.31916 1.50944 4.34302 2.6125 3.8493 4.22503 3.11717 1.59264 2.55755 1.
+23293 2.23756 0.104882 0.940472 0.848389 0.691867 0.59095 0.173993 0.848389
+ 0 0.113291 0.366765 0.187914 1.91558
+ 2009 7 7 3 0 1 -1 -1 63 0.472383 0 0.0428498 0.165691 1.91292 2.05778 5.60
+898 5.57063 7.43592 9.19859 5.54309 0.132831 0.247411 0.0664167 0.0710916 0
+ 0.0910386 0.132831 0.223869 2.00327 0.0993892 0.0910386 0.0910386 0.024621
+9 0 0 0 0 0.0931095 0.0664167 0 0 0.0246219 0 0.243013 0.525568 0.0840501 0
+.06652 0.137076 1.89895 0.188572 3.89161 3.89126 24.0704 11.088 0.259923 0.
+351149 0.133526 1.93625 0.0664167 0 0.159526 0.152206 2.09578 0.151206 0.09
+11307 0.0671089 0.0690877 0.322968 0.108812 1.9306 1.88821 0.151806 1.95462
+ 0.108812 0.127184 0 0.0911307 0 0.229627
+ 2010 7 7 3 0 1 -1 -1 92 0.0213421 8.36798 0.109942 0.504885 0.673311 0.435
+915 0.133727 0.899013 2.01837 5.8437 3.88983 2.19007 0.796091 1.71108 0.363
+437 1.31521 0.0715294 1.43253 1.43442 2.24723 0.147566 0.0473643 1.54992 0.
+375913 1.2556 0.408317 1.07358 1.16471 0.419638 1.75939 0 1.61298 0.554722 
+0.324972 1.35495 0.0213421 10.3412 0.039499 0.821193 0.344923 0.566577 0.52
+5486 0.615304 3.01551 5.828 1.91545 3.86595 1.02727 2.07466 0.92661 2.51296
+ 0.10621 0.963039 0.433603 0.434885 0.552008 1.42663 0.0552698 1.42663 0.10
+621 1.36565 0.927174 3.20133 0.165815 1.59244 0.518857 0.0552698 0.463587 0
+ 5.25423
+-9999  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0
+#
+0 #_Use_MeanSize-at-Age_obs (0/1)
+#
 0 #_N_environ_variables
-0 #_N_environ_obs
-0 # N sizefreq methods to read
-
-0 # no tag data
-
-0 # no morphcomp data
-
+#Year Variable Value
+0 # N sizefreq methods to read 
+#
+0 # do tags (0/1)
+#
+0 #    morphcomp data(0/1) 
+#  Nobs, Nmorphs, mincomp
+#  yr, seas, type, partition, Nsamp, datavector_by_Nmorphs
+#
+0  #  Do dataread for selectivity priors(0/1)
+# Yr, Seas, Fleet,  Age/Size,  Bin,  selex_prior,  prior_sd
+# feature not yet implemented
+#
 999
+
+ENDDATA

@@ -1,5 +1,5 @@
 ---
-title: 'Status of China Rockfish (*Sebastes nebulosus*) Along the U.S. Pacific Coast in 2015'
+title: 'Status of Pacific ocean perch (*Sebastes alutus*) along the U.S. west coast in 2017'
 author: ''
 date: ''
 output:
@@ -91,21 +91,20 @@ Catch table:                 (Table \ref{tab:Exec_catch})
     Plot_catch(Catch_df = Exec_region1_catch)
 ```
 
-```{r, fig.cap=paste('Stacked line plot of', spp,' landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_catch2}',sep=' ')}
+
+<!--```{r, fig.cap=paste('Stacked line plot of', spp,' landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_catch2}',sep=' ')}
     # Plot Oregon catches
     Plot_catch(Catch_df = Exec_region2_catch)
-```
+``` -->
 
-```{r, fig.cap=paste('Stacked line plot of', spp, 'landings history for California by fleet (recreational and commercial). \\label{fig:Exec_catch3}',sep=' ')}
+<!--```{r, fig.cap=paste('Stacked line plot of', spp, 'landings history for California by fleet (recreational and commercial). \\label{fig:Exec_catch3}',sep=' ')}
      # Plot California catches  
       Plot_catch(Catch_df = Exec_region3_catch)
-```
+``` -->
 
 \FloatBarrier
 
 ![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch2 landings stacked.png)
-
-
 
 
 
@@ -132,13 +131,13 @@ Catch table:                 (Table \ref{tab:Exec_catch})
 information, and information lacking.}
 
 `r spp` was assessed....  This assessment uses the newest version of Stock 
-Synthesis (3.xxx).  The model begins in `r Dat_start_mod1`, and assumes the stock 
+Synthesis (3.30).  The model begins in `r Dat_start_mod1`, and assumes the stock 
 was at an unfished equilibrium that year.
 
 
-Map of assessment region: (Figure \ref{fig:assess_region_map}).  
+<!--Map of assessment region: (Figure \ref{fig:assess_region_map}).  
  
-![Map depicting the boundaries for the base-case model.  \label{fig:assess_region_map}](Figures/assess_region_map.png)
+![Map depicting the boundaries for the base-case model.  \label{fig:assess_region_map}](Figures/assess_region_map.png) -->
 
 \FloatBarrier
 
@@ -1544,7 +1543,8 @@ assessment team. Not required in draft assessment undergoing review.
 
     # Pull forecasted landings and subset years
     ForecastC = mod1$timeseries[, grepl('Yr|retain[(]B[)]', names(mod1$timeseries))]
-    ForecastC$total = rowSums(ForecastC[, -1])
+    if (dim(ForecastC)[2] >= 3) { ForecastC$total = rowSums(ForecastC[, -1]) }
+    if (dim(ForecastC)[2] == 2) { ForecastC$total = ForecastC[, -1] }
     ForecastCyrs = subset(ForecastC, Yr > (Project_firstyr - 1) & Yr < (Project_lastyr + 1))
 
     # Pull Age 5+ biomass and subset years

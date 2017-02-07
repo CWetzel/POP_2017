@@ -20,41 +20,77 @@
 # Melissa Monk, NMFS
 # =============================================================================
 
+comma <- function(x, digits=0) { formatC(x, big.mark=",", digits, format = "f") }
+print.numeric  <- function(x, digits) { formatC(x, digits = digits, format = "f") }
+sb.dig = 0
+dep.dig = dig3 = 3
+dig1 = 1
+
+#' A subset of rich.colors by Arni Magnusson from the gplots package, with the
+#' addition of alpha transparency (which is now available in the gplots version
+#' as well)
+rich.colors.short <- function(n,alpha=1){
+  x <- seq(0, 1, length = n)
+  r <- 1/(1 + exp(20 - 35 * x))
+  g <- pmin(pmax(0, -0.8 + 6 * x - 5 * x^2), 1)
+  b <- dnorm(x, 0.25, 0.15)/max(dnorm(x, 0.25, 0.15))
+  rgb.m <- matrix(c(r, g, b), ncol = 3)
+  rich.vector <- apply(rgb.m, 1, function(v) rgb(v[1], v[2], v[3], alpha=alpha))
+}
+
 
 # =============================================================================
 # 1. Catch FIGURE(S) ----------------------------------------------------------
 # Required: Read in CSV file, edit this section depending on # of plots!!
 # Read in executive summary catches figure file
-Exec_catch =  read.csv('./txt_files/Exec_catch_for_figs.csv')
+#Exec_catch =  read.csv('./txt_files/Exec_catch_for_figs.csv')
   
 # Assign column names
-colnames(Exec_catch) = c('Year',
-                         'Fleet 1',
-                         'Fleet 2',
-                         'Fleet 3',
-                         'Fleet 4',
-                         'Fleet5')
+#colnames(Exec_catch) = c('Year',
+#                         'Fleet 1',
+#                         'Fleet 2',
+#                         'Fleet 3',
+#                         'Fleet 4',
+#                         'Fleet5')
     
 # Split catch by regions -retaning the colunns for each -you'll have to edit
-Exec_region1_catch = Exec_catch[,c(1:2)]
-Exec_region2_catch = Exec_catch[,c(1,3,4)]
-Exec_region3_catch = Exec_catch[,c(1,5,6)]
+#Exec_region1_catch = Exec_catch[,c(1:2)]
+#Exec_region2_catch = Exec_catch[,c(1,3,4)]
+#Exec_region3_catch = Exec_catch[,c(1,5,6)]
     
 # Melt data so it can be plotted
-Exec_region1_catch = melt(Exec_region1_catch, id='Year')
-Exec_region2_catch = melt(Exec_region2_catch, id='Year')
-Exec_region3_catch = melt(Exec_region3_catch, id='Year')
+#Exec_region1_catch = melt(Exec_region1_catch, id='Year')
+#Exec_region2_catch = melt(Exec_region2_catch, id='Year')
+#Exec_region3_catch = melt(Exec_region3_catch, id='Year')
    
 # Reassign column names
-colnames(Exec_region1_catch) = c('Year','Fleet','Removals')
-colnames(Exec_region2_catch) = c('Year','Fleet','Removals')
-colnames(Exec_region3_catch) = c('Year','Fleet','Removals')
+#colnames(Exec_region1_catch) = c('Year','Fleet','Removals')
+#colnames(Exec_region2_catch) = c('Year','Fleet','Removals')
+#colnames(Exec_region3_catch) = c('Year','Fleet','Removals')
 
-# Plot catches function
+# Pacific ocean perch catches
+#Exec_catch =  read.csv('./txt_files/_CatchAllYrs.csv')
+Exec_catch_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
+
+# Assign column names
+colnames(Exec_catch_sep) = c('Year', 'Washington', 'Oregon', 'California', 'At-sea-hake', 'Survey')
+
+# Split catch by regions -retaning the colunns for each -you'll have to edit
+Exec_region1_catch = cbind(Exec_catch_sep[,1:6])
+
+# Melt data so it can be plotted
+Exec_region1_catch = melt(Exec_region1_catch, id='Year')
+
+# Reassign column names
+colnames(Exec_region1_catch) = c('Year','Fishery','Removals')
+
+
+1# Plot catches function
 Plot_catch = function(Catch_df) {
-             ggplot(Catch_df, aes(x=Year, y=Removals,fill=Fleet)) +
+             ggplot(Catch_df, aes(x=Year, y=Removals,fill = Fishery)) + #fill=Fleet)) +
              geom_area(position='stack') +
-             scale_fill_manual(values=c('lightsteelblue3','coral')) +
+             #scale_fill_manual(values=c('lightsteelblue3','coral')) +
+             scale_fill_manual(values= rich.colors.short(dim(Exec_catch_sep)[2]-1)) +
              scale_x_continuous(breaks=seq(Dat_start_mod1, Dat_end_mod1, 20)) +
              ylab('Landings (mt)')
 }
@@ -63,17 +99,34 @@ Plot_catch = function(Catch_df) {
 # CATCH TABLE(S) --------------------------------------------------------------
 
 # Read in executive summary catches table
-Exec_catch_summary = read.csv('./txt_files/Exec_catch_summary.csv')
+#Exec_catch_summary = read.csv('./txt_files/Exec_catch_summary.csv')
   
 # Assign column names as they should appear in the table; change the alignment 
 # to match number of columns +1
+#colnames(Exec_catch_summary) = c('Year', 
+#                                 'Landings 1',
+#                                 'Landings 2',
+#                                 'Landings 3',
+#                                 'Landings 4', 
+#                                 'Landings 5',
+#                                 'Total')
+
+Exec_catch_summary =  read.csv('./txt_files/_CatchAllYrs.csv')
+Exec_catch_summary_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
+
+# Bind the data frames together
+Exec_catch_summary = cbind(Exec_catch_summary_sep, Exec_catch_summary[,2:3])
+
 colnames(Exec_catch_summary) = c('Year', 
-                                 'Landings 1',
-                                 'Landings 2',
-                                 'Landings 3',
-                                 'Landings 4', 
-                                 'Landings 5',
-                                 'Total')
+                                 'Washington',
+                                 'Oregon',
+                                 'California',
+                                 'At-sea-hake', 
+                                 'Survey',
+                                 'Total Catch',
+                                 'Total Dead')
+
+Exec_catch_summary = subset(Exec_catch_summary, Year >= LastYR-10, Year <= LastYR-1)
     
 # Make executive summary catch xtable
 Exec_catch.table = xtable(Exec_catch_summary, 
@@ -84,12 +137,13 @@ Exec_catch.table = xtable(Exec_catch_summary,
 # Add alignment - you will have to adjust based on the number of columns you have
 # and the desired width, remember to add one leading ghost column for row.names
 align(Exec_catch.table) = c('l', 'l', 
-                            '>{\\centering}p{1in}', 
-                            '>{\\centering}p{1in}',
-                            '>{\\centering}p{1in}', 
-                            '>{\\centering}p{.9in}',
-                            '>{\\centering}p{.9in}',
-                            '>{\\centering}p{.6in}')  
+                            '>{\\centering}p{0.7in}', 
+                            '>{\\centering}p{0.7in}',
+                            '>{\\centering}p{0.7in}', 
+                            '>{\\centering}p{0.7in}',
+                            '>{\\centering}p{0.7in}',
+                            '>{\\centering}p{0.7in}',
+                            '>{\\centering}p{0.7in}')  
 
   
 # =============================================================================
@@ -122,21 +176,19 @@ for (model in 1:n_models) {
   
   SpawningByrs$YEAR = seq(FirstYR, LastYR)
   
-  SpawningByrs$lowerCI = round(SpawningByrs$Value + 
-                                 qnorm(0.025) * SpawningByrs$StdDev, 
-                               digits = 2)
+  SpawningByrs$lowerCI = SpawningByrs$Value + qnorm(0.025) * SpawningByrs$StdDev
   
-  SpawningByrs$upperCI = round(SpawningByrs$Value - 
-                                 qnorm(0.025) * SpawningByrs$StdDev, 
-                               digits = 2)
+  SpawningByrs$upperCI = SpawningByrs$Value - qnorm(0.025) * SpawningByrs$StdDev
+  
+  #SpawningByrs$Value = as.numeric(print(SpawningByrs$Value, digits = sb.dig))
+  SpawningByrs$Value = round(SpawningByrs$Value, digits = sb.dig)
     
   # Save individual depletion table before CI combined to character
   assign(paste('SpawnB_', mod_area, sep = ''), SpawningByrs)
   SpawnB = SpawningByrs  
       
   # Calculate confidence intervals
-  SpawningByrs$CI = paste('(', SpawningByrs$lowerCI, '-', SpawningByrs$upperCI, ')', 
-                          sep = '')
+  SpawningByrs$CI = paste0(print.numeric(SpawningByrs$lowerCI, digits = sb.dig), ' - ', print.numeric(SpawningByrs$upperCI, digits = sb.dig))
   SpawningBtab = subset(SpawningByrs, select = c('YEAR', 'Value', 'CI'))
       
   # Assign column names
@@ -154,20 +206,19 @@ for (model in 1:n_models) {
   
   Depletionyrs$YEAR = seq(FirstYR, LastYR)
   
-  Depletion$Value = round(Depletion$Value, digits=3)
+  #Depletion$Value = as.numeric(comma(Depletion$Value, digits=dep.dig))
   
-  Depletionyrs$lowerCI = round(Depletionyrs$Value + 
-                               qnorm(0.025)*Depletionyrs$StdDev, digits=3)
+  Depletionyrs$lowerCI = Depletionyrs$Value + qnorm(0.025)*Depletionyrs$StdDev
   
-  Depletionyrs$upperCI = round(Depletionyrs$Value - 
-                               qnorm(0.025)*Depletionyrs$StdDev, digits=3)
+  Depletionyrs$upperCI = Depletionyrs$Value - qnorm(0.025)*Depletionyrs$StdDev
+  
+  Depletionyrs$Value = round(Depletionyrs$Value, digits = dep.dig)
         
   # Save individual depletion tables
   assign(paste('Deplete_', mod_area, sep=''), Depletionyrs)
   Deplete = Depletionyrs     
     
-  Depletionyrs$CI = paste('(', Depletionyrs$lowerCI, '-', Depletionyrs$upperCI, ')', 
-                          sep = '')
+  Depletionyrs$CI = paste0(print.numeric(Depletionyrs$lowerCI, digits = dep.dig), ' - ', print.numeric(Depletionyrs$upperCI, digits = dep.dig))
   
   Depletiontab = subset(Depletionyrs, select=c('Value', 'CI'))
   
@@ -211,7 +262,7 @@ Spawn_Deplete_mod1.table = xtable(SpawnDepletemod1,
                            caption = c(paste('Recent trend in beginning of the 
                                       year spawning output and depletion for
                                       the ', mod1_label, ' for ', spp, '.',sep='')), 
-                           label='tab:SpawningDeplete_mod1',digits=3)  
+                           label='tab:SpawningDeplete_mod1')#, digits=2)  
 
 # Add column spacing    
 align(Spawn_Deplete_mod1.table) = c('l', 'l', 
@@ -283,7 +334,7 @@ for (model in 1:n_models) {
   
   # assume recruitments have log-normal distribution 
   # from first principals (multiplicative survival probabilities)
-  Recruityrs$logint <- sqrt(log(1+(Recruityrs$StdDev/Recruityrs$Value)^2))
+  Recruityrs$logint  <- sqrt(log(1+(Recruityrs$StdDev/Recruityrs$Value)^2))
   Recruityrs$lowerCI <- exp(log(Recruityrs$Value) + qnorm(0.025)*Recruityrs$logint)
   Recruityrs$upperCI <- exp(log(Recruityrs$Value) + qnorm(0.975)*Recruityrs$logint)
   
@@ -295,10 +346,10 @@ for (model in 1:n_models) {
     Recruityrs$upperCI <- Recruityrs$upperCI/1000
   }
   
-  Recruityrs$CI = paste('(', round(Recruityrs$lowerCI, digits = 2), 
-                        ' - ', round(Recruityrs$upperCI, digits = 2), ')', sep='')
   
-  Recruityrs$Value = round(Recruityrs$Value, digits = 2)
+  Recruityrs$CI = paste0(print.numeric(Recruityrs$lowerCI, digits = sb.dig), ' - ', print.numeric(Recruityrs$upperCI, digits = sb.dig))
+  
+  Recruityrs$Value = round(Recruityrs$Value, digits = sb.dig)
   
   Recruittab=subset(Recruityrs, select = c('YEAR', 'Value', 'CI'))
   
@@ -318,7 +369,7 @@ for (model in 1:n_models) {
 Recruit_mod1.table = xtable(Recruittab_mod1, 
                             caption = c(paste('Recent recruitment for the ', 
                                         mod1_label, '.', sep='')),
-                            label = 'tab:Recruit_mod1', digits = 2)   
+                            label = 'tab:Recruit_mod1')#, digits = 2)   
 
 align(Recruit_mod1.table) = c('l',
                               '>{\\centering}p{.8in}',
@@ -381,13 +432,11 @@ for (model in 1:n_models) {
   
   Exploityrs$YEAR = seq(FirstYR-1, LastYR-1)
   
-  Exploityrs$lowerCI = round(Exploityrs$Value +
-                            qnorm(0.025) * Exploityrs$StdDev, digits = 2)
+  Exploityrs$lowerCI = Exploityrs$Value + qnorm(0.025) * Exploityrs$StdDev
   
-  Exploityrs$upperCI = round(Exploityrs$Value -
-                            qnorm(0.025) * Exploityrs$StdDev, digits = 2)
+  Exploityrs$upperCI = Exploityrs$Value - qnorm(0.025) * Exploityrs$StdDev
   
-  Exploityrs$CI = paste('(', Exploityrs$lowerCI, '-', Exploityrs$upperCI, ')', sep='')
+  Exploityrs$CI = paste0(print.numeric(Exploityrs$lowerCI, digits = dep.dig), ' - ', print.numeric(Exploityrs$upperCI, digits = dep.dig))
   
   Exploittab = subset(Exploityrs, select=c('Value', 'CI'))
  
@@ -400,13 +449,11 @@ for (model in 1:n_models) {
   
   SPRratioyrs$Year = seq(FirstYR-1, LastYR-1)
   
-  SPRratioyrs$lowerCI = round(SPRratioyrs$Value +
-                              qnorm(0.025) * SPRratioyrs$StdDev, digits = 2)
+  SPRratioyrs$lowerCI = SPRratioyrs$Value + qnorm(0.025) * SPRratioyrs$StdDev
   
-  SPRratioyrs$upperCI = round(SPRratioyrs$Value -
-                              qnorm(0.025) * SPRratioyrs$StdDev, digits = 2)
+  SPRratioyrs$upperCI = SPRratioyrs$Value - qnorm(0.025) * SPRratioyrs$StdDev
   
-  SPRratioyrs$CI = paste('(', SPRratioyrs$lowerCI, '-', SPRratioyrs$upperCI, ')', sep='')
+  SPRratioyrs$CI = paste0(print.numeric(SPRratioyrs$lowerCI, digits = dep.dig), ' - ', print.numeric(SPRratioyrs$upperCI, digits = dep.dig))
   
   SPRratiotab = subset(SPRratioyrs, select = c('Year', 'Value', 'CI'))
   
@@ -428,7 +475,7 @@ SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1,
                                         mod1_label, '.  Fishing intensity is (1-SPR) 
                                         divided by 50\\% (the SPR target) and exploitation 
                                         is F divided by F\\textsubscript{SPR}.', sep='')), 
-                              label='tab:SPR_Exploit_mod1')  
+                              label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
                                        '>{\\centering}p{1in}',
@@ -514,20 +561,25 @@ for (model in 1:n_models) {
   Ref_pts         = Ref_pts[, 1:3]
   Ref_pts$Value   = as.numeric(Ref_pts$Value)
   Ref_pts$StdDev  = as.numeric(Ref_pts$StdDev)
-  Ref_pts$Value1  = ifelse(Ref_pts$Value >= 1, as.character(round(Ref_pts$Value, 1)), 
-                           as.character(round(Ref_pts$Value, 4)))   
+  Ref_pts$Value1  = ifelse(Ref_pts$Value >= 1, as.character(round(Ref_pts$Value, dig1)), 
+                           as.character(round(Ref_pts$Value, dig3)))   
         
-  Ref_pts$lowerCI  = round(Ref_pts$Value + qnorm(0.025) * Ref_pts$StdDev, digits = 4)
+  Ref_pts$lowerCI  = Ref_pts$Value + qnorm(0.025) * Ref_pts$StdDev
   
-  Ref_pts$upperCI  = round(Ref_pts$Value - qnorm(0.025) * Ref_pts$StdDev, digits = 4)
+  Ref_pts$upperCI  = Ref_pts$Value - qnorm(0.025) * Ref_pts$StdDev
+
+  Which = which(Ref_pts$LABEL=="Recr_Unfished")
+  logint  <- sqrt(log(1+(Ref_pts[Which,"StdDev"]/Ref_pts[Which, "Value"])^2))
+  Ref_pts[Which, "lowerCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.025)*logint)
+  Ref_pts[Which, "upperCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.975)*logint)
   
-  Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI >= 1, as.character(round(Ref_pts$lowerCI, 1)), 
-                            as.character(round(Ref_pts$lowerCI, 4))) 
+  Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI >= 1, as.character(round(Ref_pts$lowerCI, dig1)), 
+                            as.character(round(Ref_pts$lowerCI, dig3))) 
   
-  Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1, as.character(round(Ref_pts$upperCI,1)), 
-                            as.character(round(Ref_pts$upperCI, 4))) 
+  Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1, as.character(round(Ref_pts$upperCI,dig1)), 
+                            as.character(round(Ref_pts$upperCI, dig3))) 
   
-  Ref_pts$CI1      = paste('(', Ref_pts$lowerCI1, '-', Ref_pts$upperCI1, ')', sep='')
+  Ref_pts$CI1      = paste0(print.numeric(Ref_pts$lowerCI1, digits = dig3), ' - ', print.numeric(Ref_pts$upperCI1, digits = dig3))
         
   Quantity = c(paste('Unfished spawning output (', fecund_unit, ')', sep = ''),
                      paste('Unfished age ', min_age, ' biomass (mt)', sep = ''),
@@ -567,7 +619,7 @@ Ref_pts_mod1.table = xtable(Ref_pts_mod1,
                             caption=c(paste('Summary of reference 
                                       points and management quantities for the 
                                       base case ', mod1_label, '.',sep = '')), 
-                            label='tab:Ref_pts_mod1')  
+                            label='tab:Ref_pts_mod1', digits = dig3)  
 # Add alignment      
 align(Ref_pts_mod1.table) = c('l',
                               '>{\\raggedright}p{4.1in}',
@@ -623,7 +675,7 @@ mngmnt.table = xtable(mngmnt,
                               landings (mt) relative to the management guidelines. 
                               Estimated total catch reflect the commercial landings 
                               plus the model estimated discarded biomass.'), 
-                      label='tab:mnmgt_perform')  
+                      label='tab:mnmgt_perform', digits = dig1)  
 # Add alignment
 align(mngmnt.table) = c('l',
                         '>{\\raggedleft}p{1in}',
@@ -643,15 +695,21 @@ if (n_models == 1) {
       OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$LABEL),]
       OFL_mod1 = OFL_mod1[, 2]    #OFL_mod1[c(-1,-2),2]
       
+      ACL_mod1 = mod1$derived_quants[grep('ForeCatch_',mod1$derived_quants$LABEL),]
+      ACL_mod1 = ACL_mod1[,2]
+      
       #Turn into a dataframe and get the total
-      OFL = as.data.frame(OFL_mod1)
+      #OFL = as.data.frame(OFL_mod1)
+      OFL = as.data.frame(cbind(OFL_mod1, ACL_mod1))
       OFL$Year=seq(Project_firstyr,Project_lastyr, 1)
       OFL$Year = as.factor(OFL$Year)
-      OFL = OFL[,c(2, 1)]
-      colnames(OFL) = c('Year','OFL') 
+      #OFL = OFL[,c(2, 1)]
+      OFL = OFL[,c(3, 1, 2)]
+      #colnames(OFL) = c('Year','OFL') 
+      colnames(OFL) = c('Year','OFL', "ACL") 
 
 # Create the table
-      OFL.table = xtable(OFL, caption=c('Projections of potential OFL (mt) for each model, using the base model forecast.'),
+      OFL.table = xtable(OFL, caption=c('Projections of potential OFL (mt) and the ACL (mt) for each model, using the base model forecast.'),
                   label = 'tab:OFL_projection')
 }
 
@@ -861,13 +919,19 @@ mngmt = mngmt[,-1]
     
 # Model 1
   # SPR ratio and exploitation
-  SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1[,c(2,4)]
+  #orig.SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1
+  #SPRratio_Exploit_mod1 = orig.SPRratio_Exploit_mod1
+  SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1[,c(2,4)] # Grab the SPR and the exploitation rates
   SPRratio_Exploit_mod1[,c(1,2)] = round(SPRratio_Exploit_mod1[,c(1,2)],2)
-  SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1[-dim(SPRratio_Exploit_mod1)[1],]
+  #Changed here to cut the first value rather than the last
+  SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1[2:dim(SPRratio_Exploit_mod1)[1],]
+
 
   # SPR blanks for the last year
   blanks = c(NA,NA)
   SPRratio_Exploit_mod1 = rbind(SPRratio_Exploit_mod1,blanks)
+  #SPRratio_Exploit_mod1 = cbind(c(as.vector(SPRratio_Exploit_mod1[,1]), "NA"), c(as.vector(SPRratio_Exploit_mod1[,2]), "NA"))
+
   
   # Age 5+ biomass
   Age5biomass_mod1 = mod1$timeseries[,c('Yr','Bio_smry')]
@@ -877,8 +941,8 @@ mngmt = mngmt[,-1]
   
   # Spawning biomass and depltion
   SpawnDeplete_mod1 = SpawnDeplete_mod1[,c(2:5)]
-  SpawnDeplete_mod1[,1] = round(SpawnDeplete_mod1[,1],1)
-  SpawnDeplete_mod1[,3] = round(SpawnDeplete_mod1[,3],1)
+  SpawnDeplete_mod1[,1] = round(SpawnDeplete_mod1[,1],dig1)
+  SpawnDeplete_mod1[,3] = round(SpawnDeplete_mod1[,3],dig3)
   
   # Recruitment
   Recruittab_mod1 = Recruittab_mod1[,c(2,3)]
@@ -950,6 +1014,9 @@ if (n_models == 1) {
   
   # Transpose the dataframe to create the table and create data labels  
   base_summary = as.data.frame(t(base_summary))
+  #base_summary = data.frame(base_summary)
+  #base_summary = t(base_summary)
+  #rownames(base_summary) = c('Landings (mt',
   base_summary$names=c('Landings (mt)',
                        'Total Est. Catch (mt)',
                        'OFL (mt)', 
@@ -967,6 +1034,7 @@ if (n_models == 1) {
   
   base_summary = base_summary[,c(11,10,1:9)]
   colnames(base_summary) = c('Quantity',seq(FirstYR,LastYR))
+  #colnames(base_summary) = seq(FirstYR,LastYR)
   
   # Create the table
   base_summary.table = xtable(base_summary, caption=c('Base case results summary.'), 

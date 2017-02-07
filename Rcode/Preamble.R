@@ -24,11 +24,11 @@ load("./r4ss/SS_output.RData")
 # ============================================================================= 
 
 # Species, common and scientific
-spp = "China rockfish"
-spp.sci = "Sebastes nebulosus"
+spp = 'Pacific ocean perch' #"China rockfish"
+spp.sci = 'Sebastes alutus'#'Sebastes nebulosus"
   
 # minimum vulnerable age class
-min_age = "1+"
+min_age = '3+' #"1+"
 
 
 # number of independent assessment models to include in the document
@@ -36,9 +36,9 @@ n_models = 1
 
 
 # model names; if you only have one model the label will just be "model"
-mod1_label = "Northern model" 
-mod2_label = "Central model"  # (north of $40^\\circ 10^\\prime$ N. latitude to the OR-WA border)"
-mod3_label = "Southern model" # (south of $40^\\circ 10^\\prime$ N. latitude)"
+mod1_label = "Base model" #"Northern model" 
+#mod2_label = "Central model"  # (north of $40^\\circ 10^\\prime$ N. latitude to the OR-WA border)"
+#mod3_label = "Southern model" # (south of $40^\\circ 10^\\prime$ N. latitude)"
   
 
 # Management targets
@@ -56,20 +56,20 @@ if(fecund == 'numbers'){fecund_unit='billion eggs'} else {fecund_unit = 'mt'}
 # Change these years either here or in the table code if you need to
 
 # First and last years of model model 1
-Dat_start_mod1 = min(mod1$MGparmAdj$Year)       # year model 1 data starts 
-Dat_end_mod1   = max(mod1$MGparmAdj$Year)       # year model 1 data ends
+Dat_start_mod1 = mod1$startyr #min(mod1$MGparmAdj$Year)       # year model 1 data starts 
+Dat_end_mod1   = mod1$endyr   #max(mod1$MGparmAdj$Year)       # year model 1 data ends
 
 # First and last years of model 2
-if(n_models>1){
-   Dat_start_mod2  = min(mod2$MGparmAdj$Year)       # year model 2 data starts 
-   Dat_end_mod2    = max(mod2$MGparmAdj$Year)      # year model 2 data ends
-}
+#if(n_models>1){
+#   Dat_start_mod2  = min(mod2$MGparmAdj$Year)       # year model 2 data starts 
+#   Dat_end_mod2    = max(mod2$MGparmAdj$Year)      # year model 2 data ends
+#}
 
 # First and last years of model 3
-if(n_models>2){
-   Dat_start_mod3 = min(mod3$MGparmAdj$Year)       # year model 3 data starts 
-   Dat_end_mod3   = max(mod3$MGparmAdj$Year)       # year model 3 data ends
-}
+#if(n_models>2){
+#   Dat_start_mod3 = min(mod3$MGparmAdj$Year)       # year model 3 data starts 
+#   Dat_end_mod3   = max(mod3$MGparmAdj$Year)       # year model 3 data ends
+#}
 
 # First and last years for the the "recent"  10 years data tables  
 FirstYR = Dat_end_mod1 - 8       # first year of recent     
