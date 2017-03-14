@@ -104,7 +104,7 @@ Catch table:                 (Table \ref{tab:Exec_catch})
 
 \FloatBarrier
 
-![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch2 landings stacked.png)
+![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch1 landings.png)
 
 
 
@@ -559,9 +559,67 @@ rebuilding analysis requirements.}
 #Introduction
 
 ##Basic Information
-\hl{Include: Scientific name, distribution, the basis of the choice of stock structure, 
-including regional differences in life history or other biological characteristics 
-that should form the basis of management units.}
+`r spp` (\emph{`r spp.sci`}) are most abundant in the Gulf of Alaska, and have been
+observed off of Japan, in the Bering Sea, and south to Baja California, although they are sparse south of
+Oregon and rare in southern California. While genetic studies have found three populations of `r spp` off of
+British Columbia [@seeb_genetic_1988; @withler_co-existing_2001] with, notably, a separate stock off of Vancouver Island, no
+significant genetic differences have been found in the range covered by this assessment. `r spp`
+show dimorphic growth, with females reaching a slightly large size than males. Males and females
+are equally abundant on rearing grounds at age 1.5.
+
+The `r spp` population has been modeled as a single stock off of the U.S. West Coast
+(essentially northern California to the Canadian border, since `r spp` are seen extremely
+rarely in central and southern California). Good recruitments show up in size-composition data
+throughout all portions of this area, which supports the single stock hypothesis. This assessment includes
+landings and catch data for `r spp` from the states of Washington, Oregon and California,
+along with records from foreign fisheries, the at-sea hake fleet, and surveys.
+
+Prior to 1966, the `r spp` resource off of the northern portion of the U.S. West Coast was
+harvested almost entirely by Canadian and United States vessels. Harvest was negligible prior to 1940,
+reached \hl{1,000} mt in 1951, \hl{3,000} mt in 1961 and exceeded \hl{7,000} mt in 1965. Catches increased
+dramatically after 1965, with the introduction of large distant-water fishing fleets from the Soviet Union
+and Japan. Both nations employed large factory stern trawlers as their primary method for harvesting
+Pacific ocean perch. Peak removals by all foreign nations combined are estimated at over \hl{15,000} mt in
+1966 and remained over \hl{12,000} mt in 1967. These numbers are based upon a re-analysis of the foreign
+catch data [@rogers_species_2003], which focused on deriving a more realistic species composition for catches
+previously identified only as `r spp`. Catches declined rapidly following these peak years,
+and `r spp` stocks were considered to be severely depleted throughout the Oregon-Vancouver Island region by 1969 
+[@gunderson_population_1977; @gunderson_status_1977]. Landed harvest averaged \hl{1,500} mt over the period 1977-94. 
+Landings have continued to decline since 1994, primarily due to more restrictive management.
+
+Prior to 1977, `r spp` in the northeast Pacific were managed by the Canadian
+Government in its waters and by the individual states in waters off of the United States. With
+implementation of the Magnuson Fishery Conservation and Management Act (MFCMA) in 1977, U.S.
+territorial waters were extended to 200 miles from shore, and primary responsibility for management of
+the groundfish stocks off Washington, Oregon and California shifted from the states to the Pacific Fishery
+Management Council (PFMC) and the National Marine Fisheries Service (NMFS). At that time, however,
+a Fishery Management Plan (FMP) for the west coast groundfish stocks had not yet been approved. In the
+interim, the state agencies worked with the PFMC to address conservation issues. In 1981, the PFMC
+adopted a management strategy to rebuild the depleted Pacific ocean perch stocks to levels that would
+produce Maximum Sustainable Yield (MSY) within 20 years. On the basis of cohort analysis [@gunderson_results_1978], 
+the PFMC set Acceptable Biological Catch (ABC) levels at 600 mt for the US portion of the
+Vancouver INPFC area and 950 mt for the Columbia INPFC area. To implement this strategy, the states
+of Oregon and Washington each established landing limits for Pacific ocean perch. Trawl trip limits of
+various forms remained in effect through 2010 (\hl{Table 1}).
+
+Age estimates for `r spp` prior to the 1980s were made via surface ageing of otoliths, which
+misses the very tight annuli at the edge of the otolith once the fish reaches near maximum size. Ages are
+biased by around age 10-12, and maximum age was estimated to be in the 20s, which lead to an
+overestimate of the natural mortality rate and the productivity of the stock. Using break and burn
+methods, `r spp` have been aged to over 100 years, and we now know that the underlying
+assumptions of the early models were overly optimistic about productivity.
+Research surveys have been used to provide fishery-independent information about the abundance,
+distribution, and biological characteristics of `r spp`. A coast-wide survey of the rockfish
+resource was conducted in 1977 [@gunderson_distribution_1980] and was repeated every three years
+through 2004. The National Marine Fisheries Service (NMFS) coordinated a cooperative research survey
+of the `r spp` stocks off Washington and Oregon with the Washington Department of
+Fisheries (WDFW) and the Oregon Department of Fish and Wildlife (ODFW) in March-May 1979
+[@wilkins_condition_1983]. This survey was repeated in 1985. Two slope surveys have been conducted
+on the west coast in recent years, one using the research vessel Miller Freeman, which ended in 2001, and
+another ongoing cooperative survey using commercial fishing vessels which began in 1998 as a DTS
+(Dover sole, thornyhead and sablefish) survey, was expanded to other groundfish in 1999. In 2003, this
+survey was expanded spatially to include the shelf. This last survey, conducted by the NWFSC, continues
+to cover depths from 30-700 fathoms (55-1280 meters) on an annual basis.
 
 ##Map
 A map showing the scope of the assessment and depicting boundaries for fisheries or 
@@ -586,11 +644,6 @@ to contribute quantitative information to the assessment.}
 ##Fishery Information
 \hl{Include: Important features of current fishery and relevant history of fishery.}
 
-Rockfish example: The rockfish fishery off the U.S. Pacific coast first developed 
-off California in the late 19th century as a hook-and-line fishery [@Love2002].  
-The rockfish trawl fishery was established in the early 1940s, when the United 
-States became involved in World War II and wartime shortage of red meat created 
-an increased demand for other sources of protein [@Alverson1964; @Harry1961]. Etc....
 
 
 ##Summary of Management History
@@ -623,27 +676,27 @@ A description of each data source is below.
 <!-- ************FISHERY-DEPENDENT DATA************************************ -->
 ###Commercial Fishery Landings
 
-**Sub-heading 1**
+**Washington**
 
-**Sub-heading 2**
+Historical commercial fishery landigns of `r spp` from Washington for the years 1918-1980 were obtained from Theresa Tsou (WDFW) and Phillip Weyland (WDFW).  This assessment is the first `r spp` assessment to include a state provide historical catch reconstruction and hence, the historical catches for Washington vary markedly from those used in the 2011 assessment.  Recent landings (1981-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
 
-**Sub-heading 3**
+**Oregon**
 
-###Sport Fishery Removals
+Historical commercial fishery landings of `r spp` from Oregon for the years 1892-1986 were obtained from Alison Dauble (ODFW). A description of the methods can be found in [@karnowski_historical_2014]. Recent landings (1987-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
 
-**Sub-heading 1**
+**California**
 
-**Sub-heading 2**
+Historical commercial fishery landings of `r spp` were obtained from the online database of the California Cooperative Groundfish Survey, also known as CALCOM (128.114.3.187) for the years 1916-1980. A description of the methods can be found in [@ralston_documentation_2010]. Recent landings  (1981-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
 
-**Sub-heading 3**
+**At-sea fishery**
 
-###Estimated Discards
+Catches of `r spp` are monitored aboard the vessel by observers in the At-Sea hake Observer program (ASHOP) and were available for the years of 1975-2016. Observers use a spatial sample design, based on weight, to randomly choose a portion of the haul to sample for species composition. For the last decade, this is typically 30-50% of the total weight. The total weight of the sample is determined by all catch passing over a flow scale. All species other than hake are removed and weighed, by species, on a motion compensated flatbed scale. Observers record the weights of all non-hake species. Non-hake species total weights are expanded in the database by using the proportion of the haul sampled to the total weight of the haul. The catches of non-hake species in unsampled hauls is determined using bycatch rates determined from sampled hauls. Since 2001, more than 97% of the hauls have been observed and sampled.
 
-**Sub-heading 1**
+**Foreign**
 
-**Sub-heading 2**
+From the 1960s through the early 1970s, foreign trawling enterprises harvested considerable amounts of rockfish off Washington and Oregon, and along with the domestic trawling fleet, landed large quantities of 'r spp'. Foreign catches of individual species were estimated by @rogers_species_2003 and attributed to INPFC areas for the years of 1966-1976 for 'r spp'. The foreign catches were combined across areas for a coastwide removal total.
 
-**Sub-heading 3**
+**Discards**
 
 
 ###Abundance Indices
@@ -657,36 +710,42 @@ A description of each data source is below.
 <!-- ************FISHERY-INDPENDENT DATA*********************************** -->
 
 ###Fishery-Independent Data: possible sources
- *Northwest Fisheries Science Center (NWFSC) slope survey*    
-The NWFSC slope survey was conducted annually from 1999 to 2002.  
-The depth range of this survey is 100-700 fm. 
 
-*Northwest Fisheries Science Center (NWFSC) shelf-slope survey*     
-This survey is referred to as the “combo,” conducted annually since 2003.  
-The survey consistently covered depths between 30 and 700 fm.
+**Northwest Fisheries Science Center (NWFSC) shelf-slope survey**
 
-*Alaska Fisheries Science Center (AFSC) shelf survey*     
-The survey, often referred to as the “triennial” survey was conducted every 
-third year between 1977 and (and conducted in 2004 by the NWFSC using the 
-same protocols).  The triennial survey trawls in depths of 30 to 275 fm.
+The NWFSC shelf-slope survey is based on a random-grid design; covering the coastal waters from a depth of 55 m to 1,280 m [@bradburn_2003_2011]. This design uses four chartered industry vessels in most years, assigned to a roughly equal number of randomly selected grid cells. The survey, which has been conducted from late-May to early-October each year, is divided into two 2-vessel passes of the coast, which are executed from north to south. This design therefore incorporates both vessel-to-vessel differences in catchability as well as variance associated with selecting a relatively small number (~700) of cells from a very large population of possible cells (greater than 11,000) distributed from the Mexican to the Canadian border. 
 
-*Pikitch Study*    
-The Pikitch study was conducted between 1985 and 1987 [@Pikitch1988].  The northern 
+**Northwest Fisheries Science Center (NWFSC) slope survey**   
+
+The NWFSC slope survey covered waters throughout the summer from 183 m to 1280 m north of $34^\circ 30^\prime$ S, which is near Point Conception. The survey strata used to expand the biomass data for this assessment are shown in \hl{Table 5}. 
+
+
+**Alaska Fisheries Science Center (AFSC) slope survey**   
+
+The AFSC slope survey operated during autumn (October-November) aboard the R/V Miller Freeman. Partial survey coverage of the U.S. west coast occurred during 1988-96 and complete coverage (north of $34^\circ 30^\prime$ S) during 1997, 1999, 2000, and 2001. Only the four years of consistent and complete surveys plus 1996, which surveyed north of $43^\circ$ N latitude to the U.S.-Canada border, were used in this assessment. The number of tows ranged from \hl{8 in 2001 to 26 in 1996 (Table 7)}. The numbers of tows with length data for 'r spp' are also shown in \hl{Table 7}. \hl{Because a large number of positive tows occurred in 1996}, it was decided to include that year, which surveyed from $43^\circ$ N latitude to the U.S.-Canada border. Therefore, only tows from $43^\circ$ N latitude to the U.S.-Canada border were used.
+
+**Triennial Bottom Trawl Survey**
+
+The triennial survey was first conducted by the AFSC in 1977 and spanned the timeframe from 1977-2004. The survey's design and sampling methods are most recently described in [@weinberg_estimation_2002]. Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth range were initiated \hl{(Figure 5)}. The survey design has changed slightly over the period of time \hl{(Table 4, Figure 3)}. In general, all of the surveys were conducted in the mid-summer through early fall: the 1977 survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July \hl{(Figure 4)}.
+
+Haul depths ranged from 91-457 m during the 1977 survey with no hauls shallower than 91 m. The surveys in 1980, 1983, and 1986 covered the West Coast south to $36.8^\circ$ N latitude and a depth range of 55-366 meters. The surveys in 1989 and 1992 covered the same depth range but extended the southern range to $34.5^\circ$ N (near Point Conception). From 1995 through 2004, the surveys covered the depth range 55-500 meters and surveyed south to $34.5^\circ$ N. In the final year of the triennial series (2004), the NWFSC's Fishery Resource and Monitoring division (FRAM) conducted the survey and followed very similar protocols as the AFSC.
+
+Given the different depths surveyed during 1977, the data from that year were not included in this assessment. Water hauls [@zimmermann_influence_2003] and tows located in Canadian waters were also excluded from the analysis of this survey. The survey was analyzed as an early series (1980-1992) and a late series (1995-2004), as has been done in other West Coast rockfish assessments.
+
+**Pacific ocean perch Survey**
+
+
+**Pikitch Study** 
+
+The Pikitch study was conducted between 1985 and 1987 [@pikitch_evaluation_1988].  The northern 
 and southern boundaries of the study were $48^\circ 42^\prime$ N latitude and 
 $42^\circ 60^\prime$ N. latitude respectively, which is primarily within the 
-Columbia INPFC area [@Pikitch1988 ; @Rogers1992].  Participation in the study 
+Columbia INPFC area [@pikitch_evaluation_1988 ; @rogers_numerical_1992].  Participation in the study 
 was voluntary and included vessels using bottom, midwater, and shrimp trawl gears.  
 Observers of normal fishing operations on commercial vessels collected the data, 
 estimated the total weight of the catch by tow and recorded the weight of species 
 retained and discarded in the sample.  
  
-*Enhanced Data Collection Project (EDCP)*       
-The EDCP was conducted by ODFW to collect information on bycatch and discard 
-groundfish species off the coast of Oregon from late 1995 to early 1999.  
-EDCP had limited spatial coverage in Oregon waters only. 
-
-*Partnership For Interdisciplinary Studies of Coastal Oceans (PISCO)*       
-Blurb on species presence in PISCO surveys
 
 <!--************BIOLOGICAL DATA*********************************************-->
 ###Biological Parameters and Data
@@ -913,11 +972,11 @@ Citation for Ianelli-McAllister harmonic mean method [@McAllister1997]
 
 
 ###Priors
-Citation for Hamel prior on natural mortality [@Hamel2015]
+Citation for Hamel prior on natural mortality [@hamel_method_2015]
 
 
 ###General Model Specifications
-Citation for posterior predictive fecundity relationship from Dick [-@Dick2009]     
+Citation for posterior predictive fecundity relationship from Dick [-@dick_modeling_2009] and [-@dick_meta-analysis_2017]     
 Model data, control, starter, and forecast files can be found in Appendices A-D.
 
 
@@ -948,7 +1007,7 @@ Convergence testing through use of dispersed starting values often requires
 extreme values to actually explore new areas of the multivariate likelihood 
 surface. Jitter is a SS option that generates random starting values from a 
 normal distribution logistically transformed into each parameter's range 
-[@Methot2015]. Table \ref{tab:jitter} shows the results of running 100 jitters 
+[@methot_stock_2013]. Table \ref{tab:jitter} shows the results of running 100 jitters 
 for each pre-STAR base model....
 
 ##Response To The Current STAR Panel Requests

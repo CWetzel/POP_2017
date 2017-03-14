@@ -11,21 +11,21 @@
 ### locations for each plot.
 
 
-for(jmod in 1:n_models){
+#for(jmod in 1:n_models){
 
-  if(jmod==1){
+#  if(jmod==1){
       # plot directory
-      plotdir <- 'plots_mod1'
+      plotdir <- model.plots #'plots_mod1'
       # model number
       mod = 'mod1'
-   } else {
-    if(jmod==2){
-      plotdir <- 'plots_mod2'
-      mod = 'mod2'
-    } else {
-      plotdir <- 'plots_mod3'
-      mod = 'mod3'
-    }}
+#   } else {
+#    if(jmod==2){
+#      plotdir <- 'plots_mod2'
+#      mod = 'mod2'
+#    } else {
+#      plotdir <- 'plots_mod3'
+#      mod = 'mod3'
+#    }}
   
   
   # working directory to the r4ss folder
@@ -37,7 +37,7 @@ for(jmod in 1:n_models){
 #if(is.null(plotInfoTable)){
 #  if(!is.null(replist)){
 
-    filenames <- dir(file.path(dir,plotdir))
+    filenames <- dir(file.path(dir, plotdir))
     # look for all files beginning with the name 'plotInfoTable'
     filenames <- filenames[grep("plotInfoTable",filenames)]
     filenames <- filenames[grep(".csv",filenames)]
@@ -83,4 +83,4 @@ plotInfoTable$path <- file.path(plotInfoTable$dirname2,plotInfoTable$basename)
 
 write.csv(plotInfoTable, paste(file.path(dir,plotdir),"/plotInfoTable_",mod,"_final.csv",sep=''),row.names=FALSE)
 
-}
+#}
