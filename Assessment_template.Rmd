@@ -54,59 +54,21 @@ link-citations: yes
 #Executive Summary{-}
 
 ##Stock{-}
-\hl{Include: species/area, including an evaluation of any potential biological basis 
-for regional management.}
-
-This assessment reports the status of the `r spp` (\emph{`r spp.sci`}) resource 
-in U.S. waters off the coast of the California, Oregon, and Washington using data 
-through `r LastYR`.  Etc...
-
-
+This assessment reports the status of the `r spp` (\emph{`r spp.sci`}) speciess off rockfish
+off the U.S. West Coast from Northern California to the Canadian Border using data 
+through `r LastYR`.  `r spp` are most abundant in the Gulf of Alaska and have observed off of Japan, in the Bering Sea, and south to Baja California,
+although they are sparse south of Oregon and rare in southern California. \hl{Composition data indicate that
+good recruitment years coincide in Oregon and Washington.} To date, no significant genetic differences have
+been found in the range covered by this assessment.
 
 
 ##Catches{-}
-\hl{Include: trends and current levels-include table for last ten years and graph with 
-long term data}
-
-Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3})    
-Catch table:                 (Table \ref{tab:Exec_catch})
+The first year that harvest of `r spp` exceeded 1 mt off the U.S. West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year. `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.
 
 
+<!-- Catch table:                 (Table \ref{tab:Exec_catch})
 
-
-
-
-
-\FloatBarrier
-
-<!-- ***********BEGIN EXECUTIVE SUMMARY CATCH FIGURES AND TABLES*********** -->
-<!-- ***********Edit the Plot_catch tables and captions******************** -->
-<!-- ***********This depends on how many plots you need******************** -->
-<!-- ***********Also included is the r4SS plot - keep or remove************ -->
-<!-- ***********CATCH FIGURES********************************************** -->
-```{r, fig.cap= paste(spp, 'landings in ..... \\label{fig:Exec_catch1}',sep=' ')}
-    # CSV: './txt_files/Exec_catch_for_figs.csv'
-    # Note: you cannot have carriage returns in the R options line
-    # Plot washington catches           
-    Plot_catch(Catch_df = Exec_region1_catch)
-```
-
-
-<!--```{r, fig.cap=paste('Stacked line plot of', spp,' landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_catch2}',sep=' ')}
-    # Plot Oregon catches
-    Plot_catch(Catch_df = Exec_region2_catch)
-``` -->
-
-<!--```{r, fig.cap=paste('Stacked line plot of', spp, 'landings history for California by fleet (recreational and commercial). \\label{fig:Exec_catch3}',sep=' ')}
-     # Plot California catches  
-      Plot_catch(Catch_df = Exec_region3_catch)
-``` -->
-
-\FloatBarrier
-
-![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch1 landings.png)
-
-
+Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3})  -->  
 
 <!-- ***********CATCH TABLE************************************************ -->
 ```{r, results='asis'}
@@ -121,18 +83,30 @@ Catch table:                 (Table \ref{tab:Exec_catch})
 
 \FloatBarrier
 
+<!-- ***********BEGIN EXECUTIVE SUMMARY CATCH FIGURES AND TABLES*********** -->
+<!-- ***********Edit the Plot_catch tables and captions******************** -->
+<!-- ***********This depends on how many plots you need******************** -->
+<!-- ***********Also included is the r4SS plot - keep or remove************ -->
+<!-- ***********CATCH FIGURES********************************************** -->
+```{r, fig.cap= paste('Landings of' ,spp, 'for California, Oregon, Washington, the foriegn fishery (1966-1976), at-sea-hake fishery, and fishery independent surveys. \\label{fig:Exec_catch1}',sep=' ')}
+    # CSV: './txt_files/Exec_catch_for_figs.csv'
+    # Note: you cannot have carriage returns in the R options line
+    # Plot washington catches           
+    Plot_catch(Catch_df = Exec_region1_catch)
+```
 
 
+<!--\FloatBarrier
 
-\newpage
+![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch1 landings.png)-->
+
+<!--\FloatBarrier
+
+
+\newpage -->
 
 ##Data and Assessment{-}
-\hl{Include: date of last assessment, type of assessment model, data available, new 
-information, and information lacking.}
-
-`r spp` was assessed....  This assessment uses the newest version of Stock 
-Synthesis (3.30).  The model begins in `r Dat_start_mod1`, and assumes the stock 
-was at an unfished equilibrium that year.
+This a new full assessment for `r spp` which was last assessed in 2011.  In this assessment, all aspects of the model including catches, data, and modelling assumptions were re-evaluated as much as possible. The assessment was conducted using the length- and age-structured modeling software Stock Synthesis (version 3.30).  The coastwide population was modeled assuming separate growth and mortality parameters for each sex (a two-sex model) from `r Dat_start_mod1` to `r LastYR`, and forecasted beyond `r LastYR`.
 
 
 <!--Map of assessment region: (Figure \ref{fig:assess_region_map}).  
@@ -1211,6 +1185,326 @@ assessment team. Not required in draft assessment undergoing review.
 <!-- ********************************************************************** -->
 <!--  ************Fishery dependent biological sampling TABLES************* -->
 <!-- ********************************************************************** -->
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Trips',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of commercial fishery length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/POPLengthSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of Pacific ocean perch survey length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/TriennialLengthSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of Triennial survey length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/AFSCLengthSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of AFSC slope survey length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeLengthSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of NWFSC slope survey length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCComboLengthSampleSize.csv')
+    Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of NWFSC shelf/slope survey length samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryAges_N.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Trips',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of commercial fishery age samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/POPAgeSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of Pacific ocean perch survey age samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/TriennialAgeSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of Triennial survey age samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeAgeSampleSize.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of NWFSC slope survey age samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCComboAgeSampleSize.csv')
+    Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
+      colnames(Fish_Length) = c('Year',
+                                  'Tows',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  caption = c('Summary of NWFSC shelf/slope survey age samples used in the stock assessment.'),
+                                 label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    # Print commercial length sample numbers
+      print(Fish_Length.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      
+```
 
 \FloatBarrier
 

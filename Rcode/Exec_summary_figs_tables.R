@@ -48,11 +48,18 @@ rich.colors.short <- function(n,alpha=1){
 # Pacific ocean perch catches
 # Exec_catch_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
 Exec_catch_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
+Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep )]
 
 # Assign column names
-survey = apply(Exec_catch_sep[,(ncol(Exec_catch_sep)-3):ncol(Exec_catch_sep)], 1, sum)
-Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-3)], survey)
-colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'Foreign', 'At-sea-hake', 'Survey')
+survey = apply(Exec_catch_sep[,(ncol(Exec_catch_sep)-4):ncol(Exec_catch_sep)], 1, sum)
+Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-5)], survey)
+colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'At-sea-hake', 'Foreign', 'Survey')
+
+#Plot only years where catch is great than 1 mt total
+ind = apply(Exec_catch_sep[,2:ncol(Exec_catch_sep )], 1, sum)
+ind = ind > 1
+Exec_catch_sep  = Exec_catch_sep[ind,]
+
 
 # Split catch by regions -retaning the colunns for each -you'll have to edit
 Exec_region1_catch = Exec_catch_sep
@@ -80,6 +87,7 @@ Plot_catch = function(Catch_df) {
 #Exec_catch_summary =  read.csv('./txt_files/_CatchAllYrs.csv')
 #Exec_catch_summary_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
 Exec_catch_summary_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
+Exec_catch_summary_sep = Exec_catch_summary_sep[,2:ncol(Exec_catch_summary_sep)]
 
 # Bind the data frames together
 #Exec_catch_summary = cbind(Exec_catch_summary_sep, Exec_catch_summary[,2:3])
@@ -101,7 +109,7 @@ Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1, Year <= LastY
     
 # Make executive summary catch xtable
 Exec_catch.table = xtable(Exec_catch_summary, 
-                          caption = c(paste('Recent ',spp,' landings (mt) by 
+                          caption = c(paste('Landings (mt) for the past 10 years for',spp,' by 
                                             fleet.', sep='')), 
                           label='tab:Exec_catch')
     
