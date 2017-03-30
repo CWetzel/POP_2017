@@ -15,6 +15,7 @@
 *.hes
 *.ss_new
 *.exe
+SS/
 
 **/list_of_dataframes.csv
 **/mod_structure.csv
