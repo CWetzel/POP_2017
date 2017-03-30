@@ -1206,11 +1206,19 @@ assessment team. Not required in draft assessment undergoing review.
                                      '>{\\centering}p{1in}')  
     
     # Print commercial length sample numbers
-      print(Fish_Length.table, 
-            include.rownames=FALSE, 
-            caption.placement='top',
-            sanitize.text.function = function(x){x})
+      #print(Fish_Length.table, 
+      #      include.rownames=FALSE, 
+      #      caption.placement='top',
+      #      sanitize.text.function = function(x){x})
     # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+      print(Fish_Length.table,
+         include.rownames = FALSE,
+         caption.placement = 'top',
+         tabular.environment = 'longtable',
+         align=TRUE,
+         floating = FALSE,
+         add.to.row = list(pos = list(0),
+         command = '\\hline \\endhead '))
       
 ```
 
