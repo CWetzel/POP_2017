@@ -9,6 +9,12 @@
 #Assessment_template.tex
 #Test_figures_tables.tex
 *.docx
+*.cov
+*.sso
+*.ss
+*.hes
+*.ss_new
+*.exe
 
 **/list_of_dataframes.csv
 **/mod_structure.csv
