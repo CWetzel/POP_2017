@@ -108,7 +108,8 @@ for(imod in 1:n_models) {
     dummy_df = data.frame()
     dummy_df = subset(plotInfoTable,category==categories[icat])
     dummy_df = data.frame(lapply(dummy_df, as.character), stringsAsFactors=FALSE)
-    dummy_df$label = substr(dummy_df$basename,1, nchar(dummy_df$basename)-4)
+    #dummy_df$label = substr(dummy_df$basename,1, nchar(dummy_df$basename)-4)
+    dummy_df$label = substr(dummy_df$file,1, nchar(dummy_df$file)-4)
     dummy_df$filepath = paste0('./r4ss/plots_',mod_num,'/',dummy_df$basename)
     assign(paste0(categories[icat],'_',mod_num),dummy_df)
   }

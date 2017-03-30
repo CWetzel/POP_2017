@@ -21,7 +21,7 @@ rm(list=ls(all=TRUE))
 model.file = "Model_2017"
 # Cannot change the name below without changing it throughout the Assessment_template file
 model.plots = "plots_mod1" #paste0("plot_",model.file)
-covar = FALSE
+covar = TRUE
 
 # Give the names of the data and control files, for each model
 # Used in the SS_files_linebreaks.R

@@ -62,7 +62,7 @@ good recruitment years coincide in Oregon and Washington.} To date, no significa
 been found in the range covered by this assessment.
 
 
-##Catches{-}
+##Landings{-}
 The first year that harvest of `r spp` exceeded 1 mt off the U.S. West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year. `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.
 
 
@@ -131,12 +131,6 @@ The estimated relative depletion level (spawning output relative to unfished
 spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1` 
 (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`) (Figure \ref{fig:RelDeplete_all}).
 
-The estimated relative depletion level of model 2 in `r LastYR` is 
-`r if(n_models>=2){Depl_mod2}` (~95% asymptotic interval: $\pm$ `r if(n_models>=2){Depl_mod2_CI}`) (Figure \ref{fig:RelDeplete_all}). 
-
-The estimated relative depletion level of model 3 in `r LastYR` is 
-`r if(n_models==3){Depl_mod3}` (~95% asymptotic interval: $\pm$ `r if(n_models==3){Depl_mod3_CI}`) (Figure \ref{fig:RelDeplete_all}).
-
 
 \FloatBarrier
 
@@ -149,15 +143,11 @@ The estimated relative depletion level of model 3 in `r LastYR` is
     if(n_models == 3) {print(Spawn_Deplete_mod3.table, include.rownames = FALSE, caption.placement = 'top')}
 
     # Select which file to use for the recuitment figure, depending on if you have one model or multiple models
-    if(n_models == 1) {
-      spawn.file  = ifelse(fecund=='numbers',
+    spawn.file  = ifelse(fecund=='numbers',
                            'r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png',
                            'r4ss/plots_mod1/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png')
-      Bratio.file = 'r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png' 
-     } else {
-      spawn.file  = 'r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png'
-      Bratio.file = 'r4ss/plots_compare/base_compare4_Bratio_uncertainty.png'
-    }  
+    Bratio.file = 'r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png' 
+
 ```
 
 \FloatBarrier
@@ -165,11 +155,12 @@ The estimated relative depletion level of model 3 in `r LastYR` is
 
 ![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base case assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
 
+
 ![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
 
+
+
 <!-- ***********END  EXECUTIVE SUMMARY SPAWNING BIOMASS AND**************** -->
-
-
 <!-- ***********DEPLETION TABLES AND FIGURES******************************* -->
 
 \FloatBarrier
@@ -191,20 +182,8 @@ and \ref{tab:Recruit_mod3})
    # Print recruitment tables; will print up to 3 depending on the number of models, you can delete the code
    # for models you don't need as well
    print(Recruit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
-   
-   if(n_models >= 2) {
-     print(Recruit_mod2.table, include.rownames = FALSE, caption.placement = 'top')
-   }
-   
-   if(n_models == 3) {
-     print(Recruit_mod3.table, include.rownames = FALSE, caption.placement = 'top')
-   }
-
-   # select which file to use for the recuitment figure, depending on if you have one model or multiple models
-   if(n_models==1) {
-     recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
-    } else {
-     recruit.file  = 'r4ss/plots_compare/base_compare8_recruits_uncertainty.png'}
+   recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
+  
 ```
 
 \FloatBarrier
@@ -233,25 +212,11 @@ A summary of `r spp` exploitation histories for base model is provided as Figure
 <!-- ***********SPRratio TABLE AND FIGURES********************************* -->
 ```{r, results='asis'}
    # Print exploitation and SPRratio tables depending on how many models there are
-   if(n_models >= 1) {
      print(SPRratio_Exploit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
-   }
-    
-   if(n_models >= 2) {
-     print(SPRratio_Exploit_mod2.table, include.rownames = FALSE, caption.placement = 'top')
-   }
-   
-   if(n_models == 3) {
-     print(SPRratio_Exploit_mod3.table, include.rownames = FALSE, caption.placement = 'top')
-   }
 
    # select the files for the SPR and phase plots depending on the number of models
-   if(n_models == 1) {
      SPR.file   = 'r4ss/plots_mod1/SPR3_ratiointerval.png'
      Phase.file = 'r4ss/plots_mod1/SPR4_phase.png' 
-    } else {
-     SPR.file   = 'r4ss/plots_compare/base_compare6_SPRratio_uncertainty.png'
-     Phase.file = 'r4ss/plots_compare/base_compare13_phase_plot.png'}  
 ```
 
 \FloatBarrier
@@ -283,7 +248,7 @@ the equilibrium stock size that results from fishing at the default harvest rate
 points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, 
 SPRproxy for MSY, and estimated MSY values
 
-\hl{Write intro paragraph....and remove text for Models 2 and 3 if not needed}
+\hl{Write intro paragraph}
 
 This stock assessment estimates that `r spp` in the `r mod1_label` are 
 `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the biomass 
@@ -300,57 +265,14 @@ base case model. The target spawning output based on the biomass target
 a catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
 harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.
 
-This stock assessment estimates that `r spp` in the `r if(n_models>=2){mod2_label}` are 
-`r if(n_models>=2){ifelse(Deplete_mod2[nrow(Deplete_mod2),2]-MT>0,"above","below")}` 
-the biomass target, but `r if(n_models>=2){ifelse(Deplete_mod2[nrow(Deplete_mod2),2]-MSST>0,"above","below")}` 
-the minimum stock size threshold. \hl{Add sentence about spawning output trend.} The 
-estimated relative depletion level for \hl{Model 2} in `r LastYR` is 
-`r if(n_models>=2){Depl_mod2}` (~95% asymptotic interval: $\pm$ 
-`r if(n_models>=2){Depl_mod2_CI}`), corresponding to an unfished spawning output of 
-`r if(n_models>=2){paste(Spawn_mod2, fecund_unit, sep=' ')}` (~95% asymptotic interval: 
-`r #paste(Spawn_mod2_CI, fecund_unit, sep=' ')`) of 
-spawning output in the base model (Table \ref{tab:Ref_pts_mod2}). Unfished 
-age `r min_age` biomass was estimated to be `r if(n_models>=2){Ref_pts_mod2[2,2]}` 
-mt in the base case model. The target spawning output based on the biomass target 
-($SB_{40\%}$) is `r if(n_models>=2){paste(Ref_pts_mod2[7,2], fecund_unit,sep=' ')}`, 
-which gives a catch of `r #Ref_pts_mod2[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
-harvest rate corresponding to $SPR_{50\%}$ is `r if(n_models>=2){Ref_pts_mod2[15,2]}` mt.
-
-This stock assessment estimates that `r spp` in the `r if(n_models==3){mod3_label}` are 
-`r if(n_models==3){ifelse(Deplete_mod3[nrow(Deplete_mod3),2]-MT>0,"above","below")}` 
-the biomass target, but `r if(n_models==3){ifelse(Deplete_mod3[nrow(Deplete_mod3),2]-MSST>0,"above","below")}` 
-the minimum stock size threshold. \hl{Add sentence about spawning output trend.} The 
-estimated relative depletion level or \hl{Model 3} in `r LastYR` is 
-`r if(n_models==3){Depl_mod3}` (~95% asymptotic interval: $\pm$
-`r if(n_models==3){Depl_mod3_CI}`), corresponding to an unfished spawning output of 
-`r if(n_models==3){paste(Spawn_mod3, fecund_unit, sep=' ')}` (~95% asymptotic interval:
-`r if(n_models==3){paste(Spawn_mod3_CI, fecund_unit,sep=' ')}`) of 
-spawning output in the base model (Table \ref{tab:Ref_pts_mod3}). Unfished 
-age `r min_age` biomass was estimated to be `r if(n_models==3){Ref_pts_mod3[2,2]}` mt in the 
-base case model. The target spawning output based on the biomass target 
-($SB_{40\%}$) is `r if(n_models==3){paste(Ref_pts_mod3[7,2], fecund_unit, sep=' ')}`, which gives 
-a catch of `r #Ref_pts_mod3[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
-harvest rate corresponding to $SPR_{50\%}$ is `r if(n_models==3){Ref_pts_mod3[15,2]}` mt.
 
 \FloatBarrier
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY REFERENCE POINT TABLES************* -->
 ```{r, results='asis'}
    # Print reference point tables
-   if(n_models >= 1) {
      print(Ref_pts_mod1.table, include.rownames = FALSE, caption.placement = 'top',
            sanitize.text.function = function(x){x})
-   }
-
-   if(n_models >= 2) {
-     print(Ref_pts_mod2.table, include.rownames = FALSE, caption.placement = 'top',
-           sanitize.text.function = function(x){x})
-   }
-
-   if(n_models == 3) {
-     print(Ref_pts_mod3.table, include.rownames = FALSE, caption.placement = 'top',
-           sanitize.text.function = function(x){x})
-   }
 ```
 <!-- ***********END EXECUTIVE SUMMARY REFERENCE POINT TABLES*************** --> 
 
@@ -418,22 +340,6 @@ Decision table(s) Table \ref{tab:Decision_table_mod1},
           caption.placement = 'top', 
           hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod1.table)), 
           scalebox = .85)
-
-if(n_models >= 2) {
-    # Print Model 2 decision table
-    print(decision_mod2.table, add.to.row = addtorow, include.rownames = FALSE, 
-          caption.placement = 'top', 
-          hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod2.table)), 
-          scalebox = .85)
-}
-    
-if(n_models ==3) {    
-    # Print Model 3 decision table
-    print(decision_mod3.table, add.to.row = addtorow, include.rownames = FALSE, 
-         caption.placement = 'top',
-         hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod3.table)), 
-         scalebox = .9)
-}
 ```
 <!-- ***********END EXECUTIVE SUMMARY OFL AND DECISION TABLES************** -->
 
@@ -446,7 +352,6 @@ if(n_models ==3) {
    # Edit file: ./txt_files/Exec_basemodel_summary.csv and the Summary Results 
    # section in R code R_exec_summary_figs_tables.R
 
-if(n_models == 1){   
  print(base_summary.table, 
        include.rownames = FALSE, 
        caption.placement = 'top',
@@ -455,39 +360,13 @@ if(n_models == 1){
        scalebox = .6, 
        align = TRUE, 
        hline.after = c(-1, 0, 4, 5, 7, 9, 11, nrow(base_summary.table)))
-}
-
-if(n_models == 2){
- print(base_summary.table, 
-       include.rownames = FALSE, 
-       caption.placement = 'top',
-       floating.environment = 'sidewaystable', 
-       sanitize.text.function = function(x){x}, 
-       scalebox = .6, 
-       align = TRUE, 
-       hline.after = c(-1, 0, 4, 13, nrow(base_summary.table)))
-}
-
-if(n_models == 3){
-  print(base_summary.table, 
-        include.rownames = FALSE, 
-        caption.placement = 'top',
-        floating.environment = 'sidewaystable', 
-        sanitize.text.function = function(x){x}, 
-        scalebox = .6, 
-        align = TRUE, 
-        hline.after = c(-1, 0, 4, 13, 22, nrow(base_summary.table)))
-}
 ```
 
 <!-- ***********Yield curve table****************************************** -->
 ```{r, results='asis'}
    # Select the file to use for the yield curve depending on the number of models
-   if(n_models == 1) {
      yield.file  = 'r4ss/plots_mod1/yield1_yield_curve.png'
-    } else {
-     yield.file  = 'r4ss/plots_compare/yield_comparison_3_models.png'
-   }
+    
 ```
 <!-- ***********Edit caption based on fixed params************************* -->
 
@@ -733,68 +612,24 @@ fish sampled.
 Length compositions were provided from the following sources, by region, with 
 brief descriptions below:    
 
-_Model 1_ 
 \begin{itemize}[noitemsep,nolistsep,topsep=0pt]
-  \item Source No. 1 (\emph{ex. research, commerical dead fish, live fish, etc},\\     
-        date range (ex. 2010-2011)
-  \item Source No. 2 (\emph{ex. research, commerical dead fish, live fish, etc},\\      
-        date range (ex. 2010-2011) 
-  \item etc...      
-  \item Begin sublist if desired 
-    \begin{itemize}[noitemsep,nolistsep]
-      \item Sublist source No. 1     
-      \item Sublist source No. 2        
-      \item etc...     
-    \end{itemize}
-  \item Back to main list, next Source     
-  \item Last Source     
+  \item Commercial fishery - landed: 1966-2016
+  \item Commerical fishery - discard: 2004-2015
+  \item At-sea hake fishery: 2003-2016
+  \item `r spp` Survey: 1979 and 1985
+  \item Trienial Survey: 1980, 1983, 1986, 1989, 1992, 1995, 1998, 2001, 2004
+  \item AFSC Slope Survey: 1996-2001
+  \item NWFS Slope Survey: 2001-2002
+  \item NWFSC Shelf/Slope Survey: 2003-2016
 \end{itemize}
 
-Can duplicate this list if you have more than one assessment model
 
-Possible sources of age and length data:
+*Commercial: PacFIN*
 
-*Recreational: Washington (WDFW)*
-
-*Recreational: California MRFSS And CRFS Length Composition Data*
-Individual fish lengths recorded by MRFSS (1980-2003) and CRFS (2004-2011) samplers were
-downloaded from the RecFIN website (www.recfin.org). CRFS data from 2012-2014 were
-obtained directly from CDFW.
-
-*Recreational: Oregon Recreational Boat Survey (ORBS)*
-Biological data from the ORBS program were provided by ODFW. The ORBS is a dockside
-sampling program for the both the recreational CPFV and private modes. Length composition
-samples from north of Florence for the CPFV and private fleets were provided from
-1980-2014.  Samples from south of Florence spanned 1984-2014
-
-
-*Recreational: Miller and Gotshall [-@Miller1965]*      
-The Northern California Marine Sport Fish Survey conducted an assessment survey with
-goals that included estimation of annual fishing effort by all recreational fishing modes,
-catch by weight, CPUE, and collection of data to analyze length compositions
-
-
-*Commercial: PacFIN (Oregon and California)*
-
-
-
-*Research: NMFS Groundfish Ecology Survey*      
-
-From 2001-2005, the SWFSC Fisheries Ecology Division conducted longline surveys 
-aboard a chartered commercial longline vessel at various stations between 
-Monterey and Davenport, CA ($36^\circ$ N. latitude to $37.5^\circ$ N. latitude)
-(pers. comm. Don Pearson, SWFSC). Longline gear was set in various depths from 
-10 meters to 700 meters, parallel to the depth contour.  Each longline set 
-consisted of 3-5 skates, each with about 250 2/0 circle hooks baited with squid.  
-In nearshore habitats, the gear soaked for roughly 30 minutes.  
-
-*Research: California Collaborative Fisheries Research Program (CCFRP)*
 
 *Research: NWFSC shelf-slope survey*
 
 *Research: NWFSC slope survey*
-
-*Research: Abrams Thesis*
 
 
 
@@ -821,10 +656,9 @@ _Model Region 1_
   \item Last Source     
 \end{itemize}
 
-Can duplicate this list if you have more than one assessment model
 
 Length-at-age was initially estimated external to the population dynamics models 
-using the von Bertalanffy growth curve [@vonB1938], $L_i = L_{\infty}e^{(-k[t-t_0])}$, 
+using the von Bertalanffy growth curve, $L_i = L_{\infty}e^{(-k[t-t_0])}$, 
 where $L_i$ is the length (cm) at age $i$, $t$ is age in years, $k$ is rate of 
 increase in growth, $t_0$ is the intercept, and $L_{\infty}$ is the asymptotic length.  
 
@@ -920,8 +754,6 @@ and explain rationale for each change.:
 We generated data sources for each of the models.  Fleets by model include:
 
 
-**Model Region 1 or remove this line if only one model** 
-
 \emph{Commercial}: The commercial fleets include...   
 
 \emph{Recreational}: The recreational fleets include...
@@ -935,13 +767,13 @@ We generated data sources for each of the models.  Fleets by model include:
 
 
 ###Modeling Software
-The STAT team used Stock Synthesis 3 version 3.24u by Dr. Richard Methot at 
-the NWFSC. This most recent version (SS-V3.24u) was used, since it included 
+The STAT team used Stock Synthesis version 3.30.01.13 by Dr. Richard Methot at 
+the NWFSC [@methot_stock_2013]. This most recent version was used, since it included 
 improvements and corrections to older versions.
 
 ###Data Weighting
-Citation for Francis method [@Francis2011]      
-Citation for Ianelli-McAllister harmonic mean method [@McAllister1997]
+Citation for Francis method [@francis_data_2011]      
+Citation for Ianelli-McAllister harmonic mean method [@mcallister_bayesian_1997]
 
 
 
@@ -1048,37 +880,6 @@ $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.  Table \ref{tab:Ref_pts_mod1}
 shows the full suite of estimated reference points for the northern area model 
 and Figure \ref{fig:Yield_all} shows the equilibrium yield curve.
 
-
-<!-- *************************MODEL 2 RESULTS****************************** -->
-##Model 2 
-
-###Model 2 Base Case Results
-
-### Model 2 Uncertainty and Sensitivity Analyses
-
-### Model 2 Retrospective Analysis
-
-### Model 2 Likelihood Profiles
-
-###Model 2 Harvest Control Rules (CPS only)
-
-###Model 2 Reference Points (groundfish only)
-
-
-<!-- ***********************MODEL 3 RESULTS******************************** -->
-##Model 3
-
-###Model 3 Base Case Results
-
-### Model 3 Uncertainty and Sensitivity Analyses
-
-### Model 3 Retrospective Analysis
-
-### Model 3 Likelihood profiles
-
-###Model 3 Harvest Control Rules (CPS only)
-
-###Model 3 Reference Points (groundfish only)
 
 
 <!-- **************HARVEST PROJECTIONS AND DECISION TABLE****************** -->

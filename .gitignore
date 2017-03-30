@@ -16,6 +16,7 @@
 *.ss_new
 *.exe
 SS/
+r4ss/
 
 **/list_of_dataframes.csv
 **/mod_structure.csv
