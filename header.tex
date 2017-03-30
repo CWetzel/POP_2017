@@ -4,8 +4,10 @@
 \usepackage{caption}                                              % for creating captions  
 \usepackage{longtable}                                            % allows tables to span multiple pages
 \usepackage{rotating}                                             % allows for sideways tables
-\usepackage{float}                                                % floating environments; may not need in rmarkdown
+%\usepackage{float}                                                % floating environments; may not need in rmarkdown
 \usepackage{placeins}                                             % keeps floats from moving
+\usepackage{floatrow}                                             % package to put table captions at the top
+\floatsetup[table]{capposition = top}                             % line to put captions at the top of pander tables
 \usepackage{indentfirst}                                          % indents first paragraph of a section
 \usepackage{mdwtab}                                               % continued float multi-page figure
 \usepackage{enumerate}                                            % create lists

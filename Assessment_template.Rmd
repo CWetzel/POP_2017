@@ -1188,6 +1188,8 @@ assessment team. Not required in draft assessment undergoing review.
 
 ```{r, results = 'asis'}
     Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+    # manually split table across pages because I could not get longtable to work
+    Fish_Length = Fish_Length[1:35, ]
       colnames(Fish_Length) = c('Year',
                                   'Trips',
                                   'Fish',
@@ -1198,6 +1200,7 @@ assessment team. Not required in draft assessment undergoing review.
                                   caption = c('Summary of commercial fishery length samples used in the stock assessment.'),
                                  label = 'tab:Comm_Lengths',
                                  digits = 0)    
+
     # Add alignment  
       align(Fish_Length.table) = c('l',
                                      '>{\\centering}p{.75in}',
@@ -1205,22 +1208,59 @@ assessment team. Not required in draft assessment undergoing review.
                                      '>{\\centering}p{.75in}',
                                      '>{\\centering}p{1in}')  
     
-    # Print commercial length sample numbers
-      #print(Fish_Length.table, 
-      #      include.rownames=FALSE, 
-      #      caption.placement='top',
-      #      sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
-      print(Fish_Length.table,
-         include.rownames = FALSE,
-         caption.placement = 'top',
-         tabular.environment = 'longtable',
-         align=TRUE,
-         floating = FALSE,
-         add.to.row = list(pos = list(0),
-         command = '\\hline \\endhead '))
+    #Print commercial length sample numbers
+    print(Fish_Length.table,
+         include.rownames=FALSE,
+         caption.placement='top',
+         sanitize.text.function = function(x){x})
+ 
       
-```
+``` 
+
+
+```{r, results = 'asis'}
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+    # manually split table across pages because I could not get longtable to work
+    Fish_Length = Fish_Length[36:dim(Fish_Length)[1], ]
+      colnames(Fish_Length) = c('Year',
+                                  'Trips',
+                                  'Fish',
+                                  'Sample Size')
+
+   # Index of abundance summary, create table   
+     Fish_Length.table = xtable(Fish_Length, 
+                                  #caption = c('Summary of commercial fishery length samples used in the stock assessment.'),
+                                 #label = 'tab:Comm_Lengths',
+                                 digits = 0)    
+
+    # Add alignment  
+      align(Fish_Length.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}')  
+    
+    #Print commercial length sample numbers
+    print(Fish_Length.table,
+         include.rownames=FALSE,
+         caption.placement='top',
+         sanitize.text.function = function(x){x})
+ 
+      
+``` 
+
+<!--```{r pander}
+    library(pander)
+    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+      colnames(Fish_Length) = c('Year',
+                                  'Trips',
+                                  'Fish',
+                                  'Sample Size')
+    
+     panderOptions("digits", 0)
+     pander(Fish_Length, caption = "Summary of commercial fishery length samples used in the stock assessment.")
+      
+```-->
 
 
 ```{r, results = 'asis'}

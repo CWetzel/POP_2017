@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  30 MAR 2017 09:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  30 MAR 2017 11:50
 entering extended mode
 **./Assessment_template.tex
 (Assessment_template.tex
@@ -380,44 +380,75 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box32
 \rot@mess@toks=\toks26
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count123
-\float@exts=\toks27
-\float@box=\box33
-\@float@everytoks=\toks28
-\@floatcapt=\box34
-)
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\placeins\placeins
 .sty
 Package: placeins 2005/04/18  v 2.2
+)
+(C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\floatrow\floatrow
+.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+\c@float@type=\count123
+\float@exts=\toks27
+\float@box=\box33
+\@floatcapt=\box34
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks28
+\flrow@foot=\insert199
+\FB@wd=\dimen142
+\FBo@wd=\dimen143
+\FBc@wd=\dimen144
+\FBo@ht=\skip59
+\FBc@ht=\skip60
+\FBf@ht=\skip61
+\FBo@max=\skip62
+\FBc@max=\skip63
+\FBf@max=\skip64
+\c@FBl@b=\count124
+\floatbox@depth=\count125
+\c@FRobj=\count126
+\c@FRsobj=\count127
+\Xhsize=\skip65
+\sXhsize=\skip66
+\Zhsize=\skip67
+\sZhsize=\skip68
+\flrow@rowbox=\box35
+\FR@Zunitlength=\dimen145
+\c@FBcnt=\count128
+\FPOScnt=\count129
+\LTleft=\skip69
+\LTright=\skip70
+\LTleft=\skip71
+\LTright=\skip72
+\flrow@types=\toks29
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\mdwtools\mdwtab.s
 ty
 Package: mdwtab 1998/04/28 1.9 Table typesetting with style
-\tab@state=\count124
-\tab@columns=\count125
-\tab@preamble=\toks29
-\tab@shortline=\toks30
-\extrarowheight=\dimen142
-\tabextrasep=\dimen143
-\arrayextrasep=\dimen144
-\smarraycolsep=\dimen145
-\smarrayextrasep=\dimen146
-\tab@width=\dimen147
-\col@sep=\dimen148
-\tab@endheight=\dimen149
-\tab@leftskip=\skip59
-\tab@rightskip=\skip60
-\fn@notes=\box35
-\fn@width=\dimen150
+\tab@state=\count130
+\tab@columns=\count131
+\tab@preamble=\toks30
+\tab@shortline=\toks31
+\extrarowheight=\dimen146
+\tabextrasep=\dimen147
+\arrayextrasep=\dimen148
+\smarraycolsep=\dimen149
+\smarrayextrasep=\dimen150
+\tab@width=\dimen151
+\col@sep=\dimen152
+\tab@endheight=\dimen153
+\tab@leftskip=\skip73
+\tab@rightskip=\skip74
+\fn@notes=\box36
+\fn@width=\dimen154
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks31
+\@enLab=\toks32
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 89.
+Package hyperref Info: Option `colorlinks' set `true' on input line 91.
 
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -441,46 +472,46 @@ File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
 ))
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\soul\soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks32
-\SOUL@lasttoken=\toks33
-\SOUL@cmds=\toks34
-\SOUL@buffer=\toks35
-\SOUL@token=\toks36
-\SOUL@spaceskip=\skip61
-\SOUL@ttwidth=\dimen151
-\SOUL@uldp=\dimen152
-\SOUL@ulht=\dimen153
+\SOUL@word=\toks33
+\SOUL@lasttoken=\toks34
+\SOUL@cmds=\toks35
+\SOUL@buffer=\toks36
+\SOUL@token=\toks37
+\SOUL@spaceskip=\skip75
+\SOUL@ttwidth=\dimen155
+\SOUL@uldp=\dimen156
+\SOUL@ulht=\dimen157
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem
 .sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip62
-\enit@outerparindent=\dimen154
-\enit@toks=\toks37
-\enit@inbox=\box36
-\enitdp@description=\count126
+\labelindent=\skip76
+\enit@outerparindent=\dimen158
+\enit@toks=\toks38
+\enit@inbox=\box37
+\enitdp@description=\count132
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\lineno\lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count127
-\output=\toks38
-\linenoprevgraf=\count128
-\linenumbersep=\dimen155
-\linenumberwidth=\dimen156
-\c@linenumber=\count129
-\c@pagewiselinenumber=\count130
-\c@LN@truepage=\count131
-\c@internallinenumber=\count132
-\c@internallinenumbers=\count133
-\quotelinenumbersep=\dimen157
-\bframerule=\dimen158
-\bframesep=\dimen159
-\bframebox=\box37
+\linenopenalty=\count133
+\output=\toks39
+\linenoprevgraf=\count134
+\linenumbersep=\dimen159
+\linenumberwidth=\dimen160
+\c@linenumber=\count135
+\c@pagewiselinenumber=\count136
+\c@LN@truepage=\count137
+\c@internallinenumber=\count138
+\c@internallinenumbers=\count139
+\quotelinenumbersep=\dimen161
+\bframerule=\dimen162
+\bframesep=\dimen163
+\bframebox=\box38
 LaTeX Info: Redefining \\ on input line 3056.
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
+\every@verbatim=\toks40
+\verbatim@line=\toks41
 \verbatim@in@stream=\read1
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb
@@ -489,11 +520,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count134
+\FV@CodeLineNo=\count140
 \FV@InFile=\read2
-\FV@TabBox=\box38
-\c@FancyVerbLine=\count135
-\FV@StepNumber=\count136
+\FV@TabBox=\box39
+\c@FancyVerbLine=\count141
+\FV@StepNumber=\count142
 \FV@OutFile=\write3
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
@@ -593,33 +624,33 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks41
-\XKV@tempa@toks=\toks42
+\XKV@toks=\toks42
+\XKV@tempa@toks=\toks43
 )
-\XKV@depth=\count137
+\XKV@depth=\count143
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@pc@count@i=\count138
-\c@pc@count@ii=\count139
-\c@pc@count@iii=\count140
-\c@pc@count@iv=\count141
-\pc@mathannot@box=\box39
-\pc@nullbox=\box40
-\pc@dima=\skip63
-\pc@dimb=\skip64
-\pc@Sposx=\skip65
-\pc@Sposy=\skip66
-\pc@Eposx=\skip67
-\pc@Eposy=\skip68
-\pc@column=\skip69
-\pc@box@width=\skip70
-\pc@box@height=\skip71
-\pc@box@depth=\skip72
+\c@pc@count@i=\count144
+\c@pc@count@ii=\count145
+\c@pc@count@iii=\count146
+\c@pc@count@iv=\count147
+\pc@mathannot@box=\box40
+\pc@nullbox=\box41
+\pc@dima=\skip77
+\pc@dimb=\skip78
+\pc@Sposx=\skip79
+\pc@Sposy=\skip80
+\pc@Eposx=\skip81
+\pc@Eposy=\skip82
+\pc@column=\skip83
+\pc@box@width=\skip84
+\pc@box@height=\skip85
+\pc@box@depth=\skip86
 
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox
 .sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count142
+\etb@tempcnta=\count148
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\datetime2\datetim
 e2.sty
@@ -644,33 +675,33 @@ Package zref Info: New property list: savepos on input line 75.
 Package zref Info: New property: posx on input line 76.
 Package zref Info: New property: posy on input line 77.
 )
-\c@zref@unique=\count143
+\c@zref@unique=\count149
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count144
-\calc@Bcount=\count145
-\calc@Adimen=\dimen160
-\calc@Bdimen=\dimen161
-\calc@Askip=\skip73
-\calc@Bskip=\skip74
+\calc@Acount=\count150
+\calc@Bcount=\count151
+\calc@Adimen=\dimen164
+\calc@Bdimen=\dimen165
+\calc@Askip=\skip87
+\calc@Bskip=\skip88
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count146
-\calc@Cskip=\skip75
+\calc@Ccount=\count152
+\calc@Cskip=\skip89
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\marginnote\margin
 note.sty
 Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
-\c@mn@abspage=\count147
+\c@mn@abspage=\count153
 )
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\bezos\soulpos.sty
 Package: soulpos 2012/02/25 v1.0 Fancy underlining
-\ulp@subcnt=\count148
-\ulp@cnt=\count149
+\ulp@subcnt=\count154
+\ulp@cnt=\count155
 \ulp@out=\write4
 \ulp@in=\read3
-\ulwidth=\dimen162
+\ulwidth=\dimen166
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
@@ -680,8 +711,8 @@ Package zref Info: New property list: pdfcomment on input line 2724.
 Package zref Info: New property: PCPDFOBJID on input line 2725.
 ) (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\nag\nag.sty
 Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
-\c@nag@c=\count150
-\c@nag@sins=\count151
+\c@nag@c=\count156
+\c@nag@sins=\count157
 Package nag Info: Loaded nag-l2tabu.cfg  on input line 552.
 
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\nag\nag-l2tabu.cf
@@ -700,35 +731,35 @@ Package: showlabels 2015/12/08 v1.7
 
 Package: `showlabels' v1.7 <2015/12/08>
 with amsmath equation tags
-\SL@labelposition=\count152
+\SL@labelposition=\count158
 ) (Assessment_template.aux)
 \openout1 = `Assessment_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 131.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Info: Redefining \microtypecontext on input line 129.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Info: Redefining \microtypecontext on input line 131.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -778,19 +809,19 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 129.
+\AtBeginShipoutBox=\box42
+Package hyperref Info: Link coloring ON on input line 131.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 129.
-LaTeX Info: Redefining \pageref on input line 129.
-LaTeX Info: Redefining \nameref on input line 129.
+LaTeX Info: Redefining \ref on input line 131.
+LaTeX Info: Redefining \pageref on input line 131.
+LaTeX Info: Redefining \nameref on input line 131.
 
 (Assessment_template.out) (Assessment_template.out)
 \@outlinefile=\write5
@@ -800,20 +831,22 @@ LaTeX Info: Redefining \nameref on input line 129.
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen163
-\scratchbox=\box42
-\nofMPsegments=\count155
-\nofMParguments=\count156
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen164
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count160
+\scratchdimen=\dimen167
+\scratchbox=\box43
+\nofMPsegments=\count161
+\nofMParguments=\count162
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count163
+\MPscratchDim=\dimen168
+\MPnumerator=\count164
+\makeMPintoPDFobject=\count165
+\everyMPtoPDFconversion=\toks45
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: floatrow package is loaded.
 Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
 Package caption Info: longtable package is loaded.
 
 (C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption
@@ -822,76 +855,1031 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
+(C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\floatrow\fr-longt
+able.sty
+Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
+
+\flrow@LT@lasthead=\box44
+\flrow@LT@prelastfoot=\box45
+\c@FBLTpage=\count166
+)
 Package marginnote Info: \pdfoutput not 0 or unimportant and
 (marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
 Package nag Info: Command \frontmatter not defined, skipping amendment on input
- line 129.
+ line 131.
 Package nag Info: Command \mainmatter not defined, skipping amendment on input 
-line 129.
+line 131.
 Package nag Info: Command \backmatter not defined, skipping amendment on input 
-line 129.
+line 131.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 129.
+line 131.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 129.
+ line 131.
 Package nag Info: Command \captionabove not defined, skipping amendment on inpu
-t line 129.
+t line 131.
 Package nag Info: Command \captionbelow not defined, skipping amendment on inpu
-t line 129.
+t line 131.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 129.
+line 131.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 129.
+line 131.
+<<ot1.cmap>><<ot1tt.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 136.
 
-Overfull \hbox (4.92958pt too wide) in paragraph at lines 135--135
- []\OT1/cmr/m/n/12 (-20) Spawning 
- []
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.
+cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 136.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(C:\Users\Chantel.Wetzel\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.
+cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+! Undefined control sequence.
+\LT@echunk ->\crcr \LT@save@row 
+                                \cr \egroup \global \setbox \@ne \lastbox \u...
+l.140 			\endhead
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\LT@def@row ...e \expandafter \count@ \LT@old@row 
+                                                  \else {1}{0pt}\fi }\let \L...
+l.140 			\endhead
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \LT@max@sel has an extra }.
+<inserted text> 
+                \par 
+l.140 			\endhead
+                 
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \LT@max@sel was complete.
+<to be read again> 
+                   \par 
+l.140 			\endhead
+                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Undefined control sequence.
+\LT@end@hd@ft ...ox \z@ \LT@get@widths \LT@bchunk 
+                                                  
+l.140 			\endhead
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.141 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.141 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \cr.
+\tab@dohline ...addruleheight \arrayrulewidth \cr 
+                                                  
+l.141 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\hline ->\tab@dohline \noalign 
+                               {\ifnum 0=`}\fi \tab@penalty \futurelet \@let...
+l.141 			\hline
+               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Incompatible list can't be unboxed.
+\@arstrut ->\unhcopy \@arstrutbox 
+                                  
+l.142 ...{l}{\footnotesize Continued on next page}
+                                                  
+Sorry, Pandora. (You sneaky devil.)
+I refuse to unbox an \hbox in vertical mode or vice versa.
+And I can't open any boxes in math mode.
 
 
-Overfull \hbox (5.094pt too wide) in paragraph at lines 135--135
- []\OT1/cmr/m/n/12 (-20) Depletion 
- []
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 14
+2.
 
+! Misplaced \crcr.
+\LT@echunk ->\crcr 
+                   \LT@save@row \cr \egroup \global \setbox \@ne \lastbox \u...
+l.143 			\endfoot
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Underfull \vbox (badness 10000) detected at line 157
- []
+! Misplaced \omit.
+\LT@entry ...->\ifhmode \@firstofone {&}\fi \omit 
+                                                  \ifnum #1=\c@LT@chunks \el...
+l.143 			\endfoot
+                 
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-[1
+! Missing number, treated as zero.
+<to be read again> 
+                   \cr 
+l.143 			\endfoot
+                 
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-\openout4 = `Assessment_template.upa'.
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \cr 
+l.143 			\endfoot
+                 
+I was expecting to see `<', `=', or `>'. Didn't.
 
-{C:/Users/Chantel.Wetzel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2]<<ot1.cmap>><<ot1tt.cmap>> [3]
-No complaints by nag.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-[4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
- (Assessment_template.aux
-* soulpos - computing points - it may take a few seconds *
-\openout4 = `Assessment_template.upb'.
+! Missing number, treated as zero.
+<to be read again> 
+                   \cr 
+l.143 			\endfoot
+                 
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
+! Misplaced \cr.
+<recently read> \cr 
+                    
+l.143 			\endfoot
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-(Assessment_template.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
-Package rerunfilecheck Info: File `Assessment_template.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
- ) 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.143 			\endfoot
+                 
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! You can't use `\lastbox' in math mode.
+<recently read> \lastbox 
+                         
+l.143 			\endfoot
+                 
+Sorry; this \lastbox will be void.
+
+! Extra }, or forgotten $.
+\LT@echunk ...etbox \@ne \lastbox \unskip \egroup 
+                                                  
+l.143 			\endfoot
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+\LT@end@hd@ft ...ox \z@ \LT@get@widths \LT@bchunk 
+                                                  
+l.143 			\endfoot
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced \crcr.
+\LT@echunk ->\crcr 
+                   \LT@save@row \cr \egroup \global \setbox \@ne \lastbox \u...
+l.144 			\endlastfoot
+                     
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\LT@echunk ->\crcr \LT@save@row \cr 
+                                    \egroup \global \setbox \@ne \lastbox \u...
+l.144 			\endlastfoot
+                     
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten $.
+\LT@echunk ->\crcr \LT@save@row \cr \egroup 
+                                            \global \setbox \@ne \lastbox \u...
+l.144 			\endlastfoot
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! You can't use `\lastbox' in math mode.
+<recently read> \lastbox 
+                         
+l.144 			\endlastfoot
+                     
+Sorry; this \lastbox will be void.
+
+! Extra }, or forgotten $.
+\LT@echunk ...etbox \@ne \lastbox \unskip \egroup 
+                                                  
+l.144 			\endlastfoot
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+\LT@end@hd@ft ...ox \z@ \LT@get@widths \LT@bchunk 
+                                                  
+l.144 			\endlastfoot
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.145 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.145 			\hline
+               
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \cr.
+\tab@dohline ...addruleheight \arrayrulewidth \cr 
+                                                  
+l.145 			\hline
+               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\hline ->\tab@dohline \noalign 
+                               {\ifnum 0=`}\fi \tab@penalty \futurelet \@let...
+l.145 			\hline
+               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.146 			1966 &
+                1 & 238 & 7 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.146 			1966 & 1 &
+                    238 & 7 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.146 			1966 & 1 & 238 &
+                          7 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.147 			1
+          967 & 5 & 1020 & 35 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.147 			1
+          967 & 5 & 1020 & 35 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.147 			1967 &
+                5 & 1020 & 35 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.147 			1967 & 5 &
+                    1020 & 35 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.147 			1967 & 5 & 1020 &
+                           35 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.148 			1
+          968 & 3 & 912 & 21 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.148 			1
+          968 & 3 & 912 & 21 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.148 			1968 &
+                3 & 912 & 21 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.148 			1968 & 3 &
+                    912 & 21 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.148 			1968 & 3 & 912 &
+                          21 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.149 			1
+          969 & 4 & 1213 & 28 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.149 			1
+          969 & 4 & 1213 & 28 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.149 			1969 &
+                4 & 1213 & 28 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.149 			1969 & 4 &
+                    1213 & 28 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.149 			1969 & 4 & 1213 &
+                           28 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.150 			1
+          970 & 13 & 1830 & 92 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.150 			1
+          970 & 13 & 1830 & 92 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.150 			1970 &
+                13 & 1830 & 92 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.150 			1970 & 13 &
+                     1830 & 92 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.150 			1970 & 13 & 1830 &
+                            92 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.151 			1
+          971 & 22 & 4698 & 155 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.151 			1
+          971 & 22 & 4698 & 155 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.151 			1971 &
+                22 & 4698 & 155 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.151 			1971 & 22 &
+                     4698 & 155 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.151 			1971 & 22 & 4698 &
+                            155 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.152 			1
+          972 & 23 & 4561 & 162 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.152 			1
+          972 & 23 & 4561 & 162 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.152 			1972 &
+                23 & 4561 & 162 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.152 			1972 & 23 &
+                     4561 & 162 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.152 			1972 & 23 & 4561 &
+                            162 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.153 			1
+          973 & 17 & 4134 & 120 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.153 			1
+          973 & 17 & 4134 & 120 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.153 			1973 &
+                17 & 4134 & 120 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.153 			1973 & 17 &
+                     4134 & 120 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.153 			1973 & 17 & 4134 &
+                            120 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.154 			1
+          974 & 20 & 4806 & 141 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.154 			1
+          974 & 20 & 4806 & 141 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.154 			1974 &
+                20 & 4806 & 141 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.154 			1974 & 20 &
+                     4806 & 141 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.154 			1974 & 20 & 4806 &
+                            141 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.155 			1
+          975 & 19 & 3637 & 134 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.155 			1
+          975 & 19 & 3637 & 134 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.155 			1975 &
+                19 & 3637 & 134 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.155 			1975 & 19 &
+                     3637 & 134 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.155 			1975 & 19 & 3637 &
+                            134 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\tab@tabcr ...\fi \global \dimen \@ne \dimen@ \cr 
+                                                  \noalign {#1\ifdim \dimen ...
+l.156 			1
+          976 & 21 & 3677 & 148 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\tab@tabcr ...al \dimen \@ne \dimen@ \cr \noalign 
+                                                  {#1\ifdim \dimen \@ne <\z@...
+l.156 			1
+          976 & 21 & 3677 & 148 \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.156 			1976 &
+                21 & 3677 & 148 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.156 			1976 & 21 &
+                     3677 & 148 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.156 			1976 & 21 & 3677 &
+                            148 \\
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 19487 strings out of 493634
- 321167 string characters out of 3141286
- 514440 words of memory out of 3000000
- 22648 multiletter control sequences out of 15000+200000
- 4919 words of font info for 22 fonts, out of 3000000 for 9000
+ 20059 strings out of 493634
+ 330071 string characters out of 3141286
+ 451706 words of memory out of 3000000
+ 23178 multiletter control sequences out of 15000+200000
+ 9368 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 38i,9n,84p,1034b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Assessment_template.pdf (4 pages, 36524 bytes).
-PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 4105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38i,11n,81p,1034b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
