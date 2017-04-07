@@ -229,7 +229,7 @@ recent years since the declaration.
 \label{tab:Exec_catch}
 \begin{tabular}{l>{\centering}p{0.7in}>{\centering}p{0.7in}>{\centering}p{0.7in}>{\centering}p{0.7in}>{\centering}p{0.7in}>{\centering}p{0.7in}}
   \hline
-Year & California & Oregon & Washington & At-sea-hake & Survey & Total Catch \\ 
+Year & California & Oregon & Washington & At-sea Hake & Research & Total Landings \\ 
   \hline
 2007 & 0.15 & 83.65 & 45.12 & 4.05 & 0.58 & 133.55 \\ 
   2008 & 0.39 & 58.64 & 16.61 & 15.93 & 0.80 & 92.37 \\ 
@@ -291,9 +291,8 @@ unfished spawning output) of the the base-case model in 2017 is 33.9\%
 
 \begin{table}[ht]
 \centering
-\caption{Recent trend in beginning of the 
-                                      year spawning output and depletion for
-                                      the Base model for Pacific ocean perch.} 
+\caption{Recent trend in estimated spawning output and relative
+                           spawning biomass.} 
 \label{tab:SpawningDeplete_mod1}
 \begin{tabular}{l>{\centering}p{1.3in}>{\centering}p{1.2in}>{\centering}p{1in}>{\centering}p{1.2in}}
   \hline
@@ -343,10 +342,11 @@ Recruitment Figure: (Figure \ref{fig:Recruits_all})\\
 Recruitment Tables: (Tables \ref{tab:Recruit_mod1},
 \ref{tab:Recruit_mod2} and \ref{tab:Recruit_mod3})
 
-\begin{table}[ht]
-\centering
-\caption{Recent recruitment for the Base model.} 
+\textbackslash{}begin\{table\}{[}ht{]} \centering
+\textbackslash{}caption\{Recent estimated trnd inrecruitment with
+approximate 95\% confidence intervals determined from the base model\}
 \label{tab:Recruit_mod1}
+
 \begin{tabular}{>{\centering}p{.8in}>{\centering}p{1.6in}>{\centering}p{1.3in}}
   \hline
 Year & Estimated Recruitment (millions) & \~{} 95\% confidence interval \\ 
@@ -363,7 +363,8 @@ Year & Estimated Recruitment (millions) & \~{} 95\% confidence interval \\
   2017 & 5.00 & 2 - 12 \\ 
    \hline
 \end{tabular}
-\end{table}
+
+\textbackslash{}end\{table\}
 
 \FloatBarrier
 
@@ -394,9 +395,7 @@ is provided as Figure \ref{fig:Phase_all}.
 \begin{table}[ht]
 \centering
 \caption{Recent trend in spawning potential 
-                                        ratio and exploitation for Pacific ocean perch in the Base model.  Fishing intensity is (1-SPR) 
-                                        divided by 50\% (the SPR target) and exploitation 
-                                        is F divided by F\textsubscript{SPR}.} 
+                                        ratio (1-SPR) and summary exploitation rate forPacific ocean perch.} 
 \label{tab:SPR_Exploit_mod1}
 \begin{tabular}{l>{\centering}p{1in}>{\centering}p{1.2in}>{\centering}p{1in}>{\centering}p{1.2in}}
   \hline
@@ -479,7 +478,7 @@ mt.
 \centering
 \caption{Summary of reference 
                                       points and management quantities for the 
-                                      base case Base model.} 
+                                      base case.} 
 \label{tab:Ref_pts_mod1}
 \begin{tabular}{>{\raggedright}p{4.1in}>{\centering}p{.65in}>{\centering}p{1.4in}}
   \hline
@@ -575,7 +574,7 @@ Yield curve: Figure \ref{fig:Yield_all}
 
 \begin{table}[ht]
 \centering
-\caption{Projections of potential OFL (mt) and the ACL (mt) using the base model forecast.} 
+\caption{Projections of potential OFL (mt) and the ACL (mt).} 
 \label{tab:OFL_projection}
 \begin{tabular}{lrr}
   \hline
@@ -600,7 +599,8 @@ Year & OFL & ACL \\
 \caption{Summary of 10-year 
                                              projections beginning in 2019 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the Base model.  Columns range over low, mid, and high
+                                             an axis of uncertainty for the base model. 
+                                             Columns range over low, mid, and high
                                              states of nature, and rows range over different 
                                              assumptions of catch levels. An entry of "--" 
                                              indicates that the stock is driven to very low 
@@ -667,7 +667,7 @@ Year & OFL & ACL \\
 
 \begin{sidewaystable}[ht]
 \centering
-\caption{Base case results summary.} 
+\caption{Base model results summary.} 
 \label{tab:base_summary}
 \scalebox{0.6}{
 \begin{tabular}{r>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}}
@@ -1883,8 +1883,8 @@ Year & Obs & SE \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of the biomass/abundance
-                                              time series used in the stock
+\caption{Summary of the fishery-independant biomass/abundance
+                                              time-series used in the stock
                                               assessment.} 
 \label{tab:Index_Summary}
 \begin{tabular}{>{\centering}p{.4in}>{\centering}p{.5in}>{\centering}p{.3in}>{\centering}p{.5in}>{\centering}p{.3in}>{\centering}p{.5in}>{\centering}p{.3in}>{\centering}p{.5in}>{\centering}p{.3in}>{\centering}p{.5in}>{\centering}p{.3in}}

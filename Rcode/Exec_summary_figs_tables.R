@@ -102,9 +102,9 @@ colnames(Exec_catch_summary) = c('Year',
                                  'California',
                                  'Oregon',
                                  'Washington',
-                                 'At-sea-hake', 
-                                 'Survey',
-                                 'Total Catch')
+                                 'At-sea Hake', 
+                                 'Research',
+                                 'Total Landings')
 
 Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1, Year <= LastYR-1)
     
@@ -226,9 +226,8 @@ align(Exec_catch.table) = c('l', 'l',
 # Create Spawning/Depletion tables for the correct number of models
 # Model 1 table ---------------------------------------------------------------
 Spawn_Deplete_mod1.table = xtable(SpawnDepletemod1, 
-                           caption = c(paste('Recent trend in beginning of the 
-                                      year spawning output and depletion for
-                                      the ', mod1_label, ' for ', spp, '.',sep='')), 
+                           caption = c('Recent trend in estimated spawning output and relative
+                           spawning biomass.'), 
                            label='tab:SpawningDeplete_mod1')#, digits=2)  
 
 # Add column spacing    
@@ -291,8 +290,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 
 # Model 1 table
 Recruit_mod1.table = xtable(Recruittab_mod1, 
-                            caption = c(paste('Recent recruitment for the ', 
-                                        mod1_label, '.', sep='')),
+                            caption = c('Recent estimated trnd inrecruitment with approximate 95% confidence intervals determined from the base model'),
                             label = 'tab:Recruit_mod1')#, digits = 2)   
 
 align(Recruit_mod1.table) = c('l',
@@ -360,10 +358,7 @@ align(Recruit_mod1.table) = c('l',
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
                               caption=c(paste('Recent trend in spawning potential 
-                                        ratio and exploitation for ', spp, ' in the ', 
-                                        mod1_label, '.  Fishing intensity is (1-SPR) 
-                                        divided by 50\\% (the SPR target) and exploitation 
-                                        is F divided by F\\textsubscript{SPR}.', sep='')), 
+                                        ratio (1-SPR) and summary exploitation rate for', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
@@ -460,9 +455,9 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
 
 # Model 1 
 Ref_pts_mod1.table = xtable(Ref_pts_mod1, 
-                            caption=c(paste('Summary of reference 
+                            caption=c('Summary of reference 
                                       points and management quantities for the 
-                                      base case ', mod1_label, '.',sep = '')), 
+                                      base case.'), 
                             label='tab:Ref_pts_mod1', digits = dig3)  
 # Add alignment      
 align(Ref_pts_mod1.table) = c('l',
@@ -521,7 +516,7 @@ align(mngmnt.table) = c('l',
       colnames(OFL) = c('Year','OFL', "ACL") 
 
 # Create the table
-      OFL.table = xtable(OFL, caption=c('Projections of potential OFL (mt) and the ACL (mt) using the base model forecast.'),
+      OFL.table = xtable(OFL, caption=c('Projections of potential OFL (mt) and the ACL (mt).'),
                   label = 'tab:OFL_projection')
      
 
@@ -547,8 +542,8 @@ align(mngmnt.table) = c('l',
                                     caption = c(paste('Summary of 10-year 
                                              projections beginning in ', LastYR+2,' 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the ', mod1_label, 
-                                             '.  Columns range over low, mid, and high
+                                             an axis of uncertainty for the base model. 
+                                             Columns range over low, mid, and high
                                              states of nature, and rows range over different 
                                              assumptions of catch levels. An entry of "--" 
                                              indicates that the stock is driven to very low 
@@ -646,7 +641,7 @@ mngmt = mngmt[,-1]
 
   
   # Create the table
-  base_summary.table = xtable(base_summary, caption=c('Base case results summary.'), 
+  base_summary.table = xtable(base_summary, caption=c('Base model results summary.'), 
                               label='tab:base_summary',digits=0) 
   # Add alignment   
   align(base_summary.table) = c('l',
