@@ -1483,6 +1483,121 @@ assessment team. Not required in draft assessment undergoing review.
       
 ```
 
+<!-- ********************************************************************** -->
+<!-- ***********************Survey Indices Table*************************** --> 
+<!-- ********************************************************************** -->
+
+<!-- ***********Indices of abundance summary table************************* -->
+
+
+```{r, results = 'asis'}
+    # Commercial CPUE Index First
+    names = "Fishery" #unique(mod1$cpue$FleetName)
+    survey.list = list()
+    for(i in 1:length(names)){
+      grab = mod1$cpue[mod1$cpue$FleetName == names[i], c("Obs", "SE") ]
+      survey.list[[i]] = grab
+      rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$FleetName == names[i], "Yr" ]
+      colnames(survey.list[[i]]) = c("Obs", "SE")
+    }
+    names(survey.list) = names
+    
+    Rows = unique(unlist(lapply(survey.list, rownames)))
+    Rows = sort(as.numeric(Rows))
+    Index_Summary = matrix(NA, nrow = length(Rows), ncol = 2*length(names),
+                           dimnames=list(Rows, sapply(survey.list, colnames)))
+
+    Index_Summary = cbind(print(survey.list[[i]]$Obs, digits =  2), 
+                          print(survey.list[[i]]$SE,  digits = 2)) 
+    
+    Index_Summary = cbind(Rows, Index_Summary)
+      colnames(Index_Summary) = c('Year',  "Obs", "SE")
+
+   # Index of abundance summary, create table   
+     Index_summary.table = xtable(Index_Summary, 
+                                  caption = c('Summary of the commercial catch-per-unit effort
+                                              time-series used in the stock
+                                              assessment.'),
+                                 label = 'tab:CPUE_Summary',
+                                 digits = 2)    
+    # Add alignment  
+      align(Index_summary.table) = c('l',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.7in}',
+                                     '>{\\centering}p{.7in}')  
+    
+    # Print index summary table
+      print(Index_summary.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+```
+
+
+
+```{r, results = 'asis'}
+    #Index_summary = read.csv('./txt_files/Index_summary.csv')
+    names = unique(mod1$cpue$FleetName)
+    names = names[2:length(names)]
+    survey.list = list()
+    for(i in 1:length(names)){
+      grab = mod1$cpue[mod1$cpue$FleetName == names[i], c("Obs", "SE") ]
+      survey.list[[i]] = grab
+      rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$FleetName == names[i], "Yr" ]
+      colnames(survey.list[[i]]) = c("Obs", "SE")
+    }
+    names(survey.list) = names
+    
+    Rows = unique(unlist(lapply(survey.list, rownames)))
+    Rows = sort(as.numeric(Rows))
+    Index_Summary = matrix("-", nrow = length(Rows), ncol = 2*length(names),
+                           dimnames=list(Rows, sapply(survey.list, colnames)))
+  
+    mat.names = NULL
+    for(i in seq_along(survey.list)){
+      if(i==1) { ind = 1:2  }
+      if(i!=1) { ind = ind+2}
+      Index_Summary[rownames(survey.list[[i]]), ind] = cbind(print(survey.list[[i]]$Obs, digits = 0), 
+                                                             print(survey.list[[i]]$SE,  digits = 2)) 
+      mat.names = c(mat.names, "Obs", "SE")
+    }
+    
+    
+    Index_Summary = cbind(rownames(Index_Summary), Index_Summary)
+      colnames(Index_Summary) = c('Year', mat.names)
+
+   # Index of abundance summary, create table   
+     Index_summary.table = xtable(Index_Summary, 
+                                  caption = c('Summary of the biomass/abundance
+                                              time series used in the stock
+                                              assessment.'),
+                                 label = 'tab:Index_Summary',
+                                 digits = 2)    
+    # Add alignment  
+      align(Index_summary.table) = c('l',
+                                     #'>{\\centering}p{.4in}',
+                                     #'>{\\centering}p{.3in}',
+                                     '>{\\centering}p{.4in}',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.3in}',
+                                     '>{\\centering}p{.5in}', 
+                                     '>{\\centering}p{.3in}',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.3in}',
+                                     '>{\\centering}p{.5in}', 
+                                     '>{\\centering}p{.3in}',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.3in}')  
+    
+    # Print index summary table
+      print(Index_summary.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+```
+
+
+
 \FloatBarrier
 
 
@@ -1617,49 +1732,6 @@ assessment team. Not required in draft assessment undergoing review.
 \end{landscape}
 <!-- ---------------------------------------------------------------------- -->
 
-
-
-\newpage
-
-<!-- ***********Indices of abundance summary table************************* -->
-```{r, results = 'asis'}
-    Index_summary = read.csv('./txt_files/Index_summary.csv')
-      colnames(Index_summary) = c('Region',
-                                  'ID',
-                                  'Fleet',
-                                  'Years',	
-                                  'Name',
-                                  'Fishery ind.',
-                                  'Filtering',
-                                  'Method',	
-                                  'Endorsed')
-
-   # Index of abundance summary, create table   
-     Index_summary.table = xtable(Index_summary, 
-                                  caption = c('Summary of the biomass/abundance
-                                              time series used in the stock
-                                              assessment.'),
-                                 label = 'tab:Index_summary',
-                                 digits = 0)    
-    # Add alignment  
-      align(Index_summary.table) = c('l',
-                                     '>{\\centering}p{.4in}',
-                                     '>{\\centering}p{.3in}',
-                                     '>{\\centering}p{.3in}',
-                                     '>{\\centering}p{.3in}',
-                                     '>{\\centering}p{.6in}',
-                                     '>{\\centering}p{.5in}', 
-                                     '>{\\centering}p{.8in}',
-                                     '>{\\centering}p{.8in}',
-                                     '>{\\centering}p{.5in}')  
-    
-    # Print index summary table
-      print(Index_summary.table, 
-            include.rownames=FALSE, 
-            caption.placement='top',
-            sanitize.text.function = function(x){x})
-```
-<!-- ---------------------------------------------------------------------- -->
 
 \newpage
 
