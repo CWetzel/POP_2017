@@ -139,4 +139,8 @@ for (i in 1:length(files)){
 file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv", 
           paste0(getwd(), "/txt_files"), overwrite = TRUE)
 
+#=====================================================================================
+# SECTION 4: Functions
+#=====================================================================================
 
+print.numeric<-function(x, digits) { formatC(x, digits = digits, format = "f") }
