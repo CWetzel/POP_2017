@@ -487,12 +487,17 @@ align(Ref_pts_mod1.table) = c('l',
 # Read in the management performance table - get from John Devore
 # Will have to change the column names, caption, and the alignment
   
-mngmnt = read.csv('./txt_files/Exec_mngmt_performance.csv')
+mngmnt = read.csv('./txt_files/ESF_Exec_mngmt_performance.csv')
+
+# Add the total landings and totality mortality
+landings = totdead = "NA"
+mngmnt = cbind(mngmnt, landings, totdead)
 
 colnames(mngmnt) = c('Year',
                      'OFL (mt; ABC prior to 2011)',  
                      'ABC (mt)', 
                      'ACL (mt; OY prior to 2011)', 
+                     'Total landings (mt)',
                      'Estimated total catch (mt)')
 
 # Create the management performance table
@@ -504,11 +509,12 @@ mngmnt.table = xtable(mngmnt,
                       label='tab:mnmgt_perform', digits = dig1)  
 # Add alignment
 align(mngmnt.table) = c('l',
-                        '>{\\raggedleft}p{1in}',
-                        '>{\\centering}p{1in}',
-                        '>{\\centering}p{1in}',
-                        '>{\\centering}p{1in}', 
-                        '>{\\centering}p{1in}')  
+                        '>{\\raggedleft}p{0.5in}',
+                        '>{\\centering}p{1.1in}',
+                        '>{\\centering}p{1.1in}',
+                        '>{\\centering}p{1.1in}', 
+                        '>{\\centering}p{1.1in}',
+                        '>{\\centering}p{1.1in}')  
 
 
 #=============================================================================
@@ -527,11 +533,37 @@ align(mngmnt.table) = c('l',
       OFL$Year = as.factor(OFL$Year)
 
       OFL = OFL[,c(3, 1, 2)]
-      colnames(OFL) = c('Year','OFL', "ACL") 
+      OFL[,2] =  print.numeric(OFL$OFL_mod1, digits = 0)
+      OFL[,3] =  print.numeric(OFL$ACL_mod1, digits = 0)
+      
+      # Extract biomass/output  
+      SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$LABEL), ]
+      SpawningB = SpawningB[c(-1, -2), ]
+      Spawn.fore = SpawningB[SpawningB$LABEL >= paste('SPB_', Project_firstyr, sep='') 
+                               & SpawningB$LABEL <= paste('SPB_', Project_lastyr,  sep=''), "Value"]  
+      Spawn.fore = print(Spawn.fore, digits = 0)
+      
+      Bratio = mod$derived_quants[grep('Bratio', mod$derived_quants$LABEL), ]
+      Bratio = Bratio[c(-1, -2), ]
+      Bratio.fore = Bratio[Bratio$LABEL >= paste('Bratio_', Project_firstyr, sep='') 
+                             & Bratio$LABEL <= paste('Bratio_', Project_lastyr,  sep=''), "Value"]
+      Bratio.fore = print(Bratio.fore, digits = 3)
+      
+      Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
+      colnames(Fore_Table) = c('Year','OFL', "ACL", "Spawning Biomass", "Relative Biomass") 
 
-# Create the table
-      OFL.table = xtable(OFL, caption=c('Projections of potential OFL (mt) and the ACL (mt).'),
+      # Create the table
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning biomass and relative biomass.'),
                   label = 'tab:OFL_projection')
+      
+      # Add alignment
+      align(mngmnt.table) = c('l',
+                              '>{\\raggedleft}p{0.5in}',
+                              '>{\\centering}p{1.1in}',
+                              '>{\\centering}p{1.1in}',
+                              '>{\\centering}p{1.1in}', 
+                              '>{\\centering}p{1.1in}',
+                              '>{\\centering}p{1.1in}')  
      
 
 #=============================================================================

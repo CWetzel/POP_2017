@@ -93,6 +93,7 @@ Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3
     # Note: you cannot have carriage returns in the R options line
     # Plot washington catches           
     Plot_catch(Catch_df = Exec_region1_catch)
+
 ```
 
 
