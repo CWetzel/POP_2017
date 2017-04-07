@@ -6,11 +6,10 @@
 ### 
 ### Section 1: run r4ss and create plots
 ###
-### Section 2: has the code for multiple model plot comparisons 
-### Edit Section 2 script based on your needs
-### Don't source this code, unless you've made all necessary edits
+### Section 2: save the entire myreplist and mod_structure files from r4ss as csv's
 ###
-### Section 3: save the entire myreplist and mod_structure files from r4ss as csv's
+### Section 3: Copy csv files from working assessment folder into the txt folder 
+### within the github directory
 # =============================================================================
 
 # start fresh here - this script is separate from the script for the assessment
@@ -31,9 +30,11 @@ mod1_dat = "data.ss"
 mod1_ctrl = "control.ss"
 
 
+#=====================================================================================
 # SECTION1: Run r4ss, parse plotInfoTable.csv file, & add linebreaks to SS files
+#=====================================================================================
 
-stop("\n  This file should not be sourced!") # note to stop from accidental sourcing
+#stop("\n  This file should not be sourced!") # note to stop from accidental sourcing
 
 # Here we're going to make sure you have all the required packages for the template
 # Check for installtion and make sure all R libraries can be loaded
@@ -80,12 +81,10 @@ dir.create(file.path(output.dir,model.plots), showWarnings = FALSE)
 # BEGIN r4ss===================================================================
 # REMOVE OLD r4SS OUTPUT!!!!! -------------------------------------------------
 # Run this deliberately - it deletes the r4SS output plots files
-#do.call(file.remove, list(list.files(file.path(output.dir,'plots_mod1'), full.names=TRUE)))
 do.call(file.remove, list(list.files(file.path(output.dir, model.plots), full.names=TRUE)))
 
 
 # Run r4ss for each model - **CHANGE DIRECTORY if necessary**
-#mod1 = SS_output(dir = file.path(input.dir,'Base_model1'), forecast=T, covar=T, ncol=1000, printstats = FALSE)
 mod1 = SS_output(dir = file.path(input.dir,model.file), forecast=T, covar=covar, ncol=1000, printstats = FALSE)
 
 
@@ -93,9 +92,10 @@ mod1 = SS_output(dir = file.path(input.dir,model.file), forecast=T, covar=covar,
 save.image('./r4ss/SS_output.RData')
 
 
-# =============================================================================
-# RUN r4ss plots for each model
 
+#=====================================================================================
+# SECTION 2: RUN r4ss plots for each model & save files
+#=====================================================================================
 # output directories
 #out.dir.mod1 = file.path(output.dir,'plots_mod1')
 out.dir.mod1 = file.path(output.dir,model.plots)
@@ -123,3 +123,20 @@ source('./Rcode/Parse_r4ss_plotInfoTable.R')
 
 # Create the SS files for the appendices
 source('./Rcode/SS_files_linebreaks.R')
+
+#=====================================================================================
+# SECTION 3: Move CSV files from working directory to github directory
+#=====================================================================================
+
+HomeDir = "C:/Assessments/POP2017/WriteUp/Tables/"
+files = dir(HomeDir)
+for (i in 1:length(files)){
+  file.copy(paste0(HomeDir,files[i]),
+            paste0(getwd(), "/txt_files"), overwrite = TRUE)
+}
+
+# Copy and move files from other locations
+file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv", 
+          paste0(getwd(), "/txt_files"), overwrite = TRUE)
+
+

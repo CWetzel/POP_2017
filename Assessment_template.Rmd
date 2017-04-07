@@ -1151,7 +1151,8 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeLengthSampleSize.csv')
+    #Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeLengthSampleSize.csv')
+    Fish_Length =  read.csv('./txt_files/NWFSCSlopeLengthSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1241,6 +1242,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 ```{r, results = 'asis'}
     Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/POPAgeSampleSize.csv')
+    Fish_Length = Fish_Length[,-1]
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1328,7 +1330,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 ```{r, results = 'asis'}
     Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCComboAgeSampleSize.csv')
-    Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
+    Fish_Length = Fish_Length[,-1]
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',

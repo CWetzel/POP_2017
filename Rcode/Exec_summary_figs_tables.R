@@ -42,12 +42,15 @@ rich.colors.short <- function(n,alpha=1){
 
 
 # =============================================================================
-# 1. Catch FIGURE(S) ----------------------------------------------------------
+# Executive Figure A: Catches
+#==============================================================================
 # Required: Read in CSV file, edit this section depending on # of plots!!
 # Read in executive summary catches figure file
-# Pacific ocean perch catches
-# Exec_catch_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
-Exec_catch_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
+
+#Final_Catch_AllYrs = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
+
+Final_Catch_AllYrs = read.csv('./txt_files/POP2017_PacFIN_catch_forExpansion.csv')
+Exec_catch_sep = Final_Catch_AllYrs
 Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep )]
 
 # Assign column names
@@ -80,17 +83,16 @@ Plot_catch = function(Catch_df) {
              ylab('Landings (mt)')
 }
 
-# -----------------------------------------------------------------------------
-# CATCH TABLE(S) --------------------------------------------------------------
+#==============================================================================
+# Executive Table A: Catches
+#==============================================================================
 
 # Read in executive summary catches table
-#Exec_catch_summary =  read.csv('./txt_files/_CatchAllYrs.csv')
-#Exec_catch_summary_sep =  read.csv('./txt_files/_CatchbyGearState.csv')
-Exec_catch_summary_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
-Exec_catch_summary_sep = Exec_catch_summary_sep[,2:ncol(Exec_catch_summary_sep)]
+#Exec_catch_summary_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
+Exec_catch_summary_sep = Final_Catch_AllYrs[,2:ncol(Final_Catch_AllYrs)]
+#Exec_catch_summary_sep = Exec_catch_summary_sep[,2:ncol(Exec_catch_summary_sep)]
 
 # Bind the data frames together
-#Exec_catch_summary = cbind(Exec_catch_summary_sep, Exec_catch_summary[,2:3])
 Exec_catch_summary = cbind(Exec_catch_summary_sep[,1:4], 
                            Exec_catch_summary_sep$ASHOP, 
                            apply(Exec_catch_summary_sep[,7:ncol(Exec_catch_summary_sep)], 1, sum),
@@ -103,7 +105,6 @@ colnames(Exec_catch_summary) = c('Year',
                                  'At-sea-hake', 
                                  'Survey',
                                  'Total Catch')
-                                 #'Total Dead')
 
 Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1, Year <= LastYR-1)
     
@@ -125,8 +126,9 @@ align(Exec_catch.table) = c('l', 'l',
                             '>{\\centering}p{0.7in}')  
 
   
-# =============================================================================
-# Spawning output and Depletion -----------------------------------------------
+#=============================================================================
+# Executive Table B: Spawning Biomass and Relative Biomass
+#=============================================================================
 
 # Retreive data on spawning output and depletion
   mod=mod1
@@ -237,8 +239,9 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
                                     '>{\\centering}p{1.2in}')  
 
 
-# =============================================================================
-# Recruitment =================================================================
+#=============================================================================
+# Executive Table C: Recruitment 
+#=============================================================================
 
 # Extract recruitment values
 
@@ -298,9 +301,9 @@ align(Recruit_mod1.table) = c('l',
                               '>{\\centering}p{1.3in}')
         
 
-# =============================================================================
-# Exploitation data -----------------------------------------------------------
-
+#=============================================================================
+# Executive Table D: Exploitation Rates
+#=============================================================================
 # Extract exploitation values
 
   mod = mod1
@@ -370,8 +373,9 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
                                        '>{\\centering}p{1.2in}') 
      
 
-# =============================================================================
-# Reference points ------------------------------------------------------------
+#=============================================================================
+# Executive Table E: Reference Points
+#=============================================================================
 
 # Extract reference points table data
   mod = mod1
@@ -467,8 +471,9 @@ align(Ref_pts_mod1.table) = c('l',
                               '>{\\centering}p{1.4in}')  
 
 
-# =============================================================================
-# Management performance ------------------------------------------------------
+#=============================================================================
+# Executive Table F: Management performance
+#==============================================================================
 # Required: EDIT and READ IN Exec_mngmt_performance.csv FILE ------------------
 # Read in the management performance table - get from John Devore
 # Will have to change the column names, caption, and the alignment
@@ -497,8 +502,9 @@ align(mngmnt.table) = c('l',
                         '>{\\centering}p{1in}')  
 
 
-# =============================================================================
-# OFL projection --------------------------------------------------------------
+#=============================================================================
+# Executive Table G: OFL Projections
+#==============================================================================
 
 # Extract OFLs for next 10 years for each model
       OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$LABEL),]
@@ -510,9 +516,8 @@ align(mngmnt.table) = c('l',
       OFL = as.data.frame(cbind(OFL_mod1, ACL_mod1))
       OFL$Year=seq(Project_firstyr,Project_lastyr, 1)
       OFL$Year = as.factor(OFL$Year)
-      #OFL = OFL[,c(2, 1)]
+
       OFL = OFL[,c(3, 1, 2)]
-      #colnames(OFL) = c('Year','OFL') 
       colnames(OFL) = c('Year','OFL', "ACL") 
 
 # Create the table
@@ -520,8 +525,9 @@ align(mngmnt.table) = c('l',
                   label = 'tab:OFL_projection')
      
 
-# =============================================================================
-# Decision Table(s) -----------------------------------------------------------
+#=============================================================================
+# Executive Table h: Decision Table
+#==============================================================================      
 # Required: READ in the DecisionTable_mod CSV files ---------------------------
 
 # Model 1
@@ -564,12 +570,13 @@ align(mngmnt.table) = c('l',
                                &  \\multicolumn{2}{c}{High M 0.09} \\\\\n')
 
 
-# =============================================================================
-# Base case summary table -----------------------------------------------------
+#=============================================================================
+# Executive Summary Table I: Summary of Results
+#=============================================================================
 # Required: PARTIALLY READS CSV FILE ------------------------------------------
 
 # Collect the data from all the tables
-# Read in the management table
+# Read in the management table that includs the managment history Landings, EstCatch, OFL, ACLs
 mngmt = read.csv('./txt_files/Exec_basemodel_summary.csv')
 mngmt = mngmt[,-1]
     
