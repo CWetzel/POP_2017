@@ -945,40 +945,167 @@ assessment team. Not required in draft assessment undergoing review.
 <!-- ********************************************************************** --> 
 <!-- *********************Commercial landings TABLES*********************** --> 
 <!-- ********************************************************************** --> 
+```{r, results = 'asis'}
+    Catch_AllYrs = read.csv('./txt_files/POP2017_PacFIN_catch_forExpansion.csv')
+    Catch_AllYrs = Catch_AllYrs[, -1]
+    # Combine all research catches into one column
+    Catch_AllYrs = cbind(Catch_AllYrs[,1:6],
+                         apply(Catch_AllYrs[,7:dim(Catch_AllYrs)[2]], 1, sum ) )
+    # manually split table across pages because I could not get longtable to work
+    Catch_AllYrs = Catch_AllYrs[1:40, ]
+      colnames(Catch_AllYrs) = c('Year',
+                                  'California',
+                                  'Oregon',
+                                  'Washington', 
+                                  'At-Sea Hake',
+                                  'Foreign',
+                                  'Research')
 
+   # Index of abundance summary, create table   
+     Catch_AllYrs = xtable(Catch_AllYrs, 
+                                  caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
+                                 label = 'tab:Comm_Catch',
+                                 digits = 1)    
 
+    # Add alignment  
+      align(Catch_AllYrs) = c('l',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}')  
+    
+    #Print commercial length sample numbers
+    print(Catch_AllYrs,
+         include.rownames=FALSE,
+         caption.placement='top',
+         sanitize.text.function = function(x){x})
+ 
+      
+``` 
 
+```{r, results = 'asis'}
+    Catch_AllYrs = read.csv('./txt_files/POP2017_PacFIN_catch_forExpansion.csv')
+    Catch_AllYrs = Catch_AllYrs[, -1]
+    # Combine all research catches into one column
+    Catch_AllYrs = cbind(Catch_AllYrs[,1:6],
+                         apply(Catch_AllYrs[,7:dim(Catch_AllYrs)[2]], 1, sum ) )
+    # manually split table across pages because I could not get longtable to work
+    Catch_AllYrs = Catch_AllYrs[41:85, ]
+      colnames(Catch_AllYrs) = c('Year',
+                                  'California',
+                                  'Oregon',
+                                  'Washington', 
+                                  'At-Sea Hake',
+                                  'Foreign',
+                                  'Research')
 
+   # Index of abundance summary, create table   
+     Catch_AllYrs = xtable(Catch_AllYrs, 
+                           #caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
+                           #label = 'tab:Comm_Catch',
+                           digits = 1)    
+
+    # Add alignment  
+      align(Catch_AllYrs) = c('l',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}')  
+    
+    #Print commercial length sample numbers
+    print(Catch_AllYrs,
+         include.rownames=FALSE,
+         caption.placement='top',
+         sanitize.text.function = function(x){x})
+ 
+      
+``` 
+
+```{r, results = 'asis'}
+    Catch_AllYrs = read.csv('./txt_files/POP2017_PacFIN_catch_forExpansion.csv')
+    Catch_AllYrs = Catch_AllYrs[, -1]
+    # Combine all research catches into one column
+    Catch_AllYrs = cbind(Catch_AllYrs[,1:6],
+                         apply(Catch_AllYrs[,7:dim(Catch_AllYrs)[2]], 1, sum ) )
+    # manually split table across pages because I could not get longtable to work
+    Catch_AllYrs = Catch_AllYrs[86:dim(Catch_AllYrs)[1], ]
+      colnames(Catch_AllYrs) = c('Year',
+                                  'California',
+                                  'Oregon',
+                                  'Washington', 
+                                  'At-Sea Hake',
+                                  'Foreign',
+                                  'Research')
+
+   # Index of abundance summary, create table   
+     Catch_AllYrs = xtable(Catch_AllYrs, 
+                          #caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
+                           #label = 'tab:Comm_Catch',
+                           digits = 1)    
+
+    # Add alignment  
+      align(Catch_AllYrs) = c('l',
+                                     '>{\\centering}p{.5in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}')   
+    
+    #Print commercial length sample numbers
+    print(Catch_AllYrs,
+         include.rownames=FALSE,
+         caption.placement='top',
+         sanitize.text.function = function(x){x})
+ 
+      
+``` 
 <!-- ********************************************************************** --> 
 <!-- *******************Commercial Discards TABLES************************* --> 
 <!-- ********************************************************************** --> 
 
+```{r, results = 'asis'}
+    #Index_summary = read.csv('./txt_files/Index_summary.csv')
+    # Pull in model values from mod1
+    Discard = cbind(mod1$discard$Yr, 
+                     c(rep("Pikitch",2), rep("WCGOP", length(mod1$discard$Yr)-2)),
+                     print(mod1$discard$Obs, digits = 3), 
+                     print(mod1$discard$Std_in, digits = 3))
+    # Change years for Pikitch periods
+    #discards[2,1] = paste0(discards[1,1]+1, "-", discards[2,1] )
+    #discards[1,1] = paste0(mod1$startyr,"-", discards[1,1])
+      colnames(Discard) = c('Year',
+                                  'Source',
+                                  'Discard',
+                                  'Standard Error')
+
+     value = ifelse(mod1$discard_spec$units == 2, "discard rates", "total discard")
+     Discard.table = xtable(Discard, 
+                            caption = paste('Summary of', value,'used in the model by each data source.'),
+                            label = 'tab:Discard',
+                            digits = 3)    
+    # Add alignment  
+      align(Discard.table) = c('l',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{.75in}',
+                                     '>{\\centering}p{1.1in}')  
+    
+    # Print index summary table
+      print(Discard.table, 
+            include.rownames=FALSE, 
+            caption.placement='top',
+            sanitize.text.function = function(x){x})
+```
 
 
-
-
-<!-- ********************************************************************** --> 
-<!-- ***********Recreational Landings and discards TABLES****************** --> 
-<!-- ********************************************************************** --> 
-
-
-
-
-<!-- ********************************************************************** --> 
-<!-- ************Oregon commercial logbook TABLES ************************* --> 
-<!-- ********************************************************************** --> 
-
-
-
-<!-- ********************************************************************** --> 
-<!-- ************Recreational dockside survey TABLES*********************** --> 
-<!-- ********************************************************************** --> 
-
-
-
-<!-- ********************************************************************** -->
-<!-- ************Recreational onboard observer index TABLES**************** -->
-<!-- ********************************************************************** -->
 
 
 
@@ -988,7 +1115,7 @@ assessment team. Not required in draft assessment undergoing review.
 <!-- ********************************************************************** -->
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+    Fish_Length = read.csv('./txt_files/FisheryLength_N.csv')
     # manually split table across pages because I could not get longtable to work
     Fish_Length = Fish_Length[1:35, ]
       colnames(Fish_Length) = c('Year',
@@ -1020,7 +1147,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryLength_N.csv')
+    Fish_Length = read.csv('./txt_files/FisheryLength_N.csv')
     # manually split table across pages because I could not get longtable to work
     Fish_Length = Fish_Length[36:dim(Fish_Length)[1], ]
       colnames(Fish_Length) = c('Year',
@@ -1065,7 +1192,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/POPLengthSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/POPLengthSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1094,7 +1221,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/TriennialLengthSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/TriennialLengthSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1122,7 +1249,7 @@ assessment team. Not required in draft assessment undergoing review.
 ```
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/AFSCLengthSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/AFSCLengthSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1151,7 +1278,6 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    #Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeLengthSampleSize.csv')
     Fish_Length =  read.csv('./txt_files/NWFSCSlopeLengthSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
@@ -1181,7 +1307,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCComboLengthSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/NWFSCComboLengthSampleSize.csv')
     Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
       colnames(Fish_Length) = c('Year',
                                   'Tows',
@@ -1212,7 +1338,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/FisheryAges_N.csv')
+    Fish_Length = read.csv('./txt_files/FisheryAges_N.csv')
       colnames(Fish_Length) = c('Year',
                                   'Trips',
                                   'Fish',
@@ -1241,7 +1367,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/POPAgeSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/POPAgeSampleSize.csv')
     Fish_Length = Fish_Length[,-1]
       colnames(Fish_Length) = c('Year',
                                   'Tows',
@@ -1271,7 +1397,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/TriennialAgeSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/TriennialAgeSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1300,7 +1426,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCSlopeAgeSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/NWFSCSlopeAgeSampleSize.csv')
       colnames(Fish_Length) = c('Year',
                                   'Tows',
                                   'Fish',
@@ -1329,7 +1455,7 @@ assessment team. Not required in draft assessment undergoing review.
 
 
 ```{r, results = 'asis'}
-    Fish_Length = read.csv('C:/Assessments/POP2017/WriteUp/Tables/NWFSCComboAgeSampleSize.csv')
+    Fish_Length = read.csv('./txt_files/NWFSCComboAgeSampleSize.csv')
     Fish_Length = Fish_Length[,-1]
       colnames(Fish_Length) = c('Year',
                                   'Tows',
