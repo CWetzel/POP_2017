@@ -1564,12 +1564,20 @@ assessment team. Not required in draft assessment undergoing review.
     
     
     Index_Summary = cbind(rownames(Index_Summary), Index_Summary)
-      colnames(Index_Summary) = c('Year', mat.names)
+    #colnames(Index_Summary) = NULL
+    #colnames(Index_Summary) =  c('Year', mat.names)
+    #                          Index_Summary)
+    #  colnames(Index_Summary) = c("", "POP", "", "Triennial", "", "AFSC", "", "NW Slope", "", "NW Combo", "")
 
-   # Index of abundance summary, create table   
+   # Index of abundance summary, create table
+     hlines = c(-1, 0, nrow(Index_Summary))
+     addtorow = list()
+     addtorow$pos = list(0,0)
+     addtorow$command = c("& \\multicolumn{2}{c}{POP} & \\multicolumn{2}{c}{Triennial} & \\multicolumn{2}{c}{AFSC Slope} & \\multicolumn{2}{c}{NWFSC Slope} & \\multicolumn{2}{c}{NWFSC Shelf/Slope} \\\\\n",
+                          "Year & Obs & SE & Obs & SE & Obs & SE & Obs & SE & Obs & SE\\\\\n")
      Index_summary.table = xtable(Index_Summary, 
-                                  caption = c('Summary of the biomass/abundance
-                                              time series used in the stock
+                                  caption = c('Summary of the fishery-independant biomass/abundance
+                                              time-series used in the stock
                                               assessment.'),
                                  label = 'tab:Index_Summary',
                                  digits = 2)    
@@ -1593,6 +1601,9 @@ assessment team. Not required in draft assessment undergoing review.
       print(Index_summary.table, 
             include.rownames=FALSE, 
             caption.placement='top',
+            hline.after = hlines,
+            add.to.row = addtorow,
+            include.colnames = FALSE,
             sanitize.text.function = function(x){x})
 ```
 
