@@ -110,8 +110,7 @@ Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1, Year <= LastY
     
 # Make executive summary catch xtable
 Exec_catch.table = xtable(Exec_catch_summary, 
-                          caption = c(paste('Landings (mt) for the past 10 years for',spp,' by 
-                                            fleet.', sep='')), 
+                          caption = c(paste0('Landings (mt) for the past 10 years for ',spp,' by fleet.')), 
                           label='tab:Exec_catch')
     
 # Add alignment - you will have to adjust based on the number of columns you have
@@ -263,13 +262,13 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   Recruityrs$lowerCI <- exp(log(Recruityrs$Value) + qnorm(0.025)*Recruityrs$logint)
   Recruityrs$upperCI <- exp(log(Recruityrs$Value) + qnorm(0.975)*Recruityrs$logint)
   
-  Recruit_units <- "1,000s"
-  if(mean(Recruityrs$Value) > 10000){
-    Recruit_units <- "millions"
-    Recruityrs$Value <- Recruityrs$Value/1000
-    Recruityrs$lowerCI <- Recruityrs$lowerCI/1000
-    Recruityrs$upperCI <- Recruityrs$upperCI/1000
-  }
+  #Recruit_units <- "1,000s"
+  #if(mean(Recruityrs$Value) > 10000){
+  #  Recruit_units <- "millions"
+  #  Recruityrs$Value <- Recruityrs$Value/1000
+  #  Recruityrs$lowerCI <- Recruityrs$lowerCI/1000
+  #  Recruityrs$upperCI <- Recruityrs$upperCI/1000
+  #}
   
   
   Recruityrs$CI = paste0(print.numeric(Recruityrs$lowerCI, digits = sb.dig), ' - ', print.numeric(Recruityrs$upperCI, digits = sb.dig))
@@ -278,25 +277,40 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   
   Recruittab=subset(Recruityrs, select = c('YEAR', 'Value', 'CI'))
   
-  colnames(Recruittab) = c('Year',
-                           paste0('Estimated Recruitment (',Recruit_units,')'),
-                           '~ 95% confidence interval')
+  colnames(Recruittab) = c('Year',paste0('Estimated Recruitment'), '~ 95% confidence interval')
   
   assign(paste('Recruittab_',mod_area,sep=''), Recruittab)
-
+  
+  # Recruitment deviations
+  RecDevs = mod1$recruitpars[mod1$recruitpars$Yr >= FirstYR & mod1$recruitpars$Yr <= LastYR, c("Value", "Parm_StDev")]
+  RecDevs$lowerCI = RecDevs$Value - qnorm(1-(1-0.95)/2)*RecDevs$Parm_StDev
+  RecDevs$upperCI = RecDevs$Value + qnorm(1-(1-0.95)/2)*RecDevs$Parm_StDev
+  RecDevs$CI = paste0(print.numeric(RecDevs$lowerCI, digits = 3), ' - ', print.numeric(RecDevs$upperCI, digits = 3))
+  RecDevs$Value = round(RecDevs$Value, digits = 3)
+  RecDevtab=subset(RecDevs, select = c('Value', 'CI'))
+  colnames(RecDevtab) = c(paste0('Estimated Recruitment Devs.'), '~ 95% confidence interval')
+  
+  # Paste the data frames together
+  Recruit_All = cbind(Recruittab_mod1, RecDevtab)
 
 # -----------------------------------------------------------------------------
 # Create recruitment tables
 
 # Model 1 table
-Recruit_mod1.table = xtable(Recruittab_mod1, 
-                            caption = c('Recent estimated trnd inrecruitment with approximate 95% confidence intervals determined from the base model'),
-                            label = 'tab:Recruit_mod1')#, digits = 2)   
+Recruit_mod1.table = xtable(Recruit_All, #Recruittab_mod1, 
+                            caption = c(paste('Recent estimated trend in recruitment with approximate 95% 
+                                        confidence intervals determined from the base model', sep='')),
+                            #caption = c('Recent estimated trend in recruitment with approximate 95% 
+                            #            confidence intervals determined from the base model'),
+                            label = 'tab:Recruit_mod1')#, 
+                            #digits = 0)   
 
 align(Recruit_mod1.table) = c('l',
                               '>{\\centering}p{.8in}',
-                              '>{\\centering}p{1.6in}',
-                              '>{\\centering}p{1.3in}')
+                              '>{\\centering}p{1.0in}',
+                              '>{\\centering}p{1.4in}',
+                              '>{\\centering}p{1.0in}',
+                              '>{\\centering}p{1.4in}')
         
 
 #=============================================================================

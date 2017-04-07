@@ -139,8 +139,6 @@ spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1`
 ```{r, results='asis'}
     # Print spawning biomass table(s)
     print(Spawn_Deplete_mod1.table, include.rownames = FALSE, caption.placement = 'top')
-    if(n_models >= 2) {print(Spawn_Deplete_mod2.table, include.rownames = FALSE, caption.placement = 'top')}
-    if(n_models == 3) {print(Spawn_Deplete_mod3.table, include.rownames = FALSE, caption.placement = 'top')}
 
     # Select which file to use for the recuitment figure, depending on if you have one model or multiple models
     spawn.file  = ifelse(fecund=='numbers',
@@ -172,15 +170,12 @@ spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1`
 table for last 10 years and graph with long term estimates.}
 
 Recruitment Figure: (Figure \ref{fig:Recruits_all})     
-Recruitment Tables: (Tables \ref{tab:Recruit_mod1}, \ref{tab:Recruit_mod2} 
-and \ref{tab:Recruit_mod3})
+Recruitment Tables: (Tables \ref{tab:Recruit_mod1})
 
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY RECRUITMENT TABLES AND FIGURES***** -->
 ```{r, results='asis'}
-   # Print recruitment tables; will print up to 3 depending on the number of models, you can delete the code
-   # for models you don't need as well
    print(Recruit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
    recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
   
