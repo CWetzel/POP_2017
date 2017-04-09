@@ -88,7 +88,7 @@ Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3
 <!-- ***********This depends on how many plots you need******************** -->
 <!-- ***********Also included is the r4SS plot - keep or remove************ -->
 <!-- ***********CATCH FIGURES********************************************** -->
-```{r, fig.cap= paste('Landings of' ,spp, 'for California, Oregon, Washington, the foriegn fishery (1966-1976), at-sea-hake fishery, and fishery independent surveys. \\label{fig:Exec_catch1}',sep=' ')}
+```{r, fig.cap= paste('Landings of' ,spp, 'for California, Oregon, Washington, the Foriegn fishery (1966-1976), At-Sea Hake fishery, and fishery independent surveys. \\label{fig:Exec_catch1}',sep=' ')}
     # CSV: './txt_files/Exec_catch_for_figs.csv'
     # Note: you cannot have carriage returns in the R options line
     # Plot washington catches           

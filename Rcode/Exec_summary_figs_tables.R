@@ -56,8 +56,8 @@ Exec_catch_sep = Final_Catch_AllYrs
 Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep )]
 
 # Assign column names
-survey = apply(Exec_catch_sep[,(ncol(Exec_catch_sep)-4):ncol(Exec_catch_sep)], 1, sum)
-Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-5)], survey)
+survey = apply(Exec_catch_sep[,7:ncol(Exec_catch_sep)], 1, sum)
+Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-6)], survey)
 colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'At-sea-hake', 'Foreign', 'Survey')
 
 #Plot only years where catch is great than 1 mt total
