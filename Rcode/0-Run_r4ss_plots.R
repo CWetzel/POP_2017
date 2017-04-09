@@ -144,3 +144,5 @@ file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forE
 #=====================================================================================
 
 print.numeric<-function(x, digits) { formatC(x, digits = digits, format = "f") }
+comma <- function(x, digits=0) { formatC(x, big.mark=",", digits, format = "f") }
+

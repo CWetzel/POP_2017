@@ -22,8 +22,10 @@
 # for the 2017 Pacific ocean perch assessment
 # =============================================================================
 
+
+print.numeric<-function(x, digits) { formatC(x, digits = digits, format = "f") }
 comma <- function(x, digits=0) { formatC(x, big.mark=",", digits, format = "f") }
-print.numeric  <- function(x, digits) { formatC(x, digits = digits, format = "f") }
+
 sb.dig = 0
 dep.dig = dig3 = 3
 dig1 = 1
@@ -488,9 +490,13 @@ align(Ref_pts_mod1.table) = c('l',
 # Will have to change the column names, caption, and the alignment
   
 mngmnt = read.csv('./txt_files/ESF_Exec_mngmt_performance.csv')
+find.yr = as.numeric(substring(mngmnt$Year, 7, 10))
+temp.manage = cbind(mngmnt, find.yr)
+mngmnt = temp.manage[temp.manage$find.yr < LastYR, -dim(temp.manage)[2]]
 
 # Add the total landings and totality mortality
-landings = totdead = "NA"
+totdead = print(aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch[mod1$catch$Yr>=2007,])$kill_bio,digits = 0)
+landings  = print(aggregate(Obs ~ Yr, FUN = sum, mod1$catch[mod1$catch$Yr>=2007,])$Obs, digits = 0)
 mngmnt = cbind(mngmnt, landings, totdead)
 
 colnames(mngmnt) = c('Year',
@@ -506,7 +512,7 @@ mngmnt.table = xtable(mngmnt,
                               landings (mt) relative to the management guidelines. 
                               Estimated total catch reflect the commercial landings 
                               plus the model estimated discarded biomass.'), 
-                      label='tab:mnmgt_perform', digits = dig1)  
+                      label='tab:mnmgt_perform')#, digits = dig1)  
 # Add alignment
 align(mngmnt.table) = c('l',
                         '>{\\raggedleft}p{0.5in}',
@@ -618,8 +624,15 @@ align(mngmnt.table) = c('l',
 
 # Collect the data from all the tables
 # Read in the management table that includs the managment history Landings, EstCatch, OFL, ACLs
-mngmt = read.csv('./txt_files/Exec_basemodel_summary.csv')
-mngmt = mngmt[,-1]
+#mngmt = read.csv('./txt_files/Exec_basemodel_summary.csv')
+#mngmt = mngmt[,-1]
+  mngmnt = read.csv('./txt_files/ESF_Exec_mngmt_performance.csv')
+  find.yr = as.numeric(substring(mngmnt$Year, 7, 10))
+  temp.manage = cbind(mngmnt, find.yr)
+  OFL = temp.manage$OFL[temp.manage$find.yr >= FirstYR & temp.manage$find.yr <= LastYR]
+  ACL = temp.manage$ACL[temp.manage$find.yr >= FirstYR & temp.manage$find.yr <= LastYR]
+  totdead = c( as.numeric(print(aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch[mod1$catch$Yr>= FirstYR,])$kill_bio,digits = 0)), NA)
+  landings  = c( as.numeric(print(aggregate(Obs ~ Yr, FUN = sum, mod1$catch[mod1$catch$Yr>= FirstYR,])$Obs, digits = 0)), NA)
     
 # Model 1
   # SPR ratio and exploitation
@@ -661,9 +674,10 @@ mngmt = mngmt[,-1]
 # CREATE TABLES BASED ON HOW MANY MODELS AND MANAGEMENT AREAS YOU HAVE
 
   # Bind data from all three models together
-  base_summary = cbind(mngmt,mod1_summary)
-  
-  base_summary1 = as.data.frame(cbind(mngmt,mod1_summary))
+  #base_summary = cbind(mngmt,mod1_summary)
+  base_summary = cbind(OFL, ACL, landings, totdead, mod1_summary)
+  base_summary1 = as.data.frame(cbind(OFL, ACL, landings, totdead, mod1_summary))
+  #base_summary1 = as.data.frame(cbind(mngmt,mod1_summary))
   
   # Transpose the dataframe to create the table and create data labels  
   base_summary = as.data.frame(t(base_summary1))
