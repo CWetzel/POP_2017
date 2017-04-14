@@ -460,25 +460,21 @@ assumptions of the early models were overly optimistic about productivity.
 Research surveys have been used to provide fishery-independent information about the abundance,
 distribution, and biological characteristics of `r spp`. A coast-wide survey of the rockfish
 resource was conducted in 1977 [@gunderson_distribution_1980] and was repeated every three years
-through 2004. The National Marine Fisheries Service (NMFS) coordinated a cooperative research survey
+through 2004 (referred to as the 'Triennial Survey'). The National Marine Fisheries Service (NMFS) coordinated a cooperative research survey
 of the `r spp` stocks off Washington and Oregon with the Washington Department of
 Fisheries (WDFW) and the Oregon Department of Fish and Wildlife (ODFW) in March-May 1979
-[@wilkins_condition_1983]. This survey was repeated in 1985. Two slope surveys have been conducted
-on the west coast in recent years, one using the research vessel Miller Freeman, which ended in 2001, and
+[@wilkins_condition_1983]. This survey was repeated in 1985 (referred to as the `r spp` Survey). Two slope surveys have been conducted
+on the West Coast in recent years, one using the research vessel Miller Freeman, which ended in 2001 (referred to as the 'AFSC Slope Survey'), and
 another ongoing cooperative survey using commercial fishing vessels which began in 1998 as a DTS
-(Dover sole, thornyhead and sablefish) survey, was expanded to other groundfish in 1999. In 2003, this
+(Dover sole, thornyhead and sablefish) survey, was expanded to other groundfish in 1999 (referred to as the 'NWFSC Slope Survey'). In 2003, this
 survey was expanded spatially to include the shelf. This last survey, conducted by the NWFSC, continues
-to cover depths from 30-700 fathoms (55-1280 meters) on an annual basis.
+to cover depths from 30-700 fathoms (55-1280 meters) on an annual basis (referred to as the 'NWFSC Slope/Shelf Survey').
 
 ##Map
 A map showing the scope of the assessment and depicting boundaries for fisheries or 
 data collection strata is provided in Figure \ref{fig:boundary_map}.
 
-##Life History
-\hl{Include: Important features of life history that affect management (e.g., migration, 
-sexual dimorphism, bathymetric demography).}
-
-##Ecosystem Considerations
+##Life History and Ecosystem Considerations
 \hl{Include: Ecosystem considerations (e.g., ecosystem role and trophic relationships of 
 the species, habitat requirements/preferences, relevant data on ecosystem processes 
 that may affect stock or parameters used in the stock assessment, and/or cross-FMP 
@@ -487,7 +483,6 @@ correlations or food web interactions were incorporated into the assessment mode
 The length and depth of this section would depend on availability of data and reports 
 from the IEA, expertise of the STAT, and whether ecosystem factors are informational 
 to contribute quantitative information to the assessment.}
-
 
 
 ##Fishery Information
@@ -653,42 +648,42 @@ _Model Region 1_
 \end{itemize}
 
 
-Length-at-age was initially estimated external to the population dynamics models 
+
+\vspace{.5cm}
+
+** Natural mortality **
+Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality of between 0.10 and 0.20yr^-1^ with a longevity
+less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural morality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_natural_mortality] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the developement of the prior where female natural moratility was set equal to `r mod1$MGparmAdj$NatM_p_1_Fem_GP_1` and male natural mortality estimated as an offset from females at `r round(mod1$MGparmAdj$NatM_p_1_Mal_GP_1,3)`.
+
+\vspace{.5cm}
+
+** Sex ratio, maturation, and fecundity **
+Examining all biological data sources, the sex ratio of young fish are within 5% of 1:1 by either length or age (Figure \ref{fig:sexratio} and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at birth was assumed to be 1:1.  This assessment assumed a logistic maturity-at-length curve based on analysis of 537 fish maturity samples collected from the NWFSC Slope/Shelf survey.  This is revised from the previous assessment which assumed maturity-at-age based on the work of Hannah and Parker [@hannah_age-modulated_2007].  Additionally, the new maturity-at-length curve is based on the estimate of functional maturity an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the
+measured frequency of atretic cells (M. Head, personal communication).  The 50% size-at-maturity was estimated at 32.1 cm with maturity asymptoting to one for larger fish.
+
+The fecundity-at-age has also been updated from the previous assessment based on new research.  Dick [-@dick_meta-analysis_2017] estimated new fecundity relationships for select West Coast stocks where fecundity for `r spp` was esimtated equal to `r mod1$MGparmAdj$Eggs_scalar_Fem`$L$^`r round(mod1$MGparmAdj$Eggs_exp_wt_Fem,2)`^ in millions of eggs. Spawning output at length is shown in Figure \ref{fig:fecundity}.
+
+\vspace{.5cm}
+
+** Length-weight relationship **
+The length-weight relationship for `r spp` was esimated outside the model using all biological data available from fishery and fishery-independant data sources where the female weight-at-length in grams was estimated at `r mod1$MGparmAdj$Wtlen_1_Fem`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Fem,2)`^ and males at `r mod1$MGparmAdj$Wtlen_1_Mal`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Mal, 2)`^ where $L$ is length in cm.
+
+
+\vspace{.5cm}
+
+** Growth (length-at-age) **
+\hl{Write if estiamted or fixed in the final model}
+
+\hl{Length-at-age was initially estimated external to the population dynamics models 
 using the von Bertalanffy growth curve, $L_i = L_{\infty}e^{(-k[t-t_0])}$, 
 where $L_i$ is the length (cm) at age $i$, $t$ is age in years, $k$ is rate of 
-increase in growth, $t_0$ is the intercept, and $L_{\infty}$ is the asymptotic length.  
-
+increase in growth, $t_0$ is the intercept, and $L_{\infty}$ is the asymptotic length.  }
 
 
 \vspace{.5cm}
 **Aging Precision And Bias**
 
 
-
-
-\vspace{.5cm}
-**Weight-Length**
-
-The weight-length relationship is based on the standard power function: 
-$W = \alpha(L^\beta)$ where $W$ is individual weight (kg), $L$ is length (cm), 
-and $\alpha$ and $\beta$ are coefficients used as constants.
-
-
-
-\vspace{.5cm}
-**Maturity And Fecundity**
-
-
-
-\vspace{.5cm}
-**Natural Mortality**
-
-Natural mortality for wild fish populations is extremely difficult to estimate.  
-
-
-
-\vspace{.5cm}
-**Sex ratios**
 
 
 
@@ -1913,7 +1908,7 @@ assessment team. Not required in draft assessment undergoing review.
     # Create the time series table
     Timeseries.table = xtable(Timeseries, 
                               caption = c('Time-series of population estimates 
-                                        from the base-case model.'),
+                                        from the base model.'),
                               label='tab:Timeseries_mod1',
                               digits = c(0,0,0,0,2,0,0,2,2))   
 
@@ -2195,12 +2190,14 @@ assessment team. Not required in draft assessment undergoing review.
 <!-- ********************************************************************** -->
 <!-- *****************Maturity and Fecundity FIGURES*********************** --> 
 <!-- ********************************************************************** -->
+![The estimated sex ratio of `r spp` at length from all biological data sources. \label{fig:sexratio}](Figures/allSexRatios.png)
+
+![The estimated sex ratio of `r spp` at age from all biological data sources. \label{fig:sexratio_Age}](Figures/allSexRatiosAge.png)
+
+![Fecundity at length of `r spp` in the `r mod1_label`. \label{fig:fecundity}](r4ss/plots_mod1/bio9_fecundity_len.png)
 
 
-
-
-
-
+\FloatBarrier
 
 <!-- ********************************************************************** -->
 <!-- **********************Age structure FIGURES*************************** --> 
