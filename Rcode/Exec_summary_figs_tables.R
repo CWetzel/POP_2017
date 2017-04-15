@@ -227,8 +227,7 @@ align(Exec_catch.table) = c('l', 'l',
 # Create Spawning/Depletion tables for the correct number of models
 # Model 1 table ---------------------------------------------------------------
 Spawn_Deplete_mod1.table = xtable(SpawnDepletemod1, 
-                           caption = c('Recent trend in estimated spawning output and relative
-                           spawning biomass.'), 
+                           caption = paste0('Recent trend in estimated spawning output (', fecund_unit, ') and relative spawning output.'), 
                            label='tab:SpawningDeplete_mod1')#, digits=2)  
 
 # Add column spacing    
@@ -264,7 +263,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   Recruityrs$lowerCI <- exp(log(Recruityrs$Value) + qnorm(0.025)*Recruityrs$logint)
   Recruityrs$upperCI <- exp(log(Recruityrs$Value) + qnorm(0.975)*Recruityrs$logint)
   
-  #Recruit_units <- "1,000s"
+  Recruit_units <- "millions"
   #if(mean(Recruityrs$Value) > 10000){
   #  Recruit_units <- "millions"
   #  Recruityrs$Value <- Recruityrs$Value/1000
@@ -556,10 +555,10 @@ align(mngmnt.table) = c('l',
       Bratio.fore = print(Bratio.fore, digits = 3)
       
       Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
-      colnames(Fore_Table) = c('Year','OFL', "ACL", "Spawning Biomass", "Relative Biomass") 
+      colnames(Fore_Table) = c('Year','OFL', "ACL", paste('Spawning Output (', fecund_unit, ')'), "Relative Biomass") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning biomass and relative biomass.'),
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.'),
                   label = 'tab:OFL_projection')
       
       # Add alignment
