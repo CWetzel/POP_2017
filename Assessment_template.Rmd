@@ -524,7 +524,7 @@ Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were com
 
 The NWFSC shelf-slope survey is based on a random-grid design; covering the coastal waters from a depth of 55 m to 1,280 m [@bradburn_2003_2011]. This design uses four chartered industry vessels in most years, assigned to a roughly equal number of randomly selected grid cells. The survey, which has been conducted from late-May to early-October each year, is divided into two 2-vessel passes of the coast, which are executed from north to south. This design therefore incorporates both vessel-to-vessel differences in catchability as well as variance associated with selecting a relatively small number (~700) of cells from a very large population of possible cells (greater than 11,000) distributed from the Mexican to the Canadian border. 
 
-The data from the NWFSC shelf-slope survey was analyzed using a spatial delta-generalized linear mixed model (delta-GLMM) [@Thorson_comparing_estimates]. Predicted fish biomass density is derived as the product of a "delta" portion for the probability of a non-zero catch and a second portion for the magnitude of the non-zero catches.  Further, the geostatistical GLMM framework can accommodate spatial autocorrelation.  Additional information about the approach and the software package it is implemented in are available from www.fishstats.org. \hl{describe VAST}
+The data from the NWFSC shelf-slope survey was analyzed using a spatial delta-generalized linear mixed model (delta-GLMM) [@thorson_comparing_2017]. Predicted fish biomass density is derived as the product of a "delta" portion for the probability of a non-zero catch and a second portion for the magnitude of the non-zero catches.  Further, the geostatistical GLMM framework can accommodate spatial autocorrelation.  Additional information about the approach and the software package it is implemented in are available from www.fishstats.org. \hl{describe VAST}
 
 The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.
 
@@ -621,7 +621,7 @@ _Model Region 1_
 **Natural mortality**
 
 Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality of between 0.10 and 0.20yr^-1^ with a longevity
-less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural morality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_natural_mortality] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the developement of the prior where female natural moratility was set equal to `r mod1$MGparmAdj$NatM_p_1_Fem_GP_1` and male natural mortality estimated as an offset from females at `r round(mod1$MGparmAdj$NatM_p_1_Mal_GP_1,3)`. 
+less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural morality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_evaluating_2015] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the developement of the prior where female natural moratility was set equal to `r mod1$MGparmAdj$NatM_p_1_Fem_GP_1` and male natural mortality estimated as an offset from females at `r round(mod1$MGparmAdj$NatM_p_1_Mal_GP_1,3)`. 
 
 \vspace{.5cm}
 
@@ -1293,7 +1293,6 @@ assessment team. Not required in draft assessment undergoing review.
             include.rownames=FALSE, 
             caption.placement='top',
             sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
       
 ```
 
@@ -1353,7 +1352,6 @@ assessment team. Not required in draft assessment undergoing review.
             include.rownames=FALSE, 
             caption.placement='top',
             sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
       
 ```
 
@@ -1382,8 +1380,7 @@ assessment team. Not required in draft assessment undergoing review.
             include.rownames=FALSE, 
             caption.placement='top',
             sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
-      
+
 ```
 
 
@@ -1411,7 +1408,6 @@ assessment team. Not required in draft assessment undergoing review.
             include.rownames=FALSE, 
             caption.placement='top',
             sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
       
 ```
 
@@ -1441,7 +1437,6 @@ assessment team. Not required in draft assessment undergoing review.
             include.rownames=FALSE, 
             caption.placement='top',
             sanitize.text.function = function(x){x})
-    # NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
       
 ```
 
@@ -1793,11 +1788,11 @@ assessment team. Not required in draft assessment undergoing review.
     SpawningByrs = SpawningB[SpawningB$LABEL >= paste('SPB_', Dat_start_mod1, sep='') &  
                              SpawningB$LABEL <= paste('SPB_', LastYR, sep=''), ] 
         
-        SpawningB_units = ''
-        if(mean(SpawningByrs$Value) > 1000000){
-            SpawningB_units <- "million"
-            SpawningByrs$Value <- SpawningByrs$Value/1000000
-         }
+        SpawningB_units = 'million'
+        #if(mean(SpawningByrs$Value) > 1000000){
+        #    SpawningB_units <- "million"
+        #    SpawningByrs$Value <- SpawningByrs$Value/1000000
+        # }
 
     
     # Depletion, extract, rename and subset
@@ -1875,13 +1870,60 @@ assessment team. Not required in draft assessment undergoing review.
  Timeseries[nrow(Timeseries), c((ncol(Timeseries) - 2):ncol(Timeseries))] <- NA
 ```
 
+```{r}
+    # WORKING TIME-SERIES TABLE TO INCORPORATE THE FORECAST PERIOD
+    
+    Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
+    Bio_all = mod1$timeseries$Bio_all[mod1$timeseries$Yr >= Dat_start_mod1]
+    SpawningB = as.numeric(print( mod1$timeseries$SpawnBio[mod1$timeseries$Yr >= Dat_start_mod1], digits = 0))
+    SummaryBio = mod1$timeseries$Bio_smry[mod1$timeseries$Yr >= Dat_start_mod1]
+    Depletion = print(SpawningB / SpawningB[1], digits = 2)
+    Recruits = print(mod1$timeseries$Recruit_0[mod1$timeseries$Yr >= Dat_start_mod1], digits =0 )
+    
+
+    Tot.Mortality = aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch)$kill_bio
+    SPR = print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$LABEL), 'Value'],digits = 2)
+    SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
+    Exploited = c( print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 2), rep("-", Project_lastyr-LastYR))
+
+    Tot.Mortality = c( print(Tot.Mortality, 1), rep("-", Project_lastyr-LastYR))
+  
+  
+    # Bind all the columns together for the table
+    Timeseries = data.frame(Year, 
+                             Bio_all, 
+                             SpawningB,
+                             SummaryBio,
+                             Depletion, 
+                             Recruits,
+                             Tot.Mortality,
+                             SPR,
+                             Exploited)
+
+ # Add colulmn names    
+ colnames(Timeseries)=c('Year', 
+                        'Total biomass (mt)', 
+                        'Spawning output (million eggs) (mt)',
+                        paste('Summary biomass', min_age),
+                        'Relative biomass', 
+                        'Age-0 recruits', 
+                        'Total catch (mt)',
+                        '1-SPR',
+                        'Relative exploitation rate')
+ 
+ # Make year a factor so you don't have a decimal   
+ Timeseries$Year = as.factor(Timeseries$Year)
+    
+```
+
+
+
 ```{r, results='asis'}
     # Create the time series table
     Timeseries.table = xtable(Timeseries, 
-                              caption = c('Time-series of population estimates 
-                                        from the base model.'),
+                              caption = c('Time-series of population estimates from the base model.'),
                               label='tab:Timeseries_mod1',
-                              digits = c(0,0,0,0,2,0,0,2,2))   
+                              digits = c(0,0,0,0,2,0,0,2,2,2))   
 
     # Add alignment
     align(Timeseries.table) = c('l',
@@ -1890,8 +1932,10 @@ assessment team. Not required in draft assessment undergoing review.
                                 '>{\\centering}p{.6in}',
                                 '>{\\centering}p{.6in}',
                                 '>{\\centering}p{.6in}',
-                                '>{\\centering}p{.8in}',
-                                '>{\\centering}p{.8in}',
+                                '>{\\centering}p{.6in}',
+                                '>{\\centering}p{.6in}',
+                                '>{\\centering}p{.6in}',
+                                #'>{\\centering}p{.5in}')
                                 'c')
 
     # Print timeseries of population estimates table

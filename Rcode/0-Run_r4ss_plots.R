@@ -139,6 +139,16 @@ for (i in 1:length(files)){
 file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv", 
           paste0(getwd(), "/txt_files"), overwrite = TRUE)
 
+# Copy and move figures from assessment folder
+figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/allSexRatiosAge.png",
+            "C:/Assessments/POP2017/Data/Discards/plots/discardLengthComps.png")
+
+for (i in 1:length(figures)){
+  file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)
+}
+
+
 #=====================================================================================
 # SECTION 4: Functions
 #=====================================================================================
