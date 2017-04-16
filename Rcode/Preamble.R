@@ -42,6 +42,9 @@ mod1_label = "Base model"
 MT   = 0.4   # management target; .4 for rockfish
 MSST = 0.25  # minimum stock size threshold; 0.25 for rockfish
 
+# Set if males are estimated as an offset to females
+parm.offset = TRUE
+
 # -----------------------------------------------------------------------------
 # Fecundity relationship
 # whether spawning output is billions of eggs (fecundity relationship on) or 
