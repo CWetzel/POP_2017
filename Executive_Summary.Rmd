@@ -1,0 +1,352 @@
+
+#Executive Summary{-}
+
+##Stock{-}
+This assessment reports the status of the `r spp` (\emph{`r spp.sci`}) speciess off rockfish
+off the U.S. West Coast from Northern California to the Canadian Border using data 
+through `r LastYR`.  `r spp` are most abundant in the Gulf of Alaska and have observed off of Japan, in the Bering Sea, and south to Baja California,
+although they are sparse south of Oregon and rare in southern California. \hl{Composition data indicate that
+good recruitment years coincide in Oregon and Washington.} To date, no significant genetic differences have
+been found in the range covered by this assessment.
+
+
+##Landings{-}
+The first year that harvest of `r spp` exceeded 1 mt off the U.S. West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year. `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.
+
+
+<!-- Catch table:                 (Table \ref{tab:Exec_catch})
+
+Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3})  -->  
+
+<!-- ***********CATCH TABLE************************************************ -->
+```{r, results='asis'}
+    #CSV: './txt_files/Exec_catch_summary.csv'
+    # Catch table section in R_exec_summary_fig_tables.R
+    # Print the table
+    print(Exec_catch.table, include.rownames = FALSE, caption.placement = 'top')
+```
+<!-- ***********END EXECUTIVE SUMMARY CATCH FIGURES AND TABLES************* -->
+
+
+
+\FloatBarrier
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY CATCH FIGURES AND TABLES*********** -->
+<!-- ***********Edit the Plot_catch tables and captions******************** -->
+<!-- ***********This depends on how many plots you need******************** -->
+<!-- ***********Also included is the r4SS plot - keep or remove************ -->
+<!-- ***********CATCH FIGURES********************************************** -->
+```{r, fig.cap= paste('Landings of' ,spp, 'for California, Oregon, Washington, the Foriegn fishery (1966-1976), At-Sea Hake fishery, and fishery independent surveys. \\label{fig:Exec_catch1}',sep=' ')}
+    # CSV: './txt_files/Exec_catch_for_figs.csv'
+    # Note: you cannot have carriage returns in the R options line
+    # Plot washington catches           
+    Plot_catch(Catch_df = Exec_region1_catch)
+
+```
+
+
+<!--\FloatBarrier
+
+![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch1 landings.png)-->
+
+<!--\FloatBarrier
+
+
+\newpage -->
+
+##Data and Assessment{-}
+This a new full assessment for `r spp` which was last assessed in 2011.  In this assessment, all aspects of the model including catches, data, and modelling assumptions were re-evaluated as much as possible. The assessment was conducted using the length- and age-structured modeling software Stock Synthesis (version 3.30).  The coastwide population was modeled assuming separate growth and mortality parameters for each sex (a two-sex model) from `r Dat_start_mod1` to `r LastYR`, and forecasted beyond `r LastYR`.
+
+
+<!--Map of assessment region: (Figure \ref{fig:assess_region_map}).  
+ 
+![Map depicting the boundaries for the base-case model.  \label{fig:assess_region_map}](Figures/assess_region_map.png) -->
+
+\FloatBarrier
+
+
+##Stock Biomass{-}
+\hl{Include: trends and current levels relative to virgin or historic levels, 
+description of uncertainty-include table for last 10 years and graph with 
+long term estimates.}
+
+Spawning output Figure:    Figure \ref{fig:Spawnbio_all}     
+Spawning output Table(s):  Table \ref{tab:SpawningDeplete_mod1}     
+Relative depletion Figure: Figure \ref{fig:RelDeplete_all}     
+
+
+Example text (remove Models 2 and 3 if not needed - if using, remove the # in-line comments!!!)      
+The estimated relative depletion level (spawning output relative to unfished 
+spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1` 
+(~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`) (Figure \ref{fig:RelDeplete_all}).
+
+
+\FloatBarrier
+
+
+<!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
+```{r, results='asis'}
+    # Print spawning biomass table(s)
+    print(Spawn_Deplete_mod1.table, include.rownames = FALSE, caption.placement = 'top')
+
+    # Select which file to use for the recuitment figure, depending on if you have one model or multiple models
+    spawn.file  = ifelse(fecund=='numbers',
+                           'r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png',
+                           'r4ss/plots_mod1/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png')
+    Bratio.file = 'r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png' 
+
+```
+
+\FloatBarrier
+
+
+![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base case assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
+
+
+![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
+
+
+
+<!-- ***********END  EXECUTIVE SUMMARY SPAWNING BIOMASS AND**************** -->
+<!-- ***********DEPLETION TABLES AND FIGURES******************************* -->
+
+\FloatBarrier
+
+
+
+##Recruitment{-}
+\hl{Include: trends and current levels relative to virgin or historic levels-include 
+table for last 10 years and graph with long term estimates.}
+
+Recruitment Figure: (Figure \ref{fig:Recruits_all})     
+Recruitment Tables: (Tables \ref{tab:Recruit_mod1})
+
+
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY RECRUITMENT TABLES AND FIGURES***** -->
+```{r, results='asis'}
+   print(Recruit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
+   recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
+  
+```
+
+\FloatBarrier
+
+![Time series of estimated `r spp` recruitments for the base-case model with 95\% confidence or credibility intervals. \label{fig:Recruits_all}](`r recruit.file`)
+
+<!-- ***********END EXECUTIVE SUMMARY RECRUITMENT TABLEs AND FIGURES******* -->
+
+ \FloatBarrier
+
+
+
+##Exploitation status{-}
+\hl{Include: exploitation rates (i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate) – include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).}
+
+
+Exploitation Tables: Table \ref{tab:SPR_Exploit_mod1}, Table \ref{tab:SPR_Exploit_mod2}, Table \ref{tab:SPR_Exploit_mod3}
+Exploitation Figure: Figure \ref{fig:SPR_all}). 
+
+A summary of `r spp` exploitation histories for base model is provided as Figure \ref{fig:Phase_all}.
+
+
+\FloatBarrier
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY EXPLOITATION AND******************* -->
+<!-- ***********SPRratio TABLE AND FIGURES********************************* -->
+```{r, results='asis'}
+   # Print exploitation and SPRratio tables depending on how many models there are
+     print(SPRratio_Exploit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
+
+   # select the files for the SPR and phase plots depending on the number of models
+     SPR.file   = 'r4ss/plots_mod1/SPR3_ratiointerval.png'
+     Phase.file = 'r4ss/plots_mod1/SPR4_phase.png' 
+```
+
+\FloatBarrier
+
+![Estimated spawning potential ratio (SPR) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{50\%} harvest rate. The last year in the time series is `r Dat_end_mod1`. \label{fig:SPR_all}](`r SPR.file`)
+
+
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 50\% (the SPR target). Relative depletion is the annual spawning biomass divided by the unfished spawning biomass. \label{fig:Phase_all}](`r Phase.file`)
+
+<!-- ************END EXECUTIVE SUMMARY EXPLOITATION************************ -->
+<!-- ************AND SPRratio TABLE AND FIGURES**************************** -->
+
+\FloatBarrier
+
+
+
+
+##Ecosystem Considerations{-}
+In this assessment, ecosystem considerations were.....
+
+
+
+
+##Reference Points{-}
+\hl{Include:} management targets and definition of overfishing, including the harvest 
+rate that brings the stock to equilibrium at $B_{40\%}$ (the $B_{MSY}$ proxy) and 
+the equilibrium stock size that results from fishing at the default harvest rate 
+(the $F_{MSY}$ proxy). Include a summary table that compares estimated reference 
+points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, 
+SPRproxy for MSY, and estimated MSY values
+
+\hl{Write intro paragraph}
+
+This stock assessment estimates that `r spp` in the `r mod1_label` are 
+`r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the biomass 
+target, but `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MSST>0,"above","below")` 
+the minimum stock size threshold.  \hl{Add sentence about spawning output trend.} 
+The estimated relative depletion level for \hl{Model 1} in `r LastYR` is 
+`r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`, corresponding 
+to an unfished spawning output of `r paste(Spawn_mod1, fecund_unit,sep=' ')` 
+(~95% asymptotic interval: `r paste(Spawn_mod1_CI, fecund_unit, sep=' ')`) of 
+spawning output in the base model (Table \ref{tab:Ref_pts_mod1}).  Unfished 
+age `r min_age` biomass was estimated to be `r Ref_pts_mod1[2,2]` mt in the 
+base case model. The target spawning output based on the biomass target 
+($SB_{40\%}$) is `r paste(Ref_pts_mod1[7,2], fecund_unit,sep=' ')`, which gives 
+a catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
+harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.
+
+
+\FloatBarrier
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY REFERENCE POINT TABLES************* -->
+```{r, results='asis'}
+   # Print reference point tables
+     print(Ref_pts_mod1.table, include.rownames = FALSE, caption.placement = 'top',
+           sanitize.text.function = function(x){x})
+```
+<!-- ***********END EXECUTIVE SUMMARY REFERENCE POINT TABLES*************** --> 
+
+\FloatBarrier
+
+
+
+
+##Management Performance{-}
+\hl{Include: catches in comparison to OFL, ABC and OY/ACL values for the most 
+recent 10 years (when available), overfishing levels, actual catch and discard. 
+Include OFL(encountered), OFL(retained) and OFL(dead) if different due to discard 
+and discard mortality.}     
+
+Management performance table: Table \ref{tab:mnmgt_perform}
+
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE******* --> 
+```{r, results='asis'}
+    # Print management performance table - will have to edit the text file and 
+    # R code for this table
+    # Edit file: './txt_files/Exec_mngmt_performance.csv'
+    print(mngmnt.table, include.rownames = FALSE, caption.placement = 'top', 
+          sanitize.text.function = function(x){x}, scalebox = .9)
+```
+<!-- ***********END EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE********* -->
+
+
+
+
+##Unresolved Problems And Major Uncertainties{-}
+   TBD after STAR panel
+
+\FloatBarrier
+
+
+
+
+##Decision Table(s) (groundfish only){-}    
+\hl{Include: projected yields (OFL, ABC and ACL), spawning biomass, and stock 
+depletion levels for each year. Not required in draft assessments undergoing review.}
+    
+OFL projection table: Table \ref{tab:OFL_projection}    
+
+Decision table(s) Table \ref{tab:Decision_table_mod1}, 
+                  Table \ref{tab:Decision_table_mod2}, 
+                  Table \ref{tab:Decision_table_mod3}
+ 
+    Yield curve: Figure \ref{fig:Yield_all}
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY OFL AND DECISION TABLES************ -->
+```{r, results='asis'}   
+    # Print OFL table 
+      print(OFL.table, include.rownames = FALSE, caption.placement = 'top')
+
+   # Decision tables currently read in as txt files and will need to be changed
+   # Decision table text set up for alternate states of natural mortality, but 
+   # the text can be changed in the Decision Table section of the R file, 
+   # R_exec_summary_figs_tables.R
+   # Edit text file(s): ./txt_files/DecisionTable_mod1 ,  
+   # ./txt_files/DecisionTable_mod1 , and
+   # ./txt_files/DecisionTable_mod3
+    # print Model 1 decision table
+    print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
+          caption.placement = 'top', 
+          hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod1.table)), 
+          scalebox = .85)
+```
+<!-- ***********END EXECUTIVE SUMMARY OFL AND DECISION TABLES************** -->
+
+
+
+<!-- ***********BEGIN EXECUTIVE SUMMARY RESULTS SUMMARY TABLE --> 
+```{r, results='asis'}
+   # Print the results summary table, will have to edit the R code and input file 
+   # depending on the stock structure
+   # Edit file: ./txt_files/Exec_basemodel_summary.csv and the Summary Results 
+   # section in R code R_exec_summary_figs_tables.R
+
+ print(base_summary.table, 
+       include.rownames = FALSE, 
+       caption.placement = 'top',
+       floating.environment = 'sidewaystable', 
+       sanitize.text.function = function(x){x}, 
+       scalebox = .6, 
+       align = TRUE, 
+       hline.after = c(-1, 0, 4, 5, 7, 9, 11, nrow(base_summary.table)))
+```
+
+<!-- ***********Yield curve table****************************************** -->
+```{r, results='asis'}
+   # Select the file to use for the yield curve depending on the number of models
+     yield.file  = 'r4ss/plots_mod1/yield1_yield_curve.png'
+    
+```
+<!-- ***********Edit caption based on fixed params************************* -->
+
+![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at... \label{fig:Yield_all}](`r yield.file`)
+
+<!-- ***********END EXECUTIVE SUMMARY RESULTS SUMMARY TABLE AND YIELD CURVE -->
+
+\FloatBarrier
+
+\newpage
+
+##Research And Data Needs{-}
+\hl{Include: identify information gaps that seriously impede the stock assessment.}    
+
+We recommend the following research be conducted before the next assessment:
+
+\begin{enumerate}
+
+\item List item No. 1 in the list
+
+\item List item No. 2 in the list, etc.
+
+\end{enumerate}
+
+##Rebuilding Projections{-}
+\hl{Include: reference to the principal results from rebuilding analysis if the 
+stock is overfished. This section should be included in the Final/SAFE version 
+assessment document but is not required for draft assessments undergoing review. 
+See Rebuilding Analysis terms of reference for detailed information on 
+rebuilding analysis requirements.}
+
+\FloatBarrier
+
+<!--************RESET FIGURE & TABLE NUMBERS FOR THE DOCUMENT'S MAIN BODY** -->
+\newpage
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
