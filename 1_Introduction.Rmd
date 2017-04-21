@@ -3,45 +3,15 @@
 #Introduction
   
 ##Basic Information
-`r spp` (\emph{`r spp.sci`}) are most abundant in the Gulf of Alaska, and have been
-observed off of Japan, in the Bering Sea, and south to Baja California, although they are sparse south of
-Oregon and rare in southern California. While genetic studies have found three populations of `r spp` off of
-British Columbia [@seeb_genetic_1988; @withler_co-existing_2001] with, notably, a separate stock off of Vancouver Island, no
-significant genetic differences have been found in the range covered by this assessment. `r spp`
-show dimorphic growth, with females reaching a slightly large size than males. Males and females
-are equally abundant on rearing grounds at age 1.5.
+`r spp` (\emph{`r spp.sci`}) are most abundant in the Gulf of Alaska, and have been observed off of Japan, in the Bering Sea, and south to Baja California, although they are sparse south of Oregon and rare in southern California. While genetic studies have found three populations of `r spp` off of British Columbia [@seeb_genetic_1988; @withler_co-existing_2001] with, notably, a separate stock off of Vancouver Island, no significant genetic differences have been found in the range covered by this assessment. `r spp` show dimorphic growth, with females reaching a slightly large size than males. Males and females are equally abundant on rearing grounds at age 1.5.
 
-The `r spp` population has been modeled as a single stock off of the U.S. West Coast
-(essentially northern California to the Canadian border, since `r spp` are seen extremely
-  rarely in central and southern California). Good recruitments show up in size-composition data
-throughout all portions of this area, which supports the single stock hypothesis. This assessment includes
-landings and catch data for `r spp` from the states of Washington, Oregon and California,
-along with records from foreign fisheries, the at-sea hake fleet, and surveys.
+The `r spp` population has been modeled as a single stock off of the U.S. West Coast (essentially northern California to the Canadian border, since `r spp` are seen extremely rarely in central and southern California). Good recruitments show up in size-composition data throughout all portions of this area, which supports the single stock hypothesis. This assessment includes landings and catch data for `r spp` from the states of Washington, Oregon and California, along with records from foreign fisheries, the at-sea hake fleet, and surveys.
 
-Prior to 1966, the `r spp` resource off of the northern portion of the U.S. West Coast was
-harvested almost entirely by Canadian and United States vessels. Harvest was negligible prior to 1940,
-reached 1,300 mt in 1950, 3,200 mt in 1961 and exceeded 7,600 mt in 1965. Catches increased
-dramatically after 1965, with the introduction of large distant-water fishing fleets from the Soviet Union
-and Japan. Both nations employed large factory stern trawlers as their primary method for harvesting
-Pacific ocean perch. Peak removals by all foreign nations combined are estimated at over 15,000 mt in
-1966 and remained over 12,000 mt in 1967. These numbers are based upon a re-analysis of the foreign
-catch data [@rogers_species_2003], which focused on deriving a more realistic species composition for catches
-previously identified only as `r spp`. Catches declined rapidly following these peak years,
-and `r spp` stocks were considered to be severely depleted throughout the Oregon-Vancouver Island region by 1969 
-[@gunderson_population_1977; @gunderson_status_1977]. Landed harvest averaged 1,350 mt over the period 1977-94. 
-Landings have continued to decline since 1994, primarily due to more restrictive management.
+Prior to 1966, the `r spp` resource off of the northern portion of the U.S. West Coast was harvested almost entirely by Canadian and United States vessels. Harvest was negligible prior to 1940, reached 1,300 mt in 1950, 3,200 mt in 1961 and exceeded 7,600 mt in 1965. Catches increased dramatically after 1965, with the introduction of large distant-water fishing fleets from the Soviet Union and Japan. Both nations employed large factory stern trawlers as their primary method for harvesting Pacific ocean perch. Peak removals by all foreign nations combined are estimated at over 15,000 mt in 1966 and remained over 12,000 mt in 1967. These numbers are based upon a re-analysis of the foreign catch data [@rogers_species_2003], which focused on deriving a more realistic species composition for catches previously identified only as `r spp`. Catches declined rapidly following these peak years, and `r spp` stocks were considered to be severely depleted throughout the Oregon-Vancouver Island region by 1969  [@gunderson_population_1977; @gunderson_status_1977]. Landed harvest averaged 1,350 mt over the period 1977-94.  Landings have continued to decline since 1994, primarily due to more restrictive management.
 
 Prior to 1977, `r spp` in the northeast Pacific were managed by the Canadian Government in its waters and by the individual states in waters off of the United States. With implementation of the Magnuson Fishery Conservation and Management Act (MFCMA) in 1977, U.S. territorial waters were extended to 200 miles from shore, and primary responsibility for management of the groundfish stocks off Washington, Oregon and California shifted from the states to the Pacific Fishery Management Council (PFMC) and the National Marine Fisheries Service (NMFS). At that time, however, a Fishery Management Plan (FMP) for the west coast groundfish stocks had not yet been approved. In the interim, the state agencies worked with the PFMC to address conservation issues. In 1981, the PFMC adopted a management strategy to rebuild the depleted Pacific ocean perch stocks to levels that would produce Maximum Sustainable Yield (MSY) within 20 years. On the basis of cohort analysis [@gunderson_results_1978],  the PFMC set Acceptable Biological Catch (ABC) levels at 600 mt for the US portion of the Vancouver INPFC area and 950 mt for the Columbia INPFC area. To implement this strategy, the states of Oregon and Washington each established landing limits for Pacific ocean perch. Trawl trip limits of various forms remained in effect through 2010 (Table \ref{tab:Regs}).
 
 Age estimates for `r spp` prior to the 1980s were made via surface ageing of otoliths, which misses the very tight annuli at the edge of the otolith once the fish reaches near maximum size. Ages are biased by around age 10-12, and maximum age was estimated to be in the 20s, which lead to an overestimate of the natural mortality rate and the productivity of the stock. Using break and burn methods, `r spp` have been aged to over 100 years, and we now know that the underlying assumptions of the early models were overly optimistic about productivity. Research surveys have been used to provide fishery-independent information about the abundance, distribution, and biological characteristics of `r spp`. A coast-wide survey of the rockfish resource was conducted in 1977 [@gunderson_distribution_1980] and was repeated every three years through 2004 (referred to as the 'Triennial Survey'). The National Marine Fisheries Service (NMFS) coordinated a cooperative research survey of the `r spp` stocks off Washington and Oregon with the Washington Department of Fisheries (WDFW) and the Oregon Department of Fish and Wildlife (ODFW) in March-May 1979 [@wilkins_condition_1983]. This survey was repeated in 1985 (referred to as the `r spp` Survey). Two slope surveys have been conducted on the West Coast in recent years, one using the research vessel Miller Freeman, which ended in 2001 (referred to as the 'AFSC Slope Survey'), and another ongoing cooperative survey using commercial fishing vessels which began in 1998 as a DTS (Dover sole, thornyhead and sablefish) survey, was expanded to other groundfish in 1999 (referred to as the 'NWFSC Slope Survey'). In 2003, this survey was expanded spatially to include the shelf. This last survey, conducted by the NWFSC, continues to cover depths from 30-700 fathoms (55-1280 meters) on an annual basis (referred to as the 'NWFSC shelf-slope Survey').
-
-
-##Life History and Ecosystem Considerations
-\hl{Include: Ecosystem considerations (e.g., ecosystem role and trophic relationships of  the species, habitat requirements/preferences, relevant data on ecosystem processes  that may affect stock or parameters used in the stock assessment, and/or cross-FMP  interactions with other fisheries). This section should note if environmental  correlations or food web interactions were incorporated into the assessment model.  The length and depth of this section would depend on availability of data and reports  from the IEA, expertise of the STAT, and whether ecosystem factors are informational  to contribute quantitative information to the assessment.}
-
-
-##Fishery Information
-\hl{Include: Important features of current fishery and relevant history of fishery.}
 
 
 
@@ -49,9 +19,7 @@ Age estimates for `r spp` prior to the 1980s were made via surface ageing of oto
 \hl{Include: Summary of management history (e.g., changes in mesh sizes, trip 
                                             limits, or other management actions that may have significantly altered selection, 
                                             catch rates, or discards).}
-
-
-##Management Performance
+                                            
 \hl{Include: Management performance, including a table or tables comparing 
   Overfishing Limit (OFL), Annual Catch Limit (ACL), Harvest Guideline (HG) 
   [CPS only], landings, and catch (i.e., landings plus discard) for each area and year.}
@@ -62,4 +30,4 @@ in Table \ref{tab:base_summary}.
 
 
 ##Fisheries off Canada, Alaska, and/or Mexico
-Include if necessary.
+`r spp` can be found in waters off the US west coast and northward through Alaskan waters.  The subset of the stock off the US west coast represents the tail of the species distribution with little to no `r spp` being encountered south of northern California.  `r spp` are harvested both in Canada and Alaska.  The most recent updated assessments for the Bering Sea and the Gulf of Alaska stocks determined that neither stock are in an overfished state and recommended and acceptable biological catch of 43,723 mt and 23,918 mt, respectively, for 2017. \hl{Insert information about the Canadian stock}  
