@@ -11,12 +11,42 @@
 <!-- ********************** History of Regulations ************************ --> 
 <!-- ********************************************************************** --> 
 ```{r, results = 'asis'}
- Regs = read.csv('./txt_files/Regulations.csv')
+
+ b = c(1, 21, 54, 90, 123, 160, 172)
+ Full.Regs = read.csv('./txt_files/Regulations.csv')
+ Regs = Full.Regs[b[1]:b[2],]
 
  Regs.table  = xtable(Regs, 
                       caption = c('West Coast history of regulations.'),                                                   
                      label = 'tab:Regs',
                       digits = 0)    
+
+# Add alignment  
+align(Regs.table) = c('lp',
+                       '>{\\centering}p{.60in}',
+                       '>{\\centering}p{1.0in}',
+                       '>{\\raggedright}p{4.20in}')
+
+
+print(Regs.table,
+      include.rownames=FALSE,
+      caption.placement='top',
+      size="\\fontsize{9pt}{10pt}\\selectfont",
+      sanitize.text.function = function(x){x})
+
+
+#Print regulations table
+#print(Regs.table, 
+#      include.rownames = FALSE, 
+#      caption.placement = 'top',
+#      tabular.environment = 'longtable', 
+#       align=TRUE, 
+#      floating = FALSE, 
+#      add.to.row = list(pos = list(0), 
+#                        command = '\\hline \\endhead '))
+
+ Regs = Full.Regs[(b[2]+1):b[3],]
+ Regs.table  = xtable(Regs, digits = 0)    
 
 # Add alignment  
 align(Regs.table) = c('lp', #'lccl')
@@ -28,17 +58,56 @@ align(Regs.table) = c('lp', #'lccl')
 print(Regs.table,
       include.rownames=FALSE,
       caption.placement='top',
+      size="\\fontsize{9pt}{10pt}\\selectfont",
       sanitize.text.function = function(x){x})
 
-#Print regulations table
-#print(Regs.table, 
-#      include.rownames = FALSE, 
-#      caption.placement = 'top',
-#      tabular.environment = 'longtable', 
-#       align=TRUE, 
-#      floating = FALSE, 
-#      add.to.row = list(pos = list(0), 
-#                        command = '\\hline \\endhead '))
+
+ Regs = Full.Regs[(b[3]+1):b[4],]
+ Regs.table  = xtable(Regs, digits = 0)    
+
+# Add alignment  
+align(Regs.table) = c('lp',
+                       '>{\\centering}p{.75in}',
+                       '>{\\centering}p{.75in}',
+                       '>{\\raggedright}p{4.25in}')
+
+print(Regs.table,
+      include.rownames=FALSE,
+      caption.placement='top',
+      size="\\fontsize{9pt}{10pt}\\selectfont",
+      sanitize.text.function = function(x){x})
+
+Regs = Full.Regs[(b[5]+1):b[6],]
+Regs.table  = xtable(Regs, digits = 0) 
+
+# Add alignment  
+align(Regs.table) = c('lp',
+                       '>{\\centering}p{.75in}',
+                       '>{\\centering}p{.75in}',
+                       '>{\\raggedright}p{4.25in}')
+
+
+print(Regs.table,
+      include.rownames=FALSE,
+      caption.placement='top',
+      size="\\fontsize{9pt}{10pt}\\selectfont",
+      sanitize.text.function = function(x){x})
+
+Regs = Full.Regs[(b[6]+1):b[7],]
+Regs.table  = xtable(Regs, digits = 0) 
+
+# Add alignment  
+align(Regs.table) = c('lp',
+                       '>{\\centering}p{.75in}',
+                       '>{\\centering}p{.75in}',
+                       '>{\\raggedright}p{4.25in}')
+
+
+print(Regs.table,
+      include.rownames=FALSE,
+      caption.placement='top',
+      size="\\fontsize{9pt}{10pt}\\selectfont",
+      sanitize.text.function = function(x){x})
 
 ```
 
@@ -172,15 +241,12 @@ print(Catch_AllYrs,
 <!-- ********************************************************************** --> 
   
 ```{r, results = 'asis'}
-#Index_summary = read.csv('./txt_files/Index_summary.csv')
-# Pull in model values from mod1
+
 Discard = cbind(mod1$discard$Yr, 
-                c(rep("Pikitch",2), rep("WCGOP", length(mod1$discard$Yr)-2)),
+                c(rep("Pikitch",3), "Management Restrictions",rep("WCGOP", length(mod1$discard$Yr)-4)),
                 print(mod1$discard$Obs, digits = 3), 
                 print(mod1$discard$Std_in, digits = 3))
-# Change years for Pikitch periods
-#discards[2,1] = paste0(discards[1,1]+1, "-", discards[2,1] )
-#discards[1,1] = paste0(mod1$startyr,"-", discards[1,1])
+
 colnames(Discard) = c('Year',
                       'Source',
                       'Discard',
@@ -194,7 +260,7 @@ Discard.table = xtable(Discard,
 # Add alignment  
 align(Discard.table) = c('l',
                          '>{\\centering}p{.75in}',
-                         '>{\\centering}p{.75in}',
+                         '>{\\centering}p{1.1in}',
                          '>{\\centering}p{.75in}',
                          '>{\\centering}p{1.1in}')  
 
