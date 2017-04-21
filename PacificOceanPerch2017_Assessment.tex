@@ -79,6 +79,7 @@ coast in 2017}
 \usepackage{tabularx}                                             % table environment providing flexibility
 \usepackage{caption}                                              % for creating captions  
 \usepackage{longtable}                                            % allows tables to span multiple pages
+\usepackage{tabu}
 \usepackage{rotating}                                             % allows for sideways tables
 %\usepackage{float}                                                % floating environments; may not need in rmarkdown
 \usepackage{placeins}                                             % keeps floats from moving
@@ -1509,6 +1510,190 @@ undergoing review.
 
 \begin{table}[ht]
 \centering
+\caption{West Coast history of regulations.} 
+\label{tab:Regs}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\raggedright}p{4.25in}}
+  \hline
+Date & Area & Regulation \\ 
+  \hline
+11/10/1983 &  Columbia  &  Closed Columbia area to Pacific ocean perch fishing until the end of the year, as 950 mt OY for this species has been reached;  \\ 
+  11/10/1983 &  Vancouver  &  retained 5,000-pound trip limit or 10\% of total trip weight on landings of Pacific ocean perch in the Vancouver area.  \\ 
+  1/1/1984 &  ALL  &  Continued 5,000-pound trip limit or 10\% of total trip weight on Pacific ocean perch as specified in FMP. Fishery to close when area OYs are reached (see action effective November 10, 1983 above).  \\ 
+  8/1/1984 &  Vancouver Columbia  &  Reduced trip limit for Pacific ocean perch in the Vancouver and Columbia areas to 20\% by weight of all fish on board, not to exceed 5,000 pounds per vessel per trip. \\ 
+  8/16/1984 &  Columbia  &  Commercial fishing for Pacific ocean perch in the Columbia area closed for remainder of the year. \\ 
+  1/10/1985 &  Vancouver Columbia  &  Established Vancouver and Columbia areas Pacific ocean perch trip limit of 20\% by weight of all fish on board (no 5,000-pound limit as specified in last half of 1984). \\ 
+  4/28/1985 &  Vancouver Columbia  &  Reduced the Vancouver and Columbia areas Pacific ocean perch trip limit to 5,000 pounds or 20\% by weight of all fish on board, whichever is less.  \\ 
+  4/28/1985 &  ALL  &  Landings of Pacific ocean perch less than 1,000 pounds will be unrestricted. The fishery for this species will close when the OY in each area is reached. \\ 
+  6/10/1985 &  ALL  &   Landings of Pacific ocean perch up to 1,000 pounds per trip will be unrestricted regardless of the percentage of these fish on board.  \\ 
+  1/1/1986 &  Cape Blanco North  &  Established the Pacific ocean perch trip limit north of Cape Blanco (4250) at 20\% (by weight) of all fish on board or 10,000 pounds whichever is less;  \\ 
+  1/1/1986 &  ALL  &  landings of Pacific ocean perch unrestricted if less than 1,000 pounds regardless of percentage on board; Vancouver area OY = 600 mt; Columbia area OY =950 mt.  \\ 
+  12/1/1986 &  Vancouver  &  OY quota for Pacific ocean perch reached in the Vancouver area; fishery closed until January 1, 1987.  \\ 
+  1/1/1987 &  ALL  &  Established coastwide Pacific ocean perch limit at 20\% of all legal fish on board or 5,000 pounds whichever is less (in round weight); landings of Pacific ocean perch unrestricted if less than 1,000 pounds regardless of percentage on board; Vancouver area OY =500 mt; Columbia area OY = 800 mt.  \\ 
+  1/1/1988 &  ALL  &  Established the coastwide Pacific ocean perch trip limit at 20\% (by weight) of all fish on board or 5,000 pounds, whichever is less; landings of Pacific ocean perch unrestricted if less than 1,000 pounds regardless of percentage on board;  \\ 
+  1/1/1989 &  ALL  &  Established the coastwide Pacific ocean perch trip limit at 20\% (by weight) of all fish on board or 5,000 pounds whichever is less;  \\ 
+  1/1/1989 &  ALL  &  landings of Pacific ocean perch unrestricted if less than 1,000 pounds regardless of percentage on board (Vancouver area OY =500 mt; Columbia area OY =800 mt).  \\ 
+  7/26/1989 &  ALL  &  Reduced the coastwide trip limit for Pacific ocean perch to 2,000 pounds or 20\% of all fish on board, whichever is less, with no trip frequency restriction.  \\ 
+  12/13/1989 &  Columbia  &   Closed the Pacific ocean perch fishery in the Columbia area because 1,040 mt OY reached.  \\ 
+  1/1/1990 &  ALL  &  Established the coastwide Pacific ocean perch trip limit at 20\% (by weight) of all fish on board or 3,000 pounds whichever is less; landings of Pacific ocean perch be unrestricted if less than 1,000 pounds regardless of percentage on board.  (Vancouver area OY = 500 mt; Columbia area OY = 1,040 mt). \\ 
+  1/1/1991 &  ALL  &  Established the coastwide Pacific ocean perch trip limit at 20\% (by weight) of all groundfish on board or 3,000 pounds whichever is less; landings of Pacific ocean perch be unrestricted if less than 1,000 pounds regardless of percentage on board (harvest guideline for combined Vancouver and Columbia areas = 1,000 mt). \\ 
+  1/1/1992 &  ALL  &  For Pacific ocean perch, established the coastwide trip limit at 20\% (by weight) of all groundfish on board or 3,000 pounds whichever is less; landings of Pacific ocean perch be unrestricted if less than 1,000 pounds regardless of percentage on board (harvest guideline for combined Vancouver and Columbia areas = 1,550 mt). \\ 
+  1/1/1993 &  Cape Mendocino Coos Bay  &  For Pacific ocean perch, continued the coastwide trip limit at 20\% (by weight) of all groundfish on board or 3,000 pounds whichever is less; landings of Pacific ocean perch unrestricted if less than 1,000 pounds regardless of percentage on board (harvest guideline for combined Vancouver and Columbia areas = 1,550 mt). \\ 
+  1/1/1994 &  ALL  &  Pacific Ocean Perch trip limit of 3,000 pounds or 20\% of all fish on board, whichever is less, in landings of Pacific ocean perch above 1,000 pounds. \\ 
+  1/1/1995 &  ALL  &  For Pacific Ocean Perch, established a cumulative trip limit of 6,000 pounds per month \\ 
+  1/1/1996 &  ALL  &  Pacific Ocean Perch cumulative trip limit of 10,000 pounds per two-month period. \\ 
+  7/1/1996 &  4030 North  &  Reduced the cumulative 2-month limit for Pacific ocean perch to 8,000 pounds, and established the cumulative 2-month limit for Dover sole north of Cape Mendocino at 38,000 pounds \\ 
+  1/1/1997 &  ALL  &  Pacific Ocean Perch  limited entry fishery cumulative trip limit of 8,000 pounds per two-month period \\ 
+  1/1/1998 &  ALL  &  Pacific Ocean Perch:  limited entry fishery Cumulative trip limit of 8,000 pounds per two-month period. \\ 
+  7/1/1998 &  ALL  &  Open Access Rockfish: removed overall rockfish monthly limit and replaced it with limits for component rockfish species: for Sebastes complex, monthly cumulative limit is 33,000 pounds, for widow rockfish, monthly cumulative trip limit is 3,000 pounds, for Pacific Ocean Perch, monthly cumulative trip limit is 4,000 pounds. \\ 
+  1/1/1999 &  ALL  &  for the limited entry fishery  A new three phase cumulative limit period system is introduced for 1999.  Phase 1 is a single cumulative limit period that is 3 months long, from January 1 - March 31.  Phase 2 has 3 separate 2 month cumulative limit periods of April 1 -  May 31, June 1 -  July 31, and August 1 - September 30.  Phase 3 has 3 separate 1 month cumulative limit periods of October 1-31, November 1-30, and December 1-31.  For all species except Pacific ocean perch and Bocaccio, there will be no monthly limit within the cumulative landings limit periods.  An option to apply cumulative trip limits lagged by 2 weeks (from the 16th to the 15th) was made available to limited entry trawl vessels when their permits were renewed for 1999.  Vessels that are authorized to operate in this "B" platoon may take and retain, but may not land, groundfish during January 1-15, 1999. \\ 
+  1/1/1999 &  ALL  &  for the limited entry fishery Pacific Ocean Perch: cumulative limit, Phase 1: 4,000 pounds per month; Phase 2: 4,000 pounds per month; Phase 3: 4,000 pounds per month. \\ 
+  1/1/1999 &  ALL  &  for open access gear: Pacific Ocean Perch: coastwide, 100 pounds per month. \\ 
+  1/1/2000 &  ALL  &  Limited entry trawl, Pacific Ocean Perch, 500 lbs per month \\ 
+  1/1/2000 &  ALL  &  Pacific Ocean Perch, Open Access gear except exempted trawl, 100 lbs per month \\ 
+  1/1/2000 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear, 500 lbs per month \\ 
+  5/1/2000 &  ALL  &  Limited entry trawl, Pacific Ocean Perch, 2500 lbs per 2 months \\ 
+  5/1/2000 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear, 2500 lbs per month \\ 
+  11/1/2000 &  ALL  &  Limited entry trawl, Pacific Ocean Perch, 500 lbs per month \\ 
+  11/1/2000 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear, 500 lbs per month \\ 
+  1/1/2001 &  3600 North  &  Pacific Ocean Perch, open access, 100 lbs per month \\ 
+  1/1/2001 &  4010 North  &  Pacific Ocean Perch, limited entry trawl, 1500 lbs per mont \\ 
+  1/1/2001 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear,  1500 lbs per month \\ 
+  5/1/2001 &  4010 North  &  Pacific Ocean Perch, limited entry trawl,  2500 lbs per month \\ 
+  5/1/2001 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear,  2500 lbs per month \\ 
+  10/1/2001 &  4010 North  &  Pacific Ocean Perch, limited entry trawl, 1500 lbs per month \\ 
+  11/1/2001 &  ALL  &  Pacific Ocean Perch, limited entry fixed gear,  1500 lbs per month \\ 
+  1/1/2002 &  4010 North  &  Pacific Ocean Perch, open access, 100 lbs per month \\ 
+  1/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry fixed gear, 2000 lbs per month \\ 
+  1/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry trawl, 2000 lbs per month \\ 
+  4/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry fixed gear, 4000 lbs per month \\ 
+  5/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry trawl, 4000 lbs per month \\ 
+  11/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry fixed gear, 2000 lbs per month \\ 
+  11/1/2002 &  4010 North  &  Pacific Ocean Perch, limited entry trawl, 2000 lbs per month \\ 
+  1/1/2003 &  3800 South  &  minor slope rockfish south including pacific ocean perch, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2003 &  3800 South  &  Minor slope rockfish south including Pacific ocean perch, limited entry fixed gear, 30000 lbs per 2 months \\ 
+  1/1/2003 &  3800 South  &  Minor slope rockfish south including Pacific ocean perch , limited entry trawl, 30000 lbs per 2 months \\ 
+  1/1/2003 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, open access gear, per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2003 &  3800 4010  &  Minor slope rockfish south including Pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2003 &  3800 4010  &  Minor slope rockfish south including Pacific ocean perch , limited entry trawl, 1800 lbs per 2 months \\ 
+  1/1/2003 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2003 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2003 &  4010 North  &  Pacific Ocean Perch, Limited entry trawl gear, 3000 lbs per 2 months \\ 
+  3/1/2003 &  3800 4010  &  Minor slope rockfish south including Pacific ocean perch, limited entry fixed gear, no more than 25\% of the weight of sablefish landed per trip \\ 
+  11/1/2003 &  3800 4010  &  Minor slope rockfish south including Pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2004 &  3800 South  &  Minor slope rockfish south including Pacific ocean perch, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2004 &  3800 South  &  minor slope rockfish south inclding pacific ocean perch, limited entry fixed gear,  40000 lbs per 2 months \\ 
+  1/1/2004 &  3800 South  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 40000 lbs per 2 months \\ 
+  1/1/2004 &  3800 4010  &  Minor slope rockfish south including Pacific ocean perch, open access gear, per trip no more than 25\% of the weight of sablefish landed \\ 
+  1/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry fixed gear, 7000 lbs per 2 months \\ 
+  1/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 7000 lbs per 2 months \\ 
+  1/1/2004 &  4010 North  &  pacific ocean perch, open access gear, 100 lbs per month \\ 
+  1/1/2004 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2004 &  4010 North  &  pacific ocean perch, limited entry trawl, 3000 lbs per 2 months \\ 
+  5/1/2004 &  3800 South  &  minor slope rockfish south inclding pacific ocean perch, limited entry fixed gear, 50000 lbs per 2 months \\ 
+  5/1/2004 &  3800 South  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 50000 lbs per 2 months \\ 
+  5/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry fixed gear,  50000 lbs per 2 months \\ 
+  5/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 50000 lbs per 2 months \\ 
+  11/1/2004 &  3800 South  &  minor slope rockfish south inclding pacific ocean perch, limited entry fixed gear, 50000 lbs per 2 months \\ 
+  11/1/2004 &  3800 South  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 50000 lbs per 2 months \\ 
+  11/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry fixed gear, 10000 lbs per 2 months \\ 
+  11/1/2004 &  3800 4010  &  minor slope rockfish south including pacific ocean perch, limited entry trawl, 10000 lbs per 2 months \\ 
+  1/1/2005 &  3800 South  &  minor slope rockfish south including darkblotched and pacific ocean perch, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2005 &  3800 South  &  minor slope rockfish south including darkblotched rockfish and pacific ocean perch, limited entry trawl, closed \\ 
+  1/1/2005 &  3800 4010  &  minor slope rockfish south including darkblotched and pacific ocean perch, open access gear, per trip no more than 25\% of weight of sablefish onboard \\ 
+  1/1/2005 &  3800 4010  &  minor slope rockfish south including darkblotched rockfish and pacific ocean perch, limited entry trawl, 4000 lbs per 2 months \\ 
+  1/1/2005 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2005 &  4010 North  &  pacific ocean perch, limited entry trawl gear, 3000 lbs per 2 months \\ 
+  1/1/2005 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2005 &  4010 South  &  minor slope rockfish south including darkblotched and pacific ocean perch, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  5/1/2005 &  3800 4010  &  minor slope rockfish south including darkblotched rockfish and pacific ocean perch, limited entry trawl, 8000 lbs per 2 months \\ 
+  7/1/2005 &  3800 4010  &  minor slope south rockfish including darkblotched rockfish and pacific ocean perch, limited entry trawl, 20000 lbs per 2 months \\ 
+  9/1/2005 &  3800 4010  &  minor slope south rockfish including darkblotched rockfish and pacific ocean perch, limited entry trawl, 8000 lbs per 2 months \\ 
+  12/1/2005 &  3800 South  &  minor slope rockfish south including darkblotched rockfish and pacific ocean perch, limited entry trawl, closed \\ 
+  12/1/2005 &  3800 4010  &  minor slope south rockfish including darkblotched rockfish and pacific ocean perch, limited entry trawl, 8000 lbs per 2 months \\ 
+  1/1/2006 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2006 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 20000 lbs per month \\ 
+  1/1/2006 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched, open access gear, per trip, no more than 25\% (by weight) of landed sablefish \\ 
+  1/1/2006 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 4000 lbs per month \\ 
+  1/1/2006 &  4010 North  &  pacific ocean perch, open access gear, 100 lbs per month \\ 
+  1/1/2006 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2006 &  4010 North  &  pacific ocean perch, limited entry trawl, 1500 lbs per month \\ 
+  1/1/2006 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  3/1/2006 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 40000 lbs per 2 months \\ 
+  3/1/2006 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 8000 lbs per 2 months \\ 
+  3/1/2006 &  4010 North  &  pacific ocean perch, limited entry trawl, 3000 lbs per 2 months \\ 
+  7/1/2006 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 1000 lbs per 2 months \\ 
+  1/1/2007 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2007 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2007 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2007 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2007 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 40000 lbs per 2 months \\ 
+  1/1/2007 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2007 &  4010 North  &  pacific ocean perch, limited entry trawl, 3000 lbs per 2 months \\ 
+  7/1/2007 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 10000 lbs per 2 months \\ 
+  8/1/2007 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  9/1/2007 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 55000 lbs per 2 months \\ 
+  11/1/2007 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2008 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2008 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched,limited  entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2008 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2008 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2008 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2008 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 55000 lbs per 2 months \\ 
+  1/1/2008 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2008 &  4010 North  &  pacific ocean perch, limited entry trawl, 1500 lbs per 2 months \\ 
+  1/1/2009 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2009 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2009 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2009 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2009 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2009 &  3800 South  &  minor slope rockfish southincluding pacific ocean perch and darkblotched rockfish, limited entry trawl, 55000 lbs per 2 months \\ 
+  1/1/2009 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2009 &  4010 North  &  pacific ocean perch, limited entry trawl, 1500 lbs per 2 months \\ 
+  7/1/2009 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 10000 lbs per 2 months \\ 
+  11/1/2009 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2010 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2010 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched,limited  entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2010 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2010 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2010 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2010 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 55000 lbs per 2 months \\ 
+  1/1/2010 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, limited entry trawl, 15000 lbs per 2 months \\ 
+  1/1/2010 &  4010 North  &  pacific ocean perch, limited entry trawl, 1500 lbs per 2 months \\ 
+  1/1/2011 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2011 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2011 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2011 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2011 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2011 &  ALL  &  Pacific Ocean Perch managed in part by IFQ \\ 
+  1/1/2012 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2012 &  4010 South  &  minor slope rockfish southincluding pacific ocean perch and darkblotched, limited entry fixed gear, 40000 lbs per 2 months \\ 
+  1/1/2012 &  3800 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear, 10000 lbs per 2 months \\ 
+  1/1/2012 &  3800 4010  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  per trip no more than 25\% (by weight) of sablefish landed \\ 
+  1/1/2012 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2013 &  4010 North  &  pacific ocean perch, open access gears, 100 lbs per month \\ 
+  1/1/2013 &  4010 North  &  pacific ocean perch, limited entry fixed gear, 1800 lbs per 2 months \\ 
+  1/1/2013 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched, limited entry fixed gear, 40000 lbs per 2 months no more than 1375 lbs may be blackgill \\ 
+  1/1/2013 &  4010 South  &  minor slope rockfish south including pacific ocean perch and darkblotched rockfish, open access gear,  10000 lbs per 2 months no more than 475 lbs of which may be blackgill rockfish \\ 
+  1/1/2014 &  4010 North  &  non-trawl, limited entry, pacific ocean perch, 1800 lbs per 2 months \\ 
+  1/1/2014 &  4010 South  &  non-trawl, limited entry, minor slope rockfish and darkblotched rockfish and pacific ocean perch, 40000 lbs per 2 months of which no more than 1375 lbs may be blackgill rockfish \\ 
+  1/1/2014 &  4010 North  &  non-trawl, open access, pacific ocean perch, 100 lbs per month \\ 
+  1/1/2014 &  4010 South  &  non-trawl, open access, minor slope rockfish including darkblotched rockfishand pacific ocean perch, 10000 lbs per 2 months of which no more than 475 lbs may be blackgill rockfish \\ 
+  1/1/2015 &  4010 North  &  non-trawl, limited entry, pacific ocean perch, 1800 lbs per 2 months \\ 
+  1/1/2015 &  4010 South  &  non-trawl, limited entry, minor slope rockfish and darkblotched rockfish and pacific ocean perch, 40000 lbs per 2 months of which no more than 1375 lbs may be blackgill rockfish \\ 
+  1/1/2015 &  4010 North  &  non-trawl, open access, pacific ocean perch, 100 lbs per month \\ 
+  1/1/2015 &  4010 South  &  non-trawl, open access, minor slope rockfish including darkblotched rockfishand pacific ocean perch, 10000 lbs per 2 months of which no more than 475 lbs may be blackgill rockfish \\ 
+  7/1/2015 &  4010 South  &  non-trawl, limited entry, minor slope rockfish and darkblotched rockfish and pacific ocean perch, 40000 lbs per 2 months of which no more than 1600 lbs may be blackgill rockfish \\ 
+  7/1/2015 &  4010 South  &  non-trawl, open access, minor slope rockfish including darkblotched rockfishand pacific ocean perch, 10000 lbs per 2 months of which no more than 550 lbs may be blackgill rockfish \\ 
+  1/1/2016 &  4010 North  &  non-trawl, limited entry, pacific ocean perch, 1800 lbs per 2 months \\ 
+  1/1/2016 &  4010 North  &  non-trawl, open access, pacific ocean perch, 100 lbs per month \\ 
+  1/1/2016 &  4010 South  &  non-trawl, open access, minor slope rockfish including darkblotched rockfishand pacific ocean perch, 10000 lbs per 2 months of which no more than 475 lbs may be blackgill rockfish \\ 
+  7/1/2016 &  4010 South  &  non-trawl, open access, minor slope rockfish including darkblotched rockfishand pacific ocean perch, 10000 lbs per 2 months of which no more than 550 lbs may be blackgill rockfish \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
 \caption{Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.} 
 \label{tab:Comm_Catch}
 \begin{tabular}{>{\centering}p{.5in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}>{\centering}p{.75in}>{\centering}p{.75in}}
@@ -1665,81 +1850,81 @@ Year & California & Oregon & Washington & At-Sea Hake & Foreign & Research \\
 \end{table}
 
 \begin{table}[ht]
-  \centering
-  \caption{Summary of discard rates used in the model by each data source.} 
-  \label{tab:Discard}
-  \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1.1in}}
-    \hline
-  Year & Source & Discard & Standard Error \\ 
-    \hline
-  1985 & Pikitch & 0.027 & 0.068 \\ 
-    1986 & Pikitch & 0.024 & 0.063 \\ 
-    1987 & WCGOP & 0.039 & 0.083 \\ 
-    1992 & WCGOP & 0.100 & 0.300 \\ 
-    2002 & WCGOP & 0.150 & 0.164 \\ 
-    2003 & WCGOP & 0.183 & 0.268 \\ 
-    2004 & WCGOP & 0.203 & 0.206 \\ 
-    2005 & WCGOP & 0.175 & 0.346 \\ 
-    2006 & WCGOP & 0.148 & 0.243 \\ 
-    2007 & WCGOP & 0.171 & 0.261 \\ 
-    2008 & WCGOP & 0.362 & 0.172 \\ 
-    2009 & WCGOP & 0.504 & 0.153 \\ 
-    2010 & WCGOP & 0.487 & 0.195 \\ 
-    2011 & WCGOP & 0.015 & 0.053 \\ 
-    2012 & WCGOP & 0.028 & 0.054 \\ 
-    2013 & WCGOP & 0.027 & 0.054 \\ 
-    2014 & WCGOP & 0.035 & 0.050 \\ 
-    2015 & WCGOP & 0.010 & 0.053 \\ 
-     \hline
-  \end{tabular}
-  \end{table}
+\centering
+\caption{Summary of discard rates used in the model by each data source.} 
+\label{tab:Discard}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1.1in}}
+  \hline
+Year & Source & Discard & Standard Error \\ 
+  \hline
+1985 & Pikitch & 0.027 & 0.068 \\ 
+  1986 & Pikitch & 0.024 & 0.063 \\ 
+  1987 & WCGOP & 0.039 & 0.083 \\ 
+  1992 & WCGOP & 0.100 & 0.300 \\ 
+  2002 & WCGOP & 0.150 & 0.164 \\ 
+  2003 & WCGOP & 0.183 & 0.268 \\ 
+  2004 & WCGOP & 0.203 & 0.206 \\ 
+  2005 & WCGOP & 0.175 & 0.346 \\ 
+  2006 & WCGOP & 0.148 & 0.243 \\ 
+  2007 & WCGOP & 0.171 & 0.261 \\ 
+  2008 & WCGOP & 0.362 & 0.172 \\ 
+  2009 & WCGOP & 0.504 & 0.153 \\ 
+  2010 & WCGOP & 0.487 & 0.195 \\ 
+  2011 & WCGOP & 0.015 & 0.053 \\ 
+  2012 & WCGOP & 0.028 & 0.054 \\ 
+  2013 & WCGOP & 0.027 & 0.054 \\ 
+  2014 & WCGOP & 0.035 & 0.050 \\ 
+  2015 & WCGOP & 0.010 & 0.053 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[ht]
-  \centering
-  \caption{Summary of commercial fishery length samples used in the stock assessment.} 
-  \label{tab:Comm_Lengths}
-  \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-    \hline
-  Year & Trips & Fish & Sample Size \\ 
-    \hline
-  1966 & 1 & 238 & 7 \\ 
-    1967 & 5 & 1020 & 35 \\ 
-    1968 & 3 & 912 & 21 \\ 
-    1969 & 4 & 1213 & 28 \\ 
-    1970 & 13 & 1830 & 92 \\ 
-    1971 & 22 & 4698 & 155 \\ 
-    1972 & 23 & 4561 & 162 \\ 
-    1973 & 17 & 4134 & 120 \\ 
-    1974 & 20 & 4806 & 141 \\ 
-    1975 & 19 & 3637 & 134 \\ 
-    1976 & 21 & 3677 & 148 \\ 
-    1977 & 32 & 4846 & 226 \\ 
-    1978 & 52 & 7715 & 367 \\ 
-    1979 & 34 & 3414 & 240 \\ 
-    1980 & 55 & 5426 & 388 \\ 
-    1981 & 40 & 3921 & 282 \\ 
-    1982 & 48 & 4824 & 339 \\ 
-    1983 & 39 & 3944 & 275 \\ 
-    1984 & 31 & 3103 & 219 \\ 
-    1985 & 45 & 4509 & 318 \\ 
-    1986 & 40 & 4005 & 282 \\ 
-    1987 & 43 & 3056 & 304 \\ 
-    1988 & 9 & 602 & 64 \\ 
-    1989 & 16 & 798 & 113 \\ 
-    1990 & 12 & 599 & 85 \\ 
-    1991 & 8 & 216 & 38 \\ 
-    1994 & 43 & 2608 & 304 \\ 
-    1995 & 49 & 3161 & 346 \\ 
-    1996 & 64 & 3085 & 452 \\ 
-    1997 & 76 & 3570 & 537 \\ 
-    1998 & 56 & 3450 & 395 \\ 
-    1999 & 58 & 2812 & 409 \\ 
-    2000 & 49 & 2004 & 326 \\ 
-    2001 & 59 & 1696 & 293 \\ 
-    2002 & 50 & 1666 & 280 \\ 
-     \hline
-  \end{tabular}
-  \end{table}
+\centering
+\caption{Summary of commercial fishery length samples used in the stock assessment.} 
+\label{tab:Comm_Lengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Trips & Fish & Sample Size \\ 
+  \hline
+1966 & 1 & 238 & 7 \\ 
+  1967 & 5 & 1020 & 35 \\ 
+  1968 & 3 & 912 & 21 \\ 
+  1969 & 4 & 1213 & 28 \\ 
+  1970 & 13 & 1830 & 92 \\ 
+  1971 & 22 & 4698 & 155 \\ 
+  1972 & 23 & 4561 & 162 \\ 
+  1973 & 17 & 4134 & 120 \\ 
+  1974 & 20 & 4806 & 141 \\ 
+  1975 & 19 & 3637 & 134 \\ 
+  1976 & 21 & 3677 & 148 \\ 
+  1977 & 32 & 4846 & 226 \\ 
+  1978 & 52 & 7715 & 367 \\ 
+  1979 & 34 & 3414 & 240 \\ 
+  1980 & 55 & 5426 & 388 \\ 
+  1981 & 40 & 3921 & 282 \\ 
+  1982 & 48 & 4824 & 339 \\ 
+  1983 & 39 & 3944 & 275 \\ 
+  1984 & 31 & 3103 & 219 \\ 
+  1985 & 45 & 4509 & 318 \\ 
+  1986 & 40 & 4005 & 282 \\ 
+  1987 & 43 & 3056 & 304 \\ 
+  1988 & 9 & 602 & 64 \\ 
+  1989 & 16 & 798 & 113 \\ 
+  1990 & 12 & 599 & 85 \\ 
+  1991 & 8 & 216 & 38 \\ 
+  1994 & 43 & 2608 & 304 \\ 
+  1995 & 49 & 3161 & 346 \\ 
+  1996 & 64 & 3085 & 452 \\ 
+  1997 & 76 & 3570 & 537 \\ 
+  1998 & 56 & 3450 & 395 \\ 
+  1999 & 58 & 2812 & 409 \\ 
+  2000 & 49 & 2004 & 326 \\ 
+  2001 & 59 & 1696 & 293 \\ 
+  2002 & 50 & 1666 & 280 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[ht]
 \centering
@@ -1766,18 +1951,18 @@ Year & Trips & Fish & Sample Size \\
 \end{table}
 
 \begin{table}[ht]
-  \centering
-  \caption{Summary of Pacific ocean perch survey length samples used in the stock assessment.} 
-  \label{tab:POP_Lengths}
-  \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-    \hline
-  Year & Tows & Fish & Sample Size \\ 
-    \hline
-  1979 & 125 & 2375 & 303 \\ 
-    1985 & 126 & 2558 & 306 \\ 
-     \hline
-  \end{tabular}
-  \end{table}
+\centering
+\caption{Summary of Pacific ocean perch survey length samples used in the stock assessment.} 
+\label{tab:POP_Lengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1979 & 125 & 2375 & 303 \\ 
+  1985 & 126 & 2558 & 306 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[ht]
 \centering
@@ -1958,36 +2143,36 @@ Year & Tows & Fish & Sample Size \\
 \end{table}
 
 \begin{table}[ht]
-  \centering
-  \caption{Summary of the commercial catch-per-unit effort
+\centering
+\caption{Summary of the commercial catch-per-unit effort
                                          time-series used in the stock
                                          assessment.} 
-  \label{tab:CPUE_Summary}
-  \begin{tabular}{>{\centering}p{.5in}>{\centering}p{.7in}>{\centering}p{.7in}}
-    \hline
-  Year & Obs & SE \\ 
-    \hline
-  1956 & 0.40 & 0.40 \\ 
-    1957 & 0.30 & 0.40 \\ 
-    1958 & 0.32 & 0.40 \\ 
-    1959 & 0.29 & 0.40 \\ 
-    1960 & 0.28 & 0.40 \\ 
-    1961 & 0.31 & 0.40 \\ 
-    1962 & 0.29 & 0.40 \\ 
-    1963 & 0.34 & 0.40 \\ 
-    1964 & 0.35 & 0.40 \\ 
-    1965 & 0.55 & 0.40 \\ 
-    1966 & 0.47 & 0.40 \\ 
-    1967 & 0.30 & 0.40 \\ 
-    1968 & 0.17 & 0.40 \\ 
-    1969 & 0.18 & 0.40 \\ 
-    1970 & 0.17 & 0.40 \\ 
-    1971 & 0.20 & 0.40 \\ 
-    1972 & 0.20 & 0.40 \\ 
-    1973 & 0.11 & 0.40 \\ 
-     \hline
-  \end{tabular}
-  \end{table}
+\label{tab:CPUE_Summary}
+\begin{tabular}{>{\centering}p{.5in}>{\centering}p{.7in}>{\centering}p{.7in}}
+  \hline
+Year & Obs & SE \\ 
+  \hline
+1956 & 0.40 & 0.40 \\ 
+  1957 & 0.30 & 0.40 \\ 
+  1958 & 0.32 & 0.40 \\ 
+  1959 & 0.29 & 0.40 \\ 
+  1960 & 0.28 & 0.40 \\ 
+  1961 & 0.31 & 0.40 \\ 
+  1962 & 0.29 & 0.40 \\ 
+  1963 & 0.34 & 0.40 \\ 
+  1964 & 0.35 & 0.40 \\ 
+  1965 & 0.55 & 0.40 \\ 
+  1966 & 0.47 & 0.40 \\ 
+  1967 & 0.30 & 0.40 \\ 
+  1968 & 0.17 & 0.40 \\ 
+  1969 & 0.18 & 0.40 \\ 
+  1970 & 0.17 & 0.40 \\ 
+  1971 & 0.20 & 0.40 \\ 
+  1972 & 0.20 & 0.40 \\ 
+  1973 & 0.11 & 0.40 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[ht]
 \centering
@@ -2146,75 +2331,75 @@ No. & Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)  & 
 \newpage
 
 \begin{table}[ht]
-  \centering
-  \caption{Results from 100 jitters from the base model.} 
-  \label{tab:jitter}
-  \begin{tabular}{>{\centering}p{2in}>{\centering}p{1in}}
-    \hline
-  Status & Base.Model \\ 
-    \hline
-  Returned to base case & - \\ 
-    Found local minimum & - \\ 
-    Found better solution & - \\ 
-    Error in likelihood & - \\ 
-    Total & 100 \\ 
-     \hline
-  \end{tabular}
-  \end{table}
+\centering
+\caption{Results from 100 jitters from the base model.} 
+\label{tab:jitter}
+\begin{tabular}{>{\centering}p{2in}>{\centering}p{1in}}
+  \hline
+Status & Base.Model \\ 
+  \hline
+Returned to base case & - \\ 
+  Found local minimum & - \\ 
+  Found better solution & - \\ 
+  Error in likelihood & - \\ 
+  Total & 100 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \FloatBarrier
 
 \newpage
 
 \begin{sidewaystable}[ht]
-  \centering
-  \caption{Sensitivity of the base model 
+\centering
+\caption{Sensitivity of the base model 
                                        to dropping or down-weighting data 
                                        sources and alternative assumptions 
                                        about growth.} 
-  \label{tab:Sensitivity_model1}
-  \scalebox{0.9}{
-  \begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
-    \hline
-  Label & Base (Francis weights) & Harmonic mean weights & Drop index & Drop ages & Down-weight lengths & Free size Age0 & Free CV Amin & External growth \\ 
-    \hline
-  TOTAL\_like & - & - & - & - & - & - & - & - \\ 
-    Catch\_like & - & - & - & - & - & - & - & - \\ 
-    Equil\_catch\_like & - & - & - & - & - & - & - & - \\ 
-    Survey\_like & - & - & - & - & - & - & - & - \\ 
-    Length\_comp\_like & - & - & - & - & - & - & - & - \\ 
-    Age\_comp\_like & - & - & - & - & - & - & - & - \\ 
-    Parm\_priors\_like & - & - & - & - & - & - & - & - \\ 
-    SSB\_Unfished\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    TotBio\_Unfished & - & - & - & - & - & - & - & - \\ 
-    SmryBio\_Unfished & - & - & - & - & - & - & - & - \\ 
-    Recr\_Unfished\_billions & - & - & - & - & - & - & - & - \\ 
-    SSB\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    SPR\_Btgt & - & - & - & - & - & - & - & - \\ 
-    Fstd\_Btgt & - & - & - & - & - & - & - & - \\ 
-    TotYield\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    SSB\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    Fstd\_SPRtgt & - & - & - & - & - & - & - & - \\ 
-    TotYield\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    SSB\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    SPR\_MSY & - & - & - & - & - & - & - & - \\ 
-    Fstd\_MSY & - & - & - & - & - & - & - & - \\ 
-    TotYield\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-    RetYield\_MSY & - & - & - & - & - & - & - & - \\ 
-    Bratio\_2015 & - & - & - & - & - & - & - & - \\ 
-    F\_2015 & - & - & - & - & - & - & - & - \\ 
-    SPRratio\_2015 & - & - & - & - & - & - & - & - \\ 
-    Recr\_2015 & - & - & - & - & - & - & - & - \\ 
-    Recr\_Virgin\_billions & - & - & - & - & - & - & - & - \\ 
-    L\_at\_Amin\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-    L\_at\_Amax\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-    VonBert\_K\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-    CV\_young\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-    CV\_old\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-     \hline
-  \end{tabular}
-  }
-  \end{sidewaystable}
+\label{tab:Sensitivity_model1}
+\scalebox{0.9}{
+\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
+  \hline
+Label & Base (Francis weights) & Harmonic mean weights & Drop index & Drop ages & Down-weight lengths & Free size Age0 & Free CV Amin & External growth \\ 
+  \hline
+TOTAL\_like & - & - & - & - & - & - & - & - \\ 
+  Catch\_like & - & - & - & - & - & - & - & - \\ 
+  Equil\_catch\_like & - & - & - & - & - & - & - & - \\ 
+  Survey\_like & - & - & - & - & - & - & - & - \\ 
+  Length\_comp\_like & - & - & - & - & - & - & - & - \\ 
+  Age\_comp\_like & - & - & - & - & - & - & - & - \\ 
+  Parm\_priors\_like & - & - & - & - & - & - & - & - \\ 
+  SSB\_Unfished\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  TotBio\_Unfished & - & - & - & - & - & - & - & - \\ 
+  SmryBio\_Unfished & - & - & - & - & - & - & - & - \\ 
+  Recr\_Unfished\_billions & - & - & - & - & - & - & - & - \\ 
+  SSB\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  SPR\_Btgt & - & - & - & - & - & - & - & - \\ 
+  Fstd\_Btgt & - & - & - & - & - & - & - & - \\ 
+  TotYield\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  SSB\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  Fstd\_SPRtgt & - & - & - & - & - & - & - & - \\ 
+  TotYield\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  SSB\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  SPR\_MSY & - & - & - & - & - & - & - & - \\ 
+  Fstd\_MSY & - & - & - & - & - & - & - & - \\ 
+  TotYield\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
+  RetYield\_MSY & - & - & - & - & - & - & - & - \\ 
+  Bratio\_2015 & - & - & - & - & - & - & - & - \\ 
+  F\_2015 & - & - & - & - & - & - & - & - \\ 
+  SPRratio\_2015 & - & - & - & - & - & - & - & - \\ 
+  Recr\_2015 & - & - & - & - & - & - & - & - \\ 
+  Recr\_Virgin\_billions & - & - & - & - & - & - & - & - \\ 
+  L\_at\_Amin\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+  L\_at\_Amax\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+  VonBert\_K\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+  CV\_young\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+  CV\_old\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+   \hline
+\end{tabular}
+}
+\end{sidewaystable}
 
 \newpage
 

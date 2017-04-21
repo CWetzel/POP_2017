@@ -49,7 +49,7 @@ link-citations: yes
 \renewcommand{\thefigure}{\alph{figure}}
 \renewcommand{\thetable}{\alph{table}}
 
-```{r child = "Executive_Summary.Rmd"}
+```{r child = "0_Executive_Summary.Rmd"}
 ```
 
 
