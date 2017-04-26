@@ -74,9 +74,7 @@ link-citations: yes
 
 <!-- ***************************ACKNOWLEDGEMENTS*************************** -->
 #Acknowledgments
-Include: STAR panel members and affiliations as well as names and affiliations 
-of persons who contributed data, advice or information but were not part of the 
-assessment team. Not required in draft assessment undergoing review.
+Teresa Tsou (WDFW), Philip Wyland (WDFW), Ali Whitman (ODFW), Patrick Mirrick (ODFW), Patrick McDonald (CAPS), Vanessa Tuttle (ASHOP), Beth Horness (NWFSC), Kayleigh Sommers (NWFSC), Jason Jannot (NWFSC)
 
 
 \newpage

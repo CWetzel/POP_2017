@@ -142,7 +142,21 @@ file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forE
 # Copy and move figures from assessment folder
 figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/Biological/plots/allSexRatiosAge.png",
-            "C:/Assessments/POP2017/Data/Discards/plots/discardLengthComps.png")
+            "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthBySource.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/LengthAgeAll.png",
+            "C:/Assessments/POP2017/Data/Discards/plots/discardLengthComps.png", 
+            "C:/Assessments/POP2017/Data/CommercialComps/AtSeaFishery/ASHOP_lengths.png",
+            "C:/Assessments/POP2017/Data/CommercialComps/AtSeaFishery/ASHOP_ages.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/NWFSCcombo/NWFSCcomboAges.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/NWFSCcombo/NWFSCcombo_Lengths.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/NWFSCslope/NWslope_Lengths.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/NWFSCslope/NWslope_Ages.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/TriennialAges.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/TriennialLengths.png",
+            "C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/AFSCslope_Lengths.png",
+            "C:/Assessments/POP2017/Data/Maturity_Fecundity/Functional_Maturity.png",
+            "C:/Assessments/POP2017/Data/Maturity_Fecundity/Maturity_Comparison.png")
 
 for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)
