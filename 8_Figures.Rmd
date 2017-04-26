@@ -48,7 +48,7 @@
 <!-- *****************Commercial Discards FIGURES************************** --> 
 <!-- ********************************************************************** -->
   
-![Discard length frequency distributions from the WCGOP for `r spp`. \label{fig:WCGOP_discard}](Figures/discardLengthComps.png)
+
 
 
 
@@ -99,7 +99,39 @@
 <!-- ********************************************************************** -->
 <!-- ****************Length and Age Composition FIGURES******************** --> 
 <!-- ********************************************************************** -->
-  
+![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](Figures/discardLengthComps.png)
+
+<!--
+![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](Figures/Commercial_Lengths.png)
+
+![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](Figures/Commercial_Ages.png)
+-->
+
+![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](Figures/ASHOP_lengths.png)
+
+![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](Figures/ASHOP_ages.png)
+
+<!--
+![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](Figures/POP_lengths.png)
+
+![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](Figures/POP_ages.png)
+-->
+
+![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/TriennialLengths.png)
+
+![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/TriennialAges.png)
+
+![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](Figures/AFSCslope_Lengths.png)
+
+![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](Figures/NWslope_Lengths.png)
+
+![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](Figures/NWslope_Ages.png)
+
+![NWFSC shelf/lope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](Figures/NWFSCcombo_Lengths.png)
+
+![NWFSC shelf/slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](Figures/NWFSCcombo_Ages.png)
+
+
   
 <!-- ***********MODEL 1**************************************************** -->
   
