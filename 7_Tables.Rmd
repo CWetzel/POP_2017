@@ -1272,7 +1272,7 @@ Forecast_mod1 = as.data.frame(cbind(seq(Project_firstyr, Project_lastyr, 1),
 colnames(Forecast_mod1)=c('Year',
                           'OFL contriubtion (mt)',
                           'ACL landings (mt)',
-                          'Age 5+ biomass (mt)',
+                          'Age 3+ biomass (mt)',
                           'Spawning Output',
                           'Depletion')
 
