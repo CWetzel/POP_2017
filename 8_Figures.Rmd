@@ -117,9 +117,9 @@
 ![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](Figures/POP_ages.png)
 -->
 
-![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/TriennialLengths.png)
+![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/Triennial_Lengths.png)
 
-![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/TriennialAges.png)
+![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/Triennial_Ages.png)
 
 ![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](Figures/AFSCslope_Lengths.png)
 
