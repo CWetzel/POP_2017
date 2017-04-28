@@ -562,12 +562,12 @@ align(mngmnt.table) = c('l',
                   label = 'tab:OFL_projection')
       
       # Add alignment
-      align(mngmnt.table) = c('l',
+      #align(mngmnt.table) = c('l',
+      align(OFL.table) = c('l',
                               '>{\\raggedleft}p{0.5in}',
                               '>{\\centering}p{1.1in}',
-                              '>{\\centering}p{1.1in}',
                               '>{\\centering}p{1.1in}', 
-                              '>{\\centering}p{1.1in}',
+                              '>{\\centering}p{1.6in}',
                               '>{\\centering}p{1.1in}')  
      
 
