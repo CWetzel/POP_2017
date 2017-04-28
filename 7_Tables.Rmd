@@ -999,6 +999,32 @@ print(mod_params.table,
   
 \newpage
 
+<!-- ***********Likelihood TABLE*********************************************** -->
+```{r, results='asis'}
+  Like = round(mod1$likelihoods_used[c(1, 3:9),1],2)
+  
+  xx = c("Total", "Survey", "Discard", "Length-frequency data", "Age-frequency data", "Recruitment", "Forecast Recruitment", "Parameter Priors")
+  Like = cbind(xx, Like)
+  Like = as.data.frame(Like)
+  colnames(Like) = c("Likelihood Component", "Value")
+  
+  Like.table = xtable(Like, 
+                      caption=c('Likelihood components from the base model'), 
+                          label='tab:like',
+                          digits = c(0,0, 2))  
+  
+  align(Like.table) = c('l',
+                        '>{\\raggedright}p{2in}',
+                        '>{\\centering}p{1.0in}')  
+
+# Print index summary table
+print(Like.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+```
+
 <!-- ***********JITTER TABLE*********************************************** --> 
 ```{r, results = 'asis'}
 # Replace values in file and read in - values for all models in 1 table  
@@ -1010,7 +1036,7 @@ jitter.table = xtable(jitter,
                       label = 'tab:jitter')
 
 align(jitter.table) = c('l',
-                        '>{\\centering}p{2in}', 
+                        '>{\\raggedright}p{2in}', 
                         '>{\\centering}p{1in}')
 
 
