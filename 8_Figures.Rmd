@@ -131,6 +131,26 @@
 
 ![NWFSC shelf/slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](Figures/NWFSCcombo_Ages.png)
 
+<!-- ********************************************************************** -->
+<!-- **********************Weight-Length FIGURES*************************** --> 
+<!-- ********************************************************************** -->
+
+![Weight-at-length for `r spp` from all data sources. \label{fig:Wt_len}](Figures/weightAtLengthBySource.png)
+
+![Estimated weight-at-length for `r spp` from all data sources. \label{fig:Wt_len_pred}](Figures/weightAtLengthPred.png)
+
+<!-- ********************************************************************** -->
+<!-- **********************Length-at-Age FIGURES*************************** --> 
+<!-- ********************************************************************** -->
+
+![Estimated length-at-age for `r spp` from all data sources. \label{fig:Len_Age}](Figures/LengthAgeAll.png)
+
+<!-- ********************************************************************** -->
+<!-- ****************Aging Precision and Bias FIGURES********************** --> 
+<!-- ********************************************************************** -->
+
+![The estimated ageing error used in this assessment compared to the ageing error assumed in the previous assessment for `r spp`. \label{fig:Age_Error}](Figures/Ageing_Error.png)
+
 
   
 <!-- ***********MODEL 1**************************************************** -->
@@ -185,9 +205,7 @@ for(i in 1:36){ #(dim(LenComp_mod1)[1]-6)) {
   
   
   
-<!-- ********************************************************************** -->
-<!-- ****************Aging Precision and Bias FIGURES********************** --> 
-<!-- ********************************************************************** -->
+
   
   
   
@@ -203,13 +221,6 @@ for(i in 1:36){ #(dim(LenComp_mod1)[1]-6)) {
   
   
   
-  
-  
-  
-  
-<!-- ********************************************************************** -->
-<!-- **********************Weight-Length FIGURES*************************** --> 
-<!-- ********************************************************************** -->
   
   
   

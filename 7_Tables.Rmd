@@ -827,6 +827,31 @@ print(Index_summary.table,
 
 \FloatBarrier
 
+```{r , results = 'asis'}
+  Age.Error = cbind(mod1$age_error_mean$type1[1:31], mod1$age_error_sd$type1[1:31], 
+                    c(mod1$age_error_mean$type1[32:61], " "), c(mod1$age_error_sd$type1[32:61], " "))
+  colnames(Age.Error) = c("True Age (yr)", "SD of Observed Age (yr)", "True Age (yr)", "SD of Observed Age (yr)")
+
+  # Index of abundance summary, create table    
+  AgeError.table = xtable(Age.Error, 
+                          caption = c('Estimated ageing error from the CAPS lab used in the assessment model'),
+                             label = 'tab:Age_Error',
+                             digits = c(0,1,2, 1, 2))    
+# Add alignment  
+align(AgeError.table) = c('l',
+                          '>{\\centering}p{1.2in}',
+                          '>{\\centering}p{1.2in}',
+                          '>{\\centering}p{1.2in}',
+                          '>{\\centering}p{1.2in}')  
+
+# Print index summary table
+print(AgeError.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+```
+
 
 
 

@@ -572,7 +572,7 @@ Yield curve: Figure \ref{fig:Yield_all}
 \centering
 \caption{Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.} 
 \label{tab:OFL_projection}
-\begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.5in}>{\centering}p{1.1in}}
+\begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.6in}>{\centering}p{1.1in}}
   \hline
 Year & OFL & ACL & Spawning Output ( million eggs ) & Relative Biomass \\ 
   \hline
@@ -2267,6 +2267,49 @@ Year & Obs & SE \\
 
 \FloatBarrier
 
+\begin{table}[ht]
+\centering
+\caption{Estimated ageing error from the CAPS lab used in the assessment model} 
+\label{tab:Age_Error}
+\begin{tabular}{>{\centering}p{1.2in}>{\centering}p{1.2in}>{\centering}p{1.2in}>{\centering}p{1.2in}}
+  \hline
+True Age (yr) & SD of Observed Age (yr) & True Age (yr) & SD of Observed Age (yr) \\ 
+  \hline
+0.5 & 0.156238 & 31.5 & 2.77229 \\ 
+  1.5 & 0.156238 & 32.5 & 2.85394 \\ 
+  2.5 & 0.24885 & 33.5 & 2.93526 \\ 
+  3.5 & 0.341073 & 34.5 & 3.01623 \\ 
+  4.5 & 0.43291 & 35.5 & 3.09687 \\ 
+  5.5 & 0.524363 & 36.5 & 3.17717 \\ 
+  6.5 & 0.615432 & 37.5 & 3.25713 \\ 
+  7.5 & 0.70612 & 38.5 & 3.33675 \\ 
+  8.5 & 0.796429 & 39.5 & 3.41605 \\ 
+  9.5 & 0.886359 & 40.5 & 3.49501 \\ 
+  10.5 & 0.975913 & 41.5 & 3.57364 \\ 
+  11.5 & 1.06509 & 42.5 & 3.65194 \\ 
+  12.5 & 1.1539 & 43.5 & 3.72991 \\ 
+  13.5 & 1.24233 & 44.5 & 3.80756 \\ 
+  14.5 & 1.33039 & 45.5 & 3.88488 \\ 
+  15.5 & 1.41809 & 46.5 & 3.96188 \\ 
+  16.5 & 1.50542 & 47.5 & 4.03855 \\ 
+  17.5 & 1.59238 & 48.5 & 4.11491 \\ 
+  18.5 & 1.67897 & 49.5 & 4.19094 \\ 
+  19.5 & 1.76521 & 50.5 & 4.26666 \\ 
+  20.5 & 1.85108 & 51.5 & 4.34205 \\ 
+  21.5 & 1.9366 & 52.5 & 4.41714 \\ 
+  22.5 & 2.02175 & 53.5 & 4.49191 \\ 
+  23.5 & 2.10655 & 54.5 & 4.56636 \\ 
+  24.5 & 2.191 & 55.5 & 4.64051 \\ 
+  25.5 & 2.27509 & 56.5 & 4.71434 \\ 
+  26.5 & 2.35883 & 57.5 & 4.78786 \\ 
+  27.5 & 2.44221 & 58.5 & 4.86108 \\ 
+  28.5 & 2.52525 & 59.5 & 4.93399 \\ 
+  29.5 & 2.60794 & 60.5 & 5.0066 \\ 
+  30.5 & 2.69029 &   &   \\ 
+   \hline
+\end{tabular}
+\end{table}
+
 \FloatBarrier
 
 \begin{landscape}
@@ -2734,6 +2777,35 @@ Pacific ocean perch. \label{fig:nw_Length}}
 \includegraphics{Figures/NWFSCcombo_Ages.png}
 \caption{NWFSC shelf/slope survey age frequency distributions for
 Pacific ocean perch. \label{fig:nw_Age}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Figures/weightAtLengthBySource.png}
+\caption{Weight-at-length for Pacific ocean perch from all data sources.
+\label{fig:Wt_len}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Figures/weightAtLengthPred.png}
+\caption{Estimated weight-at-length for Pacific ocean perch from all
+data sources. \label{fig:Wt_len_pred}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Figures/LengthAgeAll.png}
+\caption{Estimated length-at-age for Pacific ocean perch from all data
+sources. \label{fig:Len_Age}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Ageing_Error.png}
+\caption{The estimated ageing error used in this assessment compared to
+the ageing error assumed in the previous assessment for Pacific ocean
+perch. \label{fig:Age_Error}}
 \end{figure}
 
 \begin{figure}
