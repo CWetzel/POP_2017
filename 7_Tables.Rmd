@@ -892,6 +892,28 @@ print(AgeError.table,
 <!-- ********************BASE-CASE MODEL 1 TABLES************************** --> 
 <!-- **REPEAT THIS SECTION AND EDIT AS NEEDED IF YOU HAVE MULTIPLE MODELS** --> 
 <!-- ====================================================================== -->
+
+<!-- ***********Model Setup TABLE*********************************************** -->
+```{r, results = 'asis'}
+ 
+  Model.Setup = read.csv('./txt_files/Model_Setup.csv')
+  colnames(Model.Setup) = c("Model Specification", "Base Model")
+
+  Model.Setup.Table = xtable(Model.Setup, 
+                      caption = c('Specifications of the base model for `r spp`.'),
+                      label = 'tab:Model_setup')
+
+align(Model.Setup.Table) = c('l',
+                        '>{\\raggedright}p{3in}', 
+                        '>{\\centering}p{2in}')
+
+print(Model.Setup.Table, include.rownames = FALSE, caption.placement = 'top', 
+          sanitize.text.function = function(x){x}, scalebox = .9)
+#print(Model.Setup.Table, 
+#      include.rownames = FALSE, 
+#      caption.placement = 'top')
+```
+\FloatBarrier
   
   
   
