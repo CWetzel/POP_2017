@@ -49,7 +49,7 @@ A survey targeted designed to sample `r spp` was conducted in 1979 and again in 
 <!-- ********************************************************************** -->
 <!-- ************FISHERY-DEPENDENT DATA************************************ -->
 <!-- ********************************************************************** -->
-##Fishery-dependent data
+##Fishery-Dependent Data
 
 ###Commercial Fishery Landings
 
@@ -65,11 +65,11 @@ Historical commercial fishery landings of `r spp` from Oregon for the years 1892
 
 Historical commercial fishery landings of `r spp` were obtained from the online database of the California Cooperative Groundfish Survey, also known as CALCOM (128.114.3.187) for the years 1916-1980. A description of the methods can be found in [@ralston_documentation_2010]. Recent landings  (1981-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
 
-**At-sea fishery**
+**At-Sea Hake Fishery**
 
 Catches of `r spp` are monitored aboard the vessel by observers in the At-Sea hake Observer program (ASHOP) and were available for the years of 1975-2016. Observers use a spatial sample design, based on weight, to randomly choose a portion of the haul to sample for species composition. For the last decade, this is typically 30-50% of the total weight. The total weight of the sample is determined by all catch passing over a flow scale. All species other than hake are removed and weighed, by species, on a motion compensated flatbed scale. Observers record the weights of all non-hake species. Non-hake species total weights are expanded in the database by using the proportion of the haul sampled to the total weight of the haul. The catches of non-hake species in unsampled hauls is determined using bycatch rates determined from sampled hauls. Since 2001, more than 97% of the hauls have been observed and sampled.
 
-**Foreign**
+**Foreign Catches**
 
 From the 1960s through the early 1970s, foreign trawling enterprises harvested considerable amounts of rockfish off Washington and Oregon, and along with the domestic trawling fleet, landed large quantities of `r spp`. Foreign catches of individual species were estimated by @rogers_species_2003 and attributed to INPFC areas for the years of 1966-1976 for `r spp`. The foreign catches were combined across areas for a coastwide removal total.
 
@@ -97,39 +97,31 @@ Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were com
 Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality of between 0.10 and 0.20yr^-1^ with a longevity
 less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural mortality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_evaluating_2015] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the development of the prior where female natural memorability was set equal to `r mod1$MGparmAdj$NatM_p_1_Fem_GP_1[1]` and male natural mortality estimated as an offset from females at `r round(mod1$MGparmAdj$NatM_p_1_Fem_GP_1[1] * exp(mod1$MGparmAdj$NatM_p_1_Mal_GP_1[1]),3)`. 
 
-\vspace{.5cm}
 
 ###Sex ratio, maturation, and fecundity
 
-Examining all biological data sources, the sex ratio of young fish are within 5% of 1:1 by either length or age (Figure \ref{fig:sexratio} and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at birth was assumed to be 1:1.  This assessment assumed a logistic maturity-at-length curve based on analysis of 537 fish maturity samples collected from the NWFSC shelf-slope survey.  This is revised from the previous assessment which assumed maturity-at-age based on the work of Hannah and Parker [@hannah_age-modulated_2007].  Additionally, the new maturity-at-length curve is based on the estimate of functional maturity an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the
-measured frequency of atretic cells (M. Head, personal communication).  The 50% size-at-maturity was estimated at 32.1 cm with maturity asymptoting to one for larger fish.
+Examining all biological data sources, the sex ratio of young fish are within 5% of 1:1 by either length or age (Figure \ref{fig:sexratio} and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at birth was assumed to be 1:1.  This assessment assumed a logistic maturity-at-length curve based on analysis of 537 fish maturity samples collected from the NWFSC shelf-slope survey.  This is revised from the previous assessment which assumed maturity-at-age based on the work of Hannah and Parker [@hannah_age-modulated_2007].  Additionally, the new maturity-at-length curve is based on the estimate of functional maturity an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The 50% size-at-maturity was estimated at 32.1 cm with maturity asymptoting to one for larger fish.
 
 The fecundity-at-age has also been updated from the previous assessment based on new research.  Dick [-@dick_meta-analysis_2017] estimated new fecundity relationships for select West Coast stocks where fecundity for `r spp` was estimated equal to `r mod1$MGparmAdj$Eggs_scalar_Fem[1]`$L$^`r round(mod1$MGparmAdj$Eggs_exp_len_Fem[1],2)`^ in millions of eggs. Spawning output at length is shown in Figure \ref{fig:fecundity}.
 
-\vspace{.5cm}
 
 ###Length-weight relationship
 
-The length-weight relationship for `r spp` was estimated outside the model using all biological data available from fishery and fishery-independent data sources where the female weight-at-length in grams was estimated at `r mod1$MGparmAdj$Wtlen_1_Fem[1]`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at `r mod1$MGparmAdj$Wtlen_1_Mal[1]`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Mal[1], 2)`^ where $L$ is length in cm.
+The length-weight relationship for `r spp` was estimated outside the model using all biological data available from fishery and fishery-independent data sources where the female weight-at-length in grams was estimated at `r mod1$MGparmAdj$Wtlen_1_Fem[1]`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at `r mod1$MGparmAdj$Wtlen_1_Mal[1]`$L$^`r round(mod1$MGparmAdj$Wtlen_2_Mal[1], 2)`^ where $L$ is length in cm (Figures \ref{fig:Wt_len} and \ref{fig:Wt_len_pred}).
 
-
-\vspace{.5cm}
 
 ###Growth (length-at-age)
 
-\hl{Write if estimated or fixed in the final model}
+The length-at-age was estimated for male and female `r spp` using data collected from both fishery-dependent and -independent data sources that were collected from 1981-2016. Figure \ref{fig:Len_Age} shows the lengths and ages for all years and all data as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex specific growth parameters were estimated at the following values:
 
-<!-- \hl{Length-at-age was initially estimated external to the population dynamics models 
-using the von Bertalanffy growth curve, $L_i = L_{\infty}e^{(-k[t-t_0])}$, 
-where $L_i$ is the length (cm) at age $i$, $t$ is age in years, $k$ is rate of 
-increase in growth, $t_0$ is the intercept, and $L_{\infty}$ is the asymptotic length.  } -->
+Females $L_{\infty}$ = 42.32; $k$ = 0.169; $t_0$ = -1.466
 
-
-\vspace{.5cm}
-**Aging Precision And Bias**
+Males $L_{\infty}$ = 39.03; $k$ = 0.212; $t_0$ = -1.02
 
 
+###Ageing Precision And Bias
 
+Uncertainty surrounding the ageing-error process for `r spp` was incorporated by estimating ageing error by age. Age-composition data used in the model were from break-and-burn otolith reads aged by the Cooperative Ageing Project (CAP) in Newport, Oregon. Break-and-burn double reads of more than 1500 otoliths were provided by the CAP lab.  An ageing error estimate was made based on these double reads using a computational tool specifically developed for estimating ageing error [@punt_quantifying_2008], and using release 1.0.0 of the R package nwfscAgeingError [@thorson_nwfscageingerror:_2012] for input and output diagnostics, publicly available at: https://github.com/nwfsc-assess/nwfscAgeingError. A non-linear standard error was estimated by age where there is more variability in the estimated age of older fish was estimated (Table \ref{tab:Age_Error}, Figure \ref{fig:Age_Error}). 
 
 
 ###Environmental Or Ecosystem Data Included In The Assessment

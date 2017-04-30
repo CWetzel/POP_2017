@@ -909,9 +909,7 @@ align(Model.Setup.Table) = c('l',
 
 print(Model.Setup.Table, include.rownames = FALSE, caption.placement = 'top', 
           sanitize.text.function = function(x){x}, scalebox = .9)
-#print(Model.Setup.Table, 
-#      include.rownames = FALSE, 
-#      caption.placement = 'top')
+
 ```
 \FloatBarrier
   
