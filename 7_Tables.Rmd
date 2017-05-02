@@ -715,9 +715,9 @@ print(Fish_Length.table,
 names = "Fishery" #unique(mod1$cpue$FleetName)
 survey.list = list()
 for(i in 1:length(names)){
-  grab = mod1$cpue[mod1$cpue$FleetName == names[i], c("Obs", "SE") ]
+  grab = mod1$cpue[mod1$cpue$Name == names[i], c("Obs", "SE") ]
   survey.list[[i]] = grab
-  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$FleetName == names[i], "Yr" ]
+  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$Name == names[i], "Yr" ]
   colnames(survey.list[[i]]) = c("Obs", "SE")
 }
 names(survey.list) = names
@@ -757,13 +757,13 @@ print(Index_summary.table,
 
 ```{r, results = 'asis'}
 #Index_summary = read.csv('./txt_files/Index_summary.csv')
-names = unique(mod1$cpue$FleetName)
+names = unique(mod1$cpue$Name)
 names = names[2:length(names)]
 survey.list = list()
 for(i in 1:length(names)){
-  grab = mod1$cpue[mod1$cpue$FleetName == names[i], c("Obs", "SE") ]
+  grab = mod1$cpue[mod1$cpue$Name == names[i], c("Obs", "SE") ]
   survey.list[[i]] = grab
-  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$FleetName == names[i], "Yr" ]
+  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$Name == names[i], "Yr" ]
   colnames(survey.list[[i]]) = c("Obs", "SE")
 }
 names(survey.list) = names

@@ -150,7 +150,7 @@ Recommendation:Discard estimates from observer programs should be presented, rev
   
 Recommendation:The ability to allow different "plus groups" for specific data types should be evaluated (and implemented in Stock Synthesis).  For example, this would provide the ability to use the biased surface-aged data in an appropriate way.
 
-*STAT response: blah blah blah....*
+*STAT response: Additional research needs to completed which evaluates the amount of bias and imprecision in surface-read ages.  Evaluating avaiable surface-read ages within the PacFIN database fish of lengths between 23-44 cm can be aged at 10 years old.  This large range of lengths at the same age indicates considerable bias in ages for fish surface-read younger aged fish.*
 
 Recommendation:Historical catch reconstruction estimates should be formally reviewed prior to being used in assessments and should be coordinated so that interactions between stocks are appropriately treated. The relative reliability of the catch estimates over time could provide an axis of uncertainty in future assessments.
 
