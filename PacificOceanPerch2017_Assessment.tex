@@ -914,8 +914,9 @@ small number (\textasciitilde{}700) of cells from a very large
 population of possible cells (greater than 11,000) distributed from the
 Mexican to the Canadian border.
 
-The data from the NWFSC shelf-slope survey was analyzed using a spatial
-delta-generalized linear mixed model (delta-GLMM) (Thorson and Barnett
+The data from the NWFSC shelf-slope survey was analyzed using a
+spatio-temporal delta-generalized linear mixed model (VAST delta-GLMM)
+(Thorson and Barnett
 \protect\hyperlink{ref-thorson_comparing_2017}{2017}). Predicted fish
 biomass density is derived as the product of a ``delta'' portion for the
 probability of a non-zero catch and a second portion for the magnitude
@@ -924,19 +925,48 @@ accommodate spatial autocorrelation. Additional information about the
 approach and the software package it is implemented in are available
 from www.fishstats.org. \hl{describe VAST}
 
-The estimated index of abundance is shown in Table
-\ref{tab:Index_Summary}.
+The smallest Pacific ocean perch tend to occur in the shallower depths
+(\textless{} 200 m) with only larger individuals occuring at depths
+deeper than 300 m. Data collected by the NWFSC Shelf-Slope survey
+between depths of 55 - 549 m and north of \(42^circ\) and south of
+\(49^circ\) were stratified to generate an index of abundance from
+2003-2016. The estimated index of abundance is shown in Table
+\ref{tab:Index_Summary}. The lognormal distribution with random
+strata-year and vessel effects had the lowest AIC and was chosen as the
+final model. The Q-Q plot does not show any departures from the assumed
+distribution (Figure \ref{fig:nw_qq}). The indices for the NWFSC
+shelf-slope survey show a tentative decline in the population between
+2003 and 2009, with an increasing trend in biomass between the 2009 and
+2016 median point estimates.
+
+Length, age, and conditional age-at-length compositions were expanded
+based upon the stratification. The expanded length frequencies from this
+survey show an increase in small fish starting in 2010 (Figure
+\ref{fig:nw_Length}). The age frequencies provide clear evidence of
+large year-classes moving through the population from the 1999, 2000,
+and 2008 recruitment; with early indications of a large 2013 recruitment
+(Figure \ref{fig:nw_Age}).
 
 \subsubsection{Northwest Fisheries Science Center (NWFSC) slope
 survey}\label{northwest-fisheries-science-center-nwfsc-slope-survey}
 
 The NWFSC slope survey covered waters throughout the summer from 183 m
 to 1280 m north of \(34^\circ 30^\prime\) S, which is near Point
-Conception. The survey strata used to expand the biomass data for this
-assessment are shown in \hl{Table 5}.
+Conception between 1999 and 2002. Tows conducted between the depths of
+183 and 549 m were used to create an index of abundance using the VAST
+delta-GLMM model. The estimated index of abundance is show in Table
+\ref{tab:Index_Summary}. The lognormal distribution with random
+strata-year had the lowest AIC and was chosen as the final model.
+\hl{The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:nw_slope_qq}). }
+The trend of abundance across the four surveys years was generally flat
+with high estimated annual variance.
 
-The estimated index of abundance is shown in Table
-\ref{tab:Index_Summary}.
+Length and age compositions were available for 2001 and 2002 and were
+expanded based upon the survey stratifcation. The expanded length
+frequencies from this survey shows that primarily only large fish were
+captured both years (Figure \ref{fig:nw_slope_Length}). The majority of
+fish observed by this survey were aged at greater than 10 years (Figure
+\ref{fig:nw_slope_Age}).
 
 \subsubsection{Alaska Fisheries Science Center (AFSC) slope
 survey}\label{alaska-fisheries-science-center-afsc-slope-survey}
@@ -2758,7 +2788,147 @@ Year & OFL contriubtion (mt) & ACL landings (mt) & Age 3+ biomass (mt) & Spawnin
 
 \FloatBarrier
 
+\begin{figure}
+\centering
+\includegraphics{Figures/Q-Q_plot_combo.jpg}
+\caption{Q-Q plots for the VAST lognormal distribution for the NWFSC
+shelf-slope survey. \label{fig:nw_qq}}
+\end{figure}
+
 \FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/NWFSCcombo_Lengths.png}
+\caption{NWFSC shelf-slope survey length frequency distributions for
+Pacific ocean perch. \label{fig:nw_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/NWFSCcombo_Ages.png}
+\caption{NWFSC shelf-slope survey age frequency distributions for
+Pacific ocean perch. \label{fig:nw_Age}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/NWslope_Lengths.png}
+\caption{NWFSC slope survey length frequency distributions for Pacific
+ocean perch. \label{fig:nw_slope_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/NWslope_Ages.png}
+\caption{NWFSC slope survey age frequency distributions for Pacific
+ocean perch. \label{fig:nw_slope_Age}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Q-Q_plot_afsc.jpg}
+\caption{Q-Q plots for the VAST lognormal distribution for the AFSC
+slope survey. \label{fig:afsc_qq}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/AFSCslope_Lengths.png}
+\caption{AFSC slope survey length frequency distributions for Pacific
+ocean perch. \label{fig:afsc_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Q-Q_plot_triennial.jpg}
+\caption{Q-Q plots for the VAST lognormal distribution for the Triennial
+survey. \label{fig:tri_qq}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Triennial_Lengths.png}
+\caption{Triennial survey length frequency distributions for Pacific
+ocean perch. \label{fig:Tri_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Triennial_Ages.png}
+\caption{Triennial survey age frequency distributions for Pacific ocean
+perch. \label{fig:Tri_Age}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Q-Q_plot_pop.jpg}
+\caption{Q-Q plots for the VAST lognormal distribution for the Pacific
+ocean perch survey. \label{fig:tri_qq}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/POP_lengths.png}
+\caption{Pacific ocean perch survey length frequency distributions for
+Pacific ocean perch. \label{fig:POP_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/POP_ages.png}
+\caption{Pacific ocean perch survey age frequency distributions for
+Pacific ocean perch. \label{fig:POP_Age}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/discardLengthComps.png}
+\caption{Discard length frequency distributions from WCGOP for Pacific
+ocean perch. \label{fig:WCGOP_discard}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/ASHOP_lengths.png}
+\caption{At-Sea hake fishery length frequency distributions for Pacific
+ocean perch. \label{fig:ASHOP_Length}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{Figures/ASHOP_ages.png}
+\caption{At-Sea hake fishery age frequency distributions for Pacific
+ocean perch. \label{fig:ASHOP_Age}}
+\end{figure}
 
 \FloatBarrier
 
@@ -2798,84 +2968,7 @@ ocean perch. \label{fig:mat_compare}}
 \label{fig:fecundity}}
 \end{figure}
 
-\FloatBarrier  \includegraphics{Figures/discardLengthComps.png}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/ASHOP_lengths.png}
-\caption{At-Sea hake fishery length frequency distributions for Pacific
-ocean perch. \label{fig:ASHOP_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/ASHOP_ages.png}
-\caption{At-Sea hake fishery age frequency distributions for Pacific
-ocean perch. \label{fig:ASHOP_Age}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/POP_lengths.png}
-\caption{Pacific ocean perch survey length frequency distributions for
-Pacific ocean perch. \label{fig:POP_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/POP_ages.png}
-\caption{Pacific ocean perch survey age frequency distributions for
-Pacific ocean perch. \label{fig:POP_Age}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/Triennial_Lengths.png}
-\caption{Triennial survey length frequency distributions for Pacific
-ocean perch. \label{fig:Tri_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/Triennial_Ages.png}
-\caption{Triennial survey age frequency distributions for Pacific ocean
-perch. \label{fig:Tri_Age}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/AFSCslope_Lengths.png}
-\caption{AFSC slope survey length frequency distributions for Pacific
-ocean perch. \label{fig:afsc_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/NWslope_Lengths.png}
-\caption{NWFSC slope survey length frequency distributions for Pacific
-ocean perch. \label{fig:nw_slope_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/NWslope_Ages.png}
-\caption{NWFSC slope survey age frequency distributions for Pacific
-ocean perch. \label{fig:nw_slope_Age}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/NWFSCcombo_Lengths.png}
-\caption{NWFSC shelf/lope survey length frequency distributions for
-Pacific ocean perch. \label{fig:nw_Length}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Figures/NWFSCcombo_Ages.png}
-\caption{NWFSC shelf/slope survey age frequency distributions for
-Pacific ocean perch. \label{fig:nw_Age}}
-\end{figure}
+\FloatBarrier 
 
 \begin{figure}
 \centering

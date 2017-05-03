@@ -40,40 +40,102 @@
   
 ![Total catches `r spp` through 2016. \label{fig:Catch}](r4ss/plots_mod1/catch2 landings stacked.png)
   
-  
-  
 \FloatBarrier
 
-<!-- ********************************************************************** --> 
-<!-- *****************Commercial Discards FIGURES************************** --> 
+
+
+<!-- ********************************************************************** 
+<!-- ****************Length and Age Composition FIGURES******************** --> 
 <!-- ********************************************************************** -->
-  
 
+![Q-Q plots for the VAST lognormal distribution for the NWFSC shelf-slope survey. \label{fig:nw_qq}](Figures/Q-Q_plot_combo.jpg)
 
-
-
-
-
-<!-- ********************************************************************** -->
-<!-- ************Recreational Landings and Discards FIGURES**************** --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-  
-  
-  
 \FloatBarrier
 
-<!-- ********************************************************************** -->
-<!-- ****************Oregon commercial logbook FIGURES********************* -->
-<!-- ********************************************************************** --> 
-  
-  
-  
-  
-  \FloatBarrier
+![NWFSC shelf-slope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](Figures/NWFSCcombo_Lengths.png)
+
+\FloatBarrier
+
+![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](Figures/NWFSCcombo_Ages.png)
+
+\FloatBarrier
+
+
+<!--  ![Q-Q plots for the VAST lognormal distribution for the NWFSC slope survey. \label{fig:nw_slope_qq}](Figures/Q-Q_plot_nw_slope.jpg)-->
+![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](Figures/NWslope_Lengths.png)
+
+\FloatBarrier
+
+![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](Figures/NWslope_Ages.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the AFSC slope survey. \label{fig:afsc_qq}](Figures/Q-Q_plot_afsc.jpg)
+
+\FloatBarrier
+
+![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](Figures/AFSCslope_Lengths.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the Triennial survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
+
+\FloatBarrier
+
+![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/Triennial_Lengths.png)
+
+\FloatBarrier
+
+![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/Triennial_Ages.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the `r spp` survey. \label{fig:tri_qq}](Figures/Q-Q_plot_pop.jpg)
+
+\FloatBarrier
+
+![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](Figures/POP_lengths.png)
+
+\FloatBarrier
+
+![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](Figures/POP_ages.png)
+
+\FloatBarrier
+
+
+
+
+
+
+
+
+
+
+<!-- ****************************************************************************** --> 
+<!-- *****************Commercial Comps & Discards FIGURES************************** --> 
+<!-- ****************************************************************************** -->
+
+![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](Figures/discardLengthComps.png)
+
+\FloatBarrier
+
+<!--
+![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](Figures/Commercial_Lengths.png)
+
+![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](Figures/Commercial_Ages.png)
+-->
+
+![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](Figures/ASHOP_lengths.png)
+
+\FloatBarrier
+
+![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](Figures/ASHOP_ages.png)
+
+\FloatBarrier
+
 
 <!-- ====================================================================== -->
 <!-- *****************                             ************************ -->
@@ -96,40 +158,7 @@
   
   
 \FloatBarrier 
-<!-- ********************************************************************** -->
-<!-- ****************Length and Age Composition FIGURES******************** --> 
-<!-- ********************************************************************** -->
-![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](Figures/discardLengthComps.png)
 
-<!--
-![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](Figures/Commercial_Lengths.png)
-
-![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](Figures/Commercial_Ages.png)
--->
-
-![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](Figures/ASHOP_lengths.png)
-
-![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](Figures/ASHOP_ages.png)
-
-
-![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](Figures/POP_lengths.png)
-
-![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](Figures/POP_ages.png)
-
-
-![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/Triennial_Lengths.png)
-
-![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/Triennial_Ages.png)
-
-![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](Figures/AFSCslope_Lengths.png)
-
-![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](Figures/NWslope_Lengths.png)
-
-![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](Figures/NWslope_Ages.png)
-
-![NWFSC shelf/lope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](Figures/NWFSCcombo_Lengths.png)
-
-![NWFSC shelf/slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](Figures/NWFSCcombo_Ages.png)
 
 <!-- ********************************************************************** -->
 <!-- **********************Weight-Length FIGURES*************************** --> 
