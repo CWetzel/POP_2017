@@ -93,7 +93,7 @@
 \FloatBarrier
 
 
-![Q-Q plots for the VAST lognormal distribution for the `r spp` survey. \label{fig:tri_qq}](Figures/Q-Q_plot_pop.jpg)
+![Q-Q plots for the VAST lognormal distribution for the `r spp` survey. \label{fig:pop_qq}](Figures/Q-Q_plot_pop.jpg)
 
 \FloatBarrier
 
