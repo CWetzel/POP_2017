@@ -10,13 +10,15 @@ Data used in the `r spp` assessment are summarized in Figure \ref{fig:data_plot}
 
 ###Northwest Fisheries Science Center (NWFSC) shelf-slope survey
 
-The NWFSC shelf-slope survey is based on a random-grid design; covering the coastal waters from a depth of 55 m to 1,280 m [@bradburn_2003_2011]. This design uses four chartered industry vessels in most years, assigned to a roughly equal number of randomly selected grid cells. The survey, which has been conducted from late-May to early-October each year, is divided into two 2-vessel passes of the coast, which are executed from north to south. This design therefore incorporates both vessel-to-vessel differences in catchability as well as variance associated with selecting a relatively small number (~700) of cells from a very large population of possible cells (greater than 11,000) distributed from the Mexican to the Canadian border. 
+The NWFSC shelf-slope survey is based on a random-grid design; covering the coastal waters from a depth of 55 m to 1,280 m [@bradburn_2003_2011]. This design uses four chartered industry vessels in most years, assigned to a roughly equal number of randomly selected grid cells. The survey, which has been conducted from late-May to early-October each year, is divided into two 2-vessel passes of the coast, which are executed from north to south. This design therefore incorporates both vessel-to-vessel differences in catchability as well as variance associated with selecting a relatively small number (approximately 700) of cells from a very large population of possible cells (greater than 11,000) distributed from the Mexican to the Canadian border. 
 
 The data from the NWFSC shelf-slope survey was analyzed using a spatio-temporal delta-generalized linear mixed model (VAST delta-GLMM) [@thorson_comparing_2017]. Predicted fish biomass density is derived as the product of a "delta" portion for the probability of a non-zero catch and a second portion for the magnitude of the non-zero catches.  Further, the geostatistical GLMM framework can accommodate spatial autocorrelation.  Additional information about the approach and the software package it is implemented in are available from www.fishstats.org. \hl{describe VAST}
 
 The smallest `r spp` tend to occur in the shallower depths (< 200 m) with only larger individuals occurring at depths deeper than 300 m. Data collected by the NWFSC Shelf-Slope survey between depths of 55 - 549 m and north of $42^circ$ and south of $49^circ$ were stratified to generate an index of abundance from 2003-2016. The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The lognormal distribution with random strata-year and vessel effects had the lowest AIC and was chosen as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:nw_qq}).  The indices for the NWFSC shelf-slope survey show a tentative decline in the population between 2003 and 2009, with an increasing trend in biomass between the 2009 and 2016 median point estimates.
 
 Length, age, and conditional age-at-length compositions were expanded based upon the stratification.  The number of tows with length data ranged from 33 in 2006 to 69 in 2015 (Table \ref{tab:NWcombo_Lengths}) where ages were collected for `r spp` in nearly every tow (Table \ref{tab:NWcombo_Ages}).  The expanded length frequencies from this survey show an increase in small fish starting in 2010 (Figure \ref{fig:nw_Length}).  The age frequencies provide clear evidence of large year-classes moving through the population from the 1999, 2000, and 2008 recruitment; with early indications of a large 2013 recruitment (Figure \ref{fig:nw_Age}).
+
+The effective sample sizes for length and marginal age composition data for all fishery-independet surveys were calculated according to Stewart & Hamel [-@stewart_bootstrapping_2014] which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43*$N_{\text{tow}}$.  The effective sample size of conditional-age-at-length data was set at the number of fish at each length by year.
 
 ###Northwest Fisheries Science Center (NWFSC) slope survey  
 
@@ -88,16 +90,20 @@ The second source is from the West Coast Groundfish Observer Program (WCGOP).  T
 
 ###Historical Commercial Catch-per-unit effort
 
-Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas (Table \ref{tab:CPUE_Summary} from Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggest that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time.  A CV of 0.40 was used in this assessment to be consistent with the CV observed in the survey data.
+Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas (Table \ref{tab:CPUE_Summary}, from Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggest that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time.  A CV of 0.40 was used in this assessment to be consistent with the CV observed in the survey data.
 
 ###Fishery Length And Age Data
 Biological data from commercial fisheries that caught `r spp` were extracted from PacFIN (PFSMFC) on \hl{XXXX}.  Lengths taken during port sampling in Oregon and Washington were used to calculate length and age compositions.  There were no biological data for `r spp` available within PacFIN.  The overwhelming majority of these data were collected from the mid-water and bottom trawl gear, but additional biological data were collected from non-trawl gear which was grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and \ref{tab:Comm_Ages} show the number of trips and fish sampled, along with the calculated sample sizes.  The sample sizes were calculated as:
 
-$N_{input} = N_{tows} + 0.138 * N_{fish}$
+\begin{centering}
 
-Input effN = $N_{input}$ if $N_{fish}/N_{tows}$ is $<$ 44
+$N_{\text{input}} = N_{\text{tows}} + 0.138 * N_{\text{fish}}$
 
-Input effN = $7.06 * N_{tows}$
+Input effN = $N_{\text{input}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $<$ 44
+
+Input effN = $7.06 * N_{\text{tows}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $\geq$ 44
+
+\end{centering}
 
 
 
@@ -107,12 +113,12 @@ Input effN = $7.06 * N_{tows}$
 ###Natural mortality
 
 Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality of between 0.10 and 0.20yr^-1^ with a longevity
-less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural mortality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_evaluating_2015] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the development of the prior where female natural memorability was set equal to `r mod1$MGparmAdj$NatM_p_1_Fem_GP_1[1]` and male natural mortality estimated as an offset from females at `r round(mod1$MGparmAdj$NatM_p_1_Fem_GP_1[1] * exp(mod1$MGparmAdj$NatM_p_1_Mal_GP_1[1]),3)`. 
+less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural mortality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_evaluating_2015] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the development of the prior where median for female natural mortality was 0.054. 
 
 
 ###Sex ratio, maturation, and fecundity
 
-Examining all biological data sources, the sex ratio of young fish are within 5% of 1:1 by either length or age (Figure \ref{fig:sexratio} and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at birth was assumed to be 1:1.  This assessment assumed a logistic maturity-at-length curve based on analysis of 537 fish maturity samples collected from the NWFSC shelf-slope survey.  This is revised from the previous assessment which assumed maturity-at-age based on the work of Hannah and Parker [@hannah_age-modulated_2007].  Additionally, the new maturity-at-length curve is based on the estimate of functional maturity an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The 50% size-at-maturity was estimated at 32.1 cm with maturity asymptoting to one for larger fish.
+Examining all biological data sources, the sex ratio of young fish are within 5% of 1:1 by either length or age (Figures \ref{fig:sexratio} and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at birth was assumed to be 1:1.  This assessment assumed a logistic maturity-at-length curve based on analysis of 537 fish maturity samples collected from the NWFSC shelf-slope survey.  This is revised from the previous assessment which assumed maturity-at-age based on the work of Hannah and Parker [@hannah_age-modulated_2007].  Additionally, the new maturity-at-length curve is based on the estimate of functional maturity an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The 50% size-at-maturity was estimated at 32.1 cm with maturity asymptoting to one for larger fish (Figure \ref{fig:mat}).  Comparison between the maturity-at-age used in the previous assessment and the updated functional maturity-at-length is shown in Figure \ref{fig:mat_compare}.
 
 The fecundity-at-age has also been updated from the previous assessment based on new research.  Dick [-@dick_meta-analysis_2017] estimated new fecundity relationships for select West Coast stocks where fecundity for `r spp` was estimated equal to `r mod1$MGparmAdj$Eggs_scalar_Fem[1]`$L$^`r round(mod1$MGparmAdj$Eggs_exp_len_Fem[1],2)`^ in millions of eggs. Spawning output at length is shown in Figure \ref{fig:fecundity}.
 
@@ -126,9 +132,13 @@ The length-weight relationship for `r spp` was estimated outside the model using
 
 The length-at-age was estimated for male and female `r spp` using data collected from both fishery-dependent and -independent data sources that were collected from 1981-2016. Figure \ref{fig:Len_Age} shows the lengths and ages for all years and all data as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex specific growth parameters were estimated at the following values:
 
+\begin{centering}
+
 Females $L_{\infty}$ = 42.32; $k$ = 0.169; $t_0$ = -1.466
 
 Males $L_{\infty}$ = 39.03; $k$ = 0.212; $t_0$ = -1.02
+
+\end{centering}
 
 
 ###Ageing Precision And Bias
@@ -154,11 +164,11 @@ Recommendation: Considering trans-boundary stock effects should be pursued. In p
 Recommendation:The benefits of adopting the complex model used this year should be evaluated relative to simpler assumptions and models. While the transition from the simpler old model to
 Stock Synthesis was shown to be similar for the historical period, the depletion estimates in the most recent years were different enough to warrant further investigation.
 
-*STAT response: blah blah blah....*
+*STAT response: This assessment was performed in Stock Synthesis, an integrated model, which can be modified to either simple or complex structural forms based upon the available data and the processes being modeled.  There were not addtional explorations of alternative modeling platforms.*
 
 Recommendation:Discard estimates from observer programs should be presented, reviewed (similar to the catch reconstructions), and be made available to the assessment process.
 
-*STAT response: blah blah blah....*
+*STAT response: This assessment uses discard rates and discard lengths collected by the WCGOP from 2003-2015.*
   
 Recommendation:The ability to allow different "plus groups" for specific data types should be evaluated (and implemented in Stock Synthesis).  For example, this would provide the ability to use the biased surface-aged data in an appropriate way.
 
@@ -166,7 +176,7 @@ Recommendation:The ability to allow different "plus groups" for specific data ty
 
 Recommendation:Historical catch reconstruction estimates should be formally reviewed prior to being used in assessments and should be coordinated so that interactions between stocks are appropriately treated. The relative reliability of the catch estimates over time could provide an axis of uncertainty in future assessments.
 
-*STAT response: blah blah blah....*
+*STAT response: California and Oregon have ungone extensive work to create historical catch reconstructions.  This is the first assessment for `r spp` which includes a Washington historical catch reconstruction.  The data used in this assessment represent Washington state's current best estimate for historical catches.  Both California and Washington are conducting research to estimate uncertainty surround historical catches which could be used to propegate uncertainty within the assessment.*
 
 
 <!-- *************************************************************************** -->
@@ -175,6 +185,8 @@ Recommendation:Historical catch reconstruction estimates should be formally revi
 #Assessment
 
 ##Model Description
+
+
 
 ###Transition To The Current Stock Assessment
 Include: Complete description of any new modeling approaches

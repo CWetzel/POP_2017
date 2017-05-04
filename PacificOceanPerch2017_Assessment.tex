@@ -909,9 +909,9 @@ conducted from late-May to early-October each year, is divided into two
 2-vessel passes of the coast, which are executed from north to south.
 This design therefore incorporates both vessel-to-vessel differences in
 catchability as well as variance associated with selecting a relatively
-small number (\textasciitilde{}700) of cells from a very large
-population of possible cells (greater than 11,000) distributed from the
-Mexican to the Canadian border.
+small number (approximately 700) of cells from a very large population
+of possible cells (greater than 11,000) distributed from the Mexican to
+the Canadian border.
 
 The data from the NWFSC shelf-slope survey was analyzed using a
 spatio-temporal delta-generalized linear mixed model (VAST delta-GLMM)
@@ -948,6 +948,14 @@ this survey show an increase in small fish starting in 2010 (Figure
 large year-classes moving through the population from the 1999, 2000,
 and 2008 recruitment; with early indications of a large 2013 recruitment
 (Figure \ref{fig:nw_Age}).
+
+The effective sample sizes for length and marginal age composition data
+for all fishery-independet surveys were calculated according to Stewart
+\& Hamel (\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014})
+which determined that the approximate realized sample size for
+shelf/slope rockfish species was 2.43*\(N_{\text{tow}}\). The effective
+sample size of conditional-age-at-length data was set at the number of
+fish at each length by year.
 
 \subsubsection{Northwest Fisheries Science Center (NWFSC) slope
 survey}\label{northwest-fisheries-science-center-nwfsc-slope-survey}
@@ -1205,7 +1213,7 @@ effort}\label{historical-commercial-catch-per-unit-effort}
 
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery
 were combined for the INPFC Vancouver and Columbia areas (Table
-\ref{tab:CPUE_Summary} from Gunderson
+\ref{tab:CPUE_Summary}, from Gunderson
 (\protect\hyperlink{ref-gunderson_population_1977}{1977})). Although
 these data reflect catch rates for the US fleet, the highest catch rates
 coincided with the beginning of removals by the foreign fleet. This
@@ -1228,11 +1236,15 @@ grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and
 \ref{tab:Comm_Ages} show the number of trips and fish sampled, along
 with the calculated sample sizes. The sample sizes were calculated as:
 
-\(N_{input} = N_{tows} + 0.138 * N_{fish}\)
+\begin{centering}
 
-Input effN = \(N_{input}\) if \(N_{fish}/N_{tows}\) is \(<\) 44
+$N_{\text{input}} = N_{\text{tows}} + 0.138 * N_{\text{fish}}$
 
-Input effN = \(7.06 * N_{tows}\)
+Input effN = $N_{\text{input}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $<$ 44
+
+Input effN = $7.06 * N_{\text{tows}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $\geq$ 44
+
+\end{centering}
 
 \subsection{Biological Data}\label{biological-data}
 
@@ -1261,16 +1273,15 @@ non-linear function of maximum age as developed by Then et al.
 (\protect\hyperlink{ref-then_evaluating_2015}{2015}) and modified by
 Owen Hamel which greatly improved the fit to the underlying age data to
 create the `Hamel-Then' prior. A maximum age of 100 was used in the
-development of the prior where female natural memorability was set equal
-to 0.054 and male natural mortality estimated as an offset from females
-at 0.053.
+development of the prior where median for female natural mortality was
+0.054.
 
 \subsubsection{Sex ratio, maturation, and
 fecundity}\label{sex-ratio-maturation-and-fecundity}
 
 Examining all biological data sources, the sex ratio of young fish are
-within 5\% of 1:1 by either length or age (Figure \ref{fig:sexratio} and
-\ref{fig:sexratio_Age}), and hence this assessment the sex ratio at
+within 5\% of 1:1 by either length or age (Figures \ref{fig:sexratio}
+and \ref{fig:sexratio_Age}), and hence this assessment the sex ratio at
 birth was assumed to be 1:1. This assessment assumed a logistic
 maturity-at-length curve based on analysis of 537 fish maturity samples
 collected from the NWFSC shelf-slope survey. This is revised from the
@@ -1282,7 +1293,10 @@ maturity an approach that classifies rockfish maturity with developing
 oocytes as mature or immature based on the proportion of vitellogenin in
 the cytoplasm and the measured frequency of atretic cells (M. Head,
 personal communication). The 50\% size-at-maturity was estimated at 32.1
-cm with maturity asymptoting to one for larger fish.
+cm with maturity asymptoting to one for larger fish (Figure
+\ref{fig:mat}). Comparison between the maturity-at-age used in the
+previous assessment and the updated functional maturity-at-length is
+shown in Figure \ref{fig:mat_compare}.
 
 The fecundity-at-age has also been updated from the previous assessment
 based on new research. Dick
@@ -1312,9 +1326,13 @@ predicted von Bertalanffy fits to the data. Females grow larger than
 males and sex specific growth parameters were estimated at the following
 values:
 
-Females \(L_{\infty}\) = 42.32; \(k\) = 0.169; \(t_0\) = -1.466
+\begin{centering}
 
-Males \(L_{\infty}\) = 39.03; \(k\) = 0.212; \(t_0\) = -1.02
+Females $L_{\infty}$ = 42.32; $k$ = 0.169; $t_0$ = -1.466
+
+Males $L_{\infty}$ = 39.03; $k$ = 0.212; $t_0$ = -1.02
+
+\end{centering}
 
 \subsubsection{Ageing Precision And
 Bias}\label{ageing-precision-and-bias}
@@ -1365,13 +1383,18 @@ to be similar for the historical period, the depletion estimates in the
 most recent years were different enough to warrant further
 investigation.
 
-\emph{STAT response: blah blah blah\ldots{}.}
+\emph{STAT response: This assessment was performed in Stock Synthesis,
+an integrated model, which can be modified to either simple or complex
+structural forms based upon the available data and the processes being
+modeled. There were not addtional explorations of alternative modeling
+platforms.}
 
 Recommendation:Discard estimates from observer programs should be
 presented, reviewed (similar to the catch reconstructions), and be made
 available to the assessment process.
 
-\emph{STAT response: blah blah blah\ldots{}.}
+\emph{STAT response: This assessment uses discard rates and discard
+lengths collected by the WCGOP from 2003-2015.}
 
 Recommendation:The ability to allow different ``plus groups'' for
 specific data types should be evaluated (and implemented in Stock
@@ -1391,7 +1414,14 @@ coordinated so that interactions between stocks are appropriately
 treated. The relative reliability of the catch estimates over time could
 provide an axis of uncertainty in future assessments.
 
-\emph{STAT response: blah blah blah\ldots{}.}
+\emph{STAT response: California and Oregon have ungone extensive work to
+create historical catch reconstructions. This is the first assessment
+for Pacific ocean perch which includes a Washington historical catch
+reconstruction. The data used in this assessment represent Washington
+state's current best estimate for historical catches. Both California
+and Washington are conducting research to estimate uncertainty surround
+historical catches which could be used to propegate uncertainty within
+the assessment.}
 
 \section{Assessment}\label{assessment}
 
@@ -2037,117 +2067,6 @@ Year & OFL (mt; ABC prior to 2011) & ABC (mt) & ACL (mt; OY prior to 2011) & Tot
 
 \begin{table}[ht]
 \centering
-\caption{Summary of Pacific ocean perch survey length samples used in the stock assessment.} 
-\label{tab:POP_Lengths}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-1979 & 125 & 2375 & 303 \\ 
-  1985 & 126 & 2558 & 306 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of Pacific ocean perch survey age samples used in the stock assessment.} 
-\label{tab:POP_Ages}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-1985 & 29 & 1635 & 70 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of Triennial survey length samples used in the stock assessment.} 
-\label{tab:TriennialLengths}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-1980 & 18 & 1315 & 43 \\ 
-  1983 & 40 & 2820 & 97 \\ 
-  1986 & 17 & 877 & 41 \\ 
-  1989 & 42 & 1851 & 102 \\ 
-  1992 & 33 & 1182 & 80 \\ 
-  1995 & 71 & 1136 & 172 \\ 
-  1998 & 81 & 1482 & 196 \\ 
-  2001 & 74 & 669 & 179 \\ 
-  2004 & 63 & 1240 & 153 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of Triennial survey age samples used in the stock assessment.} 
-\label{tab:Triennial_Ages}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-1989 & 15 & 577 & 36 \\ 
-  1992 & 10 & 373 & 24 \\ 
-  1995 & 12 & 275 & 29 \\ 
-  1998 & 28 & 352 & 68 \\ 
-  2001 & 43 & 342 & 104 \\ 
-  2004 & 57 & 416 & 138 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of AFSC slope survey length samples used in the stock assessment.} 
-\label{tab:AFSC_Lengths}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-1996 & 48 & 1396 & 116 \\ 
-  1997 & 21 & 347 & 51 \\ 
-  1999 & 21 & 562 & 51 \\ 
-  2000 & 19 & 353 & 46 \\ 
-  2001 & 23 & 390 & 55 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of NWFSC slope survey length samples used in the stock assessment.} 
-\label{tab:NWslope_Lengths}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-2001 & 18 & 27 & 43 \\ 
-  2002 & 24 & 54 & 58 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of NWFSC slope survey age samples used in the stock assessment.} 
-\label{tab:NWslope_Ages}
-\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
-  \hline
-Year & Tows & Fish & Sample Size \\ 
-  \hline
-2001 & 17 & 125 & 41 \\ 
-  2002 & 24 & 216 & 58 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
 \caption{Summary of NWFSC shelf-slope survey length samples used in the stock assessment.} 
 \label{tab:NWcombo_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
@@ -2194,6 +2113,117 @@ Year & Tows & Fish & Sample Size \\
   2014 & 52 & 195 & 126 \\ 
   2015 & 68 & 182 & 165 \\ 
   2016 & 44 & 281 & 106 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of NWFSC slope survey length samples used in the stock assessment.} 
+\label{tab:NWslope_Lengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+2001 & 18 & 27 & 43 \\ 
+  2002 & 24 & 54 & 58 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of NWFSC slope survey age samples used in the stock assessment.} 
+\label{tab:NWslope_Ages}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+2001 & 17 & 125 & 41 \\ 
+  2002 & 24 & 216 & 58 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of AFSC slope survey length samples used in the stock assessment.} 
+\label{tab:AFSC_Lengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1996 & 48 & 1396 & 116 \\ 
+  1997 & 21 & 347 & 51 \\ 
+  1999 & 21 & 562 & 51 \\ 
+  2000 & 19 & 353 & 46 \\ 
+  2001 & 23 & 390 & 55 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of Triennial survey length samples used in the stock assessment.} 
+\label{tab:TriennialLengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1980 & 18 & 1315 & 43 \\ 
+  1983 & 40 & 2820 & 97 \\ 
+  1986 & 17 & 877 & 41 \\ 
+  1989 & 42 & 1851 & 102 \\ 
+  1992 & 33 & 1182 & 80 \\ 
+  1995 & 71 & 1136 & 172 \\ 
+  1998 & 81 & 1482 & 196 \\ 
+  2001 & 74 & 669 & 179 \\ 
+  2004 & 63 & 1240 & 153 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of Triennial survey age samples used in the stock assessment.} 
+\label{tab:Triennial_Ages}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1989 & 15 & 577 & 36 \\ 
+  1992 & 10 & 373 & 24 \\ 
+  1995 & 12 & 275 & 29 \\ 
+  1998 & 28 & 352 & 68 \\ 
+  2001 & 43 & 342 & 104 \\ 
+  2004 & 57 & 416 & 138 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of Pacific ocean perch survey length samples used in the stock assessment.} 
+\label{tab:POP_Lengths}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1979 & 125 & 2375 & 303 \\ 
+  1985 & 126 & 2558 & 306 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of Pacific ocean perch survey age samples used in the stock assessment.} 
+\label{tab:POP_Ages}
+\begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
+  \hline
+Year & Tows & Fish & Sample Size \\ 
+  \hline
+1985 & 29 & 1635 & 70 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -3553,6 +3583,12 @@ Journal of Fisheries and Aquatic Sciences \textbf{45}(1): 78--88.
 Available from
 \url{http://www.nrcresearchpress.com/doi/abs/10.1139/f88-010}
 {[}accessed 28 February 2017{]}.
+
+\hypertarget{ref-stewart_bootstrapping_2014}{}
+Stewart, I.J., and Hamel, O.S. 2014. Bootstrapping of sample sizes for
+length- or age-composition data used in stock assessments. Canadian
+Journal of Fisheries and Aquatic Sciences \textbf{71}(4): 581--588. doi:
+\href{https://doi.org/10.1139/cjfas-2013-0289}{10.1139/cjfas-2013-0289}.
 
 \hypertarget{ref-then_evaluating_2015}{}
 Then, A.Y., Hoenig, J.M., Hall, N.G., and Hewitt, D.A. 2015. Evaluating

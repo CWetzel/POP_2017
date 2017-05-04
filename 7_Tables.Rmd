@@ -347,9 +347,10 @@ print(Index_summary.table,
 <!-- ********************************************************************** -->
 
 
-<!-- ********************POP Survey************************************* -->
+<!-- *******************NWFSC Combo Survey********************************* -->
 ```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/POPLengthSampleSize.csv')
+Fish_Length = read.csv('./txt_files/NWFSCComboLengthSampleSize.csv')
+Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
 colnames(Fish_Length) = c('Year',
                           'Tows',
                           'Fish',
@@ -357,8 +358,67 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Pacific ocean perch survey length samples used in the stock assessment.'),
-                           label = 'tab:POP_Lengths',
+                           caption = c('Summary of NWFSC shelf-slope survey length samples used in the stock assessment.'),
+                           label = 'tab:NWcombo_Lengths',
+                           digits = 0)    
+# Add alignment  
+align(Fish_Length.table) = c('l',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{1in}')  
+
+# Print commercial length sample numbers
+print(Fish_Length.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+```
+
+
+```{r, results = 'asis'}
+Fish_Length = read.csv('./txt_files/NWFSCComboAgeSampleSize.csv')
+Fish_Length = Fish_Length[,-1]
+colnames(Fish_Length) = c('Year',
+                          'Tows',
+                          'Fish',
+                          'Sample Size')
+
+# Index of abundance summary, create table   
+Fish_Length.table = xtable(Fish_Length, 
+                           caption = c('Summary of NWFSC shelf-slope survey age samples used in the stock assessment.'),
+                           label = 'tab:NWFcombo_Ages',
+                           digits = 0)    
+# Add alignment  
+align(Fish_Length.table) = c('l',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{1in}')  
+
+# Print commercial length sample numbers
+print(Fish_Length.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+```
+
+
+
+<!-- **********************NWFSC Slope Survey****************************** -->
+```{r, results = 'asis'}
+Fish_Length =  read.csv('./txt_files/NWFSCSlopeLengthSampleSize.csv')
+colnames(Fish_Length) = c('Year',
+                          'Tows',
+                          'Fish',
+                          'Sample Size')
+
+# Index of abundance summary, create table   
+Fish_Length.table = xtable(Fish_Length, 
+                           caption = c('Summary of NWFSC slope survey length samples used in the stock assessment.'),
+                           label = 'tab:NWslope_Lengths',
                            digits = 0)    
 # Add alignment  
 align(Fish_Length.table) = c('l',
@@ -377,9 +437,9 @@ print(Fish_Length.table,
 ```
 
 
+
 ```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/POPAgeSampleSize.csv')
-Fish_Length = Fish_Length[,-1]
+Fish_Length = read.csv('./txt_files/NWFSCSlopeAgeSampleSize.csv')
 colnames(Fish_Length) = c('Year',
                           'Tows',
                           'Fish',
@@ -387,8 +447,8 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Pacific ocean perch survey age samples used in the stock assessment.'),
-                           label = 'tab:POP_Ages',
+                           caption = c('Summary of NWFSC slope survey age samples used in the stock assessment.'),
+                           label = 'tab:NWslope_Ages',
                            digits = 0)    
 # Add alignment  
 align(Fish_Length.table) = c('l',
@@ -402,6 +462,37 @@ print(Fish_Length.table,
       include.rownames=FALSE, 
       caption.placement='top',
       sanitize.text.function = function(x){x})
+
+```
+
+
+
+<!-- ***********************AFSC Slope Survey **************************** -->
+```{r, results = 'asis'}
+Fish_Length = read.csv('./txt_files/AFSCLengthSampleSize.csv')
+colnames(Fish_Length) = c('Year',
+                          'Tows',
+                          'Fish',
+                          'Sample Size')
+
+# Index of abundance summary, create table   
+Fish_Length.table = xtable(Fish_Length, 
+                           caption = c('Summary of AFSC slope survey length samples used in the stock assessment.'),
+                           label = 'tab:AFSC_Lengths',
+                           digits = 0)    
+# Add alignment  
+align(Fish_Length.table) = c('l',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{1in}')  
+
+# Print commercial length sample numbers
+print(Fish_Length.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+# NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
 
 ```
 
@@ -465,10 +556,9 @@ print(Fish_Length.table,
 ```
 
 
-
-<!-- ***********************AFSC Slope Survey **************************** -->
+<!-- ********************POP Survey************************************* -->
 ```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/AFSCLengthSampleSize.csv')
+Fish_Length = read.csv('./txt_files/POPLengthSampleSize.csv')
 colnames(Fish_Length) = c('Year',
                           'Tows',
                           'Fish',
@@ -476,8 +566,8 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of AFSC slope survey length samples used in the stock assessment.'),
-                           label = 'tab:AFSC_Lengths',
+                           caption = c('Summary of Pacific ocean perch survey length samples used in the stock assessment.'),
+                           label = 'tab:POP_Lengths',
                            digits = 0)    
 # Add alignment  
 align(Fish_Length.table) = c('l',
@@ -496,97 +586,8 @@ print(Fish_Length.table,
 ```
 
 
-<!-- **********************NWFSC Slope Survey****************************** -->
 ```{r, results = 'asis'}
-Fish_Length =  read.csv('./txt_files/NWFSCSlopeLengthSampleSize.csv')
-colnames(Fish_Length) = c('Year',
-                          'Tows',
-                          'Fish',
-                          'Sample Size')
-
-# Index of abundance summary, create table   
-Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC slope survey length samples used in the stock assessment.'),
-                           label = 'tab:NWslope_Lengths',
-                           digits = 0)    
-# Add alignment  
-align(Fish_Length.table) = c('l',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{1in}')  
-
-# Print commercial length sample numbers
-print(Fish_Length.table, 
-      include.rownames=FALSE, 
-      caption.placement='top',
-      sanitize.text.function = function(x){x})
-# NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
-
-```
-
-
-
-```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/NWFSCSlopeAgeSampleSize.csv')
-colnames(Fish_Length) = c('Year',
-                          'Tows',
-                          'Fish',
-                          'Sample Size')
-
-# Index of abundance summary, create table   
-Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC slope survey age samples used in the stock assessment.'),
-                           label = 'tab:NWslope_Ages',
-                           digits = 0)    
-# Add alignment  
-align(Fish_Length.table) = c('l',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{1in}')  
-
-# Print commercial length sample numbers
-print(Fish_Length.table, 
-      include.rownames=FALSE, 
-      caption.placement='top',
-      sanitize.text.function = function(x){x})
-
-```
-
-
-<!-- *******************NWFSC Combo Survey********************************* -->
-```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/NWFSCComboLengthSampleSize.csv')
-Fish_Length = Fish_Length[,2:ncol(Fish_Length)]
-colnames(Fish_Length) = c('Year',
-                          'Tows',
-                          'Fish',
-                          'Sample Size')
-
-# Index of abundance summary, create table   
-Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC shelf-slope survey length samples used in the stock assessment.'),
-                           label = 'tab:NWcombo_Lengths',
-                           digits = 0)    
-# Add alignment  
-align(Fish_Length.table) = c('l',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{1in}')  
-
-# Print commercial length sample numbers
-print(Fish_Length.table, 
-      include.rownames=FALSE, 
-      caption.placement='top',
-      sanitize.text.function = function(x){x})
-
-```
-
-
-```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/NWFSCComboAgeSampleSize.csv')
+Fish_Length = read.csv('./txt_files/POPAgeSampleSize.csv')
 Fish_Length = Fish_Length[,-1]
 colnames(Fish_Length) = c('Year',
                           'Tows',
@@ -595,8 +596,8 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC shelf-slope survey age samples used in the stock assessment.'),
-                           label = 'tab:NWFcombo_Ages',
+                           caption = c('Summary of Pacific ocean perch survey age samples used in the stock assessment.'),
+                           label = 'tab:POP_Ages',
                            digits = 0)    
 # Add alignment  
 align(Fish_Length.table) = c('l',
@@ -612,6 +613,7 @@ print(Fish_Length.table,
       sanitize.text.function = function(x){x})
 
 ```
+
 
 
 
@@ -858,8 +860,6 @@ print(Fish_Length.table,
       sanitize.text.function = function(x){x})
 
 ```
-
-
 
 
 
