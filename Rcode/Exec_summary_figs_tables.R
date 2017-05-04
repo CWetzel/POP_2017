@@ -511,7 +511,7 @@ mngmnt.table = xtable(mngmnt,
                               landings (mt) relative to the management guidelines. 
                               Estimated total catch reflect the commercial landings 
                               plus the model estimated discarded biomass.'), 
-                      label='tab:mnmgt_perform')#, digits = dig1)  
+                      label='tab:mnmgt_perform')
 # Add alignment
 align(mngmnt.table) = c('l',
                         '>{\\raggedleft}p{0.5in}',

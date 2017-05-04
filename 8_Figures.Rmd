@@ -5,13 +5,8 @@
 <!-- **************************BEGIN FIGURES******************************* --> 
 <!-- **************************             ******************************* -->
 <!-- ====================================================================== -->
-\FloatBarrier
-
-\newpage
-
 
 #Figures
-\newpage
 
 <!-- ====================================================================== --> 
 <!-- *********************INTRODUCTION FIGURES***************************** --> 
@@ -21,27 +16,25 @@
 ![Map showing the state boundary lines for management of the recreational fishing fleets.  CRFS Districts 1-6 in California are presented as well as the WDFW Recreational Management Areas in Washington.  Florence, OR is shown as a potential location of model stratification. \label{fig:boundary_map}](Figures/boundary_map.png) 
 -->
 
-
-
-<!-- ********************************************************************** --> 
-<!-- *************************Data FIGURES********************************* --> 
-<!-- ********************************************************************** -->
-  
-![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
-
-
-
-\FloatBarrier
-
 <!-- ********************************************************************** --> 
 <!-- ******************Commercial landings FIGURES************************* --> 
-<!-- *either read in data to create figure or load in figures from analyst* --> 
-<!-- *******************one example of each here*************************** -->
+<!-- *************************  FIGURE 1  ********************************* -->
+<!-- ********************************************************************** --> 
   
 ![Total catches `r spp` through 2016. \label{fig:Catch}](r4ss/plots_mod1/catch2 landings stacked.png)
   
 \FloatBarrier
 
+
+
+<!-- ********************************************************************** --> 
+<!-- *************************Data FIGURES********************************* --> 
+<!-- *************************  FIGURE 2  ********************************* -->
+<!-- ********************************************************************** -->
+  
+![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
+
+\FloatBarrier
 
 
 <!-- ********************************************************************** 
