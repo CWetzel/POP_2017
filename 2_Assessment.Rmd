@@ -65,11 +65,11 @@ Historical commercial fishery landigns of `r spp` from Washington for the years 
 
 **Oregon**
 
-Historical commercial fishery landings of `r spp` from Oregon for the years 1892-1986 were obtained from Alison Dauble (ODFW). A description of the methods can be found in Karnowski et al. [-@karnowski_historical_2014]. Recent landings (1987-2016) were obtained from PacFIN retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).  The catch data in from the POP and POP2 categories contained within PacFIN for `r spp` were used for this assessment.  Additional cathes from 1987-1999 for `r spp` under the UROCK category not yet available in PacFIN were received directly from the state and combined with the catch data available for that period within PacFIN.
+Historical commercial fishery landings of `r spp` from Oregon for the years 1892-1986 were obtained from Alison Dauble (ODFW). A description of the methods can be found in Karnowski et al. [-@karnowski_historical_2014]. Recent landings (1987-2016) were obtained from PacFIN retrieval dated May 2, 2017}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).  The catch data in from the POP and POP2 categories contained within PacFIN for `r spp` were used for this assessment.  Additional cathes from 1987-1999 for `r spp` under the UROCK category not yet available in PacFIN were received directly from the state and combined with the catch data available for that period within PacFIN.
 
 **California**
 
-Historical commercial fishery landings of `r spp` were obtained from the online database of the California Cooperative Groundfish Survey, also known as CALCOM (128.114.3.187) for the years 1916-1980. A description of the methods can be found in [@ralston_documentation_2010]. Recent landings  (1981-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated \hl{March 3, 2015}, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
+Historical commercial fishery landings of `r spp` were obtained directly from John Field at the SWFSC due to database issues for the historical period for the  California Cooperative Groundfish Survey, also known as CALCOM (128.114.3.187) for the years 1916-1980. A description of the methods can be found in [@ralston_documentation_2010]. Recent landings  (1981-2016) were obtained from PacFIN (Pacific Fisheries Information Network (PacFIN) retrieval dated May 2, 2017, Pacific States Marine Fisheries Commission, Portland, Oregon; www.psmfc.org).
 
 **At-Sea Hake Fishery**
 
@@ -91,7 +91,13 @@ The second source is from the West Coast Groundfish Observer Program (WCGOP).  T
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas (Table \ref{tab:CPUE_Summary} from Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggest that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time.  A CV of 0.40 was used in this assessment to be consistent with the CV observed in the survey data.
 
 ###Fishery Length And Age Data
+Biological data from commercial fisheries that caught `r spp` were extracted from PacFIN (PFSMFC) on \hl{XXXX}.  Lengths taken during port sampling in Oregon and Washington were used to calculate length and age compositions.  There were no biological data for `r spp` available within PacFIN.  The overwhelming majority of these data were collected from the bottom trawl fishery, but there additional biological data were collected from non-trawl gear was grouped together with all data available. Tables \ref{tab:Comm_Lengths} and \ref{tab:Comm_Ages} show the number of trips and fish sampled, along with the calculated sample sizes.  The sample sizes were calculated as:
 
+$N_{input} = N_{tows} + 0.138 * N_{fish}$
+
+Input effN = $N_{input}$ if $N_{fish}/N_{tows}$ is $<$ 44
+
+Input effN = $7.06 * N_{tows}$
 
 
 
