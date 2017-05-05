@@ -14,7 +14,7 @@ The NWFSC shelf-slope survey is based on a random-grid design; covering the coas
 
 The data from the NWFSC shelf-slope survey was analyzed using a spatio-temporal delta-generalized linear mixed model (VAST delta-GLMM) [@thorson_comparing_2017]. Predicted fish biomass density is derived as the product of a "delta" portion for the probability of a non-zero catch and a second portion for the magnitude of the non-zero catches.  Further, the geostatistical GLMM framework can accommodate spatial autocorrelation.  Additional information about the approach and the software package it is implemented in are available from www.fishstats.org. \hl{describe VAST}
 
-The smallest `r spp` tend to occur in the shallower depths (< 200 m) with only larger individuals occurring at depths deeper than 300 m. Data collected by the NWFSC Shelf-Slope survey between depths of 55 - 549 m and north of $42^circ$ and south of $49^circ$ were stratified to generate an index of abundance from 2003-2016. The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The lognormal distribution with random strata-year and vessel effects had the lowest AIC and was chosen as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:nw_qq}).  The indices for the NWFSC shelf-slope survey show a tentative decline in the population between 2003 and 2009, with an increasing trend in biomass between the 2009 and 2016 median point estimates.
+The smallest `r spp` tend to occur in the shallower depths (< 200 m) with only larger individuals occurring at depths deeper than 300 m. Data collected by the NWFSC Shelf-Slope survey between depths of 55 - 549 m and north of $42^\circ$ and south of $49^\circ$ were stratified to generate an index of abundance from 2003-2016. The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The lognormal distribution with random strata-year and vessel effects had the lowest AIC and was chosen as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:nw_qq}).  The indices for the NWFSC shelf-slope survey show a tentative decline in the population between 2003 and 2009, with an increasing trend in biomass between the 2009 and 2016 median point estimates.
 
 Length, age, and conditional age-at-length compositions were expanded based upon the stratification.  The number of tows with length data ranged from 33 in 2006 to 69 in 2015 (Table \ref{tab:NWcombo_Lengths}) where ages were collected for `r spp` in nearly every tow (Table \ref{tab:NWcombo_Ages}).  The expanded length frequencies from this survey show an increase in small fish starting in 2010 (Figure \ref{fig:nw_Length}).  The age frequencies provide clear evidence of large year-classes moving through the population from the 1999, 2000, and 2008 recruitment; with early indications of a large 2013 recruitment (Figure \ref{fig:nw_Age}).
 
@@ -33,7 +33,7 @@ The AFSC slope survey operated during autumn (October-November) aboard the R/V M
 
 An index of abundance was estimated based on the data using the VAST delta-GLMM model.  The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The lognormal distribution with random strata-year had the lowest AIC and was chosen as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:afsc_qq}).  The trend in the indices was generally flat over time.
 
-Length compositions were available for each year the survey was conducted.  No age data were available from this survey.  The expanded length frequencies from this survey were generally of larger fish ( > 30 cm), expect for 1997 where the highest frequency of fish were between 20 and 30 cm for both females and males (Figure \ref{fig:afsc_Lengths}). 
+Length compositions were available for each year the survey was conducted.  No age data were available from this survey.  The expanded length frequencies from this survey were generally of larger fish ( > 30 cm), expect for 1997 where the highest frequency of fish were between 20 and 30 cm for both females and males (Figure \ref{fig:afsc_Length}). 
 
 ###Triennial Bottom Trawl Survey
 
@@ -85,7 +85,7 @@ From the 1960s through the early 1970s, foreign trawling enterprises harvested c
 
 Data on discards of `r spp` are available from two different data sources.  The earliest source is called the Pikitch data and comes from a study organized by Ellen Pikitch that collected trawl discards from 1985-1987 [@pikitch_evaluation_1988].  The northern and southern boundaries of the study were $48^\circ 42^\prime$ N latitude and $42^\circ 60^\prime$ N. latitude respectively, which is primarily within the Columbia INPFC area [@pikitch_evaluation_1988 ; @rogers_numerical_1992].  Participation in the study was voluntary and included vessels using bottom, midwater, and shrimp trawl gears.  Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow and recorded the weight of species retained and discarded in the sample.  Results of the Pikitch data were obtained from John Wallace (NWFSC, personal communication) in the form of ratios of discard weight to retained weight of `r spp` and sex-specific length frequencies.  Discard estimates are shown in Table \ref{tab:Discard}.   
 
-The second source is from the West Coast Groundfish Observer Program (WCGOP).  This program is part of the NWFSC and has been recording discard observations since 2003. Table \ref{tab:Discard} shows the discard ratios of `r spp` from the WCGOP.  Since 2011, when the trawl rationalization program was implemented, observer coverage rates increased to nearly 100% for all the limited entry trawl vessels in the program and discard rates declined compared to pre-2011 rates.  Discard rates were obtained for both the catch-share and the non-catch share sector for `r spp`.  A single discard rate was calculated by weighting discard rates based on the commercial landings by each sector.  Discard length composition for the trawl fleet varied by year, with larger fish being discarded prior to 2011 (Figure \ref{fig:WCGOP_discard}).
+The second source is from the West Coast Groundfish Observer Program (WCGOP).  This program is part of the NWFSC and has been recording discard observations since 2003. Table \ref{tab:Discard} shows the discard ratios (discarded/(discarded + retained)) of `r spp` from the WCGOP.  Since 2011, when the trawl rationalization program was implemented, observer coverage rates increased to nearly 100% for all the limited entry trawl vessels in the program and discard rates declined compared to pre-2011 rates.  Discard rates were obtained for both the catch-share and the non-catch share sector for `r spp`.  A single discard rate was calculated by weighting discard rates based on the commercial landings by each sector.  Coeffienct of variations were calculated by bootstrapping vessels within ports because the observer program randomly chooses vessels within porats to be observed in the non-catch shares sectors.  Discard length composition for the trawl fleet varied by year, with larger fish being discarded prior to 2011 (Figure \ref{fig:WCGOP_discard}).
  
 
 ###Historical Commercial Catch-per-unit effort
@@ -93,15 +93,13 @@ The second source is from the West Coast Groundfish Observer Program (WCGOP).  T
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas (Table \ref{tab:CPUE_Summary}, from Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggest that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time.  A CV of 0.40 was used in this assessment to be consistent with the CV observed in the survey data.
 
 ###Fishery Length And Age Data
-Biological data from commercial fisheries that caught `r spp` were extracted from PacFIN (PFSMFC) on \hl{XXXX}.  Lengths taken during port sampling in Oregon and Washington were used to calculate length and age compositions.  There were no biological data for `r spp` available within PacFIN.  The overwhelming majority of these data were collected from the mid-water and bottom trawl gear, but additional biological data were collected from non-trawl gear which was grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and \ref{tab:Comm_Ages} show the number of trips and fish sampled, along with the calculated sample sizes.  The sample sizes were calculated as:
+Biological data from commercial fisheries that caught `r spp` were extracted from PacFIN (PFSMFC) on \hl{XXXX}.  Lengths taken during port sampling in Oregon and Washington were used to calculate length and age compositions.  There were no biological data for `r spp` available within PacFIN.  The overwhelming majority of these data were collected from the mid-water and bottom trawl gear, but additional biological data were collected from non-trawl gear which was grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and \ref{tab:Comm_Ages} show the number of trips and fish sampled, along with the calculated sample sizes.  Length and age data were acquired at the trip level, and then aggregated to the state level.  The sample sizes were calculated via the Stewart Method (Ian Stewart, pers. Comm.) which for commercial fishery data is:
 
 \begin{centering}
 
-$N_{\text{input}} = N_{\text{tows}} + 0.138 * N_{\text{fish}}$
+Input effN = $N_{\text{trips}} + 0.138 * N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
 
-Input effN = $N_{\text{input}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $<$ 44
-
-Input effN = $7.06 * N_{\text{tows}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $\geq$ 44
+Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
 
 \end{centering}
 
@@ -152,11 +150,11 @@ Uncertainty surrounding the ageing-error process for `r spp` was incorporated by
 ##History Of Modeling Approaches Used For This Stock
 
 ###Previous Assessments
+The status of `r spp` off British Columbia, Washington, and Oregon have been periodically assessed since the intensive exploitation that occured in the 1960s.  Concerns regarding `r spp` status off the coast the US west coast were raised in the late 1970s [@gunderson_results_1978, @gunderson_updated_1981] and in 1981 the PFMC adopted a 20-year plan to rebuild the stock. 
+
+The 1992 assessment determined that `r spp` remained at low levels relative to the population size in 1960 [@ianelli_status_1992] and recommended additional harvest restrictions to allow for stock rebuilding.  The 1998 assessment [@ianelli_status_1998] estimated that the stock was 13% of the unfished level, leading the National Marine Fishery Service (NMFS) to declare the stock overfished in 1999.  The formal rebuilding plan was implemented in 2001.  The rebuilding plan reduced the SPR harvest rate used to determine catches to 0.864, relative to the PFMC rockfish default harvest (SPR = 0.50).  The last full assessment of `r spp` was conducted in 2011 [@hamel_stock_2011] which concluded that the stock was still well below the target biomass of $0.40SB_{0}$ estimating the relative stock status at 19.1%. 
 
 ###Previous Assessment Recommendations
-Include: Response to STAR panel recommendations from the most recent previous 
-assessment.
-
 Recommendation: Considering trans-boundary stock effects should be pursued. In particular the consequences of having spawning contributions from external stock components should be evaluated relative to the steepness estimates obtained in the present assessment (see more complete discussion of this recommendation under the Unresolved Problems and Major Uncertainties section, above).
 
 *STAT response: The STAT team agrees that this should be an ongoing area of research and collaboration between the US and Canada.  This assessment presents a sensitivity where the inclusion of Canadian data are included within the model.*
@@ -189,19 +187,18 @@ Stock Synthesis \hl{v3.30.01.12} was used to estimate the parameters in the mode
 
 Stock Synthesis has many options when setting up a model and the assessment model for `r spp` was set up in the following manner.
 
+###Changes between the 2011 assessment model and current model
+The current model for `r spp` has many made many similar assumptions to the 2011 assessment but differs in some key ways.  This assessment disaggrated the fleets into a trawl/other gear, at-sea hake, historical foreign fleet, and research fleets.  The previous assessment implemented a single fleet where removal from all sources were aggregated together.  The seperating of fleets applied in this assessment allowed for differing assumptions regarding current and historical discarding practices.  Although there are no compositional data available from the foreign fleet, it is assumed that very little discarding to no discarding of fish occured.  Additionally, the at-sea hake fishery removals are represent both discarded and retained fish and hence an additional discard rate would not be appropriate.  Similar logic was applied in regard to survey and research removals.  
 
-###Transition To The Current Stock Assessment
-Include: Complete description of any new modeling approaches
+The historical landing used in the model differs from those used in 2011.  The assessment includes the first state provided historical reconstruction landings for Washington state.  The historical reconstruction provided `r spp` landing within Washington state starting in 1916 and have significantly larger removals in the 1940s relative to those used in 2011.  Given the increase in historical removals prior to 1940, the 2011 model starting year, the starting year for modeling the stock was revised to 1918, the first year `r spp` landings exceeded 1 mt, for this assessment.  Explorations were conducted relative to the model starting year and no differences were found between the 1918 start year compared to starting the model in 1892, the first record of `r spp` landings between California, Oregon, and Washington catch data.
 
-Below, we describe the most important changes made since the last full assessment 
-and explain rationale for each change.:
+Selectivity in this model is assumed to be length-based and is modeled using double-normal for all fleets, expect the `r spp` survey which retained the previous assessment assumption of logistic selectivity. The previous assessment mirrored selectivity amont the `r spp` and both slope surveys (AFSC and NWFSC).  This assessment allow for survey specific estimated double-normal selectivity.
 
-1. Change No. 1. \emph{Rationale}: blah blah blah.
+All fishery-independent indices have been reevaluated for this assessment using a spatial-temporal delta generalized linear mixed model (VAST delta-GLMM) which is updated from 2011 which used a bayesian delta-GLMM which did not incorporate spatial effects.  An additional update to the treatment of survey data was the decision to use the Triennial survey as a single time series ranging from 1980-2004.  The previous assessment opted to split this survey into early and a late index of abundance based upon the change in southern sampling and a shift in survey timing.  Northern California is considered to be the southern end of `r spp` West Coast distribution with rare encounters in central or southern California waters.  The biological data from the Triennial survey showed no discernable ontogenetic shifts in `r spp` during the early or late period of summer samples.  Based upon these investigations, the Triennial survey was retained as a single index of abundance.
 
-2. Change No. 2.  \emph{Rationale}: blah blah blah.
+Maturity and fecundity were updated for this assessment based upon new research. Fecundity for `r spp` used in this assessment was base on reevaluation of the fecundity of West Coast rockfish by Dick et al. [-@dick_meta-analysis_2017] updating the previous fecundity estimates used in the 2011 assessment [@dick_modeling_2009].  Maturity in this assessment was based on examination of 537 fish samples which were used to estimate functional maturity, an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The updated maturity curve was based on maturity-at-length where the previous estimates used in 2011 were based on maturity-at-age. 
 
-3. Change No. 3.  \emph{Rationale}:  Continue list as needed.
-
+In this assessment, the beta prior developed from a meta-analysis of West Coast groundfish was updated to the 2017 value (J. Thorson personal communication) in preliminary models, with steepness fixed in the final base model.  Additionally, the prior for natural mortality was updated base on analysis conducted by Owen Hamel (personal communication), where female natural mortality was fixed at the prior median with males estimated as an offset from the female value.
 
 
 ###Definition of Fleets and Areas

@@ -145,7 +145,6 @@ coast in 2017}
 
 
 Chantel R. Wetzel\textsuperscript{1}\\
-Kelli Johnson\textsuperscript{1}\\
 Lee Cronin-Fine\textsuperscript{2}\\
 
 \vspace{.5cm}
@@ -157,12 +156,11 @@ Lee Cronin-Fine\textsuperscript{2}\\
 
 \textsuperscript{3}University of Washington, School of Aquatic and Fishery Sciences\\
 
-\vspace{.3cm}
-
-%\textsuperscript{4}Oregon Department of Fish and Wildlife, 2040 SE Marine Science Drive, Newport, OR 97365\\
 
 
-\vspace{.5cm}
+
+
+\vspace{1cm}
 
 \vfill
 DRAFT SAFE\\
@@ -927,8 +925,8 @@ from www.fishstats.org. \hl{describe VAST}
 The smallest Pacific ocean perch tend to occur in the shallower depths
 (\textless{} 200 m) with only larger individuals occurring at depths
 deeper than 300 m. Data collected by the NWFSC Shelf-Slope survey
-between depths of 55 - 549 m and north of \(42^circ\) and south of
-\(49^circ\) were stratified to generate an index of abundance from
+between depths of 55 - 549 m and north of \(42^\circ\) and south of
+\(49^\circ\) were stratified to generate an index of abundance from
 2003-2016. The estimated index of abundance is shown in Table
 \ref{tab:Index_Summary}. The lognormal distribution with random
 strata-year and vessel effects had the lowest AIC and was chosen as the
@@ -1008,7 +1006,7 @@ conducted. No age data were available from this survey. The expanded
 length frequencies from this survey were generally of larger fish (
 \textgreater{} 30 cm), expect for 1997 where the highest frequency of
 fish were between 20 and 30 cm for both females and males (Figure
-\ref{fig:afsc_Lengths}).
+\ref{fig:afsc_Length}).
 
 \subsubsection{Triennial Bottom Trawl
 Survey}\label{triennial-bottom-trawl-survey}
@@ -1197,16 +1195,19 @@ sex-specific length frequencies. Discard estimates are shown in Table
 The second source is from the West Coast Groundfish Observer Program
 (WCGOP). This program is part of the NWFSC and has been recording
 discard observations since 2003. Table \ref{tab:Discard} shows the
-discard ratios of Pacific ocean perch from the WCGOP. Since 2011, when
-the trawl rationalization program was implemented, observer coverage
-rates increased to nearly 100\% for all the limited entry trawl vessels
-in the program and discard rates declined compared to pre-2011 rates.
-Discard rates were obtained for both the catch-share and the non-catch
-share sector for Pacific ocean perch. A single discard rate was
-calculated by weighting discard rates based on the commercial landings
-by each sector. Discard length composition for the trawl fleet varied by
-year, with larger fish being discarded prior to 2011 (Figure
-\ref{fig:WCGOP_discard}).
+discard ratios (discarded/(discarded + retained)) of Pacific ocean perch
+from the WCGOP. Since 2011, when the trawl rationalization program was
+implemented, observer coverage rates increased to nearly 100\% for all
+the limited entry trawl vessels in the program and discard rates
+declined compared to pre-2011 rates. Discard rates were obtained for
+both the catch-share and the non-catch share sector for Pacific ocean
+perch. A single discard rate was calculated by weighting discard rates
+based on the commercial landings by each sector. Coeffienct of
+variations were calculated by bootstrapping vessels within ports because
+the observer program randomly chooses vessels within porats to be
+observed in the non-catch shares sectors. Discard length composition for
+the trawl fleet varied by year, with larger fish being discarded prior
+to 2011 (Figure \ref{fig:WCGOP_discard}).
 
 \subsubsection{Historical Commercial Catch-per-unit
 effort}\label{historical-commercial-catch-per-unit-effort}
@@ -1234,15 +1235,16 @@ data were collected from the mid-water and bottom trawl gear, but
 additional biological data were collected from non-trawl gear which was
 grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and
 \ref{tab:Comm_Ages} show the number of trips and fish sampled, along
-with the calculated sample sizes. The sample sizes were calculated as:
+with the calculated sample sizes. Length and age data were acquired at
+the trip level, and then aggregated to the state level. The sample sizes
+were calculated via the Stewart Method (Ian Stewart, pers. Comm.) which
+for commercial fishery data is:
 
 \begin{centering}
 
-$N_{\text{input}} = N_{\text{tows}} + 0.138 * N_{\text{fish}}$
+Input effN = $N_{\text{trips}} + 0.138 * N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
 
-Input effN = $N_{\text{input}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $<$ 44
-
-Input effN = $7.06 * N_{\text{tows}}$ if $N_{\text{fish}}/N_{\text{tows}}$ is $\geq$ 44
+Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
 
 \end{centering}
 
@@ -1358,11 +1360,32 @@ Stock}\label{history-of-modeling-approaches-used-for-this-stock}
 
 \subsubsection{Previous Assessments}\label{previous-assessments}
 
+The status of Pacific ocean perch off British Columbia, Washington, and
+Oregon have been periodically assessed since the intensive exploitation
+that occured in the 1960s. Concerns regarding Pacific ocean perch status
+off the coast the US west coast were raised in the late 1970s (Gunderson
+\protect\hyperlink{ref-gunderson_results_1978}{1978}, Gunderson
+(\protect\hyperlink{ref-gunderson_updated_1981}{1981})) and in 1981 the
+PFMC adopted a 20-year plan to rebuild the stock.
+
+The 1992 assessment determined that Pacific ocean perch remained at low
+levels relative to the population size in 1960 (Ianelli et al.
+\protect\hyperlink{ref-ianelli_status_1992}{1992}) and recommended
+additional harvest restrictions to allow for stock rebuilding. The 1998
+assessment (Ianelli and Zimmermann
+\protect\hyperlink{ref-ianelli_status_1998}{1998}) estimated that the
+stock was 13\% of the unfished level, leading the National Marine
+Fishery Service (NMFS) to declare the stock overfished in 1999. The
+formal rebuilding plan was implemented in 2001. The rebuilding plan
+reduced the SPR harvest rate used to determine catches to 0.864,
+relative to the PFMC rockfish default harvest (SPR = 0.50). The last
+full assessment of Pacific ocean perch was conducted in 2011 (Hamel and
+Ono \protect\hyperlink{ref-hamel_stock_2011}{2011}) which concluded that
+the stock was still well below the target biomass of \(0.40SB_{0}\)
+estimating the relative stock status at 19.1\%.
+
 \subsubsection{Previous Assessment
 Recommendations}\label{previous-assessment-recommendations}
-
-Include: Response to STAR panel recommendations from the most recent
-previous assessment.
 
 Recommendation: Considering trans-boundary stock effects should be
 pursued. In particular the consequences of having spawning contributions
@@ -1425,25 +1448,95 @@ the assessment.}
 
 \section{Assessment}\label{assessment}
 
-\subsection{Model Description}\label{model-description}
+\subsection{General Model Specifications and
+Assumptions}\label{general-model-specifications-and-assumptions}
 
-\subsubsection{Transition To The Current Stock
-Assessment}\label{transition-to-the-current-stock-assessment}
+Stock Synthesis \hl{v3.30.01.12} was used to estimate the parameters in
+the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used
+to investigate and plot model fits. A summary of the data sources used
+in the model (details discussed above) is shown in Figure
+\ref{fig:data_plot}.
 
-Include: Complete description of any new modeling approaches
+Stock Synthesis has many options when setting up a model and the
+assessment model for Pacific ocean perch was set up in the following
+manner.
 
-Below, we describe the most important changes made since the last full
-assessment and explain rationale for each change.:
+\subsubsection{Changes between the 2011 assessment model and current
+model}\label{changes-between-the-2011-assessment-model-and-current-model}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Change No. 1. \emph{Rationale}: blah blah blah.
-\item
-  Change No. 2. \emph{Rationale}: blah blah blah.
-\item
-  Change No. 3. \emph{Rationale}: Continue list as needed.
-\end{enumerate}
+The current model for Pacific ocean perch has many made many similar
+assumptions to the 2011 assessment but differs in some key ways. This
+assessment disaggrated the fleets into a trawl/other gear, at-sea hake,
+historical foreign fleet, and research fleets. The previous assessment
+implemented a single fleet where removal from all sources were
+aggregated together. The seperating of fleets applied in this assessment
+allowed for differing assumptions regarding current and historical
+discarding practices. Although there are no compositional data available
+from the foreign fleet, it is assumed that very little discarding to no
+discarding of fish occured. Additionally, the at-sea hake fishery
+removals are represent both discarded and retained fish and hence an
+additional discard rate would not be appropriate. Similar logic was
+applied in regard to survey and research removals.
+
+The historical landing used in the model differs from those used in
+2011. The assessment includes the first state provided historical
+reconstruction landings for Washington state. The historical
+reconstruction provided Pacific ocean perch landing within Washington
+state starting in 1916 and have significantly larger removals in the
+1940s relative to those used in 2011. Given the increase in historical
+removals prior to 1940, the 2011 model starting year, the starting year
+for modeling the stock was revised to 1918, the first year Pacific ocean
+perch landings exceeded 1 mt, for this assessment. Explorations were
+conducted relative to the model starting year and no differences were
+found between the 1918 start year compared to starting the model in
+1892, the first record of Pacific ocean perch landings between
+California, Oregon, and Washington catch data.
+
+Selectivity in this model is assumed to be length-based and is modeled
+using double-normal for all fleets, expect the Pacific ocean perch
+survey which retained the previous assessment assumption of logistic
+selectivity. The previous assessment mirrored selectivity amont the
+Pacific ocean perch and both slope surveys (AFSC and NWFSC). This
+assessment allow for survey specific estimated double-normal
+selectivity.
+
+All fishery-independent indices have been reevaluated for this
+assessment using a spatial-temporal delta generalized linear mixed model
+(VAST delta-GLMM) which is updated from 2011 which used a bayesian
+delta-GLMM which did not incorporate spatial effects. An additional
+update to the treatment of survey data was the decision to use the
+Triennial survey as a single time series ranging from 1980-2004. The
+previous assessment opted to split this survey into early and a late
+index of abundance based upon the change in southern sampling and a
+shift in survey timing. Northern California is considered to be the
+southern end of Pacific ocean perch West Coast distribution with rare
+encounters in central or southern California waters. The biological data
+from the Triennial survey showed no discernable ontogenetic shifts in
+Pacific ocean perch during the early or late period of summer samples.
+Based upon these investigations, the Triennial survey was retained as a
+single index of abundance.
+
+Maturity and fecundity were updated for this assessment based upon new
+research. Fecundity for Pacific ocean perch used in this assessment was
+base on reevaluation of the fecundity of West Coast rockfish by Dick et
+al. (\protect\hyperlink{ref-dick_meta-analysis_2017}{2017}) updating the
+previous fecundity estimates used in the 2011 assessment (Dick
+\protect\hyperlink{ref-dick_modeling_2009}{2009}). Maturity in this
+assessment was based on examination of 537 fish samples which were used
+to estimate functional maturity, an approach that classifies rockfish
+maturity with developing oocytes as mature or immature based on the
+proportion of vitellogenin in the cytoplasm and the measured frequency
+of atretic cells (M. Head, personal communication). The updated maturity
+curve was based on maturity-at-length where the previous estimates used
+in 2011 were based on maturity-at-age.
+
+In this assessment, the beta prior developed from a meta-analysis of
+West Coast groundfish was updated to the 2017 value (J. Thorson personal
+communication) in preliminary models, with steepness fixed in the final
+base model. Additionally, the prior for natural mortality was updated
+base on analysis conducted by Owen Hamel (personal communication), where
+female natural mortality was fixed at the prior median with males
+estimated as an offset from the female value.
 
 \subsubsection{Definition of Fleets and
 Areas}\label{definition-of-fleets-and-areas}
@@ -2094,7 +2187,7 @@ Year & Tows & Fish & Sample Size \\
 \begin{table}[ht]
 \centering
 \caption{Summary of NWFSC shelf-slope survey age samples used in the stock assessment.} 
-\label{tab:NWFcombo_Ages}
+\label{tab:NWcombo_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
 Year & Tows & Fish & Sample Size \\ 
@@ -3473,6 +3566,12 @@ alternative rebuilding strategies for these stocks. Pacific Fishery
 Management Council, 7700 Ambassador Place NE, Suite 200, Portland, OR
 97220.
 
+\hypertarget{ref-gunderson_updated_1981}{}
+Gunderson, D.R. 1981. An updated cohort analysis for Pacific ocean perch
+stocks off Washington and Oregon. Unpublished report, Pacific Fishery
+Management Council, 7700 Ambassador Place NE, Suite 200, Portland, OR
+97220.
+
 \hypertarget{ref-gunderson_trade-off_1997}{}
 Gunderson, D.R. 1997. Trade-off between reproductive effort and adult
 survival in oviparous and viviparous fishes. Canadian Journal of
@@ -3499,6 +3598,11 @@ Journal of Marine Science: Journal du Conseil \textbf{72}(1): 62--69.
 doi:
 \href{https://doi.org/10.1093/icesjms/fsu131}{10.1093/icesjms/fsu131}.
 
+\hypertarget{ref-hamel_stock_2011}{}
+Hamel, O.S., and Ono, K. 2011. Stock Assessment of Pacific Ocean Perch
+in Waters off of the U.S. West Coast in 2011. Pacific Fishery Management
+Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220.
+
 \hypertarget{ref-hannah_age-modulated_2007}{}
 Hannah, R., and Parker, S. 2007. Age-modulated variation in reproductive
 development of female Pacific Ocean perch (\emph{Sebastes alutus}) in
@@ -3511,6 +3615,12 @@ Hoenig, J.M. 1983. Empirical use of longevity data to estimate mortality
 rates. Fishery Bulletin \textbf{82}: 898--903. Available from
 \url{http://fishbull.noaa.gov/81-4/hoenig.pdf} {[}accessed 28 February
 2017{]}.
+
+\hypertarget{ref-ianelli_status_1998}{}
+Ianelli, J.N., and Zimmermann, M. 1998. Status and future prospects for
+the Pacific ocean perch resource in waters off Washington and Oregon as
+assessed in 1998. Pacific Fishery Management Council, 7700 Ambassador
+Place NE, Suite 200, Portland, OR 97220.
 
 \hypertarget{ref-ianelli_status_1992}{}
 Ianelli, J.N., Ito, D.H., and Wilkins, M. 1992. Status and future

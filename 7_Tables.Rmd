@@ -388,7 +388,7 @@ colnames(Fish_Length) = c('Year',
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
                            caption = c('Summary of NWFSC shelf-slope survey age samples used in the stock assessment.'),
-                           label = 'tab:NWFcombo_Ages',
+                           label = 'tab:NWcombo_Ages',
                            digits = 0)    
 # Add alignment  
 align(Fish_Length.table) = c('l',
