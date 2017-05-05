@@ -184,8 +184,10 @@ Recommendation:Historical catch reconstruction estimates should be formally revi
 <!-- *************************************************************************** -->
 #Assessment
 
-##Model Description
+##General Model Specifications and Assumptions
+Stock Synthesis \hl{v3.30.01.12} was used to estimate the parameters in the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used to investigate and plot model fits. A summary of the data sources used in the model (details discussed above) is shown in Figure \ref{fig:data_plot}.
 
+Stock Synthesis has many options when setting up a model and the assessment model for `r spp` was set up in the following manner.
 
 
 ###Transition To The Current Stock Assessment
