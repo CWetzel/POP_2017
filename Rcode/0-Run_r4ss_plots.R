@@ -110,7 +110,9 @@ SS_plots(mod1,
          maxcols = 6, 
          maxrows2 = 4, 
          maxcols2 = 4, 
-         printfolder = '', 
+         printfolder = '',
+         datplot=TRUE, 
+         bub.scale.dat= 7,
          dir = out.dir.mod1)
 
 

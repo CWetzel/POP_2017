@@ -45,21 +45,21 @@
 
 \FloatBarrier
 
-![NWFSC shelf-slope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](Figures/NWFSCcombo_Lengths.png)
+![NWFSC shelf-slope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](r4ss/plots_mod1/comp_lendat_bubflt8mkt0.png)
 
 \FloatBarrier
 
-![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](Figures/NWFSCcombo_Ages.png)
+![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}]r4ss/plots_mod1/comp_gstagedat_bubflt8mkt0.png)
 
 \FloatBarrier
 
 
 <!--  ![Q-Q plots for the VAST lognormal distribution for the NWFSC slope survey. \label{fig:nw_slope_qq}](Figures/Q-Q_plot_nw_slope.jpg)-->
-![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](Figures/NWslope_Lengths.png)
+![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](r4ss/plots_mod1/comp_lendat_bubflt7mkt0.png)
 
 \FloatBarrier
 
-![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](Figures/NWslope_Ages.png)
+![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](r4ss/plots_mod1/comp_agedat_bubflt7mkt0.png)
 
 \FloatBarrier
 
@@ -68,7 +68,7 @@
 
 \FloatBarrier
 
-![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](Figures/AFSCslope_Lengths.png)
+![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}]r4ss/plots_mod1/comp_lendat_bubflt6mkt0.png)
 
 \FloatBarrier
 
@@ -77,11 +77,11 @@
 
 \FloatBarrier
 
-![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](Figures/Triennial_Lengths.png)
+![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
 
 \FloatBarrier
 
-![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](Figures/Triennial_Ages.png)
+![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
 
 \FloatBarrier
 
@@ -90,11 +90,11 @@
 
 \FloatBarrier
 
-![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](Figures/POP_lengths.png)
+![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](r4ss/plots_mod1/comp_lendat_bubflt4mkt0.png)
 
 \FloatBarrier
 
-![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](Figures/POP_ages.png)
+![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](r4ss/plots_mod1/comp_agedat_bubflt4mkt0.png)
 
 \FloatBarrier
 
@@ -111,21 +111,24 @@
 <!-- *****************Commercial Comps & Discards FIGURES************************** --> 
 <!-- ****************************************************************************** -->
 
-![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](Figures/discardLengthComps.png)
+![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](r4ss/plots_mod1/comp_lendat_bubflt1mkt1.png)
 
 \FloatBarrier
 
-<!--
-![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](Figures/Commercial_Lengths.png)
 
-![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](Figures/Commercial_Ages.png)
--->
-
-![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](Figures/ASHOP_lengths.png)
+![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](r4ss/plots_mod1/comp_lendat_bubflt1mkt2_page2.png)
 
 \FloatBarrier
 
-![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](Figures/ASHOP_ages.png)
+![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](r4ss/plots_mod1/comp_agedat_bubflt1mkt2.png)
+
+\FloatBarrier
+
+![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](r4ss/plots_mod1/comp_lendat_bubflt2mkt0.png)
+
+\FloatBarrier
+
+![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](r4ss/plots_mod1/comp_agedat_bubflt2mkt0.png)
 
 \FloatBarrier
 
