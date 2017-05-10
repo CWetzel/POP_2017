@@ -47,7 +47,7 @@ link-citations: yes
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \renewcommand{\thefigure}{\alph{figure}}
-???\renewcommand{\thetable}{\alph{table}}
+‼\renewcommand{\thetable}{\alph{table}}
 
 ```{r child = "0_Executive_Summary.Rmd"}
 ```

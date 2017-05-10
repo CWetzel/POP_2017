@@ -8,6 +8,8 @@
 
 #Figures
 
+\FloatBarrier
+
 <!-- ====================================================================== --> 
 <!-- *********************INTRODUCTION FIGURES***************************** --> 
 <!-- ====================================================================== --> 
@@ -45,11 +47,13 @@
 
 \FloatBarrier
 
+
 ![NWFSC shelf-slope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](r4ss/plots_mod1/comp_lendat_bubflt8mkt0.png)
 
 \FloatBarrier
 
-![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}]r4ss/plots_mod1/comp_gstagedat_bubflt8mkt0.png)
+
+![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](r4ss/plots_mod1/comp_gstagedat_bubflt8mkt0.png)
 
 \FloatBarrier
 
@@ -58,6 +62,7 @@
 ![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](r4ss/plots_mod1/comp_lendat_bubflt7mkt0.png)
 
 \FloatBarrier
+
 
 ![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](r4ss/plots_mod1/comp_agedat_bubflt7mkt0.png)
 
@@ -68,7 +73,8 @@
 
 \FloatBarrier
 
-![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}]r4ss/plots_mod1/comp_lendat_bubflt6mkt0.png)
+
+![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](r4ss/plots_mod1/comp_lendat_bubflt6mkt0.png)
 
 \FloatBarrier
 
@@ -77,9 +83,11 @@
 
 \FloatBarrier
 
+
 ![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
 
 \FloatBarrier
+
 
 ![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
 
@@ -90,18 +98,15 @@
 
 \FloatBarrier
 
+
 ![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](r4ss/plots_mod1/comp_lendat_bubflt4mkt0.png)
 
 \FloatBarrier
 
+
 ![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](r4ss/plots_mod1/comp_agedat_bubflt4mkt0.png)
 
 \FloatBarrier
-
-
-
-
-
 
 
 

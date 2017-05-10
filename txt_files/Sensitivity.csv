@@ -1,0 +1,28 @@
+Label,Base Model,Harmonic Weights
+Total Likelihood,1415.31,1415.31
+Survey Likelihood,-27.8773,-27.8773
+Discard Likelihood,-34.3647,-34.3647
+Length Likelihood,132.211,132.211
+Age Likelihood,1331.57,1331.57
+Recruitment Likelihood,11.4488,11.4488
+Forecast Recruitment Likelihood,1.04E-05,1.04E-05
+Parameter Priors Likelihood,2.32131,2.32131
+Parameter Deviation Likelihood,0,0
+log(R0),9.31654,9.31654
+SB Virgin,6248.02,6248.02
+SB 2017,3268.99,3268.99
+Depletion 2017,0.523204,0.523204
+Total Yield,996.252,996.252
+Steepness,0.4,0.4
+Natural Mortality - Female,0.054,0.054
+Length at Amin - Female,20.7306,20.7306
+Length at Amax - Female,41.4958,41.4958
+Von Bert. k - Female,0.167681,0.167681
+SD young - Female,1.33341,1.33341
+SD old - Female,2.59365,2.59365
+Natural Mortality - Male,0.054759137,0.054759137
+Length at Amin - Male,20.9087947,20.9087947
+Length at Amax - Male,38.7983887,38.7983887
+Von Bert. k - Male,0.196042087,0.196042087
+SD young - Male,1.33123754,1.33123754
+SD old - Male,2.321201989,2.321201989

@@ -260,13 +260,26 @@ print(Regs.table,
                      'Total landings (mt)',
                      'Estimated total catch (mt)')
 
-    # Print management performance table - will have to edit the text file and 
-    mngmnt.table2 = xtable(mngmnt, 
+  # Print management performance table - will have to edit the text file and 
+  mngmnt.table2 = xtable(mngmnt, 
                       caption=c('Recent trend in estimated total catch relative to management guidelines.'), 
                       label='tab:mnmgt_perform_tables')
+    
+  # Add alignment
+  align(mngmnt.table2) = c('l',
+                        '>{\\raggedleft}p{0.5in}',
+                        '>{\\centering}p{1.0in}',
+                        '>{\\centering}p{1.0in}',
+                        '>{\\centering}p{1.0in}', 
+                        '>{\\centering}p{1.1in}',
+                        '>{\\centering}p{1.1in}') 
+  
 
-    print(mngmnt.table2, include.rownames = FALSE, caption.placement = 'top', 
-          sanitize.text.function = function(x){x}, scalebox = .9)
+  print(mngmnt.table2, 
+          include.rownames = FALSE, 
+          caption.placement = 'top', 
+          sanitize.text.function = function(x){x})#, 
+          #scalebox = .9)
 ```
 
 
@@ -771,7 +784,7 @@ print(Fish_Length.table,
 
 
 ``` 
-
+\FloatBarrier
 
 ```{r, results = 'asis'}
 Fish_Length = read.csv('./txt_files/FisheryAges_N.csv')
@@ -799,7 +812,7 @@ print(Fish_Length.table,
       sanitize.text.function = function(x){x})
 
 ```
-
+\FloatBarrier
 
 
 <!-- ************************* ASHOP ******************************** -->
@@ -960,7 +973,7 @@ print(Model.Setup.Table, include.rownames = FALSE, caption.placement = 'top',
 <!-- ***********MODEL 1 PARAMETERS***************************************** --> 
 \begin{landscape}
 ```{r, results='asis'}
-mod_params = mod1$parameters[-c(grep('Recr',mod1$parameters$Label),
+  mod_params = mod1$parameters[-c(grep('Recr',mod1$parameters$Label),
                                 grep('Impl',mod1$parameters$Label)),
                              (names(mod1$parameters) %in%
                                 c("Num","Label","Value","Phase","Min",
@@ -968,29 +981,29 @@ mod_params = mod1$parameters[-c(grep('Recr',mod1$parameters$Label),
                                   "Pr_type","Prior","Pr_SD"))]  
 
 # Convert values is males are estimated as an offset from females
-if (parm.offset == TRUE){
-  convert = c('Value', 'Min', 'Max')
-  mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1',convert] = mod_params[mod_params$Label == 'NatM_p_1_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1', convert])
-  mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1',convert] = mod_params[mod_params$Label == 'L_at_Amin_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1', convert])
-  mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1',convert] = mod_params[mod_params$Label == 'L_at_Amax_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1', convert])
-  mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1',convert] = mod_params[mod_params$Label == 'VonBert_K_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1', convert])
-  mod_params[mod_params$Label == 'CV_young_Mal_GP_1',convert] = mod_params[mod_params$Label == 'CV_young_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'CV_young_Mal_GP_1', convert])
-  mod_params[mod_params$Label == 'CV_old_Mal_GP_1',convert] = mod_params[mod_params$Label == 'CV_old_Fem_GP_1',convert] * 
-    exp(mod_params[mod_params$Label == 'CV_old_Mal_GP_1', convert])
+  if (parm.offset == TRUE){
+    convert = c('Value', 'Min', 'Max')
+    mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1',convert] = mod_params[mod_params$Label == 'NatM_p_1_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1', convert])
+    mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1',convert] = mod_params[mod_params$Label == 'L_at_Amin_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1', convert])
+    mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1',convert] = mod_params[mod_params$Label == 'L_at_Amax_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1', convert])
+    mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1',convert] = mod_params[mod_params$Label == 'VonBert_K_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1', convert])
+    mod_params[mod_params$Label == 'CV_young_Mal_GP_1',convert] = mod_params[mod_params$Label == 'CV_young_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'CV_young_Mal_GP_1', convert])
+    mod_params[mod_params$Label == 'CV_old_Mal_GP_1',convert] = mod_params[mod_params$Label == 'CV_old_Fem_GP_1',convert] * 
+      exp(mod_params[mod_params$Label == 'CV_old_Mal_GP_1', convert])
   
-  convert = c('Min', 'Max')
-  mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1',convert]  = round(mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1', convert], digits = 1)
-  mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1', convert], digits = 0)
-  mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1', convert], digits = 0)
-  mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1', convert], digits = 2)
-  mod_params[mod_params$Label == 'CV_young_Mal_GP_1',convert]  = round(mod_params[mod_params$Label == 'CV_young_Mal_GP_1', convert], digits = 2)
-  mod_params[mod_params$Label == 'CV_old_Mal_GP_1',convert]    = round(mod_params[mod_params$Label == 'CV_old_Mal_GP_1', convert], digits = 2)
-}
+    convert = c('Min', 'Max')
+    mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1',convert]  = round(mod_params[mod_params$Label == 'NatM_p_1_Mal_GP_1', convert], digits = 1)
+    mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'L_at_Amin_Mal_GP_1', convert], digits = 0)
+    mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'L_at_Amax_Mal_GP_1', convert], digits = 0)
+    mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1',convert] = round(mod_params[mod_params$Label == 'VonBert_K_Mal_GP_1', convert], digits = 2)
+    mod_params[mod_params$Label == 'CV_young_Mal_GP_1',convert]  = round(mod_params[mod_params$Label == 'CV_young_Mal_GP_1', convert], digits = 2)
+    mod_params[mod_params$Label == 'CV_old_Mal_GP_1',convert]    = round(mod_params[mod_params$Label == 'CV_old_Mal_GP_1', convert], digits = 2)
+  }
 
 # Combine bounds into one column
 mod_params$Min = paste('(', mod_params$Min, ', ', mod_params$Max, ')', sep='')
@@ -1003,11 +1016,11 @@ mod_params$PR_type = ifelse(mod_params$Pr_type == 'No_prior' , 'None',
                                   ', ', mod_params$Pr_SD, ')', sep = ''))
 
 # Remove the max, prior and prior sd columns
-drops = c('Max', 'Prior', 'Pr_SD')
+drops = c('Max', 'Prior', 'Pr_type', 'Pr_SD', 'Num')
 mod_params = mod_params[, !(names(mod_params) %in% drops)]
 
 # Add column names
-colnames(mod_params) = c('No.',
+colnames(mod_params) = c(#'No.',
                          'Parameter',
                          'Value',
                          'Phase',
@@ -1028,10 +1041,10 @@ mod_params.table = xtable(mod_params,
                                           information (mean, SD).'
                                           , sep='')), 
                           label='tab:model_params',
-                          digits = c(0,0,0,0,3,0,3,0,3,0))  
+                          digits = c(0,0,2,0,2,0,2,0))  
 
 # Add alignment  
-align(mod_params.table) = c('lrlrrcccll')
+align(mod_params.table) = c('llrcccll')
 
 # Add "continued on next page"" footnote   
 addtorow          <- list()
@@ -1116,23 +1129,21 @@ print(jitter.table,
 ```{r, results = 'asis'}
 
 # Read in/organize sensitivity file, change column names, caption
-Sens_model1 = read.csv('./txt_files/Sensitivities_model1.csv')
-colnames(Sens_model1) = c('Label', 
-                          'Base (Francis weights)', 
-                          'Harmonic mean weights',
-                          'Drop index', 
-                          'Drop ages', 
-                          'Down-weight lengths',
-                          'Free size Age0', 
-                          'Free CV Amin', 
-                          'External growth')
+Sens_model1 = read.csv('./txt_files/Sensitivity.csv')
+
+#colnames(Sens_model1) = c('Label', 
+#                          'Base (Francis weights)', 
+#                          'Harmonic mean weights',
+#                          'Steepness fixed at prior', 
+#                          'Estimate natural mortality', 
+#                          'Split Triennial',
+#                          'Old Maturity', 
+#                          'Old Fecundity', 
+#                          'XXXX')
 
 # Create sensitivities table
 Sens_model1.table = xtable(Sens_model1, 
-                           caption = c('Sensitivity of the base model 
-                                       to dropping or down-weighting data 
-                                       sources and alternative assumptions 
-                                       about growth.'),
+                           caption = c('Sensitivity of the base model'),
                            label = 'tab:Sensitivity_model1', digits = 2)    
 
 # Add alignment - this uses centered aligment of .6 inches for all columns 2+,
@@ -1163,105 +1174,6 @@ print(Sens_model1.table,
 <!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 
 ```{r}
 
-
-# Total biomass, extract and subset
-Bio_all = mod1$sprseries[, c('Yr', 'Bio_all')]
-Bio_allyrs = subset(Bio_all, Yr > (Dat_start_mod1 - 1) & Yr < (LastYR + 1))
-
-
-
-# Spawning biomass, extract and subset, and turn into scientific notation
-SpawningB = mod1$derived_quants[grep('SPB', mod1$derived_quants$LABEL), ]
-SpawningB = SpawningB[c(-1, -2), ]
-SpawningByrs = SpawningB[SpawningB$LABEL >= paste('SPB_', Dat_start_mod1, sep='') &  
-                           SpawningB$LABEL <= paste('SPB_', LastYR, sep=''), ] 
-
-SpawningB_units = 'million'
-#if(mean(SpawningByrs$Value) > 1000000){
-#    SpawningB_units <- "million"
-#    SpawningByrs$Value <- SpawningByrs$Value/1000000
-# }
-
-
-# Depletion, extract, rename and subset
-Depl_years = as.data.frame(seq(Dat_start_mod1, LastYR, 1))
-colnames(Depl_years) = 'Year'
-Depl_years$Depl = 0
-Depletion = mod1$derived_quants[grep('Bratio', mod1$derived_quants$LABEL), ]
-Depletionyrs = Depletion[Depletion$LABEL >= paste0('Bratio_', Dat_start_mod1) &  
-                           Depletion$LABEL <= paste0('Bratio_', LastYR), ]
-
-Depletionyrs$Year = Depletionyrs$Label1 = substr(Depletionyrs$LABEL,
-                                                 (nchar(Depletionyrs$LABEL) + 1) - 4, 
-                                                 nchar(Depletionyrs$LABEL))
-# Make sure depletion is numeric and merge ...
-Depletionyrs$Year = as.numeric(Depletionyrs$Year)
-Depleteyrs = merge(Depl_years, Depletionyrs, all.x=T, all.y=T, by.x='Year', by.y='Year')
-Depleteyrs[is.na(Depleteyrs)] <- 0
-Depleteyrs$total = Depleteyrs$Depl + Depleteyrs$Value
-
-# Recruits, extract and subset
-Recruit = mod1$derived_quants[grep('Recr', mod1$derived_quants$LABEL), ]
-Recruit = Recruit[c(-1, -2), ]
-Recruityrs = Recruit[Recruit$LABEL >= paste('Recr_', Dat_start_mod1, sep='') &  
-                       Recruit$LABEL <= paste('Recr_', LastYR, sep=''), ]  
-
-
-# Landings/total catch, extract and subset years
-Landings = mod1$sprseries[ , c('Yr','Dead_Catch_B')]
-Landingsyrs = subset(Landings, Yr > (Dat_start_mod1 - 1) & Yr < (LastYR + 1))
-
-
-
-# Relatvie exploitation rate, extract, subset and merge
-Exploit = mod1$derived_quants[grep('F', mod1$derived_quants$LABEL), ]
-Exploit = Exploit[c(-1, -2), ]
-Exploityrs = Exploit[Exploit$LABEL >= paste('F_', Dat_start_mod1, sep = '') &  
-                       Exploit$LABEL <= paste('F_', LastYR, sep = ''), ]  
-Exploityrs$Year = Exploityrs$Label1 = substr(Exploityrs$LABEL, 
-                                             (nchar(Exploityrs$LABEL) + 1) - 4,
-                                             nchar(Exploityrs$LABEL))
-Exploityrs$Year = as.numeric(Exploityrs$Year)
-Exploited = merge(Depl_years, Exploityrs, all.x=T, all.y=T, by.x='Year', by.y='Year')
-Exploited[is.na(Exploited)] <- 0
-Exploited$total = Exploited$Depl + Exploited$Value
-
-# SPR, extract and subset years
-SPR = mod1$sprseries[, c('Yr', 'SPR')]
-SPRyrs = subset(SPR, Yr > (Dat_start_mod1 - 1) & Yr < (LastYR + 1))
-
-
-# Bind all the columns together for the table
-Timeseries = as.data.frame(cbind(seq(Dat_start_mod1, LastYR, 1), 
-                                 Bio_allyrs$Bio_all, 
-                                 SpawningByrs$Value,
-                                 Depleteyrs$total,
-                                 Recruityrs$Value, 
-                                 Landingsyrs$Dead_Catch_B, 
-                                 Exploited$total,
-                                 SPRyrs$SPR))
-
-# Add colulmn names    
-colnames(Timeseries)=c('Year', 
-                       'Total biomass (mt)', 
-                       paste0('Spawning biomass', SpawningB_units, ' (mt)'),
-                       'Depletion', 
-                       'Age-0 recruits', 
-                       'Total catch (mt)',
-                       'Relative exploitation rate', 
-                       'SPR')
-
-# Make year a factor so you don't have a decimal   
-Timeseries$Year = as.factor(Timeseries$Year)
-
-# Remove 2015 values for last three columns since year isn't complete
-Timeseries[nrow(Timeseries), c((ncol(Timeseries) - 2):ncol(Timeseries))] <- NA
-```
-
-
-```{r}
-# WORKING TIME-SERIES TABLE TO INCORPORATE THE FORECAST PERIOD
-
 Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
 Bio_all = mod1$timeseries$Bio_all[mod1$timeseries$Yr >= Dat_start_mod1]
 SpawningB = as.numeric(print( mod1$timeseries$SpawnBio[mod1$timeseries$Yr >= Dat_start_mod1], digits = 0))
@@ -1275,7 +1187,7 @@ SPR = print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$LABEL), 'Va
 SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
 Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 2)), rep("-", Project_lastyr-LastYR))
 
-Tot.Mortality = c( print(Tot.Mortality, 1), rep("-", Project_lastyr-LastYR))
+Tot.Mortality = c( print(Tot.Mortality, 0), rep("-", Project_lastyr-LastYR))
 
 
 # Bind all the columns together for the table
@@ -1292,7 +1204,7 @@ Timeseries = data.frame(Year,
 # Add colulmn names    
 colnames(Timeseries)=c('Year', 
                        'Total biomass (mt)', 
-                       'Spawning output (million eggs) (mt)',
+                       'Spawning output (million eggs)',
                        paste('Summary biomass', min_age),
                        'Relative biomass', 
                        'Age-0 recruits', 
@@ -1313,19 +1225,18 @@ Timeseries$Year = as.factor(Timeseries$Year)
 Timeseries.table = xtable(Timeseries, 
                           caption = c('Time-series of population estimates from the base model.'),
                           label='tab:Timeseries_mod1',
-                          digits = c(0,0,0,0,0,0,0,2,2,2))   
+                          digits = c(0,0,0,0,0,0,0,0,2,2))   
 
 # Add alignment
 align(Timeseries.table) = c('l',
                             'c',
                             '>{\\centering}p{.5in}',
-                            '>{\\centering}p{.6in}',
+                            '>{\\centering}p{.65in}',
                             '>{\\centering}p{.6in}',
                             '>{\\centering}p{.6in}',
                             '>{\\centering}p{.5in}',
-                            '>{\\centering}p{.6in}',
-                            '>{\\centering}p{.5in}',
-                            #'>{\\centering}p{.5in}')
+                            '>{\\centering}p{.60in}',
+                            '>{\\centering}p{.45in}',
                             'c')
 
 
@@ -1434,5 +1345,5 @@ print(Forecast_mod1.table,
 <!-- *************************END TABLES*********************************** --> 
 <!-- *************************          *********************************** --> 
 <!-- ====================================================================== --> 
-  
+  \clearpage
   

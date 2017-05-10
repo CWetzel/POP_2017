@@ -187,7 +187,7 @@ represent any agency determination or policy.
 
 \pagenumbering{arabic} \setcounter{page}{1}
 \renewcommand{\thefigure}{\alph{figure}}
-???\renewcommand{\thetable}{\alph{table}}
+‼\renewcommand{\thetable}{\alph{table}}
 
 \section*{Executive Summary}\label{executive-summary}
 \addcontentsline{toc}{section}{Executive Summary}
@@ -377,7 +377,7 @@ the base-case model with 95\% confidence or credibility intervals.
 \subsection*{Exploitation status}\label{exploitation-status}
 \addcontentsline{toc}{subsection}{Exploitation status}
 
-\hl{Include: exploitation rates (i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate) â include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).}
+\hl{Include: exploitation rates (i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate) – include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).}
 
 Exploitation Tables: Table \ref{tab:SPR_Exploit_mod1}, Table
 \ref{tab:SPR_Exploit_mod2}, Table \ref{tab:SPR_Exploit_mod3}
@@ -912,15 +912,26 @@ of possible cells (greater than 11,000) distributed from the Mexican to
 the Canadian border.
 
 The data from the NWFSC shelf-slope survey was analyzed using a
-spatio-temporal delta-generalized linear mixed model (VAST delta-GLMM)
-(Thorson and Barnett
-\protect\hyperlink{ref-thorson_comparing_2017}{2017}). Predicted fish
-biomass density is derived as the product of a ``delta'' portion for the
-probability of a non-zero catch and a second portion for the magnitude
-of the non-zero catches. Further, the geostatistical GLMM framework can
-accommodate spatial autocorrelation. Additional information about the
-approach and the software package it is implemented in are available
-from www.fishstats.org. \hl{describe VAST}
+spatio-temporal delta-model (Thorson et al.
+\protect\hyperlink{ref-thorson_geostatistical_2015}{2015}), implemented
+as an R package VAST (Thorson and Barnett
+\protect\hyperlink{ref-thorson_comparing_2017}{2017}) and publicly
+available online (\url{https://github.com/James-Thorson/VAST}). Spatial
+and spatio-temporal variation is specifically included in both encounter
+probability and positive catch rates, a logit-link for encounter
+probability, and a log-link for positive catch rates. Vessel-year
+effects were included for each unique combination of vessel and year in
+the database, to account for the random selection of commercial vessels
+used during sampling (Helser et al.
+\protect\hyperlink{ref-helser_generalized_2004}{2004}, Thorson and Ward
+(\protect\hyperlink{ref-thorson_accounting_2014}{2014})). Spatial
+variation was approximated using 1000 knots, and use the bias-correction
+algorithm (Thorson and Kristensen
+\protect\hyperlink{ref-thorson_implementing_2016}{2016}) in Template
+Model Builder (Kristensen et al.
+\protect\hyperlink{ref-kristensen_tmb:_2016}{2016}). Further details
+regarding model structure are available in the user manual
+(\url{https://github.com/James-Thorson/VAST/blob/master/examples/VAST_user_manual.pdf}).
 
 The smallest Pacific ocean perch tend to occur in the shallower depths
 (\textless{} 200 m) with only larger individuals occurring at depths
@@ -2095,8 +2106,7 @@ Date & Area & Regulation \\
 \centering
 \caption{Recent trend in estimated total catch relative to management guidelines.} 
 \label{tab:mnmgt_perform_tables}
-\scalebox{0.9}{
-\begin{tabular}{lllrll}
+\begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.0in}>{\centering}p{1.0in}>{\centering}p{1.0in}>{\centering}p{1.1in}>{\centering}p{1.1in}}
   \hline
 Year & OFL (mt; ABC prior to 2011) & ABC (mt) & ACL (mt; OY prior to 2011) & Total landings (mt) & Estimated total catch (mt) \\ 
   \hline
@@ -2112,7 +2122,6 @@ Year & OFL (mt; ABC prior to 2011) & ABC (mt) & ACL (mt; OY prior to 2011) & Tot
   \text{2016} & - & - & 164 & 68 & 67 \\ 
    \hline
 \end{tabular}
-}
 \end{table}
 
 \begin{table}[ht]
@@ -2455,6 +2464,8 @@ Year & Trips & Fish & Sample Size \\
 \end{tabular}
 \end{table}
 
+\FloatBarrier
+
 \begin{table}[ht]
 \centering
 \caption{Summary of commercial fishery age samples used in the stock assessment.} 
@@ -2494,6 +2505,8 @@ Year & Trips & Fish & Sample Size \\
 \end{tabular}
 \end{table}
 
+\FloatBarrier
+
 \begin{table}[ht]
 \centering
 \caption{Summary of At-Sea hake fishery length samples used in the stock assessment.} 
@@ -2531,6 +2544,7 @@ Year & Trips & Fish & Sample Size \\
 2003 & 142 & 378 & 194 \\ 
   2006 & 198 & 410 & 255 \\ 
   2007 & 297 & 620 & 383 \\ 
+  2014 & 22 & 101 & 36 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -2631,7 +2645,7 @@ Starting year & 1918 \\
 \FloatBarrier
 
 \begin{landscape}
-\begin{longtable}{rlrrcccll}
+\begin{longtable}{lrcccll}
 \caption{List of parameters used in
                                           the base model, including estimated 
                                           values and standard deviations (SD), 
@@ -2641,7 +2655,7 @@ Starting year & 1918 \\
                                           parameters are near bounds, and prior type
                                           information (mean, SD).} \\ 
   \hline
-No. & Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)  & NA \\ 
+Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)  \\ 
   \hline 
 \endhead 
 \hline 
@@ -2649,89 +2663,89 @@ No. & Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)  & 
 \endfoot 
 \endlastfoot 
  \hline
-1 & NatM\_p\_1\_Fem\_GP\_1 & 0 & -5.000 & (0.02, 0.1) &  &  & Log\_Norm & Log\_Norm (-2.92, 0.44) \\ 
-  2 & L\_at\_Amin\_Fem\_GP\_1 & 21 & 3.000 & (15, 25) & OK & 0 & No\_prior & None \\ 
-  3 & L\_at\_Amax\_Fem\_GP\_1 & 41 & 2.000 & (35, 45) & OK & 0 & No\_prior & None \\ 
-  4 & VonBert\_K\_Fem\_GP\_1 & 0 & 3.000 & (0.1, 0.4) & OK & 0 & No\_prior & None \\ 
-  5 & CV\_young\_Fem\_GP\_1 & 1 & 5.000 & (0.03, 5) & OK & 0 & No\_prior & None \\ 
-  6 & CV\_old\_Fem\_GP\_1 & 3 & 5.000 & (0.03, 5) & OK & 0 & No\_prior & None \\ 
-  7 & Wtlen\_1\_Fem & 0 & -50.000 & (0, 3) &  &  & No\_prior & None \\ 
-  8 & Wtlen\_2\_Fem & 3 & -50.000 & (2, 4) &  &  & No\_prior & None \\ 
-  9 & Mat50\%\_Fem & 32 & -50.000 & (20, 40) &  &  & No\_prior & None \\ 
-  10 & Mat\_slope\_Fem & -1 & -50.000 & (-2, 4) &  &  & No\_prior & None \\ 
-  11 & Eggs\_scalar\_Fem & 0 & -50.000 & (0, 6) &  &  & No\_prior & None \\ 
-  12 & Eggs\_exp\_len\_Fem & 5 & -50.000 & (-3, 5) &  &  & No\_prior & None \\ 
-  13 & NatM\_p\_1\_Mal\_GP\_1 & 0 & 5.000 & (0, 0.3) & OK & 0 & Normal & Normal (0.05, 0.1) \\ 
-  14 & L\_at\_Amin\_Mal\_GP\_1 & 21 & 2.000 & (6, 68) & OK & 0 & No\_prior & None \\ 
-  15 & L\_at\_Amax\_Mal\_GP\_1 & 39 & 2.000 & (13, 122) & OK & 0 & No\_prior & None \\ 
-  16 & VonBert\_K\_Mal\_GP\_1 & 0 & 3.000 & (0.04, 1.09) & OK & 0 & No\_prior & None \\ 
-  17 & CV\_young\_Mal\_GP\_1 & 1 & 5.000 & (0, 742.07) & OK & 0 & No\_prior & None \\ 
-  18 & CV\_old\_Mal\_GP\_1 & 2 & 5.000 & (0, 742.07) & OK & 0 & No\_prior & None \\ 
-  19 & Wtlen\_1\_Mal & 0 & -50.000 & (0, 3) &  &  & No\_prior & None \\ 
-  20 & Wtlen\_2\_Mal & 3 & -50.000 & (2, 4) &  &  & No\_prior & None \\ 
-  24 & CohortGrowDev & 1 & -50.000 & (0, 2) &  &  & No\_prior & None \\ 
-  25 & FracFemale\_GP\_1 & 0 & -99.000 & (0.01, 0.99) &  &  & No\_prior & None \\ 
-  26 & SR\_LN(R0) & 9 & 1.000 & (5, 20) & OK & 0 & No\_prior & None \\ 
-  27 & SR\_BH\_steep & 0 & -2.000 & (0.2, 1) &  &  & Full\_Beta & Full\_Beta (0.7606, 0.146) \\ 
-  28 & SR\_sigmaR & 1 & -6.000 & (0.5, 1.2) &  &  & No\_prior & None \\ 
-  29 & SR\_regime & 0 & -50.000 & (-5, 5) &  &  & No\_prior & None \\ 
-  30 & SR\_autocorr & 0 & -50.000 & (0, 2) &  &  & No\_prior & None \\ 
-  154 & LnQ\_base\_Fishery(1) & -12 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  155 & LnQ\_base\_POP(4) & 0 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  156 & LnQ\_base\_Triennial(5) & -2 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  157 & Q\_extraSD\_Triennial(5) & 0 & 2.000 & (0, 0.5) & OK & 0 & No\_prior & None \\ 
-  158 & LnQ\_base\_AFSCSlope(6) & -2 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  159 & LnQ\_base\_NWFSCSlope(7) & -3 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  160 & LnQ\_base\_NWFSCcombo(8) & -2 & -1.000 & (-15, 15) &  &  & No\_prior & None \\ 
-  161 & Q\_extraSD\_NWFSCcombo(8) & 0 & 2.000 & (0, 0.5) & OK & 0 & No\_prior & None \\ 
-  162 & SizeSel\_P1\_Fishery(1) & 38 & 1.000 & (20, 45) & OK & 1 & No\_prior & None \\ 
-  163 & SizeSel\_P2\_Fishery(1) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  164 & SizeSel\_P3\_Fishery(1) & 4 & 3.000 & (-1, 9) & OK & 0 & No\_prior & None \\ 
-  165 & SizeSel\_P4\_Fishery(1) & -2 & 3.000 & (-9, 9) & OK & 4 & No\_prior & None \\ 
-  166 & SizeSel\_P5\_Fishery(1) & -4 & -4.000 & (-5, 9) &  &  & No\_prior & None \\ 
-  167 & SizeSel\_P6\_Fishery(1) & 1 & 2.000 & (-5, 9) & OK & 0 & No\_prior & None \\ 
-  168 & Retain\_P1\_Fishery(1) & 28 & 1.000 & (15, 45) & OK & 0 & No\_prior & None \\ 
-  169 & Retain\_P2\_Fishery(1) & 1 & 1.000 & (0.1, 10) & OK & 0 & No\_prior & None \\ 
-  170 & Retain\_P3\_Fishery(1) & 1 & 1.000 & (-10, 10) & OK & 31441 & No\_prior & None \\ 
-  171 & Retain\_P4\_Fishery(1) & 0 & -3.000 & (0, 0) &  &  & No\_prior & None \\ 
-  172 & SizeSel\_P1\_ASHOP(2) & 50 & 1.000 & (20, 49.5) & HI & 0 & No\_prior & None \\ 
-  173 & SizeSel\_P2\_ASHOP(2) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  174 & SizeSel\_P3\_ASHOP(2) & 5 & 3.000 & (-1, 9) & OK & 0 & No\_prior & None \\ 
-  175 & SizeSel\_P4\_ASHOP(2) & 1 & 3.000 & (-1, 9) & OK & 6118 & No\_prior & None \\ 
-  176 & SizeSel\_P5\_ASHOP(2) & -4 & -4.000 & (-9, 9) &  &  & No\_prior & None \\ 
-  177 & SizeSel\_P6\_ASHOP(2) & 999 & -2.000 & (-5, 999) &  &  & No\_prior & None \\ 
-  178 & SizeSel\_P1\_POP(4) & 24 & 1.000 & (20, 70) & OK & 2 & No\_prior & None \\ 
-  179 & SizeSel\_P2\_POP(4) & 12 & 3.000 & (0.001, 50) & OK & 4 & No\_prior & None \\ 
-  180 & SizeSel\_P1\_Triennial(5) & 31 & 1.000 & (20, 45) & OK & 5 & No\_prior & None \\ 
-  181 & SizeSel\_P2\_Triennial(5) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  182 & SizeSel\_P3\_Triennial(5) & 9 & 3.000 & (-1, 9) & HI & 0 & No\_prior & None \\ 
-  183 & SizeSel\_P4\_Triennial(5) & 1 & 3.000 & (-1, 9) & OK & 6 & No\_prior & None \\ 
-  184 & SizeSel\_P5\_Triennial(5) & -5 & -4.000 & (-5, 9) &  &  & No\_prior & None \\ 
-  185 & SizeSel\_P6\_Triennial(5) & -1 & 2.000 & (-5, 9) & OK & 1 & No\_prior & None \\ 
-  186 & SizeSel\_P1\_AFSCSlope(6) & 22 & 1.000 & (20, 45) & OK & 7 & No\_prior & None \\ 
-  187 & SizeSel\_P2\_AFSCSlope(6) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  188 & SizeSel\_P3\_AFSCSlope(6) & 1 & 3.000 & (-1, 9) & OK & 7 & No\_prior & None \\ 
-  189 & SizeSel\_P4\_AFSCSlope(6) & 1 & 3.000 & (-1, 9) & OK & 6118 & No\_prior & None \\ 
-  190 & SizeSel\_P5\_AFSCSlope(6) & -9 & -4.000 & (-9, 9) &  &  & No\_prior & None \\ 
-  191 & SizeSel\_P6\_AFSCSlope(6) & 999 & -2.000 & (-5, 999) &  &  & No\_prior & None \\ 
-  192 & SizeSel\_P1\_NWFSCSlope(7) & 36 & 1.000 & (20, 45) & OK & 2 & No\_prior & None \\ 
-  193 & SizeSel\_P2\_NWFSCSlope(7) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  194 & SizeSel\_P3\_NWFSCSlope(7) & 2 & 3.000 & (-1, 9) & OK & 2 & No\_prior & None \\ 
-  195 & SizeSel\_P4\_NWFSCSlope(7) & 1 & 3.000 & (-1, 9) & OK & 6118 & No\_prior & None \\ 
-  196 & SizeSel\_P5\_NWFSCSlope(7) & -9 & -4.000 & (-9, 9) &  &  & No\_prior & None \\ 
-  197 & SizeSel\_P6\_NWFSCSlope(7) & 999 & -2.000 & (-5, 999) &  &  & No\_prior & None \\ 
-  198 & SizeSel\_P1\_NWFSCcombo(8) & 21 & 1.000 & (20, 49.5) & OK & 6 & No\_prior & None \\ 
-  199 & SizeSel\_P2\_NWFSCcombo(8) & -5 & -2.000 & (-6, 4) &  &  & No\_prior & None \\ 
-  200 & SizeSel\_P3\_NWFSCcombo(8) & 3 & 3.000 & (-1, 9) & OK & 3 & No\_prior & None \\ 
-  201 & SizeSel\_P4\_NWFSCcombo(8) & 1 & 3.000 & (-1, 9) & OK & 6315 & No\_prior & None \\ 
-  202 & SizeSel\_P5\_NWFSCcombo(8) & -9 & -4.000 & (-9, 9) &  &  & No\_prior & None \\ 
-  203 & SizeSel\_P6\_NWFSCcombo(8) & 999 & -2.000 & (-5, 999) &  &  & No\_prior & None \\ 
-  204 & Retain\_P3\_Fishery(1)\_BLK1repl\_1918 & 4 & 4.000 & (-10, 10) & OK & 0 & No\_prior & None \\ 
-  205 & Retain\_P3\_Fishery(1)\_BLK1repl\_1992 & 2 & 4.000 & (-10, 10) & OK & 0 & No\_prior & None \\ 
-  206 & Retain\_P3\_Fishery(1)\_BLK1repl\_2002 & 2 & 4.000 & (-10, 10) & OK & 0 & No\_prior & None \\ 
-  207 & Retain\_P3\_Fishery(1)\_BLK1repl\_2008 & 1 & 4.000 & (-10, 10) & OK & 0 & No\_prior & None \\ 
-  208 & Retain\_P3\_Fishery(1)\_BLK1repl\_2009 & -0 & 4.000 & (-10, 10) & OK & 0 & No\_prior & None \\ 
-  209 & Retain\_P3\_Fishery(1)\_BLK1repl\_2011 & 7 & 4.000 & (-10, 10) & OK & 1 & No\_prior & None \\ 
+NatM\_p\_1\_Fem\_GP\_1 & 0.05 & -5 & (0.02, 0.1) &  &  & Log\_Norm (-2.92, 0.44) \\ 
+  L\_at\_Amin\_Fem\_GP\_1 & 20.73 & 3 & (15, 25) & OK & 0.20 & None \\ 
+  L\_at\_Amax\_Fem\_GP\_1 & 41.50 & 2 & (35, 45) & OK & 0.16 & None \\ 
+  VonBert\_K\_Fem\_GP\_1 & 0.17 & 3 & (0.1, 0.4) & OK & 0.01 & None \\ 
+  CV\_young\_Fem\_GP\_1 & 1.33 & 5 & (0.03, 5) & OK & 0.09 & None \\ 
+  CV\_old\_Fem\_GP\_1 & 2.59 & 5 & (0.03, 5) & OK & 0.13 & None \\ 
+  Wtlen\_1\_Fem & 0.00 & -50 & (0, 3) &  &  & None \\ 
+  Wtlen\_2\_Fem & 3.09 & -50 & (2, 4) &  &  & None \\ 
+  Mat50\%\_Fem & 32.10 & -50 & (20, 40) &  &  & None \\ 
+  Mat\_slope\_Fem & -1.00 & -50 & (-2, 4) &  &  & None \\ 
+  Eggs\_scalar\_Fem & 0.00 & -50 & (0, 6) &  &  & None \\ 
+  Eggs\_exp\_len\_Fem & 4.98 & -50 & (-3, 5) &  &  & None \\ 
+  NatM\_p\_1\_Mal\_GP\_1 & 0.05 & 5 & (0, 0.3) & OK & 0.04 & Normal (0.05, 0.1) \\ 
+  L\_at\_Amin\_Mal\_GP\_1 & 20.92 & 2 & (6, 68) & OK & 0.01 & None \\ 
+  L\_at\_Amax\_Mal\_GP\_1 & 38.80 & 2 & (13, 122) & OK & 0.00 & None \\ 
+  VonBert\_K\_Mal\_GP\_1 & 0.20 & 3 & (0.04, 1.09) & OK & 0.05 & None \\ 
+  CV\_young\_Mal\_GP\_1 & 1.33 & 5 & (0, 742.07) & OK & 0.10 & None \\ 
+  CV\_old\_Mal\_GP\_1 & 2.32 & 5 & (0, 742.07) & OK & 0.07 & None \\ 
+  Wtlen\_1\_Mal & 0.00 & -50 & (0, 3) &  &  & None \\ 
+  Wtlen\_2\_Mal & 3.08 & -50 & (2, 4) &  &  & None \\ 
+  CohortGrowDev & 1.00 & -50 & (0, 2) &  &  & None \\ 
+  FracFemale\_GP\_1 & 0.50 & -99 & (0.01, 0.99) &  &  & None \\ 
+  SR\_LN(R0) & 9.33 & 1 & (5, 20) & OK & 0.16 & None \\ 
+  SR\_BH\_steep & 0.40 & -2 & (0.2, 1) &  &  & Full\_Beta (0.7606, 0.146) \\ 
+  SR\_sigmaR & 0.70 & -6 & (0.5, 1.2) &  &  & None \\ 
+  SR\_regime & 0.00 & -50 & (-5, 5) &  &  & None \\ 
+  SR\_autocorr & 0.00 & -50 & (0, 2) &  &  & None \\ 
+  LnQ\_base\_Fishery(1) & -12.24 & -1 & (-15, 15) &  &  & None \\ 
+  LnQ\_base\_POP(4) & 0.14 & -1 & (-15, 15) &  &  & None \\ 
+  LnQ\_base\_Triennial(5) & -1.51 & -1 & (-15, 15) &  &  & None \\ 
+  Q\_extraSD\_Triennial(5) & 0.33 & 2 & (0, 0.5) & OK & 0.15 & None \\ 
+  LnQ\_base\_AFSCSlope(6) & -2.04 & -1 & (-15, 15) &  &  & None \\ 
+  LnQ\_base\_NWFSCSlope(7) & -2.72 & -1 & (-15, 15) &  &  & None \\ 
+  LnQ\_base\_NWFSCcombo(8) & -2.17 & -1 & (-15, 15) &  &  & None \\ 
+  Q\_extraSD\_NWFSCcombo(8) & 0.03 & 2 & (0, 0.5) & OK & 0.07 & None \\ 
+  SizeSel\_P1\_Fishery(1) & 37.97 & 1 & (20, 45) & OK & 0.87 & None \\ 
+  SizeSel\_P2\_Fishery(1) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_Fishery(1) & 3.69 & 3 & (-1, 9) & OK & 0.24 & None \\ 
+  SizeSel\_P4\_Fishery(1) & -1.63 & 3 & (-9, 9) & OK & 3.97 & None \\ 
+  SizeSel\_P5\_Fishery(1) & -3.50 & -4 & (-5, 9) &  &  & None \\ 
+  SizeSel\_P6\_Fishery(1) & 0.61 & 2 & (-5, 9) & OK & 0.36 & None \\ 
+  Retain\_P1\_Fishery(1) & 28.30 & 1 & (15, 45) & OK & 0.35 & None \\ 
+  Retain\_P2\_Fishery(1) & 1.06 & 1 & (0.1, 10) & OK & 0.14 & None \\ 
+  Retain\_P3\_Fishery(1) & 0.76 & 1 & (-10, 10) & OK & 31440.70 & None \\ 
+  Retain\_P4\_Fishery(1) & 0.00 & -3 & (0, 0) &  &  & None \\ 
+  SizeSel\_P1\_ASHOP(2) & 49.50 & 1 & (20, 49.5) & HI & 0.00 & None \\ 
+  SizeSel\_P2\_ASHOP(2) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_ASHOP(2) & 5.06 & 3 & (-1, 9) & OK & 0.19 & None \\ 
+  SizeSel\_P4\_ASHOP(2) & 0.64 & 3 & (-1, 9) & OK & 6118.38 & None \\ 
+  SizeSel\_P5\_ASHOP(2) & -4.35 & -4 & (-9, 9) &  &  & None \\ 
+  SizeSel\_P6\_ASHOP(2) & 999.00 & -2 & (-5, 999) &  &  & None \\ 
+  SizeSel\_P1\_POP(4) & 24.36 & 1 & (20, 70) & OK & 2.39 & None \\ 
+  SizeSel\_P2\_POP(4) & 11.57 & 3 & (0.001, 50) & OK & 4.41 & None \\ 
+  SizeSel\_P1\_Triennial(5) & 30.94 & 1 & (20, 45) & OK & 4.97 & None \\ 
+  SizeSel\_P2\_Triennial(5) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_Triennial(5) & 9.00 & 3 & (-1, 9) & HI & 0.02 & None \\ 
+  SizeSel\_P4\_Triennial(5) & 1.33 & 3 & (-1, 9) & OK & 5.83 & None \\ 
+  SizeSel\_P5\_Triennial(5) & -5.00 & -4 & (-5, 9) &  &  & None \\ 
+  SizeSel\_P6\_Triennial(5) & -0.62 & 2 & (-5, 9) & OK & 0.54 & None \\ 
+  SizeSel\_P1\_AFSCSlope(6) & 21.85 & 1 & (20, 45) & OK & 6.95 & None \\ 
+  SizeSel\_P2\_AFSCSlope(6) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_AFSCSlope(6) & 1.32 & 3 & (-1, 9) & OK & 6.60 & None \\ 
+  SizeSel\_P4\_AFSCSlope(6) & 0.64 & 3 & (-1, 9) & OK & 6118.38 & None \\ 
+  SizeSel\_P5\_AFSCSlope(6) & -9.00 & -4 & (-9, 9) &  &  & None \\ 
+  SizeSel\_P6\_AFSCSlope(6) & 999.00 & -2 & (-5, 999) &  &  & None \\ 
+  SizeSel\_P1\_NWFSCSlope(7) & 36.09 & 1 & (20, 45) & OK & 2.27 & None \\ 
+  SizeSel\_P2\_NWFSCSlope(7) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_NWFSCSlope(7) & 1.82 & 3 & (-1, 9) & OK & 1.81 & None \\ 
+  SizeSel\_P4\_NWFSCSlope(7) & 0.64 & 3 & (-1, 9) & OK & 6118.38 & None \\ 
+  SizeSel\_P5\_NWFSCSlope(7) & -9.00 & -4 & (-9, 9) &  &  & None \\ 
+  SizeSel\_P6\_NWFSCSlope(7) & 999.00 & -2 & (-5, 999) &  &  & None \\ 
+  SizeSel\_P1\_NWFSCcombo(8) & 21.35 & 1 & (20, 49.5) & OK & 5.80 & None \\ 
+  SizeSel\_P2\_NWFSCcombo(8) & -5.00 & -2 & (-6, 4) &  &  & None \\ 
+  SizeSel\_P3\_NWFSCcombo(8) & 2.87 & 3 & (-1, 9) & OK & 3.03 & None \\ 
+  SizeSel\_P4\_NWFSCcombo(8) & 0.70 & 3 & (-1, 9) & OK & 6315.29 & None \\ 
+  SizeSel\_P5\_NWFSCcombo(8) & -9.00 & -4 & (-9, 9) &  &  & None \\ 
+  SizeSel\_P6\_NWFSCcombo(8) & 999.00 & -2 & (-5, 999) &  &  & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_1918 & 3.96 & 4 & (-10, 10) & OK & 0.10 & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_1992 & 2.30 & 4 & (-10, 10) & OK & 0.37 & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_2002 & 1.72 & 4 & (-10, 10) & OK & 0.12 & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_2008 & 0.61 & 4 & (-10, 10) & OK & 0.28 & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_2009 & -0.02 & 4 & (-10, 10) & OK & 0.24 & None \\ 
+  Retain\_P3\_Fishery(1)\_BLK1repl\_2011 & 6.97 & 4 & (-10, 10) & OK & 1.47 & None \\ 
    \hline
 \hline
 \label{tab:model_params}
@@ -2783,49 +2797,40 @@ Returned to base case & - \\
 
 \begin{sidewaystable}[ht]
 \centering
-\caption{Sensitivity of the base model 
-                                       to dropping or down-weighting data 
-                                       sources and alternative assumptions 
-                                       about growth.} 
+\caption{Sensitivity of the base model} 
 \label{tab:Sensitivity_model1}
 \scalebox{0.9}{
-\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
+\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}}
   \hline
-Label & Base (Francis weights) & Harmonic mean weights & Drop index & Drop ages & Down-weight lengths & Free size Age0 & Free CV Amin & External growth \\ 
+Label & Base.Model & Harmonic.Weights \\ 
   \hline
-TOTAL\_like & - & - & - & - & - & - & - & - \\ 
-  Catch\_like & - & - & - & - & - & - & - & - \\ 
-  Equil\_catch\_like & - & - & - & - & - & - & - & - \\ 
-  Survey\_like & - & - & - & - & - & - & - & - \\ 
-  Length\_comp\_like & - & - & - & - & - & - & - & - \\ 
-  Age\_comp\_like & - & - & - & - & - & - & - & - \\ 
-  Parm\_priors\_like & - & - & - & - & - & - & - & - \\ 
-  SSB\_Unfished\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  TotBio\_Unfished & - & - & - & - & - & - & - & - \\ 
-  SmryBio\_Unfished & - & - & - & - & - & - & - & - \\ 
-  Recr\_Unfished\_billions & - & - & - & - & - & - & - & - \\ 
-  SSB\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  SPR\_Btgt & - & - & - & - & - & - & - & - \\ 
-  Fstd\_Btgt & - & - & - & - & - & - & - & - \\ 
-  TotYield\_Btgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  SSB\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  Fstd\_SPRtgt & - & - & - & - & - & - & - & - \\ 
-  TotYield\_SPRtgt\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  SSB\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  SPR\_MSY & - & - & - & - & - & - & - & - \\ 
-  Fstd\_MSY & - & - & - & - & - & - & - & - \\ 
-  TotYield\_MSY\_thousand\_mt & - & - & - & - & - & - & - & - \\ 
-  RetYield\_MSY & - & - & - & - & - & - & - & - \\ 
-  Bratio\_2015 & - & - & - & - & - & - & - & - \\ 
-  F\_2015 & - & - & - & - & - & - & - & - \\ 
-  SPRratio\_2015 & - & - & - & - & - & - & - & - \\ 
-  Recr\_2015 & - & - & - & - & - & - & - & - \\ 
-  Recr\_Virgin\_billions & - & - & - & - & - & - & - & - \\ 
-  L\_at\_Amin\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-  L\_at\_Amax\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-  VonBert\_K\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-  CV\_young\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
-  CV\_old\_Fem\_GP\_1 & - & - & - & - & - & - & - & - \\ 
+Total Likelihood & 1415.31 & 1415.31 \\ 
+  Survey Likelihood & -27.88 & -27.88 \\ 
+  Discard Likelihood & -34.36 & -34.36 \\ 
+  Length Likelihood & 132.21 & 132.21 \\ 
+  Age Likelihood & 1331.57 & 1331.57 \\ 
+  Recruitment Likelihood & 11.45 & 11.45 \\ 
+  Forecast Recruitment Likelihood & 0.00 & 0.00 \\ 
+  Parameter Priors Likelihood & 2.32 & 2.32 \\ 
+  Parameter Deviation Likelihood & 0.00 & 0.00 \\ 
+  log(R0) & 9.32 & 9.32 \\ 
+  SB Virgin & 6248.02 & 6248.02 \\ 
+  SB 2017 & 3268.99 & 3268.99 \\ 
+  Depletion 2017 & 0.52 & 0.52 \\ 
+  Total Yield & 996.25 & 996.25 \\ 
+  Steepness & 0.40 & 0.40 \\ 
+  Natural Mortality - Female & 0.05 & 0.05 \\ 
+  Length at Amin - Female & 20.73 & 20.73 \\ 
+  Length at Amax - Female & 41.50 & 41.50 \\ 
+  Von Bert. k - Female & 0.17 & 0.17 \\ 
+  SD young - Female & 1.33 & 1.33 \\ 
+  SD old - Female & 2.59 & 2.59 \\ 
+  Natural Mortality - Male & 0.05 & 0.05 \\ 
+  Length at Amin - Male & 20.91 & 20.91 \\ 
+  Length at Amax - Male & 38.80 & 38.80 \\ 
+  Von Bert. k - Male & 0.20 & 0.20 \\ 
+  SD young - Male & 1.33 & 1.33 \\ 
+  SD old - Male & 2.32 & 2.32 \\ 
    \hline
 \end{tabular}
 }
@@ -2833,111 +2838,111 @@ TOTAL\_like & - & - & - & - & - & - & - & - \\
 
 \newpage
 
-\begin{longtable}{c>{\centering}p{.5in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.5in}>{\centering}p{.6in}>{\centering}p{.5in}c}
+\begin{longtable}{c>{\centering}p{.5in}>{\centering}p{.65in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.5in}>{\centering}p{.60in}>{\centering}p{.45in}c}
 \caption{Time-series of population estimates from the base model.} \\ 
   \hline
-Year & Total biomass (mt) & Spawning output (million eggs) (mt) & Summary biomass 3+ & Relative biomass & Age-0 recruits & Estimated total catch (mt) & 1-SPR & Exp. rate \\ 
+Year & Total biomass (mt) & Spawning output (million eggs) & Summary biomass 3+ & Relative biomass & Age-0 recruits & Estimated total catch (mt) & 1-SPR & Exp. rate \\ 
   \hline \endhead  \hline
-1918 & 132860 & 6330 & 132160 & 1.00 & 11393 & 0.0 & 0.00 & 0 \\ 
-  1919 & 132861 & 6330 & 132159 & 1.00 & 11396 & 1.2 & 0.00 & 0 \\ 
-  1920 & 132866 & 6330 & 132159 & 1.00 & 11400 & 0.5 & 0.00 & 0 \\ 
-  1921 & 132880 & 6330 & 132172 & 1.00 & 11403 & 0.4 & 0.00 & 0 \\ 
-  1922 & 132900 & 6330 & 132192 & 1.00 & 11406 & 0.4 & 0.00 & 0 \\ 
-  1923 & 132927 & 6330 & 132219 & 1.00 & 11410 & 0.2 & 0.00 & 0 \\ 
-  1924 & 132961 & 6330 & 132253 & 1.00 & 11413 & 0.3 & 0.00 & 0 \\ 
-  1925 & 133001 & 6330 & 132292 & 1.00 & 11416 & 0.6 & 0.00 & 0 \\ 
-  1926 & 133045 & 6331 & 132336 & 1.00 & 11420 & 0.7 & 0.00 & 0 \\ 
-  1927 & 133094 & 6333 & 132384 & 1.00 & 11423 & 1.2 & 0.00 & 0 \\ 
-  1928 & 133145 & 6334 & 132435 & 1.00 & 11427 & 1.5 & 0.00 & 0 \\ 
-  1929 & 133199 & 6336 & 132489 & 1.00 & 11430 & 1.3 & 0.00 & 0 \\ 
-  1930 & 133255 & 6339 & 132545 & 1.00 & 11432 & 1.1 & 0.00 & 0 \\ 
-  1931 & 133312 & 6341 & 132602 & 1.00 & 11434 & 1.2 & 0.00 & 0 \\ 
-  1932 & 133370 & 6344 & 132660 & 1.00 & 11436 & 1.0 & 0.00 & 0 \\ 
-  1933 & 133429 & 6346 & 132719 & 1.00 & 11438 & 0.8 & 0.00 & 0 \\ 
-  1934 & 133488 & 6349 & 132777 & 1.00 & 11440 & 1.2 & 0.00 & 0 \\ 
-  1935 & 133544 & 6352 & 132834 & 1.00 & 11443 & 2.8 & 0.00 & 0 \\ 
-  1936 & 133595 & 6354 & 132884 & 1.00 & 11450 & 8.4 & 0.00 & 0 \\ 
-  1937 & 133651 & 6357 & 132940 & 1.00 & 11461 & 2.1 & 0.00 & 0 \\ 
-  1938 & 133706 & 6359 & 132995 & 1.00 & 11478 & 2.9 & 0.00 & 0 \\ 
-  1939 & 133758 & 6362 & 133046 & 1.01 & 11505 & 5.9 & 0.00 & 0 \\ 
-  1940 & 133807 & 6364 & 133093 & 1.01 & 11829 & 10.3 & 0.01 & 0 \\ 
-  1941 & 133849 & 6366 & 133129 & 1.01 & 11875 & 22.7 & 0.01 & 0 \\ 
-  1942 & 133898 & 6367 & 133162 & 1.01 & 11928 & 29.7 & 0.02 & 0 \\ 
-  1943 & 133953 & 6368 & 133214 & 1.01 & 11984 & 46.8 & 0.19 & 0 \\ 
-  1944 & 133518 & 6343 & 132777 & 1.00 & 12023 & 562.7 & 0.30 & 0 \\ 
-  1945 & 132760 & 6301 & 132015 & 1.00 & 12055 & 929.3 & 0.62 & 0.01 \\ 
-  1946 & 130793 & 6198 & 130046 & 0.98 & 12057 & 2194.8 & 0.35 & 0.02 \\ 
-  1947 & 130032 & 6153 & 129283 & 0.97 & 12147 & 1072.8 & 0.20 & 0.01 \\ 
-  1948 & 129834 & 6135 & 129083 & 0.97 & 12343 & 569.1 & 0.24 & 0 \\ 
-  1949 & 129562 & 6113 & 128803 & 0.97 & 12665 & 690.0 & 0.30 & 0.01 \\ 
-  1950 & 129128 & 6084 & 128356 & 0.96 & 13147 & 906.9 & 0.44 & 0.01 \\ 
-  1951 & 128275 & 6034 & 127479 & 0.95 & 13774 & 1402.1 & 0.50 & 0.01 \\ 
-  1952 & 127312 & 5975 & 126484 & 0.94 & 14454 & 1619.9 & 0.68 & 0.01 \\ 
-  1953 & 125713 & 5881 & 124846 & 0.93 & 14879 & 2399.2 & 0.55 & 0.02 \\ 
-  1954 & 124923 & 5821 & 124019 & 0.92 & 14623 & 1775.6 & 0.73 & 0.01 \\ 
-  1955 & 123533 & 5727 & 122615 & 0.90 & 13722 & 2564.9 & 0.61 & 0.02 \\ 
-  1956 & 122890 & 5665 & 122000 & 0.89 & 12503 & 2002.5 & 0.86 & 0.02 \\ 
-  1957 & 121172 & 5552 & 120343 & 0.88 & 11190 & 3199.4 & 0.78 & 0.03 \\ 
-  1958 & 119977 & 5471 & 119225 & 0.86 & 10090 & 2740.6 & 0.66 & 0.02 \\ 
-  1959 & 119335 & 5430 & 118660 & 0.86 & 9356 & 2155.4 & 0.44 & 0.02 \\ 
-  1960 & 119460 & 5441 & 118846 & 0.86 & 9102 & 1264.5 & 0.71 & 0.01 \\ 
-  1961 & 118290 & 5408 & 117713 & 0.85 & 9311 & 2368.2 & 0.89 & 0.02 \\ 
-  1962 & 115972 & 5331 & 115403 & 0.84 & 9512 & 3328.0 & 1.06 & 0.03 \\ 
-  1963 & 112405 & 5197 & 111826 & 0.82 & 8723 & 4421.9 & 1.25 & 0.04 \\ 
-  1964 & 107277 & 4985 & 106703 & 0.79 & 7359 & 5878.3 & 1.31 & 0.06 \\ 
-  1965 & 101729 & 4744 & 101213 & 0.75 & 6452 & 6232.1 & 1.46 & 0.06 \\ 
-  1966 & 94515 & 4415 & 94075 & 0.70 & 5978 & 7828.4 & 1.83 & 0.08 \\ 
-  1967 & 76145 & 3536 & 75756 & 0.56 & 5495 & 18968.0 & 1.82 & 0.25 \\ 
-  1968 & 62306 & 2861 & 61945 & 0.45 & 5625 & 14650.3 & 1.77 & 0.24 \\ 
-  1969 & 53568 & 2433 & 53222 & 0.38 & 7520 & 9711.5 & 1.12 & 0.18 \\ 
-  1970 & 52453 & 2378 & 52063 & 0.38 & 11656 & 2182.8 & 1.16 & 0.04 \\ 
-  1971 & 51276 & 2322 & 50757 & 0.37 & 5769 & 2300.7 & 1.06 & 0.05 \\ 
-  1972 & 50635 & 2283 & 50012 & 0.36 & 4079 & 1905.1 & 1.06 & 0.04 \\ 
-  1973 & 50119 & 2241 & 49789 & 0.35 & 3980 & 1888.4 & 1.27 & 0.04 \\ 
-  1974 & 48736 & 2159 & 48485 & 0.34 & 3952 & 2643.2 & 1.20 & 0.05 \\ 
-  1975 & 47615 & 2094 & 47366 & 0.33 & 4931 & 2274.6 & 0.84 & 0.05 \\ 
-  1976 & 47474 & 2090 & 47215 & 0.33 & 3863 & 1182.9 & 0.97 & 0.03 \\ 
-  1977 & 46886 & 2084 & 46594 & 0.33 & 5076 & 1507.0 & 0.87 & 0.03 \\ 
-  1978 & 46434 & 2092 & 46178 & 0.33 & 3686 & 1269.0 & 1.13 & 0.03 \\ 
-  1979 & 45145 & 2056 & 44851 & 0.32 & 4196 & 1998.2 & 0.99 & 0.04 \\ 
-  1980 & 44258 & 2028 & 44021 & 0.32 & 4058 & 1531.9 & 1.07 & 0.03 \\ 
-  1981 & 43094 & 1981 & 42835 & 0.31 & 4294 & 1725.7 & 0.95 & 0.04 \\ 
-  1982 & 42239 & 1947 & 41979 & 0.31 & 6331 & 1380.7 & 0.82 & 0.03 \\ 
-  1983 & 41701 & 1925 & 41400 & 0.30 & 6774 & 1057.3 & 1.07 & 0.03 \\ 
-  1984 & 40644 & 1874 & 40248 & 0.30 & 5071 & 1626.5 & 1.11 & 0.04 \\ 
-  1985 & 39676 & 1819 & 39283 & 0.29 & 5312 & 1659.0 & 1.03 & 0.04 \\ 
-  1986 & 39043 & 1773 & 38727 & 0.28 & 4166 & 1421.5 & 1.03 & 0.04 \\ 
-  1987 & 38499 & 1729 & 38186 & 0.27 & 4953 & 1375.4 & 0.92 & 0.04 \\ 
-  1988 & 38266 & 1700 & 37991 & 0.27 & 6364 & 1106.5 & 1.05 & 0.03 \\ 
-  1989 & 37783 & 1665 & 37451 & 0.26 & 6799 & 1379.0 & 1.10 & 0.04 \\ 
-  1990 & 37292 & 1635 & 36884 & 0.26 & 9164 & 1471.4 & 0.95 & 0.04 \\ 
-  1991 & 37282 & 1625 & 36833 & 0.26 & 4300 & 1123.5 & 1.11 & 0.03 \\ 
-  1992 & 37042 & 1599 & 36558 & 0.25 & 2264 & 1477.9 & 1.15 & 0.04 \\ 
-  1993 & 36800 & 1565 & 36567 & 0.25 & 2243 & 1569.4 & 1.10 & 0.04 \\ 
-  1994 & 36577 & 1541 & 36426 & 0.24 & 6801 & 1417.8 & 0.99 & 0.04 \\ 
-  1995 & 36479 & 1534 & 36267 & 0.24 & 5914 & 1180.4 & 0.87 & 0.03 \\ 
-  1996 & 36556 & 1548 & 36157 & 0.24 & 2498 & 953.6 & 0.82 & 0.03 \\ 
-  1997 & 36725 & 1574 & 36413 & 0.25 & 2447 & 880.2 & 0.70 & 0.02 \\ 
-  1998 & 36955 & 1606 & 36802 & 0.25 & 2159 & 715.9 & 0.70 & 0.02 \\ 
-  1999 & 37028 & 1625 & 36852 & 0.26 & 13721 & 723.2 & 0.57 & 0.02 \\ 
-  2000 & 37247 & 1640 & 36910 & 0.26 & 19451 & 563.6 & 0.20 & 0.02 \\ 
-  2001 & 38102 & 1674 & 37190 & 0.26 & 5572 & 160.2 & 0.33 & 0 \\ 
-  2002 & 39372 & 1705 & 38397 & 0.27 & 3370 & 295.0 & 0.21 & 0.01 \\ 
-  2003 & 41092 & 1736 & 40786 & 0.27 & 1770 & 179.3 & 0.19 & 0 \\ 
-  2004 & 42692 & 1758 & 42502 & 0.28 & 4476 & 157.3 & 0.17 & 0 \\ 
-  2005 & 44145 & 1782 & 43996 & 0.28 & 2262 & 148.4 & 0.09 & 0 \\ 
-  2006 & 45447 & 1839 & 45205 & 0.29 & 2597 & 77.1 & 0.10 & 0 \\ 
-  2007 & 46521 & 1938 & 46375 & 0.31 & 2642 & 85.5 & 0.16 & 0 \\ 
-  2008 & 47420 & 2044 & 47055 & 0.32 & 84380 & 157.7 & 0.13 & 0 \\ 
-  2009 & 48811 & 2131 & 47511 & 0.34 & 3399 & 134.0 & 0.18 & 0 \\ 
-  2010 & 51589 & 2188 & 47669 & 0.35 & 5229 & 192.1 & 0.17 & 0 \\ 
-  2011 & 56507 & 2226 & 56254 & 0.35 & 10011 & 181.5 & 0.06 & 0 \\ 
-  2012 & 60900 & 2256 & 60518 & 0.36 & 1613 & 61.3 & 0.06 & 0 \\ 
-  2013 & 65316 & 2282 & 64790 & 0.36 & 18046 & 59.1 & 0.05 & 0 \\ 
-  2014 & 69526 & 2370 & 69194 & 0.37 & 3114 & 57.7 & 0.05 & 0 \\ 
-  2015 & 73321 & 2613 & 72434 & 0.41 & 7324 & 55.3 & 0.05 & 0 \\ 
-  2016 & 76883 & 2928 & 76620 & 0.46 & 7848 & 60.0 & 0.05 & 0 \\ 
-  2017 & 79752 & 3198 & 79287 & 0.51 & 8241 & 66.9 & 0.97 & 0 \\ 
+1918 & 132860 & 6330 & 132160 & 1.00 & 11393 & 0 & 0.00 & 0 \\ 
+  1919 & 132861 & 6330 & 132159 & 1.00 & 11396 & 1 & 0.00 & 0 \\ 
+  1920 & 132866 & 6330 & 132159 & 1.00 & 11400 & 0 & 0.00 & 0 \\ 
+  1921 & 132880 & 6330 & 132172 & 1.00 & 11403 & 0 & 0.00 & 0 \\ 
+  1922 & 132900 & 6330 & 132192 & 1.00 & 11406 & 0 & 0.00 & 0 \\ 
+  1923 & 132927 & 6330 & 132219 & 1.00 & 11410 & 0 & 0.00 & 0 \\ 
+  1924 & 132961 & 6330 & 132253 & 1.00 & 11413 & 0 & 0.00 & 0 \\ 
+  1925 & 133001 & 6330 & 132292 & 1.00 & 11416 & 1 & 0.00 & 0 \\ 
+  1926 & 133045 & 6331 & 132336 & 1.00 & 11420 & 1 & 0.00 & 0 \\ 
+  1927 & 133094 & 6333 & 132384 & 1.00 & 11423 & 1 & 0.00 & 0 \\ 
+  1928 & 133145 & 6334 & 132435 & 1.00 & 11427 & 1 & 0.00 & 0 \\ 
+  1929 & 133199 & 6336 & 132489 & 1.00 & 11430 & 1 & 0.00 & 0 \\ 
+  1930 & 133255 & 6339 & 132545 & 1.00 & 11432 & 1 & 0.00 & 0 \\ 
+  1931 & 133312 & 6341 & 132602 & 1.00 & 11434 & 1 & 0.00 & 0 \\ 
+  1932 & 133370 & 6344 & 132660 & 1.00 & 11436 & 1 & 0.00 & 0 \\ 
+  1933 & 133429 & 6346 & 132719 & 1.00 & 11438 & 1 & 0.00 & 0 \\ 
+  1934 & 133488 & 6349 & 132777 & 1.00 & 11440 & 1 & 0.00 & 0 \\ 
+  1935 & 133544 & 6352 & 132834 & 1.00 & 11443 & 3 & 0.00 & 0 \\ 
+  1936 & 133595 & 6354 & 132884 & 1.00 & 11450 & 8 & 0.00 & 0 \\ 
+  1937 & 133651 & 6357 & 132940 & 1.00 & 11461 & 2 & 0.00 & 0 \\ 
+  1938 & 133706 & 6359 & 132995 & 1.00 & 11478 & 3 & 0.00 & 0 \\ 
+  1939 & 133758 & 6362 & 133046 & 1.01 & 11505 & 6 & 0.00 & 0 \\ 
+  1940 & 133807 & 6364 & 133093 & 1.01 & 11829 & 10 & 0.01 & 0 \\ 
+  1941 & 133849 & 6366 & 133129 & 1.01 & 11875 & 23 & 0.01 & 0 \\ 
+  1942 & 133898 & 6367 & 133162 & 1.01 & 11928 & 30 & 0.02 & 0 \\ 
+  1943 & 133953 & 6368 & 133214 & 1.01 & 11984 & 47 & 0.19 & 0 \\ 
+  1944 & 133518 & 6343 & 132777 & 1.00 & 12023 & 563 & 0.30 & 0 \\ 
+  1945 & 132760 & 6301 & 132015 & 1.00 & 12055 & 929 & 0.62 & 0.01 \\ 
+  1946 & 130793 & 6198 & 130046 & 0.98 & 12057 & 2195 & 0.35 & 0.02 \\ 
+  1947 & 130032 & 6153 & 129283 & 0.97 & 12147 & 1073 & 0.20 & 0.01 \\ 
+  1948 & 129834 & 6135 & 129083 & 0.97 & 12343 & 569 & 0.24 & 0 \\ 
+  1949 & 129562 & 6113 & 128803 & 0.97 & 12665 & 690 & 0.30 & 0.01 \\ 
+  1950 & 129128 & 6084 & 128356 & 0.96 & 13147 & 907 & 0.44 & 0.01 \\ 
+  1951 & 128275 & 6034 & 127479 & 0.95 & 13774 & 1402 & 0.50 & 0.01 \\ 
+  1952 & 127312 & 5975 & 126484 & 0.94 & 14454 & 1620 & 0.68 & 0.01 \\ 
+  1953 & 125713 & 5881 & 124846 & 0.93 & 14879 & 2399 & 0.55 & 0.02 \\ 
+  1954 & 124923 & 5821 & 124019 & 0.92 & 14623 & 1776 & 0.73 & 0.01 \\ 
+  1955 & 123533 & 5727 & 122615 & 0.90 & 13722 & 2565 & 0.61 & 0.02 \\ 
+  1956 & 122890 & 5665 & 122000 & 0.89 & 12503 & 2002 & 0.86 & 0.02 \\ 
+  1957 & 121172 & 5552 & 120343 & 0.88 & 11190 & 3199 & 0.78 & 0.03 \\ 
+  1958 & 119977 & 5471 & 119225 & 0.86 & 10090 & 2741 & 0.66 & 0.02 \\ 
+  1959 & 119335 & 5430 & 118660 & 0.86 & 9356 & 2155 & 0.44 & 0.02 \\ 
+  1960 & 119460 & 5441 & 118846 & 0.86 & 9102 & 1265 & 0.71 & 0.01 \\ 
+  1961 & 118290 & 5408 & 117713 & 0.85 & 9311 & 2368 & 0.89 & 0.02 \\ 
+  1962 & 115972 & 5331 & 115403 & 0.84 & 9512 & 3328 & 1.06 & 0.03 \\ 
+  1963 & 112405 & 5197 & 111826 & 0.82 & 8723 & 4422 & 1.25 & 0.04 \\ 
+  1964 & 107277 & 4985 & 106703 & 0.79 & 7359 & 5878 & 1.31 & 0.06 \\ 
+  1965 & 101729 & 4744 & 101213 & 0.75 & 6452 & 6232 & 1.46 & 0.06 \\ 
+  1966 & 94515 & 4415 & 94075 & 0.70 & 5978 & 7828 & 1.83 & 0.08 \\ 
+  1967 & 76145 & 3536 & 75756 & 0.56 & 5495 & 18968 & 1.82 & 0.25 \\ 
+  1968 & 62306 & 2861 & 61945 & 0.45 & 5625 & 14650 & 1.77 & 0.24 \\ 
+  1969 & 53568 & 2433 & 53222 & 0.38 & 7520 & 9712 & 1.12 & 0.18 \\ 
+  1970 & 52453 & 2378 & 52063 & 0.38 & 11656 & 2183 & 1.16 & 0.04 \\ 
+  1971 & 51276 & 2322 & 50757 & 0.37 & 5769 & 2301 & 1.06 & 0.05 \\ 
+  1972 & 50635 & 2283 & 50012 & 0.36 & 4079 & 1905 & 1.06 & 0.04 \\ 
+  1973 & 50119 & 2241 & 49789 & 0.35 & 3980 & 1888 & 1.27 & 0.04 \\ 
+  1974 & 48736 & 2159 & 48485 & 0.34 & 3952 & 2643 & 1.20 & 0.05 \\ 
+  1975 & 47615 & 2094 & 47366 & 0.33 & 4931 & 2275 & 0.84 & 0.05 \\ 
+  1976 & 47474 & 2090 & 47215 & 0.33 & 3863 & 1183 & 0.97 & 0.03 \\ 
+  1977 & 46886 & 2084 & 46594 & 0.33 & 5076 & 1507 & 0.87 & 0.03 \\ 
+  1978 & 46434 & 2092 & 46178 & 0.33 & 3686 & 1269 & 1.13 & 0.03 \\ 
+  1979 & 45145 & 2056 & 44851 & 0.32 & 4196 & 1998 & 0.99 & 0.04 \\ 
+  1980 & 44258 & 2028 & 44021 & 0.32 & 4058 & 1532 & 1.07 & 0.03 \\ 
+  1981 & 43094 & 1981 & 42835 & 0.31 & 4294 & 1726 & 0.95 & 0.04 \\ 
+  1982 & 42239 & 1947 & 41979 & 0.31 & 6331 & 1381 & 0.82 & 0.03 \\ 
+  1983 & 41701 & 1925 & 41400 & 0.30 & 6774 & 1057 & 1.07 & 0.03 \\ 
+  1984 & 40644 & 1874 & 40248 & 0.30 & 5071 & 1627 & 1.11 & 0.04 \\ 
+  1985 & 39676 & 1819 & 39283 & 0.29 & 5312 & 1659 & 1.03 & 0.04 \\ 
+  1986 & 39043 & 1773 & 38727 & 0.28 & 4166 & 1421 & 1.03 & 0.04 \\ 
+  1987 & 38499 & 1729 & 38186 & 0.27 & 4953 & 1375 & 0.92 & 0.04 \\ 
+  1988 & 38266 & 1700 & 37991 & 0.27 & 6364 & 1106 & 1.05 & 0.03 \\ 
+  1989 & 37783 & 1665 & 37451 & 0.26 & 6799 & 1379 & 1.10 & 0.04 \\ 
+  1990 & 37292 & 1635 & 36884 & 0.26 & 9164 & 1471 & 0.95 & 0.04 \\ 
+  1991 & 37282 & 1625 & 36833 & 0.26 & 4300 & 1123 & 1.11 & 0.03 \\ 
+  1992 & 37042 & 1599 & 36558 & 0.25 & 2264 & 1478 & 1.15 & 0.04 \\ 
+  1993 & 36800 & 1565 & 36567 & 0.25 & 2243 & 1569 & 1.10 & 0.04 \\ 
+  1994 & 36577 & 1541 & 36426 & 0.24 & 6801 & 1418 & 0.99 & 0.04 \\ 
+  1995 & 36479 & 1534 & 36267 & 0.24 & 5914 & 1180 & 0.87 & 0.03 \\ 
+  1996 & 36556 & 1548 & 36157 & 0.24 & 2498 & 954 & 0.82 & 0.03 \\ 
+  1997 & 36725 & 1574 & 36413 & 0.25 & 2447 & 880 & 0.70 & 0.02 \\ 
+  1998 & 36955 & 1606 & 36802 & 0.25 & 2159 & 716 & 0.70 & 0.02 \\ 
+  1999 & 37028 & 1625 & 36852 & 0.26 & 13721 & 723 & 0.57 & 0.02 \\ 
+  2000 & 37247 & 1640 & 36910 & 0.26 & 19451 & 564 & 0.20 & 0.02 \\ 
+  2001 & 38102 & 1674 & 37190 & 0.26 & 5572 & 160 & 0.33 & 0 \\ 
+  2002 & 39372 & 1705 & 38397 & 0.27 & 3370 & 295 & 0.21 & 0.01 \\ 
+  2003 & 41092 & 1736 & 40786 & 0.27 & 1770 & 179 & 0.19 & 0 \\ 
+  2004 & 42692 & 1758 & 42502 & 0.28 & 4476 & 157 & 0.17 & 0 \\ 
+  2005 & 44145 & 1782 & 43996 & 0.28 & 2262 & 148 & 0.09 & 0 \\ 
+  2006 & 45447 & 1839 & 45205 & 0.29 & 2597 & 77 & 0.10 & 0 \\ 
+  2007 & 46521 & 1938 & 46375 & 0.31 & 2642 & 85 & 0.16 & 0 \\ 
+  2008 & 47420 & 2044 & 47055 & 0.32 & 84380 & 158 & 0.13 & 0 \\ 
+  2009 & 48811 & 2131 & 47511 & 0.34 & 3399 & 134 & 0.18 & 0 \\ 
+  2010 & 51589 & 2188 & 47669 & 0.35 & 5229 & 192 & 0.17 & 0 \\ 
+  2011 & 56507 & 2226 & 56254 & 0.35 & 10011 & 181 & 0.06 & 0 \\ 
+  2012 & 60900 & 2256 & 60518 & 0.36 & 1613 & 61 & 0.06 & 0 \\ 
+  2013 & 65316 & 2282 & 64790 & 0.36 & 18046 & 59 & 0.05 & 0 \\ 
+  2014 & 69526 & 2370 & 69194 & 0.37 & 3114 & 58 & 0.05 & 0 \\ 
+  2015 & 73321 & 2613 & 72434 & 0.41 & 7324 & 55 & 0.05 & 0 \\ 
+  2016 & 76883 & 2928 & 76620 & 0.46 & 7848 & 60 & 0.05 & 0 \\ 
+  2017 & 79752 & 3198 & 79287 & 0.51 & 8241 & 67 & 0.97 & 0 \\ 
   2018 & 79735 & 3293 & 79241 & 0.52 & 8372 & - & - & - \\ 
   2019 & 79262 & 3337 & 78749 & 0.53 & 8431 & - & - & - \\ 
   2020 & 78475 & 3359 & 77955 & 0.53 & 8460 & - & - & - \\ 
@@ -2986,7 +2991,11 @@ Year & OFL contriubtion (mt) & ACL landings (mt) & Age 3+ biomass (mt) & Spawnin
 
 \FloatBarrier
 
+\clearpage
+
 \section{Figures}\label{figures}
+
+\FloatBarrier
 
 \begin{figure}
 \centering
@@ -3024,9 +3033,12 @@ Pacific ocean perch. \label{fig:nw_Length}}
 
 \FloatBarrier
 
-{[}NWFSC shelf-slope survey age frequency distributions for Pacific
-ocean perch.
-\label{fig:nw_Age}{]}r4ss/plots\_mod1/comp\_gstagedat\_bubflt8mkt0.png)
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/comp_gstagedat_bubflt8mkt0.png}
+\caption{NWFSC shelf-slope survey age frequency distributions for
+Pacific ocean perch. \label{fig:nw_Age}}
+\end{figure}
 
 \FloatBarrier
 
@@ -3057,9 +3069,12 @@ slope survey. \label{fig:afsc_qq}}
 
 \FloatBarrier
 
-{[}AFSC slope survey length frequency distributions for Pacific ocean
-perch.
-\label{fig:afsc_Length}{]}r4ss/plots\_mod1/comp\_lendat\_bubflt6mkt0.png)
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/comp_lendat_bubflt6mkt0.png}
+\caption{AFSC slope survey length frequency distributions for Pacific
+ocean perch. \label{fig:afsc_Length}}
+\end{figure}
 
 \FloatBarrier
 
@@ -3627,6 +3642,11 @@ waters off Oregon. Alaska Sea Grant, University of Alaska Fairbanks. pp.
 1--20. doi:
 \href{https://doi.org/10.4027/bamnpr.2007.01}{10.4027/bamnpr.2007.01}.
 
+\hypertarget{ref-helser_generalized_2004}{}
+Helser, T., Punt, A.E., and Methot, R.D. 2004. A generalized linear
+mixed model analysis of a multi-vessel fishery resouce survey.
+\textbf{70}: 251--264.
+
 \hypertarget{ref-hoenig_empirical_1983}{}
 Hoenig, J.M. 1983. Empirical use of longevity data to estimate mortality
 rates. Fishery Bulletin \textbf{82}: 898--903. Available from
@@ -3649,6 +3669,11 @@ Ambassador Place NE, Suite 200, Portland, OR 97220.
 Karnowski, M., Gertseva, V., and Stephens, A. 2014. Historical
 Reconstruction of Oregon's Commercial Fisheries Landings. Oregon
 Department of Fish; Wildlife, Salem, OR.
+
+\hypertarget{ref-kristensen_tmb:_2016}{}
+Kristensen, K., Nielsen, A., Berg, C.W., Skaug, H.J., and Bell, B. 2016.
+TMB: Automatic Differentiation and Laplace Approximation. Journal of
+Statistical Software \textbf{70}: 1--21.
 
 \hypertarget{ref-mcallister_bayesian_1997}{}
 McAllister, M.K., and Ianelli, J.N. 1997. Bayesian stock assessment
@@ -3730,6 +3755,26 @@ abundance trends and distribution shifts using single- and multispecies
 models of fishes and biogenic habitat. ICES Journal of Marine Science:
 Journal du Conseil: fsw193. doi:
 \href{https://doi.org/10.1093/icesjms/fsw193}{10.1093/icesjms/fsw193}.
+
+\hypertarget{ref-thorson_implementing_2016}{}
+Thorson, J.T., and Kristensen, K. 2016. Implementing a generic method
+for bias correction in statistical models using random effects, with
+spatial and population dynamics examples. Fisheries Research
+\textbf{175}: 66--74. doi:
+\href{https://doi.org/10.1016/j.fishres.2015.11.016}{10.1016/j.fishres.2015.11.016}.
+
+\hypertarget{ref-thorson_accounting_2014}{}
+Thorson, J.T., and Ward, E.J. 2014. Accounting for vessel effects when
+standardizing catch rates from cooperative surveys. Fisheries Research
+\textbf{155}: 168--176. doi:
+\href{https://doi.org/10.1016/j.fishres.2014.02.036}{10.1016/j.fishres.2014.02.036}.
+
+\hypertarget{ref-thorson_geostatistical_2015}{}
+Thorson, J.T., Shelton, A.O., Ward, E.J., and Skaug, H.J. 2015.
+Geostatistical delta-generalized linear mixed models improve precision
+for estimated abundance indices for West Coast groundfishes. ICES
+Journal of Marine Science \textbf{72}(5): 1297--1310. doi:
+\href{https://doi.org/10.1093/icesjms/fsu243}{10.1093/icesjms/fsu243}.
 
 \hypertarget{ref-thorson_nwfscageingerror:_2012}{}
 Thorson, J.T., Stewart, I.J., and Punt, A.E. 2012. nwfscAgeingError: A
