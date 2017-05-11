@@ -39,6 +39,7 @@ mod1_label = "Base model"
   
 
 # Management targets
+SPR.target  = 0.50
 MT   = 0.4   # management target; .4 for rockfish
 MSST = 0.25  # minimum stock size threshold; 0.25 for rockfish
 

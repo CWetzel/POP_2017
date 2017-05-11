@@ -110,8 +110,19 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 
 ###Natural mortality
 
-Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality of between 0.10 and 0.20yr^-1^ with a longevity
-less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural mortality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  This assessment also applied a prior on natural mortality.  However, the prior and standard deviation were generated as a non-linear function of maximum age as developed by Then et al. [-@then_evaluating_2015] and modified by  Owen Hamel which greatly improved the fit to the underlying age data to create the 'Hamel-Then' prior.  A maximum age of 100 was used in the development of the prior where median for female natural mortality was 0.054. 
+Historic `r spp` ages determined using scales and surface reading methods of otoliths, resulted in estimates of natural mortality ($M$) of between 0.10 and 0.20yr^-1^ with a longevity
+less than 30 years[@gunderson_population_1977].  Based on break-and-burn method of age determination using otoliths, the maximum age of `r spp` was revised to be 90 years [@chilton_age_1982]. The updated understanding concerning `r spp` longevity reduced the estimate of natural mortality based on Hoenig's [-@hoenig_empirical_1983] relationship to 0.059yr^-1^. The previous assessment applied a prior distribution on natural mortality based upon multiple life history correlates (including Hoenig's method, Gunderson gonadosomatic index [-@gunderson_trade-off_1997], and McCoy and Gillooly's [-@mccoy_predicting_2008] theoretical relationship) developed separately for female and male `r spp`.  
+
+Hamel [-@hamel_method_2015] developed a method for combining meta-analytic approaches to relating the natural mortality rate M to other life-history parameters such as longevity, size, growth rate and reproductive effort, to provide a prior on $M$. In that same issue of ICESJMS, Then et al. [-@then_evaluating_2015], provided an updated data set of estimates of $M$ and related life history parameters across a large number of fish species, from which to develop an $M$ estimator for fish species in general. They concluded by recommending $M$ estimates be based on maximum age alone, based on an updated Hoenig non-linear least squares (nls) estimator M=4.899A_max^(-.916). The approach of basing M priors on maximum age alone was one that was already being used for West Coast rockfish assessments. However, in fitting the alternative model forms relating $M$ to $A_{\text{max}}$, Then et al. [-@then_evaluating_2015] did not consistently apply their transformation. In particular, in real space, one would expect substantial heteroscedasticity in both the observation and process error associated with the observed relationship of M to $A_{\text{max}}$. Therefore, it would be reasonable to fit all models under a log transformation. This was not done. Revaluating the data used in Then et al. [-@then_evaluating_2015] by fitting the one-parameter $A_{\text{max}}$ model under a log-log transformation (such that the slope is forced to be -1 in the transformed space [@hamel_method_2015]), the point estimate for $M$ is:
+
+\begin{centering}
+
+$M=\frac{5.4}{A_{\text{max}}}$
+
+\end{centering}
+
+The above is also the median of the prior. The prior is defined as a lognormal with mean $ln(\frac{5.4}{A_{\text{max}}})$ and SE = 0.4384343. Using a maximum age of 100 the point estimate and median of the prior is 0.054.
+
 
 
 ###Sex ratio, maturation, and fecundity

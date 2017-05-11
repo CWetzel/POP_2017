@@ -1183,9 +1183,9 @@ Recruits = print(mod1$timeseries$Recruit_0[mod1$timeseries$Yr >= Dat_start_mod1]
 
 
 Tot.Mortality = aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch)$kill_bio
-SPR = print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$LABEL), 'Value'],digits = 2)
+SPR = as.numeric(print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$LABEL), 'Value'],digits = 2) )* SPR.target
 SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
-Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 2)), rep("-", Project_lastyr-LastYR))
+Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 3)), rep("-", Project_lastyr-LastYR))
 
 Tot.Mortality = c( print(Tot.Mortality, 0), rep("-", Project_lastyr-LastYR))
 
@@ -1225,7 +1225,7 @@ Timeseries$Year = as.factor(Timeseries$Year)
 Timeseries.table = xtable(Timeseries, 
                           caption = c('Time-series of population estimates from the base model.'),
                           label='tab:Timeseries_mod1',
-                          digits = c(0,0,0,0,0,0,0,0,2,2))   
+                          digits = c(0,0,0,0,0,0,0,0,2,3))   
 
 # Add alignment
 align(Timeseries.table) = c('l',
@@ -1263,10 +1263,12 @@ OFLcatchyrs = OFLcatch[OFLcatch$LABEL >= paste('OFLCatch_', Project_firstyr, sep
                          OFLcatch$LABEL <= paste('OFLCatch_', Project_lastyr, sep = ''), ]
 
 # Pull forecasted landings and subset years
-ForecastC = mod1$timeseries[, grepl('Yr|retain[(]B[)]', names(mod1$timeseries))]
-if (dim(ForecastC)[2] >= 3) { ForecastC$total = rowSums(ForecastC[, -1]) }
-if (dim(ForecastC)[2] == 2) { ForecastC$total = ForecastC[, -1] }
-ForecastCyrs = subset(ForecastC, Yr > (Project_firstyr - 1) & Yr < (Project_lastyr + 1))
+ForecastC = mod1$derived_quants[mod1$derived_quants$LABEL>= paste0('ForeCatch_', Project_firstyr) & 
+                    mod1$derived_quants$LABEL<= paste0('ForeCatch_', Project_lastyr), "Value"]
+#ForecastC = mod1$timeseries[, grepl('Yr|retain[(]B[)]', names(mod1$timeseries))]
+#if (dim(ForecastC)[2] >= 3) { ForecastC$total = rowSums(ForecastC[, -1]) }
+#if (dim(ForecastC)[2] == 2) { ForecastC$total = ForecastC[, -1] }
+#ForecastCyrs = subset(ForecastC, Yr > (Project_firstyr - 1) & Yr < (Project_lastyr + 1))
 
 # Pull Age 5+ biomass and subset years
 Age5biomass = mod1$timeseries[, c('Yr', 'Bio_smry')]
@@ -1288,14 +1290,14 @@ Depletionyrs = Depletion[Depletion$LABEL >= paste('Bratio_', Project_firstyr, se
 # Combine the data for the forecast table
 Forecast_mod1 = as.data.frame(cbind(seq(Project_firstyr, Project_lastyr, 1),
                                     OFLcatchyrs$Value,
-                                    ForecastCyrs$total,
+                                    ForecastC, #yrs$total,
                                     Age5biomassyrs$Bio_smry,
                                     SpawningByrs$Value,
                                     Depletionyrs$Value))
 # Add column names
 colnames(Forecast_mod1)=c('Year',
-                          'OFL contriubtion (mt)',
-                          'ACL landings (mt)',
+                          'OFL (mt)',
+                          'ACL (mt)',
                           'Age 3+ biomass (mt)',
                           'Spawning Output',
                           'Depletion')
