@@ -162,7 +162,11 @@ figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Functional_Maturity.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Maturity_Comparison.png", 
             "C:/Assessments/POP2017/Data/AgeingError/Ageing_Error.png",
-            "C:/Assessments/POP2017/Models/_bridging/bridging.png")
+            "C:/Assessments/POP2017/Models/_bridging/bridging.png",
+            "C:/Assessments/POP2017/Models/_Retro/compare1_spawnbio.png",
+            "C:/Assessments/POP2017/Models/_Retro/compare7_recdevs.png",
+            "C:/Assessments/POP2017/Models/_Retro/retro_recdev_squid.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png")
 
 for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)
