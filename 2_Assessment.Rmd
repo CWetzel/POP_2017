@@ -212,35 +212,40 @@ Maturity and fecundity were updated for this assessment based upon new research.
 In this assessment, the beta prior developed from a meta-analysis of West Coast groundfish was updated to the 2017 value (J. Thorson personal communication) in preliminary models, with steepness fixed in the final base model.  Additionally, the prior for natural mortality was updated base on analysis conducted by Owen Hamel (personal communication), where female natural mortality was fixed at the prior median with males estimated as an offset from the female value.
 
 
-###Definition of Fleets and Areas
-We generated data sources for each of the models.  Fleets by model include:
+###Summary of Fleets and Areas
+
+`r spp` are most frequently observed in Oregon and Washington waters, however, they are observed along the entire US West Coast in survey and fishery observations. Multiple fisheries encounter `r spp`. Trawl, fixed gear, and the at-sea (mid-water) hake fisheries account for the majority of the `r spp` landings both historically and currently.
+
+The majoirty of removals of `r spp` were observed by eht bottom trawl fishery with fixed gear accounting for a small fraction of the catches avaiable within PacFIN. Trawl and fixed gears were combined into a coast-wide fleet. For the period from 1918 to the early 1990s, prior to the introduction of trip limits for rockfish, limited discarding of `r spp` was assumed. Observations of `r spp` in the Pikitch et al. (1988) data (1986-1987) allowed for a formal analysis of discard rates which were applied to the historical period of the fishery. Foreign trawl catches (1966-1976) was modeled as a single fleet.  The at-sea fishery operates as a mid-water fishery targeting Pacific whiting but encounters `r spp` as a bycatch species. This fleet was also modeled as a single fleet.
 
 
-\emph{Commercial}: The commercial fleets include...   
+###Other Specifications
 
-\emph{Recreational}: The recreational fleets include...
+The specifications of the assessment are listed in Table \ref{tab:Model_setup}. The model is a two-sex, age-structured model starting in 1918 with an accumulated age group at 60 years. Growth was estimated and natural mortality was fixed at the median of the prior. The lengths in the population were tracked by 1 cm intervals and the length data were binned into 1 cm intervals. A curvilinear ageing imprecision relationship was estimated and used to model ageing error. Fecundity-at-length was defined fixed at the values from Dick et al. [-@dick_meta-analysis_2017] for `r spp` and spawning output was defined in millions of eggs.
 
-\emph{Research}: Research derived-data include...
+The Triennial survey was kept as a single series. Assessment of other groundfish have split this survey into an early and a late series, based mostly on the shift to deeper depths and the timing of the survey, by estimating different catchability parameters and selectivity parameters for each period. Age data were available for the commercial and at-sea hake fishery, as well as the Triennial, the `r spp`, the NWFSC slope, and the NWFSC shelf-slope survies.  The ages from the NWFSC shelf-slope survey and were entered into the model as conditional age-at-length. Length-frequencies were calculated for the Triennial, `r spp`, AFSC slope, NWFSC slope,  and the NWFSC shelf-slope surveys within each stratum, and then combined across strata using the biomass in each stratum as the weighting factor. This reduced the influence of a few fish observed in a large area.
 
+The specification of when to estimate recruitment deviations is an assumption that likely affects model uncertainty. It was decided to estimate recruitment deviations from 1900-2014 to appropriately quantify uncertainty. The earliest length-composition data occur in 1966 and the earliest age data were in 1981. The most informed years for estimating recruitment deviations were from about the mid-1970s to about 2011. The period from 1900-1974 was fit using an early series with little or no bias adjustment, the main period of recruitment deviates occurred from 1975-2014 with an upward and downward ramping of bias adjustment, and 2015 onward was fit using forecast recruitment deviates with little bias adjustment. Methot and Taylor [-@methot_bias_2011) summarize the reasoning behind varying levels of bias adjustment based on the information available to estimate the deviates. Recruitment deviation was assumed to be 0.70.
 
+The recommended selectivity type in Stock Synthesis is the double normal and was used in this assessment for the all fleets, except the `r spp` survey which was assumed logistic based on the length composition data. Changes in retention curves were estimated for the commercial fishery.
 
-###Summary of Data for Fleets and Areas
+Time blocks for the bottom trawl, midwater trawl, and hook-and-line fishery are provided in Table \ref{tab:Model_setup}. Fishery selectivity retention has changed over the modeled period due to management changes. The time block on the retention curves for the trawl fishery were set from 1918-1991, 1992-2001, 2002-2007, 2008, 2009-2010, 2011-2016  based on available discarding data and changes in trip limits that likely resulted in changes to discarding patterns of `r spp`. No discarding was assumed in the at-sea hake and the foreign fisheries.
 
+The following distributions were assumed for data fitting. Survey indices were lognormal, total discards were lognormal.
 
 
 ###Modeling Software
-The STAT team used Stock Synthesis version 3.30.01.13 by Dr. Richard Methot at 
-the NWFSC [@methot_stock_2013]. This most recent version was used, since it included 
-improvements and corrections to older versions.
+The STAT team used Stock Synthesis version 3.30.03.03 by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
+
+
+###Priors
+A prior distribution was developed for the natural mortality parameter from an analysis of a maximum age of 100 years. The analysis was performed by Owen Hamel (pers comm, NWFSC, NOAA) and used data from Then et al. [-@then_evaluating_2015] to provide a lognormal distribution for natural mortality. The median of the lognormal prior is 0.054 and has a standard error of 0.4384343. 
+
+The prior for steepness (h) assumes a beta distribution with parameters based on an update of the Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by J. Thorson (pers. comm, NWFSC, NOAA) which was reviewed and endorsed by the SSC in 2017. The prior is a beta distribution with ??=0.72 and $\sigma$=0.15. However, fixing steepness within the model resulted in unrealistic relative biomass levels ($>$ 1), it was also decided to fix steepness at 0.50.  The previous assessment estimated and fixed steepness equal to 0.40.  The current data does not contain information regarding steepness and 0.50 was selected as an intermediate value between the prior and the previous assessment value.  The steepness value of 0.50 was contained within the estimated uncertainty envelope from the assessment model when either the prior value of 0.72 or 0.40 values were assumed.
 
 ###Data Weighting
 Citation for Francis method [@francis_data_2011]      
 Citation for Ianelli-McAllister harmonic mean method [@mcallister_bayesian_1997]
-
-
-
-###Priors
-Citation for Hamel prior on natural mortality [@hamel_method_2015]
 
 
 ###General Model Specifications
