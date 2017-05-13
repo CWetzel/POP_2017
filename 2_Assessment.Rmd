@@ -241,23 +241,22 @@ The STAT team used Stock Synthesis version 3.30.03.03 by Dr. Richard Methot at t
 ###Priors
 A prior distribution was developed for the natural mortality parameter from an analysis of a maximum age of 100 years. The analysis was performed by Owen Hamel (pers comm, NWFSC, NOAA) and used data from Then et al. [-@then_evaluating_2015] to provide a lognormal distribution for natural mortality. The median of the lognormal prior is 0.054 and has a standard error of 0.4384343. 
 
-The prior for steepness (h) assumes a beta distribution with parameters based on an update of the Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by J. Thorson (pers. comm, NWFSC, NOAA) which was reviewed and endorsed by the SSC in 2017. The prior is a beta distribution with ??=0.72 and $\sigma$=0.15. However, fixing steepness within the model resulted in unrealistic relative biomass levels ($>$ 1), it was also decided to fix steepness at 0.50.  The previous assessment estimated and fixed steepness equal to 0.40.  The current data does not contain information regarding steepness and 0.50 was selected as an intermediate value between the prior and the previous assessment value.  The steepness value of 0.50 was contained within the estimated uncertainty envelope from the assessment model when either the prior value of 0.72 or 0.40 values were assumed.
+The prior for steepness ($h$) assumes a beta distribution with parameters based on an update of the Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by J. Thorson (pers. comm, NWFSC, NOAA) which was reviewed and endorsed by the SSC in 2017. The prior is a beta distribution with $\mu$=0.72 and $\sigma$=0.15. However, fixing steepness within the model resulted in unrealistic relative biomass levels ($>$ 1), it was also decided to fix steepness at 0.50.  The previous assessment estimated and fixed steepness equal to 0.40.  The current data does not contain information regarding steepness and 0.50 was selected as an intermediate value between the prior and the previous assessment value.  The steepness value of 0.50 was contained within the estimated uncertainty envelope from the assessment model when either the prior value of 0.72 or 0.40 values were assumed.
 
 ###Data Weighting
-Citation for Francis method [@francis_data_2011]      
-Citation for Ianelli-McAllister harmonic mean method [@mcallister_bayesian_1997]
 
+The base case was weighted such that the various data sources were mostly consistent with each other in terms of the relationship between input and effective sample sizes. Length and age-at-length compositions from the NWFSC shelf-slope survey were fit along with length and marginal age compositions from the fishery fleets. Length data started with a sample size determined from the equation listed in Section \ref{fishery-length-and-age-data} and \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}. Age-at-length data assumed that each age was a random sample within the length bin and started with a sample size equal to the number of fish in that length bin . One extra variability parameter that was added to the input variance was estimated for the Triennial and the NWFSC shelf-slope survey indices. Vessels present in the WCGOP data were bootstrapped to provide uncertainty of the total discards (Table \ref{tab:Discard}).
 
-###General Model Specifications
-Citation for posterior predictive fecundity relationship from Dick [-@dick_modeling_2009] and [-@dick_meta-analysis_2017]     
-Model data, control, starter, and forecast files can be found in Appendices A-D.
+The base case assessment model was weighted based on the "Francis method", which was based on equation TA1.8 in Francis [-@francis_data_2011]. This formulation looks at the mean length or age and the variance of the mean to determine if across years, the variability is explained by the model. If the variability around the mean does not encompass the model predictions, then that data source should be down-weighted. This method does account for correlation in the data (i.e., the multinomial distribution) as opposed to the McAllister and Ianelli [-@mcallister_bayesian_1997] method of looking at the difference between individual observations and predictions.
 
 
 ###Estimated And Fixed Parameters
-A full list of all estimated and fixed parameters is provided in Tables....
-Estimated and fixed parameters tables currently read in from .csv file, 
-EXAMPLE: Table \ref{tab:Model1_params}
 
+There were 164 estimated parameters in the base case model. These included one parameter for $R0$, 8 parameters for growth, 2 parameters for extra variability on the Triennial and NWFSC shelf-slope surveys indices, 24 parameters for selectivity, retention, and time blocking of the fleets and the surveys, 117 recruitment deviations, and 12 forecast recruitment deviations (Table \ref{tab:Model1_params}).
+
+Fixed parameters in the model were as follows. Steepness was fixed at 0.50. A sensitivity analysis and a likelihood profile were done for steepness. Natural mortality was fixed at 0.054 for females and males, which is the median of the prior.  The standard deviation of recruitment deviates was fixed at 0.70. Maturity at age was fixed as described in Section \ref{sex-ratio-maturation-and-fecundit}. Length-weight parameters were fixed at estimates using all length-weight observations (Figure \ref{fig:Wt_len_pred}).
+
+Dome-shaped selectivity was explored for both the fishery and the surveys. Older `r spp` are often found in deeper waters and may move into areas that limit their availability to fishing gear, especially trawl gear. Domed shape selectivity was assumed for the fishery fleet and the Triennial survey. The final base model assumed asymptotic selectivity for the at-sea hake fishery, and all other surveys.
 
 ##Model Selection and Evaluation
 ###Key Assumptions and Structural Choices
