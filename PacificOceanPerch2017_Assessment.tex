@@ -1645,7 +1645,7 @@ bias adjustment, the main period of recruitment deviates occurred from
 adjustment. Methot and Taylor {[}({\textbf{???}})) summarize the
 reasoning behind varying levels of bias adjustment based on the
 information available to estimate the deviates. Recruitment deviation
-was assumed to be 0.70.
+was assumed to be 0.7.
 
 The recommended selectivity type in Stock Synthesis is the double normal
 and was used in this assessment for the all fleets, except the Pacific
@@ -1726,33 +1726,60 @@ distribution) as opposed to the McAllister and Ianelli
 looking at the difference between individual observations and
 predictions.
 
-\subsubsection{General Model
-Specifications}\label{general-model-specifications}
-
-Citation for posterior predictive fecundity relationship from Dick
-(\protect\hyperlink{ref-dick_modeling_2009}{2009}) and
-(\protect\hyperlink{ref-dick_meta-analysis_2017}{2017})\\
-Model data, control, starter, and forecast files can be found in
-Appendices A-D.
-
 \subsubsection{Estimated And Fixed
 Parameters}\label{estimated-and-fixed-parameters}
 
-A full list of all estimated and fixed parameters is provided in
-Tables\ldots{}. Estimated and fixed parameters tables currently read in
-from .csv file, EXAMPLE: Table \ref{tab:Model1_params}
+There were 164 estimated parameters in the base case model. These
+included one parameter for \(R_0\), 8 parameters for growth, 2
+parameters for extra variability on the Triennial and NWFSC shelf-slope
+surveys indices, 24 parameters for selectivity, retention, and time
+blocking of the fleets and the surveys, 117 recruitment deviations, and
+12 forecast recruitment deviations (Table \ref{tab:model_params}).
+
+Fixed parameters in the model were as follows. Steepness was fixed at
+0.50. A sensitivity analysis and a likelihood profile were done for
+steepness. Natural mortality was fixed at 0.054 for females and males,
+which is the median of the prior. The standard deviation of recruitment
+deviates was fixed at 0.70. Maturity at age was fixed as described in
+Section \ref{sex-ratio-maturation-and-fecundity}. Length-weight
+parameters were fixed at estimates using all length-weight observations
+(Figure \ref{fig:Wt_len_pred}).
+
+Dome-shaped selectivity was explored for both the fishery and the
+surveys. Older Pacific ocean perch are often found in deeper waters and
+may move into areas that limit their availability to fishing gear,
+especially trawl gear. Domed shape selectivity was assumed for the
+fishery fleet and the Triennial survey. The final base model assumed
+asymptotic selectivity for the at-sea hake fishery, and all other
+surveys.
 
 \subsection{Model Selection and
 Evaluation}\label{model-selection-and-evaluation}
 
+The base case assessment model for Pacific ocean perch was developed to
+balance parsimony and realism, and the goal was to estimate a biomass
+trajectory for the population of Pacific ocean perch on the west coast
+of the United States. The model contains many assumptions to achieve
+parsimony and uses many different sources of data to estimate reality. A
+series of investigative model runs were done to achieve the final base
+case model.
+
 \subsubsection{Key Assumptions and Structural
 Choices}\label{key-assumptions-and-structural-choices}
 
-Include: Evidence of search for balance between model realism and
-parsimony.\\
-Comparison of key model assumptions, include comparisons based on nested
-models (e.g., asymptotic vs.~domed selectivities, constant
-vs.~time-varying selectivities).
+The key assumptions in the model were that the assessed population is a
+single stock with biological parameters characterizing the entire coast,
+maturity at age has remained constant over the period modeled,
+weight-at-length has remained constant over the period modeled, the
+standard deviation in recruitment deviation is 0.70, and steepness is
+0.50. These are simplifying assumptions that unfortunately cannot be
+verified or disproven. Sensitivity analyses were conducted for most of
+these assumptions to determine their effect on the results.
+
+Structurally, the model assumed that the catches from each fleet were
+representative of the coastwide population, instead of specific areas,
+and fishing mortality prior to 1918 was negligible. It also assumed that
+discards were low prior to 1992 and after 2010.
 
 \subsubsection{Alternate Models
 Considered}\label{alternate-models-considered}
