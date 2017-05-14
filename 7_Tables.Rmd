@@ -967,7 +967,29 @@ print(Model.Setup.Table, include.rownames = FALSE, caption.placement = 'top',
 
 ```
 \FloatBarrier
-  
+
+<!-- ***********JITTER TABLE*********************************************** --> 
+```{r, results = 'asis'}
+# Replace values in file and read in - values for all models in 1 table  
+jitter = read.csv('./txt_files/JitterTable.csv')  
+
+# Create model 1 jitter table
+jitter.table = xtable(jitter, 
+                      caption = c('Results from 100 jitters from the base model.'),
+                      label = 'tab:jitter')
+
+align(jitter.table) = c('l',
+                        '>{\\raggedright}p{2in}', 
+                        '>{\\centering}p{1in}')
+
+
+# Print jitter table (all models)    
+print(jitter.table, 
+      include.rownames = FALSE, 
+      caption.placement = 'top')
+```
+<!-- ---------------------------------------------------------------------- -->
+  \FloatBarrier
   
   
 <!-- ***********MODEL 1 PARAMETERS***************************************** --> 
@@ -1100,29 +1122,106 @@ print(Like.table,
 
 ```
 
-<!-- ***********JITTER TABLE*********************************************** --> 
-```{r, results = 'asis'}
-# Replace values in file and read in - values for all models in 1 table  
-jitter = read.csv('./txt_files/JitterTable.csv')  
+\FloatBarrier
 
-# Create model 1 jitter table
-jitter.table = xtable(jitter, 
-                      caption = c('Results from 100 jitters from the base model.'),
-                      label = 'tab:jitter')
-
-align(jitter.table) = c('l',
-                        '>{\\raggedright}p{2in}', 
-                        '>{\\centering}p{1in}')
+<!-- **********Derived Quantities Table******************************* --> 
+```{r, results= 'asis'}
 
 
-# Print jitter table (all models)    
-print(jitter.table, 
-      include.rownames = FALSE, 
-      caption.placement = 'top')
-```
-<!-- ---------------------------------------------------------------------- -->
+# Extract reference points table data
+  mod = mod1
   
-  \FloatBarrier
+  # Rbind all of the data for the big summary reference table  
+  Ref_pts = rbind (
+      SSB_Unfished    = mod$derived_quants[grep('SSB_U', mod$derived_quants$LABEL), ],
+      TotBio_Unfished = mod$derived_quants[grep('TotBio', mod$derived_quants$LABEL), ],
+      Recr_Unfished   = mod$derived_quants[grep('Recr_Un', mod$derived_quants$LABEL), ],
+      SPB_lastyr      = mod$derived_quants[grep(paste0('SPB_', LastYR), mod$derived_quants$LABEL), ],
+      Depletion_lastyr= mod$derived_quants[grep(paste0('Bratio_', LastYR), mod$derived_quants$LABEL), ],
+      Refpt_sB        = c(NA, NA, NA),
+      SSB_Btgt        = mod$derived_quants[grep('SSB_Btgt', mod$derived_quants$LABEL), ],
+      SPR_Btgt        = mod$derived_quants[grep('SPR_Btgt', mod$derived_quants$LABEL), ],
+      Fstd_Btgt       = mod$derived_quants[grep('Fstd_Btgt', mod$derived_quants$LABEL), ],
+      TotYield_Btgt   = mod$derived_quants[grep('TotYield_Btgt', mod$derived_quants$LABEL), ],
+      Refpt_SPR       = c(NA, NA, NA),
+      SSB_SPRtgt      = mod$derived_quants[grep('SSB_SPRtgt', mod$derived_quants$LABEL), ],
+      SPR_proxy       = c('SPR_proxy', .5, NA),
+      Fstd_SPRtgt     = mod$derived_quants[grep('Fstd_SPRtgt', mod$derived_quants$LABEL), ],
+      TotYield_SPRtgt = mod$derived_quants[grep('TotYield_SPRtgt', mod$derived_quants$LABEL), ],
+      Refpts_MSY      = c(NA, NA, NA),
+      SSB_MSY         = mod$derived_quants[grep('SSB_MSY', mod$derived_quants$LABEL), ],
+      SPR_MSY         = mod$derived_quants[grep('SPR_MSY', mod$derived_quants$LABEL), ],
+      Fstd_MSY        = mod$derived_quants[grep('Fstd_MSY', mod$derived_quants$LABEL), ],
+      TotYield_MSY    = mod$derived_quants[grep('TotYield_MSY', mod$derived_quants$LABEL), ] )
+  
+  Ref_pts         = Ref_pts[, 1:3]
+  Ref_pts$Value   = as.numeric(Ref_pts$Value)
+  Ref_pts$StdDev  = as.numeric(Ref_pts$StdDev)
+  Ref_pts$Value1  = ifelse(Ref_pts$Value >= 1, as.character(round(Ref_pts$Value, 1)), 
+                           as.character(round(Ref_pts$Value, 3)))   
+        
+  Ref_pts$lowerCI  = Ref_pts$Value + qnorm(0.025) * Ref_pts$StdDev
+  
+  Ref_pts$upperCI  = Ref_pts$Value - qnorm(0.025) * Ref_pts$StdDev
+
+  Which = which(Ref_pts$LABEL=="Recr_Unfished")
+  logint  <- sqrt(log(1+(Ref_pts[Which,"StdDev"]/Ref_pts[Which, "Value"])^2))
+  Ref_pts[Which, "lowerCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.025)*logint)
+  Ref_pts[Which, "upperCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.975)*logint)
+  
+  Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI >= 1, as.character(round(Ref_pts$lowerCI, 1)), 
+                            as.character(round(Ref_pts$lowerCI, 3))) 
+  
+  Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1, as.character(round(Ref_pts$upperCI, 1)), 
+                            as.character(round(Ref_pts$upperCI, 3))) 
+  
+  Ref_pts$CI1      = paste0(print.numeric(Ref_pts$lowerCI1, digits = 3), ' - ', print.numeric(Ref_pts$upperCI1, digits = 3))
+        
+  Quantity = c(paste('Unfished spawning output (', fecund_unit, ')', sep = ''),
+                     paste('Unfished age ', min_age, ' biomass (mt)', sep = ''),
+                    'Unfished recruitment (R0, thousands)',
+                     paste('Spawning output', '(', LastYR, ' ', fecund_unit, ')', sep = ''),
+                     paste('Depletion (', LastYR,')',sep=''),
+                    '\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
+                    'Proxy spawning output ($B_{40\\%}$)',
+                    'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
+                    'Exploitation rate resulting in $B_{40\\%}$',
+                    'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
+                    '\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
+                    'Spawning output',
+                    '$SPR_{proxy}$',
+                    'Exploitation rate corresponding to $SPR_{proxy}$',
+                    'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
+                    '\\textbf{\\textit{Reference points based on estimated MSY values}}',
+                    'Spawning output at $MSY$ ($SB_{MSY}$)',
+                    '$SPR_{MSY}$',
+                    'Exploitation rate at $MSY$',
+                    '$MSY$ (mt) ')
+        
+  Ref_pts = cbind(Quantity, Ref_pts[, c(4, 9)])
+  Ref_pts[c(6, 11, 13, 16), 3] = ''
+  Ref_pts[c(6, 11, 16), 2] = ''
+  colnames(Ref_pts) = c('\\textbf{Quantity}', '\\textbf{Estimate}', 
+                        '\\textbf{\\~95\\%  Confidence Interval}')
+
+
+  # =============================================================================
+  # Create reference point table(s)----------------------------------------------
+  Ref_pts.table = xtable(Ref_pts, 
+                              caption=c('Summary of reference 
+                                        points and management quantities for the 
+                                        base case.'), 
+                              label='tab:Ref_pts', digits = 3)  
+  # Add alignment      
+  align(Ref_pts.table) = c('l',
+                                '>{\\raggedright}p{4.1in}',
+                                '>{\\centering}p{.65in}',
+                                '>{\\centering}p{1.4in}')  
+  
+ print(Ref_pts.table, include.rownames = FALSE, caption.placement = 'top',
+           sanitize.text.function = function(x){x})
+
+```
 
 \newpage
 <!-- ***********MODEL 1 SENSITIVITY TABLE(S)******************************* --> 
@@ -1164,7 +1263,7 @@ print(Sens_model1.table,
 
 ```
 <!-- ---------------------------------------------------------------------- -->
-  
+ \FloatBarrier 
   
 \newpage
 <!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 

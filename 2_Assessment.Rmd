@@ -194,7 +194,7 @@ Recommendation:Historical catch reconstruction estimates should be formally revi
 #Assessment
 
 ##General Model Specifications and Assumptions
-Stock Synthesis \hl{v3.30.01.12} was used to estimate the parameters in the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used to investigate and plot model fits. A summary of the data sources used in the model (details discussed above) is shown in Figure \ref{fig:data_plot}.
+Stock Synthesis \hl{v3.30.03.03} was used to estimate the parameters in the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used to investigate and plot model fits. A summary of the data sources used in the model (details discussed above) is shown in Figure \ref{fig:data_plot}.
 
 Stock Synthesis has many options when setting up a model and the assessment model for `r spp` was set up in the following manner.
 
@@ -225,7 +225,7 @@ The specifications of the assessment are listed in Table \ref{tab:Model_setup}. 
 
 The Triennial survey was kept as a single series. Assessment of other groundfish have split this survey into an early and a late series, based mostly on the shift to deeper depths and the timing of the survey, by estimating different catchability parameters and selectivity parameters for each period. Age data were available for the commercial and at-sea hake fishery, as well as the Triennial, the `r spp`, the NWFSC slope, and the NWFSC shelf-slope survies.  The ages from the NWFSC shelf-slope survey and were entered into the model as conditional age-at-length. Length-frequencies were calculated for the Triennial, `r spp`, AFSC slope, NWFSC slope,  and the NWFSC shelf-slope surveys within each stratum, and then combined across strata using the biomass in each stratum as the weighting factor. This reduced the influence of a few fish observed in a large area.
 
-The specification of when to estimate recruitment deviations is an assumption that likely affects model uncertainty. It was decided to estimate recruitment deviations from 1900-2014 to appropriately quantify uncertainty. The earliest length-composition data occur in 1966 and the earliest age data were in 1981. The most informed years for estimating recruitment deviations were from about the mid-1970s to about 2011. The period from 1900-1974 was fit using an early series with little or no bias adjustment, the main period of recruitment deviates occurred from 1975-2014 with an upward and downward ramping of bias adjustment, and 2015 onward was fit using forecast recruitment deviates with little bias adjustment. Methot and Taylor [-@methot_bias_2011) summarize the reasoning behind varying levels of bias adjustment based on the information available to estimate the deviates. Recruitment deviation was assumed to be `r round(mod1$parameters[mod1$parameters$Label == "SR_sigmaR","Value"],2)`.
+The specification of when to estimate recruitment deviations is an assumption that likely affects model uncertainty. It was decided to estimate recruitment deviations from 1900-2014 to appropriately quantify uncertainty. The earliest length-composition data occur in 1966 and the earliest age data were in 1981. The most informed years for estimating recruitment deviations were from about the mid-1970s to about 2011. The period from 1900-1974 was fit using an early series with little or no bias adjustment, the main period of recruitment deviates occurred from 1975-2014 with an upward and downward ramping of bias adjustment, and 2015 onward was fit using forecast recruitment deviates with little bias adjustment. Methot and Taylor [-@methot_adjusting_2011] summarize the reasoning behind varying levels of bias adjustment based on the information available to estimate the deviates. Recruitment deviation was assumed to be `r print(mod1$parameters[mod1$parameters$Label == "SR_sigmaR","Value"],2)`.
 
 The recommended selectivity type in Stock Synthesis is the double normal and was used in this assessment for the all fleets, except the `r spp` survey which was assumed logistic based on the length composition data. Changes in retention curves were estimated for the commercial fishery.
 
@@ -235,7 +235,7 @@ The following distributions were assumed for data fitting. Survey indices were l
 
 
 ###Modeling Software
-The STAT team used Stock Synthesis version 3.30.03.03 by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
+The STAT team used Stock Synthesis version \hl{3.30.03.03} by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
 
 
 ###Priors
@@ -270,20 +270,16 @@ Structurally, the model assumed that the catches from each fleet were representa
 
 
 ###Alternate Models Considered
-Include: Summary of alternate model configurations that were tried but rejected.
+The exploration of models began by bridging from the 2011 assessment to SS version 3.24U, which produced no discernable difference. The updated catch series with discards added per the 2011 assessment produced insignificant differences in the relative scale of the population although the updated historical removals resulted in an increase in the estimate of unfishe biomass (Figure \ref{fig:XX}).   Updating the survey indices produced small differences in the relative scale of the population. Adding age and length data each resulted in an less of a population decline from the 1970s to pre-2000, resulting in an increase in the estimated final stock status as of 2017.  However, the addition of new data resulted in an early pattern within recruitment, indicating that the assumptions within the previous model may not represent the best fit to the current data.
 
+This assessment estimated discards in the model, so time was spent investigating time blocks for changes in selectivity and retention to match the limited discard data as best as possible. Using major changes in management and observed changes in landings, a set of blocks for retention was found for the bottom trawl fleets. In the spirit of parsimony, we used as few blocks as possible, allowed blocks only for time periods with data, and added new blocks when we felt they were justified by changes in management and they improved the fit to the data.
+
+Natural mortality was also investigated and a new prior was developed assuming a maximum age of 100 years for females and males. The previous assessment estimated male natural mortality as an offset from female natural mortality which was fixed at the median of the 2011 prior.  This assessment attempted to estimate natural mortality for both sexes using the 2017 updated prior, but there was little to no information on natural mortality within the data and hence opted to fix the value for females.  Upon additional exploration, the model estimated very little difference in male natural mortality relative to females (< 0.002) and in the interest of selecting the model that fit the data with the fewest parameters required, males were fixed equal to the female natural mortality.
 
 
 ###Convergence
-Include: Randomization run results or other evidence of search for global 
-best estimates.    
+Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. This was repeated 100 times and a better minimum was not found (Table \ref{tab:jitter}). The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained above and likelihood profiles, we are confident that the base case as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian.  
 
-Convergence testing through use of dispersed starting values often requires 
-extreme values to actually explore new areas of the multivariate likelihood 
-surface. Jitter is a SS option that generates random starting values from a 
-normal distribution logistically transformed into each parameter's range 
-[@methot_stock_2013]. Table \ref{tab:jitter} shows the results of running 100 jitters 
-for each pre-STAR base model....
 
 ##Response To The Current STAR Panel Requests
 \begin{description}[style=unboxed]
@@ -325,7 +321,8 @@ for each pre-STAR base model....
 <!-- ************************************************************************* -->
 ##Base Model Results
 
-Table \ref{tab:Model1_params}   
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:model_params} and the likelihood components are shown in Table \ref{tab:like}. Estimates of key derived parameters and approximate 95% asymptotic confidence intervals are shown in Table \ref{tab:Ref_pts}.
+
 
 
 

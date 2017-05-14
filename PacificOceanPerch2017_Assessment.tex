@@ -1495,7 +1495,7 @@ the assessment.}
 \subsection{General Model Specifications and
 Assumptions}\label{general-model-specifications-and-assumptions}
 
-Stock Synthesis \hl{v3.30.01.12} was used to estimate the parameters in
+Stock Synthesis \hl{v3.30.03.03} was used to estimate the parameters in
 the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used
 to investigate and plot model fits. A summary of the data sources used
 in the model (details discussed above) is shown in Figure
@@ -1642,10 +1642,11 @@ period from 1900-1974 was fit using an early series with little or no
 bias adjustment, the main period of recruitment deviates occurred from
 1975-2014 with an upward and downward ramping of bias adjustment, and
 2015 onward was fit using forecast recruitment deviates with little bias
-adjustment. Methot and Taylor {[}({\textbf{???}})) summarize the
+adjustment. Methot and Taylor
+(\protect\hyperlink{ref-methot_adjusting_2011}{2011}) summarize the
 reasoning behind varying levels of bias adjustment based on the
 information available to estimate the deviates. Recruitment deviation
-was assumed to be 0.7.
+was assumed to be 0.70.
 
 The recommended selectivity type in Stock Synthesis is the double normal
 and was used in this assessment for the all fleets, except the Pacific
@@ -1667,8 +1668,8 @@ indices were lognormal, total discards were lognormal.
 
 \subsubsection{Modeling Software}\label{modeling-software}
 
-The STAT team used Stock Synthesis version 3.30.03.03 by Dr.~Richard
-Methot at the NWFSC (Methot and Wetzel
+The STAT team used Stock Synthesis version \hl{3.30.03.03} by
+Dr.~Richard Methot at the NWFSC (Methot and Wetzel
 \protect\hyperlink{ref-methot_stock_2013}{2013}). This most recent
 version was used, since it included improvements and corrections to
 older versions.
@@ -1784,22 +1785,56 @@ discards were low prior to 1992 and after 2010.
 \subsubsection{Alternate Models
 Considered}\label{alternate-models-considered}
 
-Include: Summary of alternate model configurations that were tried but
-rejected.
+The exploration of models began by bridging from the 2011 assessment to
+SS version 3.24U, which produced no discernable difference. The updated
+catch series with discards added per the 2011 assessment produced
+insignificant differences in the relative scale of the population
+although the updated historical removals resulted in an increase in the
+estimate of unfishe biomass (Figure \ref{fig:XX}). Updating the survey
+indices produced small differences in the relative scale of the
+population. Adding age and length data each resulted in an less of a
+population decline from the 1970s to pre-2000, resulting in an increase
+in the estimated final stock status as of 2017. However, the addition of
+new data resulted in an early pattern within recruitment, indicating
+that the assumptions within the previous model may not represent the
+best fit to the current data.
+
+This assessment estimated discards in the model, so time was spent
+investigating time blocks for changes in selectivity and retention to
+match the limited discard data as best as possible. Using major changes
+in management and observed changes in landings, a set of blocks for
+retention was found for the bottom trawl fleets. In the spirit of
+parsimony, we used as few blocks as possible, allowed blocks only for
+time periods with data, and added new blocks when we felt they were
+justified by changes in management and they improved the fit to the
+data.
+
+Natural mortality was also investigated and a new prior was developed
+assuming a maximum age of 100 years for females and males. The previous
+assessment estimated male natural mortality as an offset from female
+natural mortality which was fixed at the median of the 2011 prior. This
+assessment attempted to estimate natural mortality for both sexes using
+the 2017 updated prior, but there was little to no information on
+natural mortality within the data and hence opted to fix the value for
+females. Upon additional exploration, the model estimated very little
+difference in male natural mortality relative to females (\textless{}
+0.002) and in the interest of selecting the model that fit the data with
+the fewest parameters required, males were fixed equal to the female
+natural mortality.
 
 \subsubsection{Convergence}\label{convergence}
 
-Include: Randomization run results or other evidence of search for
-global best estimates.
-
-Convergence testing through use of dispersed starting values often
-requires extreme values to actually explore new areas of the
-multivariate likelihood surface. Jitter is a SS option that generates
-random starting values from a normal distribution logistically
-transformed into each parameter's range (Methot and Wetzel
-\protect\hyperlink{ref-methot_stock_2013}{2013}). Table \ref{tab:jitter}
-shows the results of running 100 jitters for each pre-STAR base
-model\ldots{}.
+Proper convergence was determined by starting the minimization process
+from dispersed values of the maximum likelihood estimates to determine
+if the model found a better minimum. This was repeated 100 times and a
+better minimum was not found (Table \ref{tab:jitter}). The model did not
+experience convergence issues when provided reasonable starting values.
+Through the jittering done as explained above and likelihood profiles,
+we are confident that the base case as presented represents the best fit
+to the data given the assumptions made. There were no difficulties in
+inverting the Hessian to obtain estimates of variability, although much
+of the early model investigation was done without attempting to estimate
+a Hessian.
 
 \subsection{Response To The Current STAR Panel
 Requests}\label{response-to-the-current-star-panel-requests}
@@ -1840,7 +1875,11 @@ Requests}\label{response-to-the-current-star-panel-requests}
 
 \subsection{Base Model Results}\label{base-model-results}
 
-Table \ref{tab:Model1_params}
+The base model parameter estimates along with approximate asymptotic
+standard errors are shown in Table \ref{tab:model_params} and the
+likelihood components are shown in Table \ref{tab:like}. Estimates of
+key derived parameters and approximate 95\% asymptotic confidence
+intervals are shown in Table \ref{tab:Ref_pts}.
 
 \subsubsection{Uncertainty and Sensitivity
 Analyses}\label{uncertainty-and-sensitivity-analyses}
@@ -2813,6 +2852,25 @@ Starting year & 1918 \\
 
 \FloatBarrier
 
+\begin{table}[ht]
+\centering
+\caption{Results from 100 jitters from the base model.} 
+\label{tab:jitter}
+\begin{tabular}{>{\raggedright}p{2in}>{\centering}p{1in}}
+  \hline
+Status & Base.Model \\ 
+  \hline
+Returned to base case & - \\ 
+  Found local minimum & - \\ 
+  Found better solution & - \\ 
+  Error in likelihood & - \\ 
+  Total & 100 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
 \begin{landscape}
 \begin{longtable}{lrcccll}
 \caption{List of parameters used in
@@ -2960,24 +3018,41 @@ Total & 1711.21 \\
 \end{tabular}
 \end{table}
 
+\FloatBarrier
+
 \begin{table}[ht]
 \centering
-\caption{Results from 100 jitters from the base model.} 
-\label{tab:jitter}
-\begin{tabular}{>{\raggedright}p{2in}>{\centering}p{1in}}
+\caption{Summary of reference 
+                                        points and management quantities for the 
+                                        base case.} 
+\label{tab:Ref_pts}
+\begin{tabular}{>{\raggedright}p{4.1in}>{\centering}p{.65in}>{\centering}p{1.4in}}
   \hline
-Status & Base.Model \\ 
+\textbf{Quantity} & \textbf{Estimate} & \textbf{\~95\%  Confidence Interval} \\ 
   \hline
-Returned to base case & - \\ 
-  Found local minimum & - \\ 
-  Found better solution & - \\ 
-  Error in likelihood & - \\ 
-  Total & 100 \\ 
+Unfished spawning output (million eggs) & 6215 &  4502.1 -   7927.9 \\ 
+  Unfished age 3+ biomass (mt) & 132334 & 95967.1 - 168700.9 \\ 
+  Unfished recruitment (R0, thousands) & 11158.5 &  8492.2 -    14662 \\ 
+  Spawning output(2017 million eggs) & 4663.2 &  2092.9 -   7233.6 \\ 
+  Depletion (2017) & 0.75 &   0.525 -    0.976 \\ 
+  \textbf{$\text{Reference points based on } \mathbf{SB_{40\%}}$} &  &  \\ 
+  Proxy spawning output ($B_{40\%}$) & 2486 &  1800.8 -   3171.1 \\ 
+  SPR resulting in $B_{40\%}$ ($SPR_{B40\%}$) & 0.55 &    0.55 -     0.55 \\ 
+  Exploitation rate resulting in $B_{40\%}$ & 0.028 &   0.028 -    0.028 \\ 
+  Yield with $SPR_{B40\%}$ at $B_{40\%}$ (mt) & 1657.1 &  1202.2 -     2112 \\ 
+  \textbf{\textit{Reference points based on SPR proxy for MSY}} &  &  \\ 
+  Spawning output & 2071.7 &  1500.7 -   2642.6 \\ 
+  $SPR_{proxy}$ & 0.5 &  \\ 
+  Exploitation rate corresponding to $SPR_{proxy}$ & 0.033 &   0.033 -    0.034 \\ 
+  Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt) & 1674.7 &  1215.2 -   2134.1 \\ 
+  \textbf{\textit{Reference points based on estimated MSY values}} &  &  \\ 
+  Spawning output at $MSY$ ($SB_{MSY}$) & 2157.8 &    1561 -   2754.7 \\ 
+  $SPR_{MSY}$ & 0.51 &   0.509 -    0.512 \\ 
+  Exploitation rate at $MSY$ & 0.032 &   0.032 -    0.033 \\ 
+  $MSY$ (mt)  & 1676.1 &  1216.2 -     2136 \\ 
    \hline
 \end{tabular}
 \end{table}
-
-\FloatBarrier
 
 \newpage
 
@@ -3021,6 +3096,8 @@ Total Likelihood & 1710.07 & 3577.28 & 1711.64 & 1710.07 & 1708.10 & 1711.22 & 1
 \end{tabular}
 }
 \end{sidewaystable}
+
+\FloatBarrier 
 
 \newpage
 
@@ -3896,6 +3973,13 @@ Methot, R.D., and Wetzel, C.R. 2013. Stock synthesis: A biological and
 statistical framework for fish stock assessment and fishery management.
 Fisheries Research \textbf{142}: 86--99. doi:
 \href{https://doi.org/10.1016/j.fishres.2012.10.012}{10.1016/j.fishres.2012.10.012}.
+
+\hypertarget{ref-methot_adjusting_2011}{}
+Methot, R.D., Taylor, I.G., and Chen, Y. 2011. Adjusting for bias due to
+variability of estimated recruitments in fishery assessment models.
+Canadian Journal of Fisheries and Aquatic Sciences \textbf{68}(10):
+1744--1760. doi:
+\href{https://doi.org/10.1139/f2011-092}{10.1139/f2011-092}.
 
 \hypertarget{ref-pikitch_evaluation_1988}{}
 Pikitch, E.K., Erickson, D.L., and Wallace, J.R. 1988. An evaluation of
