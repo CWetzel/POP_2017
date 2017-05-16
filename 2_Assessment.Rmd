@@ -121,7 +121,7 @@ $M=\frac{5.4}{A_{\text{max}}}$
 
 \end{centering}
 
-The above is also the median of the prior. The prior is defined as a lognormal with mean $ln(\frac{5.4}{A_{\text{max}}})$ and SE = 0.4384343. Using a maximum age of 100 the point estimate and median of the prior is 0.054.
+The above is also the median of the prior. The prior is defined as a lognormal with mean $ln(\frac{5.4}{A_{\text{max}}})$ and SE = 0.4384343. Using a maximum age of 100 the point estimate and median of the prior is 0.054.  The maximum age was selected based on available age data from all West Coast data sources.  The oldest aged rockfish was 120 years, captured by the commercial fishery in 2007.  However, age data are subject to ageing error which could impact this estimate of longevity.  The selection of 100 years was based on the range of other ages available with had multiple estimates of fish between 90 and 102 years of age.      
 
 
 
