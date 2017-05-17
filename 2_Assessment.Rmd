@@ -22,7 +22,7 @@ The effective sample sizes for length and marginal age composition data for all 
 
 ###Northwest Fisheries Science Center (NWFSC) slope survey  
 
-The NWFSC slope survey covered waters throughout the summer from 183 m to 1280 m north of $34^\circ 30^\prime$ S, which is near Point Conception between 1999 and 2002.  Tows conducted between the depths of 183 and 549 m were used to create an index of abundance using the VAST delta-GLMM model.  The estimated index of abundance is show in Table \ref{tab:Index_Summary}.  The lognormal distribution with random strata-year had the lowest AIC and was chosen as the final model.  \hl{The Q-Q plot does not show any departures from the assumed distribution (Figure XXXX}). } The trend of abundance across the four surveys years was generally flat with high estimated annual variance.
+The NWFSC slope survey covered waters throughout the summer from 183 m to 1280 m north of $34^\circ 30^\prime$ S, which is near Point Conception between 1999 and 2002.  Tows conducted between the depths of 183 and 549 m were used to create an index of abundance using a bayesian delta-GLMM and the VAST delta-GLMM models.  The estimated index of abundance is show in Table \ref{tab:Index_Summary}.  Based on the diagnostics the bayesian delta-GLMM, which does not account for spatial effects, gamma distribution with year-vessel random effects was selected as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:nw_slope_qq}).  The trend of abundance across the four surveys years was generally flat with high estimated annual variance.
 
 Length and age compositions were available for 2001 and 2002 and were expanded based upon the survey stratification (Tables \ref{tab:NWslope_Lengths} and \ref{tab:NWslope_Ages}.  The expanded length frequencies from this survey shows that primarily only large fish were captured both years (Figure \ref{fig:nw_slope_Length}).  The majority of fish observed by this survey were aged at greater than 10 years (Figure \ref{fig:nw_slope_Age}).
 
@@ -121,8 +121,7 @@ $M=\frac{5.4}{A_{\text{max}}}$
 
 \end{centering}
 
-The above is also the median of the prior. The prior is defined as a lognormal with mean $ln(\frac{5.4}{A_{\text{max}}})$ and SE = 0.4384343. Using a maximum age of 100 the point estimate and median of the prior is 0.054.  The maximum age was selected based on available age data from all West Coast data sources.  The oldest aged rockfish was 120 years, captured by the commercial fishery in 2007.  However, age data are subject to ageing error which could impact this estimate of longevity.  The selection of 100 years was based on the range of other ages available with had multiple estimates of fish between 90 and 102 years of age.      
-
+The above is also the median of the prior. The prior is defined as a lognormal with mean $ln(\frac{5.4}{A_{\text{max}}})$ and SE = 0.4384343. Using a maximum age of 100 the point estimate and median of the prior is 0.054.  The maximum age was selected based on available age data from all West Coast data sources.  The oldest aged rockfish was 120 years, captured by the commercial fishery in 2007.  However, age data are subject to ageing error which could impact this estimate of longevity.  The selection of 100 years was based on the range of other ages available with had multiple observations of fish between 90 and 102 years of age.      
 
 
 ###Sex ratio, maturation, and fecundity

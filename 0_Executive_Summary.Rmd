@@ -2,16 +2,14 @@
 #Executive Summary{-}
 
 ##Stock{-}
-This assessment reports the status of the `r spp` (\emph{`r spp.sci`}) speciess off rockfish
-off the U.S. West Coast from Northern California to the Canadian Border using data 
-through `r LastYR`.  `r spp` are most abundant in the Gulf of Alaska and have observed off of Japan, in the Bering Sea, and south to Baja California,
-although they are sparse south of Oregon and rare in southern California. \hl{Composition data indicate that
-good recruitment years coincide in Oregon and Washington.} To date, no significant genetic differences have
-been found in the range covered by this assessment.
+This assessment reports the status of the `r spp` (\emph{`r spp.sci`}) species off rockfish off the U.S. West Coast from Northern California to the Canadian Border using data 
+through `r LastYR`.  `r spp` are most abundant in the Gulf of Alaska and have observed off of Japan, in the Bering Sea, and south to Baja California, although they are sparse south of Oregon and rare in southern California. Although catches north of the US-Canada border were not included in this assessment, it is not certain the connectivity of these populations with contribution to the biomass possibly through adult migration and/or larval dispersion.  Composition data indicate that good recruitment years coincide in Oregon and Washington. To date, no significant genetic differences have been found in the range covered by this assessment.
 
 
 ##Landings{-}
-The first year that harvest of `r spp` exceeded 1 mt off the U.S. West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year. `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.
+The first year that harvest of `r spp` exceeded 1 mt off the US West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year.  `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.  Since 2000, catches of `r spp` have ranged between 269 - 60 mt, with catches in 2016 totaling 67 mt.
+
+`r spp` are a desirable market species and discarding has historically been low.  However, management restrictions (e.g. trip limits) have resulted in increased discarding since the early 1990s.  During the 2000s discarding increased for `r spp` due to harvest restrictions imposed to allow rebuilding, with estimated discard rates from the bottom trawl fishery peaking in 2009 and 2010, prior to implementation of catch shares in 2011.  Since 2011, discarding of `r spp` has been estimated to be less than 4% given observer data.
 
 
 <!-- Catch table:                 (Table \ref{tab:Exec_catch})
@@ -28,13 +26,9 @@ Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3
 <!-- ***********END EXECUTIVE SUMMARY CATCH FIGURES AND TABLES************* -->
 
 
-
 \FloatBarrier
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY CATCH FIGURES AND TABLES*********** -->
-<!-- ***********Edit the Plot_catch tables and captions******************** -->
-<!-- ***********This depends on how many plots you need******************** -->
-<!-- ***********Also included is the r4SS plot - keep or remove************ -->
 <!-- ***********CATCH FIGURES********************************************** -->
 ```{r, fig.cap= paste('Landings of' ,spp, 'for California, Oregon, Washington, the Foriegn fishery (1966-1976), At-Sea Hake fishery, and fishery independent surveys. \\label{fig:Exec_catch1}',sep=' ')}
     # CSV: './txt_files/Exec_catch_for_figs.csv'
@@ -44,18 +38,20 @@ Catch figure(s) with fleets: (Figures \ref{fig:Exec_catch1}-\ref{fig:Exec_catch3
 
 ```
 
-
-<!--\FloatBarrier
-
-![Landings history of `r spp` in the `r mod1_label`. \label{fig:r4ss_catches}](r4ss/plots_mod1/catch1 landings.png)-->
-
-<!--\FloatBarrier
-
-
-\newpage -->
+\FloatBarrier
 
 ##Data and Assessment{-}
-This a new full assessment for `r spp` which was last assessed in 2011.  In this assessment, all aspects of the model including catches, data, and modelling assumptions were re-evaluated as much as possible. The assessment was conducted using the length- and age-structured modeling software Stock Synthesis (version 3.30).  The coastwide population was modeled assuming separate growth and mortality parameters for each sex (a two-sex model) from `r Dat_start_mod1` to `r LastYR`, and forecasted beyond `r LastYR`.
+This a new full assessment for `r spp` which was last assessed in 2011.  In this assessment, all aspects of the model including catches, data, and modelling assumptions were re-evaluated as much as possible. The assessment was conducted using the length- and age-structured modeling software Stock Synthesis (version 3.30.30.05).  The coastwide population was modeled assuming separate growth and mortality parameters for each sex (a two-sex model) from `r Dat_start_mod1` to `r LastYR`, and forecasted beyond `r LastYR`.
+
+All of the sources of data for `r spp` have been re-evaluated for 2017, excluding the historical fishery catch-per-unit time series. Changes of varying degrees have occurred in the data from those used in previous assessments. These current data represent the best available scientific information. The landings history has been updated and extended back to 1918, harvest was negligible before that year. Survey data from the Alaska and Northwest Fisheries Science Centers have been used to construct series of indices using a spatial temporal delta GLMM model as well as length, age and conditional age-at length compositions consistent with the stratifications used for constructing the indices.
+
+The definition of fishing fleets have been changed from those in the 2011 assessment.  Three fishing fleets were specified within the model: 1) a combined bottom trawl, mid-water trawl and fixed gear fleet where only a small fraction of `r spp` occuring by fixed gear, 2) the historical foreign fleet, and 3) the at-sea hake fishery.  The fleet grouping were based on discarding practices.  The trawl fishery estimated a retention curve based upon discarding data and known management restrictions.  However, very little if any discarding is assumed to have occured by the foreign fleet and the catch reported by the at-sea hake fishery accounts for both discarded and landed fish and hence, no additional mortality was estimated for each of these fleets.  
+
+The assessment uses landings data and discard-fraction estimates; catch-per-unit-of-effort and survey indices; length or age composition data for each year and fishery or survey (with conditional age at length compositional data for the NWFSC shelf-slope survey); information on weight-at-age, maturity-at-age, and fecundity-at-age; priors on natural mortality and the steepness of the Beverton-Holt stock-recruitment relationship; and estimates of ageing error. Recruitment at "equilibrium biomass", length-based selectivity of the fishery and surveys, retention of the fishery, catchability of the surveys, growth, the time series of biomass, age and size structure, and current and projected future stock status are outputs of the model. Natural mortality and steepness were fixed in the final model. This was done due to relatively flat likelihood surfaces, such that fixing parameters and then varying them was deemed the best way to characterize uncertainty.
+
+A number of sources of uncertainty are explicitly included in this assessment. For example, allowance is made for uncertainty in survey catchability coefficients. Furthermore, this assessment includes gender differences in growth, a non-linear relationship between individual spawner biomass and effective spawning output, and an updated relationship between length and maturity, based upon non-published information (M. Head, personal communication). As is always the case, overall uncertainty is greater than that predicted by a single model specification. Among other sources of uncertainty that are not included in the current model are the degree of connectivity between the stocks of `r spp` off of Vancouver Island, British Columbia and those in PFMC waters, and the effect of climatic variables on recruitment, growth and survival of `r spp`.
+
+A reference case was selected which adequately captures the central tendency for those sources of uncertainty considered in the model.
 
 
 <!--Map of assessment region: (Figure \ref{fig:assess_region_map}).  

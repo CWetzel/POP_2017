@@ -164,7 +164,7 @@ figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/AgeingError/Ageing_Error.png",
             "C:/Assessments/POP2017/Models/_bridging/bridging.png",
             "C:/Assessments/POP2017/Models/_Retro/compare1_spawnbio.png",
-            "C:/Assessments/POP2017/Models/_Retro/compare7_recdevs.png",
+            "C:/Assessments/POP2017/Models/_Retro/compare9_recdevs.png",
             "C:/Assessments/POP2017/Models/_Retro/retro_recdev_squid.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png")
 

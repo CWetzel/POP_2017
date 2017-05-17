@@ -53,7 +53,8 @@ rich.colors.short <- function(n,alpha=1){
 
 Final_Catch_AllYrs = read.csv('./txt_files/POP2017_PacFIN_catch_forExpansion.csv')
 Exec_catch_sep = Final_Catch_AllYrs
-Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep )]
+Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep)]
+Exec_catch_sep = Exec_catch_sep[Exec_catch_sep$Year != LastYR, ]
 
 # Assign column names
 survey = apply(Exec_catch_sep[,7:ncol(Exec_catch_sep)], 1, sum)
@@ -91,7 +92,7 @@ Plot_catch = function(Catch_df) {
 
 # Read in executive summary catches table
 #Exec_catch_summary_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
-Exec_catch_summary_sep = Final_Catch_AllYrs[,2:ncol(Final_Catch_AllYrs)]
+Exec_catch_summary_sep = Final_Catch_AllYrs[, 2:ncol(Final_Catch_AllYrs)]
 #Exec_catch_summary_sep = Exec_catch_summary_sep[,2:ncol(Exec_catch_summary_sep)]
 
 # Bind the data frames together
@@ -108,7 +109,7 @@ colnames(Exec_catch_summary) = c('Year',
                                  'Research',
                                  'Total Landings')
 
-Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1, Year <= LastYR-1)
+Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1 & Year <= LastYR-1)
     
 # Make executive summary catch xtable
 Exec_catch.table = xtable(Exec_catch_summary, 
@@ -136,13 +137,13 @@ align(Exec_catch.table) = c('l', 'l',
   mod_area='mod1'
   
   # Extract biomass/output  
-  SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$LABEL), ]
+  SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$Label), ]
   SpawningB = SpawningB[c(-1, -2), ]
      
       
   # Spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-  SpawningByrs = SpawningB[SpawningB$LABEL >= paste('SPB_', FirstYR, sep='') 
-                         & SpawningB$LABEL <= paste('SPB_', LastYR,  sep=''), ]     
+  SpawningByrs = SpawningB[SpawningB$Label >= paste('SPB_', FirstYR, sep='') 
+                         & SpawningB$Label <= paste('SPB_', LastYR,  sep=''), ]     
   
   SpawningByrs$YEAR = seq(FirstYR, LastYR)
   
@@ -167,12 +168,12 @@ align(Exec_catch.table) = c('l', 'l',
   
   
   # Extract Depletion values  
-  Depletion = mod$derived_quants[grep('Bratio', mod$derived_quants$LABEL), ]
+  Depletion = mod$derived_quants[grep('Bratio', mod$derived_quants$Label), ]
   Depletion = Depletion[c(-1, -2), ]
      
   # Estimated depletion, pull out correct years, list years, and estimate 95% CI
-  Depletionyrs = Depletion[Depletion$LABEL >= paste('Bratio_', FirstYR,sep='') &
-                           Depletion$LABEL <= paste('Bratio_', LastYR,sep=''), ]     
+  Depletionyrs = Depletion[Depletion$Label >= paste('Bratio_', FirstYR,sep='') &
+                           Depletion$Label <= paste('Bratio_', LastYR,sep=''), ]     
   
   Depletionyrs$YEAR = seq(FirstYR, LastYR)
   
@@ -248,12 +249,12 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   mod_area='mod1'
   
   # Pull out recuitment  
-  Recruit = mod$derived_quants[grep('Recr',mod$derived_quants$LABEL),]
+  Recruit = mod$derived_quants[grep('Recr',mod$derived_quants$Label),]
   Recruit = Recruit[c(-1,-2),]
   
   # Recruitment and std.dev data, calculate lower and upper 95% CI                 
-  Recruityrs = Recruit[Recruit$LABEL >= paste('Recr_', FirstYR, sep = '') &  
-                       Recruit$LABEL <= paste('Recr_', LastYR, sep = ''), ]     
+  Recruityrs = Recruit[Recruit$Label >= paste('Recr_', FirstYR, sep = '') &  
+                       Recruit$Label <= paste('Recr_', LastYR, sep = ''), ]     
   
   Recruityrs$YEAR = seq(FirstYR, LastYR)
   
@@ -323,15 +324,15 @@ align(Recruit_mod1.table) = c('l',
   mod_area = 'mod1'
 
   # Extract exploitation and SPR ratio values from r4SS output
-  Exploit = mod$derived_quants[grep('F',mod$derived_quants$LABEL),]
+  Exploit = mod$derived_quants[grep('F',mod$derived_quants$Label),]
   Exploit = Exploit[c(-1,-2),]
         
-  SPRratio = mod$derived_quants[grep('SPRratio',mod$derived_quants$LABEL),]
+  SPRratio = mod$derived_quants[grep('SPRratio',mod$derived_quants$Label),]
   SPRratio = SPRratio[c(-1,-2),]
         
   # Exploitation and calculate lower and upper 95% CI                 
-  Exploityrs = Exploit[Exploit$LABEL >= paste('F_', FirstYR-1, sep='') &
-                       Exploit$LABEL <= paste('F_', LastYR-1, sep=''), ]     
+  Exploityrs = Exploit[Exploit$Label >= paste('F_', FirstYR-1, sep='') &
+                       Exploit$Label <= paste('F_', LastYR-1, sep=''), ]     
   
   Exploityrs$YEAR = seq(FirstYR-1, LastYR-1)
   
@@ -347,8 +348,8 @@ align(Recruit_mod1.table) = c('l',
         
         
   # Spawning potential ratio and calculate lower and upper 95% CI  
-  SPRratioyrs = SPRratio[SPRratio$LABEL >= paste('SPRratio_', FirstYR-1, sep='') 
-                       & SPRratio$LABEL <= paste('SPRratio_', LastYR-1, sep=''), ]     
+  SPRratioyrs = SPRratio[SPRratio$Label >= paste('SPRratio_', FirstYR-1, sep='') 
+                       & SPRratio$Label <= paste('SPRratio_', LastYR-1, sep=''), ]     
   
   SPRratioyrs$Year = seq(FirstYR-1, LastYR-1)
   
@@ -393,26 +394,27 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
   
   # Rbind all of the data for the big summary reference table  
   Ref_pts = rbind (
-  SSB_Unfished    = mod$derived_quants[grep('SSB_U', mod$derived_quants$LABEL), ],
-  TotBio_Unfished = mod$derived_quants[grep('TotBio', mod$derived_quants$LABEL), ],
-  Recr_Unfished   = mod$derived_quants[grep('Recr_Un', mod$derived_quants$LABEL), ],
-  SPB_lastyr      = mod$derived_quants[grep(paste0('SPB_', LastYR), mod$derived_quants$LABEL), ],
-  Depletion_lastyr= mod$derived_quants[grep(paste0('Bratio_', LastYR), mod$derived_quants$LABEL), ],
+  SSB_Unfished    = mod$derived_quants[grep('SSB_U', mod$derived_quants$Label), ],
+  TotBio_Unfished = mod$derived_quants[grep('TotBio', mod$derived_quants$Label), ],
+  Recr_Unfished   = mod$derived_quants[grep('Recr_Un', mod$derived_quants$Label), ],
+  SPB_lastyr      = mod$derived_quants[grep(paste0('SPB_', LastYR), mod$derived_quants$Label), ],
+  Depletion_lastyr= mod$derived_quants[grep(paste0('Bratio_', LastYR), mod$derived_quants$Label), ],
   Refpt_sB        = c(NA, NA, NA),
-  SSB_Btgt        = mod$derived_quants[grep('SSB_Btgt', mod$derived_quants$LABEL), ],
-  SPR_Btgt        = mod$derived_quants[grep('SPR_Btgt', mod$derived_quants$LABEL), ],
-  Fstd_Btgt       = mod$derived_quants[grep('Fstd_Btgt', mod$derived_quants$LABEL), ],
-  TotYield_Btgt   = mod$derived_quants[grep('TotYield_Btgt', mod$derived_quants$LABEL), ],
+  SSB_Btgt        = mod$derived_quants[grep('SSB_Btgt', mod$derived_quants$Label), ],
+  SPR_Btgt        = mod$derived_quants[grep('SPR_Btgt', mod$derived_quants$Label), ],
+  Fstd_Btgt       = mod$derived_quants[grep('Fstd_Btgt', mod$derived_quants$Label), ],
+  TotYield_Btgt   = mod$derived_quants[grep('TotYield_Btgt', mod$derived_quants$Label), ],
   Refpt_SPR       = c(NA, NA, NA),
-  SSB_SPRtgt      = mod$derived_quants[grep('SSB_SPRtgt', mod$derived_quants$LABEL), ],
+  SSB_SPRtgt      = mod$derived_quants[grep('SSB_SPRtgt', mod$derived_quants$Label), ],
   SPR_proxy       = c('SPR_proxy', .5, NA),
-  Fstd_SPRtgt     = mod$derived_quants[grep('Fstd_SPRtgt', mod$derived_quants$LABEL), ],
-  TotYield_SPRtgt = mod$derived_quants[grep('TotYield_SPRtgt', mod$derived_quants$LABEL), ],
+  Fstd_SPRtgt     = mod$derived_quants[grep('Fstd_SPRtgt', mod$derived_quants$Label), ],
+  TotYield_SPRtgt = mod$derived_quants[grep('TotYield_SPRtgt', mod$derived_quants$Label), ],
   Refpts_MSY      = c(NA, NA, NA),
-  SSB_MSY         = mod$derived_quants[grep('SSB_MSY', mod$derived_quants$LABEL), ],
-  SPR_MSY         = mod$derived_quants[grep('SPR_MSY', mod$derived_quants$LABEL), ],
-  Fstd_MSY        = mod$derived_quants[grep('Fstd_MSY', mod$derived_quants$LABEL), ],
-  TotYield_MSY    = mod$derived_quants[grep('TotYield_MSY', mod$derived_quants$LABEL), ] )
+  SSB_MSY         = mod$derived_quants[grep('SSB_MSY', mod$derived_quants$Label), ],
+  SPR_MSY         = mod$derived_quants[grep('SPR_MSY', mod$derived_quants$Label), ],
+  Fstd_MSY        = mod$derived_quants[grep('Fstd_MSY', mod$derived_quants$Label), ],
+  TotYield_MSY    = mod$derived_quants[grep('TotYield_MSY', mod$derived_quants$Label), ] )
+  
   Ref_pts         = Ref_pts[, 1:3]
   Ref_pts$Value   = as.numeric(Ref_pts$Value)
   Ref_pts$StdDev  = as.numeric(Ref_pts$StdDev)
@@ -423,7 +425,7 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
   
   Ref_pts$upperCI  = Ref_pts$Value - qnorm(0.025) * Ref_pts$StdDev
 
-  Which = which(Ref_pts$LABEL=="Recr_Unfished")
+  Which = which(Ref_pts$Label=="Recr_Unfished")
   logint  <- sqrt(log(1+(Ref_pts[Which,"StdDev"]/Ref_pts[Which, "Value"])^2))
   Ref_pts[Which, "lowerCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.025)*logint)
   Ref_pts[Which, "upperCI"] <- exp(log(Ref_pts[Which, "Value"]) + qnorm(0.975)*logint)
@@ -527,10 +529,10 @@ align(mngmnt.table) = c('l',
 #==============================================================================
 
 # Extract OFLs for next 10 years for each model
-      OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$LABEL),]
+      OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$Label),]
       OFL_mod1 = OFL_mod1[, 2]    
       
-      ACL_mod1 = mod1$derived_quants[grep('ForeCatch_',mod1$derived_quants$LABEL),]
+      ACL_mod1 = mod1$derived_quants[grep('ForeCatch_',mod1$derived_quants$Label),]
       ACL_mod1 = ACL_mod1[,2]
       
       OFL = as.data.frame(cbind(OFL_mod1, ACL_mod1))
@@ -542,16 +544,16 @@ align(mngmnt.table) = c('l',
       OFL[,3] =  print.numeric(OFL$ACL_mod1, digits = 0)
       
       # Extract biomass/output  
-      SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$LABEL), ]
+      SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$Label), ]
       SpawningB = SpawningB[c(-1, -2), ]
-      Spawn.fore = SpawningB[SpawningB$LABEL >= paste('SPB_', Project_firstyr, sep='') 
-                               & SpawningB$LABEL <= paste('SPB_', Project_lastyr,  sep=''), "Value"]  
+      Spawn.fore = SpawningB[SpawningB$Label >= paste('SPB_', Project_firstyr, sep='') 
+                               & SpawningB$Label <= paste('SPB_', Project_lastyr,  sep=''), "Value"]  
       Spawn.fore = print(Spawn.fore, digits = 0)
       
-      Bratio = mod$derived_quants[grep('Bratio', mod$derived_quants$LABEL), ]
+      Bratio = mod$derived_quants[grep('Bratio', mod$derived_quants$Label), ]
       Bratio = Bratio[c(-1, -2), ]
-      Bratio.fore = Bratio[Bratio$LABEL >= paste('Bratio_', Project_firstyr, sep='') 
-                             & Bratio$LABEL <= paste('Bratio_', Project_lastyr,  sep=''), "Value"]
+      Bratio.fore = Bratio[Bratio$Label >= paste('Bratio_', Project_firstyr, sep='') 
+                             & Bratio$Label <= paste('Bratio_', Project_lastyr,  sep=''), "Value"]
       Bratio.fore = print(Bratio.fore, digits = 3)
       
       Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
@@ -678,7 +680,7 @@ align(mngmnt.table) = c('l',
   base_summary1 = as.data.frame(cbind(OFL, ACL, landings, totdead, mod1_summary))
   #base_summary1 = as.data.frame(cbind(mngmt,mod1_summary))
   
-  # Transpose the dataframe to create the table and create data labels  
+  # Transpose the dataframe to create the table and create data Labels  
   base_summary = as.data.frame(t(base_summary1))
   base_summary$names=c('Landings (mt)',
                        'Total Est. Catch (mt)',

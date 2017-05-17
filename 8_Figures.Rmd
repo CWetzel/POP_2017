@@ -58,7 +58,10 @@
 \FloatBarrier
 
 
-<!--  ![Q-Q plots for the VAST lognormal distribution for the NWFSC slope survey. \label{fig:nw_slope_qq}](Figures/Q-Q_plot_nw_slope.jpg)-->
+![Q-Q plots for the VAST lognormal distribution for the NWFSC slope survey. \label{fig:nw_slope_qq}](Figures/Q-Q_plot_nw_slope_gammaECE.jpg)
+
+\FloatBarrier
+
 ![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](r4ss/plots_mod1/comp_lendat_bubflt7mkt0.png)
 
 \FloatBarrier
@@ -157,7 +160,6 @@
 
 ![Fecundity at length of `r spp` in the `r mod1_label`. \label{fig:fecundity}](r4ss/plots_mod1/bio9_fecundity_len.png)
   
-  
 \FloatBarrier 
 
 
@@ -167,7 +169,11 @@
 
 ![Weight-at-length for `r spp` from all data sources. \label{fig:Wt_len}](Figures/weightAtLengthBySource.png)
 
+\FloatBarrier 
+
 ![Estimated weight-at-length for `r spp` from all data sources. \label{fig:Wt_len_pred}](Figures/weightAtLengthPred.png)
+
+\FloatBarrier 
 
 <!-- ********************************************************************** -->
 <!-- **********************Length-at-Age FIGURES*************************** --> 
@@ -175,19 +181,21 @@
 
 ![Estimated length-at-age for `r spp` from all data sources. \label{fig:Len_Age}](Figures/LengthAgeAll.png)
 
+\FloatBarrier 
+
 <!-- ********************************************************************** -->
 <!-- ****************Aging Precision and Bias FIGURES********************** --> 
 <!-- ********************************************************************** -->
 
 ![The estimated ageing error used in this assessment compared to the ageing error assumed in the previous assessment for `r spp`. \label{fig:Age_Error}](Figures/Ageing_Error.png)
 
-
+\FloatBarrier 
   
 <!-- ***********MODEL 1**************************************************** -->
   
 ```{r, results='asis'}
 # Plot all of the timeseries plots
-for(i in 1:36){ #(dim(LenComp_mod1)[1]-6)) {
+for(i in 1:(dim(LenComp_mod1)[1]-6)) {
   
   # find matches to multi-page plots
   #page_test = sapply(multi_page_fig, grepl, LenComp_mod1$label[i])
@@ -201,7 +209,7 @@ for(i in 1:36){ #(dim(LenComp_mod1)[1]-6)) {
    # if the plot is page2+ of a series, add the extra caption
   #if(TRUE %in% page_test) {
   #  cat('\n![](', LenComp_mod1[i, path_col], ')', sep='')
-  #  
+    
   #  cat('\\begin{center} \n
   #     Figure continued from previous page \n
   #      \\end{center}',sep='')
@@ -315,9 +323,17 @@ for(i in 1:36){ #(dim(LenComp_mod1)[1]-6)) {
 <!-- ********************************************************************** -->
 
 <!-- ***********MODEL 1 Retrospective analysis FIGURE********************** --> 
+
+![Retrospective pattern for spawning output. \label{fig:retro_sb}](Figures/compare1_spawnbio.png)
+
+
   
-  
-  
+\FloatBarrier
+
+
+![Retrospective pattern for estimated recruitment deviations. \label{fig:retro_recdev}](Figures/compare9_recdevs.png)
+
+
   
 \FloatBarrier
 
