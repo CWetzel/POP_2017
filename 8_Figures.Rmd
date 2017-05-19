@@ -124,11 +124,11 @@
 \FloatBarrier
 
 
-![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](r4ss/plots_mod1/comp_lendat_bubflt1mkt2_page2.png)
+![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](r4ss/plots_mod1/comp_lendat_bubflt1mkt2_page4.png)
 
 \FloatBarrier
 
-![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](r4ss/plots_mod1/comp_agedat_bubflt1mkt2.png)
+![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](r4ss/plots_mod1/comp_agedat_bubflt1mkt2_page2.png)
 
 \FloatBarrier
 
@@ -154,11 +154,11 @@
 
 ![The estimated sex ratio of `r spp` at age from all biological data sources. \label{fig:sexratio_Age}](Figures/allSexRatiosAge.png)
 
-![The estimated functional maturity `r spp` at length. \label{fig:mat}](Figures/Functional_Maturity.png)
+![The estimated functional maturity of `r spp` at length. \label{fig:mat}](Figures/Functional_Maturity.png)
 
 ![Comparison between estimated maturity-at-length used in this assessment and maturity-at-age applied in the 2011 assessment of `r spp`. \label{fig:mat_compare}](Figures/Maturity_Comparison.png)
 
-![Fecundity at length of `r spp` in the `r mod1_label`. \label{fig:fecundity}](r4ss/plots_mod1/bio9_fecundity_len.png)
+![Fecundity at length of `r spp` in the `r mod1_label` and a comparison of the fecundity in the 2011 assessment. \label{fig:fecundity}](Figures/Fecundity_Comparison.png)
   
 \FloatBarrier 
 
@@ -191,11 +191,13 @@
 
 \FloatBarrier 
   
-<!-- ***********MODEL 1**************************************************** -->
+<!-- ********************************************************************** -->
+<!-- ****************Length Composition Fits and EffN********************** --> 
+<!-- ********************************************************************** -->
   
 ```{r, results='asis'}
 # Plot all of the timeseries plots
-for(i in 1:(dim(LenComp_mod1)[1]-6)) {
+for(i in 1:(dim(LenComp_mod1)[1])) {
   
   # find matches to multi-page plots
   #page_test = sapply(multi_page_fig, grepl, LenComp_mod1$label[i])
@@ -222,22 +224,67 @@ for(i in 1:(dim(LenComp_mod1)[1]-6)) {
 
 \FloatBarrier
 
-<!--RESEARCH Age and lengh composition figures-->
-  
-  
-  
-  
-
-
-
-\FloatBarrier
-
 <!-- ********************************************************************** -->
 <!-- **********************Age structure FIGURES*************************** --> 
 <!-- ********************************************************************** -->
   
+    
+```{r, results='asis'}
+# Plot all of the timeseries plots
+for(i in 1:(dim(AgeComp_mod1)[1])) {
   
+  # find matches to multi-page plots
+  #page_test = sapply(multi_page_fig, grepl, LenComp_mod1$label[i])
   
+
+  #if(!TRUE %in% page_test)
+  #{
+    cat('\n![', AgeComp_mod1[i,caption_col], ' \\label{fig:mod1_', i, '_',AgeComp_mod1[i, label_col], '}](', AgeComp_mod1[i, path_col], ')\n', sep='')
+  #} 
+  
+   # if the plot is page2+ of a series, add the extra caption
+  #if(TRUE %in% page_test) {
+  #  cat('\n![](', LenComp_mod1[i, path_col], ')', sep='')
+    
+  #  cat('\\begin{center} \n
+  #     Figure continued from previous page \n
+  #      \\end{center}',sep='')
+    
+  #}
+}
+```
+
+  
+<!-- ********************************************************************** -->
+<!-- *************Conditional Age structure FIGURES************************ --> 
+<!-- ********************************************************************** -->
+  
+    
+```{r, results='asis'}
+# Plot all of the timeseries plots
+for(i in 1:(dim(AALComp_mod1)[1])) {
+  
+  # find matches to multi-page plots
+  #page_test = sapply(multi_page_fig, grepl, LenComp_mod1$label[i])
+  
+
+  #if(!TRUE %in% page_test)
+  #{
+    cat('\n![', AALComp_mod1[i,caption_col], ' \\label{fig:mod1_', i, '_',AALComp_mod1[i, label_col], '}](', AALComp_mod1[i, path_col], ')\n', sep='')
+  #} 
+  
+   # if the plot is page2+ of a series, add the extra caption
+  #if(TRUE %in% page_test) {
+  #  cat('\n![](', LenComp_mod1[i, path_col], ')', sep='')
+    
+  #  cat('\\begin{center} \n
+  #     Figure continued from previous page \n
+  #      \\end{center}',sep='')
+    
+  #}
+}
+```
+
   
   
   

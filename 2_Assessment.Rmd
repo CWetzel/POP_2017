@@ -193,7 +193,7 @@ Recommendation:Historical catch reconstruction estimates should be formally revi
 #Assessment
 
 ##General Model Specifications and Assumptions
-Stock Synthesis \hl{v3.30.03.03} was used to estimate the parameters in the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used to investigate and plot model fits. A summary of the data sources used in the model (details discussed above) is shown in Figure \ref{fig:data_plot}.
+Stock Synthesis v3.30.03.05 was used to estimate the parameters in the model. R4SS, revision 1.27.0, along with R version 3.3.2 were used to investigate and plot model fits. A summary of the data sources used in the model (details discussed above) is shown in Figure \ref{fig:data_plot}.
 
 Stock Synthesis has many options when setting up a model and the assessment model for `r spp` was set up in the following manner.
 
@@ -234,7 +234,7 @@ The following distributions were assumed for data fitting. Survey indices were l
 
 
 ###Modeling Software
-The STAT team used Stock Synthesis version \hl{3.30.03.03} by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
+The STAT team used Stock Synthesis version 3.30.03.05 by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
 
 
 ###Priors
@@ -244,7 +244,9 @@ The prior for steepness ($h$) assumes a beta distribution with parameters based 
 
 ###Data Weighting
 
-The base case was weighted such that the various data sources were mostly consistent with each other in terms of the relationship between input and effective sample sizes. Length and age-at-length compositions from the NWFSC shelf-slope survey were fit along with length and marginal age compositions from the fishery fleets. Length data started with a sample size determined from the equation listed in Section \ref{fishery-length-and-age-data} and \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}. Age-at-length data assumed that each age was a random sample within the length bin and started with a sample size equal to the number of fish in that length bin . One extra variability parameter that was added to the input variance was estimated for the Triennial and the NWFSC shelf-slope survey indices. Vessels present in the WCGOP data were bootstrapped to provide uncertainty of the total discards (Table \ref{tab:Discard}).
+The base case was weighted such that the various data sources were mostly consistent with each other in terms of the relationship between input and effective sample sizes. Length and age-at-length compositions from the NWFSC shelf-slope survey were fit along with length and marginal age compositions from the fishery fleets. Length data started with a sample size determined from the equation listed in Section \ref{fishery-length-and-age-data} and \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}. Age-at-length data assumed that each age was a random sample within the length bin and started with a sample size equal to the number of fish in that length bin.  However, the 2016 NWFSC shelf-slope age-at-length data was variable compared to previous years for both males and females relative to all other years with observed fish being smaller at age.  Due to the increased variability within this data year, the effective sample size for this year was reduced to 50% of the number of fish within each length-age bin.  
+
+One extra variability parameter that was added to the input variance was estimated for the Triennial and the NWFSC shelf-slope survey indices. Vessels present in the WCGOP data were bootstrapped to provide uncertainty of the total discards (Table \ref{tab:Discard}).
 
 The base case assessment model was weighted based on the "Francis method", which was based on equation TA1.8 in Francis [-@francis_data_2011]. This formulation looks at the mean length or age and the variance of the mean to determine if across years, the variability is explained by the model. If the variability around the mean does not encompass the model predictions, then that data source should be down-weighted. This method does account for correlation in the data (i.e., the multinomial distribution) as opposed to the McAllister and Ianelli [-@mcallister_bayesian_1997] method of looking at the difference between individual observations and predictions.
 

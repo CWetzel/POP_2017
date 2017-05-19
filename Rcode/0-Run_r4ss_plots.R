@@ -16,18 +16,20 @@
 # document
 rm(list=ls(all=TRUE))
 
+model.num = "11.0"
+
 # What model file to use
-model.file = "Model_2017"
+model.file = "model_2017"
 # Cannot change the name below without changing it throughout the Assessment_template file
 model.plots = "plots_mod1" #paste0("plot_",model.file)
 covar = TRUE
 
 # Give the names of the data and control files, for each model
 # Used in the SS_files_linebreaks.R
-mod1_dat = "data.ss"
+mod1_dat = "2017pop.dat" #"data.ss"
 
 # Control file names 
-mod1_ctrl = "control.ss"
+mod1_ctrl = "2017pop.ctl" #"control.ss"
 
 
 #=====================================================================================
@@ -106,8 +108,9 @@ SS_plots(mod1,
          html = FALSE,
          datplot = TRUE,
          uncertainty = covar,
-         maxrows = 6, 
-         maxcols = 6, 
+         fleetnames = c("Fishery", "At-sea hake", "Foreign", "Pacific ocean perch survey", "Triennial survey", "AFSC slope survey", "NWFSC slope survey", "NWFSC shelf-slope survey"),
+         maxrows = 4, 
+         maxcols = 4, 
          maxrows2 = 4, 
          maxcols2 = 4, 
          printfolder = '',
@@ -141,7 +144,19 @@ file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forE
           paste0(getwd(), "/txt_files"), overwrite = TRUE)
 
 # Copy and move figures from assessment folder
-figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
+figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base/piner_panel.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_like.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/depl_sens1.png"),
+            paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/depl_sens2.png"),
+            paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/ssb_sens1.png"),
+            paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/ssb_sens2.png"),
+            paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare2_spawnbio_uncertainty.png"),
+            paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare4_Bratio_uncertainty.png"),
+            paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare10_recdevs_uncertainty.png"),
+            "C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/Biological/plots/allSexRatiosAge.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthBySource.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
@@ -163,10 +178,8 @@ figures = c("C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Maturity_Comparison.png", 
             "C:/Assessments/POP2017/Data/AgeingError/Ageing_Error.png",
             "C:/Assessments/POP2017/Models/_bridging/bridging.png",
-            "C:/Assessments/POP2017/Models/_Retro/compare1_spawnbio.png",
-            "C:/Assessments/POP2017/Models/_Retro/compare9_recdevs.png",
-            "C:/Assessments/POP2017/Models/_Retro/retro_recdev_squid.png",
-            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png")
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
+            "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png")
 
 for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)

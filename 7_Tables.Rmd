@@ -955,7 +955,7 @@ print(AgeError.table,
   colnames(Model.Setup) = c("Model Specification", "Base Model")
 
   Model.Setup.Table = xtable(Model.Setup, 
-                      caption = c('Specifications of the base model for `r spp`.'),
+                      caption = c(paste0('Specifications of the base model for ', spp, '.')),
                       label = 'tab:Model_setup')
 
 align(Model.Setup.Table) = c('l',
@@ -1233,18 +1233,14 @@ Sens_model1 = read.csv('./txt_files/Sensitivity1.csv')
 colnames(Sens_model1) = c('Label', 
                           'Base',# (Francis weights)', 
                           'Harmonic weights',
-                          'h fixed at prior', 
+                          'Steepness at prior', 
                           'Estimate M', 
-                          'Split Triennial',
-                          'Old Maturity', 
-                          'Old Fecundity', 
-                          'Canadian Data',
-                          'State Data')
+                          'Old Maturity')
 
 # Create sensitivities table
 Sens_model1.table = xtable(Sens_model1, 
                            caption = c('Sensitivity of the base model'),
-                           label = 'tab:Sensitivity_model1',
+                           label = 'tab:Sensitivity1',
                            digits = 2)
 
 
@@ -1264,6 +1260,45 @@ print(Sens_model1.table,
 ```
 <!-- ---------------------------------------------------------------------- -->
  \FloatBarrier 
+ 
+ <!-- ***********MODEL 1 SENSITIVITY TABLE 2******************************* --> 
+```{r, results = 'asis'}
+
+# Read in/organize sensitivity file, change column names, caption
+Sens_model1 = read.csv('./txt_files/Sensitivity2.csv')
+
+colnames(Sens_model1) = c('Label', 
+                          'Base',
+                          'Split Triennial',
+                          'Remove CPUE', 
+                          'Canadian Data', 
+                          'WA Research Lengths', 
+                          'OR Special Projects')
+
+# Create sensitivities table
+Sens_model1.table = xtable(Sens_model1, 
+                           caption = c('Sensitivity of the base model'),
+                           label = 'tab:Sensitivity2',
+                           digits = 2)
+
+
+# Add alignment - this uses centered aligment of .6 inches for all columns 2+,
+# You can change this easily to have variable columns width after you know how many
+# colunns your final table has
+align(Sens_model1.table) = c('l', 'l', rep('>{\\centering}p{.6in}', dim(Sens_model1)[2]-1))
+
+
+# Print model 1 sensitivity table
+print(Sens_model1.table, 
+      include.rownames = FALSE,             
+      caption.placement = 'top',
+      floating.environment = 'sidewaystable',
+      scalebox = .9)
+
+```
+<!-- ---------------------------------------------------------------------- -->
+ \FloatBarrier 
+
   
 \newpage
 <!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 
