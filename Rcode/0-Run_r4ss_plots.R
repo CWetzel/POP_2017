@@ -101,6 +101,7 @@ save.image('./r4ss/SS_output.RData')
 # output directories
 #out.dir.mod1 = file.path(output.dir,'plots_mod1')
 out.dir.mod1 = file.path(output.dir,model.plots)
+fleets = c("Fishery", "At-sea hake", "Foreign", "Pacific ocean perch survey", "Triennial survey", "AFSC slope survey", "NWFSC slope survey", "NWFSC shelf-slope survey")
 
 # Model 1
 SS_plots(mod1,
@@ -108,7 +109,7 @@ SS_plots(mod1,
          html = FALSE,
          datplot = TRUE,
          uncertainty = covar,
-         fleetnames = c("Fishery", "At-sea hake", "Foreign", "Pacific ocean perch survey", "Triennial survey", "AFSC slope survey", "NWFSC slope survey", "NWFSC shelf-slope survey"),
+         fleetnames = fleets,
          maxrows = 4, 
          maxcols = 4, 
          maxrows2 = 4, 
@@ -116,6 +117,99 @@ SS_plots(mod1,
          printfolder = '',
          bub.scale.dat= 7,
          dir = out.dir.mod1)
+
+# Create specialized plots
+pngfun <- function(file,w=7,h=7,pt=12){
+  file <- file.path(out.dir.mod1, file)
+  cat('writing PNG to',file,'\n')
+  png(filename=file,
+      width=w,height=h,
+      units='in',res=300,pointsize=pt)
+}
+
+pngfun('POP_index_data.png',h=8.5)
+par(mfrow=c(3,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(a in 1:6){
+  f = c(1, 4:8)[a]
+  SSplotIndices(mod1,fleets=f,subplot=1,datplot=TRUE,fleetnames=fleets)
+}
+mtext(side=1,line=1,outer=TRUE,'Year')
+mtext(side=2,line=1,outer=TRUE,'Index')
+dev.off()
+
+# index fits
+pngfun('POP_index_fits.png',h=8.5)
+par(mfrow=c(3,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(a in 1:6){
+  f = c(1, 4:8)[a]
+  SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
+}
+mtext(side=1,line=1,outer=TRUE,'Year')
+mtext(side=2,line=1,outer=TRUE,'Index')
+dev.off()
+
+# discard fits
+pngfun('POP_discard_fits.png')
+par(mfcol=c(1,1),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(f in 1:1){
+  SSplotDiscard(mod1, fleets=f,subplot=2,fleetnames=fleets)
+}
+mtext(side=1,line=1,outer=TRUE,'Year')
+mtext(side=2,line=1,outer=TRUE,'Discard fraction')
+dev.off()
+
+### biology stuff
+# see function maturity/SST_maturity_notes.R
+pngfun('POP_weight_vs_fecundity.png',h=5,w=6.5)
+par(mar=c(5,4,1,1))
+plot(0, type='n', ylim=c(0,2.1),xlim=c(10,50),xaxs='r',axes=FALSE,
+     xlab='Length (cm)',ylab="Weight or  Fecundity x Maturity")
+abline(h=0,col='grey')
+lines(mod1$biology$Mean_Size, mod1$biology$Wt_len_F,
+      type='o', lwd=3, pch=16, col=1)
+lines(mod1$biology$Mean_Size, mod1$biology$Spawn,
+      type='o', lwd=3, pch=16, col=2, lty=2, ylim=c(0,3),xlim=c(0,50))
+legend('topleft',lwd=3,pch=16,col=1:2,c("Weight","Fecundity x Maturity"),lty=1:2, bty = 'n')
+axis(1)
+axis(2)
+box()
+dev.off()
+
+test <- SSplotSelex(mod1, fleets=1:3, fleetnames=fleets, subplot=1)
+test$infotable$col <- rich.colors.short(5)[c(1:3)]
+test2 <- SSplotSelex(mod1, fleets=4:8, fleetnames=fleets, subplot=1)
+
+pngfun("POP_selectivity.png")
+par(mfrow=c(2,1),mar=c(2,4,3,1))
+SSplotSelex(mod1,fleets=1:3,infotable=test$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
+grid()
+par(mar=c(4,4,1,1))
+SSplotSelex(mod1,fleets=4:8,infotable=test2$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
+grid()
+dev.off()
+
+
+ret = mod1$sizeselex[mod1$sizeselex$Fleet == 1, ]
+ret = ret[ret$Factor == "Ret", ]
+col.vec = c("red", "blue", "orange2", "green", "purple", "darkgrey")
+
+pngfun("POP_retention.png")
+plot(5.5:50.5, ret[1, 6:dim(ret)[2]], col = col.vec[1], type = 'l', ylab = "Retention", xlab = "Length (cm)", lwd = 2)
+points(5.5:50.5, ret[1, 6:dim(ret)[2]], pch = 1, col = col.vec[1])
+lines(5.5:50.5, ret[5, 6:dim(ret)[2]], col = col.vec[2], lty = 1, lwd = 2)
+points(5.5:50.5, ret[5, 6:dim(ret)[2]], pch = 2, col = col.vec[2])
+lines(5.5:50.5, ret[10, 6:dim(ret)[2]], col = col.vec[3], lty = 1, lwd = 2)
+points(5.5:50.5, ret[10, 6:dim(ret)[2]], pch = 3, col = col.vec[3])
+lines(5.5:50.5, ret[14, 6:dim(ret)[2]], col = col.vec[4], lty = 1, lwd = 2)
+points(5.5:50.5, ret[14, 6:dim(ret)[2]], pch = 4, col = col.vec[4])
+lines(5.5:50.5, ret[15, 6:dim(ret)[2]], col = col.vec[5], lty = 1, lwd = 2)
+points(5.5:50.5, ret[15, 6:dim(ret)[2]], pch = 5, col = col.vec[5])
+lines(5.5:50.5, ret[20, 6:dim(ret)[2]], col = col.vec[6], lty = 1, lwd = 2)
+points(5.5:50.5, ret[20, 6:dim(ret)[2]], pch = 6, col = col.vec[6])
+legend ("topleft", legend = c("1918-1991", "1992-2001", "2002-2007", "2008", "2009-2010", "2011-2017"),
+        col = col.vec, pch = 1:6,lty = 1, lwd = 2, bty = 'n')
+grid()
+dev.off()
 
 
 # -----------------------------------------------------------------------------
