@@ -200,7 +200,7 @@ Stock Synthesis has many options when setting up a model and the assessment mode
 ###Changes between the 2011 assessment model and current model
 The current model for `r spp` has many made many similar assumptions to the 2011 assessment but differs in some key ways.  This assessment disaggrated the fleets into a trawl/other gear, at-sea hake, historical foreign fleet, and research fleets.  The previous assessment implemented a single fleet where removal from all sources were aggregated together.  The seperating of fleets applied in this assessment allowed for differing assumptions regarding current and historical discarding practices.  Although there are no compositional data available from the foreign fleet, it is assumed that very little discarding to no discarding of fish occured.  Additionally, the at-sea hake fishery removals are represent both discarded and retained fish and hence an additional discard rate would not be appropriate.  Similar logic was applied in regard to survey and research removals.  
 
-The historical landing used in the model differs from those used in 2011.  The assessment includes the first state provided historical reconstruction landings for Washington state.  The historical reconstruction provided `r spp` landing within Washington state starting in 1916 and have significantly larger removals in the 1940s relative to those used in 2011.  Given the increase in historical removals prior to 1940, the 2011 model starting year, the starting year for modeling the stock was revised to 1918, the first year `r spp` landings exceeded 1 mt, for this assessment.  Explorations were conducted relative to the model starting year and no differences were found between the 1918 start year compared to starting the model in 1892, the first record of `r spp` landings between California, Oregon, and Washington catch data.
+The historical landing used in the model differs from those used in 2011.  The assessment includes the first state provided historical reconstruction landings for Washington state.  The historical reconstruction provided `r spp` landing within Washington state starting in 1916 and have larger removals in the 1940s relative to those used in 2011 \ref{fig:Catch_Comparison}.  Given the increase in historical removals prior to 1940, the 2011 model starting year, the starting year for modeling the stock was revised to 1918, the first year `r spp` landings exceeded 1 mt, for this assessment.  Explorations were conducted relative to the model starting year and no differences were found between the 1918 start year compared to starting the model in 1892, the first record of `r spp` landings between California, Oregon, and Washington catch data.
 
 Selectivity in this model is assumed to be length-based and is modeled using double-normal for all fleets, expect the `r spp` survey which retained the previous assessment assumption of logistic selectivity. The previous assessment mirrored selectivity amont the `r spp` and both slope surveys (AFSC and NWFSC).  This assessment allow for survey specific estimated double-normal selectivity.
 
@@ -234,7 +234,7 @@ The following distributions were assumed for data fitting. Survey indices were l
 
 
 ###Modeling Software
-The STAT team used Stock Synthesis version 3.30.03.05 by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.
+The STAT team used Stock Synthesis version 3.30.03.05 by Dr. Richard Methot at the NWFSC [@methot_stock_2013]. This most recent version was used, since it included improvements and corrections to older versions.  The previous assessment of `r spp` also used Stock Synthesis but a earlier version, 3.24, model bridging was performed between both version of Stock Synthesis and are shown in Figure \ref{fig:bridge}.
 
 
 ###Priors
@@ -277,6 +277,7 @@ This assessment estimated discards in the model, so time was spent investigating
 
 Natural mortality was also investigated and a new prior was developed assuming a maximum age of 100 years for females and males. The previous assessment estimated male natural mortality as an offset from female natural mortality which was fixed at the median of the 2011 prior.  This assessment attempted to estimate natural mortality for both sexes using the 2017 updated prior, but there was little to no information on natural mortality within the data and hence opted to fix the value for females.  Upon additional exploration, the model estimated very little difference in male natural mortality relative to females (< 0.002) and in the interest of selecting the model that fit the data with the fewest parameters required, males were fixed equal to the female natural mortality.
 
+Finally, multiple models were investigated where steepness either estimated, fixed at the prior, or at an alternate value. The assessment in 2011 determined that there was sufficient information concerning steepness where the parameter was estimated and then fixed at 0.40.  Based upon likelihood profiles performed on the current assessment, there was no longer support for a steepness value of 0.40 and the likelihood profile was flat across various levels of steepness with a very small improvement in likelihood (<0.50 log likelihood units) at the lowest steepness values. Estimating steepness starting at the median of the "type C" prior, the meta-analysis prior evaluated omitting information from `r spp`,  of 0.76 resulted in very little if any movement from the median value due to the flat likelihood surface across values for this parameter with final relative stock status for 2017 being estimated to > 100% of unfished biomass.  Fixing steepness at the median of the prior of 0.72 resulted in relative stock status estimates for 2017 at 98.6% of unfished biomass. It was determined that the resulting stock status estimates when steepness was fixed at the meta-analysis prior were overly optomistic and unrealistic given the biology and historical exploitation of `r spp`.   
 
 ###Convergence
 Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. This was repeated 100 times and a better minimum was not found (Table \ref{tab:jitter}). The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained above and likelihood profiles, we are confident that the base case as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian.  
@@ -324,6 +325,7 @@ Proper convergence was determined by starting the minimization process from disp
 
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:model_params} and the likelihood components are shown in Table \ref{tab:like}. Estimates of key derived parameters and approximate 95% asymptotic confidence intervals are shown in Table \ref{tab:Ref_pts}.
 
+###Parameter Estimates
 
 
 
@@ -333,6 +335,10 @@ Table \ref{tab:Sensitivity_model1}
 
 
 ###Retrospective Analysis
+
+A 5-year retrospective analysis was conducted by running the model using data only through 2011, 2012, 2013, 2014, and 2015, progressively (Figure \ref{fig:retro_sb} and \ref{fig:retro_recdev}). The initial scale of the spawning population was basically unchanged for all of these retrospectives. The estimation of the 2008 recruitment deviation decreased as more data was removed.  Overall, no alarming trends were present in the retrospective analysis.
+
+A look at past assessments shows that the prediction of spawning biomass has generally increased with each assessment (Figure 78). This assessment (2015) predicts the largest spawning biomass. All assessments show similar trends.
  
 
 ###Likelihood Profiles

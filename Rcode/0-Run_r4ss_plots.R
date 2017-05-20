@@ -156,6 +156,7 @@ figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.
             paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare2_spawnbio_uncertainty.png"),
             paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare4_Bratio_uncertainty.png"),
             paste0("C:/Assessments/POP2017/Models/_Retro/", model.num, "/compare10_recdevs_uncertainty.png"),
+            "C:/Assessments/POP2017/Models/_bridging/bridging.png",
             "C:/Assessments/POP2017/Data/Biological/plots/allSexRatios.png",
             "C:/Assessments/POP2017/Data/Biological/plots/allSexRatiosAge.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthBySource.png",
@@ -179,7 +180,8 @@ figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.
             "C:/Assessments/POP2017/Data/AgeingError/Ageing_Error.png",
             "C:/Assessments/POP2017/Models/_bridging/bridging.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
-            "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png")
+            "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png",
+            "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png")
 
 for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)

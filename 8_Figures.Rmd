@@ -190,6 +190,23 @@
 ![The estimated ageing error used in this assessment compared to the ageing error assumed in the previous assessment for `r spp`. \label{fig:Age_Error}](Figures/Ageing_Error.png)
 
 \FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- **********************Catch Comparison******************************** --> 
+<!-- ********************************************************************** -->
+
+![Comparison of the catches assumed by this assessment and the previous assessment for `r spp`. \label{fig:Catch_Compare}](Figures/Catch_Comparison.png)
+
+\FloatBarrier 
+
+
+<!-- ********************************************************************** -->
+<!-- *********************Model Bridging Figure**************************** --> 
+<!-- ********************************************************************** -->
+
+![Comparison of estimates from Stock Synthesis version 3.30 and 3.24 for `r spp`. \label{fig:bridge}](Figures/bridging.png)
+
+\FloatBarrier 
   
 <!-- ********************************************************************** -->
 <!-- ****************Length Composition Fits and EffN********************** --> 

@@ -1575,10 +1575,10 @@ the assessment.}
 \subsection{General Model Specifications and
 Assumptions}\label{general-model-specifications-and-assumptions}
 
-Stock Synthesis \hl{v3.30.03.03} was used to estimate the parameters in
-the model. R4SS, revision 1.26.0, along with R version 3.3.2 were used
-to investigate and plot model fits. A summary of the data sources used
-in the model (details discussed above) is shown in Figure
+Stock Synthesis v3.30.03.05 was used to estimate the parameters in the
+model. R4SS, revision 1.27.0, along with R version 3.3.2 were used to
+investigate and plot model fits. A summary of the data sources used in
+the model (details discussed above) is shown in Figure
 \ref{fig:data_plot}.
 
 Stock Synthesis has many options when setting up a model and the
@@ -1606,15 +1606,15 @@ The historical landing used in the model differs from those used in
 2011. The assessment includes the first state provided historical
 reconstruction landings for Washington state. The historical
 reconstruction provided Pacific ocean perch landing within Washington
-state starting in 1916 and have significantly larger removals in the
-1940s relative to those used in 2011. Given the increase in historical
-removals prior to 1940, the 2011 model starting year, the starting year
-for modeling the stock was revised to 1918, the first year Pacific ocean
-perch landings exceeded 1 mt, for this assessment. Explorations were
-conducted relative to the model starting year and no differences were
-found between the 1918 start year compared to starting the model in
-1892, the first record of Pacific ocean perch landings between
-California, Oregon, and Washington catch data.
+state starting in 1916 and have larger removals in the 1940s relative to
+those used in 2011 \ref{fig:Catch_Comparison}. Given the increase in
+historical removals prior to 1940, the 2011 model starting year, the
+starting year for modeling the stock was revised to 1918, the first year
+Pacific ocean perch landings exceeded 1 mt, for this assessment.
+Explorations were conducted relative to the model starting year and no
+differences were found between the 1918 start year compared to starting
+the model in 1892, the first record of Pacific ocean perch landings
+between California, Oregon, and Washington catch data.
 
 Selectivity in this model is assumed to be length-based and is modeled
 using double-normal for all fleets, expect the Pacific ocean perch
@@ -1748,11 +1748,14 @@ indices were lognormal, total discards were lognormal.
 
 \subsubsection{Modeling Software}\label{modeling-software}
 
-The STAT team used Stock Synthesis version \hl{3.30.03.03} by
-Dr.~Richard Methot at the NWFSC (Methot and Wetzel
+The STAT team used Stock Synthesis version 3.30.03.05 by Dr.~Richard
+Methot at the NWFSC (Methot and Wetzel
 \protect\hyperlink{ref-methot_stock_2013}{2013}). This most recent
 version was used, since it included improvements and corrections to
-older versions.
+older versions. The previous assessment of Pacific ocean perch also used
+Stock Synthesis but a earlier version, 3.24, model bridging was
+performed between both version of Stock Synthesis and are shown in
+Figure \ref{fig:bridge}.
 
 \subsubsection{Priors}\label{priors}
 
@@ -1789,10 +1792,17 @@ with a sample size determined from the equation listed in Section
 \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 Age-at-length data assumed that each age was a random sample within the
 length bin and started with a sample size equal to the number of fish in
-that length bin . One extra variability parameter that was added to the
-input variance was estimated for the Triennial and the NWFSC shelf-slope
-survey indices. Vessels present in the WCGOP data were bootstrapped to
-provide uncertainty of the total discards (Table \ref{tab:Discard}).
+that length bin. However, the 2016 NWFSC shelf-slope age-at-length data
+was variable compared to previous years for both males and females
+relative to all other years with observed fish being smaller at age. Due
+to the increased variability within this data year, the effective sample
+size for this year was reduced to 50\% of the number of fish within each
+length-age bin.
+
+One extra variability parameter that was added to the input variance was
+estimated for the Triennial and the NWFSC shelf-slope survey indices.
+Vessels present in the WCGOP data were bootstrapped to provide
+uncertainty of the total discards (Table \ref{tab:Discard}).
 
 The base case assessment model was weighted based on the ``Francis
 method'', which was based on equation TA1.8 in Francis
@@ -1902,6 +1912,27 @@ difference in male natural mortality relative to females (\textless{}
 the fewest parameters required, males were fixed equal to the female
 natural mortality.
 
+Finally, multiple models were investigated where steepness either
+estimated, fixed at the prior, or at an alternate value. The assessment
+in 2011 determined that there was sufficient information concerning
+steepness where the parameter was estimated and then fixed at 0.40.
+Based upon likelihood profiles performed on the current assessment,
+there was no longer support for a steepness value of 0.40 and the
+likelihood profile was flat across various levels of steepness with a
+very small improvement in likelihood (\textless{}0.50 log likelihood
+units) at the lowest steepness values. Estimating steepness starting at
+the median of the ``type C'' prior, the meta-analysis prior evaluated
+omitting information from Pacific ocean perch, of 0.76 resulted in very
+little if any movement from the median value due to the flat likelihood
+surface across values for this parameter with final relative stock
+status for 2017 being estimated to \textgreater{} 100\% of unfished
+biomass. Fixing steepness at the median of the prior of 0.72 resulted in
+relative stock status estimates for 2017 at 98.6\% of unfished biomass.
+It was determined that the resulting stock status estimates when
+steepness was fixed at the meta-analysis prior were overly optomistic
+and unrealistic given the biology and historical exploitation of Pacific
+ocean perch.
+
 \subsubsection{Convergence}\label{convergence}
 
 Proper convergence was determined by starting the minimization process
@@ -1961,12 +1992,27 @@ likelihood components are shown in Table \ref{tab:like}. Estimates of
 key derived parameters and approximate 95\% asymptotic confidence
 intervals are shown in Table \ref{tab:Ref_pts}.
 
+\subsubsection{Parameter Estimates}\label{parameter-estimates}
+
 \subsubsection{Uncertainty and Sensitivity
 Analyses}\label{uncertainty-and-sensitivity-analyses}
 
 Table \ref{tab:Sensitivity_model1}
 
 \subsubsection{Retrospective Analysis}\label{retrospective-analysis}
+
+A 5-year retrospective analysis was conducted by running the model using
+data only through 2011, 2012, 2013, 2014, and 2015, progressively
+(Figure \ref{fig:retro_sb} and \ref{fig:retro_recdev}). The initial
+scale of the spawning population was basically unchanged for all of
+these retrospectives. The estimation of the 2008 recruitment deviation
+decreased as more data was removed. Overall, no alarming trends were
+present in the retrospective analysis.
+
+A look at past assessments shows that the prediction of spawning biomass
+has generally increased with each assessment (Figure 78). This
+assessment (2015) predicts the largest spawning biomass. All assessments
+show similar trends.
 
 \subsubsection{Likelihood Profiles}\label{likelihood-profiles}
 
@@ -3604,7 +3650,8 @@ ocean perch. \label{fig:mat_compare}}
 \begin{figure}
 \centering
 \includegraphics{Figures/Fecundity_Comparison.png}
-\caption{Fecundity at length of Pacific ocean perch in the Base model.
+\caption{Fecundity at length of Pacific ocean perch in the Base model
+and a comparison of the fecundity in the 2011 assessment.
 \label{fig:fecundity}}
 \end{figure}
 
@@ -3643,6 +3690,24 @@ sources. \label{fig:Len_Age}}
 \caption{The estimated ageing error used in this assessment compared to
 the ageing error assumed in the previous assessment for Pacific ocean
 perch. \label{fig:Age_Error}}
+\end{figure}
+
+\FloatBarrier 
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Catch_Comparison.png}
+\caption{Comparison of the catches assumed by this assessment and the
+previous assessment for Pacific ocean perch. \label{fig:Catch_Compare}}
+\end{figure}
+
+\FloatBarrier 
+
+\begin{figure}
+\centering
+\includegraphics{Figures/bridging.png}
+\caption{Comparison of estimates from Stock Synthesis version 3.30 and
+3.24 for Pacific ocean perch. \label{fig:bridge}}
 \end{figure}
 
 \FloatBarrier 
