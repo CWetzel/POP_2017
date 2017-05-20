@@ -275,6 +275,7 @@ figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.
             "C:/Assessments/POP2017/Models/_bridging/bridging.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data.png",
             "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png")
 
 for (i in 1:length(figures)){

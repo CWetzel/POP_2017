@@ -43,7 +43,7 @@
 <!-- ****************Length and Age Composition FIGURES******************** --> 
 <!-- ********************************************************************** -->
 
-![Fishery-dependent and fishery-independent indices for `r spp`. \label{fig:indices}](r4ss/plots_mod1/POP_index_data.png)
+![Fishery-dependent and fishery-independent indices for `r spp`. \label{fig:indices}](Figures/Index_Data.png)
 
 \FloatBarrier
 
