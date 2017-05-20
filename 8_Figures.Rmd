@@ -195,6 +195,14 @@
 
 \FloatBarrier 
 
+<!-- ====================================================================== -->
+<!-- ******************                           ************************* -->
+<!-- ******************END BIOLOGICAL DATA FIGURES************************* --> 
+<!-- ******************                           ************************* -->
+<!-- ====================================================================== -->
+
+
+
 <!-- ********************************************************************** -->
 <!-- **********************Catch Comparison******************************** --> 
 <!-- ********************************************************************** -->
@@ -211,6 +219,13 @@
 ![Comparison of estimates from Stock Synthesis version 3.30 and 3.24 for `r spp`. \label{fig:bridge}](Figures/bridging.png)
 
 \FloatBarrier 
+
+<!-- ====================================================================== -->
+<!-- *********************BASE MODEL FIGURES******************************* -->
+<!-- ====================================================================== -->
+  
+<!-- ***********MODEL 1 BASE MODEL FIGURES********************************* --> 
+
 
 <!-- ********************************************************************** -->
 <!-- *******************Estimated Length-at-Age**************************** --> 
@@ -246,6 +261,25 @@
 
 \FloatBarrier 
 
+<!-- ====================================================================== -->
+<!-- ********************Time-Series Figures******************************* -->
+<!-- ====================================================================== -->
+  
+![Estimated time-series of spawning output for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of relative biomass for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of recruitment for `r spp`. \label{fig:recuits}](r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of recruitment deviations for `r spp`. \label{fig:recdevs}](r4ss/plots_mod1/recdevs2_withbars.png)
+  
+\FloatBarrier
   
 <!-- ********************************************************************** -->
 <!-- ****************Length Composition Fits and EffN********************** --> 
@@ -340,82 +374,32 @@ for(i in 1:(dim(AALComp_mod1)[1])) {
   #}
 }
 ```
-
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-<!-- ====================================================================== -->
-<!-- ******************                           ************************* -->
-<!-- ******************END BIOLOGICAL DATA FIGURES************************* --> 
-<!-- ******************                           ************************* -->
-<!-- ====================================================================== -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
 \FloatBarrier
+  
+  
 
-<!-- ********************************************************************** -->
-<!-- ***********History of modelleing approaches FIGURES******************* --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-  
-<!-- ********************************************************************** -->
-<!-- ****************STAR PANEL Recommendations FIGURES******************** --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-  
-<!-- ********************************************************************** -->
-<!-- ****************Model description section FIGURES********************* --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-\FloatBarrier
-
-<!-- ====================================================================== -->
-<!-- *********************BASE MODEL FIGURES******************************* -->
-<!-- ====================================================================== -->
-  
-<!-- ***********MODEL 1 BASE MODEL FIGURES********************************* --> 
-  
-  
-\FloatBarrier
-
-
-  
-  
-  
-  
 <!-- ********************************************************************** -->
 <!-- ****************Uncertainty and Sensitivity FIGURES******************* -->
 <!-- ********************************************************************** -->
   
 <!-- ***********MODEL 1 Uncertainty and Sensitivity FIGURES**************** --> 
   
-  
+![Time-series of spawning output for model sensitivities for `r spp`. \label{fig:sens1_ssb}](Figures/ssb_sens1.png)
+
+\FloatBarrier
+
+![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens1_depl}](Figures/depl_sens1.png)
+
+\FloatBarrier
+
+![Time-series of spawning output for model sensitivities for `r spp`. \label{fig:sens2_ssb}](Figures/ssb_sens2.png)
+
+\FloatBarrier
+
+![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
+
+\FloatBarrier
   
   
   
