@@ -300,13 +300,10 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 # Create recruitment tables
 
 # Model 1 table
-Recruit_mod1.table = xtable(Recruit_All, #Recruittab_mod1, 
-                            caption = c(paste('Recent estimated trend in recruitment with approximate 95% 
+Recruit_mod1.table = xtable(Recruit_All, 
+                            caption = c(paste('Recent estimated trend in recruitment with approximate 95/% 
                                         confidence intervals determined from the base model', sep='')),
-                            #caption = c('Recent estimated trend in recruitment with approximate 95% 
-                            #            confidence intervals determined from the base model'),
-                            label = 'tab:Recruit_mod1')#, 
-                            #digits = 0)   
+                            label = 'tab:Recruit_mod1')
 
 align(Recruit_mod1.table) = c('l',
                               '>{\\centering}p{.8in}',
@@ -614,9 +611,9 @@ align(mngmnt.table) = c('l',
         addtorow$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
                                & \\multicolumn{2}{c}{\\textbf{States of nature}} 
                                & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low M 0.05} 
-                               & \\multicolumn{2}{c}{Base M 0.07} 
-                               &  \\multicolumn{2}{c}{High M 0.09} \\\\\n')
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low State of Nature} 
+                               & \\multicolumn{2}{c}{Base State of Nature} 
+                               &  \\multicolumn{2}{c}{High State of Nature} \\\\\n')
 
 
 #=============================================================================

@@ -7,7 +7,7 @@ through `r LastYR`.  `r spp` are most abundant in the Gulf of Alaska and have ob
 
 
 ##Landings{-}
-The first year that harvest of `r spp` exceeded 1 mt off the US West Coast first occured in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primarly occured in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreing vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally decined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year.  `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.  Since 2000, catches of `r spp` have ranged between 269 - 60 mt, with catches in 2016 totaling 67 mt.
+The first year that harvest of `r spp` exceeded 1 mt off the US West Coast first occurred in 1929.  Catches ramped up in the 1940s with large removals in Washington waters.  During the 1950s the removals primary occurred in Oregon waters with catches from Washington declining following the 1940s. The largest removals in 1966-1968 were largely a result of harvest by foreign vessels.  The fishery proceed with more moderate removals ranging between 1,200 to 2,600 metric  tons per year between 1969 to 1980. Removals generally declined from 1981 to 1994 to between 1,000 and 1,700 metric tons per year.  `r spp` was declared overfished in 1999 resulting in large reduction in harvest in recent years since the declaration.  Since 2000, catches of `r spp` have ranged between 269 - 60 mt, with catches in 2016 totaling 67 mt.
 
 `r spp` are a desirable market species and discarding has historically been low.  However, management restrictions (e.g. trip limits) have resulted in increased discarding since the early 1990s.  During the 2000s discarding increased for `r spp` due to harvest restrictions imposed to allow rebuilding, with estimated discard rates from the bottom trawl fishery peaking in 2009 and 2010, prior to implementation of catch shares in 2011.  Since 2011, discarding of `r spp` has been estimated to be less than 4% given observer data.
 
@@ -45,7 +45,7 @@ This a new full assessment for `r spp` which was last assessed in 2011.  In this
 
 All of the sources of data for `r spp` have been re-evaluated for 2017, excluding the historical fishery catch-per-unit time series. Changes of varying degrees have occurred in the data from those used in previous assessments. These current data represent the best available scientific information. The landings history has been updated and extended back to 1918, harvest was negligible before that year. Survey data from the Alaska and Northwest Fisheries Science Centers have been used to construct series of indices using a spatial temporal delta GLMM model as well as length, age and conditional age-at length compositions consistent with the stratifications used for constructing the indices.
 
-The definition of fishing fleets have been changed from those in the 2011 assessment.  Three fishing fleets were specified within the model: 1) a combined bottom trawl, mid-water trawl and fixed gear fleet where only a small fraction of `r spp` occuring by fixed gear, 2) the historical foreign fleet, and 3) the at-sea hake fishery.  The fleet grouping were based on discarding practices.  The trawl fishery estimated a retention curve based upon discarding data and known management restrictions.  However, very little if any discarding is assumed to have occured by the foreign fleet and the catch reported by the at-sea hake fishery accounts for both discarded and landed fish and hence, no additional mortality was estimated for each of these fleets.  
+The definition of fishing fleets have been changed from those in the 2011 assessment.  Three fishing fleets were specified within the model: 1) a combined bottom trawl, mid-water trawl and fixed gear fleet where only a small fraction of `r spp` occurring by fixed gear, 2) the historical foreign fleet, and 3) the at-sea hake fishery.  The fleet grouping were based on discarding practices.  The trawl fishery estimated a retention curve based upon discarding data and known management restrictions.  However, very little if any discarding is assumed to have occurred by the foreign fleet and the catch reported by the at-sea hake fishery accounts for both discarded and landed fish and hence, no additional mortality was estimated for each of these fleets.  
 
 The assessment uses landings data and discard-fraction estimates; catch-per-unit-of-effort and survey indices; length or age composition data for each year and fishery or survey (with conditional age at length compositional data for the NWFSC shelf-slope survey); information on weight-at-age, maturity-at-age, and fecundity-at-age; priors on natural mortality and the steepness of the Beverton-Holt stock-recruitment relationship; and estimates of ageing error. Recruitment at "equilibrium biomass", length-based selectivity of the fishery and surveys, retention of the fishery, catchability of the surveys, growth, the time series of biomass, age and size structure, and current and projected future stock status are outputs of the model. Natural mortality and steepness were fixed in the final model. This was done due to relatively flat likelihood surfaces, such that fixing parameters and then varying them was deemed the best way to characterize uncertainty.
 
@@ -61,7 +61,7 @@ A reference case was selected which adequately captures the central tendency for
 
 
 ##Stock Biomass{-}
-The predicted spawning biomass from the base model generally showed a slight decline over the time series until 1966 when the foreign fleet began. A short, but sharp decline occurred, followed by a period of the stock biomass stabilizing or with a minimimal decline until the late 1990s. The stock showed increases in stock size following the year 2000 when a combination of strong recruitment and low catches resulted. The `r LastYR` spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished spawning biomass at `r LastYR` is `r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`)%. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning biomass is high.
+The predicted spawning biomass from the base model generally showed a slight decline over the time series until 1966 when the foreign fleet began. A short, but sharp decline occurred, followed by a period of the stock biomass stabilizing or with a minimal decline until the late 1990s. The stock showed increases in stock size following the year 2000 when a combination of strong recruitment and low catches resulted. The `r LastYR` spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished spawning biomass at `r LastYR` is `r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`)%. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning biomass is high.
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 ```{r, results='asis'}
@@ -96,7 +96,7 @@ Recruitment deviations were estimated for the entire time-series modeled. There 
    recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
 ```
 
-![Time series of estimated `r spp` recruitments for the base-case model with 95\% confidence or credibility intervals. \label{fig:Recruits_all}](`r recruit.file`)
+![Time series of estimated `r spp` recruitments for the base-case model with 95% confidence or credibility intervals. \label{fig:Recruits_all}](`r recruit.file`)
 
 ```{r, results='asis'}
    print(Recruit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
@@ -109,7 +109,7 @@ Recruitment deviations were estimated for the entire time-series modeled. There 
 
 
 ##Exploitation status{-}
-The spawning biomass of `r spp` reached a low in `r low.ssb`.  Catches for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative biomass was possibly below the overfished level in the early 2000s, but has likely remained above that level otherwise, and currently is significantly greater than the 40% unfished spawning biomass target. Throughout the late 1960s and 1970s the exploitation rate and $(1-SPR)/(1-SPR_{50\%})$ were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
+The spawning biomass of `r spp` reached a low in `r low.ssb`.  Catches for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative biomass was possibly below the overfished level in the early 2000s, but has likely remained above that level otherwise, and currently is significantly greater than the 40% unfished spawning biomass target. Throughout the late 1960s and 1970s the exploitation rate and (1-SPR)/(1-SPR\textsubscript{50\%}) were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY EXPLOITATION AND******************* -->
@@ -130,7 +130,7 @@ The spawning biomass of `r spp` reached a low in `r low.ssb`.  Catches for `r sp
 
 ![Phase plot of estimated relative (1-SPR)/(1-SPR50%) vs. relative spawning biomass for the base case model. Relative biomass is the annual spawning biomass divided by the unfished spawning biomass. \label{fig:Phase_all}](`r Phase.file`)
 
-
+\FloatBarrier
 
 
 ##Ecosystem Considerations{-}
@@ -159,7 +159,7 @@ This stock assessment estimates that `r spp` in the `r mod1_label` are `r ifelse
 
 
 ##Management Performance{-}
-Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the 1960s and 1970s and spawning biomass is predicted to have fallen below the proxy management target of 40%. Exploitation rates subsequently declined to rates at or below the management target in the 1980s.  Managment restrictions imposed in the 1990s further reduced exploitation rates. An overfished declaration for `r spp` resulted in very low exploitation rates since 2001 with the ACLs being set far below the OFL and ABC values.
+Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the 1960s and 1970s and spawning biomass is predicted to have fallen below the proxy management target of 40%. Exploitation rates subsequently declined to rates at or below the management target in the 1980s.  Management restrictions imposed in the 1990s further reduced exploitation rates. An overfished declaration for `r spp` resulted in very low exploitation rates since 2001 with the ACLs being set far below the OFL and ABC values.
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE******* --> 
@@ -175,55 +175,51 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 
 
 ##Unresolved Problems And Major Uncertainties{-}
-   TBD after STAR panel
 
-\FloatBarrier
-
+TBD after STAR panel
 
 
-##Decision Table(s) (groundfish only){-}    
-\hl{Include: projected yields (OFL, ABC and ACL), spawning biomass, and stock 
-depletion levels for each year. Not required in draft assessments undergoing review.}
-    
-OFL projection table: Table \ref{tab:OFL_projection}    
+##Decision Table{-}    
 
-Decision table(s) Table \ref{tab:Decision_table_mod1}, 
-                  Table \ref{tab:Decision_table_mod2}, 
-                  Table \ref{tab:Decision_table_mod3}
- 
-    Yield curve: Figure \ref{fig:Yield_all}
+TBD after STAR panel
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY OFL AND DECISION TABLES************ -->
+
 ```{r, results='asis'}   
     # Print OFL table 
       print(OFL.table, include.rownames = FALSE, caption.placement = 'top')
+```
+
+\FloatBarrier
+
+```{r, results='asis'}   
 
    # Decision tables currently read in as txt files and will need to be changed
    # Decision table text set up for alternate states of natural mortality, but 
    # the text can be changed in the Decision Table section of the R file, 
    # R_exec_summary_figs_tables.R
    # Edit text file(s): ./txt_files/DecisionTable_mod1 ,  
-   # ./txt_files/DecisionTable_mod1 , and
-   # ./txt_files/DecisionTable_mod3
-    # print Model 1 decision table
+
     print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
           caption.placement = 'top', 
           hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod1.table)), 
           scalebox = .85)
 ```
-<!-- ***********END EXECUTIVE SUMMARY OFL AND DECISION TABLES************** -->
 
 
-##Research And Data Needs{-}
-\hl{Include: identify information gaps that seriously impede the stock assessment.}    
+\FloatBarrier
 
-We recommend the following research be conducted before the next assessment:
+##Research and Data Needs{-} 
+
+There are many areas of research that could be improved to benefit the understanding and assessment of `r spp`. Below, are issues that are considered of the importance.
 
 \begin{enumerate}
 
-\item List item No. 1 in the list
+\item \textbf{Natural mortality}: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for `r spp`. The collection of additional age data, re-reading of older age samples, reading old age samples that are unread, and improved understanding of the life-history of `r spp` may reduce that uncertainty.
 
-\item List item No. 2 in the list, etc.
+\item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understanting regarding the steepness of US west coast `r spp` will reduce our uncertainty regarding current stock status.
+
+\item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for `r spp` off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west Ccast observations would help to define the connectivity between `r spp` north and south of the U.S.-Canada border.
 
 \end{enumerate}
 
@@ -245,6 +241,8 @@ We recommend the following research be conducted before the next assessment:
        hline.after = c(-1, 0, 4, 5, 7, 9, 11, nrow(base_summary.table)))
 ```
 
+\FloatBarrier
+
 <!-- ***********Yield curve table****************************************** -->
 ```{r, results='asis'}
    # Select the file to use for the yield curve depending on the number of models
@@ -253,7 +251,7 @@ We recommend the following research be conducted before the next assessment:
 ```
 <!-- ***********Edit caption based on fixed params************************* -->
 
-![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at... \label{fig:Yield_all}](`r yield.file`)
+![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. \label{fig:Yield_all}](`r yield.file`)
 
 
 \FloatBarrier

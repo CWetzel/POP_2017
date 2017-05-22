@@ -412,44 +412,44 @@ for(i in 1:(dim(AALComp_mod1)[1])) {
 <!-- ***********MODEL 1 Retrospective analysis FIGURE********************** --> 
 
 ![Retrospective pattern for spawning output. \label{fig:retro_sb}](Figures/compare1_spawnbio.png)
-
-
   
 \FloatBarrier
 
 
 ![Retrospective pattern for estimated recruitment deviations. \label{fig:retro_recdev}](Figures/compare9_recdevs.png)
-
-
   
 \FloatBarrier
-
-
-
 
 
 <!-- ********************************************************************** -->
 <!-- ******************Likelihood profile FIGURES************************** --> 
 <!-- ********************************************************************** -->
   
-<!-- ***********R0 Likelihood profile FIGURES****************************** --> 
-  
-  
-<!-- ***********M Likelihood profile FIGURES******************************* -->
-  
-  
-  
-<!-- ***********h Likelihood profile FIGURES******************************* -->
-  
+![Likelihood profile across steepness values. \label{fig:piner_h}](Figures/piner_panel_h.png)
   
 \FloatBarrier
 
-<!-- ***********Post-STAR M Likelihood profile FIGURES********************* -->
+![Trajectories of relative biomass across values of steepness. \label{fig:h_trajectory}](Figures/h_trajectories.png)
+  
+\FloatBarrier
   
   
+<!-- ***********M Likelihood profile FIGURES******************************* -->
+![Likelihood profile across natural mortality values. \label{fig:m_like}](Figures/m_like.png)
+  
+\FloatBarrier
+
+![Trajectories of relative biomass across values of natural mortality. \label{fig:m_trajectory}](Figures/m_trajectories.png)
+  
+\FloatBarrier
   
   
+<!-- ***********R0 Likelihood profile FIGURES******************************* -->
   
+![Likelihood profile across R\textsubscript{0} values. \label{fig:piner_R0}](Figures/piner_panel_R0.png)
+  
+\FloatBarrier
+
   
   
 <!-- ********************************************************************** -->
@@ -458,9 +458,14 @@ for(i in 1:(dim(AALComp_mod1)[1])) {
   
 <!-- ***********MODEL 1 REFERENCE POINTS FIGURES*************************** --> 
   
-  
+![Estimated spawning potential ratio (1-SPR)/(1-SPR50%) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. Thelast year in the time series is 2016. \label{fig:1_SPR}] (r4ss/plots_mod1/SPR3_ratiointerval.png)
   
 \FloatBarrier
+
+
+![Equilibrium yield curve for the base case model.  Values are based on `r LastYR -1` fishery selectivty and with steepness fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. \label{fig:yield}] (r4ss/plots_mod1/yield1_yield_curve.png)
+
+
 
   
   
