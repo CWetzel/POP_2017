@@ -35,7 +35,7 @@ n_models = 1
 
 
 # model names; if you only have one model the label will just be "model"
-mod1_label = "Base model"  
+mod1_label = "base model"  
   
 
 # Management targets

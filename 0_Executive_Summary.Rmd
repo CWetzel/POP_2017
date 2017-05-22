@@ -49,42 +49,22 @@ The definition of fishing fleets have been changed from those in the 2011 assess
 
 The assessment uses landings data and discard-fraction estimates; catch-per-unit-of-effort and survey indices; length or age composition data for each year and fishery or survey (with conditional age at length compositional data for the NWFSC shelf-slope survey); information on weight-at-age, maturity-at-age, and fecundity-at-age; priors on natural mortality and the steepness of the Beverton-Holt stock-recruitment relationship; and estimates of ageing error. Recruitment at "equilibrium biomass", length-based selectivity of the fishery and surveys, retention of the fishery, catchability of the surveys, growth, the time series of biomass, age and size structure, and current and projected future stock status are outputs of the model. Natural mortality and steepness were fixed in the final model. This was done due to relatively flat likelihood surfaces, such that fixing parameters and then varying them was deemed the best way to characterize uncertainty.
 
+Although there are many types of data available for `r spp` since the 1980s, which were used in this assessment, there is little information about steepness and natural mortality. Estimates of steepness are uncertain partly because of variable recruitment. Uncertainty in natural mortality is common in many fish stock assessments even when length and age data are available. 
+
 A number of sources of uncertainty are explicitly included in this assessment. For example, allowance is made for uncertainty in survey catchability coefficients. Furthermore, this assessment includes gender differences in growth, a non-linear relationship between individual spawner biomass and effective spawning output, and an updated relationship between length and maturity, based upon non-published information (M. Head, personal communication). As is always the case, overall uncertainty is greater than that predicted by a single model specification. Among other sources of uncertainty that are not included in the current model are the degree of connectivity between the stocks of `r spp` off of Vancouver Island, British Columbia and those in PFMC waters, and the effect of climatic variables on recruitment, growth and survival of `r spp`.
 
 A reference case was selected which adequately captures the central tendency for those sources of uncertainty considered in the model.
 
-
 <!--Map of assessment region: (Figure \ref{fig:assess_region_map}).  
  
-![Map depicting the boundaries for the base-case model.  \label{fig:assess_region_map}](Figures/assess_region_map.png) -->
-
-\FloatBarrier
+![Map depicting the boundaries for the base-case model.  \label{fig:assess_region_map}](Figures/assess_region_map.png)  \FloatBarrier  -->
 
 
 ##Stock Biomass{-}
-\hl{Include: trends and current levels relative to virgin or historic levels, 
-description of uncertainty-include table for last 10 years and graph with 
-long term estimates.}
-
-Spawning output Figure:    Figure \ref{fig:Spawnbio_all}     
-Spawning output Table(s):  Table \ref{tab:SpawningDeplete_mod1}     
-Relative depletion Figure: Figure \ref{fig:RelDeplete_all}     
-
-
-Example text (remove Models 2 and 3 if not needed - if using, remove the # in-line comments!!!)      
-The estimated relative depletion level (spawning output relative to unfished 
-spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1` 
-(~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`) (Figure \ref{fig:RelDeplete_all}).
-
-
-\FloatBarrier
-
+The predicted spawning biomass from the base model generally showed a slight decline over the time series until 1966 when the foreign fleet began. A short, but sharp decline occurred, followed by a period of the stock biomass stabilizing or with a minimimal decline until the late 1990s. The stock showed increases in stock size following the year 2000 when a combination of strong recruitment and low catches resulted. The `r LastYR` spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished spawning biomass at `r LastYR` is `r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`)%. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning biomass is high.
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 ```{r, results='asis'}
-    # Print spawning biomass table(s)
-    print(Spawn_Deplete_mod1.table, include.rownames = FALSE, caption.placement = 'top')
-
     # Select which file to use for the recuitment figure, depending on if you have one model or multiple models
     spawn.file  = ifelse(fecund=='numbers',
                            'r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png',
@@ -93,33 +73,31 @@ spawning output) of the the base-case model in `r LastYR` is `r Depl_mod1`
 
 ```
 
-\FloatBarrier
-
-
 ![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base case assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
 
 
-![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
+![Estimated relative spawning biomass (depletion) with approximate 95% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
 
+<!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
+```{r, results='asis'}
+    # Print spawning biomass table(s)
+    print(Spawn_Deplete_mod1.table, include.rownames = FALSE, caption.placement = 'top')
 
-
-<!-- ***********END  EXECUTIVE SUMMARY SPAWNING BIOMASS AND**************** -->
-<!-- ***********DEPLETION TABLES AND FIGURES******************************* -->
+```
 
 \FloatBarrier
 
 
-
 ##Recruitment{-}
-\hl{Include: trends and current levels relative to virgin or historic levels-include 
-table for last 10 years and graph with long term estimates.}
-
-Recruitment Figure: (Figure \ref{fig:Recruits_all})     
-Recruitment Tables: (Tables \ref{tab:Recruit_mod1})
-
-
+Recruitment deviations were estimated for the entire time-series modeled. There is little information regarding recruitment prior to 1965, and the uncertainty in these estimates is expressed in the model. Historically, there are estimates of large recruitments in 1999 and 2000.  In recent years, a recruitment of unprecedented size is estimated to have occurred in 2008 but is highly uncertain.  Additionally, there is early evidence of a strong recruitment in 2013.  The four lowest recruitments (in ascending order) occurred in `r recdev.lowest[1]`, `r recdev.lowest[2]`, `r recdev.lowest[3]`, and `r recdev.lowest[4]`.  
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY RECRUITMENT TABLES AND FIGURES***** -->
+```{r, results='asis'}
+   recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
+```
+
+![Time series of estimated `r spp` recruitments for the base-case model with 95\% confidence or credibility intervals. \label{fig:Recruits_all}](`r recruit.file`)
+
 ```{r, results='asis'}
    print(Recruit_mod1.table, include.rownames = FALSE, caption.placement = 'top')
    recruit.file  = 'r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png'
@@ -128,25 +106,11 @@ Recruitment Tables: (Tables \ref{tab:Recruit_mod1})
 
 \FloatBarrier
 
-![Time series of estimated `r spp` recruitments for the base-case model with 95\% confidence or credibility intervals. \label{fig:Recruits_all}](`r recruit.file`)
-
-<!-- ***********END EXECUTIVE SUMMARY RECRUITMENT TABLEs AND FIGURES******* -->
-
- \FloatBarrier
-
 
 
 ##Exploitation status{-}
-\hl{Include: exploitation rates (i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate) – include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).}
+The spawning biomass of `r spp` reached a low in `r low.ssb`.  Catches for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative biomass was possibly below the overfished level in the early 2000s, but has likely remained above that level otherwise, and currently is significantly greater than the 40% unfished spawning biomass target. Throughout the late 1960s and 1970s the exploitation rate and $(1-SPR)/(1-SPR_{50\%})$ were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
 
-
-Exploitation Tables: Table \ref{tab:SPR_Exploit_mod1}, Table \ref{tab:SPR_Exploit_mod2}, Table \ref{tab:SPR_Exploit_mod3}
-Exploitation Figure: Figure \ref{fig:SPR_all}). 
-
-A summary of `r spp` exploitation histories for base model is provided as Figure \ref{fig:Phase_all}.
-
-
-\FloatBarrier
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY EXPLOITATION AND******************* -->
 <!-- ***********SPRratio TABLE AND FIGURES********************************* -->
@@ -161,52 +125,27 @@ A summary of `r spp` exploitation histories for base model is provided as Figure
 
 \FloatBarrier
 
-![Estimated spawning potential ratio (SPR) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{50\%} harvest rate. The last year in the time series is `r Dat_end_mod1`. \label{fig:SPR_all}](`r SPR.file`)
+![Estimated spawning potential ratio (1-SPR)/(1-SPR50%) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. The last year in the time series is `r Dat_end_mod1`. \label{fig:SPR_all}](`r SPR.file`)
 
 
-![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 50\% (the SPR target). Relative depletion is the annual spawning biomass divided by the unfished spawning biomass. \label{fig:Phase_all}](`r Phase.file`)
-
-<!-- ************END EXECUTIVE SUMMARY EXPLOITATION************************ -->
-<!-- ************AND SPRratio TABLE AND FIGURES**************************** -->
-
-\FloatBarrier
+![Phase plot of estimated relative (1-SPR)/(1-SPR50%) vs. relative spawning biomass for the base case model. Relative biomass is the annual spawning biomass divided by the unfished spawning biomass. \label{fig:Phase_all}](`r Phase.file`)
 
 
 
 
 ##Ecosystem Considerations{-}
-In this assessment, ecosystem considerations were.....
 
+Rockfish are an important component of the California Current ecosystem along the US west coast, with its more than sixty five species filling various niches in both soft and hard bottom habitats from the nearshore to the continental slope, as well as near bottom and pelagic zones. `r spp` are generally considered to be semi-demersal but, there can at times, be a significant pelagic component to their distribution.
 
+Recruitment is one mechanism by which the ecosystem may directly impact the population dynamics of `r spp`. The 1999 cohort for many species of rockfish was large - sometimes significantly so - from these species' long-term averages suggesting that environmental conditions may influence the spawning success and survival of larvae and juvenile rockfish. `r spp` showed an above average recruitment deviation in 1999 and 2000, but absolute recruitment was not as large as other years. The specific pathways through which environmental conditions exert influence on `r spp` dynamics are unclear; however, changes in water temperature and currents, distribution of prey and predators, and the amount and timing of upwelling are all possible linkages. Changes in the environment may also result in changes in age-at-maturity, fecundity, growth, and survival which can affect how the status of the stock and its susceptibility to fishing are determined. Unfortunately, there are few data available for `r spp` that provide insights into these effects.
+
+Fishing has effects on both the age structure of a population as well as the habitat with which the target species is associated. Fishing often targets larger, older fish, and years of fishing mortality results in a truncated age-structure when compared to unfished conditions. Rockfish are often associated with habitats containing living structure such as sponges and corals, and fishing may alter that habitat to a less desirable state. This assessment provides a look at the effects of fishing on age structure, and recent studies on essential fish habitat are beginning to characterize important locations for rockfish throughout their life history; however there is little current information available to evaluate the specific effects of fishing on the ecosystem issues specific to `r spp`.
 
 
 ##Reference Points{-}
-\hl{Include:} management targets and definition of overfishing, including the harvest 
-rate that brings the stock to equilibrium at $B_{40\%}$ (the $B_{MSY}$ proxy) and 
-the equilibrium stock size that results from fishing at the default harvest rate 
-(the $F_{MSY}$ proxy). Include a summary table that compares estimated reference 
-points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, 
-SPRproxy for MSY, and estimated MSY values
 
-\hl{Write intro paragraph}
+This stock assessment estimates that `r spp` in the `r mod1_label` are `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the biomass target. Due to the large 2008 year-class, an increasing trend in spawning biomass was estimated in the base model. The estimated relative biomass level in `r LastYR` is `r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`), corresponding to an unfished spawning output of `r paste(Spawn_mod1, fecund_unit,sep=' ')` (~95% asymptotic interval: `r paste(Spawn_mod1_CI, fecund_unit, sep=' ')`) of spawning output in the base model.  Unfished age `r min_age` biomass was estimated to be `r Ref_pts_mod1[2,2]` mt in the base case model. The target spawning output based on the biomass target ($SB_{40\%}$) is `r paste(Ref_pts_mod1[7,2], fecund_unit,sep=' ')`, which gives a catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.
 
-This stock assessment estimates that `r spp` in the `r mod1_label` are 
-`r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the biomass 
-target, but `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MSST>0,"above","below")` 
-the minimum stock size threshold.  \hl{Add sentence about spawning output trend.} 
-The estimated relative depletion level for \hl{Model 1} in `r LastYR` is 
-`r Depl_mod1` (~95% asymptotic interval: $\pm$ `r Depl_mod1_CI`, corresponding 
-to an unfished spawning output of `r paste(Spawn_mod1, fecund_unit,sep=' ')` 
-(~95% asymptotic interval: `r paste(Spawn_mod1_CI, fecund_unit, sep=' ')`) of 
-spawning output in the base model (Table \ref{tab:Ref_pts_mod1}).  Unfished 
-age `r min_age` biomass was estimated to be `r Ref_pts_mod1[2,2]` mt in the 
-base case model. The target spawning output based on the biomass target 
-($SB_{40\%}$) is `r paste(Ref_pts_mod1[7,2], fecund_unit,sep=' ')`, which gives 
-a catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
-harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.
-
-
-\FloatBarrier
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY REFERENCE POINT TABLES************* -->
 ```{r, results='asis'}
@@ -219,15 +158,8 @@ harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt.
 \FloatBarrier
 
 
-
-
 ##Management Performance{-}
-\hl{Include: catches in comparison to OFL, ABC and OY/ACL values for the most 
-recent 10 years (when available), overfishing levels, actual catch and discard. 
-Include OFL(encountered), OFL(retained) and OFL(dead) if different due to discard 
-and discard mortality.}     
-
-Management performance table: Table \ref{tab:mnmgt_perform}
+Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the 1960s and 1970s and spawning biomass is predicted to have fallen below the proxy management target of 40%. Exploitation rates subsequently declined to rates at or below the management target in the 1980s.  Managment restrictions imposed in the 1990s further reduced exploitation rates. An overfished declaration for `r spp` resulted in very low exploitation rates since 2001 with the ACLs being set far below the OFL and ABC values.
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE******* --> 
@@ -239,15 +171,13 @@ Management performance table: Table \ref{tab:mnmgt_perform}
           sanitize.text.function = function(x){x}, scalebox = .9)
 ```
 <!-- ***********END EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE********* -->
-
-
+\FloatBarrier
 
 
 ##Unresolved Problems And Major Uncertainties{-}
    TBD after STAR panel
 
 \FloatBarrier
-
 
 
 
@@ -284,6 +214,19 @@ Decision table(s) Table \ref{tab:Decision_table_mod1},
 <!-- ***********END EXECUTIVE SUMMARY OFL AND DECISION TABLES************** -->
 
 
+##Research And Data Needs{-}
+\hl{Include: identify information gaps that seriously impede the stock assessment.}    
+
+We recommend the following research be conducted before the next assessment:
+
+\begin{enumerate}
+
+\item List item No. 1 in the list
+
+\item List item No. 2 in the list, etc.
+
+\end{enumerate}
+
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY RESULTS SUMMARY TABLE --> 
 ```{r, results='asis'}
@@ -312,33 +255,11 @@ Decision table(s) Table \ref{tab:Decision_table_mod1},
 
 ![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at... \label{fig:Yield_all}](`r yield.file`)
 
+
+\FloatBarrier
+
 <!-- ***********END EXECUTIVE SUMMARY RESULTS SUMMARY TABLE AND YIELD CURVE -->
 
-\FloatBarrier
-
-\newpage
-
-##Research And Data Needs{-}
-\hl{Include: identify information gaps that seriously impede the stock assessment.}    
-
-We recommend the following research be conducted before the next assessment:
-
-\begin{enumerate}
-
-\item List item No. 1 in the list
-
-\item List item No. 2 in the list, etc.
-
-\end{enumerate}
-
-##Rebuilding Projections{-}
-\hl{Include: reference to the principal results from rebuilding analysis if the 
-stock is overfished. This section should be included in the Final/SAFE version 
-assessment document but is not required for draft assessments undergoing review. 
-See Rebuilding Analysis terms of reference for detailed information on 
-rebuilding analysis requirements.}
-
-\FloatBarrier
 
 <!--************RESET FIGURE & TABLE NUMBERS FOR THE DOCUMENT'S MAIN BODY** -->
 \newpage

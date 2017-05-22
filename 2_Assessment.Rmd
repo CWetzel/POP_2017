@@ -200,13 +200,13 @@ Stock Synthesis has many options when setting up a model and the assessment mode
 ###Changes between the 2011 assessment model and current model
 The current model for `r spp` has many made many similar assumptions to the 2011 assessment but differs in some key ways.  This assessment disaggrated the fleets into a trawl/other gear, at-sea hake, historical foreign fleet, and research fleets.  The previous assessment implemented a single fleet where removal from all sources were aggregated together.  The seperating of fleets applied in this assessment allowed for differing assumptions regarding current and historical discarding practices.  Although there are no compositional data available from the foreign fleet, it is assumed that very little discarding to no discarding of fish occured.  Additionally, the at-sea hake fishery removals are represent both discarded and retained fish and hence an additional discard rate would not be appropriate.  Similar logic was applied in regard to survey and research removals.  
 
-The historical landing used in the model differs from those used in 2011.  The assessment includes the first state provided historical reconstruction landings for Washington state.  The historical reconstruction provided `r spp` landing within Washington state starting in 1916 and have larger removals in the 1940s relative to those used in 2011 \ref{fig:Catch_Comparison}.  Given the increase in historical removals prior to 1940, the 2011 model starting year, the starting year for modeling the stock was revised to 1918, the first year `r spp` landings exceeded 1 mt, for this assessment.  Explorations were conducted relative to the model starting year and no differences were found between the 1918 start year compared to starting the model in 1892, the first record of `r spp` landings between California, Oregon, and Washington catch data.
+The historical landing used in the model differs from those used in 2011.  The assessment includes the first state provided historical reconstruction landings for Washington state.  The historical reconstruction provided `r spp` landing within Washington state starting in 1916 and have larger removals in the 1940s relative to those used in 2011 \ref{fig:Catch_Compare}.  Given the increase in historical removals prior to 1940, the 2011 model starting year, the starting year for modeling the stock was revised to 1918, the first year `r spp` landings exceeded 1 mt, for this assessment.  Explorations were conducted relative to the model starting year and no differences were found between the 1918 start year compared to starting the model in 1892, the first record of `r spp` landings between California, Oregon, and Washington catch data.
 
 Selectivity in this model is assumed to be length-based and is modeled using double-normal for all fleets, expect the `r spp` survey which retained the previous assessment assumption of logistic selectivity. The previous assessment mirrored selectivity amont the `r spp` and both slope surveys (AFSC and NWFSC).  This assessment allow for survey specific estimated double-normal selectivity.
 
 All fishery-independent indices have been reevaluated for this assessment using a spatial-temporal delta generalized linear mixed model (VAST delta-GLMM) which is updated from 2011 which used a bayesian delta-GLMM which did not incorporate spatial effects.  An additional update to the treatment of survey data was the decision to use the Triennial survey as a single time series ranging from 1980-2004.  The previous assessment opted to split this survey into early and a late index of abundance based upon the change in southern sampling and a shift in survey timing.  Northern California is considered to be the southern end of `r spp` West Coast distribution with rare encounters in central or southern California waters.  The biological data from the Triennial survey showed no discernable ontogenetic shifts in `r spp` during the early or late period of summer samples.  Based upon these investigations, the Triennial survey was retained as a single index of abundance.
 
-Maturity and fecundity were updated for this assessment based upon new research. Fecundity for `r spp` used in this assessment was base on reevaluation of the fecundity of West Coast rockfish by Dick et al. [-@dick_meta-analysis_2017] updating the previous fecundity estimates used in the 2011 assessment [@dick_modeling_2009].  Maturity in this assessment was based on examination of 537 fish samples which were used to estimate functional maturity, an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The updated maturity curve was based on maturity-at-length where the previous estimates used in 2011 were based on maturity-at-age. 
+Maturity and fecundity were updated for this assessment based upon new research. Fecundity for `r spp` used in this assessment was base on reevaluation of the fecundity of West Coast rockfish by Dick et al. [-@dick_meta-analysis_2017] updating the previous fecundity estimates used in the 2011 assessment [@dick_modeling_2009] (Figure \ref{fig:fecundity}.  Maturity in this assessment was based on examination of 537 fish samples which were used to estimate functional maturity, an approach that classifies rockfish maturity with developing oocytes as mature or immature based on the proportion of vitellogenin in the cytoplasm and the measured frequency of atretic cells (M. Head, personal communication).  The updated maturity curve was based on maturity-at-length where the previous estimates used in 2011 were based on maturity-at-age (Figure \ref{fig:mat_compare}. 
 
 In this assessment, the beta prior developed from a meta-analysis of West Coast groundfish was updated to the 2017 value (J. Thorson personal communication) in preliminary models, with steepness fixed in the final base model.  Additionally, the prior for natural mortality was updated base on analysis conducted by Owen Hamel (personal communication), where female natural mortality was fixed at the prior median with males estimated as an offset from the female value.
 
@@ -271,7 +271,7 @@ Structurally, the model assumed that the catches from each fleet were representa
 
 
 ###Alternate Models Considered
-The exploration of models began by bridging from the 2011 assessment to SS version 3.24U, which produced no discernable difference. The updated catch series with discards added per the 2011 assessment produced insignificant differences in the relative scale of the population although the updated historical removals resulted in an increase in the estimate of unfishe biomass (Figure \ref{fig:XX}).   Updating the survey indices produced small differences in the relative scale of the population. Adding age and length data each resulted in an less of a population decline from the 1970s to pre-2000, resulting in an increase in the estimated final stock status as of 2017.  However, the addition of new data resulted in an early pattern within recruitment, indicating that the assumptions within the previous model may not represent the best fit to the current data.
+The exploration of models began by bridging from the 2011 assessment to SS version 3.24U, which produced no discernable difference. The updated catch series with discards added per the 2011 assessment produced insignificant differences in the relative scale of the population although the updated historical removals resulted in an increase in the estimate of unfished biomass.   Updating the survey indices produced small differences in the relative scale of the population. Adding age and length data each resulted in less of a population decline from the 1970s to pre-2000, resulting in an increase in the estimated final stock status as of 2017.  However, the addition of new data resulted in an early pattern within recruitment, indicating that the assumptions within the previous model may not represent the best fit to the current data.
 
 This assessment estimated discards in the model, so time was spent investigating time blocks for changes in selectivity and retention to match the limited discard data as best as possible. Using major changes in management and observed changes in landings, a set of blocks for retention was found for the bottom trawl fleets. In the spirit of parsimony, we used as few blocks as possible, allowed blocks only for time periods with data, and added new blocks when we felt they were justified by changes in management and they improved the fit to the data.
 
@@ -311,11 +311,6 @@ Proper convergence was determined by starting the minimization process from disp
 \item \textbf{Item No. 3, etc.}
 \end{itemize}
 
-    \textbf{Rationale:} Add after STAR panel.
-
-    \textbf{STAT Response:} Continue requests as needed.
-
-
 \end{description}
 
 <!-- ************************************************************************* -->
@@ -330,7 +325,17 @@ The base model parameter estimates along with approximate asymptotic standard er
 
 
 ###Uncertainty and Sensitivity Analyses
-Table \ref{tab:Sensitivity_model1}
+Table \ref{tab:Sensitivity1}
+
+\ref{tab:Sensitivity1}
+
+\ref{fig:sens1_ssb}
+
+\ref{fig:sens1_depl}
+
+\ref{fig:sens2_ssb}
+
+\ref{fig:sens_depl}
 
 
 

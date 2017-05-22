@@ -256,19 +256,6 @@ figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthBySource.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
             "C:/Assessments/POP2017/Data/Biological/plots/LengthAgeAll.png",
-            #"C:/Assessments/POP2017/Data/Discards/plots/discardLengthComps.png", 
-            #"C:/Assessments/POP2017/Data/CommercialComps/AtSeaFishery/ASHOP_lengths.png",
-            #"C:/Assessments/POP2017/Data/CommercialComps/AtSeaFishery/ASHOP_ages.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/POPsurvey/plots/POP_Ages.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/POPsurvey/plots/POP_Lengths.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/NWFSCcombo/plots/NWFSCcombo_Ages.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/NWFSCcombo/plots/NWFSCcombo_Lengths.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/NWFSCcombo/plots/NWFSCcombo_Ages_Young_with_lines.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/NWFSCslope/plots/NWslope_Lengths.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/NWFSCslope/plots/NWslope_Ages.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/plots/Triennial_Ages.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/plots/Triennial_Lengths.png",
-            #"C:/Assessments/POP2017/Data/SurveyComps/Triennial_AFSCsurvey/plots/AFSCslope_Lengths.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Functional_Maturity.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Maturity_Comparison.png", 
             "C:/Assessments/POP2017/Data/AgeingError/Ageing_Error.png",
@@ -276,7 +263,13 @@ figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data.png",
-            "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png")
+            "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png",
+            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel_h.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_like.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base/piner_panel_R0.png")
+            )
 
 for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)

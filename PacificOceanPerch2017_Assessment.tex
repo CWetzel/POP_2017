@@ -321,6 +321,13 @@ mortality and steepness were fixed in the final model. This was done due
 to relatively flat likelihood surfaces, such that fixing parameters and
 then varying them was deemed the best way to characterize uncertainty.
 
+Although there are many types of data available for Pacific ocean perch
+since the 1980s, which were used in this assessment, there is little
+information about steepness and natural mortality. Estimates of
+steepness are uncertain partly because of variable recruitment.
+Uncertainty in natural mortality is common in many fish stock
+assessments even when length and age data are available.
+
 A number of sources of uncertainty are explicitly included in this
 assessment. For example, allowance is made for uncertainty in survey
 catchability coefficients. Furthermore, this assessment includes gender
@@ -338,27 +345,37 @@ recruitment, growth and survival of Pacific ocean perch.
 A reference case was selected which adequately captures the central
 tendency for those sources of uncertainty considered in the model.
 
-\FloatBarrier
-
 \subsection*{Stock Biomass}\label{stock-biomass}
 \addcontentsline{toc}{subsection}{Stock Biomass}
 
-\hl{Include: trends and current levels relative to virgin or historic levels, 
-description of uncertainty-include table for last 10 years and graph with 
-long term estimates.}
+The predicted spawning biomass from the base model generally showed a
+slight decline over the time series until 1966 when the foreign fleet
+began. A short, but sharp decline occurred, followed by a period of the
+stock biomass stabilizing or with a minimimal decline until the late
+1990s. The stock showed increases in stock size following the year 2000
+when a combination of strong recruitment and low catches resulted. The
+2017 spawning biomass relative to unfished equilibrium spawning biomass
+is above the target of 40\% of unfished spawning biomass at 2017 is
+76.1\% (\textasciitilde{}95\% asymptotic interval: \(\pm\)
+53.8\%-98.4\%)\%. Approximate confidence intervals based on the
+asymptotic variance estimates show that the uncertainty in the estimated
+spawning biomass is high.
 
-Spawning output Figure: Figure \ref{fig:Spawnbio_all}\\
-Spawning output Table(s): Table \ref{tab:SpawningDeplete_mod1}\\
-Relative depletion Figure: Figure \ref{fig:RelDeplete_all}
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
+\caption{Time series of spawning output trajectory (circles and line:
+median; light broken lines: 95\% credibility intervals) for the base
+case assessment model. \label{fig:Spawnbio_all}}
+\end{figure}
 
-Example text (remove Models 2 and 3 if not needed - if using, remove the
-\# in-line comments!!!)\\
-The estimated relative depletion level (spawning output relative to
-unfished spawning output) of the the base-case model in 2017 is 76.1\%
-(\textasciitilde{}95\% asymptotic interval: \(\pm\) 53.8\%-98.4\%)
-(Figure \ref{fig:RelDeplete_all}).
-
-\FloatBarrier
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
+\caption{Estimated relative spawning biomass (depletion) with
+approximate 95\% asymptotic confidnce intervals (dashed lines) for the
+base case assessment model. \label{fig:RelDeplete_all}}
+\end{figure}
 
 \begin{table}[ht]
 \centering
@@ -384,32 +401,26 @@ Year & Spawning Output (million eggs) & \~{} 95\% confidence interval & Estimate
 
 \FloatBarrier
 
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
-\caption{Time series of spawning output trajectory (circles and line:
-median; light broken lines: 95\% credibility intervals) for the base
-case assessment model. \label{fig:Spawnbio_all}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated relative depletion with approximate 95\% asymptotic
-confidnce intervals (dashed lines) for the base case assessment model.
-\label{fig:RelDeplete_all}}
-\end{figure}
-
-\FloatBarrier
-
 \subsection*{Recruitment}\label{recruitment}
 \addcontentsline{toc}{subsection}{Recruitment}
 
-\hl{Include: trends and current levels relative to virgin or historic levels-include 
-table for last 10 years and graph with long term estimates.}
+Recruitment deviations were estimated for the entire time-series
+modeled. There is little information regarding recruitment prior to
+1965, and the uncertainty in these estimates is expressed in the model.
+Historically, there are estimates of large recruitments in 1999 and
+2000. In recent years, a recruitment of unprecedented size is estimated
+to have occurred in 2008 but is highly uncertain. Additionally, there is
+early evidence of a strong recruitment in 2013. The four lowest
+recruitments (in ascending order) occurred in 2012, 2003, 1998, and
+2005.
 
-Recruitment Figure: (Figure \ref{fig:Recruits_all})\\
-Recruitment Tables: (Tables \ref{tab:Recruit_mod1})
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+\caption{Time series of estimated Pacific ocean perch recruitments for
+the base-case model with 95\% confidence or credibility intervals.
+\label{fig:Recruits_all}}
+\end{figure}
 
 \begin{table}[ht]
 \centering
@@ -436,38 +447,27 @@ Year & Estimated Recruitment & \~{} 95\% confidence interval & Estimated Recruit
 
 \FloatBarrier
 
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
-\caption{Time series of estimated Pacific ocean perch recruitments for
-the base-case model with 95\% confidence or credibility intervals.
-\label{fig:Recruits_all}}
-\end{figure}
-
-\FloatBarrier
-
 \subsection*{Exploitation status}\label{exploitation-status}
 \addcontentsline{toc}{subsection}{Exploitation status}
 
-\hl{Include: exploitation rates (i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate) – include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).}
-
-Exploitation Tables: Table \ref{tab:SPR_Exploit_mod1}, Table
-\ref{tab:SPR_Exploit_mod2}, Table \ref{tab:SPR_Exploit_mod3}
-Exploitation Figure: Figure \ref{fig:SPR_all}).
-
-A summary of Pacific ocean perch exploitation histories for base model
-is provided as Figure \ref{fig:Phase_all}.
-
-\FloatBarrier
+The spawning biomass of Pacific ocean perch reached a low in 1994.
+Catches for Pacific ocean perch decreased significantly in 2000 compared
+to previous years. The estimated relative biomass was possibly below the
+overfished level in the early 2000s, but has likely remained above that
+level otherwise, and currently is significantly greater than the 40\%
+unfished spawning biomass target. Throughout the late 1960s and 1970s
+the exploitation rate and \((1-SPR)/(1-SPR_{50\%})\) were mostly above
+target levels. Recent exploitation rates on Pacific ocean perch were
+predicted to be significantly below target levels.
 
 \begin{table}[ht]
 \centering
 \caption{Recent trend in spawning potential 
-                                        ratio (1-SPR) and summary exploitation rate forPacific ocean perch.} 
+                                        ratio (1-SPR) and summary exploitation rate for Pacific ocean perch.} 
 \label{tab:SPR_Exploit_mod1}
 \begin{tabular}{l>{\centering}p{1in}>{\centering}p{1.2in}>{\centering}p{1in}>{\centering}p{1.2in}}
   \hline
-Year & Fishing intensity & \~{} 95\% confidence interval & Exploitation rate & \~{} 95\% confidence interval \\ 
+Year & (1-SPR) & \~{} 95\% confidence interval & Exploitation rate & \~{} 95\% confidence interval \\ 
   \hline
 2007 & 0.104 & 0.046 - 0.162 & 0.002 & 0.001 - 0.003 \\ 
   2008 & 0.086 & 0.036 - 0.135 & 0.002 & 0.001 - 0.003 \\ 
@@ -488,59 +488,79 @@ Year & Fishing intensity & \~{} 95\% confidence interval & Exploitation rate & \
 \begin{figure}
 \centering
 \includegraphics{r4ss/plots_mod1/SPR3_ratiointerval.png}
-\caption{Estimated spawning potential ratio (SPR) for the base-case
-model. One minus SPR is plotted so that higher exploitation rates occur
-on the upper portion of the y-axis. The management target is plotted as
-a red horizontal line and values above this reflect harvests in excess
-of the overfishing proxy based on the SPR\textsubscript{50\%} harvest
-rate. The last year in the time series is 2016. \label{fig:SPR_all}}
+\caption{Estimated spawning potential ratio (1-SPR)/(1-SPR50\%) for the
+base-case model. One minus SPR is plotted so that higher exploitation
+rates occur on the upper portion of the y-axis. The management target is
+plotted as a red horizontal line and values above this reflect harvests
+in excess of the overfishing proxy based on the SPR50\% harvest rate.
+The last year in the time series is 2016. \label{fig:SPR_all}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{r4ss/plots_mod1/SPR4_phase.png}
-\caption{Phase plot of estimated relative (1-SPR) vs.~relative spawning
-biomass for the base case model. The relative (1-SPR) is (1-SPR) divided
-by 50\% (the SPR target). Relative depletion is the annual spawning
-biomass divided by the unfished spawning biomass. \label{fig:Phase_all}}
+\caption{Phase plot of estimated relative (1-SPR)/(1-SPR50\%)
+vs.~relative spawning biomass for the base case model. Relative biomass
+is the annual spawning biomass divided by the unfished spawning biomass.
+\label{fig:Phase_all}}
 \end{figure}
-
-\FloatBarrier
 
 \subsection*{Ecosystem Considerations}\label{ecosystem-considerations}
 \addcontentsline{toc}{subsection}{Ecosystem Considerations}
 
-In this assessment, ecosystem considerations were\ldots{}..
+Rockfish are an important component of the California Current ecosystem
+along the US west coast, with its more than sixty five species filling
+various niches in both soft and hard bottom habitats from the nearshore
+to the continental slope, as well as near bottom and pelagic zones.
+Pacific ocean perch are generally considered to be semi-demersal but,
+there can at times, be a significant pelagic component to their
+distribution.
+
+Recruitment is one mechanism by which the ecosystem may directly impact
+the population dynamics of Pacific ocean perch. The 1999 cohort for many
+species of rockfish was large - sometimes significantly so - from these
+species' long-term averages suggesting that environmental conditions may
+influence the spawning success and survival of larvae and juvenile
+rockfish. Pacific ocean perch showed an above average recruitment
+deviation in 1999 and 2000, but absolute recruitment was not as large as
+other years. The specific pathways through which environmental
+conditions exert influence on Pacific ocean perch dynamics are unclear;
+however, changes in water temperature and currents, distribution of prey
+and predators, and the amount and timing of upwelling are all possible
+linkages. Changes in the environment may also result in changes in
+age-at-maturity, fecundity, growth, and survival which can affect how
+the status of the stock and its susceptibility to fishing are
+determined. Unfortunately, there are few data available for Pacific
+ocean perch that provide insights into these effects.
+
+Fishing has effects on both the age structure of a population as well as
+the habitat with which the target species is associated. Fishing often
+targets larger, older fish, and years of fishing mortality results in a
+truncated age-structure when compared to unfished conditions. Rockfish
+are often associated with habitats containing living structure such as
+sponges and corals, and fishing may alter that habitat to a less
+desirable state. This assessment provides a look at the effects of
+fishing on age structure, and recent studies on essential fish habitat
+are beginning to characterize important locations for rockfish
+throughout their life history; however there is little current
+information available to evaluate the specific effects of fishing on the
+ecosystem issues specific to Pacific ocean perch.
 
 \subsection*{Reference Points}\label{reference-points}
 \addcontentsline{toc}{subsection}{Reference Points}
 
-\hl{Include:} management targets and definition of overfishing,
-including the harvest rate that brings the stock to equilibrium at
-\(B_{40\%}\) (the \(B_{MSY}\) proxy) and the equilibrium stock size that
-results from fishing at the default harvest rate (the \(F_{MSY}\)
-proxy). Include a summary table that compares estimated reference points
-for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY,
-SPRproxy for MSY, and estimated MSY values
-
-\hl{Write intro paragraph}
-
-This stock assessment estimates that Pacific ocean perch in the Base
-model are above the biomass target, but above the minimum stock size
-threshold. \hl{Add sentence about spawning output trend.} The estimated
-relative depletion level for \hl{Model 1} in 2017 is 76.1\%
-(\textasciitilde{}95\% asymptotic interval: \(\pm\) 53.8\%-98.4\%,
+This stock assessment estimates that Pacific ocean perch in the base
+model are above the biomass target. Due to the large 2008 year-class, an
+increasing trend in spawning biomass was estimated in the base model.
+The estimated relative biomass level in 2017 is 76.1\%
+(\textasciitilde{}95\% asymptotic interval: \(\pm\) 53.8\%-98.4\%),
 corresponding to an unfished spawning output of 5047 million eggs
-(\textasciitilde{}95\% asymptotic interval:
-2259.24842947069-7835.07157052931 million eggs) of spawning output in
-the base model (Table \ref{tab:Ref_pts_mod1}). Unfished age 3+ biomass
-was estimated to be 139810 mt in the base case model. The target
-spawning output based on the biomass target (\(SB_{40\%}\)) is 2653.2
-million eggs, which gives a catch of 1748.2 mt. Equilibrium yield at the
-proxy \(F_{MSY}\) harvest rate corresponding to \(SPR_{50\%}\) is 1764.8
-mt.
-
-\FloatBarrier
+(\textasciitilde{}95\% asymptotic interval: 2259-7835 million eggs) of
+spawning output in the base model. Unfished age 3+ biomass was estimated
+to be 139810 mt in the base case model. The target spawning output based
+on the biomass target (\(SB_{40\%}\)) is 2653.2 million eggs, which
+gives a catch of 1748.2 mt. Equilibrium yield at the proxy \(F_{MSY}\)
+harvest rate corresponding to \(SPR_{50\%}\) is 1764.8 mt.
 
 \begin{table}[ht]
 \centering
@@ -581,12 +601,14 @@ Unfished spawning output (million eggs) & 6633.1 &   4736.7 -   8529.5 \\
 \subsection*{Management Performance}\label{management-performance}
 \addcontentsline{toc}{subsection}{Management Performance}
 
-\hl{Include: catches in comparison to OFL, ABC and OY/ACL values for the most 
-recent 10 years (when available), overfishing levels, actual catch and discard. 
-Include OFL(encountered), OFL(retained) and OFL(dead) if different due to discard 
-and discard mortality.}
-
-Management performance table: Table \ref{tab:mnmgt_perform}
+Exploitation rates on Pacific ocean perch exceeded MSY proxy target
+harvest rates during the 1960s and 1970s and spawning biomass is
+predicted to have fallen below the proxy management target of 40\%.
+Exploitation rates subsequently declined to rates at or below the
+management target in the 1980s. Managment restrictions imposed in the
+1990s further reduced exploitation rates. An overfished declaration for
+Pacific ocean perch resulted in very low exploitation rates since 2001
+with the ACLs being set far below the OFL and ABC values.
 
 \begin{table}[ht]
 \centering
@@ -600,20 +622,22 @@ Management performance table: Table \ref{tab:mnmgt_perform}
   \hline
 Year & OFL (mt; ABC prior to 2011) & ABC (mt) & ACL (mt; OY prior to 2011) & Total landings (mt) & Estimated total catch (mt) \\ 
   \hline
-\text{2007} & - & - & 150 & 133 & 157 \\ 
-  \text{2008} & - & - & 150 & 92 & 133 \\ 
-  \text{2009} & - & - & 189 & 94 & 190 \\ 
-  \text{2010} & - & - & 200 & 97 & 181 \\ 
-  \text{2011} & - & - & 180 & 60 & 61 \\ 
-  \text{2012} & - & - & 183 & 57 & 58 \\ 
-  \text{2013} & - & - & 150 & 55 & 57 \\ 
-  \text{2014} & - & - & 153 & 54 & 55 \\ 
-  \text{2015} & - & - & 158 & 58 & 59 \\ 
-  \text{2016} & - & - & 164 & 65 & 65 \\ 
+\text{2007} & 900 &  & 150 & 133 & 157 \\ 
+  \text{2008} & 911 &  & 150 & 92 & 133 \\ 
+  \text{2009} & 1,160 &  & 189 & 94 & 190 \\ 
+  \text{2010} & 1,173 &  & 200 & 97 & 181 \\ 
+  \text{2011} & 1,026 & 981 & 180 & 60 & 61 \\ 
+  \text{2012} & 1,007 & 962 & 183 & 57 & 58 \\ 
+  \text{2013} & 844 & 807 & 150 & 55 & 57 \\ 
+  \text{2014} & 838 & 801 & 153 & 54 & 55 \\ 
+  \text{2015} & 842 & 805 & 158 & 58 & 59 \\ 
+  \text{2016} & 850 & 813 & 164 & 65 & 65 \\ 
    \hline
 \end{tabular}
 }
 \end{table}
+
+\FloatBarrier
 
 \subsection*{Unresolved Problems And Major
 Uncertainties}\label{unresolved-problems-and-major-uncertainties}
@@ -733,6 +757,22 @@ Year & OFL & ACL & Spawning Output ( million eggs ) & Relative Biomass \\
 }
 \end{table}
 
+\subsection*{Research And Data Needs}\label{research-and-data-needs}
+\addcontentsline{toc}{subsection}{Research And Data Needs}
+
+\hl{Include: identify information gaps that seriously impede the stock assessment.}
+
+We recommend the following research be conducted before the next
+assessment:
+
+\begin{enumerate}
+
+\item List item No. 1 in the list
+
+\item List item No. 2 in the list, etc.
+
+\end{enumerate}
+
 \begin{sidewaystable}[ht]
 \centering
 \caption{Base model results summary.} 
@@ -742,7 +782,7 @@ Year & OFL & ACL & Spawning Output ( million eggs ) & Relative Biomass \\
   \hline
 Quantity & 2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\ 
   \hline
-Landings (mt) & - & - & - & - & - & - & - & - & - & - \\ 
+Landings (mt) & 911 & 1,160 & 1,173 & 1,026 & 1,007 & 844 & 838 & 842 & 850 & 964 \\ 
   Total Est. Catch (mt) & 150 & 189 & 200 & 180 & 183 & 150 & 153 & 158 & 164 & 281 \\ 
   OFL (mt) & 92 & 94 & 97 & 60 & 57 & 55 & 54 & 58 & 65 &  \\ 
   ACL (mt) & 133 & 190 & 181 &  61 &  58 &  57 &  55 &  59 &  65 &  \\ 
@@ -772,35 +812,6 @@ Recruits & 133246 &   4814 &   8279 &  16107 &   2113 &  29278 &   5078 &  10096
 based on the 2016 fishery selectivity and with steepness fixed
 at\ldots{} \label{fig:Yield_all}}
 \end{figure}
-
-\FloatBarrier
-
-\newpage
-
-\subsection*{Research And Data Needs}\label{research-and-data-needs}
-\addcontentsline{toc}{subsection}{Research And Data Needs}
-
-\hl{Include: identify information gaps that seriously impede the stock assessment.}
-
-We recommend the following research be conducted before the next
-assessment:
-
-\begin{enumerate}
-
-\item List item No. 1 in the list
-
-\item List item No. 2 in the list, etc.
-
-\end{enumerate}
-
-\subsection*{Rebuilding Projections}\label{rebuilding-projections}
-\addcontentsline{toc}{subsection}{Rebuilding Projections}
-
-\hl{Include: reference to the principal results from rebuilding analysis if the 
-stock is overfished. This section should be included in the Final/SAFE version 
-assessment document but is not required for draft assessments undergoing review. 
-See Rebuilding Analysis terms of reference for detailed information on 
-rebuilding analysis requirements.}
 
 \FloatBarrier
 
@@ -1607,7 +1618,7 @@ The historical landing used in the model differs from those used in
 reconstruction landings for Washington state. The historical
 reconstruction provided Pacific ocean perch landing within Washington
 state starting in 1916 and have larger removals in the 1940s relative to
-those used in 2011 \ref{fig:Catch_Comparison}. Given the increase in
+those used in 2011 \ref{fig:Catch_Compare}. Given the increase in
 historical removals prior to 1940, the 2011 model starting year, the
 starting year for modeling the stock was revised to 1918, the first year
 Pacific ocean perch landings exceeded 1 mt, for this assessment.
@@ -1645,14 +1656,15 @@ research. Fecundity for Pacific ocean perch used in this assessment was
 base on reevaluation of the fecundity of West Coast rockfish by Dick et
 al. (\protect\hyperlink{ref-dick_meta-analysis_2017}{2017}) updating the
 previous fecundity estimates used in the 2011 assessment (Dick
-\protect\hyperlink{ref-dick_modeling_2009}{2009}). Maturity in this
-assessment was based on examination of 537 fish samples which were used
-to estimate functional maturity, an approach that classifies rockfish
-maturity with developing oocytes as mature or immature based on the
-proportion of vitellogenin in the cytoplasm and the measured frequency
-of atretic cells (M. Head, personal communication). The updated maturity
-curve was based on maturity-at-length where the previous estimates used
-in 2011 were based on maturity-at-age.
+\protect\hyperlink{ref-dick_modeling_2009}{2009}) (Figure
+\ref{fig:fecundity}. Maturity in this assessment was based on
+examination of 537 fish samples which were used to estimate functional
+maturity, an approach that classifies rockfish maturity with developing
+oocytes as mature or immature based on the proportion of vitellogenin in
+the cytoplasm and the measured frequency of atretic cells (M. Head,
+personal communication). The updated maturity curve was based on
+maturity-at-length where the previous estimates used in 2011 were based
+on maturity-at-age (Figure \ref{fig:mat_compare}.
 
 In this assessment, the beta prior developed from a meta-analysis of
 West Coast groundfish was updated to the 2017 value (J. Thorson personal
@@ -1880,14 +1892,13 @@ SS version 3.24U, which produced no discernable difference. The updated
 catch series with discards added per the 2011 assessment produced
 insignificant differences in the relative scale of the population
 although the updated historical removals resulted in an increase in the
-estimate of unfishe biomass (Figure \ref{fig:XX}). Updating the survey
-indices produced small differences in the relative scale of the
-population. Adding age and length data each resulted in an less of a
-population decline from the 1970s to pre-2000, resulting in an increase
-in the estimated final stock status as of 2017. However, the addition of
-new data resulted in an early pattern within recruitment, indicating
-that the assumptions within the previous model may not represent the
-best fit to the current data.
+estimate of unfished biomass. Updating the survey indices produced small
+differences in the relative scale of the population. Adding age and
+length data each resulted in less of a population decline from the 1970s
+to pre-2000, resulting in an increase in the estimated final stock
+status as of 2017. However, the addition of new data resulted in an
+early pattern within recruitment, indicating that the assumptions within
+the previous model may not represent the best fit to the current data.
 
 This assessment estimated discards in the model, so time was spent
 investigating time blocks for changes in selectivity and retention to
@@ -1977,11 +1988,6 @@ Requests}\label{response-to-the-current-star-panel-requests}
 \item \textbf{Item No. 3, etc.}
 \end{itemize}
 
-    \textbf{Rationale:} Add after STAR panel.
-
-    \textbf{STAT Response:} Continue requests as needed.
-
-
 \end{description}
 
 \subsection{Base Model Results}\label{base-model-results}
@@ -1997,7 +2003,17 @@ intervals are shown in Table \ref{tab:Ref_pts}.
 \subsubsection{Uncertainty and Sensitivity
 Analyses}\label{uncertainty-and-sensitivity-analyses}
 
-Table \ref{tab:Sensitivity_model1}
+Table \ref{tab:Sensitivity1}
+
+\ref{tab:Sensitivity1}
+
+\ref{fig:sens1_ssb}
+
+\ref{fig:sens1_depl}
+
+\ref{fig:sens2_ssb}
+
+\ref{fig:sens_depl}
 
 \subsubsection{Retrospective Analysis}\label{retrospective-analysis}
 
@@ -2444,16 +2460,16 @@ Date & Area & Regulation \\
   \hline
 Year & OFL (mt; ABC prior to 2011) & ABC (mt) & ACL (mt; OY prior to 2011) & Total landings (mt) & Estimated total catch (mt) \\ 
   \hline
-\text{2007} & - & - & 150 & 133 & 157 \\ 
-  \text{2008} & - & - & 150 & 92 & 133 \\ 
-  \text{2009} & - & - & 189 & 94 & 190 \\ 
-  \text{2010} & - & - & 200 & 97 & 181 \\ 
-  \text{2011} & - & - & 180 & 60 & 61 \\ 
-  \text{2012} & - & - & 183 & 57 & 58 \\ 
-  \text{2013} & - & - & 150 & 55 & 57 \\ 
-  \text{2014} & - & - & 153 & 54 & 55 \\ 
-  \text{2015} & - & - & 158 & 58 & 59 \\ 
-  \text{2016} & - & - & 164 & 65 & 65 \\ 
+\text{2007} & 900 &  & 150 & 133 & 157 \\ 
+  \text{2008} & 911 &  & 150 & 92 & 133 \\ 
+  \text{2009} & 1,160 &  & 189 & 94 & 190 \\ 
+  \text{2010} & 1,173 &  & 200 & 97 & 181 \\ 
+  \text{2011} & 1,026 & 981 & 180 & 60 & 61 \\ 
+  \text{2012} & 1,007 & 962 & 183 & 57 & 58 \\ 
+  \text{2013} & 844 & 807 & 150 & 55 & 57 \\ 
+  \text{2014} & 838 & 801 & 153 & 54 & 55 \\ 
+  \text{2015} & 842 & 805 & 158 & 58 & 59 \\ 
+  \text{2016} & 850 & 813 & 164 & 65 & 65 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -3441,7 +3457,7 @@ Year & OFL (mt) & ACL (mt) & Age 3+ biomass (mt) & Spawning Output & Depletion \
 \begin{figure}
 \centering
 \includegraphics{r4ss/plots_mod1/data_plot.png}
-\caption{Summary of data sources used in the Base model.
+\caption{Summary of data sources used in the base model.
 \label{fig:data_plot}}
 \end{figure}
 
@@ -3659,7 +3675,7 @@ ocean perch. \label{fig:mat_compare}}
 \begin{figure}
 \centering
 \includegraphics{Figures/Fecundity_Comparison.png}
-\caption{Fecundity at length of Pacific ocean perch in the Base model
+\caption{Fecundity at length of Pacific ocean perch in the base model
 and a comparison of the fecundity in the 2011 assessment.
 \label{fig:fecundity}}
 \end{figure}

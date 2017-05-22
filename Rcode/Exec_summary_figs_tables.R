@@ -220,7 +220,7 @@ align(Exec_catch.table) = c('l', 'l',
   assign(paste('Spawn_', mod_area, sep=''), SpawnB[nrow(SpawnB), 2])
     
   assign(paste('Spawn_',mod_area,'_CI',sep=''), 
-         paste(SpawnB[nrow(SpawnB), 7], '-', SpawnB[nrow(SpawnB), 8], sep=''))
+         paste(round(SpawnB[nrow(SpawnB), 7],0), '-', round(SpawnB[nrow(SpawnB), 8],0), sep=''))
 
 
 # =============================================================================
@@ -282,6 +282,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   colnames(Recruittab) = c('Year',paste0('Estimated Recruitment'), '~ 95% confidence interval')
   
   assign(paste('Recruittab_',mod_area,sep=''), Recruittab)
+  
   
   # Recruitment deviations
   RecDevs = mod1$recruitpars[mod1$recruitpars$Yr >= FirstYR & mod1$recruitpars$Yr <= LastYR, c("Value", "Parm_StDev")]
@@ -363,7 +364,7 @@ align(Recruit_mod1.table) = c('l',
   
   SPRratiotab$Year = as.factor(SPRratiotab$Year)
   
-  colnames(SPRratiotab) = c('Year', 'Fishing intensity', '~ 95% confidence interval')
+  colnames(SPRratiotab) = c('Year', '(1-SPR)', '~ 95% confidence interval')
       
   assign(paste('SPRratio_Exploit_', mod_area, sep=''), cbind(SPRratiotab, Exploittab))
 
@@ -374,7 +375,7 @@ align(Recruit_mod1.table) = c('l',
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
                               caption=c(paste('Recent trend in spawning potential 
-                                        ratio (1-SPR) and summary exploitation rate for', spp, '.' , sep='')), 
+                                        ratio (1-SPR) and summary exploitation rate for ', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
@@ -717,3 +718,22 @@ align(mngmnt.table) = c('l',
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}')    
+  
+  ################################################################################################################################################################
+  # Executive summary values
+  ################################################################################################################################################################
+  
+  # Lowest four recruitment years 
+  RecDevs.all = mod1$recruitpars[grep('Main_RecrDev', rownames(mod1$recruitpars)), c("Value", "Parm_StDev")]
+  ind = sort(RecDevs.all[, "Value"], index.return = TRUE)$ix[1:4]
+  find.yr = rownames(mod1$recruitpars[grep('Main_RecrDev', rownames(mod1$recruitpars)), ])
+  temp = substring(find.yr,14)
+  recdev.lowest = temp[ind]
+  
+  # Lowest SB
+  find.sb = mod$derived_quants[grep('SPB', mod$derived_quants$Label), ]
+  temp = find.sb[find.sb$Label >= paste('SPB_', Dat_start_mod1, sep='') & find.sb$Label <= paste('SPB_', Dat_end_mod1,  sep=''), ]  
+  ind = sort(temp$Value, index.return = TRUE)$ix[1]
+  ssb.yr = substring(temp$Label, 5)
+  low.ssb = ssb.yr[ind]
+  
