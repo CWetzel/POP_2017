@@ -457,16 +457,15 @@ for(i in 1:(dim(AALComp_mod1)[1])) {
 <!-- ********************************************************************** -->
   
 <!-- ***********MODEL 1 REFERENCE POINTS FIGURES*************************** --> 
+
+![Estimated spawning potential ratio (1-SPR)/(1-SPR50%) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. The last year in the time series is `r Dat_end_mod1`. \label{fig:SPR}](r4ss/plots_mod1/SPR3_ratiointerval.png)
   
-![Estimated spawning potential ratio (1-SPR)/(1-SPR50%) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. Thelast year in the time series is 2016. \label{fig:1_SPR}] (r4ss/plots_mod1/SPR3_ratiointerval.png)
   
 \FloatBarrier
 
+![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. \label{fig:yield}](r4ss/plots_mod1/yield1_yield_curve.png)
 
-![Equilibrium yield curve for the base case model.  Values are based on `r LastYR -1` fishery selectivty and with steepness fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. \label{fig:yield}] (r4ss/plots_mod1/yield1_yield_curve.png)
-
-
-
+\FloatBarrier
   
   
 <!-- ********************************************************************** --> 

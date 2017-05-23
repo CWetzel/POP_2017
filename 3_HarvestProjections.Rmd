@@ -1,13 +1,9 @@
 
 <!-- **************HARVEST PROJECTIONS AND DECISION TABLE****************** -->
 #Harvest Projections and Decision Tables
-Table \ref{tab:mnmgt_perform}
 
-**Model 1 Projections and Decision Table (groundfish only)**
-(Table \ref{tab:Forecast_mod1} 
+A twelve year projection of the base model with catches equal to the estimated ACL for years 2019-2028 and a catch allocation equal to the percentages for each fleet over the period of 2014-2016 predicts an increase in the spawning output due to large 2008 cohort, with a slight downturn beginning in 2023 (Table \ref{tab:Forecast_mod1}). 
 
-Table \ref{tab:Decision_table_mod1}
+\hl{Add additional projection post STAR based upon the decision table.}
 
-**Model 2 Projections and Decision Table (groundfish only)** 
-
-**Model 3 Projections and Decision Table (groundfish only)**
+Table \ref{tab:Decision_table_mod1_back}

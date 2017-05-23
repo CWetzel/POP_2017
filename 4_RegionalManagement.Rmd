@@ -1,10 +1,2 @@
 <!-- **************************REGIONAL MANAGEMENT************************* -->
 #Regional Management Considerations
-1.  For stocks where current practice is to allocate harvests by management 
-area, a recommended method of allocating harvests based on the distribution 
-of biomass should be provided.  The MT advisor should be consulted on the 
-appropriate management areas for each stock.
-2.  Discuss whether a regional management approach makes sense for the species 
-from a biological perspective.
-3.  If there are insufficient data to analyze a regional management approach,
-what are the research and data needs to answer this question?
