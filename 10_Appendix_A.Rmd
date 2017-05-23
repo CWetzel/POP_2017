@@ -1,0 +1,31 @@
+#Appendix A
+
+##Fits to lengths by year and fleet
+
+```{r, results='asis'}
+
+plot.vec = c(1, 5:8, 12, 16, 20, 24, 28,32)
+
+for (a in 1:length(plot.vec)){
+
+  cat('\n![', LenComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', LenComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  
+}
+
+```
+
+##Fits to ages by year and fleet
+
+```{r, results='asis'}
+
+plot.vec = c(1:2, 6, 10, 14, 23)
+name.vec = c("")
+
+for (a in 1:length(plot.vec)){
+
+  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  
+}
+
+```
+

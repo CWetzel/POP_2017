@@ -1,0 +1,8 @@
+<!-- ***************************ACKNOWLEDGEMENTS*************************** -->
+#Acknowledgments
+Many people were instrumental in the successful completion of this assessment and their contribution is greatly appreciated.  Jason Cope, Ian Taylor, and Owen Hamel contributed greatly with discussions about data, modeling, and SS.  We are greatful to Theresa Tsou (WDFW) and Phillip Wyland (WDFW) who provided research data and the first historical reconstruction of catch for Washington state.  Ali Whitman (ODFW), Patrick Mirrick (ODFW), and Ted Calavan (ODFW) provided Oregon composition data, historical catches, corrected PacFIN catches, and quickly uploaded age data that were critical to this assessment.  We appreciate Vanessa Tuttle's patience and responsiveness to providing data. Don Pearson (NOAA) provided historical catch information and compiled the extensive management changes for `r spp` which were critical in understanding and modeling fishery behavior.  John Wallace provided multiple last minute PacFIN extractions and analyzed historical discard rates for use in the assessment.
+
+We are very grateful to Patrick McDonald and the team of agers at CAP for their hard work reading numerous otoliths and availability to answer questions when needed. Beth Horness was always eager to help, quick to supply survey extractions, and answered numerous questions we had. Jason Jannot and Kayleigh Sommers assisted with data from the WCGOP and entertained our many questions.  We would like to acknowledge our survey team and their dedication to improving the assessments we do. The assessment was greatly improved through the many discussions within the Population Ecology team in the FRAM division at the NWFSC.
+
+\newpage
+\FloatBarrier

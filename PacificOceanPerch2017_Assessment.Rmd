@@ -59,39 +59,35 @@ link-citations: yes
 ```
 
 
-```{r child = "2_Assessment.Rmd"}
+```{r child = "2_Data.Rmd"}
 ```
 
-```{r child = "3_HarvestProjections.Rmd"}
-```
-
-
-```{r child = "4_RegionalManagement.Rmd"}
+```{r child = "3_Assessment.Rmd"}
 ```
 
 
-```{r child = "5_ResearchNeeds.Rmd"}
+```{r child = "4_HarvestProjections.Rmd"}
 ```
 
 
-<!-- ***************************ACKNOWLEDGEMENTS*************************** -->
-#Acknowledgments
-Many people were instrumental in the successful completion of this assessment and their contribution is greatly appreciated.  Jason Cope, Ian Taylor, and Owen Hamel contributed greatly with discussions about data, modeling, and SS.  We are greatful to Theresa Tsou (WDFW) and Phillip Wyland (WDFW) who provided research data and the first historical reconstruction of catch for Washington state.  Ali Whitman (ODFW), Patrick Mirrick (ODFW), and Ted Calavan (ODFW) provided Oregon composition data, historical catches, corrected PacFIN catches, and quickly uploaded age data that were critical to this assessment.  We appreciate Vanessa Tuttle's patience and responsiveness to providing data. Don Pearson (NOAA) provided historical catch information and compiled the extensive management changes for `r spp` which were critical in understanding and modeling fishery behavior.  John Wallace provided multiple last minute PacFIN extractions and analyzed historical discard rates for use in the assessment.
-
-We are very grateful to Patrick McDonald and the team of agers at CAP for their hard work reading numerous otoliths and availability to answer questions when needed. Beth Horness was always eager to help, quick to supply survey extractions, and answered numerous questions we had. Jason Jannot and Kayleigh Sommers assisted with data from the WCGOP and entertained our many questions.  We would like to acknowledge our survey team and their dedication to improving the assessments we do. The assessment was greatly improved through the many discussions within the Population Ecology team in the FRAM division at the NWFSC.
-
-\newpage
-\FloatBarrier
-
-
-```{r child = "7_Tables.Rmd"}
-```
-
-```{r child = "8_Figures.Rmd"}
+```{r child = "5_RegionalManagement.Rmd"}
 ```
 
 
+```{r child = "6_ResearchNeeds.Rmd"}
+```
 
+
+```{r child = "7_Acknowledgments.Rmd"}
+```
+
+
+```{r child = "8_Tables.Rmd"}
+```
+
+
+```{r child = "9_Figures.Rmd"}
+```
 
 <!-- ====================================================================== -->
 <!-- ***************************SS FILES*********************************** -->
@@ -99,8 +95,8 @@ We are very grateful to Patrick McDonald and the team of agers at CAP for their 
 <!-- ====================================================================== -->
 
 <!-- Uncomment the following lines to include the appendices - exlude to save runtime -->
-<!--  ```{r child='SS_file_appendices.rmd'}
-``` --> 
+<!--```{r child='SS_file_appendices.rmd'}
+``` -->
 
 <!-- ====================================================================== -->
 <!-- **********REFERENCES - WILL APPEAR AFTER APPENDICES******************* -->

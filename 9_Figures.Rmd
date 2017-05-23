@@ -1,0 +1,523 @@
+
+
+<!-- ====================================================================== -->
+<!-- **************************             ******************************* --> 
+<!-- **************************BEGIN FIGURES******************************* --> 
+<!-- **************************             ******************************* -->
+<!-- ====================================================================== -->
+
+#Figures
+
+\FloatBarrier
+
+<!-- ====================================================================== --> 
+<!-- *********************INTRODUCTION FIGURES***************************** --> 
+<!-- ====================================================================== --> 
+  
+<!-- 
+![Map showing the state boundary lines for management of the recreational fishing fleets.  CRFS Districts 1-6 in California are presented as well as the WDFW Recreational Management Areas in Washington.  Florence, OR is shown as a potential location of model stratification. \label{fig:boundary_map}](Figures/boundary_map.png) 
+-->
+
+<!-- ********************************************************************** --> 
+<!-- ******************Commercial landings FIGURES************************* --> 
+<!-- *************************  FIGURE 1  ********************************* -->
+<!-- ********************************************************************** --> 
+  
+![Total catches `r spp` through 2016. \label{fig:Catch}](r4ss/plots_mod1/catch2 landings stacked.png)
+  
+\FloatBarrier
+
+
+
+<!-- ********************************************************************** --> 
+<!-- *************************Data FIGURES********************************* --> 
+<!-- *************************  FIGURE 2  ********************************* -->
+<!-- ********************************************************************** -->
+  
+![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
+
+\FloatBarrier
+
+
+<!-- ********************************************************************** 
+<!-- ****************Length and Age Composition FIGURES******************** --> 
+<!-- ********************************************************************** -->
+
+![Fishery-dependent and fishery-independent indices for `r spp`. \label{fig:indices}](Figures/Index_Data.png)
+
+\FloatBarrier
+
+![Q-Q plots for the VAST lognormal distribution for the NWFSC shelf-slope survey. \label{fig:nw_qq}](Figures/Q-Q_plot_combo.jpg)
+
+\FloatBarrier
+
+
+![NWFSC shelf-slope survey length frequency distributions for `r spp`. \label{fig:nw_Length}](r4ss/plots_mod1/comp_lendat_bubflt8mkt0.png)
+
+\FloatBarrier
+
+
+![NWFSC shelf-slope survey age frequency distributions for `r spp`. \label{fig:nw_Age}](r4ss/plots_mod1/comp_gstagedat_bubflt8mkt0.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the NWFSC slope survey. \label{fig:nw_slope_qq}](Figures/Q-Q_plot_nw_slope_gammaECE.jpg)
+
+\FloatBarrier
+
+![NWFSC slope survey length frequency distributions for `r spp`. \label{fig:nw_slope_Length}](r4ss/plots_mod1/comp_lendat_bubflt7mkt0.png)
+
+\FloatBarrier
+
+
+![NWFSC slope survey age frequency distributions for `r spp`. \label{fig:nw_slope_Age}](r4ss/plots_mod1/comp_agedat_bubflt7mkt0.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the AFSC slope survey. \label{fig:afsc_qq}](Figures/Q-Q_plot_afsc.jpg)
+
+\FloatBarrier
+
+
+![AFSC slope survey length frequency distributions for `r spp`. \label{fig:afsc_Length}](r4ss/plots_mod1/comp_lendat_bubflt6mkt0.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the Triennial survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
+
+\FloatBarrier
+
+
+![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
+
+\FloatBarrier
+
+
+![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
+
+\FloatBarrier
+
+
+![Q-Q plots for the VAST lognormal distribution for the `r spp` survey. \label{fig:pop_qq}](Figures/Q-Q_plot_pop.jpg)
+
+\FloatBarrier
+
+
+![`r spp` survey length frequency distributions for `r spp`. \label{fig:POP_Length}](r4ss/plots_mod1/comp_lendat_bubflt4mkt0.png)
+
+\FloatBarrier
+
+
+![`r spp` survey age frequency distributions for `r spp`. \label{fig:POP_Age}](r4ss/plots_mod1/comp_agedat_bubflt4mkt0.png)
+
+\FloatBarrier
+
+
+
+
+
+<!-- ****************************************************************************** --> 
+<!-- *****************Commercial Comps & Discards FIGURES************************** --> 
+<!-- ****************************************************************************** -->
+
+![Discard length frequency distributions from WCGOP for `r spp`. \label{fig:WCGOP_discard}](r4ss/plots_mod1/comp_lendat_bubflt1mkt1.png)
+
+\FloatBarrier
+
+
+![Commercial fishery length frequency distributions for `r spp`. \label{fig:Comm_Length}](r4ss/plots_mod1/comp_lendat_bubflt1mkt2_page4.png)
+
+\FloatBarrier
+
+![Commercial fishery age frequency distributions for `r spp`. \label{fig:Comm_Age}](r4ss/plots_mod1/comp_agedat_bubflt1mkt2_page2.png)
+
+\FloatBarrier
+
+![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](r4ss/plots_mod1/comp_lendat_bubflt2mkt0.png)
+
+\FloatBarrier
+
+![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](r4ss/plots_mod1/comp_agedat_bubflt2mkt0.png)
+
+\FloatBarrier
+
+
+<!-- ====================================================================== -->
+<!-- *****************                             ************************ -->
+<!-- *****************START BIOLOGICAL DATA FIGURES************************ --> 
+<!-- *****************                            ************************ -->
+<!-- ====================================================================== -->
+
+<!-- ********************************************************************** -->
+<!-- *****************Maturity and Fecundity FIGURES*********************** --> 
+<!-- ********************************************************************** -->
+![The estimated sex ratio of `r spp` at length from all biological data sources. \label{fig:sexratio}](Figures/allSexRatios.png)
+
+![The estimated sex ratio of `r spp` at age from all biological data sources. \label{fig:sexratio_Age}](Figures/allSexRatiosAge.png)
+
+![The estimated functional maturity of `r spp` at length. \label{fig:mat}](Figures/Functional_Maturity.png)
+
+![Comparison between estimated maturity-at-length used in this assessment and maturity-at-age applied in the 2011 assessment of `r spp`. \label{fig:mat_compare}](Figures/Maturity_Comparison.png)
+
+![Fecundity at length of `r spp` in the `r mod1_label` and a comparison of the fecundity in the 2011 assessment. \label{fig:fecundity}](Figures/Fecundity_Comparison.png)
+  
+\FloatBarrier 
+
+
+<!-- ********************************************************************** -->
+<!-- **********************Weight-Length FIGURES*************************** --> 
+<!-- ********************************************************************** -->
+
+![Weight-at-length for `r spp` from all data sources. \label{fig:Wt_len}](Figures/weightAtLengthBySource.png)
+
+\FloatBarrier 
+
+![Estimated weight-at-length for `r spp` from all data sources. \label{fig:Wt_len_pred}](Figures/weightAtLengthPred.png)
+
+\FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- **********************Length-at-Age FIGURES*************************** --> 
+<!-- ********************************************************************** -->
+
+![Estimated length-at-age for `r spp` from all data sources. \label{fig:Len_Age}](Figures/LengthAgeAll.png)
+
+\FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- ****************Aging Precision and Bias FIGURES********************** --> 
+<!-- ********************************************************************** -->
+
+![The estimated ageing error used in this assessment compared to the ageing error assumed in the previous assessment for `r spp`. \label{fig:Age_Error}](Figures/Ageing_Error.png)
+
+\FloatBarrier 
+
+<!-- ====================================================================== -->
+<!-- ******************                           ************************* -->
+<!-- ******************END BIOLOGICAL DATA FIGURES************************* --> 
+<!-- ******************                           ************************* -->
+<!-- ====================================================================== -->
+
+
+
+<!-- ********************************************************************** -->
+<!-- **********************Catch Comparison******************************** --> 
+<!-- ********************************************************************** -->
+
+![Comparison of the catches assumed by this assessment and the previous assessment for `r spp`. \label{fig:Catch_Compare}](Figures/Catch_Comparison.png)
+
+\FloatBarrier 
+
+
+<!-- ********************************************************************** -->
+<!-- *********************Model Bridging Figure**************************** --> 
+<!-- ********************************************************************** -->
+
+![Comparison of estimates from Stock Synthesis version 3.30 and 3.24 for `r spp`. \label{fig:bridge}](Figures/bridging.png)
+
+\FloatBarrier 
+
+<!-- ====================================================================== -->
+<!-- *********************BASE MODEL FIGURES******************************* -->
+<!-- ====================================================================== -->
+  
+<!-- ***********MODEL 1 BASE MODEL FIGURES********************************* --> 
+
+
+<!-- ********************************************************************** -->
+<!-- *******************Estimated Length-at-Age**************************** --> 
+<!-- ********************************************************************** -->
+
+![Estimated length-at-age for male and female for `r spp` with estimated CV. \label{fig:sizeatage}](r4ss/plots_mod1/bio1_sizeatage.png)
+
+\FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- *******************Selectivity & Retention**************************** --> 
+<!-- ********************************************************************** -->
+
+![Estimated selectivity by length by each fishery and survey for `r spp`. \label{fig:selex}](r4ss/plots_mod1/POP_selectivity.png)
+
+\FloatBarrier 
+
+
+![Estimated retention by length by the trawl fishery for `r spp`. \label{fig:retention}](r4ss/plots_mod1/POP_retention.png)
+
+\FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- ******************** Estimated Recruitment**************************** --> 
+<!-- ********************************************************************** -->
+
+
+![Estimated time-series of recruitment for `r spp`. \label{fig:recuits}](r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of recruitment deviations for `r spp`. \label{fig:recdevs}](r4ss/plots_mod1/recdevs2_withbars.png)
+  
+\FloatBarrier
+
+<!-- ********************************************************************** -->
+<!-- *******************Fits to the Discard Data*************************** --> 
+<!-- ********************************************************************** -->
+
+
+![Estimated fits to the discard rates for `r spp`. \label{fig:discard_fits}](r4ss/plots_mod1/POP_discard_fits.png)
+
+\FloatBarrier 
+
+<!-- ********************************************************************** -->
+<!-- ***********************Fits to the Indices**************************** --> 
+<!-- ********************************************************************** -->
+
+![Estimated fits to the CPUE and survey indices for `r spp`. \label{fig:index_fits}](r4ss/plots_mod1/POP_index_fits.png)
+
+\FloatBarrier 
+
+<!-- ====================================================================== -->
+<!-- ********************Time-Series Figures******************************* -->
+<!-- ====================================================================== -->
+  
+![Estimated time-series of spawning output for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of relative biomass for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+
+  
+<!-- ********************************************************************** -->
+<!-- ****************Length Composition Fits and EffN********************** --> 
+<!-- ********************************************************************** -->
+
+![Length compositions aggregated across time by fleet. Labels 'retained' and 'discard' indicate retained or discarded samples for each fleet. Panels without this designation represent the whole catch. \label{fig:length_agg}](r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png)
+
+```{r, results='asis'}
+
+#Discard
+cat('\n![', LenComp_mod1[2,caption_col], ' \\label{fig:discard_len_pearson}](', LenComp_mod1[2, path_col], ')\n', sep='')
+
+#Fishery
+cat('\n![', LenComp_mod1[9,caption_col], ' \\label{fig:fishery_len_pearson}](', LenComp_mod1[9, path_col], ')\n', sep='')
+
+#ASHOP
+cat('\n![', LenComp_mod1[13,caption_col], ' \\label{fig:ashop_len_pearson}](', LenComp_mod1[13, path_col], ')\n', sep='')
+
+#POP
+cat('\n![', LenComp_mod1[17,caption_col], ' \\label{fig:pop_len_pearson}](', LenComp_mod1[17, path_col], ')\n', sep='')
+
+#Triennial
+cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:tri_len_pearson}](', LenComp_mod1[21, path_col], ')\n', sep='')
+
+#AFSC
+cat('\n![', LenComp_mod1[25,caption_col], ' \\label{fig:afsc_len_pearson}](', LenComp_mod1[25, path_col], ')\n', sep='')
+
+#NWFSC
+cat('\n![', LenComp_mod1[29,caption_col], ' \\label{fig:nwfsc_len_pearson}](', LenComp_mod1[29, path_col], ')\n', sep='')
+
+#NWFSC Combo
+cat('\n![', LenComp_mod1[33,caption_col], ' \\label{fig:nwfsc_combo_len_pearson}](', LenComp_mod1[33, path_col], ')\n', sep='')
+
+```
+
+
+<!-- *************** MEAN LENGTH FITS ********************************-->
+
+```{r, results='asis'}
+
+#Fishery
+cat('\n![', LenComp_mod1[11,caption_col], ' \\label{fig:weighting_fishery}](', LenComp_mod1[11, path_col], ')\n', sep='')
+
+#ASHOP
+cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_ashop}](', LenComp_mod1[15, path_col], ')\n', sep='')
+
+#POP
+cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_pop}](', LenComp_mod1[19, path_col], ')\n', sep='')
+
+#Triennial
+cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
+
+#AFSC
+cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_afsc}](', LenComp_mod1[27, path_col], ')\n', sep='')
+
+#NWFSC
+cat('\n![', LenComp_mod1[31,caption_col], ' \\label{fig:weighting_nwfscslope}](', LenComp_mod1[31, path_col], ')\n', sep='')
+
+#NWFSC Combo
+cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_nwfsccombo}](', LenComp_mod1[35, path_col], ')\n', sep='')
+
+```
+
+
+\FloatBarrier
+
+<!-- ********************************************************************** -->
+<!-- **********************Age structure FIGURES*************************** --> 
+<!-- ********************************************************************** -->
+
+
+![Age compositions aggregated across time by fleet.  \label{fig:length_agg}](r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png)
+
+```{r, results='asis'}
+
+
+#Fishery
+cat('\n![', AgeComp_mod1[3,caption_col], ' \\label{fig:fishery_age_pearson}](', AgeComp_mod1[3, path_col], ')\n', sep='')
+
+#ASHOP
+cat('\n![', AgeComp_mod1[7,caption_col], ' \\label{fig:ashop_age_pearson}](', AgeComp_mod1[7, path_col], ')\n', sep='')
+
+#POP
+cat('\n![', AgeComp_mod1[11,caption_col], ' \\label{fig:pop_age_pearson}](', AgeComp_mod1[11, path_col], ')\n', sep='')
+
+#Triennial
+cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](', AgeComp_mod1[15, path_col], ')\n', sep='')
+
+#NWFSC
+cat('\n![', AgeComp_mod1[19,caption_col], ' \\label{fig:nwfsc__pearson}](', AgeComp_mod1[19, path_col], ')\n', sep='')
+
+#NWFSC Combo
+cat('\n![', AALComp_mod1[1,caption_col], ' \\label{fig:nwsfc_combo_age_aal1}](', AALComp_mod1[1, path_col], ')\n', sep='')
+
+#NWFSC Combo
+cat('\n![', AALComp_mod1[2,caption_col], ' \\label{fig:nwsfc_combo_age_aal2}](', AALComp_mod1[2, path_col], ')\n', sep='')
+
+plot.vec = 4:8
+for(a in 1:length(plot.vec)){
+#NWFSC Combo - Andre plots
+cat('\n![', AALComp_mod1[plot.vec[a],caption_col], ' \\label{fig:nwfsc_combo_andre_',a,'}](', AALComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+}
+
+
+```
+
+
+<!-- *************** MEAN AGE FITS ********************************-->
+
+```{r, results='asis'}
+
+#Fishery
+cat('\n![', AgeComp_mod1[5,caption_col], ' \\label{fig:weighting_fishery}](', AgeComp_mod1[5, path_col], ')\n', sep='')
+
+#ASHOP
+cat('\n![', AgeComp_mod1[9,caption_col], ' \\label{fig:weighting_ashop}](', AgeComp_mod1[9, path_col], ')\n', sep='')
+
+
+#Triennial
+cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_triennial}](', AgeComp_mod1[17, path_col], ')\n', sep='')
+
+
+#NWFSC
+cat('\n![', AgeComp_mod1[21,caption_col], ' \\label{fig:weighting_nwfscslope}](', AgeComp_mod1[21, path_col], ')\n', sep='')
+
+#NWFSC Combo
+cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](', AALComp_mod1[3, path_col], ')\n', sep='')
+
+```
+
+  
+\FloatBarrier
+  
+  
+
+<!-- ********************************************************************** -->
+<!-- ****************Uncertainty and Sensitivity FIGURES******************* -->
+<!-- ********************************************************************** -->
+  
+<!-- ***********MODEL 1 Uncertainty and Sensitivity FIGURES**************** --> 
+  
+![Time-series of spawning output for model sensitivities for `r spp`. \label{fig:sens1_ssb}](Figures/ssb_sens1.png)
+
+\FloatBarrier
+
+![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens1_depl}](Figures/depl_sens1.png)
+
+\FloatBarrier
+
+![Time-series of spawning output for model sensitivities for `r spp`. \label{fig:sens2_ssb}](Figures/ssb_sens2.png)
+
+\FloatBarrier
+
+![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
+
+\FloatBarrier
+  
+  
+  
+  
+  
+<!-- ********************************************************************** -->
+<!-- *****************Retrospective analysis FIGURES*********************** -->
+<!-- ********************************************************************** -->
+
+<!-- ***********MODEL 1 Retrospective analysis FIGURE********************** --> 
+
+![Retrospective pattern for spawning output. \label{fig:retro_sb}](Figures/compare1_spawnbio.png)
+  
+\FloatBarrier
+
+
+![Retrospective pattern for estimated recruitment deviations. \label{fig:retro_recdev}](Figures/compare9_recdevs.png)
+  
+\FloatBarrier
+
+
+<!-- ********************************************************************** -->
+<!-- ******************Likelihood profile FIGURES************************** --> 
+<!-- ********************************************************************** -->
+  
+![Likelihood profile across steepness values. \label{fig:piner_h}](Figures/piner_panel_h.png)
+  
+\FloatBarrier
+
+![Trajectories of relative biomass across values of steepness. \label{fig:h_trajectory}](Figures/h_trajectories.png)
+  
+\FloatBarrier
+  
+  
+<!-- ***********M Likelihood profile FIGURES******************************* -->
+![Likelihood profile across natural mortality values. \label{fig:m_like}](Figures/m_like.png)
+  
+\FloatBarrier
+
+![Trajectories of relative biomass across values of natural mortality. \label{fig:m_trajectory}](Figures/m_trajectories.png)
+  
+\FloatBarrier
+  
+  
+<!-- ***********R0 Likelihood profile FIGURES******************************* -->
+  
+![Likelihood profile across R\textsubscript{0} values. \label{fig:piner_R0}](Figures/piner_panel_R0.png)
+  
+\FloatBarrier
+
+  
+  
+<!-- ********************************************************************** -->
+<!-- *********************REFERENCE POINTS FIGURES************************* --> 
+<!-- ********************************************************************** -->
+  
+<!-- ***********MODEL 1 REFERENCE POINTS FIGURES*************************** --> 
+
+![Estimated spawning potential ratio (1-SPR)/(1-SPR50%) for the base-case model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. The last year in the time series is `r Dat_end_mod1`. \label{fig:SPR}](r4ss/plots_mod1/SPR3_ratiointerval.png)
+  
+  
+\FloatBarrier
+
+![Equilibrium yield curve for the base case model. Values are based on the `r Dat_end_mod1` fishery selectivity and with steepness fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. \label{fig:yield}](r4ss/plots_mod1/yield1_yield_curve.png)
+
+\FloatBarrier
+  
+  
+<!-- ********************************************************************** --> 
+<!-- *************************FORECAST FIGURES***************************** --> 
+<!-- ********************************************************************** --> 
+  
+\newpage
+

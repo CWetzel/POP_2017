@@ -261,7 +261,7 @@ Year & California & Oregon & Washington & At-sea Hake & Research & Total Landing
 
 \begin{figure}
 \centering
-\includegraphics{PacificOceanPerch2017_Assessment_files/figure-latex/unnamed-chunk-11-1.pdf}
+\includegraphics{PacificOceanPerch2017_Assessment_files/figure-latex/unnamed-chunk-13-1.pdf}
 \caption{Landings of Pacific ocean perch for California, Oregon,
 Washington, the Foriegn fishery (1966-1976), At-Sea Hake fishery, and
 fishery independent surveys. \label{fig:Exec_catch1}}
@@ -1993,11 +1993,108 @@ Requests}\label{response-to-the-current-star-panel-requests}
 
 The base model parameter estimates along with approximate asymptotic
 standard errors are shown in Table \ref{tab:model_params} and the
-likelihood components are shown in Table \ref{tab:like}. Estimates of
-key derived parameters and approximate 95\% asymptotic confidence
-intervals are shown in Table \ref{tab:Ref_pts}.
+likelihood components are shown in Table \ref{tab:like}. Time-series of
+estimated stock size over time are shown in Table
+\ref{tab:Timeseries_mdo1}. Estimates of key derived parameters and
+approximate 95\% asymptotic confidence intervals are shown in Table
+\ref{tab:Ref_pts}.
 
 \subsubsection{Parameter Estimates}\label{parameter-estimates}
+
+The estimates of maximum length and the von Bertanlaffy growth
+coefficient, \(k\), were less than the the external estimates for males
+and females (Figure \ref{fig:Len_Age}, but were well within the 95\%
+confidence interval given the estimated uncertainty (Table
+\ref{tab:model_params} and Figure \ref{fig:sizeatage}). Female and male
+Pacific ocean perch grow quickly at younger ages, reaching near
+maximimum length by age 20 with female Pacific ocean perch having a
+larger maximum length.
+
+Selectivity curves were estimated for commercial and survey fleets. The
+estimated selectivity for all fleets within the model are shown in
+Figure \ref{fig:selex}. The fishery selectivity was estimated dome
+shaped, reaching maximum selectivity for fish between 35 and 40 cm. The
+At-Sea Hake fishery was estimated to have little selectivity for smaller
+Pacific ocean perch and only reaching full selectivity at the largest
+sizes. Survey selectivities, excluding the Triennial survey, were
+estimated asymptotic during model explorations with the final
+selectivity fixed asymptotic in the final base model. The Triennial
+survey selectivity peaked at lengths between 25 and 30 cm and declined
+before reaching a constant selectivity for larger Pacific ocean perch.
+The foreign fleet for which only catch data are available was assumed to
+be identical to the main fishery, although a sensitivity was performed
+(not shown) that mirrored the foreign selectivity to that of the Pacific
+ocean perch survey selectivity resulting in only a small difference in
+stock status.
+
+Retention curves were estimated for the fishery fleet only and were
+allowed to vary based upon discard data within the model over time
+(Figure \ref{fig:retention}). Historical retention was estimated high
+and declined over time due to management restriction on catch of Pacific
+ocean perch with the lowest retention occuring in 2009 and 2010 prior to
+the implementation of ITQs. Post-2011 retention was estimated to be
+nearly 100\% for the fishery fleet.
+
+Additional survey variability (process error added directly to each
+year's input variability) for the Triennial and the NWFSC shelf-slope
+surveys were estimated within the model. The estimated added variance
+for the Triennial survey was high at 0.39. The model estimated a small
+added variance for the NWFSC shelf-slope survey of 0.03. Preliminary
+models explored estimating added variance for each of the other indices,
+but resulted in no added variance being estimated and hence where not
+estimated in the base model.
+
+Estimates of recruitment suggest that the Pacific ocean perch population
+is characterized by variable recruitment with occasional strong
+recruitments and periods of low recruitment (Figures \ref{fig:recruits}
+and \ref{fig:recdevs}). There is little information regarding
+recruitment prior to 1970 and the uncertainty in those estimates is
+expressed in the model. The four lowest recruitments (in ascending
+order) occurred in 2012, 2003, 1998, and 2005. There are very large, but
+uncertain, estimates of recruitment in 2008, 2013, 2000, and 1999. The
+2008 recruitment event is estimated to be larger by an order of
+magnitude than any other recruitment estimated in the model. The
+uncertainty interval in number of recruits is large for this year based
+on the uncertainty surrounding the spawning output in that year.
+However, the log recruitment deviation estimated uncertainty is low.
+
+\subsubsection{Fits to the Data}\label{fits-to-the-data}
+
+There are numerous types of data for which the fits are discussed:
+survey abundance indices, discard data (biomass and length
+compositions), length composition data for the fisheries and surveys,
+marginal age compositions for the fisheries and surveys, and conditional
+age-at-length observations for the NWFSC shelf-slope survey
+
+The fits the fishery CPUE and five survey indices are shown in Figure
+\ref{fig:index_fits}. Extra standard error was estimated for the
+Triennial and NWFSC shelf-slope surveys. The fishery CPUE and Pacific
+ocean perch survey index were fit well by the model. The first two years
+of the Triennial survey index, 1980 and 1983, were much higher than the
+later years and were poorly fit by the model. Both the AFSC and NWFSC
+slope survey indices were generally flat and fit well by the model. The
+recent NWFSC shelf-slope survey showed a variable trend over the time
+period with the 2016 data point being the highest estimate of the
+series.
+
+Fits to the total observed discard amounts required time blocks (Figure
+\ref{fig:discard_fits}). Fits to the trawl discards from the Pikitch
+data in 1985-1987 were quite good. Discard rate change modeled over the
+1992 - 2001 was based on management restrictions which were assumed to
+have increased discarding practices in the fishery fleet. The next
+required time block was based on the WCGOP data from 2002-2007 and were
+fit well by the model. Discarding increased prior to the implementation
+to ITQs requiring blocks for 2008 and the 2009-2010 periods. The model
+fit the very low post-ITQ discard rates based on the WCGOP data well.
+
+Fits to the length data are shown based on the proportions of lengths
+observed by year and the Pearson residuals-at-length for all fleets.
+Discard lengths from the Pikitch data (1986) and the WCGOP were fit well
+by the model and show no obvious pattern in the residuals (Figures
+\ref{fig:_mod1_comp_lenfit_flt1mkt} and
+\ref{fig:mod1_2_comp_lenfit_residsflt1mkt1}).
+
+\subsubsection{Population trajectory}\label{population-trajectory}
 
 \subsubsection{Uncertainty and Sensitivity
 Analyses}\label{uncertainty-and-sensitivity-analyses}
@@ -3294,92 +3391,6 @@ Unfished spawning output (million eggs) & 6633.1 &   4736.7 -   8529.5 \\
 
 \newpage
 
-\begin{sidewaystable}[ht]
-\centering
-\caption{Sensitivity of the base model} 
-\label{tab:Sensitivity1}
-\scalebox{0.9}{
-\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
-  \hline
-Label & Base & Harmonic weights & Steepness at prior & Estimate M & Old Maturity & NA \\ 
-  \hline
-Total Likelihood & 1726.16 & 2432.50 & 1726.05 & 1725.66 & 1726.17 & 1726.18 \\ 
-  Survey Likelihood & -25.51 & -25.88 & -24.99 & -25.68 & -25.52 & -25.49 \\ 
-  Discard Likelihood & -34.22 & -27.17 & -34.28 & -34.29 & -34.22 & -34.22 \\ 
-  Length Likelihood & 135.74 & 748.49 & 136.05 & 135.75 & 135.74 & 135.75 \\ 
-  Age Likelihood & 1636.59 & 1717.85 & 1636.26 & 1636.59 & 1636.62 & 1636.58 \\ 
-  Recruitment Likelihood & 12.54 & 18.20 & 12.87 & 12.34 & 12.54 & 12.54 \\ 
-  Forecast Recruitment Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  Parameter Priors Likelihood & 1.00 & 1.00 & 0.13 & 0.94 & 1.00 & 1.00 \\ 
-  Parameter Deviation Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  log(R0) & 9.36 & 9.27 & 9.41 & 9.74 & 9.36 & 9.37 \\ 
-  SB Virgin & 6633.08 & 6136.91 & 6979.48 & 7885.80 & 6505.70 & 7745.48 \\ 
-  SB 2017 & 5047.16 & 4199.96 & 6883.61 & 7436.66 & 5070.80 & 6103.65 \\ 
-  Depletion 2017 & 0.76 & 0.68 & 0.99 & 0.94 & 0.78 & 0.79 \\ 
-  Total Yield & 1764.80 & 1605.33 & 2482.46 & 2329.27 & 1759.53 & 1788.51 \\ 
-  Steepness & 0.50 & 0.50 & 0.72 & 0.50 & 0.50 & 0.50 \\ 
-  Natural Mortality - Female & 0.05 & 0.05 & 0.05 & 0.06 & 0.05 & 0.05 \\ 
-  Length at Amin - Female & 20.78 & 20.87 & 20.79 & 20.78 & 20.78 & 20.78 \\ 
-  Length at Amax - Female & 41.60 & 41.72 & 41.61 & 41.61 & 41.60 & 41.60 \\ 
-  Von Bert. k - Female & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
-  SD young - Female & 1.34 & 1.35 & 1.34 & 1.34 & 1.34 & 1.34 \\ 
-  SD old - Female & 2.56 & 2.76 & 2.56 & 2.56 & 2.56 & 2.56 \\ 
-  Natural Mortality - Male & 0.05 & 0.05 & 0.05 & 0.06 & 0.05 & 0.05 \\ 
-  Length at Amin - Male & 20.78 & 20.87 & 20.79 & 20.78 & 20.78 & 20.78 \\ 
-  Length at Amax - Male & 38.90 & 38.91 & 38.91 & 38.90 & 38.90 & 38.90 \\ 
-  Von Bert. k - Male & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
-  SD young - Male & 1.34 & 1.35 & 1.34 & 1.34 & 1.34 & 1.34 \\ 
-  SD old - Male & 2.29 & 2.60 & 2.29 & 2.29 & 2.29 & 2.29 \\ 
-   \hline
-\end{tabular}
-}
-\end{sidewaystable}
-
-\FloatBarrier 
-
-\begin{sidewaystable}[ht]
-\centering
-\caption{Sensitivity of the base model} 
-\label{tab:Sensitivity2}
-\scalebox{0.9}{
-\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
-  \hline
-Label & Base & Split Triennial & Remove CPUE & Canadian Data & WA Research Lengths & OR Special Projects \\ 
-  \hline
-Total Likelihood & 1726.16 & 1724.43 & 1738.84 & 1829.64 & 1747.71 & 1793.59 \\ 
-  Survey Likelihood & -25.51 & -27.89 & -12.72 & -25.91 & -26.03 & -26.02 \\ 
-  Discard Likelihood & -34.22 & -34.22 & -34.21 & -33.26 & -34.17 & -34.27 \\ 
-  Length Likelihood & 135.74 & 135.54 & 135.66 & 184.34 & 156.08 & 166.78 \\ 
-  Age Likelihood & 1636.59 & 1637.33 & 1636.69 & 1690.33 & 1637.74 & 1671.26 \\ 
-  Recruitment Likelihood & 12.54 & 12.65 & 12.40 & 13.13 & 13.08 & 14.81 \\ 
-  Forecast Recruitment Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  Parameter Priors Likelihood & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\ 
-  Parameter Deviation Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  log(R0) & 9.36 & 9.40 & 9.36 & 9.36 & 9.33 & 9.28 \\ 
-  SB Virgin & 6633.08 & 6884.08 & 6594.29 & 6700.11 & 6356.26 & 6128.38 \\ 
-  SB 2017 & 5047.16 & 5434.58 & 4992.37 & 4716.26 & 4673.44 & 4392.80 \\ 
-  Depletion 2017 & 0.76 & 0.79 & 0.76 & 0.70 & 0.74 & 0.72 \\ 
-  Total Yield & 1764.80 & 1830.92 & 1754.69 & 1777.27 & 1705.62 & 1626.60 \\ 
-  Steepness & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 \\ 
-  Natural Mortality - Female & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
-  Length at Amin - Female & 20.78 & 20.78 & 20.78 & 20.75 & 20.77 & 20.80 \\ 
-  Length at Amax - Female & 41.60 & 41.60 & 41.59 & 41.68 & 41.52 & 41.62 \\ 
-  Von Bert. k - Female & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
-  SD young - Female & 1.34 & 1.34 & 1.34 & 1.35 & 1.34 & 1.33 \\ 
-  SD old - Female & 2.56 & 2.56 & 2.56 & 2.54 & 2.56 & 2.58 \\ 
-  Natural Mortality - Male & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
-  Length at Amin - Male & 20.78 & 20.78 & 20.78 & 20.75 & 20.77 & 20.80 \\ 
-  Length at Amax - Male & 38.90 & 38.91 & 38.90 & 38.96 & 38.87 & 38.93 \\ 
-  Von Bert. k - Male & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
-  SD young - Male & 1.34 & 1.34 & 1.34 & 1.35 & 1.34 & 1.33 \\ 
-  SD old - Male & 2.29 & 2.29 & 2.29 & 2.28 & 2.30 & 2.35 \\ 
-   \hline
-\end{tabular}
-}
-\end{sidewaystable}
-
-\FloatBarrier 
-
 \newpage
 
 \begin{longtable}{c>{\centering}p{.5in}>{\centering}p{.65in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.5in}>{\centering}p{.60in}>{\centering}p{.45in}c}
@@ -3504,6 +3515,92 @@ Year & Total biomass (mt) & Spawning output (million eggs) & Summary biomass 3+ 
 \end{longtable}
 
 \FloatBarrier
+
+\begin{sidewaystable}[ht]
+\centering
+\caption{Sensitivity of the base model} 
+\label{tab:Sensitivity1}
+\scalebox{0.9}{
+\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
+  \hline
+Label & Base & Harmonic weights & Steepness at prior & Estimate M & Old Maturity & NA \\ 
+  \hline
+Total Likelihood & 1726.16 & 2432.50 & 1726.05 & 1725.66 & 1726.17 & 1726.18 \\ 
+  Survey Likelihood & -25.51 & -25.88 & -24.99 & -25.68 & -25.52 & -25.49 \\ 
+  Discard Likelihood & -34.22 & -27.17 & -34.28 & -34.29 & -34.22 & -34.22 \\ 
+  Length Likelihood & 135.74 & 748.49 & 136.05 & 135.75 & 135.74 & 135.75 \\ 
+  Age Likelihood & 1636.59 & 1717.85 & 1636.26 & 1636.59 & 1636.62 & 1636.58 \\ 
+  Recruitment Likelihood & 12.54 & 18.20 & 12.87 & 12.34 & 12.54 & 12.54 \\ 
+  Forecast Recruitment Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+  Parameter Priors Likelihood & 1.00 & 1.00 & 0.13 & 0.94 & 1.00 & 1.00 \\ 
+  Parameter Deviation Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+  log(R0) & 9.36 & 9.27 & 9.41 & 9.74 & 9.36 & 9.37 \\ 
+  SB Virgin & 6633.08 & 6136.91 & 6979.48 & 7885.80 & 6505.70 & 7745.48 \\ 
+  SB 2017 & 5047.16 & 4199.96 & 6883.61 & 7436.66 & 5070.80 & 6103.65 \\ 
+  Depletion 2017 & 0.76 & 0.68 & 0.99 & 0.94 & 0.78 & 0.79 \\ 
+  Total Yield & 1764.80 & 1605.33 & 2482.46 & 2329.27 & 1759.53 & 1788.51 \\ 
+  Steepness & 0.50 & 0.50 & 0.72 & 0.50 & 0.50 & 0.50 \\ 
+  Natural Mortality - Female & 0.05 & 0.05 & 0.05 & 0.06 & 0.05 & 0.05 \\ 
+  Length at Amin - Female & 20.78 & 20.87 & 20.79 & 20.78 & 20.78 & 20.78 \\ 
+  Length at Amax - Female & 41.60 & 41.72 & 41.61 & 41.61 & 41.60 & 41.60 \\ 
+  Von Bert. k - Female & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
+  SD young - Female & 1.34 & 1.35 & 1.34 & 1.34 & 1.34 & 1.34 \\ 
+  SD old - Female & 2.56 & 2.76 & 2.56 & 2.56 & 2.56 & 2.56 \\ 
+  Natural Mortality - Male & 0.05 & 0.05 & 0.05 & 0.06 & 0.05 & 0.05 \\ 
+  Length at Amin - Male & 20.78 & 20.87 & 20.79 & 20.78 & 20.78 & 20.78 \\ 
+  Length at Amax - Male & 38.90 & 38.91 & 38.91 & 38.90 & 38.90 & 38.90 \\ 
+  Von Bert. k - Male & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
+  SD young - Male & 1.34 & 1.35 & 1.34 & 1.34 & 1.34 & 1.34 \\ 
+  SD old - Male & 2.29 & 2.60 & 2.29 & 2.29 & 2.29 & 2.29 \\ 
+   \hline
+\end{tabular}
+}
+\end{sidewaystable}
+
+\FloatBarrier 
+
+\begin{sidewaystable}[ht]
+\centering
+\caption{Sensitivity of the base model} 
+\label{tab:Sensitivity2}
+\scalebox{0.9}{
+\begin{tabular}{l>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}>{\centering}p{.6in}}
+  \hline
+Label & Base & Split Triennial & Remove CPUE & Canadian Data & WA Research Lengths & OR Special Projects \\ 
+  \hline
+Total Likelihood & 1726.16 & 1724.43 & 1738.84 & 1829.64 & 1747.71 & 1793.59 \\ 
+  Survey Likelihood & -25.51 & -27.89 & -12.72 & -25.91 & -26.03 & -26.02 \\ 
+  Discard Likelihood & -34.22 & -34.22 & -34.21 & -33.26 & -34.17 & -34.27 \\ 
+  Length Likelihood & 135.74 & 135.54 & 135.66 & 184.34 & 156.08 & 166.78 \\ 
+  Age Likelihood & 1636.59 & 1637.33 & 1636.69 & 1690.33 & 1637.74 & 1671.26 \\ 
+  Recruitment Likelihood & 12.54 & 12.65 & 12.40 & 13.13 & 13.08 & 14.81 \\ 
+  Forecast Recruitment Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+  Parameter Priors Likelihood & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\ 
+  Parameter Deviation Likelihood & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+  log(R0) & 9.36 & 9.40 & 9.36 & 9.36 & 9.33 & 9.28 \\ 
+  SB Virgin & 6633.08 & 6884.08 & 6594.29 & 6700.11 & 6356.26 & 6128.38 \\ 
+  SB 2017 & 5047.16 & 5434.58 & 4992.37 & 4716.26 & 4673.44 & 4392.80 \\ 
+  Depletion 2017 & 0.76 & 0.79 & 0.76 & 0.70 & 0.74 & 0.72 \\ 
+  Total Yield & 1764.80 & 1830.92 & 1754.69 & 1777.27 & 1705.62 & 1626.60 \\ 
+  Steepness & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 \\ 
+  Natural Mortality - Female & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
+  Length at Amin - Female & 20.78 & 20.78 & 20.78 & 20.75 & 20.77 & 20.80 \\ 
+  Length at Amax - Female & 41.60 & 41.60 & 41.59 & 41.68 & 41.52 & 41.62 \\ 
+  Von Bert. k - Female & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
+  SD young - Female & 1.34 & 1.34 & 1.34 & 1.35 & 1.34 & 1.33 \\ 
+  SD old - Female & 2.56 & 2.56 & 2.56 & 2.54 & 2.56 & 2.58 \\ 
+  Natural Mortality - Male & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
+  Length at Amin - Male & 20.78 & 20.78 & 20.78 & 20.75 & 20.77 & 20.80 \\ 
+  Length at Amax - Male & 38.90 & 38.91 & 38.90 & 38.96 & 38.87 & 38.93 \\ 
+  Von Bert. k - Male & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
+  SD young - Male & 1.34 & 1.34 & 1.34 & 1.35 & 1.34 & 1.33 \\ 
+  SD old - Male & 2.29 & 2.29 & 2.29 & 2.28 & 2.30 & 2.35 \\ 
+   \hline
+\end{tabular}
+}
+\end{sidewaystable}
+
+\FloatBarrier 
 
 \newpage
 
@@ -3933,6 +4030,24 @@ ocean perch. \label{fig:retention}}
 
 \begin{figure}
 \centering
+\includegraphics{r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+\caption{Estimated time-series of recruitment for Pacific ocean perch.
+\label{fig:recuits}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/recdevs2_withbars.png}
+\caption{Estimated time-series of recruitment deviations for Pacific
+ocean perch. \label{fig:recdevs}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
 \includegraphics{r4ss/plots_mod1/POP_discard_fits.png}
 \caption{Estimated fits to the discard rates for Pacific ocean perch.
 \label{fig:discard_fits}}
@@ -3969,27 +4084,11 @@ perch. \label{fig:depl}}
 
 \begin{figure}
 \centering
-\includegraphics{r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
-\caption{Estimated time-series of recruitment for Pacific ocean perch.
-\label{fig:recuits}}
-\end{figure}
-
-\FloatBarrier
-
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/recdevs2_withbars.png}
-\caption{Estimated time-series of recruitment deviations for Pacific
-ocean perch. \label{fig:recdevs}}
-\end{figure}
-
-\FloatBarrier
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt1mkt1.png}
-\caption{Length comps, discard, Fishery
-\label{fig:mod1_1_comp_lenfit_flt1mkt1}}
+\includegraphics{r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png}
+\caption{Length compositions aggregated across time by fleet. Labels
+`retained' and `discard' indicate retained or discarded samples for each
+fleet. Panels without this designation represent the whole catch.
+\label{fig:length_agg}}
 \end{figure}
 
 \begin{figure}
@@ -3998,54 +4097,7 @@ ocean perch. \label{fig:recdevs}}
 \caption{Pearson residuals, discard, Fishery (max=3.78)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_2_comp_lenfit_residsflt1mkt1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt1mkt1.png}
-\caption{N\_EffN comparison, Length comps, discard, Fishery
-\label{fig:mod1_3_comp_lenfit_sampsize_flt1mkt1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_data_weighting_TA1.8_Fishery.png}
-\caption{Francis data weighting method TA1.8: Fishery Suggested sample
-size adjustment (with 95\% interval) for len data from Fishery: 0.9951
-(0.6654\_1.8149) For more info, see Francis, R.I.C.C. (2011). Data
-weighting in statistical fisheries stock assessment models. Can. J.
-Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_4_comp_lenfit_data_weighting_TA1.8_Fishery}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt1mkt2_page1.png}
-\caption{Length comps, retained, Fishery (plot 1 of 4)
-\label{fig:mod1_5_comp_lenfit_flt1mkt2_page1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt1mkt2_page2.png}
-\caption{Length comps, retained, Fishery (plot 1 of 4) (plot 2 of 4)
-\label{fig:mod1_6_comp_lenfit_flt1mkt2_page2}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt1mkt2_page3.png}
-\caption{Length comps, retained, Fishery (plot 1 of 4) (plot 2 of 4)
-(plot 3 of 4) \label{fig:mod1_7_comp_lenfit_flt1mkt2_page3}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt1mkt2_page4.png}
-\caption{Length comps, retained, Fishery (plot 1 of 4) (plot 2 of 4)
-(plot 3 of 4) (plot 4 of 4)
-\label{fig:mod1_8_comp_lenfit_flt1mkt2_page4}}
+\label{fig:discard_len_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4054,32 +4106,7 @@ Fish. Aquat. Sci. 68: 1124\_1138.
 \caption{Pearson residuals, retained, Fishery (max=3.2) (plot 4 of 4)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_9_comp_lenfit_residsflt1mkt2_page4}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt1mkt2.png}
-\caption{N\_EffN comparison, Length comps, retained, Fishery
-\label{fig:mod1_10_comp_lenfit_sampsize_flt1mkt2}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_data_weighting_TA1.8_Fishery.png}
-\caption{Francis data weighting method TA1.8: Fishery Suggested sample
-size adjustment (with 95\% interval) for len data from Fishery: 0.9951
-(0.6685\_1.8165) For more info, see Francis, R.I.C.C. (2011). Data
-weighting in statistical fisheries stock assessment models. Can. J.
-Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_11_comp_lenfit_data_weighting_TA1.8_Fishery}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt2mkt0.png}
-\caption{Length comps, whole catch, At\_sea hake
-\label{fig:mod1_12_comp_lenfit_flt2mkt0}}
+\label{fig:fishery_len_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4088,32 +4115,7 @@ Fish. Aquat. Sci. 68: 1124\_1138.
 \caption{Pearson residuals, whole catch, At\_sea hake (max=2.36)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_13_comp_lenfit_residsflt2mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt2mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, At\_sea hake
-\label{fig:mod1_14_comp_lenfit_sampsize_flt2mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_data_weighting_TA1.8_At-sea hake.png}
-\caption{Francis data weighting method TA1.8: At\_sea hake Suggested
-sample size adjustment (with 95\% interval) for len data from At\_sea
-hake: 1.0115 (0.5352\_4.8582) For more info, see Francis, R.I.C.C.
-(2011). Data weighting in statistical fisheries stock assessment models.
-Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_15_comp_lenfit_data_weighting_TA1.8_At-sea hake}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt4mkt0.png}
-\caption{Length comps, whole catch, Pacific ocean perch survey
-\label{fig:mod1_16_comp_lenfit_flt4mkt0}}
+\label{fig:ashop_len_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4123,14 +4125,64 @@ Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
 (max=1.74)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_17_comp_lenfit_residsflt4mkt0}}
+\label{fig:pop_len_pearson}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt4mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, Pacific ocean
-perch survey \label{fig:mod1_18_comp_lenfit_sampsize_flt4mkt0}}
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt5mkt0.png}
+\caption{Pearson residuals, whole catch, Triennial survey (max=4.01)\\
+Closed bubbles are positive residuals (observed \textgreater{} expected)
+and open bubbles are negative residuals (observed \textless{} expected).
+\label{fig:tri_len_pearson}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt6mkt0.png}
+\caption{Pearson residuals, whole catch, AFSC slope survey (max=2.91)\\
+Closed bubbles are positive residuals (observed \textgreater{} expected)
+and open bubbles are negative residuals (observed \textless{} expected).
+\label{fig:afsc_len_pearson}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt7mkt0.png}
+\caption{Pearson residuals, whole catch, NWFSC slope survey (max=3.46)\\
+Closed bubbles are positive residuals (observed \textgreater{} expected)
+and open bubbles are negative residuals (observed \textless{} expected).
+\label{fig:nwfsc_len_pearson}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt8mkt0.png}
+\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
+(max=2.74)\\
+Closed bubbles are positive residuals (observed \textgreater{} expected)
+and open bubbles are negative residuals (observed \textless{} expected).
+\label{fig:nwfsc_combo_len_pearson}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_data_weighting_TA1.8_Fishery.png}
+\caption{Francis data weighting method TA1.8: Fishery Suggested sample
+size adjustment (with 95\% interval) for len data from Fishery: 0.9951
+(0.6685\_1.8165) For more info, see Francis, R.I.C.C. (2011). Data
+weighting in statistical fisheries stock assessment models. Can. J.
+Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_fishery}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_lenfit_data_weighting_TA1.8_At-sea hake.png}
+\caption{Francis data weighting method TA1.8: At\_sea hake Suggested
+sample size adjustment (with 95\% interval) for len data from At\_sea
+hake: 1.0115 (0.5352\_4.8582) For more info, see Francis, R.I.C.C.
+(2011). Data weighting in statistical fisheries stock assessment models.
+Can. J. Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_ashop}}
 \end{figure}
 
 \begin{figure}
@@ -4141,30 +4193,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 Pacific ocean perch survey: 6.7496 (6.7496\_Inf) For more info, see
 Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_19_comp_lenfit_data_weighting_TA1.8_Pacific ocean perch survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt5mkt0.png}
-\caption{Length comps, whole catch, Triennial survey
-\label{fig:mod1_20_comp_lenfit_flt5mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt5mkt0.png}
-\caption{Pearson residuals, whole catch, Triennial survey (max=4.01)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_21_comp_lenfit_residsflt5mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt5mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, Triennial survey
-\label{fig:mod1_22_comp_lenfit_sampsize_flt5mkt0}}
+\label{fig:weighting_pop}}
 \end{figure}
 
 \begin{figure}
@@ -4175,30 +4204,7 @@ sample size adjustment (with 95\% interval) for len data from Triennial
 survey: 1.0004 (0.5362\_5.786) For more info, see Francis, R.I.C.C.
 (2011). Data weighting in statistical fisheries stock assessment models.
 Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_23_comp_lenfit_data_weighting_TA1.8_Triennial survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt6mkt0.png}
-\caption{Length comps, whole catch, AFSC slope survey
-\label{fig:mod1_24_comp_lenfit_flt6mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt6mkt0.png}
-\caption{Pearson residuals, whole catch, AFSC slope survey (max=2.91)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_25_comp_lenfit_residsflt6mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt6mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, AFSC slope
-survey \label{fig:mod1_26_comp_lenfit_sampsize_flt6mkt0}}
+\label{fig:weighting_triennial}}
 \end{figure}
 
 \begin{figure}
@@ -4209,30 +4215,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 AFSC slope survey: 1.0151 (0.5859\_16.7225) For more info, see Francis,
 R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_27_comp_lenfit_data_weighting_TA1.8_AFSC slope survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt7mkt0.png}
-\caption{Length comps, whole catch, NWFSC slope survey
-\label{fig:mod1_28_comp_lenfit_flt7mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt7mkt0.png}
-\caption{Pearson residuals, whole catch, NWFSC slope survey (max=3.46)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_29_comp_lenfit_residsflt7mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt7mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, NWFSC slope
-survey \label{fig:mod1_30_comp_lenfit_sampsize_flt7mkt0}}
+\label{fig:weighting_afsc}}
 \end{figure}
 
 \begin{figure}
@@ -4243,31 +4226,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 NWFSC slope survey: 0.9922 (0.9922\_Inf) For more info, see Francis,
 R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_31_comp_lenfit_data_weighting_TA1.8_NWFSC slope survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_flt8mkt0.png}
-\caption{Length comps, whole catch, NWFSC shelf\_slope survey
-\label{fig:mod1_32_comp_lenfit_flt8mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_residsflt8mkt0.png}
-\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
-(max=2.74)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_33_comp_lenfit_residsflt8mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit_sampsize_flt8mkt0.png}
-\caption{N\_EffN comparison, Length comps, whole catch, NWFSC
-shelf\_slope survey \label{fig:mod1_34_comp_lenfit_sampsize_flt8mkt0}}
+\label{fig:weighting_nwfscslope}}
 \end{figure}
 
 \begin{figure}
@@ -4278,32 +4237,16 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 NWFSC shelf\_slope survey: 1.0055 (0.6199\_4.021) For more info, see
 Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_35_comp_lenfit_data_weighting_TA1.8_NWFSC shelf-slope survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png}
-\caption{Length comps, aggregated across time by fleet. Labels
-`retained' and `discard' indicate discarded or retained sampled for each
-fleet. Panels without this designation represent the whole catch.
-\label{fig:mod1_36_comp_lenfit__aggregated_across_time}}
+\label{fig:weighting_nwfsccombo}}
 \end{figure}
 
 \FloatBarrier
 
 \begin{figure}
 \centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt1mkt2_page1.png}
-\caption{Age comps, retained, Fishery (plot 1 of 2)
-\label{fig:mod1_1_comp_agefit_flt1mkt2_page1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt1mkt2_page2.png}
-\caption{Age comps, retained, Fishery (plot 1 of 2) (plot 2 of 2)
-\label{fig:mod1_2_comp_agefit_flt1mkt2_page2}}
+\includegraphics{r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png}
+\caption{Age compositions aggregated across time by fleet.
+\label{fig:length_agg}}
 \end{figure}
 
 \begin{figure}
@@ -4312,32 +4255,7 @@ fleet. Panels without this designation represent the whole catch.
 \caption{Pearson residuals, retained, Fishery (max=5.4) (plot 2 of 2)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_3_comp_agefit_residsflt1mkt2_page2}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_sampsize_flt1mkt2.png}
-\caption{N\_EffN comparison, Age comps, retained, Fishery
-\label{fig:mod1_4_comp_agefit_sampsize_flt1mkt2}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_data_weighting_TA1.8_Fishery.png}
-\caption{Francis data weighting method TA1.8: Fishery Suggested sample
-size adjustment (with 95\% interval) for age data from Fishery: 0.9921
-(0.6365\_1.9959) For more info, see Francis, R.I.C.C. (2011). Data
-weighting in statistical fisheries stock assessment models. Can. J.
-Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_5_comp_agefit_data_weighting_TA1.8_Fishery}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt2mkt0.png}
-\caption{Age comps, whole catch, At\_sea hake
-\label{fig:mod1_6_comp_agefit_flt2mkt0}}
+\label{fig:fishery_age_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4346,32 +4264,7 @@ Fish. Aquat. Sci. 68: 1124\_1138.
 \caption{Pearson residuals, whole catch, At\_sea hake (max=4.08)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_7_comp_agefit_residsflt2mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_sampsize_flt2mkt0.png}
-\caption{N\_EffN comparison, Age comps, whole catch, At\_sea hake
-\label{fig:mod1_8_comp_agefit_sampsize_flt2mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_data_weighting_TA1.8_At-sea hake.png}
-\caption{Francis data weighting method TA1.8: At\_sea hake Suggested
-sample size adjustment (with 95\% interval) for age data from At\_sea
-hake: 0.9921 (0.6459\_1420.3157) For more info, see Francis, R.I.C.C.
-(2011). Data weighting in statistical fisheries stock assessment models.
-Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_9_comp_agefit_data_weighting_TA1.8_At-sea hake}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt4mkt0.png}
-\caption{Age comps, whole catch, Pacific ocean perch survey
-\label{fig:mod1_10_comp_agefit_flt4mkt0}}
+\label{fig:ashop_age_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4381,31 +4274,7 @@ Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
 (max=2.76)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_11_comp_agefit_residsflt4mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_sampsize_flt4mkt0.png}
-\caption{N\_EffN comparison, Age comps, whole catch, Pacific ocean perch
-survey \label{fig:mod1_12_comp_agefit_sampsize_flt4mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_data_weighting_TA1.8_Pacific ocean perch survey.png}
-\caption{Francis data weighting method TA1.8: Pacific ocean perch survey
-Too few points to calculate adjustments For more info, see Francis,
-R.I.C.C. (2011). Data weighting in statistical fisheries stock
-assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_13_comp_agefit_data_weighting_TA1.8_Pacific ocean perch survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt5mkt0.png}
-\caption{Age comps, whole catch, Triennial survey
-\label{fig:mod1_14_comp_agefit_flt5mkt0}}
+\label{fig:pop_age_pearson}}
 \end{figure}
 
 \begin{figure}
@@ -4414,14 +4283,106 @@ assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
 \caption{Pearson residuals, whole catch, Triennial survey (max=3.75)\\
 Closed bubbles are positive residuals (observed \textgreater{} expected)
 and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_15_comp_agefit_residsflt5mkt0}}
+\label{fig:tri_age_pearson}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_sampsize_flt5mkt0.png}
-\caption{N\_EffN comparison, Age comps, whole catch, Triennial survey
-\label{fig:mod1_16_comp_agefit_sampsize_flt5mkt0}}
+\includegraphics{./r4ss/plots_mod1/comp_agefit_residsflt7mkt0.png}
+\caption{Pearson residuals, whole catch, NWFSC slope survey (max=2.34)\\
+Closed bubbles are positive residuals (observed \textgreater{} expected)
+and open bubbles are negative residuals (observed \textless{} expected).
+\label{fig:nwfsc__pearson}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_residsflt8mkt0_page1.png}
+\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
+(max=18.49) (plot 1 of 2) \label{fig:nwsfc_combo_age_aal1}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_residsflt8mkt0_page2.png}
+\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
+(max=18.49) (plot 1 of 2) (plot 2 of 2)
+\label{fig:nwsfc_combo_age_aal2}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page1.png}
+\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
+(plot 1 of 5) These plots show mean age and std. dev. in conditional
+AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
+CIs based on adding 1.64 SE of mean to the data. Right plots in each
+pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
+chi\_square distribution. \label{fig:nwfsc_combo_andre_1}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page2.png}
+\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
+(plot 2 of 5) These plots show mean age and std. dev. in conditional
+AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
+CIs based on adding 1.64 SE of mean to the data. Right plots in each
+pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
+chi\_square distribution. \label{fig:nwfsc_combo_andre_2}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page3.png}
+\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
+(plot 3 of 5) These plots show mean age and std. dev. in conditional
+AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
+CIs based on adding 1.64 SE of mean to the data. Right plots in each
+pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
+chi\_square distribution. \label{fig:nwfsc_combo_andre_3}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page4.png}
+\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
+(plot 4 of 5) These plots show mean age and std. dev. in conditional
+AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
+CIs based on adding 1.64 SE of mean to the data. Right plots in each
+pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
+chi\_square distribution. \label{fig:nwfsc_combo_andre_4}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page5.png}
+\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
+(plot 5 of 5) These plots show mean age and std. dev. in conditional
+AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
+CIs based on adding 1.64 SE of mean to the data. Right plots in each
+pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
+chi\_square distribution. \label{fig:nwfsc_combo_andre_5}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_agefit_data_weighting_TA1.8_Fishery.png}
+\caption{Francis data weighting method TA1.8: Fishery Suggested sample
+size adjustment (with 95\% interval) for age data from Fishery: 0.9921
+(0.6365\_1.9959) For more info, see Francis, R.I.C.C. (2011). Data
+weighting in statistical fisheries stock assessment models. Can. J.
+Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_fishery}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./r4ss/plots_mod1/comp_agefit_data_weighting_TA1.8_At-sea hake.png}
+\caption{Francis data weighting method TA1.8: At\_sea hake Suggested
+sample size adjustment (with 95\% interval) for age data from At\_sea
+hake: 0.9921 (0.6459\_1420.3157) For more info, see Francis, R.I.C.C.
+(2011). Data weighting in statistical fisheries stock assessment models.
+Can. J. Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_ashop}}
 \end{figure}
 
 \begin{figure}
@@ -4432,30 +4393,7 @@ sample size adjustment (with 95\% interval) for age data from Triennial
 survey: 1.0019 (0.6421\_5.1354) For more info, see Francis, R.I.C.C.
 (2011). Data weighting in statistical fisheries stock assessment models.
 Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_17_comp_agefit_data_weighting_TA1.8_Triennial survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_flt7mkt0.png}
-\caption{Age comps, whole catch, NWFSC slope survey
-\label{fig:mod1_18_comp_agefit_flt7mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_residsflt7mkt0.png}
-\caption{Pearson residuals, whole catch, NWFSC slope survey (max=2.34)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_19_comp_agefit_residsflt7mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit_sampsize_flt7mkt0.png}
-\caption{N\_EffN comparison, Age comps, whole catch, NWFSC slope survey
-\label{fig:mod1_20_comp_agefit_sampsize_flt7mkt0}}
+\label{fig:weighting_triennial}}
 \end{figure}
 
 \begin{figure}
@@ -4466,49 +4404,7 @@ Suggested sample size adjustment (with 95\% interval) for age data from
 NWFSC slope survey: 0.9998 (0.9998\_Inf) For more info, see Francis,
 R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_21_comp_agefit_data_weighting_TA1.8_NWFSC slope survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_agefit__aggregated_across_time.png}
-\caption{Age comps, aggregated across time by fleet. Labels `retained'
-and `discard' indicate discarded or retained sampled for each fleet.
-Panels without this designation represent the whole catch.
-\label{fig:mod1_22_comp_agefit__aggregated_across_time}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_gstagefit_flt8mkt0.png}
-\caption{Ghost age comps, whole catch, NWFSC shelf\_slope survey
-\label{fig:mod1_23_comp_gstagefit_flt8mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_gstagefit_residsflt8mkt0.png}
-\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
-(max=NA)\\
-Closed bubbles are positive residuals (observed \textgreater{} expected)
-and open bubbles are negative residuals (observed \textless{} expected).
-\label{fig:mod1_24_comp_gstagefit_residsflt8mkt0}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_residsflt8mkt0_page1.png}
-\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
-(max=18.49) (plot 1 of 2)
-\label{fig:mod1_1_comp_condAALfit_residsflt8mkt0_page1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_residsflt8mkt0_page2.png}
-\caption{Pearson residuals, whole catch, NWFSC shelf\_slope survey
-(max=18.49) (plot 1 of 2) (plot 2 of 2)
-\label{fig:mod1_2_comp_condAALfit_residsflt8mkt0_page2}}
+\label{fig:weighting_nwfscslope}}
 \end{figure}
 
 \begin{figure}
@@ -4520,67 +4416,7 @@ adjustment(with 95\% interval) forconditional age\_at\_length data from
 NWFSC shelf\_slope survey: 1.0131 (0.5851\_3.0487) For more info, see
 Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:mod1_3_comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC shelf-slope survey}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page1.png}
-\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
-(plot 1 of 5) These plots show mean age and std. dev. in conditional
-AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
-CIs based on adding 1.64 SE of mean to the data. Right plots in each
-pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
-chi\_square distribution.
-\label{fig:mod1_4_comp_condAALfit_Andre_plotsflt8mkt0_page1}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page2.png}
-\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
-(plot 2 of 5) These plots show mean age and std. dev. in conditional
-AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
-CIs based on adding 1.64 SE of mean to the data. Right plots in each
-pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
-chi\_square distribution.
-\label{fig:mod1_5_comp_condAALfit_Andre_plotsflt8mkt0_page2}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page3.png}
-\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
-(plot 3 of 5) These plots show mean age and std. dev. in conditional
-AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
-CIs based on adding 1.64 SE of mean to the data. Right plots in each
-pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
-chi\_square distribution.
-\label{fig:mod1_6_comp_condAALfit_Andre_plotsflt8mkt0_page3}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page4.png}
-\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
-(plot 4 of 5) These plots show mean age and std. dev. in conditional
-AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
-CIs based on adding 1.64 SE of mean to the data. Right plots in each
-pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
-chi\_square distribution.
-\label{fig:mod1_7_comp_condAALfit_Andre_plotsflt8mkt0_page4}}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{./r4ss/plots_mod1/comp_condAALfit_Andre_plotsflt8mkt0_page5.png}
-\caption{Conditional AAL plot, whole catch, NWFSC shelf\_slope survey
-(plot 5 of 5) These plots show mean age and std. dev. in conditional
-AAL. Left plots are mean AAL by size\_class (obs. and pred.) with 90\%
-CIs based on adding 1.64 SE of mean to the data. Right plots in each
-pair are SE of mean AAL (obs. and pred.) with 90\% CIs based on the
-chi\_square distribution.
-\label{fig:mod1_8_comp_condAALfit_Andre_plotsflt8mkt0_page5}}
+\label{fig:weighting_nwfsccombo}}
 \end{figure}
 
 \FloatBarrier

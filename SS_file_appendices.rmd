@@ -14,45 +14,85 @@ output:
 \FloatBarrier
 \newpage
 
+<!-- ************************************DATA FITS************************************************--> 
+#Appendix A.
+
+##Length Compositions
+
+```{r, results='asis'}
+
+plot.vec = c(1, 5:8, 12, 16, 20, 24, 28,32)
+
+for (a in 1:length(plot.vec)){
+
+  cat('\n![', LenComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', LenComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  
+}
+
+```
+
+\FloatBarrier
+
+##Age Compositions
+
+```{r, results='asis'}
+
+plot.vec = c(1:2, 6, 10, 14, 23)
+name.vec = c("")
+
+for (a in 1:length(plot.vec)){
+
+  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  
+}
+
+```
+
+\FloatBarrier
+\newpage
+
+\renewcommand{\thepage}{A-\arabic{page}}
+\setcounter{page}{1}
+
 <!-- ************************************DATA FILE(S)************************************************--> 
-#Appendix A. SS data file {-}
+#Appendix B. SS data file {-}
 \renewcommand{\thepage}{A-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_data = writeLines(readLines('./SS/linebreak_files/mod1_data.ss'))
+mod1_data = writeLines(readLines('./SS/linebreak_files/2017pop.dat'))
 ```
 
 \newpage
 
 <!-- **********************************CONTROL FILE(S)***********************************************-->
-#Appendix B. SS control file{-}
+#Appendix C. SS control file{-}
 \renewcommand{\thepage}{B-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_control = writeLines(readLines('./SS/linebreak_files/mod1_control.ss'))
+mod1_control = writeLines(readLines('./SS/linebreak_files/2017pop.ctl'))
 ```
 
 \newpage
 
 <!-- *********************************STARTER FILE(S)*************************************************-->
-#Appendix C. SS starter file{-}
+#Appendix D. SS starter file{-}
 \renewcommand{\thepage}{C-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_starter = writeLines(readLines('./SS/linebreak_files/mod1_starter.ss'))
+mod1_starter = writeLines(readLines('./SS/linebreak_files/starter.ss'))
 ```
 \newpage
 
 <!-- ********************************FORECAST FILE(S)**************************************************-->
-#Appendix D. SS forecast file{-}
+#Appendix E. SS forecast file{-}
 \renewcommand{\thepage}{D-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_forecast = writeLines(readLines('./SS/linebreak_files/mod1_forecast.ss'))
+mod1_forecast = writeLines(readLines('./SS/linebreak_files/forecast.ss'))
 ```
 \newpage
 
