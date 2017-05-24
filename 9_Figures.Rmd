@@ -253,7 +253,7 @@
 <!-- ********************************************************************** -->
 
 
-![Estimated time-series of recruitment for `r spp`. \label{fig:recuits}](r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+![Estimated time-series of recruitment for `r spp`. \label{fig:recruits}](r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
   
 \FloatBarrier
 
@@ -278,17 +278,7 @@
 
 \FloatBarrier 
 
-<!-- ====================================================================== -->
-<!-- ********************Time-Series Figures******************************* -->
-<!-- ====================================================================== -->
-  
-![Estimated time-series of spawning output for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
-  
-\FloatBarrier
 
-![Estimated time-series of relative biomass for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
-  
-\FloatBarrier
 
 
   
@@ -332,25 +322,25 @@ cat('\n![', LenComp_mod1[33,caption_col], ' \\label{fig:nwfsc_combo_len_pearson}
 ```{r, results='asis'}
 
 #Fishery
-cat('\n![', LenComp_mod1[11,caption_col], ' \\label{fig:weighting_fishery}](', LenComp_mod1[11, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[11,caption_col], ' \\label{fig:weighting_len_fishery}](', LenComp_mod1[11, path_col], ')\n', sep='')
 
 #ASHOP
-cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_ashop}](', LenComp_mod1[15, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_len_ashop}](', LenComp_mod1[15, path_col], ')\n', sep='')
 
 #POP
-cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_pop}](', LenComp_mod1[19, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_len_pop}](', LenComp_mod1[19, path_col], ')\n', sep='')
 
 #Triennial
-cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
 
 #AFSC
-cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_afsc}](', LenComp_mod1[27, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_len_afsc}](', LenComp_mod1[27, path_col], ')\n', sep='')
 
 #NWFSC
-cat('\n![', LenComp_mod1[31,caption_col], ' \\label{fig:weighting_nwfscslope}](', LenComp_mod1[31, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[31,caption_col], ' \\label{fig:weighting_len_nwfsc}](', LenComp_mod1[31, path_col], ')\n', sep='')
 
 #NWFSC Combo
-cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_nwfsccombo}](', LenComp_mod1[35, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_len_nwfsccombo}](', LenComp_mod1[35, path_col], ')\n', sep='')
 
 ```
 
@@ -423,6 +413,24 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](',
 
   
 \FloatBarrier
+
+<!-- ====================================================================== -->
+<!-- ********************Time-Series Figures******************************* -->
+<!-- ====================================================================== -->
+  
+![Estimated time-series of spawning output for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+![Estimated time-series of total biomass for `r spp`. \label{total_bio}](r4ss/plots_mod1/ts1_Total_biomass_(mt).png)
+
+\FloatBarrier
+
+![Estimated time-series of relative biomass for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+  
+\FloatBarrier
+
+![Estimated recruitment (red circles) and the assumed stock-recruit relationship (black line).  The green line shows the effect of the bias correction for the lognormal distribution \label{fig:stock_recruit_curve}](r4ss/plots_mod1/SR_curve2.png)
   
   
 

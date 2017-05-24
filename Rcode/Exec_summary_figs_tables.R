@@ -734,3 +734,5 @@ align(mngmnt.table) = c('l',
   ssb.yr = substring(temp$Label, 5)
   low.ssb = ssb.yr[ind]
   
+  low.dep.value = paste0( round(100*mod$derived_quants[mod$derived_quants$Label == paste0("SPB_", low.ssb), 'Value'] / 
+                         mod$derived_quants[mod$derived_quants$Label == "SPB_Virgin", 'Value'],1), "%")

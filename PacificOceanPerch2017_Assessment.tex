@@ -1995,7 +1995,7 @@ The base model parameter estimates along with approximate asymptotic
 standard errors are shown in Table \ref{tab:model_params} and the
 likelihood components are shown in Table \ref{tab:like}. Time-series of
 estimated stock size over time are shown in Table
-\ref{tab:Timeseries_mdo1}. Estimates of key derived parameters and
+\ref{tab:Timeseries_mod1}. Estimates of key derived parameters and
 approximate 95\% asymptotic confidence intervals are shown in Table
 \ref{tab:Ref_pts}.
 
@@ -2089,12 +2089,103 @@ fit the very low post-ITQ discard rates based on the WCGOP data well.
 
 Fits to the length data are shown based on the proportions of lengths
 observed by year and the Pearson residuals-at-length for all fleets.
+Aggregate fits by fleet are shown in Figure \ref{fig:length_agg}. There
+are a few things that stand out when examining the aggregated length
+composition data. First, the sexed discard lengths appear to be poorly
+fit by the model but this is related to small sample sizes. The NWFS
+slope survey lengths were under estimated by the model, but these data
+are over only two years. Finally, both the Triennial and the NWFSC
+shelf-slope surveys select both young and old fish in contrast to the
+other data sources where larger fish were observed.
+
 Discard lengths from the Pikitch data (1986) and the WCGOP were fit well
-by the model and show no obvious pattern in the residuals (Figures
-\ref{fig:_mod1_comp_lenfit_flt1mkt} and
-\ref{fig:mod1_2_comp_lenfit_residsflt1mkt1}).
+by the model and show no obvious pattern in the residuals (Figure
+\ref{fig:discard_len_pearson}). The residuals to the fishery lengths
+clearly showed the growth differential between males and females where
+the majority of residuals at larger sizes were from female fish (Figure
+\ref{fig:fishery_len_pearson}). The fishery showed large positive
+residuals for smaller fish for 2013-2016 which are attributed to the
+strong 2008 year class moving through the fishery. The At-sea hake
+fishery did not show an obvious pattern in residuals but clearly showed
+the selectivity of the fishery for larger fish
+(\ref{fig:ashop_len_pearson}). The residuals for each of the surveys are
+shown in Figures \ref{fig:pop_len_pearson}, \ref{fig:tri_len_pearson},
+\ref{fig:afsc_len_pearson}, \ref{fig:nwfsc_len_pearson}, and
+\ref{fig:nwfsc_combo_len_pearson}. The Pearson residuals from the NWFSC
+shelf-slope survey clearly showed the strong year classes moving through
+the population.
+
+The model was weighted according the Francis weighting which adjust the
+weight given to a data set based on the fit to the mean lengths by year.
+The mean lengths and the estimated model fits are shown in Figures
+\ref{fig:weighting_len_fishery}, \ref{fig:weighting_len_ashop},
+\ref{fig:weighting_len_pop}, \ref{fig:weighting_len_triennial},
+\ref{fig:weighting_len_afsc}, \ref{fig:weighting_len_nwfsc}, and
+\ref{fig:weighting_len_nwfsccombo}. The mean lengths from the fishery
+were consistent across the sampled period (Figure
+\ref{fig:weighting_fishery}), showing only a decline in the mean length
+in 2013-2015 likely due to the large 2008 cohort. The At-sea hake
+fishery showed and increase in the mean length of fish observed to 2009
+and then fluctuated at larger lengths (Figure
+\ref{fig:weighting_ashop}). The mean length for the NWFSC shelf-slope
+survey declined in 2012 and 2016 due to a large observation of young
+small fish by the survey (Figure \ref{fig:weighting_nwfsccombo}).
+
+AGE DATA FITS
+
+COND AGE DATA FITS
+
+MEAN AGE DATA FITS
 
 \subsubsection{Population trajectory}\label{population-trajectory}
+
+The predicted spawning outupt (in millions of eggs) is given in Table
+\ref{tab:Timeseries_mod1} and plotted in Figure \ref{fig:ssb}. The
+predicted spawning output from the base model generally showed a slight
+decline over the time series until when the foreign fleet began. A
+short, but sharp decline occurred during the period of the foreign
+fishery in the late 1960s. The stock continued to decline until 2000
+when a combination of strong recruitment and low catches resulted in an
+increase at the end of the time series. The recent increase is even
+faster for total biomass (Figure \ref{fig:total_bio}) because not all
+fish from the 2008 recruitment are mature (Figure
+\ref{fig:mat_compare}). The 2017 spawning biomass relative to unfished
+equilibrium spawning biomass is above the target of 40\% of unfished
+spawning biomass (76.1\%), with a low of 34.5\% in 1994 (Figure
+\ref{fig:depl}). Approximate confidence intervals based on the
+asymptotic variance estimates show that the uncertainty in the estimated
+spawning biomass is high, especially in the early years. The standard
+deviation of the log of the spawning biomass in 2017 is \hl{0.18}.
+
+Recruitment deviations were estimated for the entire time series that
+was modeled (Figure \ref{fig:recruits} and discussed in Section
+\ref{parameter-estimates}) and provide a more realistic portrayal of
+uncertainty. Recruitment predictions from the mid-1970s and early 1980s
+were mostly below average, with the 1999, 2000, 2008, and 2013 cohorts
+being the strongest over the modeled period. Many other stock
+assessments of rockfish along the west coast of the US have estimated a
+large recruitment event in 1999 (e.g., greenstriped rockfish (Hicks et
+al. (\protect\hyperlink{ref-hicks_status_2009}{2009}){]}) chilipepper
+rockfish (Field \protect\hyperlink{ref-field_status_2007}{2007}),
+darkblotched rockfish (Gertseva et al.
+\protect\hyperlink{ref-gertseva_status_2015}{2015})). The 2008 year
+classes was estimated as the strongest year class. This year has been
+estimated to have very strong year classes for other West Coast stocks
+(e.g darkblotched rockfish (Gertseva et al.
+\protect\hyperlink{ref-gertseva_status_2015}{2015}), widow rockfish
+(Hicks and Wetzel \protect\hyperlink{ref-hicks_status_2015}{2015})). It
+may be worthwhile to investigate the periods of strong and weak year
+classes further to see if it is an artifact of the data, a consistent
+autocorrelation, or a result of the environment.
+
+The stock-recruit curve resulting from a fixed value of steepness is
+shown in Figure \ref{fig:stock_recruit_curve} with estimated
+recruitments also shown. The stock is predicted to have never fallen to
+low enough levels that the steepness is obvious. However, the lowest
+levels of predicted spawning biomass showed some of the smallest
+recruitments and very few above average recruitments. Steepness was not
+estimated in this model, but sensitivities to alternative values of
+steepness are discussed below.
 
 \subsubsection{Uncertainty and Sensitivity
 Analyses}\label{uncertainty-and-sensitivity-analyses}
@@ -2263,20 +2354,22 @@ that are considered of the importance.
 \section{Acknowledgments}\label{acknowledgments}
 
 Many people were instrumental in the successful completion of this
-assessment and their contribution is greatly appreciated. Jason Cope,
-Ian Taylor, and Owen Hamel contributed greatly with discussions about
-data, modeling, and SS. We are greatful to Theresa Tsou (WDFW) and
-Phillip Wyland (WDFW) who provided research data and the first
-historical reconstruction of catch for Washington state. Ali Whitman
-(ODFW), Patrick Mirrick (ODFW), and Ted Calavan (ODFW) provided Oregon
-composition data, historical catches, corrected PacFIN catches, and
-quickly uploaded age data that were critical to this assessment. We
-appreciate Vanessa Tuttle's patience and responsiveness to providing
-data. Don Pearson (NOAA) provided historical catch information and
-compiled the extensive management changes for Pacific ocean perch which
-were critical in understanding and modeling fishery behavior. John
-Wallace provided multiple last minute PacFIN extractions and analyzed
-historical discard rates for use in the assessment.
+assessment and their contribution is greatly appreciated. Jason Cope
+(NWFSC), Ian Taylor (NWFSC), and Owen Hamel (NWFSC), contributed greatly
+with discussions about data, modeling, and SS. Allan Hicks (IPHC)
+provided guidance on model approaches and data exploration. We are
+greatful to Theresa Tsou (WDFW) and Phillip Wyland (WDFW) who provided
+research data and the first historical reconstruction of catch for
+Washington state. Ali Whitman (ODFW), Patrick Mirrick (ODFW), and Ted
+Calavan (ODFW) provided Oregon composition data, historical catches,
+corrected PacFIN catches, and quickly uploaded age data that were
+critical to this assessment. We appreciate Vanessa Tuttle's patience and
+responsiveness to providing data. Don Pearson (NOAA) provided historical
+catch information and compiled the extensive management changes for
+Pacific ocean perch which were critical in understanding and modeling
+fishery behavior. John Wallace provided multiple last minute PacFIN
+extractions and analyzed historical discard rates for use in the
+assessment.
 
 We are very grateful to Patrick McDonald and the team of agers at CAP
 for their hard work reading numerous otoliths and availability to answer
@@ -4032,7 +4125,7 @@ ocean perch. \label{fig:retention}}
 \centering
 \includegraphics{r4ss/plots_mod1/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
 \caption{Estimated time-series of recruitment for Pacific ocean perch.
-\label{fig:recuits}}
+\label{fig:recruits}}
 \end{figure}
 
 \FloatBarrier
@@ -4063,24 +4156,6 @@ perch. \label{fig:index_fits}}
 \end{figure}
 
 \FloatBarrier 
-
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated time-series of spawning output for Pacific ocean
-perch. \label{fig:ssb}}
-\end{figure}
-
-\FloatBarrier
-
-\begin{figure}
-\centering
-\includegraphics{r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated time-series of relative biomass for Pacific ocean
-perch. \label{fig:depl}}
-\end{figure}
-
-\FloatBarrier
 
 \begin{figure}
 \centering
@@ -4172,7 +4247,7 @@ and open bubbles are negative residuals (observed \textless{} expected).
 size adjustment (with 95\% interval) for len data from Fishery: 0.9951
 (0.6685\_1.8165) For more info, see Francis, R.I.C.C. (2011). Data
 weighting in statistical fisheries stock assessment models. Can. J.
-Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_fishery}}
+Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_len_fishery}}
 \end{figure}
 
 \begin{figure}
@@ -4182,7 +4257,8 @@ Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_fishery}}
 sample size adjustment (with 95\% interval) for len data from At\_sea
 hake: 1.0115 (0.5352\_4.8582) For more info, see Francis, R.I.C.C.
 (2011). Data weighting in statistical fisheries stock assessment models.
-Can. J. Fish. Aquat. Sci. 68: 1124\_1138. \label{fig:weighting_ashop}}
+Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
+\label{fig:weighting_len_ashop}}
 \end{figure}
 
 \begin{figure}
@@ -4193,7 +4269,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 Pacific ocean perch survey: 6.7496 (6.7496\_Inf) For more info, see
 Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:weighting_pop}}
+\label{fig:weighting_len_pop}}
 \end{figure}
 
 \begin{figure}
@@ -4204,7 +4280,7 @@ sample size adjustment (with 95\% interval) for len data from Triennial
 survey: 1.0004 (0.5362\_5.786) For more info, see Francis, R.I.C.C.
 (2011). Data weighting in statistical fisheries stock assessment models.
 Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:weighting_triennial}}
+\label{fig:weighting_len_triennial}}
 \end{figure}
 
 \begin{figure}
@@ -4215,7 +4291,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 AFSC slope survey: 1.0151 (0.5859\_16.7225) For more info, see Francis,
 R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:weighting_afsc}}
+\label{fig:weighting_len_afsc}}
 \end{figure}
 
 \begin{figure}
@@ -4226,7 +4302,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 NWFSC slope survey: 0.9922 (0.9922\_Inf) For more info, see Francis,
 R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:weighting_nwfscslope}}
+\label{fig:weighting_len_nwfs}}
 \end{figure}
 
 \begin{figure}
@@ -4237,7 +4313,7 @@ Suggested sample size adjustment (with 95\% interval) for len data from
 NWFSC shelf\_slope survey: 1.0055 (0.6199\_4.021) For more info, see
 Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock
 assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
-\label{fig:weighting_nwfsccombo}}
+\label{fig:weighting_len_nwfsccombo}}
 \end{figure}
 
 \FloatBarrier
@@ -4423,6 +4499,42 @@ assessment models. Can. J. Fish. Aquat. Sci. 68: 1124\_1138.
 
 \begin{figure}
 \centering
+\includegraphics{r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
+\caption{Estimated time-series of spawning output for Pacific ocean
+perch. \label{fig:ssb}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/ts1_Total_biomass_(mt).png}
+\caption{Estimated time-series of total biomass for Pacific ocean perch.
+\label{total_bio}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
+\caption{Estimated time-series of relative biomass for Pacific ocean
+perch. \label{fig:depl}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{r4ss/plots_mod1/SR_curve2.png}
+\caption{Estimated recruitment (red circles) and the assumed
+stock-recruit relationship (black line). The green line shows the effect
+of the bias correction for the lognormal distribution
+\label{fig:stock_recruit_curve}}
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics{Figures/ssb_sens1.png}
 \caption{Time-series of spawning output for model sensitivities for
 Pacific ocean perch. \label{fig:sens1_ssb}}
@@ -4576,11 +4688,22 @@ Dick, E.J. 2009. Modeling the Reproductive Potential of Rockfishes
 \url{http://books.google.com/books?hl=en\&lr=\&id=0d6-3rhfynkC\&oi=fnd\&pg=PR7\&dq=\%22Synthesis+of+findings+regarding+the+reproductive\%22+\%22C:+Linear+interpolation+algorithms\%22+\%22for+yellowtail+rockfish+(S.+flavidus)\%22+\%22greater+than+zero,+based+on+the+2-level+relative+fecundity\%22+\%22A:+Methods+for+data+recovery+from+published\%22+\&ots=NR0UylgymD\&sig=58IaN_a3pJeYTPYVmJ1NYMABmvE}
 {[}accessed 27 February 2017{]}.
 
+\hypertarget{ref-field_status_2007}{}
+Field, J.C. 2007. Status of the Chilipepper rockfish, Sebastes goodei,
+in 2007. Pacific Fishery Management Council, 7700 Ambassador Place NE,
+Suite 200, Portland, OR 97220.
+
 \hypertarget{ref-francis_data_2011}{}
 Francis, R.C., and Hilborn, R. 2011. Data weighting in statistical
 fisheries stock assessment models. Canadian Journal of Fisheries and
 Aquatic Sciences \textbf{68}(6): 1124--1138. doi:
 \href{https://doi.org/10.1139/f2011-025}{10.1139/f2011-025}.
+
+\hypertarget{ref-gertseva_status_2015}{}
+Gertseva, V., Matson, S., and Councill, E. 2015. Status of the
+darkblotched rockfish resource off the continental U.S. Pacific Coast in
+2015. Pacific Fishery Management Council, 7700 Ambassador Place NE,
+Suite 200, Portland, OR 97220.
 
 \hypertarget{ref-gunderson_population_1977}{}
 Gunderson, D.R. 1977. Population biology of Pacific ocean perch,
@@ -4645,6 +4768,18 @@ waters off Oregon. Alaska Sea Grant, University of Alaska Fairbanks. pp.
 Helser, T., Punt, A.E., and Methot, R.D. 2004. A generalized linear
 mixed model analysis of a multi-vessel fishery resouce survey.
 \textbf{70}: 251--264.
+
+\hypertarget{ref-hicks_status_2015}{}
+Hicks, A.C., and Wetzel, C.R. 2015. The status of Widow Rockfish
+(Sebastes entomelas) along the U.S. west coast in 2015. Pacific Fishery
+Management Council, 7700 Ambassador Place NE, Suite 200, Portland, OR
+97220.
+
+\hypertarget{ref-hicks_status_2009}{}
+Hicks, A.C., Haltuch, M.A., and Wetzel, C.R. 2009. Status of
+greenstriped rockfish (Sebastes elongatus) along the outer coast of
+California, Oregon, and Washington. Pacific Fishery Management Council,
+7700 Ambassador Place NE, Suite 200, Portland, OR 97220.
 
 \hypertarget{ref-hoenig_empirical_1983}{}
 Hoenig, J.M. 1983. Empirical use of longevity data to estimate mortality
