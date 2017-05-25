@@ -37,12 +37,12 @@ for (a in 1:length(plot.vec)){
 
 ```{r, results='asis'}
 
-plot.vec = c(1:2, 6, 10, 14, 23)
+plot.vec = c(1:2, 6, 10, 14, 18, 23)
 name.vec = c("")
 
 for (a in 1:length(plot.vec)){
 
-  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:age_fits}](', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
   
 }
 

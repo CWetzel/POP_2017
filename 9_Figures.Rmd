@@ -352,7 +352,7 @@ cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_len_nwfsccombo
 <!-- ********************************************************************** -->
 
 
-![Age compositions aggregated across time by fleet.  \label{fig:length_agg}](r4ss/plots_mod1/comp_lenfit__aggregated_across_time.png)
+![Age compositions aggregated across time by fleet.  \label{fig:age_agg}](r4ss/plots_mod1/comp_agefit__aggregated_across_time.png)
 
 ```{r, results='asis'}
 
@@ -370,19 +370,19 @@ cat('\n![', AgeComp_mod1[11,caption_col], ' \\label{fig:pop_age_pearson}](', Age
 cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](', AgeComp_mod1[15, path_col], ')\n', sep='')
 
 #NWFSC
-cat('\n![', AgeComp_mod1[19,caption_col], ' \\label{fig:nwfsc__pearson}](', AgeComp_mod1[19, path_col], ')\n', sep='')
-
-#NWFSC Combo
-cat('\n![', AALComp_mod1[1,caption_col], ' \\label{fig:nwsfc_combo_age_aal1}](', AALComp_mod1[1, path_col], ')\n', sep='')
-
-#NWFSC Combo
-cat('\n![', AALComp_mod1[2,caption_col], ' \\label{fig:nwsfc_combo_age_aal2}](', AALComp_mod1[2, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[19,caption_col], ' \\label{fig:nwfsc_age_pearson}](', AgeComp_mod1[19, path_col], ')\n', sep='')
 
 plot.vec = 4:8
 for(a in 1:length(plot.vec)){
 #NWFSC Combo - Andre plots
 cat('\n![', AALComp_mod1[plot.vec[a],caption_col], ' \\label{fig:nwfsc_combo_andre_',a,'}](', AALComp_mod1[plot.vec[a], path_col], ')\n', sep='')
 }
+
+#NWFSC Combo
+#cat('\n![', AALComp_mod1[1,caption_col], ' \\label{fig:nwsfc_combo_age_aal1}](', AALComp_mod1[1, path_col], ')\n', sep='')
+
+#NWFSC Combo
+#cat('\n![', AALComp_mod1[2,caption_col], ' \\label{fig:nwsfc_combo_age_aal2}](', AALComp_mod1[2, path_col], ')\n', sep='')
 
 
 ```
@@ -422,7 +422,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](',
   
 \FloatBarrier
 
-![Estimated time-series of total biomass for `r spp`. \label{total_bio}](r4ss/plots_mod1/ts1_Total_biomass_(mt).png)
+![Estimated time-series of total biomass for `r spp`. \label{fig:total_bio}](r4ss/plots_mod1/ts1_Total_biomass_(mt).png)
 
 \FloatBarrier
 

@@ -736,3 +736,12 @@ align(mngmnt.table) = c('l',
   
   low.dep.value = paste0( round(100*mod$derived_quants[mod$derived_quants$Label == paste0("SPB_", low.ssb), 'Value'] / 
                          mod$derived_quants[mod$derived_quants$Label == "SPB_Virgin", 'Value'],1), "%")
+  
+  Tot.catch = aggregate(ret_bio ~ Yr, FUN = sum, mod1$catch)$ret_bio
+  Tot.catch.df = cbind((Dat_start_mod1-1):Dat_end_mod1, Tot.catch)
+  temp = sort(Tot.catch.df[,2], index.return = TRUE)$ix
+  max.catch.5 = Tot.catch.df[(temp[length(temp)]-5):temp[length(temp)],]
+  
+  Tot.catch.df = as.data.frame(Tot.catch.df)
+  colnames(Tot.catch.df)<-c("Year", "Catch")
+  
