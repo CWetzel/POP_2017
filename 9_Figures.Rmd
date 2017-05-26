@@ -281,6 +281,8 @@
 
 \FloatBarrier 
 
+![Estimated total discards for `r spp`. \label{fig:total_discard}](r4ss/plots_mod1/catch7 discards stacked plot (depends on multiple fleets).png)
+
   
 <!-- ********************************************************************** -->
 <!-- ****************Length Composition Fits and EffN********************** --> 

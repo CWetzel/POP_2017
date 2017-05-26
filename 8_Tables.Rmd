@@ -822,7 +822,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of At-Sea hake fishery length samples used in the stock assessment.'),
+                           caption = c('Summary of At-sea hake fishery length samples used in the stock assessment.'),
                            label = 'tab:ASHOP_Lengths',
                            digits = 0)    
 
@@ -905,38 +905,6 @@ print(AgeError.table,
 
 
 
-
-<!-- ====================================================================== --> 
-<!-- ******************START BIOLOGICAL DATA TABLES************************ --> 
-<!-- ====================================================================== --> 
-  
-  
-  
-  
-<!-- ********************************************************************** -->
-<!-- ***********************Weight-length TABLES*************************** --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-<!-- ********************************************************************** --> 
-<!-- ******************Maturity and Fecundity TABLES*********************** --> 
-<!-- ********************************************************************** --> 
-  
-  
-  
-  
-  
-<!-- ********************************************************************** -->
-<!-- **********************Age Structure TABLES**************************** --> 
-<!-- ********************************************************************** -->
-  
-  
-  
-  
-  
-  
 \FloatBarrier
 
 <!-- ====================================================================== -->
@@ -1250,6 +1218,8 @@ print(Like.table,
 
 ```
 
+\newpage
+
 \FloatBarrier
 
 <!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 
@@ -1347,7 +1317,8 @@ colnames(Sens_model1) = c('Label',
                           'Harmonic weights',
                           'Steepness at prior', 
                           'Estimate M', 
-                          'Old Maturity')
+                          'Old Maturity',
+                          'Old Fecundity')
 
 # Create sensitivities table
 Sens_model1.table = xtable(Sens_model1, 

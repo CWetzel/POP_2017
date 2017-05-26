@@ -357,7 +357,7 @@ align(Recruit_mod1.table) = c('l',
   
   SPRratiotab$Year = as.factor(SPRratiotab$Year)
   
-  colnames(SPRratiotab) = c('Year', '(1-SPR)/(1-SPR50%)', '~ 95% confidence interval')
+  colnames(SPRratiotab) = c('Year', '(1-SPR)/ (1-SPR50%)', '~ 95% confidence interval')
       
   assign(paste('SPRratio_Exploit_', mod_area, sep=''), cbind(SPRratiotab, Exploittab))
 
@@ -367,7 +367,7 @@ align(Recruit_mod1.table) = c('l',
 
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
-                              caption=c(paste('Recent trend in spawning potential ratio (1-$SPR$)(1-$SPR_{50\\%}$) and summary exploitation rate for ', spp, '.' , sep='')), 
+                              caption=c(paste('Recent trend in spawning potential ratio (1-SPR)(1-SPR50) and summary exploitation rate for ', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
@@ -550,7 +550,7 @@ align(mngmnt.table) = c('l',
       Bratio.fore = print(Bratio.fore, digits = 3)
       
       Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
-      colnames(Fore_Table) = c('Year','OFL', "ACL", paste('Spawning Output (', fecund_unit, ')'), "Relative Biomass") 
+      colnames(Fore_Table) = c('Year','OFL', "ACL", paste0('Spawning Output (',fecund_unit,')'), "Relative Biomass") 
 
       # Create the table
       OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.  The ACL values for 2017 and 2018 
