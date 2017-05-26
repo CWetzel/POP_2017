@@ -238,11 +238,7 @@ file.copy("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forE
           paste0(getwd(), "/txt_files"), overwrite = TRUE)
 
 # Copy and move figures from assessment folder
-figures = c(paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base/piner_panel.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_like.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_trajectories.png"),
+figures = c(
             paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/depl_sens1.png"),
             paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/depl_sens2.png"),
             paste0("C:/Assessments/POP2017/Models/_Sensitivities/", model.num, "/ssb_sens1.png"),
@@ -275,11 +271,36 @@ for (i in 1:length(figures)){
   file.copy(figures[i], paste0(getwd(), "/Figures"), overwrite = TRUE)
 }
 
+#=====================================================================================
+# SECTION 4: Create Numbers at Age Table
+#=====================================================================================
+base      <- readLines( paste0(getwd(),"/SS/", model.file, "/Report.sso"))
+
+# First and last years of model model 1
+startyr = mod1$startyr # year model 1 data starts 
+endyr   = mod1$endyr   # year model 1 data ends
+
+maxAge = length(strsplit(base[grep(paste("1 1 1 1 1 1 1", startyr,sep=" "),base)]," ")[[1]]) - 14
+
+
+temp = mapply(function(x) temp = as.numeric(strsplit(base[grep(paste("1 1 1 1 1 1 1", x,sep=" "),base)]," ")[[1]][14:(14+maxAge)]), x = startyr:endyr)
+natage.f = t(temp) 
+temp = mapply(function(x) temp = as.numeric(strsplit(base[grep(paste("1 1 2 1 1 1 2", x,sep=" "),base)]," ")[[1]][14:(14+maxAge)]), x = startyr:endyr)
+natage.m = t(temp) 
+
+colnames(natage.f) = 0:maxAge; colnames(natage.m) = 0:maxAge		
+rownames(natage.f) <- startyr:endyr ; rownames(natage.m) <- startyr:endyr
+
+write.csv(natage.f, paste0(getwd(), "/txt_files/POP_natage_f.csv"))
+write.csv(natage.m, paste0(getwd(), "/txt_files/POP_natage_m.csv"))	
+
 
 #=====================================================================================
-# SECTION 4: Functions
+# SECTION 5: Functions
 #=====================================================================================
 
 print.numeric<-function(x, digits) { formatC(x, digits = digits, format = "f") }
 comma <- function(x, digits=0) { formatC(x, big.mark=",", digits, format = "f") }
+
+
 

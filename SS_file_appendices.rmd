@@ -14,10 +14,13 @@ output:
 \FloatBarrier
 \newpage
 
-<!-- ************************************DATA FITS************************************************--> 
-#Appendix A.
 
-##Length Compositions
+
+<!-- ************************************DATA FITS************************************************--> 
+#Appendix A. Detailed Fit to Length Composition Data 
+<!--\renewcommand{\thepage}{A-\arabic{page}}
+\setcounter{page}{1}-->
+
 
 ```{r, results='asis'}
 
@@ -33,7 +36,9 @@ for (a in 1:length(plot.vec)){
 
 \FloatBarrier
 
-##Age Compositions
+#Appendix B. Detailed Fit to Age Composition Data 
+<!--\renewcommand{\thepage}{B-\arabic{page}}
+\setcounter{page}{1}-->
 
 ```{r, results='asis'}
 
@@ -51,54 +56,54 @@ for (a in 1:length(plot.vec)){
 \FloatBarrier
 \newpage
 
-\renewcommand{\thepage}{A-\arabic{page}}
-\setcounter{page}{1}
 
 <!-- ************************************DATA FILE(S)************************************************--> 
-#Appendix B. SS data file {-}
-\renewcommand{\thepage}{A-\arabic{page}}
+<!--#Appendix C. SS data file {-}
+\renewcommand{\thepage}{C-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
 mod1_data = writeLines(readLines('./SS/linebreak_files/2017pop.dat'))
 ```
 
-\newpage
+\newpage -->
 
 <!-- **********************************CONTROL FILE(S)***********************************************-->
-#Appendix C. SS control file{-}
-\renewcommand{\thepage}{B-\arabic{page}}
+<!--#Appendix D. SS control file{-}
+\renewcommand{\thepage}{D-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
 mod1_control = writeLines(readLines('./SS/linebreak_files/2017pop.ctl'))
 ```
 
-\newpage
+\newpage -->
 
 <!-- *********************************STARTER FILE(S)*************************************************-->
-#Appendix D. SS starter file{-}
-\renewcommand{\thepage}{C-\arabic{page}}
+<!--#Appendix E. SS starter file{-}
+\renewcommand{\thepage}{E-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
 mod1_starter = writeLines(readLines('./SS/linebreak_files/starter.ss'))
 ```
-\newpage
+\newpage -->
 
 <!-- ********************************FORECAST FILE(S)**************************************************-->
-#Appendix E. SS forecast file{-}
-\renewcommand{\thepage}{D-\arabic{page}}
+<!--#Appendix F. SS forecast file{-}
+\renewcommand{\thepage}{F-\arabic{page}}
 \setcounter{page}{1}
 
 ```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
 mod1_forecast = writeLines(readLines('./SS/linebreak_files/forecast.ss'))
 ```
-\newpage
+\newpage -->
+
+
 
 <!--********************ADD ADDITIONAL APPENDICES AS NEEDED********************************************-->
 <!--********************cHANGE APPENDIX TITLE AND THE APPENDIX LETTER**********************************-->
-#Appendix E. Appendix Title{-}
+<!--#Appendix E. Appendix Title{-}
 \label{sec:AppendixE}
 \renewcommand{\thepage}{E-\arabic{page}}
 \renewcommand{\thefigure}{E\arabic{figure}}
@@ -107,4 +112,4 @@ mod1_forecast = writeLines(readLines('./SS/linebreak_files/forecast.ss'))
 \setcounter{figure}{0}
 \setcounter{table}{0}
 
-Add Appendix text, tables and figuers here.
+Add Appendix text, tables and figuers here. -->

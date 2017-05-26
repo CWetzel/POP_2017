@@ -136,11 +136,11 @@
 
 \FloatBarrier
 
-![At-Sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](r4ss/plots_mod1/comp_lendat_bubflt2mkt0.png)
+![At-sea hake fishery length frequency distributions for `r spp`. \label{fig:ASHOP_Length}](r4ss/plots_mod1/comp_lendat_bubflt2mkt0.png)
 
 \FloatBarrier
 
-![At-Sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](r4ss/plots_mod1/comp_agedat_bubflt2mkt0.png)
+![At-sea hake fishery age frequency distributions for `r spp`. \label{fig:ASHOP_Age}](r4ss/plots_mod1/comp_agedat_bubflt2mkt0.png)
 
 \FloatBarrier
 
@@ -244,7 +244,7 @@
 \FloatBarrier 
 
 
-![Estimated retention by length by the trawl fishery for `r spp`. \label{fig:retention}](r4ss/plots_mod1/POP_retention.png)
+![Estimated retention by length by the fishery fleet for `r spp`. \label{fig:retention}](r4ss/plots_mod1/POP_retention.png)
 
 \FloatBarrier 
 
@@ -261,14 +261,7 @@
   
 \FloatBarrier
 
-<!-- ********************************************************************** -->
-<!-- *******************Fits to the Discard Data*************************** --> 
-<!-- ********************************************************************** -->
 
-
-![Estimated fits to the discard rates for `r spp`. \label{fig:discard_fits}](r4ss/plots_mod1/POP_discard_fits.png)
-
-\FloatBarrier 
 
 <!-- ********************************************************************** -->
 <!-- ***********************Fits to the Indices**************************** --> 
@@ -279,7 +272,14 @@
 \FloatBarrier 
 
 
+<!-- ********************************************************************** -->
+<!-- *******************Fits to the Discard Data*************************** --> 
+<!-- ********************************************************************** -->
 
+
+![Estimated fits to the discard rates for `r spp`. \label{fig:discard_fits}](r4ss/plots_mod1/POP_discard_fits.png)
+
+\FloatBarrier 
 
   
 <!-- ********************************************************************** -->

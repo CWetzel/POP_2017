@@ -27,7 +27,7 @@ colnames(Catch_AllYrs) = c('Year',
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
-                      caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
+                      caption = c('Landings for each state (all gears combined), the At-sea hake fishery, the foreign fleet, and surveys.'),
                       label = 'tab:Comm_Catch',
                       digits = 1)    
 
@@ -68,8 +68,6 @@ colnames(Catch_AllYrs) = c('Year',
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
-                      #caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
-                      #label = 'tab:Comm_Catch',
                       digits = 1)    
 
 # Add alignment  
@@ -98,7 +96,7 @@ Catch_AllYrs = Catch_AllYrs[, -1]
 Catch_AllYrs = cbind(Catch_AllYrs[,1:6],
                      apply(Catch_AllYrs[,7:dim(Catch_AllYrs)[2]], 1, sum ) )
 # manually split table across pages because I could not get longtable to work
-Catch_AllYrs = Catch_AllYrs[86:dim(Catch_AllYrs)[1], ]
+Catch_AllYrs = Catch_AllYrs[86:(dim(Catch_AllYrs)[1]-1), ]
 colnames(Catch_AllYrs) = c('Year',
                            'California',
                            'Oregon',
@@ -109,8 +107,6 @@ colnames(Catch_AllYrs) = c('Year',
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
-                      #caption = c('Landings for each state (all gears combined), the At-Sea Hake fishery, the Foreign fleet, and                                             research.'),
-                      #label = 'tab:Comm_Catch',
                       digits = 1)    
 
 # Add alignment  
@@ -1254,11 +1250,8 @@ print(Like.table,
 
 ```
 
-\newpage
+\FloatBarrier
 
-
-  
-\newpage
 <!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 
 ```{r}
 

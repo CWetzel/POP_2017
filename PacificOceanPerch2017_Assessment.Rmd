@@ -24,6 +24,8 @@ csl: CJFAS.csl
 bibliography: BibFile.bib
 link-citations: yes
 ---
+<!-- To remove the figure and table labels comment out the \usepackage[inline]{showlabels} within the header.tex file -->
+
 ```{r global_options, include=FALSE}
     # set global options for R code chunks: echo=FALSE (don't include source code); 
     # warning=FALSE (suppress R warnings); message=FALSE (suppress R messages)
@@ -95,8 +97,8 @@ link-citations: yes
 <!-- ====================================================================== -->
 
 <!-- Uncomment the following lines to include the appendices - exlude to save runtime -->
-<!--```{r child='SS_file_appendices.rmd'}
-``` -->
+```{r child='SS_file_appendices.rmd'}
+``` 
 
 <!-- ====================================================================== -->
 <!-- **********REFERENCES - WILL APPEAR AFTER APPENDICES******************* -->

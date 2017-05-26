@@ -59,7 +59,7 @@ Exec_catch_sep = Exec_catch_sep[Exec_catch_sep$Year != LastYR, ]
 # Assign column names
 survey = apply(Exec_catch_sep[,7:ncol(Exec_catch_sep)], 1, sum)
 Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-6)], survey)
-colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'At-sea-hake', 'Foreign', 'Survey')
+colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'At-sea hake', 'Foreign', 'Survey')
 
 #Plot only years where catch is great than 1 mt total
 ind = apply(Exec_catch_sep[,2:ncol(Exec_catch_sep )], 1, sum)
@@ -91,9 +91,7 @@ Plot_catch = function(Catch_df) {
 #==============================================================================
 
 # Read in executive summary catches table
-#Exec_catch_summary_sep = read.csv("C:/Assessments/POP2017/Data/CommercialCatch/POP2017_PacFIN_catch_forExpansion.csv")
 Exec_catch_summary_sep = Final_Catch_AllYrs[, 2:ncol(Final_Catch_AllYrs)]
-#Exec_catch_summary_sep = Exec_catch_summary_sep[,2:ncol(Exec_catch_summary_sep)]
 
 # Bind the data frames together
 Exec_catch_summary = cbind(Exec_catch_summary_sep[,1:4], 
@@ -105,8 +103,8 @@ colnames(Exec_catch_summary) = c('Year',
                                  'California',
                                  'Oregon',
                                  'Washington',
-                                 'At-sea Hake', 
-                                 'Research',
+                                 'At-sea hake', 
+                                 'Survey',
                                  'Total Landings')
 
 Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1 & Year <= LastYR-1)
@@ -124,7 +122,6 @@ align(Exec_catch.table) = c('l', 'l',
                             '>{\\centering}p{0.7in}', 
                             '>{\\centering}p{0.7in}',
                             '>{\\centering}p{0.7in}',
-                            #'>{\\centering}p{0.7in}',
                             '>{\\centering}p{0.7in}')  
 
   
@@ -301,8 +298,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 
 # Model 1 table
 Recruit_mod1.table = xtable(Recruit_All, 
-                            caption = c(paste('Recent estimated trend in recruitment with approximate 95/% 
-                                        confidence intervals determined from the base model', sep='')),
+                            caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model', sep='')),
                             label = 'tab:Recruit_mod1')
 
 align(Recruit_mod1.table) = c('l',
@@ -361,7 +357,7 @@ align(Recruit_mod1.table) = c('l',
   
   SPRratiotab$Year = as.factor(SPRratiotab$Year)
   
-  colnames(SPRratiotab) = c('Year', '(1-SPR)', '~ 95% confidence interval')
+  colnames(SPRratiotab) = c('Year', '(1-SPR)/(1-SPR50%)', '~ 95% confidence interval')
       
   assign(paste('SPRratio_Exploit_', mod_area, sep=''), cbind(SPRratiotab, Exploittab))
 
@@ -371,14 +367,13 @@ align(Recruit_mod1.table) = c('l',
 
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
-                              caption=c(paste('Recent trend in spawning potential 
-                                        ratio (1-SPR) and summary exploitation rate for ', spp, '.' , sep='')), 
+                              caption=c(paste('Recent trend in spawning potential ratio (1-$SPR$)(1-$SPR_{50\\%}$) and summary exploitation rate for ', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
-                                       '>{\\centering}p{1in}',
+                                       '>{\\centering}p{0.9in}',
                                        '>{\\centering}p{1.2in}',
-                                       '>{\\centering}p{1in}',
+                                       '>{\\centering}p{1.2in}',
                                        '>{\\centering}p{1.2in}') 
      
 
@@ -558,7 +553,8 @@ align(mngmnt.table) = c('l',
       colnames(Fore_Table) = c('Year','OFL', "ACL", paste('Spawning Output (', fecund_unit, ')'), "Relative Biomass") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.'),
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.  The ACL values for 2017 and 2018 
+                                               are set at the harvest limits currently set by management.'),
                   label = 'tab:OFL_projection')
       
       # Add alignment
@@ -637,7 +633,7 @@ align(mngmnt.table) = c('l',
   # SPR ratio and exploitation
   #assign(paste('SPRratio_Exploit_', mod_area, sep=''), cbind(SPRratiotab, Exploittab))
   SPRratio_Exploit_mod1 = SPRratio_Exploit_mod1[2:nrow(SPRratio_Exploit_mod1),c(2,4)] # Grab the SPR and the exploitation rates
-  SPRratio_Exploit_mod1[,c(1,2)] = round(SPRratio_Exploit_mod1[,c(1,2)],2)
+  SPRratio_Exploit_mod1[,c(1,2)] = round(SPRratio_Exploit_mod1[,c(1,2)],3)
 
   # SPR blanks for the last year
   blanks = c(NA,NA)
