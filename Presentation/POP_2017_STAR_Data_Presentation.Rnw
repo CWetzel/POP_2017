@@ -1,0 +1,78 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>
+\usetheme[compress]{Singapore} %Berkeley, Palo Alto, Singapore, Warsaw
+%\usecolortheme{seagull}  %Beaver, dolphin, dove, lily, orchid, seagull, seahorse
+
+%\usefonttheme{serif}
+% font themes: default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}          %% Used in risk tables
+\usepackage{multirow}          %% Used in decision tables
+
+\usepackage[T1]{fontenc}  %to use < or > in tables
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\subscr}[1]{$_{\text{#1}}$}
+\newcommand{\Fforty}{F_{\text{SPR}=40\%}}       % Needs to be done as $\Fforty$
+\newcommand{\Bforty}{B_{\text{SPR}=40\%}}
+
+\setbeamersize{text margin left=0.1in}
+\setbeamersize{text margin right=0.1in}
+
+\definecolor{pageCol}{rgb}{0.5,0.5,1.0}
+
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[wd=.05\paperwidth,ht=0ex,dp=0ex,left]{framenumber in head/foot}%
+\insertframenumber/\inserttotalframenumber
+\end{beamercolorbox}%
+}
+\setbeamercolor{footline}{fg=pageCol}
+
+\newcounter{saveenumi}
+
+
+
+\title{Pacific ocean perch 2017 Data Summary}
+\subtitle{STAR Panel}
+\author{Chantel Wetzel}
+\date{{\footnotesize June 26, 2017}}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Overview}
+\subsection{}
+
+\begin{frame}{Data Summary}
+  The data used in the 2017 assessment:
+
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics[height=3in]{figures/data_plot.png}
+    \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Second Slide}
+  Put something here
+\end{frame}
+
+%\section{Biology}
+%\subsection{}
+
+%\section{Fishery Data}
+%\subsection{}
+
+%\section{Survey Data}
+%\subsection
+
+\end{document}

@@ -435,7 +435,7 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
                      paste('Unfished age ', min_age, ' biomass (mt)', sep = ''),
                     'Unfished recruitment (R0, thousands)',
                      paste('Spawning output', '(', LastYR, ' ', fecund_unit, ')', sep = ''),
-                     paste('Depletion (', LastYR,')',sep=''),
+                     paste('Relative biomass (depletion) (', LastYR,')',sep=''),
                     '\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
                     'Proxy spawning output ($B_{40\\%}$)',
                     'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
@@ -669,31 +669,29 @@ align(mngmnt.table) = c('l',
 # CREATE TABLES BASED ON HOW MANY MODELS AND MANAGEMENT AREAS YOU HAVE
 
   # Bind data from all three models together
-  #base_summary = cbind(mngmt,mod1_summary)
   base_summary = cbind(OFL, ACL, landings, totdead, mod1_summary)
   base_summary1 = as.data.frame(cbind(OFL, ACL, landings, totdead, mod1_summary))
-  #base_summary1 = as.data.frame(cbind(mngmt,mod1_summary))
   
   # Transpose the dataframe to create the table and create data Labels  
   base_summary = as.data.frame(t(base_summary1))
-  base_summary$names=c('Landings (mt)',
-                       'Total Est. Catch (mt)',
+  base_summary$names=c(
                        'OFL (mt)', 
                        'ACL (mt)',
-                       
-                       '(1-$SPR$)(1-$SPR_{50\\%}$)',
+                       'Landings (mt)',
+                       'Total Est. Catch (mt)',
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)',
                        'Exploitation rate',
                        paste('Age ',min_age,' biomass (mt)',sep=''),
                        'Spawning Output',
                        '~95\\% CI',
-                       'Depletion',
+                       'Relative Biomass',
                        '~95\\% CI',
                        'Recruits',
                        '~95\\% CI')
   
   base_summary = base_summary[,c(ncol(base_summary),1:(ncol(base_summary)-1))]
-  colnames(base_summary) = c('Quantity',seq(FirstYR+1,LastYR+1))
-
+  base_summary = base_summary
+  colnames(base_summary) = c('Quantity',FirstYR:LastYR)
   
   # Create the table
   base_summary.table = xtable(base_summary, caption=c('Base model results summary.'), 
@@ -702,6 +700,7 @@ align(mngmnt.table) = c('l',
   align(base_summary.table) = c('l',
                                 'r', 
                                 '>{\\centering}p{1.1in}',
+                                '>{\\centering}p{1.1in}',
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}', 
@@ -709,7 +708,7 @@ align(mngmnt.table) = c('l',
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}', 
                                 '>{\\centering}p{1.1in}', 
-                                '>{\\centering}p{1.1in}', 
+                                #'>{\\centering}p{1.1in}',
                                 '>{\\centering}p{1.1in}')    
   
   ################################################################################################################################################################
