@@ -1218,11 +1218,11 @@ print(Like.table,
 
 ```
 
-\newpage
 
 \FloatBarrier
 
-<!-- ***********MODEL 1 REFERENCE POINTS TIME SERIES TABLE***************** --> 
+
+<!-- *********************TIME SERIES TABLE************************* --> 
 ```{r}
 
 Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
@@ -1330,7 +1330,7 @@ Sens_model1.table = xtable(Sens_model1,
 # Add alignment - this uses centered aligment of .6 inches for all columns 2+,
 # You can change this easily to have variable columns width after you know how many
 # colunns your final table has
-align(Sens_model1.table) = c('l', 'l', rep('>{\\centering}p{.6in}', dim(Sens_model1)[2]-1))
+align(Sens_model1.table) = c('l', 'l', rep('>{\\centering}p{.8in}', dim(Sens_model1)[2]-1))
 
 
 # Print model 1 sensitivity table
@@ -1368,7 +1368,7 @@ Sens_model1.table = xtable(Sens_model1,
 # Add alignment - this uses centered aligment of .6 inches for all columns 2+,
 # You can change this easily to have variable columns width after you know how many
 # colunns your final table has
-align(Sens_model1.table) = c('l', 'l', rep('>{\\centering}p{.6in}', dim(Sens_model1)[2]-1))
+align(Sens_model1.table) = c('l', 'l', rep('>{\\centering}p{.8in}', dim(Sens_model1)[2]-1))
 
 
 # Print model 1 sensitivity table

@@ -195,6 +195,9 @@
 
 \FloatBarrier 
 
+
+![Recruitment bias ramp applied in the base model. \label{fig:bias_ramp}](r4ss/plots_mod1/recruit_bias_ramp.png)
+
 <!-- ====================================================================== -->
 <!-- ******************                           ************************* -->
 <!-- ******************END BIOLOGICAL DATA FIGURES************************* --> 
