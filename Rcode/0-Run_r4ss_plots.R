@@ -16,7 +16,7 @@
 # document
 rm(list=ls(all=TRUE))
 
-model.num = "11.0"
+model.num = "12.0"
 
 # What model file to use
 model.file = "model_2017"
@@ -115,7 +115,7 @@ SS_plots(mod1,
          maxrows2 = 4, 
          maxcols2 = 4, 
          printfolder = '',
-         bub.scale.dat= 7,
+         bub.scale.dat= 3,
          dir = out.dir.mod1)
 
 # Create specialized plots
@@ -211,6 +211,11 @@ legend ("topleft", legend = c("1918-1991", "1992-2001", "2002-2007", "2008", "20
 grid()
 dev.off()
 
+# Fit bias ramp
+SS_fitbiasramp (mod1,  method="BFGS", twoplots=FALSE,
+           transform=FALSE, print=TRUE, plotdir=out.dir.mod1 ,shownew=FALSE,
+           pwidth=6.5, pheight=5.0, punits="in", ptsize=10, res=300, cex.main=1)
+
 
 # -----------------------------------------------------------------------------
 
@@ -262,7 +267,7 @@ figures = c(
             "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png",
             paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel_h.png"),
             paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_like.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/piner_panel_m.png"),
             paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_trajectories.png"),
             paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base/piner_panel_R0.png")
             )

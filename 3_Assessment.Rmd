@@ -52,7 +52,7 @@ The STAT team used Stock Synthesis version 3.30.03.05 by Dr. Richard Methot at t
 ###Priors
 A prior distribution was developed for natural mortality ($M$) from an analysis based on an assumed maximum age of 100 years. The analysis was performed by Owen Hamel (personal communications, NWFSC, NOAA) and used data from Then et al. [-@then_evaluating_2015] to provide a lognormal distribution for natural mortality. The median of the lognormal prior is 0.054 and has a standard error of 0.438. 
 
-The prior for steepness ($h$) assumes a beta distribution with parameters based on an update of the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Science and Statistical Committee in 2017. The prior is a beta distribution with $\mu$=0.72 and $\sigma$=0.15. However, fixing steepness within the model resulted in what was determined to be unrealistic relative biomass levels (~ 100%$SB_0$), and it was decided to fix steepness at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`.  The previous assessment estimated and fixed steepness equal to 0.40.  The current data does not contain information regarding steepness and `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)` was selected as an intermediate value between the prior and the previous assessment value.  The steepness value of `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)` was contained within the estimated uncertainty envelope from the assessment model when either the prior value of 0.72 or 0.40 values were assumed.
+The prior for steepness ($h$) assumes a beta distribution with parameters based on an update of the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Science and Statistical Committee in 2017. The prior is a beta distribution with $\mu$=0.72 and $\sigma$=0.15. However, fixing steepness within the model resulted in what was determined to be unrealistic relative biomass levels (~ 97%$SB_0$), and it was decided to fix steepness at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`.  The previous assessment estimated and fixed steepness equal to 0.40.  The current data does not contain information regarding steepness and `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)` was selected as an intermediate value between the prior and the previous assessment value.  The steepness value of `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)` was contained within the estimated uncertainty envelope from the assessment model when either the prior value of 0.72 or 0.40 values were assumed.
 
 ###Data Weighting
 
@@ -191,7 +191,7 @@ A number of sensitivity analyses were conducted, including:
   
   \item Remove the historical commercial CPUE index.
   
-  \item Inclusion of available Canadian fishery and survey data (does not constitute all data used in Canadian assessments).
+  \item Inclusion of available Canadian fishery and survey data (does not constitute all data used in Canadian assessments).  This sensitivity includes Canadian fishery landings (1997-2016 with landings ranging from 260-400 mt by year) and survey removals (2004, 2006, 2008, 2010, 2012, 2014, 2016), no fishery or survey index of abundance, but with length and age composition from both the fishery and survey.  
   
   \item Inclusion of historical Washington research lengths.  
   
@@ -201,7 +201,7 @@ A number of sensitivity analyses were conducted, including:
 
 Likelihood values and estimates of key parameters from each sensitivity are available in Tables \ref{tab:Sensitivity1} and \ref{tab:Sensitivity2}.  Plots of the estimated time-series of spawning output and relative biomass are shown in Figures \ref{fig:sens1_ssb}, \ref{fig:sens1_depl}, \ref{fig:sens2_ssb}, and \ref{fig:sens2_depl}.
 
-The sensitivities which explored steepness or natural mortality had the largest change in estimated stock status relative to the base model.  Fixing steepness at the prior value resulted in the stock being near unfished spawning biomass output.  When natural mortality was estimated the estimated values were higher relative to the median of the prior used in base model, resulting in the relative biomass to be > 93%.  
+The sensitivities which explored steepness or natural mortality had the largest change in estimated stock status relative to the base model.  Fixing steepness at the prior value resulted in the stock being near unfished spawning biomass output.  When natural mortality was estimated the estimated values were higher relative to the median of the prior used in base model, resulting in the relative biomass to be 93%.  
 
 Including additional data from either Canada, Washington research lengths, and or Oregon special projects data resulted in estimated lower stock status relative to the base model.  However, the status was still well above the management target.  
 

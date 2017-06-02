@@ -1,0 +1,31 @@
+<<catcherror, echo = FALSE>>=
+# Table (wide) of catch by year + fleet for data entered into the model
+catch <- aggregate(catch ~ year + fleet, data = data.catch, sum)
+catchmean <- catch[catch$year %in% lastdecade, ]
+catchmean <- tapply(catchmean$catch, catchmean$fleet,
+  function(x) sum(x) / sum(catchmean$catch)) * 100
+
+table.catch <- reshape(catch[catch$year %in% lastdecade, ],
+  idvar = "year", timevar = "fleet", direction = "wide")
+table.props <- t(apply(table.catch[, -1], 1, prop.table) * 100)
+table.props <- formatC(table.props, format = "f", digits = 2)
+table.catch[, -1] <- formatC(as.matrix(table.catch[, -1]), format = "f", digits = 0, big.mark = ",")
+table.catch[, 1]  <- formatC(table.catch[, 1], format = "f", digits = 0)
+table.catch <- cbind(table.catch[, 1], table.catch[, 2], table.props[, 1],
+  table.catch[, 3], table.props[, 2], table.catch[, 4], table.props[, 3])
+colnames(table.catch) <- c("Year", rep(c("mt", "\\%"), 3))
+
+print(xtable(table.catch,
+  align = "p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}",
+  caption = "Recent sablefish landings (mt) by fleet, with relative yearly proportions."),
+  sanitize.colnames.function = function(x){x},
+  sanitize.text.function = function(x){x},
+  include.rownames = FALSE,
+  add.to.row = list(pos = list(-1),
+  command = paste0("& \\multicolumn{2}{c}{\\textbf{Hook-and-Line}}",
+  " &\\multicolumn{2}{c}{\\textbf{Pot}} ",
+  "&\\multicolumn{2}{c}{\\textbf{Trawl}} \\\\")),
+  file = file.path(dir.out, "catches.tex"),
+  hline.after = c(-1, 0, NROW(table.catch)),
+  caption.placement = "top")
+@

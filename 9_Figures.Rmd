@@ -196,7 +196,7 @@
 \FloatBarrier 
 
 
-![Recruitment bias ramp applied in the base model. \label{fig:bias_ramp}](r4ss/plots_mod1/recruit_bias_ramp.png)
+![Recruitment bias ramp applied in the base model. \label{fig:bias_ramp}](r4ss/plots_mod1/recruit_fit_bias_adjust.png)
 
 <!-- ====================================================================== -->
 <!-- ******************                           ************************* -->
@@ -495,7 +495,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](',
   
   
 <!-- ***********M Likelihood profile FIGURES******************************* -->
-![Likelihood profile across natural mortality values. \label{fig:m_like}](Figures/m_like.png)
+![Likelihood profile across natural mortality values. \label{fig:m_like}](Figures/piner_panel_m.png)
   
 \FloatBarrier
 

@@ -50,7 +50,7 @@ link-citations: yes
 <!--\pagenumbering{arabic} -->
 \setcounter{page}{1}
 \renewcommand{\thefigure}{\alph{figure}}
-‼\renewcommand{\thetable}{\alph{table}}
+\renewcommand{\thetable}{\alph{table}}
 
 ```{r child = "0_Executive_Summary.Rmd"}
 ```
@@ -97,7 +97,7 @@ link-citations: yes
 <!-- ====================================================================== -->
 
 <!-- Uncomment the following lines to include the appendices - exlude to save runtime -->
-```{r child='SS_file_appendices.rmd'}
+```{r child='10_Appendices.Rmd'}
 ``` 
 
 <!-- ====================================================================== -->
