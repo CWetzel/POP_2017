@@ -15,11 +15,11 @@ model.num = "12.0"
 model.file = "model_2017"
 model.plots = "plots_mod1" 
 
-#requiredPackages = c('xtable', 'ggplot2', 'reshape2', 'scales', 'rmarkdown', 'knitr', 'devtools')
-#for(p in requiredPackages){
-#  if(!require(p,character.only = TRUE)) install.packages(p)
-#  library(p,character.only = TRUE)
-#}
+requiredPackages = c('xtable', 'ggplot2', 'reshape2', 'scales', 'rmarkdown', 'knitr', 'devtools')
+for(p in requiredPackages){
+  if(!require(p,character.only = TRUE)) install.packages(p)
+  library(p,character.only = TRUE)
+}
 
 # Install the latest version of r4ss using devtools
 # devtools::install_github("r4ss/r4ss")

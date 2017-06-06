@@ -1,101 +1,143 @@
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{Biology}{2}{Biology}{0}}
+\headcommand {\sectionentry {1}{Model Summary}{2}{Model Summary}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
 \headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Overview}}\headcommand {\beamer@subsectionpages {2}{2}}
-\headcommand {\slideentry {1}{1}{1}{3/3}{Overview}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Landings}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Landings}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Maturity}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{2}{1}{4/4}{Maturity}{0}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Landings}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{2}{2}{5/5}{Maturity}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Estimated Stock Size and Status}}\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {1}{2}{1}{5/5}{Estimated Stock Size and Status}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{6}{Fecundity}}\headcommand {\beamer@subsectionpages {4}{5}}
-\headcommand {\slideentry {1}{3}{1}{6/6}{Fecundity}{0}}
+\headcommand {\slideentry {1}{2}{2}{6/6}{Estimated Stock Size and Status}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{7}{Growth}}\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\slideentry {1}{4}{1}{7/7}{Growth}{0}}
+\headcommand {\slideentry {1}{2}{3}{7/7}{Estimated Stock Size and Status}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {1}{4}{2}{8/8}{Growth}{0}}
+\headcommand {\slideentry {1}{2}{4}{8/8}{Estimated Stock Size and Status}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{4}{3}{9/9}{Growth}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{9}{Uncertainties}}\headcommand {\beamer@subsectionpages {5}{8}}
+\headcommand {\slideentry {1}{3}{1}{9/9}{Uncertainties}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{5}{10}{}}\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\slideentry {1}{5}{1}{10/10}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{10}{Sensitivities}}\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\slideentry {1}{4}{1}{10/10}{Sensitivities}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\sectionentry {2}{Removals}{11}{Removals}{0}}
+\headcommand {\sectionentry {2}{Biology}{11}{Biology}{0}}
 \headcommand {\beamer@sectionpages {2}{10}}
 \headcommand {\beamer@subsectionpages {10}{10}}
 \headcommand {\slideentry {2}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Landing history by state}}\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\slideentry {2}{1}{1}{12/12}{Landing history by state}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Overview}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {2}{1}{1}{12/12}{Overview}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{1}{2}{13/13}{Landing history by state}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{13}{Maturity}}\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\slideentry {2}{2}{1}{13/13}{Maturity}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Discarding practices}}\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\slideentry {2}{2}{1}{14/14}{Discarding practices}{0}}
+\headcommand {\slideentry {2}{2}{2}{14/14}{Maturity}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {3}{Indices of Abundance}{15}{Indices of Abundance}{0}}
-\headcommand {\beamer@sectionpages {11}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {3}{0}{1}{15/15}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{15}{Fecundity}}\headcommand {\beamer@subsectionpages {13}{14}}
+\headcommand {\slideentry {2}{3}{1}{15/15}{Fecundity}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{16}{Fishery CPUE}}\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\slideentry {3}{1}{1}{16/16}{Fishery CPUE}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{16}{Growth}}\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {2}{4}{1}{16/16}{Growth}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{17}{Survey Indices}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {3}{2}{1}{17/17}{Survey Indices}{0}}
+\headcommand {\slideentry {2}{4}{2}{17/17}{Growth}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {3}{2}{2}{18/18}{Survey Indices}{0}}
+\headcommand {\slideentry {2}{4}{3}{18/18}{Growth}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {3}{2}{3}{19/19}{Survey Indices}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{19}{}}\headcommand {\beamer@subsectionpages {16}{18}}
+\headcommand {\slideentry {2}{5}{1}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\sectionentry {4}{Length Compositions}{20}{Length Compositions}{0}}
-\headcommand {\beamer@sectionpages {15}{19}}
-\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\slideentry {4}{0}{1}{20/20}{}{0}}
+\headcommand {\sectionentry {3}{Removals}{20}{Removals}{0}}
+\headcommand {\beamer@sectionpages {11}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{21}{Fishery Lengths}}\headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\slideentry {4}{1}{1}{21/21}{Fishery Lengths}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{21}{Landing history by state}}\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\slideentry {3}{1}{1}{21/21}{Landing history by state}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {4}{1}{2}{22/23}{Fishery Lengths}{0}}
-\headcommand {\beamer@framepages {22}{23}}
-\headcommand {\slideentry {4}{1}{3}{24/24}{Fishery Lengths}{0}}
+\headcommand {\slideentry {3}{1}{2}{22/22}{Landing history by state}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Discarding practices}}\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\slideentry {3}{2}{1}{23/23}{Discarding practices}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\sectionentry {4}{Indices of Abundance}{24}{Indices of Abundance}{0}}
+\headcommand {\beamer@sectionpages {20}{23}}
+\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\slideentry {4}{0}{1}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {4}{1}{4}{25/25}{Fishery Lengths}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{25}{Fishery CPUE}}\headcommand {\beamer@subsectionpages {24}{24}}
+\headcommand {\slideentry {4}{1}{1}{25/25}{Fishery CPUE}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{26}{Survey Lengths}}\headcommand {\beamer@subsectionpages {21}{25}}
-\headcommand {\slideentry {4}{2}{1}{26/26}{Survey Lengths}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{26}{Survey Indices}}\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\slideentry {4}{2}{1}{26/26}{Survey Indices}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {4}{2}{2}{27/27}{Survey Lengths}{0}}
+\headcommand {\slideentry {4}{2}{2}{27/27}{Survey Indices}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {4}{2}{3}{28/28}{Survey Lengths}{0}}
+\headcommand {\sectionentry {5}{Length Compositions}{28}{Length Compositions}{0}}
+\headcommand {\beamer@sectionpages {24}{27}}
+\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\slideentry {5}{0}{1}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {4}{2}{4}{29/29}{Survey Lengths}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{29}{Fishery Lengths}}\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\slideentry {5}{1}{1}{29/29}{Fishery Lengths}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {4}{2}{5}{30/30}{Survey Lengths}{0}}
-\headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {4}{2}{6}{31/31}{Survey Lengths}{0}}
-\headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {4}{2}{7}{32/32}{Survey Lengths}{0}}
+\headcommand {\slideentry {5}{1}{2}{30/31}{Fishery Lengths}{0}}
+\headcommand {\beamer@framepages {30}{31}}
+\headcommand {\slideentry {5}{1}{3}{32/32}{Fishery Lengths}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\sectionentry {5}{Age Compositions}{33}{Age Compositions}{0}}
-\headcommand {\beamer@sectionpages {20}{32}}
-\headcommand {\beamer@subsectionpages {26}{32}}
-\headcommand {\slideentry {5}{0}{1}{33/33}{}{0}}
+\headcommand {\slideentry {5}{1}{4}{33/33}{Fishery Lengths}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{34}{Fishery Ages}}\headcommand {\beamer@subsectionpages {33}{33}}
-\headcommand {\slideentry {5}{1}{1}{34/34}{Fishery Ages}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{34}{Survey Lengths}}\headcommand {\beamer@subsectionpages {29}{33}}
+\headcommand {\slideentry {5}{2}{1}{34/34}{Survey Lengths}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{35}{Survey Ages}}\headcommand {\beamer@subsectionpages {34}{34}}
-\headcommand {\slideentry {5}{2}{1}{35/35}{Survey Ages}{0}}
+\headcommand {\slideentry {5}{2}{2}{35/35}{Survey Lengths}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@partpages {1}{35}}
-\headcommand {\beamer@subsectionpages {35}{35}}
-\headcommand {\beamer@sectionpages {33}{35}}
-\headcommand {\beamer@documentpages {35}}
-\headcommand {\def \inserttotalframenumber {34}}
+\headcommand {\slideentry {5}{2}{3}{36/36}{Survey Lengths}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{2}{4}{37/37}{Survey Lengths}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{2}{5}{38/38}{Survey Lengths}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {5}{2}{6}{39/39}{Survey Lengths}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {5}{2}{7}{40/40}{Survey Lengths}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\sectionentry {6}{Age Compositions}{41}{Age Compositions}{0}}
+\headcommand {\beamer@sectionpages {28}{40}}
+\headcommand {\beamer@subsectionpages {34}{40}}
+\headcommand {\slideentry {6}{0}{1}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{42}{Fishery Ages}}\headcommand {\beamer@subsectionpages {41}{41}}
+\headcommand {\slideentry {6}{1}{1}{42/42}{Fishery Ages}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {6}{1}{2}{43/43}{Fishery Ages}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {6}{1}{3}{44/44}{Fishery Ages}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{45}{Survey Ages}}\headcommand {\beamer@subsectionpages {42}{44}}
+\headcommand {\slideentry {6}{2}{1}{45/45}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {6}{2}{2}{46/46}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {6}{2}{3}{47/47}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {6}{2}{4}{48/48}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {6}{2}{5}{49/49}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {6}{2}{6}{50/50}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {6}{2}{7}{51/51}{Survey Ages}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{52}{Ageing Error}}\headcommand {\beamer@subsectionpages {45}{51}}
+\headcommand {\slideentry {6}{3}{1}{52/52}{Ageing Error}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@partpages {1}{52}}
+\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\beamer@sectionpages {41}{52}}
+\headcommand {\beamer@documentpages {52}}
+\headcommand {\def \inserttotalframenumber {51}}

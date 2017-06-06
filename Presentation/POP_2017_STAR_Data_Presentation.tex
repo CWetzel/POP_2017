@@ -64,6 +64,7 @@
 \usepackage{tabularx}
 \usepackage{booktabs}          %% Used in risk tables
 \usepackage{multirow}          %% Used in decision tables
+\usepackage{multicol}          %% Used in the toc
 \usepackage[T1]{fontenc}  %to use < or > in tables
 
 %\graphicspath{C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017}
@@ -97,18 +98,21 @@
 
 \newcounter{saveenumi}
 
-%  <<load_everything, echo = FALSE, message=FALSE, results='hide', warning=FALSE>>=
-%      source("C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/0_Run_Model_Presentation.R")
-%      create.plots = TRUE
-%      Run.Model.Present(create.plots)
-%  @
+%<<load_everything, echo = FALSE, message=FALSE, results='hide', warning=FALSE>>=
+%     source("C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/0_Run_Model_Presentation.R")
+%      #create.plots = TRUE
+%      #Run.Model.Present(create.plots)
+%     source("C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/tables/catch.R")
+%@
 
 \newcommand{\mytableofcontents}{
   \begin{frame}[t]
   \frametitle{Outline}
+  \begin{multicols}{2}
   \tableofcontents[
     currentsection, sectionstyle=show/show, subsectionstyle=show/show/hide,
   ]
+  \end{multicols}
   \end{frame}
 }
 \AtBeginSection[]{\mytableofcontents}
@@ -132,6 +136,84 @@ University of Washington$^2$ \\
 \begin{frame}
   \titlepage
 \end{frame}
+
+
+%------------------------------------------------------------------------------------
+\section{Model Summary}
+%------------------------------------------------------------------------------------
+\subsection{Landings}
+\begin{frame}{Landings}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/catches.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[t]
+  %\input{tables/recent_catches.rnw}
+  \begin{table}[ht]
+  \centering
+  %\begin{tabular}{l>{\centering}p{0.25in}>{\centering}p{0.25in}>{\centering}p{0.1in}>{\centering}p{0.1in}>{\centering}p{0.1in}>{\centering}p{0.1in}}
+  \begin{tabular}{p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.6in}}
+  Year & CA & OR & WA & At-sea & Survey & Total Landings \\ 
+  \hline
+  2007 & 0.15 & 83.65 & 45.12 & 4.05 & 0.58 & 133.55 \\ 
+  2008 & 0.39 & 58.64 & 16.61 & 15.93 & 0.80 & 92.36 \\ 
+  2009 & 0.92 & 58.74 & 33.22 & 1.56 & 2.72 & 97.17 \\ 
+  2010 & 0.14 & 58.00 & 22.29 & 16.87 & 1.68 & 98.98 \\ 
+  2011 & 0.12 & 30.26 & 19.66 & 9.17 & 1.94 & 61.14 \\ 
+  2012 & 0.18 & 30.41 & 21.79 & 4.52 & 1.62 & 58.51 \\ 
+  2013 & 0.08 & 34.86 & 14.83 & 5.41 & 1.71 & 56.89 \\ 
+  2014 & 0.18 & 33.91 & 15.82 & 3.92 & 0.57 & 54.40 \\ 
+  2015 & 0.12 & 38.05 & 11.41 & 8.71 & 1.59 & 59.88 \\ 
+  2016 & 0.23 & 40.81 & 13.12 & 10.30 & 3.10 & 67.56 \\ 
+  \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+
+\subsection{Estimated Stock Size and Status}
+\begin{frame}{Spawning Output}
+  \begin{center}
+    \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Relative Biomass}
+  \begin{center}
+    \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Estimated Annual Recruitment}
+  \begin{center}
+    \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Estimated Annual Recruitment Deviations}
+  \begin{center}
+    \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/recdevs2_withbars.png}
+  \end{center}
+\end{frame}
+
+\subsection{Uncertainties}
+\begin{frame}
+  \begin{itemize}
+    \item Steepness - fixed at 0.50 within the base model.  Likelihood profile over steepness indicates no information in data concerning steepness.  Fixing the value at the steepness prior value of 0.718 results in stock status 97\% of unfished.
+    \item Natural Mortality - fixed at 0.054 for males and females, the mean of the prior when maximum age is 100.  Likelihood profile relatively flat around the prior.
+    \item Recruitment in 2008 and 2013 - The 2008 data point is relatively certain within the model but an order of magnitude higher than any other year.  Early indications of a strong 2013 recruitment (model is currently underfitting).
+  \end{itemize}
+\end{frame}
+
+\subsection{Sensitivities}
+\begin{frame}
+  figures
+\end{frame}
+
+
 
 %------------------------------------------------------------------------------------
 \section{Biology}
@@ -297,9 +379,8 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{Survey Indices: 2011 vs. 2017}
-
-\end{frame}
+%\begin{frame}{Survey Indices: 2011 vs. 2017}
+%\end{frame}
 
 %---------------------------------------------------------------------------------
 \section{Length Compositions}
@@ -424,6 +505,18 @@ University of Washington$^2$ \\
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Fishery Ages}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt1mkt2_page2.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{At-sea hake Ages}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt2mkt0.png}
+  \end{center}
+\end{frame}
+
 \subsection{Survey Ages}
 \begin{frame}{Survey Age Data}
   Survey age data used in the 2017 assessment:
@@ -445,6 +538,51 @@ University of Washington$^2$ \\
         \item 2003-2016
       \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Pacific ocean perch ages}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt4mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Triennial survey ages}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt5mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC slope ages}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt7mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC shelf-slope conditional age-at-length}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_condAALdat_bubflt8mkt0_page1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC shelf-slope conditional age-at-length}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_condAALdat_bubflt8mkt0_page2.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC shelf-slope ages - marginal view}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_gstagedat_bubflt8mkt0.png}
+  \end{center}
+\end{frame}
+
+
+\subsection{Ageing Error}
+\begin{frame}{Estimated Ageing Error: Curvilinear without bias}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/numbers5_ageerrorSD.png}
+  \end{center}
+
 \end{frame}
 
 \end{document}
