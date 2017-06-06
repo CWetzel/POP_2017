@@ -162,9 +162,17 @@ University of Washington$^2$ \\
 
 
 \begin{frame}{Observed Ages}
-  \begin{center}
-  \includegraphics[scale = 0.45]{figures/pop2017_agesbysource.png}
-  \end{center}
+  \begin{columns}
+    \begin{column}{0.35\textwidth}
+      \begin{itemize}
+      \item Oldest age: 120 by the fishery (2007)
+      \item Next oldest fish range from 90-103 collected by fishery and At-sea hake between 1981-2010
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+      \includegraphics[scale = 0.45]{figures/pop2017_agesbysource.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %-------------------------------------------------------------------------------------
@@ -185,7 +193,7 @@ University of Washington$^2$ \\
 %---------------------------------------------------------------------------------
 \section{Removals}
 %---------------------------------------------------------------------------------
-\subsection{Landing histories}
+\subsection{Landing history by state}
 \begin{frame}{Landings Data: 2017 vs. 2011}
   \begin{center}
     \includegraphics[scale = 0.45]{figures/pop2017_2011vs2017catches_states.png}
@@ -200,8 +208,19 @@ University of Washington$^2$ \\
 \end{frame}
 
 \subsection{Discarding practices}
-\begin{frame}{Discard Data}
-  Discarding rates
+\begin{frame}{Fishery Discard Data}
+  \begin{center}
+    \includegraphics[scale = 0.40, trim={0, 0, 0, 1cm}, clip]{r4ss/POP_discard_data.png}
+  \end{center}
+
+  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+    \node[black] at (-2, -2.15) {\small Pikitch};
+    \node[black] at (-0.5,-1.5) {\small Management};
+    \node[black] at (-0.5, -1.75) {\small Restrictions};
+    \node[black] at (2, 1) {\small WCGOP};
+    \draw[black, thick, -] (0.5, 0.8) -- (3, 0.8){};
+    \node[black] at (2.5, -2) {\small Post-ITQ};
+  \end{tikzpicture}
 \end{frame}
 
 %---------------------------------------------------------------------------------
@@ -209,45 +228,179 @@ University of Washington$^2$ \\
 %---------------------------------------------------------------------------------
 \subsection{Fishery CPUE}
 \begin{frame}{CPUE}
-  CPUE
+  \begin{center}
+      \includegraphics[scale = 0.45]{r4ss/index1_cpuedata_Fishery.png}
+  \end{center}
+  Gunderson (1977) CPUE from the INPFC Columbia area\\
+  *Sensitivity shows little effect on model results when removed.
 \end{frame}
 
 \subsection{Survey Indices}
-\begin{frame}{Survey}
-  Survey
+\begin{frame}{Survey Indices}
+  \begin{center}
+  \includegraphics[height = 3in, width = 4in]{figures/Index_Data.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{All: standardized}
+  \begin{center}
+  \includegraphics[height = 2.5in, width = 4in]{figures/standardized_index.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Survey Indices: 2011 vs. 2017}
+
 \end{frame}
 
 %---------------------------------------------------------------------------------
 \section{Length Compositions}
 %---------------------------------------------------------------------------------
 \subsection{Fishery Lengths}
-\begin{frame}{Fishery}
-  lengths
+\begin{frame}{Fishery Length Data}
+  Fishery length data used in the 2017 assessment:
+  \begin{itemize}
+    \item Fishery: bottom trawl, mid-water trawl, fixed gear
+      \begin{itemize}
+        \item Retained Lengths 1966-2016
+        \item Discarded Lengths 1986 (Pikitch), 2004-2015
+      \end{itemize}
+    \item At-sea hake fishery
+      \begin{itemize}
+        \item All (Retained and Discarded) Lengths 2003-2016
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fishery Lengths: Retained}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt1mkt2_page4.png}
+  \end{center}
+  \onslide<2->
+  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+    \draw[black, thick, -] (3,   -0.6) -- (3.4, -0.1);
+    \draw[black, thick, -] (-2,   -0.6) -- (-1.6, -0.1);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Fishery Lengths: Discarded}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt1mkt1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{At-sea hake lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt2mkt0.png}
+  \end{center}
 \end{frame}
 
 \subsection{Survey Lengths}
-\begin{frame}{Survey}
-  length
+\begin{frame}{Survey Length Data}
+  Survey length data used in the 2017 assessment:
+  \begin{itemize}
+    \item Pacific ocean perch survey
+      \begin{itemize}
+        \item 1979 and 1985
+      \end{itemize}
+    \item Triennial survey
+      \begin{itemize}
+        \item 1980, 1983, 1896, 1989, 1992, 1995, 1998, 2001, 2004
+      \end{itemize}
+    \item AFSC slope survey
+      \begin{itemize}
+        \item 1996, 1997, 1999-2001
+      \end{itemize}
+    \item NWFSC slope survey
+      \begin{itemize}
+        \item 2001 and 2002
+      \end{itemize}
+    \item NWFSC shelf-slope survey
+      \begin{itemize}
+        \item 2003-2016
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pacific ocean perch survey lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt4mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Triennial survey lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt5mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{AFSC slope survey lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt6mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC slope survey lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt7mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC shelf-slope survey lengths}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt8mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Aggregated lengths by source}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_lendat__aggregated_across_time.png}
+  \end{center}
 \end{frame}
 
 %---------------------------------------------------------------------------------
 \section{Age Compositions}
 %---------------------------------------------------------------------------------
 \subsection{Fishery Ages}
-\begin{frame}{Fishery}
-  ages
+\begin{frame}{Fishery Age Data}
+  Fishery age data used in the 2017 assessment:
+  \begin{itemize}
+    \item Fishery: bottom trawl, mid-water trawl, fixed gear
+      \begin{itemize}
+        \item 1981-1988, 1994, 1999-2016
+      \end{itemize}
+    \item At-sea hake fishery
+      \begin{itemize}
+        \item 2003, 2006, 2007, 2014
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \subsection{Survey Ages}
-\begin{frame}{Survey}
-  ages
+\begin{frame}{Survey Age Data}
+  Survey age data used in the 2017 assessment:
+  \begin{itemize}
+    \item Pacific ocean perch survey
+      \begin{itemize}
+        \item 1985
+      \end{itemize}
+    \item Triennial survey
+      \begin{itemize}
+        \item 1989, 1992, 1995, 1998, 2001, 2004
+      \end{itemize}
+    \item NWFSC slope survey
+      \begin{itemize}
+        \item 2001 and 2002
+      \end{itemize}
+    \item NWFSC shelf-slope survey
+      \begin{itemize}
+        \item 2003-2016
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
+\subsection{Ageing Error}
+\begin{frame}{Estimated Ageing Error}
 
-%\section{Fishery Data}
-%\subsection{}
-
-%\section{Survey Data}
-%\subsection
+\end{frame}
 
 \end{document}

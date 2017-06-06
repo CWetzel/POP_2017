@@ -115,7 +115,7 @@ SS_plots(mod1,
          maxrows2 = 4, 
          maxcols2 = 4, 
          printfolder = '',
-         bub.scale.dat= 3,
+         bub.scale.dat= 6,
          dir = out.dir.mod1)
 
 # Create specialized plots
@@ -152,7 +152,17 @@ dev.off()
 pngfun('POP_discard_fits.png')
 par(mfcol=c(1,1),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
 for(f in 1:1){
-  SSplotDiscard(mod1, fleets=f,subplot=2,fleetnames=fleets)
+  SSplotDiscard(mod1, fleets=f,subplot=2,fleetnames=fleets, datplot = TRUE)
+}
+mtext(side=1,line=1,outer=TRUE,'Year')
+mtext(side=2,line=1,outer=TRUE,'Discard fraction')
+dev.off()
+
+# discard without fits
+pngfun('POP_discard_data.png')
+par(mfcol=c(1,1),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(f in 1:1){
+  SSplotDiscard(mod1, fleets=f,subplot=1,fleetnames=fleets, datplot = TRUE)
 }
 mtext(side=1,line=1,outer=TRUE,'Year')
 mtext(side=2,line=1,outer=TRUE,'Discard fraction')
