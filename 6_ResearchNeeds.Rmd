@@ -10,4 +10,5 @@ There are many areas of research that could be improved to benefit the understan
 
 \item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for `r spp` off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west Ccast observations would help to define the connectivity between `r spp` north and south of the U.S.-Canada border.
 
+
 \end{enumerate}

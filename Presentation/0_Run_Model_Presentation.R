@@ -88,7 +88,10 @@ figures = c(
             "C:/Assessments/POP2017/Data/Biological/plots/LengthAgeEach.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
             "C:/Assessments/POP2017/Data/Biological/plots/pop2017_agesbysource.png",
-            "C:/Assessments/POP2017/Data/CommercialCatch/Plots/pop2017_2011vs2017catches_states.png"
+            "C:/Assessments/POP2017/Data/CommercialCatch/Plots/pop2017_2011vs2017catches_states.png",
+            "C:/Assessments/POP2017/Models/_Data/compare2_spawnbio_uncertainty.png",
+            "C:/Assessments/POP2017/Models/_Data/compare4_Bratio_uncertainty.png",
+            "C:/Assessments/POP2017/Models/2011_2017_Bratio.png"
             )
 
 for (i in 1:length(figures)){

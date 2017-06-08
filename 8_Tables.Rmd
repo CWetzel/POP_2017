@@ -729,7 +729,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of commercial fishery length samples used in the stock assessment.'),
+                           caption = c('Summary of commercial fishery length samples used in the stock assessment (continued on next page).'),
                            label = 'tab:Comm_Lengths',
                            digits = 0)    
 
@@ -1267,11 +1267,6 @@ colnames(Timeseries)=c('Year',
 # Make year a factor so you don't have a decimal   
 Timeseries$Year = as.factor(Timeseries$Year)
 
-```
-
-
-
-```{r, results='asis'}
 # Create the time series table
 Timeseries.table = xtable(Timeseries, 
                           caption = c('Time-series of population estimates from the base model.'),
@@ -1301,6 +1296,7 @@ print(Timeseries.table,
       add.to.row = list(pos = list(0), 
                         command = '\\hline \\endhead '))
 ```
+
 <!-- ---------------------------------------------------------------------- -->
   
 \FloatBarrier

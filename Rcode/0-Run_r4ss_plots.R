@@ -51,7 +51,7 @@ for(p in requiredPackages){
 }
 
 # Install the latest version of r4ss using devtools
-# devtools::install_github("r4ss/r4ss")
+# devtools::install_github("r4ss/r4ss", force = TRUE)
 library(r4ss)
 
 # CHANGE values in this section ===============================================
@@ -101,7 +101,7 @@ save.image('./r4ss/SS_output.RData')
 # output directories
 #out.dir.mod1 = file.path(output.dir,'plots_mod1')
 out.dir.mod1 = file.path(output.dir,model.plots)
-fleets = c("Fishery", "At-sea hake", "Foreign", "Pacific ocean perch survey", "Triennial survey", "AFSC slope survey", "NWFSC slope survey", "NWFSC shelf-slope survey")
+fleets = c("Fishery", "At-sea hake", "Foreign", "Pacific ocean perch survey", "Triennial shelf survey", "AFSC slope survey", "NWFSC slope survey", "NWFSC shelf-slope survey")
 
 # Model 1
 SS_plots(mod1,
@@ -117,6 +117,8 @@ SS_plots(mod1,
          printfolder = '',
          bub.scale.dat= 6,
          dir = out.dir.mod1)
+
+SSunavailableSpawningOutput(mod1, plot=FALSE, print=TRUE)
 
 # Create specialized plots
 pngfun <- function(file,w=7,h=7,pt=12){

@@ -53,7 +53,8 @@ for (a in 1:length(plot.vec)){
 
 ```
 
-
+\FloatBarrier
+\newpage
 
 <!-- ************************************DATA FILE(S)************************************************--> 
 <!--#Appendix C. SS data file {-}

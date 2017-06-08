@@ -219,7 +219,7 @@
 <!-- *********************Model Bridging Figure**************************** --> 
 <!-- ********************************************************************** -->
 
-![Comparison of estimates from Stock Synthesis version 3.30 and 3.24 for `r spp`. \label{fig:bridge}](Figures/bridging.png)
+![Comparison of model bridging estimates from Stock Synthesis version 3.30 and 3.24 for `r spp` for the 2011 assessment. \label{fig:bridge}](Figures/bridging.png)
 
 \FloatBarrier 
 

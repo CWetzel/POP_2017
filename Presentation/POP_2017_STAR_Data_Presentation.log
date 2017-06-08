@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  6 JUN 2017 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  7 JUN 2017 16:15
 entering extended mode
 **./POP_2017_STAR_Data_Presentation.tex
 (POP_2017_STAR_Data_Presentation.tex
@@ -1210,7 +1210,7 @@ line 138.
 1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) <noaalogo.jpg, id=156, 290.58563pt x 280.79906pt>
+) <noaalogo.jpg, id=158, 290.58563pt x 280.79906pt>
 File: noaalogo.jpg Graphic file (type jpg)
 
 <use noaalogo.jpg>
@@ -1231,7 +1231,7 @@ Package pdftex.def Info: noaalogo.jpg used on input line 142.
 
 [2
 
-] <figures/catches.png, id=372, 748.29562pt x 401.24907pt>
+] <figures/catches.png, id=380, 748.29562pt x 401.24907pt>
 File: figures/catches.png Graphic file (type png)
 
 <use figures/catches.png>
@@ -1260,7 +1260,7 @@ Package pdftex.def Info: noaalogo.jpg used on input line 172.
  [4
 
 ]
-<r4ss/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png, id=522, 4
+<r4ss/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png, id=534, 4
 69.755pt x 361.35pt>
 File: r4ss/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png Graph
 ic file (type png)
@@ -1277,7 +1277,7 @@ Package pdftex.def Info: noaalogo.jpg used on input line 180.
  [5
 
  <./r4ss/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png>]
-<r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png, id=600
+<r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png, id=614
 , 469.755pt x 361.35pt>
 File: r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png Gr
 aphic file (type png)
@@ -1294,7 +1294,7 @@ Package pdftex.def Info: noaalogo.jpg used on input line 187.
  [6
 
  <./r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png>]
-<r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png, id=678, 469
+<r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png, id=694, 469
 .755pt x 361.35pt>
 File: r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png Graphic
  file (type png)
@@ -1311,7 +1311,7 @@ Package pdftex.def Info: noaalogo.jpg used on input line 194.
  [7
 
  <./r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png>] <r4ss/r
-ecdevs2_withbars.png, id=757, 469.755pt x 361.35pt>
+ecdevs2_withbars.png, id=775, 469.755pt x 361.35pt>
 File: r4ss/recdevs2_withbars.png Graphic file (type png)
 
 <use r4ss/recdevs2_withbars.png>
@@ -1323,373 +1323,373 @@ Package pdftex.def Info: noaalogo.jpg used on input line 200.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [8
 
- <./r4ss/recdevs2_withbars.png>]
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 209
+ <./r4ss/recdevs2_withbars.png>] <figures/2011_2017_Bratio.png, id=855, 469.755
+pt x 361.35pt>
+File: figures/2011_2017_Bratio.png Graphic file (type png)
+
+<use figures/2011_2017_Bratio.png>
+Package pdftex.def Info: figures/2011_2017_Bratio.png used on input line 206.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 206.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [9
+
+ <./figures/2011_2017_Bratio.png>]
+<figures/compare4_Bratio_uncertainty.png, id=933, 469.755pt x 361.35pt>
+File: figures/compare4_Bratio_uncertainty.png Graphic file (type png)
+
+<use figures/compare4_Bratio_uncertainty.png>
+Package pdftex.def Info: figures/compare4_Bratio_uncertainty.png used on input 
+line 212.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 212.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [10
+
+ <./figures/compare4_Bratio_uncertainty.png>]
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 221
 .
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmss.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmss.fd"
 File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 File: noaalogo.jpg Graphic file (type jpg)
 
 <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 209.
+Package pdftex.def Info: noaalogo.jpg used on input line 221.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [9
+ [11
 
 ]
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 214.
+Package pdftex.def Info: noaalogo.jpg used on input line 226.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [10
+ [12
 
 ]
 (POP_2017_STAR_Data_Presentation.toc)
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 219.
+Package pdftex.def Info: noaalogo.jpg used on input line 231.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [11
+ [13
 
 ]
-<C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png, id=1068
+<C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png, id=1251
 , 501.875pt x 250.9375pt>
 File: C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png Gra
 phic file (type png)
 
 <use C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png>
 Package pdftex.def Info: C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Seba
-stes_alutus.png used on input line 242.
+stes_alutus.png used on input line 254.
 (pdftex.def)             Requested size: 144.53682pt x 72.26999pt.
 File: noaalogo.jpg Graphic file (type jpg)
 
 <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 242.
+Package pdftex.def Info: noaalogo.jpg used on input line 254.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [12
+ [14
 
  <C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png>]
-<figures/Functional_Maturity.png, id=1144, 418.56375pt x 364.36125pt>
+<figures/Functional_Maturity.png, id=1329, 418.56375pt x 364.36125pt>
 File: figures/Functional_Maturity.png Graphic file (type png)
 
 <use figures/Functional_Maturity.png>
-Package pdftex.def Info: figures/Functional_Maturity.png used on input line 263
+Package pdftex.def Info: figures/Functional_Maturity.png used on input line 275
 .
 (pdftex.def)             Requested size: 180.67505pt x 198.74251pt.
 
-Overfull \hbox (5.80481pt too wide) in paragraph at lines 263--263
+Overfull \hbox (5.80481pt too wide) in paragraph at lines 275--275
  [] 
  []
 
 File: noaalogo.jpg Graphic file (type jpg)
 <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 263.
+Package pdftex.def Info: noaalogo.jpg used on input line 275.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [13
+ [15
 
  <./figures/Functional_Maturity.png>]
-<figures/Maturity_Comparison.png, id=1220, 722.7pt x 614.295pt>
+<figures/Maturity_Comparison.png, id=1406, 722.7pt x 614.295pt>
 File: figures/Maturity_Comparison.png Graphic file (type png)
 
 <use figures/Maturity_Comparison.png>
-Package pdftex.def Info: figures/Maturity_Comparison.png used on input line 271
+Package pdftex.def Info: figures/Maturity_Comparison.png used on input line 283
 .
 (pdftex.def)             Requested size: 231.26872pt x 196.57841pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 271.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [14
-
- <./figures/Maturity_Comparison.png>]
-<figures/Fecundity_Comparison.png, id=1296, 722.7pt x 614.295pt>
-File: figures/Fecundity_Comparison.png Graphic file (type png)
-
-<use figures/Fecundity_Comparison.png>
-Package pdftex.def Info: figures/Fecundity_Comparison.png used on input line 27
-9.
-(pdftex.def)             Requested size: 208.27577pt x 175.75403pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 279.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [15
-
- <./figures/Fecundity_Comparison.png>]
-<figures/weightAtLengthPred.png, id=1374, 469.755pt x 216.81pt>
-File: figures/weightAtLengthPred.png Graphic file (type png)
-
-<use figures/weightAtLengthPred.png>
-Package pdftex.def Info: figures/weightAtLengthPred.png used on input line 286.
-
-(pdftex.def)             Requested size: 352.31538pt x 162.60709pt.
-
-Overfull \hbox (2.57489pt too wide) in paragraph at lines 286--286
- [] 
- []
-
-File: noaalogo.jpg Graphic file (type jpg)
-<use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 286.
+Package pdftex.def Info: noaalogo.jpg used on input line 283.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [16
 
- <./figures/weightAtLengthPred.png>]
-<figures/LengthAgeAll_2.png, id=1450, 722.7pt x 433.62pt>
-File: figures/LengthAgeAll_2.png Graphic file (type png)
+ <./figures/Maturity_Comparison.png>]
+<figures/Fecundity_Comparison.png, id=1484, 722.7pt x 614.295pt>
+File: figures/Fecundity_Comparison.png Graphic file (type png)
 
-<use figures/LengthAgeAll_2.png>
-Package pdftex.def Info: figures/LengthAgeAll_2.png used on input line 292.
-(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
+<use figures/Fecundity_Comparison.png>
+Package pdftex.def Info: figures/Fecundity_Comparison.png used on input line 29
+1.
+(pdftex.def)             Requested size: 208.27577pt x 175.75403pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 291.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [17
 
-Overfull \hbox (11.60861pt too wide) in paragraph at lines 292--292
+ <./figures/Fecundity_Comparison.png>]
+<figures/weightAtLengthPred.png, id=1564, 469.755pt x 216.81pt>
+File: figures/weightAtLengthPred.png Graphic file (type png)
+
+<use figures/weightAtLengthPred.png>
+Package pdftex.def Info: figures/weightAtLengthPred.png used on input line 298.
+
+(pdftex.def)             Requested size: 352.31538pt x 162.60709pt.
+
+Overfull \hbox (2.57489pt too wide) in paragraph at lines 298--298
  [] 
- []
-
-
-Overfull \vbox (12.70033pt too high) detected at line 292
  []
 
 File: noaalogo.jpg Graphic file (type jpg)
 <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 292.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [17
-
- <./figures/LengthAgeAll_2.png>]
-<figures/pop2017_agesbysource.png, id=1526, 481.8pt x 481.8pt>
-File: figures/pop2017_agesbysource.png Graphic file (type png)
-
-<use figures/pop2017_agesbysource.png>
-Package pdftex.def Info: figures/pop2017_agesbysource.png used on input line 30
-7.
-(pdftex.def)             Requested size: 216.80798pt x 216.80798pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 307.
+Package pdftex.def Info: noaalogo.jpg used on input line 298.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [18
 
- <./figures/pop2017_agesbysource.png>] <r4ss/data_plot.png, id=1602, 469.755pt 
+ <./figures/weightAtLengthPred.png>]
+<figures/LengthAgeAll_2.png, id=1642, 722.7pt x 433.62pt>
+File: figures/LengthAgeAll_2.png Graphic file (type png)
+
+<use figures/LengthAgeAll_2.png>
+Package pdftex.def Info: figures/LengthAgeAll_2.png used on input line 304.
+(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
+
+Overfull \hbox (11.60861pt too wide) in paragraph at lines 304--304
+ [] 
+ []
+
+
+Overfull \vbox (12.70033pt too high) detected at line 304
+ []
+
+File: noaalogo.jpg Graphic file (type jpg)
+<use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 304.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [19
+
+ <./figures/LengthAgeAll_2.png>]
+<figures/pop2017_agesbysource.png, id=1721, 481.8pt x 481.8pt>
+File: figures/pop2017_agesbysource.png Graphic file (type png)
+
+<use figures/pop2017_agesbysource.png>
+Package pdftex.def Info: figures/pop2017_agesbysource.png used on input line 31
+9.
+(pdftex.def)             Requested size: 216.80798pt x 216.80798pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 319.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [20
+
+ <./figures/pop2017_agesbysource.png>] <r4ss/data_plot.png, id=1799, 469.755pt 
 x 361.35pt>
 File: r4ss/data_plot.png Graphic file (type png)
 
 <use r4ss/data_plot.png>
-Package pdftex.def Info: r4ss/data_plot.png used on input line 321.
+Package pdftex.def Info: r4ss/data_plot.png used on input line 333.
 (pdftex.def)             Requested size: 281.85518pt x 216.81pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 321.
+Package pdftex.def Info: noaalogo.jpg used on input line 333.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [19
+ [21
 
  <./r4ss/data_plot.png>]
 (POP_2017_STAR_Data_Presentation.toc)
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 325.
+Package pdftex.def Info: noaalogo.jpg used on input line 337.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [20
+ [22
 
 ]
-<figures/pop2017_2011vs2017catches_states.png, id=1762, 481.8pt x 481.8pt>
+<figures/pop2017_2011vs2017catches_states.png, id=1962, 481.8pt x 481.8pt>
 File: figures/pop2017_2011vs2017catches_states.png Graphic file (type png)
 
 <use figures/pop2017_2011vs2017catches_states.png>
 Package pdftex.def Info: figures/pop2017_2011vs2017catches_states.png used on i
-nput line 332.
+nput line 344.
 (pdftex.def)             Requested size: 216.80798pt x 216.80798pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 332.
+Package pdftex.def Info: noaalogo.jpg used on input line 344.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [21
+ [23
 
  <./figures/pop2017_2011vs2017catches_states.png>]
-<figures/Catch_Comparison.png, id=1838, 722.7pt x 614.295pt>
+<figures/Catch_Comparison.png, id=2040, 722.7pt x 614.295pt>
 File: figures/Catch_Comparison.png Graphic file (type png)
 
 <use figures/Catch_Comparison.png>
-Package pdftex.def Info: figures/Catch_Comparison.png used on input line 339.
+Package pdftex.def Info: figures/Catch_Comparison.png used on input line 351.
 (pdftex.def)             Requested size: 231.26872pt x 178.36827pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 339.
+Package pdftex.def Info: noaalogo.jpg used on input line 351.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [22
+ [24
 
- <./figures/Catch_Comparison.png>] <r4ss/POP_discard_data.png, id=1918, 505.89p
+ <./figures/Catch_Comparison.png>] <r4ss/POP_discard_data.png, id=2122, 505.89p
 t x 505.89pt>
 File: r4ss/POP_discard_data.png Graphic file (type png)
 
 <use r4ss/POP_discard_data.png>
-Package pdftex.def Info: r4ss/POP_discard_data.png used on input line 355.
+Package pdftex.def Info: r4ss/POP_discard_data.png used on input line 367.
 (pdftex.def)             Requested size: 202.3524pt x 190.97151pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 355.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [23
-
- <./r4ss/POP_discard_data.png>] (POP_2017_STAR_Data_Presentation.toc)
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 358.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [24
-
-]
-<r4ss/index1_cpuedata_Fishery.png, id=2079, 469.755pt x 361.35pt>
-File: r4ss/index1_cpuedata_Fishery.png Graphic file (type png)
-
-<use r4ss/index1_cpuedata_Fishery.png>
-Package pdftex.def Info: r4ss/index1_cpuedata_Fishery.png used on input line 36
-7.
-(pdftex.def)             Requested size: 211.3878pt x 162.60599pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 367.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [25
 
- <./r4ss/index1_cpuedata_Fishery.png>] <figures/Index_Data.png, id=2156, 722.7p
+ <./r4ss/POP_discard_data.png>] (POP_2017_STAR_Data_Presentation.toc)
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 370.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [26
+
+]
+<r4ss/index1_cpuedata_Fishery.png, id=2288, 469.755pt x 361.35pt>
+File: r4ss/index1_cpuedata_Fishery.png Graphic file (type png)
+
+<use r4ss/index1_cpuedata_Fishery.png>
+Package pdftex.def Info: r4ss/index1_cpuedata_Fishery.png used on input line 37
+9.
+(pdftex.def)             Requested size: 211.3878pt x 162.60599pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 379.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [27
+
+ <./r4ss/index1_cpuedata_Fishery.png>] <figures/Index_Data.png, id=2366, 722.7p
 t x 722.7pt>
 File: figures/Index_Data.png Graphic file (type png)
 
 <use figures/Index_Data.png>
-Package pdftex.def Info: figures/Index_Data.png used on input line 374.
+Package pdftex.def Info: figures/Index_Data.png used on input line 386.
 (pdftex.def)             Requested size: 289.07487pt x 216.81166pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 374.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [26
-
- <./figures/Index_Data.png>] <figures/standardized_index.png, id=2232, 599.2387
-5pt x 359.84438pt>
-File: figures/standardized_index.png Graphic file (type png)
-
-<use figures/standardized_index.png>
-Package pdftex.def Info: figures/standardized_index.png used on input line 380.
-
-(pdftex.def)             Requested size: 289.08517pt x 180.67946pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 380.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [27
-
- <./figures/standardized_index.png>] (POP_2017_STAR_Data_Presentation.toc)
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 386.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [28
 
-[28
+ <./figures/Index_Data.png>] <figures/standardized_index.png, id=2444, 599.2387
+5pt x 359.84438pt>
+File: figures/standardized_index.png Graphic file (type png)
 
-]
+<use figures/standardized_index.png>
+Package pdftex.def Info: figures/standardized_index.png used on input line 392.
+
+(pdftex.def)             Requested size: 289.08517pt x 180.67946pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 402.
+Package pdftex.def Info: noaalogo.jpg used on input line 392.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [29
 
-]
-<r4ss/comp_lendat_bubflt1mkt2_page4.png, id=2464, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt1mkt2_page4.png Graphic file (type png)
-
-<use r4ss/comp_lendat_bubflt1mkt2_page4.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt2_page4.png used on input l
-ine 413.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+ <./figures/standardized_index.png>] (POP_2017_STAR_Data_Presentation.toc)
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 413.
+Package pdftex.def Info: noaalogo.jpg used on input line 398.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [30
 
- <./r4ss/comp_lendat_bubflt1mkt2_page4.png>]
-File: r4ss/comp_lendat_bubflt1mkt2_page4.png Graphic file (type png)
- <use r4ss/comp_lendat_bubflt1mkt2_page4.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt2_page4.png used on input l
-ine 413.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+[30
+
+]
 File: noaalogo.jpg Graphic file (type jpg)
-
-<use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 413.
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 414.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [31
 
 ]
-<r4ss/comp_lendat_bubflt1mkt1.png, id=2616, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt1mkt1.png Graphic file (type png)
+<r4ss/comp_lendat_bubflt1mkt2_page4.png, id=2683, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt1mkt2_page4.png Graphic file (type png)
 
-<use r4ss/comp_lendat_bubflt1mkt1.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt1.png used on input line 41
-9.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 419.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [32
-
- <./r4ss/comp_lendat_bubflt1mkt1.png>]
-<r4ss/comp_lendat_bubflt2mkt0.png, id=2692, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt2mkt0.png Graphic file (type png)
-
-<use r4ss/comp_lendat_bubflt2mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt2mkt0.png used on input line 42
-5.
+<use r4ss/comp_lendat_bubflt1mkt2_page4.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt2_page4.png used on input l
+ine 425.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 425.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [32
+
+ <./r4ss/comp_lendat_bubflt1mkt2_page4.png>]
+File: r4ss/comp_lendat_bubflt1mkt2_page4.png Graphic file (type png)
+ <use r4ss/comp_lendat_bubflt1mkt2_page4.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt2_page4.png used on input l
+ine 425.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+
+<use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 425.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [33
 
- <./r4ss/comp_lendat_bubflt2mkt0.png>]
+]
+<r4ss/comp_lendat_bubflt1mkt1.png, id=2838, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt1mkt1.png Graphic file (type png)
+
+<use r4ss/comp_lendat_bubflt1mkt1.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt1mkt1.png used on input line 43
+1.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 452.
+Package pdftex.def Info: noaalogo.jpg used on input line 431.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [34
 
-]
-<r4ss/comp_lendat_bubflt4mkt0.png, id=2842, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt4mkt0.png Graphic file (type png)
+ <./r4ss/comp_lendat_bubflt1mkt1.png>]
+<r4ss/comp_lendat_bubflt2mkt0.png, id=2916, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt2mkt0.png Graphic file (type png)
 
-<use r4ss/comp_lendat_bubflt4mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt4mkt0.png used on input line 45
-8.
+<use r4ss/comp_lendat_bubflt2mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt2mkt0.png used on input line 43
+7.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 458.
+Package pdftex.def Info: noaalogo.jpg used on input line 437.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [35
 
- <./r4ss/comp_lendat_bubflt4mkt0.png>]
-<r4ss/comp_lendat_bubflt5mkt0.png, id=2918, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt5mkt0.png Graphic file (type png)
-
-<use r4ss/comp_lendat_bubflt5mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt5mkt0.png used on input line 46
-4.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+ <./r4ss/comp_lendat_bubflt2mkt0.png>]
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 464.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [36
 
- <./r4ss/comp_lendat_bubflt5mkt0.png>]
-<r4ss/comp_lendat_bubflt6mkt0.png, id=2994, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt6mkt0.png Graphic file (type png)
+]
+<r4ss/comp_lendat_bubflt4mkt0.png, id=3070, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt4mkt0.png Graphic file (type png)
 
-<use r4ss/comp_lendat_bubflt6mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt6mkt0.png used on input line 47
+<use r4ss/comp_lendat_bubflt4mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt4mkt0.png used on input line 47
 0.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
@@ -1698,12 +1698,12 @@ Package pdftex.def Info: noaalogo.jpg used on input line 470.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [37
 
- <./r4ss/comp_lendat_bubflt6mkt0.png>]
-<r4ss/comp_lendat_bubflt7mkt0.png, id=3071, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt7mkt0.png Graphic file (type png)
+ <./r4ss/comp_lendat_bubflt4mkt0.png>]
+<r4ss/comp_lendat_bubflt5mkt0.png, id=3149, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt5mkt0.png Graphic file (type png)
 
-<use r4ss/comp_lendat_bubflt7mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt7mkt0.png used on input line 47
+<use r4ss/comp_lendat_bubflt5mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt5mkt0.png used on input line 47
 6.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
@@ -1712,12 +1712,12 @@ Package pdftex.def Info: noaalogo.jpg used on input line 476.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [38
 
- <./r4ss/comp_lendat_bubflt7mkt0.png>]
-<r4ss/comp_lendat_bubflt8mkt0.png, id=3147, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat_bubflt8mkt0.png Graphic file (type png)
+ <./r4ss/comp_lendat_bubflt5mkt0.png>]
+<r4ss/comp_lendat_bubflt6mkt0.png, id=3227, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt6mkt0.png Graphic file (type png)
 
-<use r4ss/comp_lendat_bubflt8mkt0.png>
-Package pdftex.def Info: r4ss/comp_lendat_bubflt8mkt0.png used on input line 48
+<use r4ss/comp_lendat_bubflt6mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt6mkt0.png used on input line 48
 2.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
@@ -1726,13 +1726,13 @@ Package pdftex.def Info: noaalogo.jpg used on input line 482.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [39
 
- <./r4ss/comp_lendat_bubflt8mkt0.png>]
-<r4ss/comp_lendat__aggregated_across_time.png, id=3223, 469.755pt x 361.35pt>
-File: r4ss/comp_lendat__aggregated_across_time.png Graphic file (type png)
+ <./r4ss/comp_lendat_bubflt6mkt0.png>]
+<r4ss/comp_lendat_bubflt7mkt0.png, id=3305, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt7mkt0.png Graphic file (type png)
 
-<use r4ss/comp_lendat__aggregated_across_time.png>
-Package pdftex.def Info: r4ss/comp_lendat__aggregated_across_time.png used on i
-nput line 488.
+<use r4ss/comp_lendat_bubflt7mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt7mkt0.png used on input line 48
+8.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
@@ -1740,91 +1740,91 @@ Package pdftex.def Info: noaalogo.jpg used on input line 488.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [40
 
+ <./r4ss/comp_lendat_bubflt7mkt0.png>]
+<r4ss/comp_lendat_bubflt8mkt0.png, id=3383, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat_bubflt8mkt0.png Graphic file (type png)
+
+<use r4ss/comp_lendat_bubflt8mkt0.png>
+Package pdftex.def Info: r4ss/comp_lendat_bubflt8mkt0.png used on input line 49
+4.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 494.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [41
+
+ <./r4ss/comp_lendat_bubflt8mkt0.png>]
+<r4ss/comp_lendat__aggregated_across_time.png, id=3461, 469.755pt x 361.35pt>
+File: r4ss/comp_lendat__aggregated_across_time.png Graphic file (type png)
+
+<use r4ss/comp_lendat__aggregated_across_time.png>
+Package pdftex.def Info: r4ss/comp_lendat__aggregated_across_time.png used on i
+nput line 500.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 500.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [42
+
  <./r4ss/comp_lendat__aggregated_across_time.png>]
 (POP_2017_STAR_Data_Presentation.toc)
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 491.
+Package pdftex.def Info: noaalogo.jpg used on input line 503.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [41
+ [43
 
 ]
 File: noaalogo.jpg Graphic file (type jpg)
 
 <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 506.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [42
-
-]
-<r4ss/comp_agedat_bubflt1mkt2_page2.png, id=3456, 469.755pt x 361.35pt>
-File: r4ss/comp_agedat_bubflt1mkt2_page2.png Graphic file (type png)
-
-<use r4ss/comp_agedat_bubflt1mkt2_page2.png>
-Package pdftex.def Info: r4ss/comp_agedat_bubflt1mkt2_page2.png used on input l
-ine 512.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 512.
-(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
- [43
-
- <./r4ss/comp_agedat_bubflt1mkt2_page2.png>]
-<r4ss/comp_agedat_bubflt2mkt0.png, id=3533, 469.755pt x 361.35pt>
-File: r4ss/comp_agedat_bubflt2mkt0.png Graphic file (type png)
-
-<use r4ss/comp_agedat_bubflt2mkt0.png>
-Package pdftex.def Info: r4ss/comp_agedat_bubflt2mkt0.png used on input line 51
-8.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
-File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 518.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [44
 
- <./r4ss/comp_agedat_bubflt2mkt0.png>]
+]
+<r4ss/comp_agedat_bubflt1mkt2_page2.png, id=3701, 469.755pt x 361.35pt>
+File: r4ss/comp_agedat_bubflt1mkt2_page2.png Graphic file (type png)
+
+<use r4ss/comp_agedat_bubflt1mkt2_page2.png>
+Package pdftex.def Info: r4ss/comp_agedat_bubflt1mkt2_page2.png used on input l
+ine 524.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 541.
+Package pdftex.def Info: noaalogo.jpg used on input line 524.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [45
 
-]
-<r4ss/comp_agedat_bubflt4mkt0.png, id=3683, 469.755pt x 361.35pt>
-File: r4ss/comp_agedat_bubflt4mkt0.png Graphic file (type png)
+ <./r4ss/comp_agedat_bubflt1mkt2_page2.png>]
+<r4ss/comp_agedat_bubflt2mkt0.png, id=3779, 469.755pt x 361.35pt>
+File: r4ss/comp_agedat_bubflt2mkt0.png Graphic file (type png)
 
-<use r4ss/comp_agedat_bubflt4mkt0.png>
-Package pdftex.def Info: r4ss/comp_agedat_bubflt4mkt0.png used on input line 54
-7.
+<use r4ss/comp_agedat_bubflt2mkt0.png>
+Package pdftex.def Info: r4ss/comp_agedat_bubflt2mkt0.png used on input line 53
+0.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 547.
+Package pdftex.def Info: noaalogo.jpg used on input line 530.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [46
 
- <./r4ss/comp_agedat_bubflt4mkt0.png>]
-<r4ss/comp_agedat_bubflt5mkt0.png, id=3759, 469.755pt x 361.35pt>
-File: r4ss/comp_agedat_bubflt5mkt0.png Graphic file (type png)
-
-<use r4ss/comp_agedat_bubflt5mkt0.png>
-Package pdftex.def Info: r4ss/comp_agedat_bubflt5mkt0.png used on input line 55
-3.
-(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+ <./r4ss/comp_agedat_bubflt2mkt0.png>]
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 553.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [47
 
- <./r4ss/comp_agedat_bubflt5mkt0.png>]
-<r4ss/comp_agedat_bubflt7mkt0.png, id=3835, 469.755pt x 361.35pt>
-File: r4ss/comp_agedat_bubflt7mkt0.png Graphic file (type png)
+]
+<r4ss/comp_agedat_bubflt4mkt0.png, id=3933, 469.755pt x 361.35pt>
+File: r4ss/comp_agedat_bubflt4mkt0.png Graphic file (type png)
 
-<use r4ss/comp_agedat_bubflt7mkt0.png>
-Package pdftex.def Info: r4ss/comp_agedat_bubflt7mkt0.png used on input line 55
+<use r4ss/comp_agedat_bubflt4mkt0.png>
+Package pdftex.def Info: r4ss/comp_agedat_bubflt4mkt0.png used on input line 55
 9.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
@@ -1833,13 +1833,13 @@ Package pdftex.def Info: noaalogo.jpg used on input line 559.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [48
 
- <./r4ss/comp_agedat_bubflt7mkt0.png>]
-<r4ss/comp_condAALdat_bubflt8mkt0_page1.png, id=3911, 469.755pt x 361.35pt>
-File: r4ss/comp_condAALdat_bubflt8mkt0_page1.png Graphic file (type png)
+ <./r4ss/comp_agedat_bubflt4mkt0.png>]
+<r4ss/comp_agedat_bubflt5mkt0.png, id=4011, 469.755pt x 361.35pt>
+File: r4ss/comp_agedat_bubflt5mkt0.png Graphic file (type png)
 
-<use r4ss/comp_condAALdat_bubflt8mkt0_page1.png>
-Package pdftex.def Info: r4ss/comp_condAALdat_bubflt8mkt0_page1.png used on inp
-ut line 565.
+<use r4ss/comp_agedat_bubflt5mkt0.png>
+Package pdftex.def Info: r4ss/comp_agedat_bubflt5mkt0.png used on input line 56
+5.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
@@ -1847,13 +1847,13 @@ Package pdftex.def Info: noaalogo.jpg used on input line 565.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [49
 
- <./r4ss/comp_condAALdat_bubflt8mkt0_page1.png (PNG copy)>]
-<r4ss/comp_condAALdat_bubflt8mkt0_page2.png, id=3987, 469.755pt x 361.35pt>
-File: r4ss/comp_condAALdat_bubflt8mkt0_page2.png Graphic file (type png)
+ <./r4ss/comp_agedat_bubflt5mkt0.png>]
+<r4ss/comp_agedat_bubflt7mkt0.png, id=4090, 469.755pt x 361.35pt>
+File: r4ss/comp_agedat_bubflt7mkt0.png Graphic file (type png)
 
-<use r4ss/comp_condAALdat_bubflt8mkt0_page2.png>
-Package pdftex.def Info: r4ss/comp_condAALdat_bubflt8mkt0_page2.png used on inp
-ut line 571.
+<use r4ss/comp_agedat_bubflt7mkt0.png>
+Package pdftex.def Info: r4ss/comp_agedat_bubflt7mkt0.png used on input line 57
+1.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
@@ -1861,13 +1861,13 @@ Package pdftex.def Info: noaalogo.jpg used on input line 571.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [50
 
- <./r4ss/comp_condAALdat_bubflt8mkt0_page2.png (PNG copy)>]
-<r4ss/comp_gstagedat_bubflt8mkt0.png, id=4062, 469.755pt x 361.35pt>
-File: r4ss/comp_gstagedat_bubflt8mkt0.png Graphic file (type png)
+ <./r4ss/comp_agedat_bubflt7mkt0.png>]
+<r4ss/comp_condAALdat_bubflt8mkt0_page1.png, id=4168, 469.755pt x 361.35pt>
+File: r4ss/comp_condAALdat_bubflt8mkt0_page1.png Graphic file (type png)
 
-<use r4ss/comp_gstagedat_bubflt8mkt0.png>
-Package pdftex.def Info: r4ss/comp_gstagedat_bubflt8mkt0.png used on input line
- 577.
+<use r4ss/comp_condAALdat_bubflt8mkt0_page1.png>
+Package pdftex.def Info: r4ss/comp_condAALdat_bubflt8mkt0_page1.png used on inp
+ut line 577.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
@@ -1875,18 +1875,46 @@ Package pdftex.def Info: noaalogo.jpg used on input line 577.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [51
 
- <./r4ss/comp_gstagedat_bubflt8mkt0.png>]
-<r4ss/numbers5_ageerrorSD.png, id=4138, 469.755pt x 361.35pt>
-File: r4ss/numbers5_ageerrorSD.png Graphic file (type png)
+ <./r4ss/comp_condAALdat_bubflt8mkt0_page1.png (PNG copy)>]
+<r4ss/comp_condAALdat_bubflt8mkt0_page2.png, id=4245, 469.755pt x 361.35pt>
+File: r4ss/comp_condAALdat_bubflt8mkt0_page2.png Graphic file (type png)
 
-<use r4ss/numbers5_ageerrorSD.png>
-Package pdftex.def Info: r4ss/numbers5_ageerrorSD.png used on input line 586.
+<use r4ss/comp_condAALdat_bubflt8mkt0_page2.png>
+Package pdftex.def Info: r4ss/comp_condAALdat_bubflt8mkt0_page2.png used on inp
+ut line 583.
 (pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
 File: noaalogo.jpg Graphic file (type jpg)
  <use noaalogo.jpg>
-Package pdftex.def Info: noaalogo.jpg used on input line 586.
+Package pdftex.def Info: noaalogo.jpg used on input line 583.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [52
+
+ <./r4ss/comp_condAALdat_bubflt8mkt0_page2.png (PNG copy)>]
+<r4ss/comp_gstagedat_bubflt8mkt0.png, id=4322, 469.755pt x 361.35pt>
+File: r4ss/comp_gstagedat_bubflt8mkt0.png Graphic file (type png)
+
+<use r4ss/comp_gstagedat_bubflt8mkt0.png>
+Package pdftex.def Info: r4ss/comp_gstagedat_bubflt8mkt0.png used on input line
+ 589.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 589.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [53
+
+ <./r4ss/comp_gstagedat_bubflt8mkt0.png>]
+<r4ss/numbers5_ageerrorSD.png, id=4400, 469.755pt x 361.35pt>
+File: r4ss/numbers5_ageerrorSD.png Graphic file (type png)
+
+<use r4ss/numbers5_ageerrorSD.png>
+Package pdftex.def Info: r4ss/numbers5_ageerrorSD.png used on input line 598.
+(pdftex.def)             Requested size: 234.87692pt x 180.67456pt.
+File: noaalogo.jpg Graphic file (type jpg)
+ <use noaalogo.jpg>
+Package pdftex.def Info: noaalogo.jpg used on input line 598.
+(pdftex.def)             Requested size: 37.3917pt x 36.135pt.
+ [54
 
  <./r4ss/numbers5_ageerrorSD.png>]
 \tf@nav=\write6
@@ -1898,14 +1926,14 @@ Package pdftex.def Info: noaalogo.jpg used on input line 586.
 \tf@snm=\write8
 \openout8 = `POP_2017_STAR_Data_Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 600.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 600.
  (POP_2017_STAR_Data_Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 600.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 600.
 Package rerunfilecheck Info: File `POP_2017_STAR_Data_Presentation.out' has not
  changed.
-(rerunfilecheck)             Checksum: DD033791178D228908B855E89680B36E;1407.
+(rerunfilecheck)             Checksum: 91128982CC3554B7ADBCC7669FE883C2;1408.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1913,10 +1941,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 21432 strings out of 493634
- 424901 string characters out of 3141286
- 535007 words of memory out of 3000000
- 24146 multiletter control sequences out of 15000+200000
+ 21454 strings out of 493634
+ 425432 string characters out of 3141286
+ 537901 words of memory out of 3000000
+ 24162 multiletter control sequences out of 15000+200000
  18008 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  56i,19n,59p,869b,820s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1934,10 +1962,10 @@ el\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:
 00\ecss0600.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmssi10.pfb>
-Output written on POP_2017_STAR_Data_Presentation.pdf (52 pages, 3300196 bytes)
+Output written on POP_2017_STAR_Data_Presentation.pdf (54 pages, 3414641 bytes)
 .
 PDF statistics:
- 4529 PDF objects out of 5155 (max. 8388607)
- 129 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4794 PDF objects out of 5155 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
+ 475 words of extra memory for PDF output out of 10000 (max. 10000000)
 
