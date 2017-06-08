@@ -111,7 +111,7 @@ Exec_catch_summary = subset(Exec_catch_summary, Year >= FirstYR-1 & Year <= Last
     
 # Make executive summary catch xtable
 Exec_catch.table = xtable(Exec_catch_summary, 
-                          caption = c(paste0('Landings (mt) for the past 10 years for ',spp,' by fleet.')), 
+                          caption = c(paste0('Landings (mt) for the past 10 years for ',spp,' by source.')), 
                           label='tab:Exec_catch')
     
 # Add alignment - you will have to adjust based on the number of columns you have
@@ -225,7 +225,7 @@ align(Exec_catch.table) = c('l', 'l',
 # Create Spawning/Depletion tables for the correct number of models
 # Model 1 table ---------------------------------------------------------------
 Spawn_Deplete_mod1.table = xtable(SpawnDepletemod1, 
-                           caption = paste0('Recent trend in estimated spawning output (', fecund_unit, ') and relative spawning output.'), 
+                           caption = paste0('Recent trend in estimated spawning output (', fecund_unit, ') and estimated relative spawning output (depletion).'), 
                            label='tab:SpawningDeplete_mod1')#, digits=2)  
 
 # Add column spacing    
@@ -502,9 +502,9 @@ colnames(mngmnt) = c('Year',
 
 # Create the management performance table
 mngmnt.table = xtable(mngmnt, 
-                      caption=c('Recent trend in total catch and commercial 
+                      caption=c('Recent trend in total catch and  
                               landings (mt) relative to the management guidelines. 
-                              Estimated total catch reflect the commercial landings 
+                              Estimated total catch reflect the landings 
                               plus the model estimated discarded biomass.'), 
                       label='tab:mnmgt_perform')
 # Add alignment
@@ -550,10 +550,10 @@ align(mngmnt.table) = c('l',
       Bratio.fore = print(Bratio.fore, digits = 3)
       
       Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
-      colnames(Fore_Table) = c('Year','OFL', "ACL", paste0('Spawning Output (',fecund_unit,')'), "Relative Biomass") 
+      colnames(Fore_Table) = c('Year','OFL', "ACL", paste0('Spawning Output (',fecund_unit,')'), "Relative Depletion") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative biomass.  The ACL values for 2017 and 2018 
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative depletion.  The ACL values for 2017 and 2018 
                                                are set at the harvest limits currently set by management.'),
                   label = 'tab:OFL_projection')
       
@@ -684,7 +684,7 @@ align(mngmnt.table) = c('l',
                        paste('Age ',min_age,' biomass (mt)',sep=''),
                        'Spawning Output',
                        '~95\\% CI',
-                       'Relative Biomass',
+                       'Relative Depletion',
                        '~95\\% CI',
                        'Recruits',
                        '~95\\% CI')

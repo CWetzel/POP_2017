@@ -131,7 +131,7 @@ University of Washington$^2$ \\
 \end{frame}
 
 
-\begin{frame}{Relative Biomass}
+\begin{frame}{Relative Depletion}
   \begin{center}
     \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
   \end{center}
@@ -156,7 +156,14 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{2011 Model Update}
+\begin{frame}{Major Changes Between the Previous and Current Assessments}
+  \begin{itemize}
+    \item Steepness -
+    \item Fleet and Survey Selectivities - 60.6\% fixed 73.1\% estimated
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{2011 Model Data "Update"}
   \begin{center}
     \includegraphics[scale = 0.50]{figures/compare4_Bratio_uncertainty.png}
   \end{center}

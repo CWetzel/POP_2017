@@ -86,17 +86,17 @@
 \FloatBarrier
 
 
-![Q-Q plots for the VAST lognormal distribution for the Triennial survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
+![Q-Q plots for the VAST lognormal distribution for the Triennial shelf survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
 
 \FloatBarrier
 
 
-![Triennial survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
+![Triennial shelf survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
 
 \FloatBarrier
 
 
-![Triennial survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
+![Triennial shelf survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
 
 \FloatBarrier
 

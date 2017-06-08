@@ -23,11 +23,11 @@ colnames(Catch_AllYrs) = c('Year',
                            'Washington', 
                            'At-Sea Hake',
                            'Foreign',
-                           'Research')
+                           'Survey')
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
-                      caption = c('Landings for each state (all gears combined), the At-sea hake fishery, the foreign fleet, and surveys.'),
+                      caption = c('Landings for each state (all gears combined), the at-sea hake fishery, the foreign fleet, and surveys.'),
                       label = 'tab:Comm_Catch',
                       digits = 1)    
 
@@ -64,7 +64,7 @@ colnames(Catch_AllYrs) = c('Year',
                            'Washington', 
                            'At-Sea Hake',
                            'Foreign',
-                           'Research')
+                           'Survey')
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
@@ -103,7 +103,7 @@ colnames(Catch_AllYrs) = c('Year',
                            'Washington', 
                            'At-Sea Hake',
                            'Foreign',
-                           'Research')
+                           'Survey')
 
 # Index of abundance summary, create table   
 Catch_AllYrs = xtable(Catch_AllYrs, 
@@ -516,7 +516,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Triennial survey length samples used in the stock assessment.'),
+                           caption = c('Summary of Triennial shelf survey length samples used in the stock assessment.'),
                            label = 'tab:TriennialLengths',
                            digits = 0)    
 # Add alignment  
@@ -546,7 +546,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Triennial survey age samples used in the stock assessment.'),
+                           caption = c('Summary of Triennial shelf survey age samples used in the stock assessment.'),
                            label = 'tab:Triennial_Ages',
                            digits = 0)    
 # Add alignment  
@@ -822,7 +822,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of At-sea hake fishery length samples used in the stock assessment.'),
+                           caption = c('Summary of at-sea hake fishery length samples used in the stock assessment.'),
                            label = 'tab:ASHOP_Lengths',
                            digits = 0)    
 
@@ -852,7 +852,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of At-sea hake fishery age samples used in the stock assessment.'),
+                           caption = c('Summary of at-sea hake fishery age samples used in the stock assessment.'),
                            label = 'tab:ASHOP_Ages',
                            digits = 0)    
 # Add alignment  
@@ -1218,12 +1218,13 @@ print(Like.table,
 
 ```
 
+\newpage
 
 \FloatBarrier
 
 
 <!-- *********************TIME SERIES TABLE************************* --> 
-```{r}
+```{r, results='asis'}
 
 Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
 Bio_all = mod1$timeseries$Bio_all[mod1$timeseries$Yr >= Dat_start_mod1]

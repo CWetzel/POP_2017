@@ -51,7 +51,8 @@ for(p in requiredPackages){
 }
 
 # Install the latest version of r4ss using devtools
-# devtools::install_github("r4ss/r4ss", force = TRUE)
+# r4ss sha # 06b8250
+# devtools::install_github("r4ss/r4ss", ref = '1.27.0', force = TRUE)
 library(r4ss)
 
 # CHANGE values in this section ===============================================
