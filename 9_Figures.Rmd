@@ -471,12 +471,12 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](',
 
 <!-- ***********MODEL 1 Retrospective analysis FIGURE********************** --> 
 
-![Retrospective pattern for spawning output. \label{fig:retro_sb}](Figures/compare1_spawnbio.png)
+![Retrospective pattern for spawning output. \label{fig:retro_sb}](Figures/compare2_spawnbio_uncertainty.png)
   
 \FloatBarrier
 
 
-![Retrospective pattern for estimated recruitment deviations. \label{fig:retro_recdev}](Figures/compare9_recdevs.png)
+![Retrospective pattern for estimated recruitment deviations. \label{fig:retro_recdev}](Figures/compare10_recdevs_uncertainty.png)
   
 \FloatBarrier
 
