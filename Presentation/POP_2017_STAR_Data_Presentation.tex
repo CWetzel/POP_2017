@@ -180,7 +180,7 @@ University of Washington$^2$ \\
 \end{frame}
 
 
-\begin{frame}{Relative Biomass}
+\begin{frame}{Relative Depletion}
   \begin{center}
     \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
   \end{center}
@@ -191,6 +191,11 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
   \end{center}
+  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+    \node[black] at (2.5, 0.75) {\tiny 2008};
+    \node[black] at (3.25, -0.25) {\tiny 2013};
+    \node[black] at (2.2, -0.75) {\tiny 1999 \& 2000};
+  \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Estimated Annual Recruitment Deviations}
@@ -205,24 +210,64 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{2011 Model Update}
+\begin{frame}{Major Changes Between the Previous and Current Assessment}
+  \begin{itemize}
+    \item Steepness 
+      %\begin{itemize}
+      %  \item The 2011 assessment assumed $h$ = 0.40
+      %  \item Current assessment assumed $h$ = 0.50. 
+      %\end{itemize}
+    \item Natural Mortality
+      %\begin{itemize}
+      %  \item 
+      %\end{itemize}
+    \item Maturity and Fecundity
+    \item Fleet and Survey Selectivities 
+      %\begin{itemize}
+      %  \item Fishery and survey specific estimated in current assessment 
+        %- 60.6\% fixed 73.1\% estimated
+      %\end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{2011 Model Data "Update"}
+  \begin{itemize}
+    \item Added layers of new data cumulatively to while retaining 2011 modeling assumptions
+  \end{itemize}
   \begin{center}
-    \includegraphics[scale = 0.50]{figures/compare4_Bratio_uncertainty.png}
+    \includegraphics[scale = 0.42]{figures/compare4_Bratio_uncertainty.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Model Sensitivities}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/Bratio_sensitivites_1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Model Sensitivities - Indices}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/Bratio_indices.png}
   \end{center}
 \end{frame}
 
 \subsection{Uncertainties}
-\begin{frame}
+\begin{frame}{Key Sources of Uncertainty}
   \begin{itemize}
-    \item Steepness - fixed at 0.50 within the base model.  Likelihood profile over steepness indicates no information in data concerning steepness.  Fixing the value at the steepness prior value of 0.718 results in stock status 97\% of unfished.
-    \item Natural Mortality - fixed at 0.054 for males and females, the mean of the prior when maximum age is 100.  Likelihood profile relatively flat around the prior.
-    \item Recruitment in 2008 and 2013 - The 2008 data point is relatively certain within the model but an order of magnitude higher than any other year.  Early indications of a strong 2013 recruitment (model is currently underfitting).
+    \item Steepness
+    \begin{itemize}
+      \item Fixed at 0.50 within the base model.  Likelihood profile over steepness indicates no information in data concerning steepness.  Fixing the value at the steepness     prior        value of 0.72 results in stock status 97\% of unfished.
+    \end{itemize}
+    \item Natural Mortality
+      \begin{itemize}
+        \item Fixed at 0.054 for males and females, the mean of the prior when maximum age is 100.  Likelihood profile relatively flat around the prior.
+      \end{itemize}
+    \item Recruitment 
+      \begin{itemize} 
+        \item Estimated large recruitments in 2008 and 2013. 
+        \item Setting these recruitments equal to the stock-recruitment curve results in a decline in stock status to ~54\%.
+      \end{itemize}
   \end{itemize}
-\end{frame}
-
-\subsection{Sensitivities}
-\begin{frame}
-  figures
 \end{frame}
 
 
@@ -587,6 +632,12 @@ University of Washington$^2$ \\
     \includegraphics[scale = 0.50]{r4ss/comp_gstagedat_bubflt8mkt0.png}
   \end{center}
 \end{frame}
+
+\begin{frame}{Aggregated Ages by Source}
+  \begin{center}
+    \includegraphics[scale = 0.50]{figures/comp_agedat__aggregated_across_time.png}
+  \end{center}
+\begin{frame}
 
 
 \subsection{Ageing Error}

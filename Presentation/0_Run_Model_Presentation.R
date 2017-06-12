@@ -91,7 +91,11 @@ figures = c(
             "C:/Assessments/POP2017/Data/CommercialCatch/Plots/pop2017_2011vs2017catches_states.png",
             "C:/Assessments/POP2017/Models/_Data/compare2_spawnbio_uncertainty.png",
             "C:/Assessments/POP2017/Models/_Data/compare4_Bratio_uncertainty.png",
-            "C:/Assessments/POP2017/Models/2011_2017_Bratio.png"
+            "C:/Assessments/POP2017/Models/2011_2017_Bratio.png",
+            "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/Bratio_sensitivites_1.png",
+            "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/SSB_sensitivities_1.png",
+            "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/Bratio_indices.png",
+            "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/SSB_indices.png"
             )
 
 for (i in 1:length(figures)){
