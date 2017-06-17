@@ -73,6 +73,21 @@ if (!create.plots){
   # Save the workspace an image
   load(paste0(wd,'/Presentation/SS_output.RData')) }
 
+pngfun <- function(file,w=7,h=7,pt=12){
+  file <- file.path(output.dir, file)
+  cat('writing PNG to',file,'\n')
+  png(filename=file,
+      width=w,height=h,
+      units='in',res=300,pointsize=pt)
+}
+
+pngfun('POP_Landings_Discards.png',h=8.5)
+fishery = mod1$catch[mod1$catch$Fleet==1, ]
+plot(fishery$Yr, fishery$Obs, lwd = 2, type = 'l', col= 1, ylab = "Fishery Landings (mt)", xlab = "Year")
+lines(fishery$Yr, (fishery$kill_bio-fishery$ret_bio), lwd = 2, lty = 2, col = 'red')
+legend("topright", legend = c("Landings", "Discards"), col = c(1, 'red'), lwd = 2, lty = c(1,2), bty = 'n')
+dev.off()
+
 # Load in other figures
 # =============================================================================
 HomeDir = 'C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Figures/'
@@ -89,8 +104,8 @@ figures = c(
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
             "C:/Assessments/POP2017/Data/Biological/plots/pop2017_agesbysource.png",
             "C:/Assessments/POP2017/Data/CommercialCatch/Plots/pop2017_2011vs2017catches_states.png",
-            "C:/Assessments/POP2017/Models/_Data/compare2_spawnbio_uncertainty.png",
-            "C:/Assessments/POP2017/Models/_Data/compare4_Bratio_uncertainty.png",
+            "C:/Assessments/POP2017/Models/_Data/Data_spawnbio_uncertainty.png",
+            "C:/Assessments/POP2017/Models/_Data/Data_Bratio_uncertainty.png",
             "C:/Assessments/POP2017/Models/2011_2017_Bratio.png",
             "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/Bratio_sensitivites_1.png",
             "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/SSB_sensitivities_1.png",
@@ -102,6 +117,56 @@ for (i in 1:length(figures)){
   file.copy(figures[i], paste0(wd, "/Presentation/figures"), overwrite = TRUE)
 }
 
+# Rename figures
+#=====================================================================================================
+PresDir = 'C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/r4ss'
 
-#==============================================================================
+figures = c("comp_lenfit_data_weighting_TA1.8_NWFSC slope survey.png",
+            "comp_lenfit_data_weighting_TA1.8_NWFSC shelf-slope survey.png",
+            "comp_lenfit_data_weighting_TA1.8_AFSC slope survey.png",
+            "comp_lenfit_data_weighting_TA1.8_Pacific ocean perch survey.png",
+            "comp_lenfit_data_weighting_TA1.8_Triennial shelf survey.png",
+            "comp_lenfit_data_weighting_TA1.8_Fishery.png",
+            "comp_lenfit_data_weighting_TA1.8_At-sea hake.png",
+            "comp_agefit_data_weighting_TA1.8_NWFSC slope survey.png",
+            "comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC shelf-slope survey.png",
+            "comp_agefit_data_weighting_TA1.8_Pacific ocean perch survey.png",
+            "comp_agefit_data_weighting_TA1.8_Triennial shelf survey.png",
+            "comp_agefit_data_weighting_TA1.8_Fishery.png",
+            "comp_agefit_data_weighting_TA1.8_At-sea hake.png",
+            "index1_cpuedata_Triennial shelf survey.png",
+            "index1_cpuedata_Pacific ocean perch survey.png",
+            "index1_cpuedata_NWFSC slope survey.png",
+            "index1_cpuedata_AFSC slope survey.png",
+            "index1_cpuedata_NWFSC shelf-slope survey.png")
+
+new.name = c("comp_lenfit_data_weighting_TA18_NWFSC_slope_survey.png",
+            "comp_lenfit_data_weighting_TA18_NWFSC_shelf-slope_survey.png",
+            "comp_lenfit_data_weighting_TA18_AFSC_slope_survey.png",
+            "comp_lenfit_data_weighting_TA18_Pacific_ocean_perch_survey.png",
+            "comp_lenfit_data_weighting_TA18_Triennial_shelf_survey.png",
+            "comp_lenfit_data_weighting_TA18_Fishery.png",
+            "comp_lenfit_data_weighting_TA18_At-sea_hake.png",
+            "comp_agefit_data_weighting_TA18_NWFSC_slope_survey.png",
+            "comp_condAALfit_data_weighting_TA18_condAgeNWFSC_shelf-slope_survey.png",
+            "comp_agefit_data_weighting_TA18_Pacific_ocean_perch_survey.png",
+            "comp_agefit_data_weighting_TA18_Triennial_shelf_survey.png",
+            "comp_agefit_data_weighting_TA18_Fishery.png",
+            "comp_agefit_data_weighting_TA18_At-sea_hake.png",
+            "index1_cpuedata_Triennial_shelf_survey.png",
+            "index1_cpuedata_Pacific_ocean_perch_survey.png",
+            "index1_cpuedata_NWFSC_slope_survey.png",
+            "index1_cpuedata_AFSC_slope_survey.png",
+            "index1_cpuedata_NWFSC_shelf-slope_survey.png")
+
+
+
+setwd(PresDir)
+for(i in 1:length(figures)){
+  file.rename(figures[i], new.name[i])
+}
+            
+
+
+#======================================================================================================
 } # Close function

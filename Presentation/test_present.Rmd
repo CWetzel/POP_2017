@@ -1,0 +1,47 @@
+---
+subtitle:  (A Subtitle Would Go Here if This Were a Class)
+author: Steven V. Miller
+date: 
+fontsize: 10pt
+logo: noaalogo.jpg
+output:
+  beamer_presentation:
+    theme: "Singapore"
+    template: template.tex
+    #colortheme: "dolphin"
+    fonttheme: "structurebold"
+    
+in_header: header.tex
+#includes:
+#in_header: ~/Dropbox/teaching/clemson-beamer-header-simple.txt
+#after_body: ~/Dropbox/teaching/table-of-contents.txt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

@@ -105,6 +105,10 @@
 %     source("C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/tables/catch.R")
 %@
 
+%<<load_mod1, echo = FALSE, message=FALSE, results='hide', warning=FALSE>>=
+%  load("C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Presentation/SS_output.RData")
+%@
+
 \newcommand{\mytableofcontents}{
   \begin{frame}[t]
   \frametitle{Outline}
@@ -184,6 +188,12 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.50, trim={0cm 0cm 0cm 1.7cm}, clip]{r4ss/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
   \end{center}
+  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+    \node[black] at (2.75, 1) { 74.9\%};
+  \end{tikzpicture}
+  %<<depletion, echo = FALSE, message=FALSE, warning=FALSE>>=
+  %  depletion.print()
+  %@
 \end{frame}
 
 
@@ -235,28 +245,34 @@ University of Washington$^2$ \\
     \item Added layers of new data cumulatively to while retaining 2011 modeling assumptions
   \end{itemize}
   \begin{center}
-    \includegraphics[scale = 0.42]{figures/compare4_Bratio_uncertainty.png}
+    \includegraphics[scale = 0.42]{figures/Data_Bratio_uncertainty.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Model Sensitivities}
+\begin{frame}{Model Sensitivities - Scale}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/SSB_sensitivities_1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Model Sensitivities - Relative}
   \begin{center}
     \includegraphics[scale = 0.40]{figures/Bratio_sensitivites_1.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Model Sensitivities - Indices}
-  \begin{center}
-    \includegraphics[scale = 0.40]{figures/Bratio_indices.png}
-  \end{center}
-\end{frame}
+%\begin{frame}{Model Sensitivities - Indices}
+%  \begin{center}
+%    \includegraphics[scale = 0.40]{figures/Bratio_indices.png}
+%  \end{center}
+%\end{frame}
 
 \subsection{Uncertainties}
 \begin{frame}{Key Sources of Uncertainty}
   \begin{itemize}
     \item Steepness
     \begin{itemize}
-      \item Fixed at 0.50 within the base model.  Likelihood profile over steepness indicates no information in data concerning steepness.  Fixing the value at the steepness     prior        value of 0.72 results in stock status 97\% of unfished.
+      \item Fixed at 0.50 within the base model.  Likelihood profile over steepness indicates no information in data concerning steepness.  Fixing the value at the steepness prior value of 0.72 results in stock status 97\% of unfished.
     \end{itemize}
     \item Natural Mortality
       \begin{itemize}
@@ -266,6 +282,11 @@ University of Washington$^2$ \\
       \begin{itemize} 
         \item Estimated large recruitments in 2008 and 2013. 
         \item Setting these recruitments equal to the stock-recruitment curve results in a decline in stock status to ~54\%.
+      \end{itemize}
+    \item{NWFSC shelf-slope age data}
+      \begin{itemize}
+        \item Treating these data as either conditional age-at-length or as marginals results in differing estimates of $R_0$ and final stock status.
+        \item Marginal ages are essentially weighted out of the model using Francis weighting.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -305,7 +326,7 @@ University of Washington$^2$ \\
   \begin{column}{0.5\textwidth}
       Functional maturity-at-length
       \begin{itemize}
-        \item Categorized mature and immature fish based on the proportion of vitellogenin in the cytoplasm and atretic celss
+        \item Categorized mature and immature fish based on the proportion of vitellogenin in the cytoplasm and atretic cells
         \item 50\% maturity is at larger lengths vs. biological maturity
         \item functional 50\% = 32.1 cm vs. biological 50\% = 30.1 cm
       \end{itemize}
@@ -400,7 +421,7 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.40, trim={0, 0, 0, 1cm}, clip]{r4ss/POP_discard_data.png}
   \end{center}
-
+  * \small{Sensitivities done on the 1992 data point (high vs. low) results $\pm$ 0.5\%  in status.}
   \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
     \node[black] at (-2, -2.15) {\small Pikitch};
     \node[black] at (-0.5,-1.5) {\small Management};
@@ -462,11 +483,11 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt1mkt2_page4.png}
   \end{center}
-  \onslide<2->
-  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
-    \draw[black, thick, -] (3,   -0.6) -- (3.4, -0.1);
-    \draw[black, thick, -] (-2,   -0.6) -- (-1.6, -0.1);
-  \end{tikzpicture}
+  %\onslide<2->
+  %\begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+  %  \draw[black, thick, -] (3,   -0.6) -- (3.4, -0.1);
+  %  \draw[black, thick, -] (-2,   -0.6) -- (-1.6, -0.1);
+  %\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Fishery Lengths: Discarded}
@@ -489,9 +510,9 @@ University of Washington$^2$ \\
       \begin{itemize}
         \item 1979 and 1985
       \end{itemize}
-    \item Triennial survey
+    \item Triennial shelf survey
       \begin{itemize}
-        \item 1980, 1983, 1896, 1989, 1992, 1995, 1998, 2001, 2004
+        \item 1980, 1983, 1986, 1989, 1992, 1995, 1998, 2001, 2004
       \end{itemize}
     \item AFSC slope survey
       \begin{itemize}
@@ -514,7 +535,7 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{Triennial survey lengths}
+\begin{frame}{Triennial shelf survey lengths}
   \begin{center}
     \includegraphics[scale = 0.50]{r4ss/comp_lendat_bubflt5mkt0.png}
   \end{center}
@@ -582,7 +603,7 @@ University of Washington$^2$ \\
       \begin{itemize}
         \item 1985
       \end{itemize}
-    \item Triennial survey
+    \item Triennial shelf survey
       \begin{itemize}
         \item 1989, 1992, 1995, 1998, 2001, 2004
       \end{itemize}
@@ -603,7 +624,7 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{Triennial survey ages}
+\begin{frame}{Triennial shelf survey ages}
   \begin{center}
     \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt5mkt0.png}
   \end{center}
@@ -612,6 +633,12 @@ University of Washington$^2$ \\
 \begin{frame}{NWFSC slope ages}
   \begin{center}
     \includegraphics[scale = 0.50]{r4ss/comp_agedat_bubflt7mkt0.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC shelf-slope ages - marginal view}
+  \begin{center}
+    \includegraphics[scale = 0.50]{r4ss/comp_gstagedat_bubflt8mkt0.png}
   \end{center}
 \end{frame}
 
@@ -627,17 +654,12 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{NWFSC shelf-slope ages - marginal view}
-  \begin{center}
-    \includegraphics[scale = 0.50]{r4ss/comp_gstagedat_bubflt8mkt0.png}
-  \end{center}
-\end{frame}
 
 \begin{frame}{Aggregated Ages by Source}
   \begin{center}
     \includegraphics[scale = 0.50]{figures/comp_agedat__aggregated_across_time.png}
   \end{center}
-\begin{frame}
+\end{frame}
 
 
 \subsection{Ageing Error}
@@ -645,7 +667,9 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.50]{r4ss/numbers5_ageerrorSD.png}
   \end{center}
-
 \end{frame}
 
+  
+  
+  
 \end{document}

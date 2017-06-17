@@ -1,0 +1,17 @@
+\beamer@sectionintoc {1}{Parameter Estimates}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Model Set-up}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Data Weighting}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{Extra Standard Error}{6}{0}{1}
+\beamer@subsectionintoc {1}{4}{Biology Parameters}{7}{0}{1}
+\beamer@subsectionintoc {1}{5}{Selectivity \& Retention}{9}{0}{1}
+\beamer@sectionintoc {2}{Fits to the Data}{11}{0}{2}
+\beamer@subsectionintoc {2}{1}{Discard Rates}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{Indices}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Composition Data}{15}{0}{2}
+\beamer@sectionintoc {3}{Population Estimates}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Size and Scale}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{Recruitment}{35}{0}{3}
+\beamer@sectionintoc {4}{Profiles \& Uncertainties}{37}{0}{4}
+\beamer@subsectionintoc {4}{1}{Profiles}{38}{0}{4}
+\beamer@subsectionintoc {4}{2}{Retrospectives}{42}{0}{4}
+\beamer@subsectionintoc {4}{3}{Sensitivities}{44}{0}{4}

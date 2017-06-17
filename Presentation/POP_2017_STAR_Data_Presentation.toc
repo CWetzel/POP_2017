@@ -15,8 +15,8 @@
 \beamer@subsectionintoc {4}{2}{Survey Indices}{30}{0}{4}
 \beamer@sectionintoc {5}{Length Compositions}{32}{0}{5}
 \beamer@subsectionintoc {5}{1}{Fishery Lengths}{33}{0}{5}
-\beamer@subsectionintoc {5}{2}{Survey Lengths}{38}{0}{5}
-\beamer@sectionintoc {6}{Age Compositions}{45}{0}{6}
-\beamer@subsectionintoc {6}{1}{Fishery Ages}{46}{0}{6}
-\beamer@subsectionintoc {6}{2}{Survey Ages}{49}{0}{6}
+\beamer@subsectionintoc {5}{2}{Survey Lengths}{37}{0}{5}
+\beamer@sectionintoc {6}{Age Compositions}{44}{0}{6}
+\beamer@subsectionintoc {6}{1}{Fishery Ages}{45}{0}{6}
+\beamer@subsectionintoc {6}{2}{Survey Ages}{48}{0}{6}
 \beamer@subsectionintoc {6}{3}{Ageing Error}{56}{0}{6}

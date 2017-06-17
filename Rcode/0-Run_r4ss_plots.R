@@ -119,7 +119,7 @@ SS_plots(mod1,
          bub.scale.dat= 6,
          dir = out.dir.mod1)
 
-SSunavailableSpawningOutput(mod1, plot=FALSE, print=TRUE)
+
 
 # Create specialized plots
 pngfun <- function(file,w=7,h=7,pt=12){
@@ -129,6 +129,10 @@ pngfun <- function(file,w=7,h=7,pt=12){
       width=w,height=h,
       units='in',res=300,pointsize=pt)
 }
+
+pngfun('POP_unavailable_biomass.png',h=8.5)
+SSunavailableSpawningOutput(mod1, plot=TRUE)
+dev.off()
 
 pngfun('POP_index_data.png',h=8.5)
 par(mfrow=c(3,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
@@ -143,6 +147,17 @@ dev.off()
 # index fits
 pngfun('POP_index_fits.png',h=8.5)
 par(mfrow=c(3,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(a in 1:6){
+  f = c(1, 4:8)[a]
+  SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
+}
+mtext(side=1,line=1,outer=TRUE,'Year')
+mtext(side=2,line=1,outer=TRUE,'Index')
+dev.off()
+
+# index fits
+pngfun('POP_index_fits_alt.png',h=5, w=6)
+par(mfrow=c(2,3),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
 for(a in 1:6){
   f = c(1, 4:8)[a]
   SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
