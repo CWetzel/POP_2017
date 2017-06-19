@@ -116,8 +116,19 @@
 \headcommand {\beamer@subsectionentry {0}{5}{3}{44}{Ageing Error}}\headcommand {\beamer@subsectionpages {36}{43}}
 \headcommand {\slideentry {5}{3}{1}{44/44}{Ageing Error}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {44}{44}}
-\headcommand {\beamer@sectionpages {31}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\def \inserttotalframenumber {44}}
+\headcommand {\slideentry {5}{3}{2}{45/45}{Ageing Error}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\sectionentry {6}{Appendix}{46}{Appendix}{0}}
+\headcommand {\beamer@sectionpages {31}{45}}
+\headcommand {\beamer@subsectionpages {44}{45}}
+\headcommand {\slideentry {6}{0}{1}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {6}{0}{2}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {6}{0}{3}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {46}{48}}
+\headcommand {\beamer@sectionpages {46}{48}}
+\headcommand {\beamer@documentpages {48}}
+\headcommand {\def \inserttotalframenumber {48}}

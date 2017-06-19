@@ -100,11 +100,12 @@ University of Washington$^2$ \\
 \begin{frame}{Model Specifications}
   \begin{itemize}
     \item Stock Synthesis version 3.30.03.05
-    \item Model start in 1918, first year landings exceed 1 metric ton
+    \item Model starts in 1918, first year landings exceeded 1 metric ton
     \item Steepness fixed at 0.50
     \item Natural mortality fixed at 0.054 for females and males
     \item Recruitment deviations start in 1900
-    \item Population age plus-group = 60 years (Data = 40)
+    \item Population age plus-group = 60 years (Data age plus-group = 40)
+    \item Length data bins from 11-47 cm by 1 cm intervals
   \end{itemize}
 \end{frame}
   
@@ -193,7 +194,7 @@ University of Washington$^2$ \\
   \begin{table}[ht]
   \small
   \centering
-  \begin{tabular}{p{1.5in}p{0.5in}p{0.5in}p{0.75in}}
+  \begin{tabular}{p{1.5in}p{0.65in}p{0.5in}p{0.75in}}
   Parameter & Females & Males & Estimated  \\ 
   \hline
   Natural mortality  & 0.054 & 0.054 & N \\
