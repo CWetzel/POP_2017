@@ -112,11 +112,11 @@
 \newcommand{\mytableofcontents}{
   \begin{frame}[t]
   \frametitle{Outline}
-  \begin{multicols}{2}
+  %\begin{multicols}{2}
   \tableofcontents[
     currentsection, sectionstyle=show/show, subsectionstyle=show/show/hide,
   ]
-  \end{multicols}
+  %\end{multicols}
   \end{frame}
 }
 \AtBeginSection[]{\mytableofcontents}
@@ -152,11 +152,15 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}[t]
-  %\input{tables/recent_catches.rnw}
+\begin{frame}{Landings without the Foreign Catches}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/POP_Landings_wo_Foreign.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Landings over the Last 10-years}
   \begin{table}[ht]
   \centering
-  %\begin{tabular}{l>{\centering}p{0.25in}>{\centering}p{0.25in}>{\centering}p{0.1in}>{\centering}p{0.1in}>{\centering}p{0.1in}>{\centering}p{0.1in}}
   \begin{tabular}{p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.6in}}
   Year & CA & OR & WA & At-sea hake & Survey & Total Landings \\ 
   \hline
@@ -403,19 +407,27 @@ University of Washington$^2$ \\
 %---------------------------------------------------------------------------------
 \section{Removals}
 %---------------------------------------------------------------------------------
-\subsection{Landing history by state}
+\subsection{Landings History by State}
 \begin{frame}{Landings Data: 2017 vs. 2011}
   \begin{center}
     \includegraphics[scale = 0.45]{figures/pop2017_2011vs2017catches_states.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Cummalative catch difference}
+\begin{frame}{Cummalative Catch Difference}
   \begin{center}
     \includegraphics[scale = 0.32, trim={0, 0, 0, 2cm}, clip]{figures/Catch_Comparison.png}
   \end{center}
   *Resulted in $<$ 1\% change in $R0$ 
 \end{frame}
+
+
+\begin{frame}{Landings by Fleet and Survey}
+  \begin{center}
+    \includegraphics[scale = 0.60]{figures/catch2_landings_stacked.png}
+  \end{center}
+\end{frame}
+
 
 \subsection{Discarding practices}
 \begin{frame}{Fishery Discard Data}
@@ -452,9 +464,9 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{All: standardized}
+\begin{frame}{All: Standardized}
   \begin{center}
-  \includegraphics[height = 2.5in, width = 4in]{figures/standardized_index.png}
+  \includegraphics[scale = 0.37]{figures/Index_Standardized.png}
   \end{center}
 \end{frame}
 
@@ -576,7 +588,8 @@ University of Washington$^2$ \\
 \end{frame}
 
 \begin{frame}
-
+  \Huge{\centerline{Conclusion of}}
+  \Huge{\centerline{Biology \& Data}}
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -593,6 +606,37 @@ University of Washington$^2$ \\
     \includegraphics[scale = 0.30]{figures/Index_DesignBased_Comparison.png}
   \end{center}
 \end{frame} 
+
+\begin{frame}{Pre-Model 2011 Indices vs. 2017 Indices}
+  \begin{center}
+    \includegraphics[scale = 0.35]{figures/Index_Compare_2011_2017.png}
+  \end{center}
+\end{frame} 
+
+\begin{frame}{Post Model 2011 Indices vs. 2017 Indices}
+  \begin{center}
+    \includegraphics[scale = 0.35]{figures/Index_Compare_PostModel_2011_2017.png}
+  \end{center}
+\end{frame} 
+
+\begin{frame}{Catchability Comparison}
+  \begin{table}[ht]
+  \centering
+  \begin{tabular}{p{2in}p{0.7in}p{0.7in}}
+  Index & 2011 & 2017 \\ 
+  \hline
+  Fishery CPUE & 5.25E-06 & 4.48E-06 \\ 
+  Pacific ocean perch survey & 0.8126 & 0.8741 \\
+  Triennial shelf survey (early)& 0.2423 & 0.161 \\ 
+  Triennial shelf survey (late) & 0.1793 & - \\
+  AFSC slope survey & 0.2708 & 0.0822 \\ 
+  NWFSC slope survey & 0.1717 & 0.0571 \\
+  NWFSC shelf-slope survey & 0.4797 & 0.0728 \\
+  \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
 
 \begin{frame}{2011 vs. 2017 NWFSC shelf-slope index}
   \begin{center}

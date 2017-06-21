@@ -1,19 +1,19 @@
 \beamer@sectionintoc {1}{Model Summary}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Landings}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Estimated Stock Size and Status}{5}{0}{1}
-\beamer@subsectionintoc {1}{3}{Uncertainties}{13}{0}{1}
-\beamer@sectionintoc {2}{Biology}{14}{0}{2}
-\beamer@subsectionintoc {2}{1}{Overview}{15}{0}{2}
-\beamer@subsectionintoc {2}{2}{Maturity}{16}{0}{2}
-\beamer@subsectionintoc {2}{3}{Fecundity}{18}{0}{2}
-\beamer@subsectionintoc {2}{4}{Growth}{19}{0}{2}
-\beamer@sectionintoc {3}{Removals}{23}{0}{3}
-\beamer@subsectionintoc {3}{1}{Landing history by state}{24}{0}{3}
-\beamer@subsectionintoc {3}{2}{Discarding practices}{26}{0}{3}
-\beamer@sectionintoc {4}{Indices of Abundance}{27}{0}{4}
-\beamer@subsectionintoc {4}{1}{Fishery CPUE}{28}{0}{4}
-\beamer@subsectionintoc {4}{2}{Survey Indices}{29}{0}{4}
-\beamer@sectionintoc {5}{Composition Data}{31}{0}{5}
-\beamer@subsectionintoc {5}{1}{Fishery Data}{32}{0}{5}
-\beamer@subsectionintoc {5}{2}{Survey Length and Age Data}{36}{0}{5}
-\beamer@subsectionintoc {5}{3}{Ageing Error}{44}{0}{5}
+\beamer@subsectionintoc {1}{2}{Estimated Stock Size and Status}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Uncertainties}{14}{0}{1}
+\beamer@sectionintoc {2}{Biology}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Overview}{16}{0}{2}
+\beamer@subsectionintoc {2}{2}{Maturity}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Fecundity}{19}{0}{2}
+\beamer@subsectionintoc {2}{4}{Growth}{20}{0}{2}
+\beamer@sectionintoc {3}{Removals}{24}{0}{3}
+\beamer@subsectionintoc {3}{1}{Landings History by State}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{Discarding practices}{28}{0}{3}
+\beamer@sectionintoc {4}{Indices of Abundance}{29}{0}{4}
+\beamer@subsectionintoc {4}{1}{Fishery CPUE}{30}{0}{4}
+\beamer@subsectionintoc {4}{2}{Survey Indices}{31}{0}{4}
+\beamer@sectionintoc {5}{Composition Data}{33}{0}{5}
+\beamer@subsectionintoc {5}{1}{Fishery Data}{34}{0}{5}
+\beamer@subsectionintoc {5}{2}{Survey Length and Age Data}{38}{0}{5}
+\beamer@subsectionintoc {5}{3}{Ageing Error}{46}{0}{5}

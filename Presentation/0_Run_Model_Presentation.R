@@ -103,6 +103,9 @@ figures = c(
             "C:/Assessments/POP2017/Data/Biological/plots/LengthAgeEach.png",
             "C:/Assessments/POP2017/Data/Biological/plots/weightAtLengthPred.png",
             "C:/Assessments/POP2017/Data/Biological/plots/pop2017_agesbysource.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/LengthAge_StateEach_wCanada.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/pop2017_agesbysource.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/pop2017_agesbysource.png",
             "C:/Assessments/POP2017/Data/CommercialCatch/Plots/pop2017_2011vs2017catches_states.png",
             "C:/Assessments/POP2017/Models/_Data/Data_spawnbio_uncertainty.png",
             "C:/Assessments/POP2017/Models/_Data/Data_Bratio_uncertainty.png",
@@ -113,7 +116,10 @@ figures = c(
             "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/SSB_indices.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_DesignBased_Comparison.png",
-            "C:/Assessments/POP2017/Data/SurveyIndices/NWFSC_shelf_slope_2011_2017.png"
+            "C:/Assessments/POP2017/Data/SurveyIndices/NWFSC_shelf_slope_2011_2017.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Compare_2011_2017.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Compare_PostModel_2011_2017.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Standardized.png"
             )
 
 for (i in 1:length(figures)){
@@ -168,7 +174,46 @@ setwd(PresDir)
 for(i in 1:length(figures)){
   file.rename(figures[i], new.name[i])
 }
-            
+
+#====================================================================================================================================
+Final_Catch_AllYrs = read.csv('C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/txt_files/POP2017_PacFIN_catch_forExpansion.csv')
+Exec_catch_sep = Final_Catch_AllYrs
+Exec_catch_sep = Exec_catch_sep [,2:ncol(Exec_catch_sep)]
+Exec_catch_sep = Exec_catch_sep[Exec_catch_sep$Year != 2016, ]
+
+# Assign column names
+survey = apply(Exec_catch_sep[,7:ncol(Exec_catch_sep)], 1, sum)
+Exec_catch_sep = cbind(Exec_catch_sep[,1:(ncol(Exec_catch_sep)-7)], survey) # remove the foreign fleet
+colnames(Exec_catch_sep) = c('Year',  'California', 'Oregon', 'Washington', 'At-sea hake', 'Survey')
+
+#Plot only years where catch is great than 1 mt total
+ind = apply(Exec_catch_sep[,2:ncol(Exec_catch_sep )], 1, sum)
+ind = ind > 1
+Exec_catch_sep  = Exec_catch_sep[ind,]
+
+
+# Split catch by regions -retaning the colunns for each -you'll have to edit
+Exec_region1_catch = Exec_catch_sep
+
+# Melt data so it can be plotted
+Exec_region1_catch = melt(Exec_region1_catch, id='Year')
+
+# Reassign column names
+colnames(Exec_region1_catch) = c('Year','Fishery','Removals')
+
+
+# Plot catches function
+Plot_catch = function(Catch_df) {
+  ggplot(Catch_df, aes(x=Year, y=Removals,fill = Fishery)) +
+    geom_area(position='stack') +
+    scale_fill_manual(values= rich.colors.short(dim(Exec_catch_sep)[2]-1)) +
+    scale_x_continuous(breaks=seq(1918, 2016, 20)) +
+    ylab('Landings (mt)')
+}
+
+pngfun('POP_Landings_wo_Foreign.png', h = 5, w = 8)
+Plot_catch(Catch_df = Exec_region1_catch)
+dev.off()            
 
 
 #======================================================================================================

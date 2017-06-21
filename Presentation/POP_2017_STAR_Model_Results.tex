@@ -124,7 +124,7 @@
 %------------------------------------------------------------------------------------
 % Title Page
 %------------------------------------------------------------------------------------
-\title{Pacific ocean perch 2017 Assessment}
+\title{Pacific Ocean Perch 2017 Assessment}
 \subtitle{Modeling and Results}
 \author{Chantel Wetzel$^{1}$\\
         Lee Cronin-Fine$^{2}$}
@@ -145,7 +145,7 @@ University of Washington$^2$ \\
 
 
 %---------------------------------------------------------------------------------
-\section{Parameter Estimates}
+\section{Parameters}
 %---------------------------------------------------------------------------------
 \subsection{Model Set-up}
 \begin{frame}{Model Specifications}
@@ -159,7 +159,37 @@ University of Washington$^2$ \\
     \item Length data bins from 11-47 cm by 1 cm intervals
   \end{itemize}
 \end{frame}
-  
+
+\subsection{Biology Parameters}
+\begin{frame}{Growth Parameters}
+  \begin{table}[ht]
+  \small
+  \centering
+  \begin{tabular}{p{1.5in}p{0.65in}p{0.5in}p{0.75in}}
+  Parameter & Females & Males & Estimated  \\ 
+  \hline
+  Natural mortality  & 0.054 & 0.054 & N \\
+  Length-at-age min ($L1$) & 20.8  & 20.8 & Y-females \\
+  Length-at-age max ($L2$) & 41.6  & 38.9 & Y \\
+  Growth coefficient ($k$) & 0.167 & 0.199 & Y \\
+  SD young & 1.35 & 1.35 & Y-females \\
+  SD old   & 2.56 & 2.28 & Y \\
+  Weight-at-length (alpha) & 1.044E-5 & 1.05E-5 & N \\
+  Weight-at-length (beta)  & 3.088 & 3.083 & N \\
+  \hline
+  \end{tabular}
+  \end{table}
+  * Male parameters estimated as offsets from female parameters.
+\end{frame}
+
+\begin{frame}{Estimated Length-at-Age}
+  \begin{center}
+    \includegraphics[scale = 0.5]{r4ss/bio2_sizeatage_plus_CV_and_SD.png}
+  \end{center}
+\end{frame}
+
+
+\subsection{Selectivity \& Retention}  
 \begin{frame}{Fleet structure, Retention, and Selectivity}
   \begin{itemize}
     \item Fishery fleet - includes bottom, mid-water trawls, and fixed gears
@@ -197,78 +227,6 @@ University of Washington$^2$ \\
   \end{itemize}
 \end{frame}
 
-
-\subsection{Data Weighting}
-\begin{frame}{Base Model Data Weights}
-  \begin{itemize}
-    \item Base model weighted according to Francis weighting approach
-  \end{itemize}
-  
-  \begin{table}[ht]
-  \small
-  \centering
-  \begin{tabular}{p{1.2in}p{0.5in}p{0.5in}p{0.5in}p{0.5in}}
-  Fleet & Data & Weight & Data & Weight \\ 
-  \hline
-  Fishery           & Length &  0.09  & Age & 0.22\\
-  At-sea hake       & Length &  0.09  & Age & 0.03\\
-  POP survey        & Length &  1.00* & Age & 1.00*\\
-  Triennial         & Length &  0.02  & Age & 0.23\\
-  AFSC slope        & Length &  0.08  & Age &    -\\
-  NWFSC slope       & Length &  0.59  & Age & 0.32\\
-  NWFSC shelf-slope & Length &  0.03  & Age & 0.41\\
-  \hline
-  \end{tabular}
-  \end{table}
-  * The Francis method suggested upweighting data from the Pacific ocean perch survey to values $> 1$. 
-\end{frame}
-
-
-
-%---------------------------------------------------------------------------------
-%\section{Parameter Estimates}
-%---------------------------------------------------------------------------------
-\subsection{Extra Standard Error}
-\begin{frame}{Added Standard Error for Indices}
-  \begin{itemize}
-    \item Additional variance was explored for each index of abundance and the CPUE time-series.
-    \item Only the Triennial shelf and the NWFSC shelf-slope indices required added variance to allow for model fitting.
-      \begin{itemize}
-        \item Triennial shelf = 0.390
-        \item NWFSC shelf-slope = 0.027 
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\subsection{Biology Parameters}
-\begin{frame}{Growth Parameters}
-  \begin{table}[ht]
-  \small
-  \centering
-  \begin{tabular}{p{1.5in}p{0.65in}p{0.5in}p{0.75in}}
-  Parameter & Females & Males & Estimated  \\ 
-  \hline
-  Natural mortality  & 0.054 & 0.054 & N \\
-  Length-at-age min ($L1$) & 20.8  & 20.8 & Y-females \\
-  Length-at-age max ($L2$) & 41.6  & 38.9 & Y \\
-  Growth coefficient ($k$) & 0.167 & 0.199 & Y \\
-  SD young & 1.35 & 1.35 & Y-females \\
-  SD old   & 2.56 & 2.28 & Y \\
-  Weight-at-length (alpha) & 1.044E-5 & 1.05E-5 & N \\
-  Weight-at-length (beta)  & 3.088 & 3.083 & N \\
-  \hline
-  \end{tabular}
-  \end{table}
-  * Male parameters estimated as offsets from female parameters.
-\end{frame}
-
-\begin{frame}{Estimated Length-at-Age}
-  \begin{center}
-    \includegraphics[scale = 0.5]{r4ss/bio2_sizeatage_plus_CV_and_SD.png}
-  \end{center}
-\end{frame}
-
-\subsection{Selectivity \& Retention}
 \begin{frame}{Selectivity}
   \begin{center}
     \includegraphics[scale = 0.40]{r4ss/POP_selectivity.png}
@@ -301,13 +259,39 @@ University of Washington$^2$ \\
 
 
 
+\subsection{Data Weighting}
+\begin{frame}{Base Model Data Weights}
+  \begin{itemize}
+    \item Base model weighted according to Francis weighting approach
+  \end{itemize}
+  
+  \begin{table}[ht]
+  \small
+  \centering
+  \begin{tabular}{p{1.2in}p{0.5in}p{0.5in}p{0.5in}p{0.5in}}
+  Fleet & Data & Weight & Data & Weight \\ 
+  \hline
+  Fishery           & Length &  0.09  & Age & 0.22\\
+  At-sea hake       & Length &  0.09  & Age & 0.03\\
+  POP survey        & Length &  1.00* & Age & 1.00*\\
+  Triennial         & Length &  0.02  & Age & 0.23\\
+  AFSC slope        & Length &  0.08  & Age &    -\\
+  NWFSC slope       & Length &  0.59  & Age & 0.32\\
+  NWFSC shelf-slope & Length &  0.03  & Age & 0.41\\
+  \hline
+  \end{tabular}
+  \end{table}
+  * The Francis method suggested upweighting data from the Pacific ocean perch survey to values $> 1$. 
+\end{frame}
+
+
 %---------------------------------------------------------------------------------
 \section{Fits to the Data}
 %---------------------------------------------------------------------------------
-\subsection{Discard Rates}
+\subsection{Removals}
 \begin{frame}{Fit to Discard Rates}
   \begin{center}
-    \includegraphics[scale = 0.40]{r4ss/POP_discard_fits.png}
+    \includegraphics[scale = 0.40, trim={0cm 0cm 0cm 1cm}, clip]{r4ss/POP_discard_fits.png}
   \end{center}
 \end{frame}
 
@@ -328,6 +312,18 @@ University of Washington$^2$ \\
 \end{frame}
 
 \subsection{Indices}
+\begin{frame}{Added Standard Error for Indices}
+  \begin{itemize}
+    \item Additional variance was explored for each index of abundance and the CPUE time-series.
+    \item Only the Triennial shelf and the NWFSC shelf-slope indices required added variance to allow for model fitting.
+      \begin{itemize}
+        \item Triennial shelf = 0.390
+        \item NWFSC shelf-slope = 0.027 
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
 \begin{frame}{Fit to the Indices}
   \begin{center}
     \includegraphics[scale = 0.6]{r4ss/POP_index_fits_alt.png}
@@ -521,7 +517,8 @@ University of Washington$^2$ \\
 
 
 \begin{frame}
-
+  \Huge{\centerline{Conclusion of}}
+  \Huge{\centerline{Modeling \& Results}}
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -550,6 +547,35 @@ University of Washington$^2$ \\
 \begin{frame}{Washington Research Lengths}
   \includegraphics[scale = 0.37]{figures/WA_research_lengths.png}
   \includegraphics[scale = 0.37]{figures/WA_research_aggregate.png}
+\end{frame}
+
+\begin{frame}{Landings with Canada}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/Catches_w_Canada.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Canadian Fishery Data}
+  \includegraphics[scale = 0.37]{figures/CanadianFishery_LenData.png}
+  \includegraphics[scale = 0.37]{figures/CanadianFishery_AgeData.png}
+\end{frame}
+
+\begin{frame}{Canadian Survey Data}
+  \includegraphics[scale = 0.37]{figures/CanadianSurvey_LenData.png}
+  \includegraphics[scale = 0.37]{figures/CanadianSurvey_AgeData.png}
+\end{frame}
+
+\begin{frame}{Length-at-Age by Area}
+  \begin{center}
+  \includegraphics[scale = 0.35]{figures/LengthAge_StateEach_wCanada.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Depletion of Canadian British Columbia Stock}
+  \begin{center}
+    \includegraphics[scale = 0.60, trim={1cm 0cm 1cm 1.7cm}, clip]{figures/Canadian_Depletion.png}
+  \end{center}
 \end{frame}
 
 \begin{frame}
