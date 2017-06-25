@@ -190,7 +190,7 @@ University of Washington$^2$ \\
 
 
 \subsection{Selectivity \& Retention}  
-\begin{frame}{Fleet structure, Retention, and Selectivity}
+\begin{frame}{Fleet Structure, Retention, and Selectivity}
   \begin{itemize}
     \item Fishery fleet - includes bottom, mid-water trawls, and fixed gears
       \begin{itemize}
@@ -259,37 +259,11 @@ University of Washington$^2$ \\
 
 
 
-\subsection{Data Weighting}
-\begin{frame}{Base Model Data Weights}
-  \begin{itemize}
-    \item Base model weighted according to Francis weighting approach
-  \end{itemize}
-  
-  \begin{table}[ht]
-  \small
-  \centering
-  \begin{tabular}{p{1.2in}p{0.5in}p{0.5in}p{0.5in}p{0.5in}}
-  Fleet & Data & Weight & Data & Weight \\ 
-  \hline
-  Fishery           & Length &  0.09  & Age & 0.22\\
-  At-sea hake       & Length &  0.09  & Age & 0.03\\
-  POP survey        & Length &  1.00* & Age & 1.00*\\
-  Triennial         & Length &  0.02  & Age & 0.23\\
-  AFSC slope        & Length &  0.08  & Age &    -\\
-  NWFSC slope       & Length &  0.59  & Age & 0.32\\
-  NWFSC shelf-slope & Length &  0.03  & Age & 0.41\\
-  \hline
-  \end{tabular}
-  \end{table}
-  * The Francis method suggested upweighting data from the Pacific ocean perch survey to values $> 1$. 
-\end{frame}
-
-
 %---------------------------------------------------------------------------------
 \section{Fits to the Data}
 %---------------------------------------------------------------------------------
 \subsection{Removals}
-\begin{frame}{Fit to Discard Rates}
+\begin{frame}{Fit to Fishery Discard Rates}
   \begin{center}
     \includegraphics[scale = 0.40, trim={0cm 0cm 0cm 1cm}, clip]{r4ss/POP_discard_fits.png}
   \end{center}
@@ -328,6 +302,31 @@ University of Washington$^2$ \\
   \begin{center}
     \includegraphics[scale = 0.6]{r4ss/POP_index_fits_alt.png}
   \end{center}
+\end{frame}
+
+\subsection{Data Weighting}
+\begin{frame}{Base Model Data Weights}
+  \begin{itemize}
+    \item Base model weighted according to Francis weighting approach
+  \end{itemize}
+  
+  \begin{table}[ht]
+  \small
+  \centering
+  \begin{tabular}{p{1.2in}p{0.5in}p{0.5in}p{0.5in}p{0.5in}}
+  Fleet & Data & Weight & Data & Weight \\ 
+  \hline
+  Fishery           & Length &  0.09  & Age & 0.22\\
+  At-sea hake       & Length &  0.09  & Age & 0.03\\
+  POP survey        & Length &  1.00* & Age & 1.00*\\
+  Triennial         & Length &  0.02  & Age & 0.23\\
+  AFSC slope        & Length &  0.08  & Age &    -\\
+  NWFSC slope       & Length &  0.59  & Age & 0.32\\
+  NWFSC shelf-slope & Length &  0.03  & Age & 0.41\\
+  \hline
+  \end{tabular}
+  \end{table}
+  * The Francis method suggested up-weighting data from the Pacific ocean perch survey to values $> 1$. 
 \end{frame}
 
 
@@ -542,6 +541,11 @@ University of Washington$^2$ \\
 \begin{frame}{Oregon Special Projects - Mean Length Comparison}
   \includegraphics[scale = 0.37]{figures/OR_sp_meanlengths.png}
   \includegraphics[scale = 0.37]{r4ss/comp_lenfit_data_weighting_TA18_Fishery.png}
+\end{frame}
+
+\begin{frame}{Oregon Special Projects - Aggregated Fits}
+  \includegraphics[scale = 0.37]{figures/ORspecial_agg_fit_length.png}
+  \includegraphics[scale = 0.37]{figures/ORspecial_agg_fit_age.png}
 \end{frame}
 
 \begin{frame}{Washington Research Lengths}

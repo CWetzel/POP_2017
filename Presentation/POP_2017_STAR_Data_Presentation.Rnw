@@ -96,6 +96,30 @@ University of Washington$^2$ \\
 %------------------------------------------------------------------------------------
 \section{Model Summary}
 %------------------------------------------------------------------------------------
+\begin{frame}{Correction for the Post-STAR Model}
+  \begin{itemize}
+    \item Addition to California historical landings
+      \begin{itemize}
+        \item 1948-1968 corrections totaling 10 mt 
+      \end{itemize}
+    \item Survey catch removal correction
+      \begin{itemize}
+        \item Stock Synthesis was not removing catches for survey fleets
+      \end{itemize}
+    \item Weight-at-length
+      \begin{itemize}
+        \item Small correction to the weight-at-length values for females and males
+      \end{itemize}    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison between STAR model and Corrected Model}
+  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_ssb.png}
+  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_dep.png}
+  \\
+  *All results shown come from the Pre-STAR base model as included in the document.
+\end{frame}
+
 \subsection{Landings}
 \begin{frame}{Landings}
   \begin{center}
@@ -105,11 +129,11 @@ University of Washington$^2$ \\
 
 \begin{frame}{Landings without the Foreign Catches}
   \begin{center}
-    \includegraphics[scale = 0.40]{figures/POP_Landings_wo_Foreign.png}
+    \includegraphics[height = 2.5in, width = 4in]{figures/POP_Landings_wo_Foreign.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Landings over the Last 10-years}
+\begin{frame}{Landings Over the Last 10-Years}
   \begin{table}[ht]
   \centering
   \begin{tabular}{p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.4in}p{0.6in}}
@@ -128,7 +152,7 @@ University of Washington$^2$ \\
   \hline
   \end{tabular}
   \end{table}
-  Approximately 70\% of the landings are from Oregon.\\
+  Approximately 70\% of the landings are from Oregon in the recent years.\\
   Vast majority of landings are from bottom-trawl gear.
 \end{frame}
 
@@ -171,6 +195,16 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
+\begin{frame}{History of Assessments for West Coast Pacific Ocean Perch}
+  \begin{itemize}
+    \item Evaluation conducted in the 1980s determined the stock was in poor shape in need of rebuilding.
+    \item Assessments in the 1990s determined the stock was well below target levels but with early signs of population growth by 1995. 
+    \item The stock was declared overfished in 1999 based the assessment which determined the stock was likely below 50\% of the target stock size.
+    \item A formal rebuilding plan was adopted in 2001 for West Coast Pacific ocean perch.
+    \item The stock has been re-evaluated periodically between 2003-2011 determining that the stock was still well below target levels. 
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Comparison between 2011 and 2017}
   \begin{center}
     \includegraphics[scale = 0.50]{figures/2011_2017_Bratio.png}
@@ -180,15 +214,16 @@ University of Washington$^2$ \\
 \begin{frame}{Major Changes Between the Previous and Current Assessment}
   \begin{itemize}
     \item Steepness 
-      %\begin{itemize}
-      %  \item The 2011 assessment assumed $h$ = 0.40
-      %  \item Current assessment assumed $h$ = 0.50. 
-      %\end{itemize}
+      \begin{itemize}
+        \item The 2011 assessment fixed $h$ = 0.40
+        \item The current assessment fixed $h$ = 0.50 
+      \end{itemize}
     \item Natural Mortality
-      %\begin{itemize}
-      %  \item 
-      %\end{itemize}
-    \item Landing History
+      \begin{itemize}
+        \item The 2011 assessment fixed $M$ = 0.05 for females, males estimated $M$ = 0.051
+        \item The current assessment fixed $M$ = 0.054 for both sexes
+      \end{itemize}
+    \item Landings History
     \item Maturity and Fecundity
     \item Fleet and Survey Selectivities 
       %\begin{itemize}
@@ -261,7 +296,7 @@ University of Washington$^2$ \\
   \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item Distributed from  Alaska Aleutian Islands to Northern California
-        \item Typically disctributed between 200 - 400 meters during summer months
+        \item Typically distributed between 200 - 400 meters during summer months
         \item Semi-demersal and can be pelagic
         \item Both sexes move to deeper water with age
       \end{itemize}
@@ -276,12 +311,16 @@ University of Washington$^2$ \\
 \end{columns}
 \end{frame}
 
+\begin{frame}{Management and Assessment Range for Pacific Ocean Perch}
+  \begin{center}
+    \includegraphics[scale = 0.40]{figures/assess_region_map.png}
+  \end{center}
+\end{frame}
 
 \subsection{Maturity}
-\begin{frame}{Maturity}
+\begin{frame}{Functional Maturity-at-Length}
 \begin{columns}
   \begin{column}{0.55\textwidth}
-      Functional maturity-at-length
       \begin{itemize}
         \item Categorized mature and immature fish based on the proportion of vitellogenin in the cytoplasm and atretic cells
         \item 50\% maturity is at larger lengths vs. biological maturity
@@ -313,13 +352,13 @@ University of Washington$^2$ \\
 \end{frame}
 
 \subsection{Growth}
-\begin{frame}{Weight-at-length}
+\begin{frame}{Weight-at-Length}
   \begin{center}
     \includegraphics[scale = 0.75]{figures/weightAtLengthPred.png}
   \end{center}
 \end{frame}
 
-\begin{frame}{Length-at-age}
+\begin{frame}{Length-at-Age}
   \begin{center}
   \includegraphics[scale = 0.45]{figures/LengthAgeAll_2.png}
   \end{center}
@@ -332,6 +371,7 @@ University of Washington$^2$ \\
       \begin{itemize}
       \item Oldest age: 120 by the fishery (2007)
       \item Next oldest fish range from 90-103 collected by the fishery or the at-sea hake fishery between 1981-2010
+      \item Love et al. (2002) - maximum age of 100
       \end{itemize}
     \end{column}
     \begin{column}{0.65\textwidth}
@@ -340,6 +380,36 @@ University of Washington$^2$ \\
   \end{columns}
 \end{frame}
 
+\begin{frame}{Natural Mortality}
+  \begin{itemize}
+    \item Prior based on maximum age of 100
+    \item Lognormal distribution with a median of 0.054
+    \item Value fixed in the base model for both sexes
+  \end{itemize}
+  \begin{center}
+    \includegraphics[scale = 0.23]{figures/m_prior.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Steepness: Density-Dependent Recruitment Compensation }
+  \begin{itemize}
+    \item Predictive distribution for Pacific rockfish meta-analysis
+    \item Prior median in 2017 for steepness ($h$) = 0.72
+  \end{itemize}
+  \begin{center}
+    \includegraphics[scale = 0.4]{figures/h_prior.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Steepness}
+  \begin{itemize}
+    \item Using the prior in the base model resulted in estimated depletion = 96.8\%
+    \item Base model set $h$ = 0.50
+  \end{itemize}
+    \begin{center}
+    \includegraphics[scale = 0.22]{figures/Alternative_Steepness_Values.png}
+  \end{center}
+\end{frame}
 %-------------------------------------------------------------------------------------
 %\section{Data Summary}
 %-------------------------------------------------------------------------------------
@@ -365,7 +435,7 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}
 
-\begin{frame}{Cummalative Catch Difference}
+\begin{frame}{Cumulative Catch Difference}
   \begin{center}
     \includegraphics[scale = 0.32, trim={0, 0, 0, 2cm}, clip]{figures/Catch_Comparison.png}
   \end{center}
@@ -397,19 +467,11 @@ University of Washington$^2$ \\
 \end{frame}
 
 %---------------------------------------------------------------------------------
-\section{Indices of Abundance}
+\section{Index Data}
 %---------------------------------------------------------------------------------
-\subsection{Fishery CPUE}
-\begin{frame}{CPUE}
-  \begin{center}
-      \includegraphics[scale = 0.45]{r4ss/index1_cpuedata_Fishery.png}
-  \end{center}
-  Gunderson (1977) CPUE from the INPFC Columbia area\\
-  *Sensitivity shows little effect on model results when removed.
-\end{frame}
 
-\subsection{Survey Indices}
-\begin{frame}{Survey Indices}
+\subsection{CPUE and Survey Indices}
+\begin{frame}{Fishery and Survey Indices}
   \begin{center}
   \includegraphics[height = 3in, width = 4in]{figures/Index_Data.png}
   \end{center}
@@ -545,7 +607,28 @@ University of Washington$^2$ \\
 
 %---------------------------------------------------------------------------
 \section*{Appendix}
-%-----------------------------------------------------------------------------
+%----------------------------------------------------------------------------
+\begin{frame}
+  \Huge{\centerline{Additional data slides}}
+\end{frame}
+
+\begin{frame}{Survey Stratificaiton and Model Selection}
+  \begin{table}[ht]
+  \small
+  \centering
+  \begin{tabular}{p{1.15in}p{0.65in}p{0.5in}p{0.5in}p{0.75in}}
+  Survey & Depth (m) & Latitude & Model & Error  \\ 
+  \hline
+  Pacific ocean perch & 155-500 & 44-48.5 & VAST & Lognormal \\
+  Triennial shelf & 55-366 & 40.5-49 & VAST & Lognormal\\ 
+  AFSC slope & 183-549 & 42-49 & VAST & Lognormal \\ 
+  NWFSC slope & 183-549 & 42-49 & Bayesian delta glmm & Gamma \\
+  NWFSC shelf-slope & 55-549 & 42-49 & VAST & Lognormal \\
+  \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
 \begin{frame}{VAST vs. Bayesian Delta-GLMM Indices}
   \begin{center}
     \includegraphics[scale = 0.30]{figures/Index_Comparison.png}
@@ -589,10 +672,10 @@ University of Washington$^2$ \\
 \end{frame}
 
 
-\begin{frame}{2011 vs. 2017 NWFSC shelf-slope index}
-  \begin{center}
-    \includegraphics[scale = 0.20]{figures/NWFSC_shelf_slope_2011_2017.png}
-  \end{center}
-\end{frame} 
+%\begin{frame}{2011 vs. 2017 NWFSC shelf-slope index}
+%  \begin{center}
+%    \includegraphics[scale = 0.20]{figures/NWFSC_shelf_slope_2011_2017.png}
+%  \end{center}
+%\end{frame} 
   
 \end{document}

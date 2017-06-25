@@ -2,11 +2,11 @@
 \beamer@subsectionintoc {1}{1}{Model Set-up}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Biology Parameters}{4}{0}{1}
 \beamer@subsectionintoc {1}{3}{Selectivity \& Retention}{6}{0}{1}
-\beamer@subsectionintoc {1}{4}{Data Weighting}{9}{0}{1}
-\beamer@sectionintoc {2}{Fits to the Data}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Removals}{11}{0}{2}
-\beamer@subsectionintoc {2}{2}{Indices}{13}{0}{2}
-\beamer@subsectionintoc {2}{3}{Composition Data}{15}{0}{2}
+\beamer@sectionintoc {2}{Fits to the Data}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{Removals}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{Indices}{12}{0}{2}
+\beamer@subsectionintoc {2}{3}{Data Weighting}{14}{0}{2}
+\beamer@subsectionintoc {2}{4}{Composition Data}{15}{0}{2}
 \beamer@sectionintoc {3}{Population Estimates}{32}{0}{3}
 \beamer@subsectionintoc {3}{1}{Size and Scale}{33}{0}{3}
 \beamer@subsectionintoc {3}{2}{Recruitment}{35}{0}{3}

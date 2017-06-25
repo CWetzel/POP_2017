@@ -115,11 +115,13 @@ figures = c(
             "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/Bratio_indices.png",
             "C:/Assessments/POP2017/Models/_Sensitivities/12.0/present_plots/SSB_indices.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_DesignBased_Comparison.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/NWFSC_shelf_slope_2011_2017.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Compare_2011_2017.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Compare_PostModel_2011_2017.png",
-            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Standardized.png"
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Standardized.png",
+            "C:/Assessments/POP2017/Data/Biological/plots/assess_region_map.png"
             )
 
 for (i in 1:length(figures)){
