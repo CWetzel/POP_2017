@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  25 JUN 2017 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.21)  26 JUN 2017 16:19
 entering extended mode
 **./POP_2017_STAR_Model_Results.tex
 (POP_2017_STAR_Model_Results.tex
@@ -1245,8 +1245,27 @@ Package pdftex.def Info: noaalogo.jpg used on input line 161.
  [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\T1/cmss/m/n/10 1.04E-5
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\T1/cmss/m/n/10 1.05E-5
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\T1/cmss/m/n/10 3.09
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\T1/cmss/m/n/10 3.08
+ []
+
 File: noaalogo.jpg Graphic file (type jpg)
- <use noaalogo.jpg>
+<use noaalogo.jpg>
 Package pdftex.def Info: noaalogo.jpg used on input line 183.
 (pdftex.def)             Requested size: 37.3917pt x 36.135pt.
  [4
@@ -2320,7 +2339,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  21684 strings out of 493634
  433907 string characters out of 3141286
- 551489 words of memory out of 3000000
+ 552489 words of memory out of 3000000
  24341 multiletter control sequences out of 15000+200000
  23139 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -2341,7 +2360,7 @@ m/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 si12.pfb>
-Output written on POP_2017_STAR_Model_Results.pdf (64 pages, 4291297 bytes).
+Output written on POP_2017_STAR_Model_Results.pdf (64 pages, 4291343 bytes).
 PDF statistics:
  6397 PDF objects out of 7423 (max. 8388607)
  148 named destinations out of 1000 (max. 500000)

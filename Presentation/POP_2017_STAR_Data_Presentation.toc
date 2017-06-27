@@ -1,18 +1,18 @@
 \beamer@sectionintoc {1}{Model Summary}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Landings}{5}{0}{1}
-\beamer@subsectionintoc {1}{2}{Estimated Stock Size and Status}{8}{0}{1}
-\beamer@subsectionintoc {1}{3}{Uncertainties}{17}{0}{1}
-\beamer@sectionintoc {2}{Biology}{18}{0}{2}
-\beamer@subsectionintoc {2}{1}{Overview}{19}{0}{2}
-\beamer@subsectionintoc {2}{2}{Maturity}{21}{0}{2}
-\beamer@subsectionintoc {2}{3}{Fecundity}{23}{0}{2}
-\beamer@subsectionintoc {2}{4}{Growth}{24}{0}{2}
-\beamer@sectionintoc {3}{Removals}{31}{0}{3}
-\beamer@subsectionintoc {3}{1}{Landings History by State}{32}{0}{3}
-\beamer@subsectionintoc {3}{2}{Discarding practices}{35}{0}{3}
-\beamer@sectionintoc {4}{Index Data}{36}{0}{4}
-\beamer@subsectionintoc {4}{1}{CPUE and Survey Indices}{37}{0}{4}
-\beamer@sectionintoc {5}{Composition Data}{39}{0}{5}
-\beamer@subsectionintoc {5}{1}{Fishery Data}{40}{0}{5}
-\beamer@subsectionintoc {5}{2}{Survey Length and Age Data}{44}{0}{5}
-\beamer@subsectionintoc {5}{3}{Ageing Error}{52}{0}{5}
+\beamer@subsectionintoc {1}{1}{Overview}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Landings}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Estimated Stock Size and Status}{9}{0}{1}
+\beamer@subsectionintoc {1}{4}{Uncertainties}{18}{0}{1}
+\beamer@sectionintoc {2}{Biology}{19}{0}{2}
+\beamer@subsectionintoc {2}{1}{Maturity}{20}{0}{2}
+\beamer@subsectionintoc {2}{2}{Fecundity}{22}{0}{2}
+\beamer@subsectionintoc {2}{3}{Growth}{23}{0}{2}
+\beamer@sectionintoc {3}{Removals}{30}{0}{3}
+\beamer@subsectionintoc {3}{1}{Landings History by State}{31}{0}{3}
+\beamer@subsectionintoc {3}{2}{Discarding practices}{34}{0}{3}
+\beamer@sectionintoc {4}{Index Data}{35}{0}{4}
+\beamer@subsectionintoc {4}{1}{CPUE and Survey Indices}{36}{0}{4}
+\beamer@sectionintoc {5}{Composition Data}{45}{0}{5}
+\beamer@subsectionintoc {5}{1}{Fishery Data}{46}{0}{5}
+\beamer@subsectionintoc {5}{2}{Survey Length and Age Data}{50}{0}{5}
+\beamer@subsectionintoc {5}{3}{Ageing Error}{58}{0}{5}

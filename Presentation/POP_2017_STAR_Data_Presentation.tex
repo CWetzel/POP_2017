@@ -145,29 +145,34 @@ University of Washington$^2$ \\
 %------------------------------------------------------------------------------------
 \section{Model Summary}
 %------------------------------------------------------------------------------------
-\begin{frame}{Correction for the Post-STAR Model}
-  \begin{itemize}
-    \item Addition to California historical landings
+\subsection{Overview}
+\begin{frame}{Pacific ocean perch (\textit{Sebastes alutus})}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item 1948-1968 corrections totaling 10 mt 
+        \item Distributed from  Alaska Aleutian Islands to Northern California
+        \item Typically distributed between 200 - 400 meters during summer months
+        \item Semi-demersal and can be pelagic
+        \item Both sexes move to deeper water with age
+        \item Currently, no evidence for genetic differences in the assessment area
       \end{itemize}
-    \item Survey catch removal correction
-      \begin{itemize}
-        \item Stock Synthesis was not removing catches for survey fleets
+  \end{column}
+  
+  \begin{column}{0.5\textwidth}
+    \includegraphics[scale = 0.25]{C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png}
+    \begin{itemize}
+        \item Females move to deeper waters post-spawning during winter months and return inshore in spring.
       \end{itemize}
-    \item Weight-at-length
-      \begin{itemize}
-        \item Small correction to the weight-at-length values for females and males
-      \end{itemize}    
-  \end{itemize}
+  \end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Comparison between STAR model and Corrected Model}
-  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_ssb.png}
-  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_dep.png}
-  \\
-  *All results shown come from the Pre-STAR base model as included in the document.
-\end{frame}
+%\begin{frame}{Management and Assessment Range for Pacific Ocean Perch}
+%  \begin{center}
+%    \includegraphics[scale = 0.40]{figures/assess_region_map.png}
+%  \end{center}
+%\end{frame}
+
 
 \subsection{Landings}
 \begin{frame}{Landings}
@@ -203,6 +208,30 @@ University of Washington$^2$ \\
   \end{table}
   Approximately 70\% of the landings are from Oregon in the recent years.\\
   Vast majority of landings are from bottom-trawl gear.
+\end{frame}
+
+\begin{frame}{Correction for the Post-STAR Model}
+  \begin{itemize}
+    \item Addition to California historical landings
+      \begin{itemize}
+        \item 1948-1968 corrections totaling 10 mt 
+      \end{itemize}
+    \item Survey catch removal correction
+      \begin{itemize}
+        \item Stock Synthesis was not removing catches for survey fleets
+      \end{itemize}
+    \item Weight-at-length
+      \begin{itemize}
+        \item Small correction to the weight-at-length values for females and males
+      \end{itemize}    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison between STAR model and Corrected Model}
+  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_ssb.png}
+  \includegraphics[scale = 0.20]{figures/12_0_vs_13_0_dep.png}
+  \\
+  *All results shown come from the Pre-STAR base model as included in the document.
 \end{frame}
 
 
@@ -334,38 +363,10 @@ University of Washington$^2$ \\
 \end{frame}
 
 
-
 %------------------------------------------------------------------------------------
 \section{Biology}
 
 %------------------------------------------------------------------------------------
-\subsection{Overview}
-\begin{frame}{Pacific ocean perch (\textit{Sebastes alutus})}
-\begin{columns}
-  \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item Distributed from  Alaska Aleutian Islands to Northern California
-        \item Typically distributed between 200 - 400 meters during summer months
-        \item Semi-demersal and can be pelagic
-        \item Both sexes move to deeper water with age
-      \end{itemize}
-  \end{column}
-  
-  \begin{column}{0.5\textwidth}
-    \includegraphics[scale = 0.25]{C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017/Sebastes_alutus.png}
-    \begin{itemize}
-        \item Females move to deeper waters post-spawning during winter months and return inshore in spring.
-      \end{itemize}
-  \end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}{Management and Assessment Range for Pacific Ocean Perch}
-  \begin{center}
-    \includegraphics[scale = 0.40]{figures/assess_region_map.png}
-  \end{center}
-\end{frame}
-
 \subsection{Maturity}
 \begin{frame}{Functional Maturity-at-Length}
 \begin{columns}
@@ -520,11 +521,79 @@ University of Washington$^2$ \\
 %---------------------------------------------------------------------------------
 
 \subsection{CPUE and Survey Indices}
+\begin{frame}{Survey Stratificaiton and Model Selection}
+  \begin{table}[ht]
+  \small
+  \centering
+  \begin{tabular}{p{1.15in}p{0.65in}p{0.5in}p{0.5in}p{0.75in}}
+  Survey & Depth (m) & Latitude & Model & Error  \\ 
+  \hline
+  Pacific ocean perch & 155-500 & 44-48.5 & VAST & Lognormal \\
+  Triennial shelf & 55-366 & 40.5-49 & VAST & Lognormal\\ 
+  AFSC slope & 183-549 & 42-49 & VAST & Lognormal \\ 
+  NWFSC slope & 183-549 & 42-49 & Bayesian delta glmm & Gamma \\
+  NWFSC shelf-slope & 55-549 & 42-49 & VAST & Lognormal \\
+  \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
 \begin{frame}{Fishery and Survey Indices}
   \begin{center}
   \includegraphics[height = 3in, width = 4in]{figures/Index_Data.png}
   \end{center}
+  
+  \begin{tikzpicture}[remember picture, overlay, shift = {(current page.center)}]
+    \node[black] at (0, 2.5) {\tiny VAST};
+    \node[black] at (3.5, 2.5) {\tiny VAST};
+    \node[black] at (-3.2, -1.25) {\tiny VAST};
+    \node[black] at (0, -1.25) {\tiny Bayesian Delta GLMM};
+    \node[black] at (3.5, -1.25) {\tiny VAST};
+  \end{tikzpicture}
 \end{frame}
+
+\begin{frame}{Designed Based vs. Model Indices}
+  \begin{center}
+    \includegraphics[scale = 0.30]{figures/Index_DesignBased_Comparison.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Pacific Ocean Perch Survey Diagnostics}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/POP_Q-Q_plot.jpg}
+  \includegraphics[scale = 0.50]{figures/POP_Q-Q_hist.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Triennial Shelf Survey Diagnostics}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/Tri_Q-Q_plot.jpg}
+  \includegraphics[scale = 0.50]{figures/Tri_Q-Q_hist.jpg}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{AFSC Slope Survey Diagnostics}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/AFSC_Q-Q_plot.jpg}
+  \includegraphics[scale = 0.50]{figures/AFSC_Q-Q_hist.jpg}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{NWFSC Slope Survey Diagnostics}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/NW_Slope_Q-Q_plot.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC Shelf-Slope Survey Diagnostics}
+  \begin{center}
+  \includegraphics[scale = 0.50]{figures/Combo_Q-Q_plot.jpg}
+  \includegraphics[scale = 0.50]{figures/Combo_Q-Q_hist.jpg}
+  \end{center}
+\end{frame}
+
 
 \begin{frame}{All: Standardized}
   \begin{center}
@@ -631,8 +700,8 @@ University of Washington$^2$ \\
 
 
 \begin{frame}{NWFSC shelf-slope conditional age-at-length}
-    \includegraphics[scale = 0.37]{r4ss/comp_condAALdat_bubflt8mkt0_page1.png}
-    \includegraphics[scale = 0.37]{r4ss/comp_condAALdat_bubflt8mkt0_page2.png}
+    \includegraphics[scale = 0.42]{r4ss/comp_condAALdat_bubflt8mkt0_page1.png}
+    \includegraphics[scale = 0.42]{r4ss/comp_condAALdat_bubflt8mkt0_page2.png}
 \end{frame}
 
 
@@ -661,21 +730,34 @@ University of Washington$^2$ \\
   \Huge{\centerline{Additional data slides}}
 \end{frame}
 
-\begin{frame}{Survey Stratificaiton and Model Selection}
-  \begin{table}[ht]
-  \small
-  \centering
-  \begin{tabular}{p{1.15in}p{0.65in}p{0.5in}p{0.5in}p{0.75in}}
-  Survey & Depth (m) & Latitude & Model & Error  \\ 
-  \hline
-  Pacific ocean perch & 155-500 & 44-48.5 & VAST & Lognormal \\
-  Triennial shelf & 55-366 & 40.5-49 & VAST & Lognormal\\ 
-  AFSC slope & 183-549 & 42-49 & VAST & Lognormal \\ 
-  NWFSC slope & 183-549 & 42-49 & Bayesian delta glmm & Gamma \\
-  NWFSC shelf-slope & 55-549 & 42-49 & VAST & Lognormal \\
-  \hline
-  \end{tabular}
-  \end{table}
+\begin{frame}{Pacific Ocean Perch Survey Diagnostics: Encounter (left) and Catch Rate (right) Pearson Residuals}
+  \begin{center}
+  \includegraphics[scale = 0.23]{figures/POP_maps--encounter_pearson_resid.png}
+  \includegraphics[scale = 0.23]{figures/POP_maps--catchrate_pearson_resid.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Triennial Shelf Survey Diagnostics: Encounter (left) and Catch Rate (right) Pearson Residuals}
+  \begin{center}
+  \includegraphics[scale = 0.13]{figures/Tri_maps--encounter_pearson_resid.png}
+  \includegraphics[scale = 0.13]{figures/Tri_maps--catchrate_pearson_resid.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{AFSC Slope Survey Diagnostics: Encounter (left) and Catch Rate (right) Pearson Residuals}
+  \begin{center}
+  \includegraphics[scale = 0.15]{figures/AFSC_maps--encounter_pearson_resid.png}
+  \includegraphics[scale = 0.15]{figures/AFSC_maps--catchrate_pearson_resid.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{NWFSC Shelf-Slope Survey Diagnostics: Encounter (left) and Catch Rate (right) Pearson Residuals}
+  \begin{center}
+  \includegraphics[scale = 0.12]{figures/Combo_maps--encounter_pearson_resid.png}
+  \includegraphics[scale = 0.12]{figures/Combo_maps--catchrate_pearson_resid.png}
+  \end{center}
 \end{frame}
 
 \begin{frame}{VAST vs. Bayesian Delta-GLMM Indices}
@@ -684,11 +766,6 @@ University of Washington$^2$ \\
   \end{center}
 \end{frame}  
 
-\begin{frame}{Designed Based vs. VAST Indices}
-  \begin{center}
-    \includegraphics[scale = 0.30]{figures/Index_DesignBased_Comparison.png}
-  \end{center}
-\end{frame} 
 
 \begin{frame}{Pre-Model 2011 Indices vs. 2017 Indices}
   \begin{center}
@@ -718,6 +795,18 @@ University of Washington$^2$ \\
   \hline
   \end{tabular}
   \end{table}
+\end{frame}
+
+\begin{frame}{Length-at-Age by Area}
+  \begin{center}
+  \includegraphics[scale = 0.35]{figures/LengthAge_StateEach_wCanada.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale = 0.35]{r4ss/POP_unavailable_biomass.png}
+  \end{center}
 \end{frame}
 
 
