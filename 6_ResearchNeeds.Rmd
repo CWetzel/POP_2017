@@ -1,14 +1,14 @@
 <!-- ****************************RESEARCH NEEDS**************************** -->
 #Research Needs
-There are many areas of research that could be improved to benefit the understanding and assessment of `r spp`. Below, are issues that are considered of the importance.
+There are many areas of research that could be improved to benefit the understanding and assessment of `r spp`. Below, are issues that are considered of importance.
 
 \begin{enumerate}
 
-\item \textbf{Natural mortality}: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for `r spp`. The collection of additional age data, re-reading of older age samples, reading old age samples that are unread, and improved understanding of the life-history of `r spp` may reduce that uncertainty.
+\item \textbf{Natural mortality}: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for `r spp`. The collection of additional age data, re-reading of older age samples, reading old age samples that are unread, and improved understanding of the life history of `r spp` may reduce that uncertainty.
 
 \item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understanting regarding the steepness of US west coast `r spp` will reduce our uncertainty regarding current stock status.
 
-\item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for `r spp` off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west Ccast observations would help to define the connectivity between `r spp` north and south of the U.S.-Canada border.
+\item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for `r spp` off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west coast observations would help to define the connectivity between `r spp` north and south of the U.S.-Canada border.
 
 
 \end{enumerate}

@@ -65,7 +65,9 @@ library(r4ss)
 # By default, you can only work in the directory containing the project
 # Set the directory here if you're getting errors
 # setwd('C:/Assessment_template')
-setwd('C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017')
+if (Sys.info()["user"] == "Chantel.Wetzel") {
+  setwd('C:/Users/Chantel.Wetzel/Documents/GitHub/POP_2017')
+}
 
 
 # =============================================================================
@@ -84,7 +86,8 @@ dir.create(file.path(output.dir,model.plots), showWarnings = FALSE)
 # BEGIN r4ss===================================================================
 # REMOVE OLD r4SS OUTPUT!!!!! -------------------------------------------------
 # Run this deliberately - it deletes the r4SS output plots files
-do.call(file.remove, list(list.files(file.path(output.dir, model.plots), full.names=TRUE)))
+do.call(file.remove, list(list.files(file.path(output.dir, model.plots), 
+  full.names=TRUE, pattern = "!Thumb")))
 
 
 # Run r4ss for each model - **CHANGE DIRECTORY if necessary**

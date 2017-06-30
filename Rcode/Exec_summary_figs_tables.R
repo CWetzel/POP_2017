@@ -367,7 +367,7 @@ align(Recruit_mod1.table) = c('l',
 
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
-                              caption=c(paste('Recent trend in spawning potential ratio (1-SPR)(1-SPR50) and summary exploitation rate for ', spp, '.' , sep='')), 
+                              caption=c(paste('Recent trend in spawning potential ratio (1-SPR)/(1-SPR50) and summary exploitation rate for ', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
@@ -456,7 +456,7 @@ align(SPRratio_Exploit_mod1.table) = c('l','l',
   Ref_pts[c(6, 11, 13, 16), 3] = ''
   Ref_pts[c(6, 11, 16), 2] = ''
   colnames(Ref_pts) = c('\\textbf{Quantity}', '\\textbf{Estimate}', 
-                        '\\textbf{\\~95\\%  Confidence Interval}')
+                        '\\textbf{$\\sim$95\\%  Confidence Interval}')
   assign(paste('Ref_pts_', mod_area, sep = ''), Ref_pts)
 
 
