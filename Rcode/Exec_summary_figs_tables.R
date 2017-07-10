@@ -579,11 +579,11 @@ align(mngmnt.table) = c('l',
                                    'Year',  
                                    'Catch',	
                                    'Spawning Output',	
-                                   'Depletion', 
+                                   'Depletion (%)', 
                                    'Spawning Output',	
-                                   'Depletion',	
+                                   'Depletion (%)',	
                                    'Spawning Output',	
-                                   'Depletion')
+                                   'Depletion (%)')
       
        decision_mod1.table = xtable(decision_mod1, 
                                     caption = c(paste('Summary of 10-year 
@@ -591,10 +591,8 @@ align(mngmnt.table) = c('l',
                                              for alternate states of nature based on 
                                              an axis of uncertainty for the base model. 
                                              Columns range over low, mid, and high
-                                             states of nature, and rows range over different 
-                                             assumptions of catch levels. An entry of "--" 
-                                             indicates that the stock is driven to very low 
-                                             abundance under the particular scenario.', sep = '')), 
+                                             states of nature over natural mortality, and rows range over different 
+                                             assumptions of catch levels.', sep = '')), 
                                      label='tab:Decision_table_mod1')
       
     # Assign alignment and add the header columns
@@ -607,9 +605,9 @@ align(mngmnt.table) = c('l',
         addtorow$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
                                & \\multicolumn{2}{c}{\\textbf{States of nature}} 
                                & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low State of Nature} 
-                               & \\multicolumn{2}{c}{Base State of Nature} 
-                               &  \\multicolumn{2}{c}{High State of Nature} \\\\\n')
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.045} 
+                               & \\multicolumn{2}{c}{M = 0.054} 
+                               &  \\multicolumn{2}{c}{M = 0.06} \\\\\n')
 
 
 #=============================================================================

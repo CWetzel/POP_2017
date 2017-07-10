@@ -34,7 +34,7 @@
 <!-- *************************  FIGURE 2  ********************************* -->
 <!-- ********************************************************************** -->
   
-![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
+![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](Figures/data_plot.png)
 
 \FloatBarrier
 
@@ -43,7 +43,7 @@
 <!-- ****************Length and Age Composition FIGURES******************** --> 
 <!-- ********************************************************************** -->
 
-![Fishery-dependent and fishery-independent indices for `r spp`. \label{fig:indices}](Figures/Index_Data.png)
+![Fishery-dependent and fishery-independent indices for `r spp`. \label{fig:indices}](Figures/Index_Data_4.png)
 
 \FloatBarrier
 
@@ -86,19 +86,9 @@
 \FloatBarrier
 
 
-![Q-Q plots for the VAST lognormal distribution for the Triennial shelf survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
+<!-- ![Q-Q plots for the VAST lognormal distribution for the Triennial shelf survey. \label{fig:tri_qq}](Figures/Q-Q_plot_triennial.jpg)
 
-\FloatBarrier
-
-
-![Triennial shelf survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
-
-\FloatBarrier
-
-
-![Triennial shelf survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
-
-\FloatBarrier
+\FloatBarrier -->
 
 
 ![Q-Q plots for the VAST lognormal distribution for the `r spp` survey. \label{fig:pop_qq}](Figures/Q-Q_plot_pop.jpg)
@@ -308,7 +298,7 @@ cat('\n![', LenComp_mod1[13,caption_col], ' \\label{fig:ashop_len_pearson}](', L
 cat('\n![', LenComp_mod1[17,caption_col], ' \\label{fig:pop_len_pearson}](', LenComp_mod1[17, path_col], ')\n', sep='')
 
 #Triennial
-cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:tri_len_pearson}](', LenComp_mod1[21, path_col], ')\n', sep='')
+#cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:tri_len_pearson}](', LenComp_mod1[21, path_col], ')\n', sep='')
 
 #AFSC
 cat('\n![', LenComp_mod1[25,caption_col], ' \\label{fig:afsc_len_pearson}](', LenComp_mod1[25, path_col], ')\n', sep='')
@@ -336,7 +326,7 @@ cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_len_ashop}](',
 cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_len_pop}](', LenComp_mod1[19, path_col], ')\n', sep='')
 
 #Triennial
-cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
+#cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
 
 #AFSC
 cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_len_afsc}](', LenComp_mod1[27, path_col], ')\n', sep='')
@@ -372,7 +362,7 @@ cat('\n![', AgeComp_mod1[7,caption_col], ' \\label{fig:ashop_age_pearson}](', Ag
 cat('\n![', AgeComp_mod1[11,caption_col], ' \\label{fig:pop_age_pearson}](', AgeComp_mod1[11, path_col], ')\n', sep='')
 
 #Triennial
-cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](', AgeComp_mod1[15, path_col], ')\n', sep='')
+#cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](', AgeComp_mod1[15, path_col], ')\n', sep='')
 
 #NWFSC
 cat('\n![', AgeComp_mod1[19,caption_col], ' \\label{fig:nwfsc_age_pearson}](', AgeComp_mod1[19, path_col], ')\n', sep='')
@@ -405,7 +395,7 @@ cat('\n![', AgeComp_mod1[9,caption_col], ' \\label{fig:weighting_ashop}](', AgeC
 
 
 #Triennial
-cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_triennial}](', AgeComp_mod1[17, path_col], ')\n', sep='')
+#cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_triennial}](', AgeComp_mod1[17, path_col], ')\n', sep='')
 
 
 #NWFSC

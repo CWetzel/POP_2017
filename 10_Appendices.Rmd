@@ -25,6 +25,7 @@ output:
 ```{r, results='asis'}
 
 plot.vec = c(1, 5:8, 12, 16, 20, 24, 28,32)
+plot.vec = c(1, 5:8, 12, 16, 24, 28,32)
 
 for (a in 1:length(plot.vec)){
 
@@ -43,6 +44,7 @@ for (a in 1:length(plot.vec)){
 ```{r, results='asis'}
 
 plot.vec = c(1:2, 6, 10, 14, 18, 23)
+plot.vec = c(1:2, 6, 10, 18, 23)
 name.vec = c("")
 
 for (a in 1:length(plot.vec)){
@@ -54,7 +56,161 @@ for (a in 1:length(plot.vec)){
 ```
 
 \FloatBarrier
+
+#Appendix C. Description of CPUE and Triennial data
+
+Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggests that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time. The estimated index of abundance is shown in Table \ref{tab:CPUE_Summary} and Figure \ref{fig:Excluded_Indices}.
+
+An index of abundance was estimated based on the data using the VAST delta-GLMM model.  The estimated index of abundance is shown in Table \ref{tab:CPUE_Summary} and Figure \ref{fig:Excluded_Indices}.  The lognormal distribution with random strata-year had the lowest AIC and was chosen as the final model.  The index shows a decline in abundance in the early years of the time-series and abundance remaining flat for the latter years.  
+
+Length and age compositions were expanded based upon the survey stratification.  The number of tows with length data ranged from 17 in 1986 to 81 in 1998 (Table \ref{tab:TriennialLengths}).  Ages were read using surface reading methods until 1989 when the break-and-burn method replaced surface reads as the best method to age `r spp`.  Unfortunately, surface reading of `r spp` otoliths results in significant underestimates of age.  Due to this, these otoliths were excluded from analysis.  The available ages from the Triennial shelf survey and the number of tows where otoliths were collected are shown in Table \ref{tab:Triennial_Ages}.  The expanded length  and age frequencies from this survey are shown in Figures \ref{fig:Tri_Length} and  \ref{fig:Tri_Age}, respectively.
+
+<!-- ********************************************************************** -->
+<!-- ***********************CPUE   Indices Table*************************** --> 
+<!-- ********************************************************************** -->
+  
+
+```{r, results = 'asis'}
+# Commercial CPUE Index First
+names = unique(mod1$cpue$Name)
+names = names[c(1,3)]
+survey.list = list()
+for(i in 1:length(names)){
+  grab = mod1$cpue[mod1$cpue$Name == names[i], c("Obs", "SE") ]
+  survey.list[[i]] = grab
+  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$Name == names[i], "Yr" ]
+  colnames(survey.list[[i]]) = c("Obs", "SE")
+}
+names(survey.list) = names
+
+Rows = unique(unlist(lapply(survey.list, rownames)))
+Rows = sort(as.numeric(Rows))
+Index_Summary = matrix("-", nrow = length(Rows), ncol = 2*length(names),
+                       dimnames=list(Rows, sapply(survey.list, colnames)))
+
+mat.names = NULL
+for(i in seq_along(survey.list)){
+  if(i==1) { ind = 1:2  }
+  if(i!=1) { ind = ind+2}
+  Index_Summary[rownames(survey.list[[i]]), ind] = cbind(print(survey.list[[i]]$Obs, digits = 0), 
+                                                         print(survey.list[[i]]$SE,  digits = 2)) 
+  mat.names = c(mat.names, "Obs", "SE")
+}
+
+
+Index_Summary = cbind(rownames(Index_Summary), Index_Summary)
+
+# Index of abundance summary, create table
+hlines = c(-1, 0, nrow(Index_Summary))
+addtorow = list()
+addtorow$pos = list(0,0)
+addtorow$command = c(" & \\multicolumn{2}{c}{Fishery CPUE} &  \\multicolumn{2}{c}{Triennial} \\\\\n",
+                     "Year & Obs & SE & Obs & SE \\\\\n")
+
+# Index of abundance summary, create table   
+Index_summary.table = xtable(Index_Summary, 
+                             caption = c('Summary of the fishery CPUE
+                                         and the Triennial shelf survey indices not used in the stock
+                                         assessment.'),
+                             label = 'tab:CPUE_Summary',
+                             digits = 2)    
+# Add alignment  
+align(Index_summary.table) = c('l',
+                               '>{\\centering}p{.5in}',
+                               '>{\\centering}p{.7in}',
+                               '>{\\centering}p{.7in}',
+                               '>{\\centering}p{.7in}',
+                               '>{\\centering}p{.7in}')  
+
+# Print index summary table
+print(Index_summary.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      hline.after = hlines,
+      add.to.row = addtorow,
+      include.colnames = FALSE,
+      sanitize.text.function = function(x){x})
+```
+
+\FloatBarrier
+
+
+<!-- ********************* Triennial **************************** --> 
+```{r, results = 'asis'}
+Fish_Length = read.csv('./txt_files/TriennialLengthSampleSize.csv')
+colnames(Fish_Length) = c('Year',
+                          'Tows',
+                          'Fish',
+                          'Sample Size')
+
+# Index of abundance summary, create table   
+Fish_Length.table = xtable(Fish_Length, 
+                           caption = c('Summary of Triennial shelf survey length samples.'),
+                           label = 'tab:TriennialLengths',
+                           digits = 0)    
+# Add alignment  
+align(Fish_Length.table) = c('l',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{1in}')  
+
+# Print commercial length sample numbers
+print(Fish_Length.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+# NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
+
+```
+
+\FloatBarrier
+
+```{r, results = 'asis'}
+Fish_Length = read.csv('./txt_files/TriennialAgeSampleSize.csv')
+colnames(Fish_Length) = c('Year',
+                          'Tows',
+                          'Fish',
+                          'Sample Size')
+
+# Index of abundance summary, create table   
+Fish_Length.table = xtable(Fish_Length, 
+                           caption = c('Summary of Triennial shelf survey age samples.'),
+                           label = 'tab:Triennial_Ages',
+                           digits = 0)    
+# Add alignment  
+align(Fish_Length.table) = c('l',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{.75in}',
+                             '>{\\centering}p{1in}')  
+
+# Print commercial length sample numbers
+print(Fish_Length.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+```
+
+\FloatBarrier
+
+![Fishery CPUE and Triennial shelf survey indices of abundance for  `r spp`. The fishery CPUE was based on Gunderson 1977 and the Triennial shelf survey index was estimated using VAST. \label{fig:Excluded_Indices}](Figures/Index_Data_2.png)
+
+\FloatBarrier
+
+![Triennial shelf survey length frequency distributions for `r spp`. \label{fig:Tri_Length}](r4ss/plots_mod1/comp_lendat_bubflt5mkt0.png)
+
+\FloatBarrier
+
+
+![Triennial shelf survey age frequency distributions for `r spp`. \label{fig:Tri_Age}](r4ss/plots_mod1/comp_agedat_bubflt5mkt0.png)
+
+\FloatBarrier
+
+
 \newpage
+
 
 <!-- ************************************DATA FILE(S)************************************************--> 
 <!--#Appendix C. SS data file {-}

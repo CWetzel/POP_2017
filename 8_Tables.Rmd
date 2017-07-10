@@ -278,15 +278,49 @@ print(Regs.table,
           #scalebox = .9)
 ```
 
+<!-- ********************************************************************** -->
+<!-- ***********************Survey Strata  Table*************************** --> 
+<!-- ********************************************************************** -->
+
+```{r, results = 'asis'}
+
+Strata = read.csv('./txt_files/Strata.csv')
+
+colnames(Strata) = c('',
+                     'Pacific ocean perch',
+                      'AFSC Slope',
+                      'NWFSC Slope',
+                     'NWFS Shelf-Slope')
+
+# Index of abundance summary, create table   
+Strata.table = xtable(Strata, 
+                           caption = c('Description of the data used to create the indices, the modeling platform used to generate the estimates, and the model configuration.'),
+                           label = 'tab:strata')
+                           #digits = 0)    
+# Add alignment  
+align(Strata.table) = c('l',
+                             '>{\\raggedleft}p{1.10in}',
+                             '>{\\centering}p{1.10in}',
+                             '>{\\centering}p{1.10in}',
+                             '>{\\centering}p{1.10in}',
+                             '>{\\centering}p{1.10in}')  
+
+# Print commercial length sample numbers
+print(Strata.table, 
+      include.rownames=FALSE, 
+      caption.placement='top',
+      sanitize.text.function = function(x){x})
+
+
+```
 
 <!-- ********************************************************************** -->
 <!-- ***********************Survey Indices Table*************************** --> 
 <!-- ********************************************************************** -->
 
 ```{r, results = 'asis'}
-#Index_summary = read.csv('./txt_files/Index_summary.csv')
 names = unique(mod1$cpue$Name)
-names = names[2:length(names)]
+names = names[c(2, 4:length(names))] #names[c(2:length(names))]
 survey.list = list()
 for(i in 1:length(names)){
   grab = mod1$cpue[mod1$cpue$Name == names[i], c("Obs", "SE") ]
@@ -317,8 +351,8 @@ Index_Summary = cbind(rownames(Index_Summary), Index_Summary)
 hlines = c(-1, 0, nrow(Index_Summary))
 addtorow = list()
 addtorow$pos = list(0,0)
-addtorow$command = c("& \\multicolumn{2}{c}{POP} & \\multicolumn{2}{c}{Triennial} & \\multicolumn{2}{c}{AFSC Slope} & \\multicolumn{2}{c}{NWFSC Slope} & \\multicolumn{2}{c}{NWFSC Shelf-Slope} \\\\\n",
-                     "Year & Obs & SE & Obs & SE & Obs & SE & Obs & SE & Obs & SE\\\\\n")
+addtorow$command = c(" & \\multicolumn{2}{c}{POP} &  \\multicolumn{2}{c}{AFSC Slope} & \\multicolumn{2}{c}{NWFSC Slope} & \\multicolumn{2}{c}{NWFSC Shelf-Slope} \\\\\n",
+                     "Year & Obs & SE & Obs & SE & Obs & SE & Obs & SE \\\\\n")
 Index_summary.table = xtable(Index_Summary, 
                              caption = c('Summary of the fishery-independant biomass/abundance
                                          time-series used in the stock
@@ -327,11 +361,9 @@ Index_summary.table = xtable(Index_Summary,
                              digits = 2)    
 # Add alignment  
 align(Index_summary.table) = c('l',
-                               #'>{\\centering}p{.4in}',
-                               #'>{\\centering}p{.3in}',
                                '>{\\centering}p{.4in}',
-                               '>{\\centering}p{.5in}',
-                               '>{\\centering}p{.3in}',
+                               #'>{\\centering}p{.5in}',
+                               #'>{\\centering}p{.3in}',
                                '>{\\centering}p{.5in}', 
                                '>{\\centering}p{.3in}',
                                '>{\\centering}p{.5in}',
@@ -350,6 +382,7 @@ print(Index_summary.table,
       include.colnames = FALSE,
       sanitize.text.function = function(x){x})
 ```
+
 
 <!-- ********************************************************************** -->
 <!--  ************Fishery-independent biological sampling TABLES*********** -->
@@ -506,64 +539,6 @@ print(Fish_Length.table,
 ```
 
 
-<!-- ********************* Triennial **************************** -->
-```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/TriennialLengthSampleSize.csv')
-colnames(Fish_Length) = c('Year',
-                          'Tows',
-                          'Fish',
-                          'Sample Size')
-
-# Index of abundance summary, create table   
-Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Triennial shelf survey length samples used in the stock assessment.'),
-                           label = 'tab:TriennialLengths',
-                           digits = 0)    
-# Add alignment  
-align(Fish_Length.table) = c('l',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{1in}')  
-
-# Print commercial length sample numbers
-print(Fish_Length.table, 
-      include.rownames=FALSE, 
-      caption.placement='top',
-      sanitize.text.function = function(x){x})
-# NEED TO FIGURE OUT HOW TO APPLY LONGTABLE HERE
-
-```
-
-
-
-```{r, results = 'asis'}
-Fish_Length = read.csv('./txt_files/TriennialAgeSampleSize.csv')
-colnames(Fish_Length) = c('Year',
-                          'Tows',
-                          'Fish',
-                          'Sample Size')
-
-# Index of abundance summary, create table   
-Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Triennial shelf survey age samples used in the stock assessment.'),
-                           label = 'tab:Triennial_Ages',
-                           digits = 0)    
-# Add alignment  
-align(Fish_Length.table) = c('l',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{.75in}',
-                             '>{\\centering}p{1in}')  
-
-# Print commercial length sample numbers
-print(Fish_Length.table, 
-      include.rownames=FALSE, 
-      caption.placement='top',
-      sanitize.text.function = function(x){x})
-
-```
-
 
 <!-- ********************POP Survey************************************* -->
 ```{r, results = 'asis'}
@@ -665,9 +640,9 @@ print(Discard.table,
 
 <!-- ********************************************************************** -->
 <!-- ***********************CPUE   Indices Table*************************** --> 
-<!-- ********************************************************************** -->
+<!-- ********************************************************************** 
   
-  
+
 ```{r, results = 'asis'}
 # Commercial CPUE Index First
 names = "Fishery" #unique(mod1$cpue$FleetName)
@@ -710,7 +685,7 @@ print(Index_summary.table,
       caption.placement='top',
       sanitize.text.function = function(x){x})
 ```
-
+-->
 
 
 <!-- ********************************************************************** -->
@@ -939,7 +914,7 @@ jitter = read.csv('./txt_files/JitterTable.csv')
 
 # Create model 1 jitter table
 jitter.table = xtable(jitter, 
-                      caption = c('Results from 100 jitters from the base model.'),
+                      caption = c('Results from 50 jitters from the base model.'),
                       label = 'tab:jitter')
 
 align(jitter.table) = c('l',
@@ -1011,25 +986,22 @@ mod_params[mod_params$Label == "L_at_Amax_Mal_GP_1",3] = round(as.numeric(mod_pa
 mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3]), 3)
 mod_params[mod_params$Label == "CV_old_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "CV_old_Mal_GP_1",3]), 3)
 
-# Convert Q to regular space
-#mod_params[mod_params$Label == "LnQ_base_Fishery(1)",3] = format(exp(mod_params[mod_params$Label == "LnQ_base_Fishery(1)",3]), scientific = TRUE)
-#mod_params[mod_params$Label == "LnQ_base_POP(4)",3] = exp(mod_params[mod_params$Label == "LnQ_base_POP(4)",3])
-#mod_params[mod_params$Label == "LnQ_base_Triennial(5)",3] = exp(mod_params[mod_params$Label == "LnQ_base_Triennial(5)",3])
-#mod_params[mod_params$Label == "LnQ_base_AFSCSlope(6)",3] = exp(mod_params[mod_params$Label == "LnQ_base_AFSCSlope(6)",3])
-#mod_params[mod_params$Label == "LnQ_base_NWFSCSlope(7)",3] = exp(mod_params[mod_params$Label == "LnQ_base_NWFSCSlope(7)",3])
-#mod_params[mod_params$Label == "LnQ_base_NWFSCcombo(8)",3] = exp(mod_params[mod_params$Label == "LnQ_base_NWFSCcombo(8)",3])
 
 # Relabel some paramters
 mod_params[mod_params$Label == "CV_young_Fem_GP_1",2] = "SD_young_Fem_GP_1"
 mod_params[mod_params$Label == "CV_old_Fem_GP_1",2]   = "SD_old_Fem_GP_1"
 mod_params[mod_params$Label == "CV_young_Mal_GP_1",2] = "SD_young_Mal_GP_1"
 mod_params[mod_params$Label == "CV_old_Mal_GP_1",2]   = "SD_old_Mal_GP_1"
-#mod_params[mod_params$Label == "LnQ_base_Fishery(1)",2] = "Q_base_Fishery(1)"
-#mod_params[mod_params$Label == "LnQ_base_POP(4)",2] = "Q_base_POP(4)"
-#mod_params[mod_params$Label == "LnQ_base_Triennial(5)",2] = "Q_base_Triennial(5)"
-#mod_params[mod_params$Label == "LnQ_base_AFSCSlope(6)",2] = "Q_base_AFSC_Slope(6)"
-#mod_params[mod_params$Label == "LnQ_base_NWFSCSlope(7)",2] = "Q_base_NWFSC_Slope(7)"
-#mod_params[mod_params$Label == "LnQ_base_NWFSCcombo(8)",2] = "Q_base_NWFSCcombo(8)"
+
+# Remove the CPUE and Triennial Q and extra var
+remove = which(mod_params$Label =="LnQ_base_Fishery(1)")
+mod_params = mod_params[-remove,]
+remove = which(mod_params$Label =="LnQ_base_Triennial(5)")
+mod_params = mod_params[-(remove:(remove +1)),]
+
+# Remove the triennial selectivity
+remove = which(mod_params$Label =="SizeSel_P1_Triennial(5)")
+mod_params = mod_params[-(remove:(remove +5)),]
 
 
 # Remove the max, prior and prior sd columns
@@ -1310,18 +1282,18 @@ print(Timeseries.table,
 Sens_model1 = read.csv('./txt_files/Sensitivity1.csv')
 
 colnames(Sens_model1) = c('Label', 
-                          'Base',# (Francis weights)', 
+                          'Base', 
                           'Harmonic weights',
-                          'Steepness at prior', 
-                          'Estimate M', 
+                          'Steepness = 0.40', 
                           'Old Maturity',
-                          'Old Fecundity')
+                          'Old Fecundity',
+                          '2008 Recruitment')
 
 # Create sensitivities table
 Sens_model1.table = xtable(Sens_model1, 
                            caption = c('Sensitivity of the base model'),
                            label = 'tab:Sensitivity1',
-                           digits = 2)
+                           digits = 3)
 
 
 # Add alignment - this uses centered aligment of .6 inches for all columns 2+,
@@ -1349,8 +1321,9 @@ Sens_model1 = read.csv('./txt_files/Sensitivity2.csv')
 
 colnames(Sens_model1) = c('Label', 
                           'Base',
-                          'Split Triennial',
-                          'Remove CPUE', 
+                          'Include Triennial',
+                          'Only Triennial',
+                          'Include CPUE', 
                           'Canadian Data', 
                           'WA Research Lengths', 
                           'OR Special Projects')
@@ -1467,11 +1440,11 @@ print(Forecast_mod1.table,
                                    'Year',  
                                    'Catch',	
                                    'Spawning Output',	
-                                   'Depletion', 
+                                   'Depletion (%)', 
                                    'Spawning Output',	
-                                   'Depletion',	
+                                   'Depletion (%)',	
                                    'Spawning Output',	
-                                   'Depletion')
+                                   'Depletion (%)')
       
        decision_mod1.table = xtable(decision_mod1, 
                                     caption = c(paste('Summary of 10-year 
@@ -1479,7 +1452,7 @@ print(Forecast_mod1.table,
                                              for alternate states of nature based on 
                                              an axis of uncertainty for the base model. 
                                              Columns range over low, mid, and high
-                                             states of nature, and rows range over different 
+                                             states of nature over natural mortality, and rows range over different 
                                              assumptions of catch levels. An entry of "--" 
                                              indicates that the stock is driven to very low 
                                              abundance under the particular scenario.', sep = '')), 
@@ -1495,13 +1468,13 @@ print(Forecast_mod1.table,
         addtorow$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
                                & \\multicolumn{2}{c}{\\textbf{States of nature}} 
                                & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low State of Nature} 
-                               & \\multicolumn{2}{c}{Base State of Nature} 
-                               &  \\multicolumn{2}{c}{High State of Nature} \\\\\n')
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.045} 
+                               & \\multicolumn{2}{c}{M = 0.054} 
+                               &  \\multicolumn{2}{c}{M = 0.06} \\\\\n')
         
     print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
           caption.placement = 'top', 
-          hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod1.table)), 
+          hline.after = c(-1, 0, 10, nrow(decision_mod1.table)), 
           scalebox = .85)
 
 

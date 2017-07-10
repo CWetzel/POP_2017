@@ -38,7 +38,7 @@ Harvest of `r spp` first exceeded 1 mt off the US west coast in `r Dat_start_mod
 ##Data and Assessment{-}
 This a new full assessment for `r spp`, which was last assessed in 2011.  In this assessment, aspects of the model including landings, data, and modelling assumptions were re-evaluated. The assessment was conducted using the length- and age-structured modeling software Stock Synthesis (version 3.30.03.05).  The coastwide population was modeled allowing separate growth and mortality parameters for each sex (a two-sex model) from `r Dat_start_mod1` to `r LastYR` and forecasted beyond `r LastYR`.
 
-All of the data sources for `r spp` have been re-evaluated for `r LastYR`, excluding the historical fishery catch-per-unit effort time-series. Changes of varying degrees have occurred in the data from those used in previous assessments. The landings history has been updated and extended back to `r Dat_start_mod1`. Harvest was negligible prior to that year. Survey data from the Alaska and Northwest Fisheries Science Centers have been used to construct indices of abundance analyzed using a spatio-temporal delta-model. Length, marginal age, or conditional age-at-length compositions were also created for each fishery-dependent and -independent data source.
+All of the data sources included in the base model for `r spp` have been re-evaluated for `r LastYR`. Changes of varying degrees have occurred in the data from those used in previous assessments. The landings history has been updated and extended back to `r Dat_start_mod1`. Harvest was negligible prior to that year. Survey data from the Alaska and Northwest Fisheries Science Centers have been used to construct indices of abundance analyzed using a spatio-temporal delta-model. Length, marginal age, or conditional age-at-length compositions were also created for each fishery-dependent and -independent data source.
 
 The definition of fishing fleets have changed from those in the 2011 assessment.  Three fishing fleets were specified within the model: 1) a combined bottom trawl, mid-water trawl, and fixed gear fleet, where only a small fraction of `r spp` were captured by fixed gear (termed the fishery fleet), 2) the historical foreign fleet, and 3) the at-sea hake fishery.  The fleet grouping were based on discarding practices.  The fishery fleet estimated a retention curve based on discarding data and known management restrictions.  However, very little if any discarding is assumed to have occurred by the foreign fleet and the catch reported by the at-sea hake fishery accounts for both discarded and landed fish and hence, no additional mortality was estimated for each of these fleets.  
 
@@ -103,7 +103,7 @@ Recruitment deviations were estimated for the entire time-series modeled. There 
 
 
 ##Exploitation status{-}
-The spawning output of `r spp` reached a low in `r low.ssb`.  Landings for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative depletion was possibly below the overfished level in the early 2000s, but has likely remained above that level otherwise, and currently is significantly greater than the 40% unfished spawning output target. Throughout the late 1960s and 1970s the exploitation rate and (1-SPR)/(1-SPR\textsubscript{50\%}) were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
+The spawning output of `r spp` reached a low in `r low.ssb`.  Landings for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative depletion was possibly below the target biomass level between the 1970s and 1990s, but has likely remained above the target otherwise, and currently is significantly greater than the 40% unfished spawning output target. Throughout the late 1960s and the early 1970s the exploitation rate and (1-SPR)/(1-SPR\textsubscript{50\%}) were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY EXPLOITATION AND******************* -->
@@ -138,7 +138,7 @@ Fishing has effects on both the age-structure of a population, as well as the ha
 
 ##Reference Points{-}
 
-This stock assessment estimates that `r spp` are `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the management target. Due to reduced landing and the large 2008 year-class, an increasing trend in spawning output was estimated in the base model. The estimated depletion in `r LastYR` is `r Depl_mod1` ($\sim$ 95% asymptotic interval: $\pm$ `r Depl_mod1_CI`), corresponding to an unfished spawning output of `r paste(Spawn_mod1, fecund_unit,sep=' ')` ($\sim$ 95% asymptotic interval: `r paste(Spawn_mod1_CI, fecund_unit, sep=' ')`).  Unfished age `r min_age` biomass was estimated to be `r Ref_pts_mod1[2,2]` mt in the base model. The target spawning output based on the biomass target ($SB_{40\%}$) is `r paste(Ref_pts_mod1[7,2], fecund_unit,sep=' ')`, with an equilibrium catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt. Estimated MSY catch is at a `r Ref_pts_mod1[20,2]` spawning output of `r paste(Ref_pts_mod1[17,2], fecund_unit,sep=' ')` (`r paste0(round(100 * as.numeric(Ref_pts_mod1[17,2])/as.numeric(Ref_pts_mod1[1,2]),1), "%")` depletion)
+This stock assessment estimates that the spawning output of `r spp` is `r ifelse(Deplete_mod1[nrow(Deplete_mod1),2]-MT>0,"above","below")` the management target. Due to reduced landing and the large 2008 year-class, an increasing trend in spawning output was estimated in the base model. The estimated depletion in `r LastYR` is `r Depl_mod1` ($\sim$ 95% asymptotic interval: $\pm$ `r Depl_mod1_CI`), corresponding to an unfished spawning output of `r paste(Spawn_mod1, fecund_unit,sep=' ')` ($\sim$ 95% asymptotic interval: `r paste(Spawn_mod1_CI, fecund_unit, sep=' ')`).  Unfished age `r min_age` biomass was estimated to be `r Ref_pts_mod1[2,2]` mt in the base model. The target spawning output based on the biomass target ($SB_{40\%}$) is `r paste(Ref_pts_mod1[7,2], fecund_unit,sep=' ')`, with an equilibrium catch of `r Ref_pts_mod1[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is `r Ref_pts_mod1[15,2]` mt. Estimated MSY catch is at a `r Ref_pts_mod1[20,2]` spawning output of `r paste(Ref_pts_mod1[17,2], fecund_unit,sep=' ')` (`r paste0(round(100 * as.numeric(Ref_pts_mod1[17,2])/as.numeric(Ref_pts_mod1[1,2]),1), "%")` depletion)
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY REFERENCE POINT TABLES************* -->
@@ -153,7 +153,7 @@ This stock assessment estimates that `r spp` are `r ifelse(Deplete_mod1[nrow(Dep
 
 
 ##Management Performance{-}
-Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the 1960s and 1970s, resulting in sharp declines in the spawning output. Exploitation rates subsequently declined to rates at or below the management target in the 1980s.  Management restrictions imposed in the 1990s further reduced exploitation rates. An overfished declaration for `r spp` resulted in very low exploitation rates since 2001 with Annual Catch Limits (ACLs) being set far below the Overfishing Limit (OFL) and Acceptable Biological Catch (ABC) values.
+Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the 1960s and 1970s, resulting in sharp declines in the spawning output. Exploitation rates subsequently declined to rates at or below the management target in the late 1970s.  Management restrictions imposed in the 1990s further reduced exploitation rates. An overfished declaration for `r spp` resulted in very low exploitation rates since 2001 with Annual Catch Limits (ACLs) being set far below the Overfishing Limit (OFL) and Acceptable Biological Catch (ABC) values.
 
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY MANAGEMENT PERFORMANCE TABLE******* --> 
@@ -175,7 +175,9 @@ TBD after STAR panel
 
 ##Decision Table{-}    
 
-TBD after STAR panel
+Model uncertainty has been described by the estimated uncertainty within the base model and by the sensitivities to different model structure. The estimated parameter that resulted in the most variability of predicted status and yield advice was natural mortality ($M$). The 12.5% and 87.5% quantiles based on spwaning output uncertainty were used to determine the low and high values for $M$ of 0.045 and 0.06.
+
+This assessment synthesizes many sources of data and estimates recruitment variability, thus it is classified as a Category 1 stock assessment. Therefore, the sigma for P* to determine the catch reduction to account for scientific uncertainty is 0.36, since the estimated sigma in the assessment is less than this for current spawning biomass.
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY OFL AND DECISION TABLES************ -->
 
@@ -196,7 +198,7 @@ TBD after STAR panel
 
     print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
           caption.placement = 'top', 
-          hline.after = c(-1, 0, 10, 20, 30, nrow(decision_mod1.table)), 
+          hline.after = c(-1, 0, 10, nrow(decision_mod1.table)), 
           scalebox = .85)
 ```
 

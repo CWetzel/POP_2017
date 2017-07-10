@@ -16,20 +16,20 @@
 # document
 rm(list=ls(all=TRUE))
 
-model.num = "12.0"
+model.num = "15.0"
 
 # What model file to use
 model.file = "model_2017"
 # Cannot change the name below without changing it throughout the Assessment_template file
-model.plots = "plots_mod1" #paste0("plot_",model.file)
+model.plots = "plots_mod1" 
 covar = TRUE
 
 # Give the names of the data and control files, for each model
 # Used in the SS_files_linebreaks.R
-mod1_dat = "2017pop.dat" #"data.ss"
+mod1_dat = "2017pop.dat" 
 
 # Control file names 
-mod1_ctrl = "2017pop.ctl" #"control.ss"
+mod1_ctrl = "2017pop.ctl" 
 
 
 #=====================================================================================
@@ -79,7 +79,7 @@ output.dir = file.path(getwd(), 'r4ss')
 # IF the r4SS subdirectories don't exist, create them
 # Once you have your own SS files and want to save these plots
 # Uncomment the /r4SS/ in the .gitignore file
-#dir.create(file.path(output.dir,'plots_mod1'), showWarnings = FALSE)
+
 dir.create(file.path(output.dir,model.plots), showWarnings = FALSE)
 
 
@@ -149,9 +149,9 @@ dev.off()
 
 # index fits
 pngfun('POP_index_fits.png',h=8.5)
-par(mfrow=c(3,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
-for(a in 1:6){
-  f = c(1, 4:8)[a]
+par(mfrow=c(2,2),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+for(a in 1:4){
+  f = c(4,6:8)[a]
   SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
 }
 mtext(side=1,line=1,outer=TRUE,'Year')
@@ -159,15 +159,15 @@ mtext(side=2,line=1,outer=TRUE,'Index')
 dev.off()
 
 # index fits
-pngfun('POP_index_fits_alt.png',h=5, w=6)
-par(mfrow=c(2,3),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
-for(a in 1:6){
-  f = c(1, 4:8)[a]
-  SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
-}
-mtext(side=1,line=1,outer=TRUE,'Year')
-mtext(side=2,line=1,outer=TRUE,'Index')
-dev.off()
+#pngfun('POP_index_fits_alt.png',h=5, w=6)
+#par(mfrow=c(2,3),mar=c(2,2,2,1),oma=c(2,2,0,0)+.1)
+#for(a in 1:4){
+#  f = c(1, 4:8)[a]
+#  SSplotIndices(mod1, fleets=f, subplot=2, fleetnames=fleets)
+#}
+#mtext(side=1,line=1,outer=TRUE,'Year')
+#mtext(side=2,line=1,outer=TRUE,'Index')
+#dev.off()
 
 # discard fits
 pngfun('POP_discard_fits.png')
@@ -206,16 +206,27 @@ axis(2)
 box()
 dev.off()
 
-test <- SSplotSelex(mod1, fleets=1:3, fleetnames=fleets, subplot=1)
+test <- SSplotSelex(mod1, years = c(1999, 2016), fleets=1:3, fleetnames=fleets, subplot=1)
 test$infotable$col <- rich.colors.short(5)[c(1:3)]
-test2 <- SSplotSelex(mod1, fleets=4:8, fleetnames=fleets, subplot=1)
+test2 <- SSplotSelex(mod1, fleets=c(4, 6:8), fleetnames=fleets, subplot=1)
 
-pngfun("POP_selectivity.png")
-par(mfrow=c(2,1),mar=c(2,4,3,1))
-SSplotSelex(mod1,fleets=1:3,infotable=test$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
+test <- SSplotSelex(mod1, years = c(1999, 2016), fleets=c(1,3), fleetnames=fleets, subplot=1)
+test$infotable$col <- rich.colors.short(5)[c(1,1,2,2)]
+
+test2 <- SSplotSelex(mod1, fleets=2, fleetnames=fleets, subplot=1)
+test3 <- SSplotSelex(mod1, fleets=c(4, 8), fleetnames=fleets, subplot=1)
+test4 <- SSplotSelex(mod1, fleets=c(6, 7), fleetnames=fleets, subplot=1)
+
+pngfun("POP_selectivity.png",w=5,h=7)
+par(mfrow=c(4,1),mar=c(2,4,3,1))
+SSplotSelex(mod1, years = c(1999, 2016),fleets = c(1,3), subplot=1,legendloc='topleft',showmain=FALSE)
 grid()
-par(mar=c(4,4,1,1))
-SSplotSelex(mod1,fleets=4:8,infotable=test2$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
+SSplotSelex(mod1, fleets=2, subplot=1, legendloc='topleft',showmain=FALSE)
+legend("topleft", col = "blue", lty = 2, pch = 16, legend = "At-sea hake", bty = 'n')
+grid()
+SSplotSelex(mod1,fleets=c(6:7),infotable=test4$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
+grid()
+SSplotSelex(mod1,fleets=c(4,8),infotable=test3$infotable, subplot=1,legendloc='topleft',showmain=FALSE)
 grid()
 dev.off()
 
@@ -225,18 +236,19 @@ ret = ret[ret$Factor == "Ret", ]
 col.vec = c("red", "blue", "orange2", "green", "purple", "darkgrey")
 
 pngfun("POP_retention.png")
+par(mfrow=c(1,1),mar=c(2,4,3,1))
 plot(5.5:50.5, ret[1, 6:dim(ret)[2]], col = col.vec[1], type = 'l', ylab = "Retention", xlab = "Length (cm)", lwd = 2)
-points(5.5:50.5, ret[1, 6:dim(ret)[2]], pch = 1, col = col.vec[1])
+points(5.5:50.5,ret[1, 6:dim(ret)[2]], pch = 1, col = col.vec[1])
 lines(5.5:50.5, ret[5, 6:dim(ret)[2]], col = col.vec[2], lty = 1, lwd = 2)
-points(5.5:50.5, ret[5, 6:dim(ret)[2]], pch = 2, col = col.vec[2])
-lines(5.5:50.5, ret[10, 6:dim(ret)[2]], col = col.vec[3], lty = 1, lwd = 2)
-points(5.5:50.5, ret[10, 6:dim(ret)[2]], pch = 3, col = col.vec[3])
-lines(5.5:50.5, ret[14, 6:dim(ret)[2]], col = col.vec[4], lty = 1, lwd = 2)
-points(5.5:50.5, ret[14, 6:dim(ret)[2]], pch = 4, col = col.vec[4])
-lines(5.5:50.5, ret[15, 6:dim(ret)[2]], col = col.vec[5], lty = 1, lwd = 2)
-points(5.5:50.5, ret[15, 6:dim(ret)[2]], pch = 5, col = col.vec[5])
-lines(5.5:50.5, ret[20, 6:dim(ret)[2]], col = col.vec[6], lty = 1, lwd = 2)
-points(5.5:50.5, ret[20, 6:dim(ret)[2]], pch = 6, col = col.vec[6])
+points(5.5:50.5,ret[5, 6:dim(ret)[2]], pch = 2, col = col.vec[2])
+lines(5.5:50.5, ret[14, 6:dim(ret)[2]], col = col.vec[3], lty = 1, lwd = 2)
+points(5.5:50.5,ret[14, 6:dim(ret)[2]], pch = 3, col = col.vec[3])
+lines(5.5:50.5, ret[18, 6:dim(ret)[2]], col = col.vec[4], lty = 1, lwd = 2)
+points(5.5:50.5,ret[18, 6:dim(ret)[2]], pch = 4, col = col.vec[4])
+lines(5.5:50.5, ret[20, 6:dim(ret)[2]], col = col.vec[5], lty = 1, lwd = 2)
+points(5.5:50.5,ret[20, 6:dim(ret)[2]], pch = 5, col = col.vec[5])
+lines(5.5:50.5, ret[25, 6:dim(ret)[2]], col = col.vec[6], lty = 1, lwd = 2)
+points(5.5:50.5,ret[25, 6:dim(ret)[2]], pch = 6, col = col.vec[6])
 legend ("topleft", legend = c("1918-1991", "1992-2001", "2002-2007", "2008", "2009-2010", "2011-2017"),
         col = col.vec, pch = 1:6,lty = 1, lwd = 2, bty = 'n')
 grid()
@@ -295,6 +307,8 @@ figures = c(
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Comparison.png",
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data_4.png",
+            "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data_2.png",
             "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png",
             paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel_h.png"),
             paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
