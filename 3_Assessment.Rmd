@@ -62,7 +62,7 @@ One extra variability parameter was estimated and added to the input variance fo
 The base assessment model was weighted using the "Francis method", which was based on equation TA1.8 in Francis [-@francis_data_2011]. This formulation looks at the mean length or age and the variance of the mean to determine if across years, the variability is explained by the model. If the variability around the mean does not encompass the model predictions, then that data source should be down-weighted. This method accounts for correlation in the data (i.e., the multinomial distribution) as opposed to the McAllister and Ianelli [-@mcallister_bayesian_1997] method of looking at the difference between individual observations and predictions.
 
 
-###Estimated And Fixed Parameters
+###Estimated and Fixed Parameters
 
 There were 163 estimated parameters in the base model. These included one parameter for $R_0$, 8 parameters for growth, 1 parameters for extra variability for the NWFSC shelf-slope survey indix, 24 parameters for selectivity, retention, and time blocking of the fleets and the surveys, 117 recruitment deviations, and 12 forecast recruitment deviations (Table \ref{tab:model_params}).
 
@@ -95,7 +95,7 @@ Finally, multiple models were investigated where steepness was either estimated,
 Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. This was repeated 100 times and a better minimum was not found (Table \ref{tab:jitter}). The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained above and likelihood profiles, we are confident that the base model as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian.  
 
 
-##Response To The Current STAR Panel Requests
+##Response to the Current STAR Panel Requests
 TBD after the STAR panel.
 <!--\begin{description}[style=unboxed]
 

@@ -102,7 +102,7 @@ Recruitment deviations were estimated for the entire time-series modeled. There 
 \FloatBarrier
 
 
-##Exploitation status{-}
+##Exploitation Status{-}
 The spawning output of `r spp` reached a low in `r low.ssb`.  Landings for `r spp` decreased significantly in 2000 compared to previous years. The estimated relative depletion was possibly below the target biomass level between the 1970s and 1990s, but has likely remained above the target otherwise, and currently is significantly greater than the 40% unfished spawning output target. Throughout the late 1960s and the early 1970s the exploitation rate and (1-SPR)/(1-SPR\textsubscript{50\%}) were mostly above target levels. Recent exploitation rates on `r spp` were predicted to be significantly below target levels.
 
 
@@ -168,7 +168,7 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 \FloatBarrier
 
 
-##Unresolved Problems And Major Uncertainties{-}
+##Unresolved Problems and Major Uncertainties{-}
 
 TBD after STAR panel
 
