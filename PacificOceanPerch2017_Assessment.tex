@@ -1681,7 +1681,7 @@ assessment using a spatial-temporal delta generalized linear mixed model
 which did not incorporate spatial effects. This assessment opted to not
 include the fishery CPUE and the Triennial shelf index and composition
 data based upon discussions during the STAR panel. The data used to
-create the CPUE index was not available for reanalysis and hence was
+create the CPUE index were not available for reanalysis and hence was
 excluded from this assessment due to questions regarding this index that
 could not be addressed. In regards to the Triennial survey, Pacific
 ocean perch is considered a slope species off the US west coast and this
@@ -1781,13 +1781,15 @@ on the length-composition data. Changes in retention curves were
 estimated for the fishery fleet.
 
 Time blocks for the fishery fleet are provided in Table
-\ref{tab:Model_setup}. Fishery retention has changed over the modeled
-period due to management changes. The time block on the retention curves
-for the fishery were set from 1918-1991, 1992-2001, 2002-2007, 2008,
-2009-2010, 2011-2016 based on available discarding data and changes in
-trip limits that likely resulted in changes to discarding patterns of
-Pacific ocean perch. No discarding was assumed in the at-sea hake and
-the foreign fisheries.
+\ref{tab:Model_setup}. Fishery selectivity and retention has changed
+over the modeled period due to management changes. The time block for
+fishery selectivity was set from 1918-1999 and 2000-2017 based on
+changes in selectivity arising from the overfished deceleration. The
+time blocks on the retention curves for the fishery were set from
+1918-1991, 1992-2001, 2002-2007, 2008, 2009-2010, 2011-2016 based on
+available discarding data and changes in trip limits that likely
+resulted in changes to discarding patterns of Pacific ocean perch. No
+discarding was assumed in the at-sea hake and the foreign fisheries.
 
 The following distributions were assumed for data fitting: survey
 indices were lognormal and total discards were lognormal.
@@ -1823,7 +1825,7 @@ prior is a beta distribution with \(\mu\)=0.72 and \(\sigma\)=0.15. The
 previous assessment estimated and fixed steepness equal to 0.40. The
 current data does not contain information regarding steepness. This
 change in perception is likely due to the observation of large
-recruitment events in this assessment and varying model specificiatons
+recruitment events in this assessment and varying model specifications
 between the 2011 and the current model.
 
 \subsubsection{Data Weighting}\label{data-weighting}
@@ -1869,25 +1871,27 @@ Parameters}\label{estimated-and-fixed-parameters}
 
 There were 163 estimated parameters in the base model. These included
 one parameter for \(R_0\), 8 parameters for growth, 1 parameters for
-extra variability for the NWFSC shelf-slope survey indix, 24 parameters
+extra variability for the NWFSC shelf-slope survey index, 24 parameters
 for selectivity, retention, and time blocking of the fleets and the
 surveys, 117 recruitment deviations, and 12 forecast recruitment
 deviations (Table \ref{tab:model_params}).
 
 Fixed parameters in the model were as follows. Steepness was fixed at
-0.72. A sensitivity analysis and a likelihood profile were performed for
-steepness. Natural mortality was fixed at 0.054 for females and males,
-which is the median of the prior. The standard deviation of recruitment
-deviates was fixed at 0.70. Maturity-at-length was fixed as described in
-Section \ref{sex-ratio-maturation-and-fecundity}. Length-weight
-parameters were fixed at estimates using all length-weight observations
-(Figure \ref{fig:Wt_len_pred}).
+0.72, the median of the prior. A sensitivity analysis and a likelihood
+profile were performed for steepness. Natural mortality was fixed at
+0.054 for females and males, which is the median of the prior. The
+standard deviation of recruitment deviates was fixed at 0.70.
+Maturity-at-length was fixed as described in Section
+\ref{sex-ratio-maturation-and-fecundity}. Length-weight parameters were
+fixed at estimates using all length-weight observations (Figure
+\ref{fig:Wt_len_pred}).
 
 Dome-shaped selectivity was explored for all fleets within the model.
 Older Pacific ocean perch are often found in deeper waters and may move
 into areas that limit their availability to fishing gear, especially
-trawl gear. The final base model assumed asymptotic selectivity for the
-at-sea hake fishery, and all surveys.
+trawl gear. The final base model estimated dome-shaped selectivity for
+only the fishery and the selectiivties for the the at-sea hake fishery
+and all surveys were estimated asymptotic.
 
 \subsection{Model Selection and
 Evaluation}\label{model-selection-and-evaluation}
@@ -1927,12 +1931,16 @@ discard rates added to the 2011 assessment produced insignificant
 differences in the relative scale of the population although the updated
 historical removals resulted in an increase in the estimate of unfished
 spawning output. Updating the survey indices produced small differences
-in the relative scale of the population. Adding age and length data each
-resulted in less of a population decline from the 1970s to pre-2000,
-resulting in an increase in the estimated 2017 final stock status.
-However, the addition of new data resulted in an early pattern within
-recruitment, indicating that the assumptions within the previous model
-may not represent the best fit to the current data.
+in the relative scale of the population (Figure \ref{fig:data_update}).
+Adding age and length data each resulted in less of a population decline
+from the 1970s to pre-2000, resulting in an increase in the estimated
+2017 final stock status. However, the addition of new data resulted in
+an early pattern within recruitment, indicating that the assumptions
+within the previous model may not represent the best fit to the current
+data. The 2011 assessment have several differing modeling assumptions
+which explain the results between updating the 2011 model and this
+results from this assessment. Two major difference between the models
+are assumptions regarding steepness and natural mortality.
 
 This assessment estimated discards in the model, so time was spent
 investigating time blocks for changes in selectivity and retention to
@@ -2021,7 +2029,7 @@ estimated selectivities for all fleets within the model are shown in
 Figure \ref{fig:selex}. The fishery selectivity was estimated to be dome
 shaped, reaching maximum selectivity for fish between 35 and 40 cm. An
 shift in selectivity for the final asymptotic selectivity was estimated
-for the fishery for prior to the overfished decleration and post
+for the fishery for prior to the overfished deceleration and post
 (1918-1999 and 2000-2016). The at-sea hake fishery was estimated to have
 little selectivity for smaller Pacific ocean perch reaching full
 selectivity at the largest sizes. The foreign fleet for which only catch
@@ -2258,11 +2266,11 @@ A number of sensitivity analyses were conducted, including:
   
   \item Fecundity relationship used in the previous assessment.
   
-  \item Remove the influence of the large 2008 year-class by setting the 2008 recruitment deviation to zero (estimated straight from the stock recruitment curve)
+  \item Remove the influence of the large 2008 year-class by setting the 2008 recruitment deviation to zero (estimated straight from the stock recruitment curve for that year)
   
   \item Include Triennial shelf survey (1980-2004) and composition data.
   
-  \item Remove all other surveys and associatted length and age data, except for the Triennial shelf survey.  Fishery length and ages were retained.  
+  \item Remove all other surveys and associated length and age data, except for the Triennial shelf survey.  Fishery length and ages were retained.  
   
   \item Include the historical commercial CPUE index.
   
@@ -2284,22 +2292,22 @@ The sensitivities that explored steepness and using only Triennial
 survey data exhibited the largest changes in estimated stock status
 relative to the base model. Fixing steepness at the 2011 value (h =
 0.40) resulted in the final stock status being above the management
-target but having historically declining below the target. Using only
-the Triennial shelf survey data resulted in a reduction in stock size
-and status relative to the base model. The model estimated extended
-positive recruitments in the early period of the model in order to
-create an population age-structure that was consistent with the
-composition data resulting in an increase in biomass prior to the start
-of the foreign fishing fleet, indicating that potential model
-misspecification in the absense of the other survey data.
+target but having historically declined below the target. Using only the
+Triennial shelf survey data resulted in a reduction in stock size and
+status relative to the base model. The model estimated extended positive
+recruitments in the early period of the model in order to create an
+population age-structure that was consistent with the composition data
+resulting in an increase in biomass prior to the start of the foreign
+fishing fleet, indicating that potential model misspecification in the
+absence of the other survey data.
 
-Weighting the data according to the harmonic means resulted in a largest
+Weighting the data according to the harmonic means resulted in a
 decrease in the estimated stock status relative to the base model with
 the stock being estimated at 82\% of unfished spawning output.
 
 The sensitivity that removed the large 2008 year-class resulted in a
 large change in estimated stock status relative to the base model.
-Assuming a recruitment even staight from the stock recruitment curve
+Assuming a recruitment straight from the stock recruitment curve
 resulted in an estimated stock status of 75\%.
 
 Including additional data from either Canada, Washington research
@@ -4065,6 +4073,17 @@ previous assessment for Pacific ocean perch. \label{fig:Catch_Compare}}
 \caption{Comparison of model bridging estimates from Stock Synthesis
 version 3.30 and 3.24 for Pacific ocean perch for the 2011 assessment.
 \label{fig:bridge}}
+\end{figure}
+
+\FloatBarrier 
+
+\begin{figure}
+\centering
+\includegraphics{Figures/Data_Bratio_uncertainty.png}
+\caption{Each of the data sets used in the current assessment was added
+to the 2011 model without updating model assumptions. Each data source
+was included in an additive fashion where the final model ``+ Age'' is
+the 2011 model with all data sources updated. \label{fig:data_update}}
 \end{figure}
 
 \FloatBarrier 

@@ -213,6 +213,10 @@
 
 \FloatBarrier 
 
+![Each of the data sets used in the current assessment was added to the 2011 model without updating model assumptions. Each data source was included in an additive fashion where the final model "+ Age" is the 2011 model with all data sources updated. \label{fig:data_update}](Figures/Data_Bratio_uncertainty.png)
+
+\FloatBarrier 
+
 <!-- ====================================================================== -->
 <!-- *********************BASE MODEL FIGURES******************************* -->
 <!-- ====================================================================== -->
