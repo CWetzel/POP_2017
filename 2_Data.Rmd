@@ -12,7 +12,7 @@ Research surveys have been used to provide fishery-independent information about
 
 Age estimates for `r spp` prior to the 1980s were made via surface ageing of otoliths, which misses the very tight annuli at the edge of the otolith once the fish reaches near maximum size. Ages are highly biased by age 14, and maximum age was estimated to be in the 20s, which lead to an overestimate of the natural mortality rate and the productivity of the stock. Using break and burn methods, `r spp` have been aged to over 100 years. Otoliths from fishery-independent and -dependent sources that were only surface age reads were excluded from this assessment due to the bias associated with these age reads. 
 
-###Northwest Fisheries Science Center (NWFSC) shelf-slope survey
+###Northwest Fisheries Science Center (NWFSC) Shelf-Slope Survey
 
 The NWFSC shelf-slope survey is based on a random-grid design; covering the coastal waters from a depth of 55 m to 1,280 m [@bradburn_2003_2011]. This design uses four chartered industry vessels in most years, assigned to a roughly equal number of randomly selected grid cells. The survey, which has been conducted from late-May to early-October each year, is divided into two 2-vessel passes off the coast, which are executed from north to south. This design therefore incorporates both vessel-to-vessel differences in catchability as well as variance associated with selecting a relatively small number (approximately 700) of cells from a very large population of possible cells (greater than 11,000) distributed from the Mexican to the Canadian border. 
 
@@ -24,7 +24,7 @@ Length compositions were expanded based upon the stratification and the age data
 
 The input sample sizes for length and marginal age-composition data for all fishery-independent surveys were calculated according to Stewart and Hamel [-@stewart_bootstrapping_2014], which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43*$N_{\text{tow}}$.  The effective sample size of conditional-age-at-length data was set at the number of fish at each length by sex and by year.
 
-###Northwest Fisheries Science Center (NWFSC) slope survey  
+###Northwest Fisheries Science Center (NWFSC) Slope Survey  
 
 The NWFSC slope survey covered waters throughout the summer from 183 m to 1280 m north of $34^\circ 30^\prime$ S, which is near Point Conception, from 1999 and 2002.  Tows conducted between the depths of 183 and 549 m were used to create an index of abundance using a bayesian delta-GLMM and the VAST delta-GLMM models.  The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The stratification and modeling configuration are provided in Table \ref{tab:strata}.  Based on the diagnostics of the bayesian delta-GLMM, which does not account for spatial effects, a gamma distribution allowing for additional probability of extreme catch events with year-vessel random effects was selected as the final model.  The Q-Q plot does show a minimal departure from the assumed distribution (Figure \ref{fig:nw_slope_qq}), but was determined to be acceptable based on the alternative model distributions.  The trend of abundance across the four surveys years was generally flat with high estimated annual variance.  Sensitivities were done evaluating the use of this index within the base model.  
 
@@ -33,7 +33,7 @@ Length and age compositions were available for 2001 and 2002 and were expanded b
 The input sample sizes for length and marginal age-composition data were calculated according to Stewart and Hamel [-@stewart_bootstrapping_2014] described in Section \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 
 
-###Alaska Fisheries Science Center (AFSC) slope survey 
+###Alaska Fisheries Science Center (AFSC) Slope Survey 
 
 The AFSC slope survey operated during autumn (October-November) aboard the R/V Miller Freeman. Partial survey coverage of the US west coast occurred during 1988-96 and complete coverage (north of $34^\circ 30^\prime$ S) during 1997, 1999, 2000, and 2001. Only the four years of consistent and complete surveys plus 1996, which surveyed north of $43^\circ$ N latitude to the US-Canada border, were used in this assessment. The number of tows with length data ranged from 19 in 2000 to 48 in 1996 (Table \ref{tab:AFSC_Lengths}).  Because a large number of positive tows occurred in 1996, it was decided to include that year, which surveyed from $43^\circ$ N latitude to the US-Canada border. Therefore, only tows from $43^\circ$ N latitude to the US-Canada border were used.
 
@@ -44,7 +44,7 @@ Length compositions were available for each year the survey was conducted.  No a
 The input sample sizes for length and marginal age composition data were calculated according to Stewart and Hamel [-@stewart_bootstrapping_2014] described in Section \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 
 
-###Pacific ocean perch Survey
+###Pacific Ocean Perch Survey
 
 A survey designed to sample `r spp` was conducted in 1979 and again in 1985 (for a detailed description see Ianelli et al. [-@ianelli_status_1992]).  An index of abundance was estimated based on the data using the VAST delta-GLMM model.  The estimated index of abundance is shown in Table \ref{tab:Index_Summary}.  The stratification and modeling configuration are provided in Table \ref{tab:strata}.  The lognormal distribution with random strata-year had the lowest AIC and was chosen as the final model.  The Q-Q plot does not show any departures from the assumed distribution (Figure \ref{fig:pop_qq}).  The index shows a clear decline in abundance between the two survey years. 
 
@@ -52,7 +52,7 @@ Length and age compositions were expanded based on the survey stratification. Th
 
 The input sample sizes for length and marginal age-composition data were calculated according to Stewart and Hamel [-@stewart_bootstrapping_2014] described in Section \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 
-###Fishery Independent Data Not Included on the Base Model
+###Fishery Independent Data Not Included in the Base Model
 
 ####Triennial Shelf Survey
 The Triennial shelf survey was first conducted by the AFSC in 1977 and spanned the time-frame from 1977-2004. The survey's design and sampling methods are most recently described in Weinberg et al. [-@weinberg_estimation_2002]. Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth range were initiated. The survey design has changed slightly over the period of time. In general, all of the surveys were conducted in the mid-summer through early fall: the 1977 survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July.
@@ -100,7 +100,7 @@ Data on discards of `r spp` are available from two different data sources.  The 
 The second source is from the West Coast Groundfish Observer Program (WCGOP).  This program is part of the NWFSC and has been recording discard observations since 2003. Table \ref{tab:Discard} shows the discard ratios (discarded/(discarded + retained)) of `r spp` from WCGOP.  Since 2011, when the trawl rationalization program was implemented, observer coverage rates increased to nearly 100% for all the limited entry trawl vessels in the program and discard rates declined compared to pre-2011 rates.  Discard rates were obtained for both the catch-share and the non-catch share sector for `r spp`.  A single discard rate was calculated by weighting discard rates based on the commercial landings by each sector.  Coefficient of variations were calculated for the non-catch shares sector and pre-catch share years by bootstrapping vessels within ports because the observer program randomly chooses vessels within ports to be observed. Post-ITQ all catch-share vessels have 100% observer coverage and discarding is assumed to be known.  Discard length composition for the trawl fleet varied by year, with larger fish being discarded prior to 2011 (Figure \ref{fig:WCGOP_discard}).
  
 
-###Fishery Length And Age Data
+###Fishery Length and Age Data
 Biological data from commercial fisheries that caught `r spp` were extracted from PacFIN on May 4, 2017.  Lengths taken during port sampling in Oregon and Washington were used to calculate length and age compositions.  There were no biological data from California for `r spp` available within PacFIN.  The overwhelming majority of these data were collected from the mid-water and bottom trawl gear, but additional biological data were collected from non-trawl gear which was grouped together with trawl gear data. Tables \ref{tab:Comm_Lengths} and \ref{tab:Comm_Ages} show the number of trips and fish sampled, along with the calculated sample sizes.  Length and age data were acquired at the trip level and then aggregated to the state level.  The input sample sizes were calculated via the Stewart method (Ian Stewart, personal communication, IPHC):
 
 \begin{centering}
@@ -115,7 +115,7 @@ The fishery fleet observed `r spp` that were generally greater than 30 cm across
 
 ###Fishery Data Not Included in the Base Model
 
-####Historical Commercial Catch-per-unit effort
+####Historical Commercial Catch-Per-Unit Effort
 
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas from Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggests that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time.  Unfortunately, the original data and the analysis methods used to create this CPUE have been lost to time precluding a re-analysis of these data.  Due to the inability to examine the assumptions made during the original analysis or the data used this time-series has been excluded from the base model.  Information regarding the fishery CPUE are available in Appendix \ref{appendix-c.-description-of-cpue-and-triennial-data}.
 
@@ -170,7 +170,7 @@ Males $L_{\infty}$ = 39.03; $k$ = 0.212; $t_0$ = -1.02
 These values were used as starting parameter values within the base model prior to estimating each parameter for male and female `r spp`.
 
 
-###Ageing Precision And Bias
+###Ageing Precision and Bias
 
 Uncertainty surrounding the ageing error process for `r spp` was incorporated by estimating ageing error by age. Age-composition data used in the model were from break-and-burn otolith reads aged by the Cooperative Ageing Project (CAP) in Newport, Oregon. Break-and-burn double reads of more than 1500 otoliths were provided by the CAP lab.  An ageing-error estimate was made based on these double reads using a computational tool specifically developed for estimating ageing error [@punt_quantifying_2008] and using release 1.0.0 of the R package nwfscAgeingError [@thorson_nwfscageingerror:_2012] for input and output diagnostics, publicly available at: https://github.com/nwfsc-assess/nwfscAgeingError. A non-linear standard error was estimated by age, where there is more variability in the age of older fish (Table \ref{tab:Age_Error} and Figure \ref{fig:Age_Error}). 
 
@@ -178,7 +178,7 @@ Uncertainty surrounding the ageing error process for `r spp` was incorporated by
 <!-- ********************************************************************** -->
 <!-- ***********HISTORY AND CURRENT ASSESSMENT***************************** -->
 <!-- ********************************************************************** -->
-##History Of Modeling Approaches Used For This Stock
+##History of Modeling Approaches Used for This Stock
 
 ###Previous Assessments
 The status of `r spp` off British Columbia, Washington, and Oregon have been periodically assessed since the intensive exploitation that occurred in the 1960s.  Concerns regarding `r spp` status off the coast the US west coast were raised in the late 1970s [@gunderson_results_1978; @gunderson_updated_1981] and in 1981 the PFMC adopted a 20-year plan to rebuild the stock. 

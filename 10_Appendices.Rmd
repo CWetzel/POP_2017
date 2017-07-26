@@ -57,7 +57,7 @@ for (a in 1:length(plot.vec)){
 
 \FloatBarrier
 
-#Appendix C. Description of CPUE and Triennial data
+#Appendix C. Description of CPUE and Triennial Data
 
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery were combined for the INPFC Vancouver and Columbia areas Gunderson [-@gunderson_population_1977]).  Although these data reflect catch rates for the US fleet, the highest catch rates coincided with the beginning of removals by the foreign fleet.  This suggests that, barring unaccounted changes in fishing efficiency during this period, the level of abundance was high at that time. The estimated index of abundance is shown in Table \ref{tab:CPUE_Summary} and Figure \ref{fig:Excluded_Indices}.
 
