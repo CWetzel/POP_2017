@@ -16,7 +16,7 @@
 # document
 rm(list=ls(all=TRUE))
 
-model.num = "12.0"
+model.num = "15.0"
 
 # What model file to use
 model.file = "model_2017"
