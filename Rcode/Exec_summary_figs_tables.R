@@ -553,7 +553,7 @@ align(mngmnt.table) = c('l',
       colnames(Fore_Table) = c('Year','OFL', "ACL", paste0('Spawning Output (',fecund_unit,')'), "Relative Depletion") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative depletion.  The ACL values for 2017 and 2018 
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative depletion based on ACL removals.  The ACL values for 2017 and 2018 
                                                are set at the harvest limits currently set by management.'),
                   label = 'tab:OFL_projection')
       
@@ -592,9 +592,7 @@ align(mngmnt.table) = c('l',
                                              an axis of uncertainty for the base model. 
                                              Columns range over low, mid, and high
                                              states of nature, and rows range over different 
-                                             assumptions of catch levels. An entry of "--" 
-                                             indicates that the stock is driven to very low 
-                                             abundance under the particular scenario.', sep = '')), 
+                                             assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
                                      label='tab:Decision_table_mod1')
       
     # Assign alignment and add the header columns
