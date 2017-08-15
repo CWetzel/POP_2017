@@ -96,10 +96,10 @@ link-citations: yes
 <!--*****SS APPENDICES INCLUDED AS A CHILD DOCUMENT TO REMOVE CLUTTER****** -->
 <!-- ====================================================================== -->
 
-<!-- Uncomment the following lines to include the appendices - exlude to save runtime -->
+<!-- Uncomment the following lines to include the appendices - exlude to save runtime
 ```{r child='10_Appendices.Rmd'}
 ``` 
-
+ -->
 <!-- ====================================================================== -->
 <!-- **********REFERENCES - WILL APPEAR AFTER APPENDICES******************* -->
 <!-- ====================================================================== -->

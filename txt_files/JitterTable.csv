@@ -1,6 +1,5 @@
 Status,Base Model
-Returned to base case,33
-Found local minimum,45
+Returned to base case,45
+Found local minimum,5
 Found better solution,0
-Error in likelihood,22
-Total,100
+Total,50

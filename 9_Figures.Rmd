@@ -34,7 +34,7 @@
 <!-- *************************  FIGURE 2  ********************************* -->
 <!-- ********************************************************************** -->
   
-![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](Figures/data_plot.png)
+![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
 
 \FloatBarrier
 
@@ -232,6 +232,10 @@
 
 \FloatBarrier 
 
+![Comparison between the estimated length-at-age for male and female (solid lines) for `r spp` with estimated CV to the external estimates based on the data (dashed lines). \label{fig:length_compare}](Figures/Growth_Estimate_Comparison.png)
+
+\FloatBarrier 
+
 <!-- ********************************************************************** -->
 <!-- *******************Selectivity & Retention**************************** --> 
 <!-- ********************************************************************** -->
@@ -278,7 +282,7 @@
 
 \FloatBarrier 
 
-![Estimated total discards for `r spp`. \label{fig:total_discard}](r4ss/plots_mod1/catch7 discards stacked plot (depends on multiple fleets).png)
+![Estimated total discards for `r spp`.  Estimated discard contributes less than 3.5 percent of the total morality across all years from the fishery. \label{fig:total_discard}](r4ss/plots_mod1/catch7 discards stacked plot (depends on multiple fleets).png)
 
   
 <!-- ********************************************************************** -->
@@ -290,28 +294,28 @@
 ```{r, results='asis'}
 
 #Discard
-cat('\n![', LenComp_mod1[2,caption_col], ' \\label{fig:discard_len_pearson}](', LenComp_mod1[2, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[2,caption_col], ' \\label{fig:discard_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[2, path_col], ')\n', sep='')
 
 #Fishery
-cat('\n![', LenComp_mod1[9,caption_col], ' \\label{fig:fishery_len_pearson}](', LenComp_mod1[9, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[9,caption_col], ' \\label{fig:fishery_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[9, path_col], ')\n', sep='')
 
 #ASHOP
-cat('\n![', LenComp_mod1[13,caption_col], ' \\label{fig:ashop_len_pearson}](', LenComp_mod1[13, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[13,caption_col], ' \\label{fig:ashop_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[13, path_col], ')\n', sep='')
 
 #POP
-cat('\n![', LenComp_mod1[17,caption_col], ' \\label{fig:pop_len_pearson}](', LenComp_mod1[17, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[17,caption_col], ' \\label{fig:pop_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[17, path_col], ')\n', sep='')
 
 #Triennial
-#cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:tri_len_pearson}](', LenComp_mod1[21, path_col], ')\n', sep='')
+#cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:tri_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[21, path_col], ')\n', sep='')
 
 #AFSC
-cat('\n![', LenComp_mod1[25,caption_col], ' \\label{fig:afsc_len_pearson}](', LenComp_mod1[25, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[21,caption_col], ' \\label{fig:afsc_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[21, path_col], ')\n', sep='')
 
 #NWFSC
-cat('\n![', LenComp_mod1[29,caption_col], ' \\label{fig:nwfsc_len_pearson}](', LenComp_mod1[29, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[25,caption_col], ' \\label{fig:nwfsc_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[25, path_col], ')\n', sep='')
 
 #NWFSC Combo
-cat('\n![', LenComp_mod1[33,caption_col], ' \\label{fig:nwfsc_combo_len_pearson}](', LenComp_mod1[33, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[29,caption_col], ' \\label{fig:nwfsc_combo_len_pearson}](r4ss/plots_mod1/', LenComp_mod1[29, path_col], ')\n', sep='')
 
 ```
 
@@ -321,25 +325,25 @@ cat('\n![', LenComp_mod1[33,caption_col], ' \\label{fig:nwfsc_combo_len_pearson}
 ```{r, results='asis'}
 
 #Fishery
-cat('\n![', LenComp_mod1[11,caption_col], ' \\label{fig:weighting_len_fishery}](', LenComp_mod1[11, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[11,caption_col], ' \\label{fig:weighting_len_fishery}](r4ss/plots_mod1/', LenComp_mod1[11, path_col], ')\n', sep='')
 
 #ASHOP
-cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_len_ashop}](', LenComp_mod1[15, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[15,caption_col], ' \\label{fig:weighting_len_ashop}](r4ss/plots_mod1/', LenComp_mod1[15, path_col], ')\n', sep='')
 
 #POP
-cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_len_pop}](', LenComp_mod1[19, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[19,caption_col], ' \\label{fig:weighting_len_pop}](r4ss/plots_mod1/', LenComp_mod1[19, path_col], ')\n', sep='')
 
 #Triennial
-#cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_triennial}](', LenComp_mod1[23, path_col], ')\n', sep='')
+#cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_triennial}](r4ss/plots_mod1/', LenComp_mod1[23, path_col], ')\n', sep='')
 
 #AFSC
-cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_len_afsc}](', LenComp_mod1[27, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[23,caption_col], ' \\label{fig:weighting_len_afsc}](r4ss/plots_mod1/', LenComp_mod1[23, path_col], ')\n', sep='')
 
 #NWFSC
-cat('\n![', LenComp_mod1[31,caption_col], ' \\label{fig:weighting_len_nwfsc}](', LenComp_mod1[31, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[27,caption_col], ' \\label{fig:weighting_len_nwfsc}](r4ss/plots_mod1/', LenComp_mod1[27, path_col], ')\n', sep='')
 
 #NWFSC Combo
-cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_len_nwfsccombo}](', LenComp_mod1[35, path_col], ')\n', sep='')
+cat('\n![', LenComp_mod1[31,caption_col], ' \\label{fig:weighting_len_nwfsccombo}](r4ss/plots_mod1/', LenComp_mod1[31, path_col], ')\n', sep='')
 
 ```
 
@@ -357,31 +361,31 @@ cat('\n![', LenComp_mod1[35,caption_col], ' \\label{fig:weighting_len_nwfsccombo
 
 
 #Fishery
-cat('\n![', AgeComp_mod1[3,caption_col], ' \\label{fig:fishery_age_pearson}](', AgeComp_mod1[3, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[3,caption_col], ' \\label{fig:fishery_age_pearson}](r4ss/plots_mod1/', AgeComp_mod1[3, path_col], ')\n', sep='')
 
 #ASHOP
-cat('\n![', AgeComp_mod1[7,caption_col], ' \\label{fig:ashop_age_pearson}](', AgeComp_mod1[7, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[7,caption_col], ' \\label{fig:ashop_age_pearson}](r4ss/plots_mod1/', AgeComp_mod1[7, path_col], ')\n', sep='')
 
 #POP
-cat('\n![', AgeComp_mod1[11,caption_col], ' \\label{fig:pop_age_pearson}](', AgeComp_mod1[11, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[11,caption_col], ' \\label{fig:pop_age_pearson}](r4ss/plots_mod1/', AgeComp_mod1[11, path_col], ')\n', sep='')
 
 #Triennial
-#cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](', AgeComp_mod1[15, path_col], ')\n', sep='')
+#cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:tri_age_pearson}](r4ss/plots_mod1/', AgeComp_mod1[15, path_col], ')\n', sep='')
 
 #NWFSC
-cat('\n![', AgeComp_mod1[19,caption_col], ' \\label{fig:nwfsc_age_pearson}](', AgeComp_mod1[19, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[15,caption_col], ' \\label{fig:nwfsc_age_pearson}](r4ss/plots_mod1/', AgeComp_mod1[15, path_col], ')\n', sep='')
 
 plot.vec = 4:8
 for(a in 1:length(plot.vec)){
 #NWFSC Combo - Andre plots
-cat('\n![', AALComp_mod1[plot.vec[a],caption_col], ' \\label{fig:nwfsc_combo_andre_',a,'}](', AALComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+cat('\n![', AALComp_mod1[plot.vec[a],caption_col], ' \\label{fig:nwfsc_combo_andre_',a,'}](r4ss/plots_mod1/', AALComp_mod1[plot.vec[a], path_col], ')\n', sep='')
 }
 
 #NWFSC Combo
-#cat('\n![', AALComp_mod1[1,caption_col], ' \\label{fig:nwsfc_combo_age_aal1}](', AALComp_mod1[1, path_col], ')\n', sep='')
+#cat('\n![', AALComp_mod1[1,caption_col], ' \\label{fig:nwsfc_combo_age_aal1}](r4ss/plots_mod1/', AALComp_mod1[1, path_col], ')\n', sep='')
 
 #NWFSC Combo
-#cat('\n![', AALComp_mod1[2,caption_col], ' \\label{fig:nwsfc_combo_age_aal2}](', AALComp_mod1[2, path_col], ')\n', sep='')
+#cat('\n![', AALComp_mod1[2,caption_col], ' \\label{fig:nwsfc_combo_age_aal2}](r4ss/plots_mod1/', AALComp_mod1[2, path_col], ')\n', sep='')
 
 
 ```
@@ -392,21 +396,21 @@ cat('\n![', AALComp_mod1[plot.vec[a],caption_col], ' \\label{fig:nwfsc_combo_and
 ```{r, results='asis'}
 
 #Fishery
-cat('\n![', AgeComp_mod1[5,caption_col], ' \\label{fig:weighting_fishery}](', AgeComp_mod1[5, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[5,caption_col], ' \\label{fig:weighting_fishery}](r4ss/plots_mod1/', AgeComp_mod1[5, path_col], ')\n', sep='')
 
 #ASHOP
-cat('\n![', AgeComp_mod1[9,caption_col], ' \\label{fig:weighting_ashop}](', AgeComp_mod1[9, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[9,caption_col], ' \\label{fig:weighting_ashop}](r4ss/plots_mod1/', AgeComp_mod1[9, path_col], ')\n', sep='')
 
 
 #Triennial
-#cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_triennial}](', AgeComp_mod1[17, path_col], ')\n', sep='')
+#cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_triennial}](r4ss/plots_mod1/', AgeComp_mod1[17, path_col], ')\n', sep='')
 
 
 #NWFSC
-cat('\n![', AgeComp_mod1[21,caption_col], ' \\label{fig:weighting_nwfscslope}](', AgeComp_mod1[21, path_col], ')\n', sep='')
+cat('\n![', AgeComp_mod1[17,caption_col], ' \\label{fig:weighting_nwfscslope}](r4ss/plots_mod1/', AgeComp_mod1[17, path_col], ')\n', sep='')
 
 #NWFSC Combo
-cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](', AALComp_mod1[3, path_col], ')\n', sep='')
+cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4ss/plots_mod1/', AALComp_mod1[3, path_col], ')\n', sep='')
 
 ```
 

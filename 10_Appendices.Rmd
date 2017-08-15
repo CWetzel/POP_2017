@@ -25,11 +25,11 @@ output:
 ```{r, results='asis'}
 
 plot.vec = c(1, 5:8, 12, 16, 20, 24, 28,32)
-plot.vec = c(1, 5:8, 12, 16, 24, 28,32)
+plot.vec = c(1, 5:8, 12, 16, 20, 24, 28)
 
 for (a in 1:length(plot.vec)){
 
-  cat('\n![', LenComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](', LenComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  cat('\n![', LenComp_mod1[plot.vec[a],caption_col], ' \\label{fig:length_fits}](r4ss/plots_mod1/', LenComp_mod1[plot.vec[a], path_col], ')\n', sep='')
   
 }
 
@@ -44,12 +44,12 @@ for (a in 1:length(plot.vec)){
 ```{r, results='asis'}
 
 plot.vec = c(1:2, 6, 10, 14, 18, 23)
-plot.vec = c(1:2, 6, 10, 18, 23)
+plot.vec = c(1:2, 6, 10, 14, 22)
 name.vec = c("")
 
 for (a in 1:length(plot.vec)){
 
-  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:age_fits}](', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
+  cat('\n![', AgeComp_mod1[plot.vec[a],caption_col], ' \\label{fig:age_fits}](r4ss/plots_mod1/', AgeComp_mod1[plot.vec[a], path_col], ')\n', sep='')
   
 }
 
@@ -92,7 +92,7 @@ mat.names = NULL
 for(i in seq_along(survey.list)){
   if(i==1) { ind = 1:2  }
   if(i!=1) { ind = ind+2}
-  Index_Summary[rownames(survey.list[[i]]), ind] = cbind(print(survey.list[[i]]$Obs, digits = 0), 
+  Index_Summary[rownames(survey.list[[i]]), ind] = cbind(print(survey.list[[i]]$Obs, digits = ifelse(i == 1, 2, 0)), 
                                                          print(survey.list[[i]]$SE,  digits = 2)) 
   mat.names = c(mat.names, "Obs", "SE")
 }
@@ -212,59 +212,21 @@ print(Fish_Length.table,
 \newpage
 
 
-<!-- ************************************DATA FILE(S)************************************************--> 
-<!--#Appendix C. SS data file {-}
-\renewcommand{\thepage}{C-\arabic{page}}
-\setcounter{page}{1}
+<!-- ************************************AUXILARY FILES************************************************--> 
+#Appendix D. List of Auxiliary Files Available
 
-```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_data = writeLines(readLines('./SS/linebreak_files/2017pop.dat'))
-```
+The listed files are also available as auxiliary files to accompany the assessment document:
 
-\newpage -->
+\begin{enumerate}
+  \item Numbers at age for female and male `r spp` (POPnatagef.csv and POPnatagem.csv)
+  \item The `r spp` Stock Synthesis 3.30 model files
+  
+  \begin{enumerate}
+    \item 2017pop.dat
+    \item 2017pop.ctl
+    \item forecast.ss
+    \item starter.ss
+  \end{enumerate}
+\end{enumerate}
 
-<!-- **********************************CONTROL FILE(S)***********************************************-->
-<!--#Appendix D. SS control file{-}
-\renewcommand{\thepage}{D-\arabic{page}}
-\setcounter{page}{1}
-
-```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_control = writeLines(readLines('./SS/linebreak_files/2017pop.ctl'))
-```
-
-\newpage -->
-
-<!-- *********************************STARTER FILE(S)*************************************************-->
-<!--#Appendix E. SS starter file{-}
-\renewcommand{\thepage}{E-\arabic{page}}
-\setcounter{page}{1}
-
-```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_starter = writeLines(readLines('./SS/linebreak_files/starter.ss'))
-```
-\newpage -->
-
-<!-- ********************************FORECAST FILE(S)**************************************************-->
-<!--#Appendix F. SS forecast file{-}
-\renewcommand{\thepage}{F-\arabic{page}}
-\setcounter{page}{1}
-
-```{r, echo=FALSE, eval=TRUE,results='markup', comment=NA}
-mod1_forecast = writeLines(readLines('./SS/linebreak_files/forecast.ss'))
-```
-\newpage -->
-
-
-
-<!--********************ADD ADDITIONAL APPENDICES AS NEEDED********************************************-->
-<!--********************cHANGE APPENDIX TITLE AND THE APPENDIX LETTER**********************************-->
-<!--#Appendix E. Appendix Title{-}
-\label{sec:AppendixE}
-\renewcommand{\thepage}{E-\arabic{page}}
-\renewcommand{\thefigure}{E\arabic{figure}}
-\renewcommand{\thetable}{E\arabic{table}}
-\setcounter{page}{1}
-\setcounter{figure}{0}
-\setcounter{table}{0}
-
-Add Appendix text, tables and figuers here. -->
+\newpage

@@ -589,7 +589,8 @@ align(mngmnt.table) = c('l',
                                     caption = c(paste('Summary of 10-year 
                                              projections beginning in ', LastYR+2,' 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. 
+                                             an axis of uncertainty for the base model. The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
+                                             from the uncertainty around final spawning biomass.
                                              Columns range over low, mid, and high
                                              states of nature, and rows range over different 
                                              assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
@@ -605,11 +606,53 @@ align(mngmnt.table) = c('l',
         addtorow$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
                                & \\multicolumn{2}{c}{\\textbf{States of nature}} 
                                & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low State of Nature} 
-                               & \\multicolumn{2}{c}{Base State of Nature} 
-                               &  \\multicolumn{2}{c}{High State of Nature} \\\\\n')
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.045} 
+                               & \\multicolumn{2}{c}{M = 0.054} 
+                               &  \\multicolumn{2}{c}{M = 0.060} \\\\\n')
 
-
+#=============================================================================
+# Executive Table h: Alternative Decision Table
+#==============================================================================      
+# Required: READ in the DecisionTable_mod CSV files ---------------------------
+        
+        # Model 1
+        # Read in decision table file
+        alt.decision_mod1 = read.csv('./txt_files/DecisionTable_mprior.csv')
+        colnames(alt.decision_mod1) = c('', 
+                                    'Year',  
+                                    'Catch',	
+                                    'Spawning Output',	
+                                    'Depletion', 
+                                    'Spawning Output',	
+                                    'Depletion',	
+                                    'Spawning Output',	
+                                    'Depletion')
+        
+        alt.decision_mod1.table = xtable(alt.decision_mod1, 
+                                     caption = c(paste('Alternative decision table. Summary of 10-year 
+                                                       projections beginning in ', LastYR+2,' 
+                                                       for alternate states of nature based on 
+                                                       an axis of uncertainty for the base model. The range of natural mortality values are based on the 12.5 and
+                                                       87.5th quantiles of the natural mortality prior.
+                                                       Columns range over low, mid, and high
+                                                       states of nature, and rows range over different 
+                                                       assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
+                                     label='tab:Decision_table_mprior')
+        
+        # Assign alignment and add the header columns
+        align(alt.decision_mod1.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
+        
+        addtorowalt <- list()
+        addtorowalt$pos <- list()
+        addtorowalt$pos[[1]] <- -1
+        addtorowalt$pos[[2]] <- -1
+        addtorowalt$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
+                               & \\multicolumn{2}{c}{\\textbf{States of nature}} 
+                               & \\multicolumn{2}{c}{} \\\\\n', 
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.038} 
+                               & \\multicolumn{2}{c}{M = 0.054} 
+                               &  \\multicolumn{2}{c}{M = 0.077} \\\\\n')
+        
 #=============================================================================
 # Executive Summary Table I: Summary of Results
 #=============================================================================

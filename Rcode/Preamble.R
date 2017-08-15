@@ -127,6 +127,6 @@ multi_page_fig = c('page2', 'page3', 'page4', 'page5', 'page6', 'page7')
 # caption, label and file path
 caption_col = 2
 label_col = 10
-path_col =  11
+path_col =  1
 
 
