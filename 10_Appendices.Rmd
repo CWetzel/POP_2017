@@ -38,8 +38,6 @@ for (a in 1:length(plot.vec)){
 \FloatBarrier
 
 #Appendix B. Detailed Fit to Age Composition Data 
-<!--\renewcommand{\thepage}{B-\arabic{page}}
-\setcounter{page}{1}-->
 
 ```{r, results='asis'}
 
@@ -68,7 +66,6 @@ Length and age compositions were expanded based upon the survey stratification. 
 <!-- ********************************************************************** -->
 <!-- ***********************CPUE   Indices Table*************************** --> 
 <!-- ********************************************************************** -->
-  
 
 ```{r, results = 'asis'}
 # Commercial CPUE Index First
@@ -212,7 +209,7 @@ print(Fish_Length.table,
 \newpage
 
 
-<!-- ************************************AUXILARY FILES************************************************--> 
+<!-- ************************************AUXILARY FILES************************************************ --> 
 #Appendix D. List of Auxiliary Files Available
 
 The listed files are also available as auxiliary files to accompany the assessment document:
