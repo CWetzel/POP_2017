@@ -228,12 +228,12 @@ test$infotable$longname = c("Fishery & Foreign 1981-1999", "Fishery 2000-2016")
 test$infotable$col <- rich.colors.short(8)[c(1,1)]
 test1 <- SSplotSelex(mod1, fleets=2, fleetnames=fleets, subplot=1)
 test1$infotable$col <- "red"
-test2 <- SSplotSelex(mod1, fleets=c(4,6), fleetnames=fleets, subplot=1)
-test2$infotable$col <- c("blue", "green")#rich.colors.short(8)[c(4,6)]
+test2 <- SSplotSelex(mod1, fleets=c(4:6), fleetnames=fleets, subplot=1)
+test2$infotable$col <- c("blue", "grey", "green")#rich.colors.short(8)[c(4,6)]
 test3 <- SSplotSelex(mod1, fleets=7:8, fleetnames=fleets, subplot=1)
 test3$infotable$col <- c("red", "orange")#rich.colors.short(8)[c(7:8)]
 
-pngfun("POP_selectivity.png")
+pngfun("POP_selectivity_with_Tri.png")
 par(mfrow=c(2,2),mar=c(2,4,3,1))
 #SSplotSelex(mod1, fleets = 1:3, infotable = test$infotable, subplot = 1, showmain = FALSE, legendloc= 'topleft')
 SSplotSelex(mod1, fleets=1,  infotable=test$infotable, subplot=1, legendloc='topleft', showmain=FALSE, year = c(1999, 2016))
@@ -241,7 +241,7 @@ grid()
 SSplotSelex(mod1, fleets=2, infotable=test1$infotable, subplot=1, legendloc='topleft',showmain=FALSE)
 legend("topleft", legend = "At-sea hake", col = "red", lwd =2, lty = 1, pch = 16, bty = 'n')
 grid()
-SSplotSelex(mod1, fleets=c(4,6), infotable=test2$infotable,subplot=1, legendloc='topleft',showmain=FALSE)
+SSplotSelex(mod1, fleets=c(4,5,6), infotable=test2$infotable,subplot=1, legendloc='topleft',showmain=FALSE)
 grid()
 #par(mar=c(4,4,1,1))
 SSplotSelex(mod1,fleets=7:8,infotable=test3$infotable,subplot=1,legendloc='topleft',showmain=FALSE)
