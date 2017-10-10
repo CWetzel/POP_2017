@@ -16,7 +16,7 @@
 # document
 rm(list=ls(all=TRUE))
 
-model.num = "15.0"
+model.num = "16.0"
 
 # What model file to use
 model.file = "model_2017"
@@ -285,7 +285,7 @@ source('./Rcode/Parse_r4ss_plotInfoTable.R')
 # -----------------------------------------------------------------------------
 
 # Create the SS files for the appendices
-source('./Rcode/SS_files_linebreaks.R')
+# source('./Rcode/SS_files_linebreaks.R')
 
 #=====================================================================================
 # SECTION 3: Move CSV files from working directory to github directory
@@ -325,11 +325,11 @@ figures = c(
             "C:/Assessments/POP2017/Data/Maturity_Fecundity/Fecundity_Comparison.png",
             "C:/Assessments/POP2017/Data/SurveyIndices/Index_Data.png",
             "C:/Assessments/POP2017/Data/CommercialCatch/Catch_Comparison.png",
-            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/piner_panel_h.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base/h_trajectories.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/piner_panel_m.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base/m_trajectories.png"),
-            paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base/piner_panel_R0.png")
+            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base_pope/piner_panel_h.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/h_profiles/", model.num, "_pop_base_pope/h_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base_pope/piner_panel_m.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/m_profiles/", model.num, "_pop_base_pope/m_trajectories.png"),
+            paste0("C:/Assessments/POP2017/Models/_Profiles/R0_profiles/", model.num, "_pop_base_pope/piner_panel_R0.png")
             )
 
 for (i in 1:length(figures)){

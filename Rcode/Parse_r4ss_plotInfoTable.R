@@ -47,7 +47,8 @@
     for(ifile in 1:length(filenames)){
       filename <- file.path(dir,plotdir,filenames[ifile])
       temp <- read.csv(filename,colClasses = "character")
-      if (!is.null(colnames(temp))) temp <- temp[, colnames(temp) %in% colnames(plotInfoTable)]
+      # commenting out line below trying to make this work
+      #if (!is.null(colnames(temp))) temp <- temp[, colnames(temp) %in% colnames(plotInfoTable)]
       plotInfoTable <- rbind(plotInfoTable,temp)
     }
     plotInfoTable$png_time <- as.POSIXlt(plotInfoTable$png_time)

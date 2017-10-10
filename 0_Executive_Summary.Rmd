@@ -172,6 +172,8 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 
 \begin{enumerate}
 
+\item ADD STEEPNESS UNCERTAINTY
+
 \item `r spp` off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the observation variability. While this comment is not intended to reflect badly on the STAT's capabilities, it is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
   
 \item The indices of abundance used in the final base model provide almost no information on population scale, as demonstrated in the ln($R0$) profiles examined during the review. The Triennial survey was the only index that provided signal with respect to population scale. However, this survey was removed in the final base model due to concerns about the quality of the survey and conflicts with other data. There are large amounts of composition data in the model, with both age- and length-compositions being included for some fleets. The compositional data and catch are providing the majority of the information on the estimated and derived quantities.
@@ -182,9 +184,9 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 
 ##Decision Table{-}    
 
-Model uncertainty has been described by the estimated uncertainty within the base model and by the sensitivities to different model structure. The estimated parameter that resulted in the most variability of predicted status and yield advice was natural mortality ($M$). The 12.5% and 87.5% quantiles based on spwaning output uncertainty were used to determine the low and high values for $M$ of 0.045 and 0.06 yr^-1^. An alternative decision table was also provided which based the range of natural mortality values on the uncertainty in the parameter prior.  This approach was suggestion post-STAR panel review by Owen Hamel as a method to explore a greater range of uncertainty.  The low and high stated of nature values were based on the 12.5% and 87.5% quantiles when the uncertainty was divided between the data used to generate the prior and the uncertainty surrounding the estimated value.
+Model uncertainty has been described by the estimated uncertainty within the base model and by the sensitivities to different model structure. The estimated parameter that resulted in the most variability of predicted status and yield advice was natural mortality ($M$). The 12.5% and 87.5% quantiles based on spwaning output uncertainty were used to determine the low and high values for $M$ of 0.04725 and 0.0595 yr^-1^.
 
-This assessment synthesizes many sources of data and estimates recruitment variability, thus it is classified as a Category 1 stock assessment. Therefore, the sigma for P* to determine the catch reduction to account for scientific uncertainty is 0.36, since the estimated sigma in the assessment is less than this for current spawning biomass (`r round(mod1$Pstar_sigma,2)`).
+Due to the sensitivity associated with the assessment given the assumed steepness value the assessment is classified as a Category 2 stock assessment. Therefore, the sigma for P* to determine the catch reduction to account for scientific uncertainty is 0.72, since the estimated sigma in the assessment is less than this for current spawning biomass (`r round(mod1$Pstar_sigma,2)`).
 
 <!-- ***********BEGIN EXECUTIVE SUMMARY OFL AND DECISION TABLES************ -->
 
@@ -206,18 +208,7 @@ This assessment synthesizes many sources of data and estimates recruitment varia
     print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
           caption.placement = 'top', 
           hline.after = c(-1, 0, 10, nrow(decision_mod1.table)), 
-          scalebox = .85)
-```
-
-
-\FloatBarrier
-
-```{r, results='asis'}   
-
-    print(alt.decision_mod1.table, add.to.row = addtorowalt, include.rownames = FALSE, 
-          caption.placement = 'top', 
-          hline.after = c(-1, 0, 10, nrow(alt.decision_mod1.table)), 
-          scalebox = .85)
+          scalebox = .85, digits = 0)
 ```
 
 

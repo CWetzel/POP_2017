@@ -16,8 +16,8 @@ First mature age,0
 Starting year of estimated recruitment,1940
 ,
 \underline{Fishery characteristics},
-Fishing mortality method,Continuous
-Maximum F,3
+Fishing mortality method,Discrete
+Maximum F,0.9
 Catchability,Analytical estimate
 Fishery selectivity,Double Normal
 At-Sea Hake selectivity,Double Normal

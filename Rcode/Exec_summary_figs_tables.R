@@ -522,40 +522,42 @@ align(mngmnt.table) = c('l',
 #==============================================================================
 
 # Extract OFLs for next 10 years for each model
-      OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$Label),]
-      OFL_mod1 = OFL_mod1[, 2]    
+  Fore_Table = read.csv('./txt_files/OFL_forecast.csv')
+      #OFL_mod1 = mod1$derived_quants[grep('OFL',mod1$derived_quants$Label),]
+      #OFL_mod1 = OFL_mod1[, 2]    
       
-      ACL_mod1 = mod1$derived_quants[grep('ForeCatch_',mod1$derived_quants$Label),]
-      ACL_mod1 = ACL_mod1[,2]
+      #ACL_mod1 = mod1$derived_quants[grep('ForeCatch_',mod1$derived_quants$Label),]
+      #ACL_mod1 = ACL_mod1[,2]
       
-      OFL = as.data.frame(cbind(OFL_mod1, ACL_mod1))
-      OFL$Year=seq(Project_firstyr,Project_lastyr, 1)
-      OFL$Year = as.factor(OFL$Year)
+      #OFL = as.data.frame(cbind(OFL_mod1, ACL_mod1))
+      #OFL$Year=seq(Project_firstyr,Project_lastyr, 1)
+      #OFL$Year = as.factor(OFL$Year)
 
-      OFL = OFL[,c(3, 1, 2)]
-      OFL[,2] =  print.numeric(OFL$OFL_mod1, digits = 0)
-      OFL[,3] =  print.numeric(OFL$ACL_mod1, digits = 0)
+      #OFL = OFL[,c(3, 1, 2)]
+      #OFL[,2] =  print.numeric(OFL$OFL_mod1, digits = 0)
+      #OFL[,3] =  print.numeric(OFL$ACL_mod1, digits = 0)
       
       # Extract biomass/output  
-      SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$Label), ]
-      SpawningB = SpawningB[c(-1, -2), ]
-      Spawn.fore = SpawningB[SpawningB$Label >= paste('SPB_', Project_firstyr, sep='') 
-                               & SpawningB$Label <= paste('SPB_', Project_lastyr,  sep=''), "Value"]  
-      Spawn.fore = print(Spawn.fore, digits = 0)
+      #SpawningB = mod$derived_quants[grep('SPB', mod$derived_quants$Label), ]
+      #SpawningB = SpawningB[c(-1, -2), ]
+      #Spawn.fore = SpawningB[SpawningB$Label >= paste('SPB_', Project_firstyr, sep='') 
+      #                         & SpawningB$Label <= paste('SPB_', Project_lastyr,  sep=''), "Value"]  
+      #Spawn.fore = print(Spawn.fore, digits = 0)
       
-      Bratio = mod$derived_quants[grep('Bratio', mod$derived_quants$Label), ]
-      Bratio = Bratio[c(-1, -2), ]
-      Bratio.fore = Bratio[Bratio$Label >= paste('Bratio_', Project_firstyr, sep='') 
-                             & Bratio$Label <= paste('Bratio_', Project_lastyr,  sep=''), "Value"]
-      Bratio.fore = print(Bratio.fore, digits = 3)
+      #Bratio = mod$derived_quants[grep('Bratio', mod$derived_quants$Label), ]
+      #Bratio = Bratio[c(-1, -2), ]
+      #Bratio.fore = Bratio[Bratio$Label >= paste('Bratio_', Project_firstyr, sep='') 
+      #                       & Bratio$Label <= paste('Bratio_', Project_lastyr,  sep=''), "Value"]
+      #Bratio.fore = print(Bratio.fore, digits = 3)
       
-      Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
-      colnames(Fore_Table) = c('Year','OFL', "ACL", paste0('Spawning Output (',fecund_unit,')'), "Relative Depletion") 
+      #Fore_Table = cbind(OFL, Spawn.fore, Bratio.fore)
+      colnames(Fore_Table) = c('Year','OFL', "ABC", paste0('Spawning Output (',fecund_unit,')'), "Relative Depletion (%)") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ACL (mt) and the estimated spawning output and relative depletion based on ACL removals.  The ACL values for 2017 and 2018 
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ABC (mt) and the estimated spawning output and relative depletion based on ACL removals.  The ACL values for 2017 and 2018 
                                                are set at the harvest limits currently set by management.'),
-                  label = 'tab:OFL_projection')
+                  label = 'tab:OFL_projection',
+                  digits = 0)
       
       # Add alignment
       #align(mngmnt.table) = c('l',
@@ -606,52 +608,11 @@ align(mngmnt.table) = c('l',
         addtorow$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
                                & \\multicolumn{2}{c}{\\textbf{States of nature}} 
                                & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.045} 
+                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.04725} 
                                & \\multicolumn{2}{c}{M = 0.054} 
-                               &  \\multicolumn{2}{c}{M = 0.060} \\\\\n')
+                               &  \\multicolumn{2}{c}{M = 0.0595} \\\\\n')
 
-#=============================================================================
-# Executive Table h: Alternative Decision Table
-#==============================================================================      
-# Required: READ in the DecisionTable_mod CSV files ---------------------------
-        
-        # Model 1
-        # Read in decision table file
-        alt.decision_mod1 = read.csv('./txt_files/DecisionTable_mprior.csv')
-        colnames(alt.decision_mod1) = c('', 
-                                    'Year',  
-                                    'Catch',	
-                                    'Spawning Output',	
-                                    'Depletion', 
-                                    'Spawning Output',	
-                                    'Depletion',	
-                                    'Spawning Output',	
-                                    'Depletion')
-        
-        alt.decision_mod1.table = xtable(alt.decision_mod1, 
-                                     caption = c(paste('Alternative decision table. Summary of 10-year 
-                                                       projections beginning in ', LastYR+2,' 
-                                                       for alternate states of nature based on 
-                                                       an axis of uncertainty for the base model. The range of natural mortality values are based on the 12.5 and
-                                                       87.5th quantiles of the natural mortality prior.
-                                                       Columns range over low, mid, and high
-                                                       states of nature, and rows range over different 
-                                                       assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
-                                     label='tab:Decision_table_mprior')
-        
-        # Assign alignment and add the header columns
-        align(alt.decision_mod1.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
-        
-        addtorowalt <- list()
-        addtorowalt$pos <- list()
-        addtorowalt$pos[[1]] <- -1
-        addtorowalt$pos[[2]] <- -1
-        addtorowalt$command <- c( ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{} 
-                               & \\multicolumn{2}{c}{\\textbf{States of nature}} 
-                               & \\multicolumn{2}{c}{} \\\\\n', 
-                               ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{M = 0.038} 
-                               & \\multicolumn{2}{c}{M = 0.054} 
-                               &  \\multicolumn{2}{c}{M = 0.077} \\\\\n')
+
         
 #=============================================================================
 # Executive Summary Table I: Summary of Results

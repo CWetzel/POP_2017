@@ -240,7 +240,7 @@
 <!-- *******************Selectivity & Retention**************************** --> 
 <!-- ********************************************************************** -->
 
-![Estimated selectivity by length by each fishery and survey for `r spp`. \label{fig:selex}](r4ss/plots_mod1/POP_selectivity.png)
+![Estimated selectivity by length by each fishery and survey for `r spp`.  The Triennial selectivity was fixed at the estimated selectivity from preliminary models using the Triennial data.  The final selectivity was only used to remove Triennial catch from the population.  \label{fig:selex}](r4ss/plots_mod1/POP_selectivity_with_Tri.png)
 
 \FloatBarrier 
 
