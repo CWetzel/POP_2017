@@ -25,7 +25,7 @@ output:
 ```{r, results='asis'}
 
 plot.vec = c(1, 5:8, 12, 16, 20, 24, 28,32)
-plot.vec = c(1, 5:8, 12, 16, 20, 24, 28)
+plot.vec = c(1, 5:8, 12, 16, 24, 28, 32)
 
 for (a in 1:length(plot.vec)){
 
@@ -42,7 +42,7 @@ for (a in 1:length(plot.vec)){
 ```{r, results='asis'}
 
 plot.vec = c(1:2, 6, 10, 14, 18, 23)
-plot.vec = c(1:2, 6, 10, 14, 22)
+plot.vec = c(1:2, 6, 10, 25)
 name.vec = c("")
 
 for (a in 1:length(plot.vec)){
@@ -52,6 +52,7 @@ for (a in 1:length(plot.vec)){
 }
 
 ```
+
 
 \FloatBarrier
 
@@ -69,20 +70,26 @@ Length and age compositions were expanded based upon the survey stratification. 
 
 ```{r, results = 'asis'}
 # Commercial CPUE Index First
-names = unique(mod1$cpue$Name)
-names = names[c(1,3)]
 survey.list = list()
-for(i in 1:length(names)){
-  grab = mod1$cpue[mod1$cpue$Name == names[i], c("Obs", "SE") ]
-  survey.list[[i]] = grab
-  rownames(survey.list[[i]]) = mod1$cpue[mod1$cpue$Name == names[i], "Yr" ]
-  colnames(survey.list[[i]]) = c("Obs", "SE")
-}
-names(survey.list) = names
+
+cpue.yr = 1956:1973
+cpue = c(0.40, 0.30, 0.32, 0.29, 0.28, 0.31, 0.29, 0.34, 0.35, 0.55, 0.47, 0.30, 0.17, 0.178, 0.175, 0.2034, 0.1984, 0.1144)
+cpue.sd = rep(0.40, length(cpue))
+cpue.matrix = as.data.frame(cbind( cpue, cpue.sd))
+colnames(cpue.matrix) = c("Obs", "SE")
+survey.list[[1]] =  cpue.matrix
+rownames(survey.list[[1]]) = cpue.yr
+
+grab = mod1$cpue[mod1$cpue$Name == "Triennial", c("Obs", "SE") ]
+survey.list[[2]] = grab
+rownames(survey.list[[2]]) = mod1$cpue[mod1$cpue$Name == "Triennial", "Yr" ]
+colnames(survey.list[[2]]) = c("Obs", "SE")
+
+names(survey.list) = c("CPUE", "Triennial")
 
 Rows = unique(unlist(lapply(survey.list, rownames)))
 Rows = sort(as.numeric(Rows))
-Index_Summary = matrix("-", nrow = length(Rows), ncol = 2*length(names),
+Index_Summary = matrix("-", nrow = length(Rows), ncol = 4,
                        dimnames=list(Rows, sapply(survey.list, colnames)))
 
 mat.names = NULL
@@ -128,6 +135,7 @@ print(Index_summary.table,
       include.colnames = FALSE,
       sanitize.text.function = function(x){x})
 ```
+
 
 \FloatBarrier
 

@@ -597,7 +597,7 @@ align(mngmnt.table) = c('l',
                                              states of nature, and rows range over different 
                                              assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
                                      label='tab:Decision_table_mod1', 
-                                     digits = 0 )
+                                     digits = c(0,0,0,0,0,1,0,1,0,1)) 
       
     # Assign alignment and add the header columns
         align(decision_mod1.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 

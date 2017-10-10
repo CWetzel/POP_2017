@@ -412,7 +412,7 @@ addtorow$pos = list(0,0)
 addtorow$command = c(" & \\multicolumn{2}{c}{POP} &  \\multicolumn{2}{c}{AFSC Slope} & \\multicolumn{2}{c}{NWFSC Slope} & \\multicolumn{2}{c}{NWFSC Shelf-Slope} \\\\\n",
                      "Year & Obs & SE & Obs & SE & Obs & SE & Obs & SE \\\\\n")
 Design.Based.table = xtable(design.based, 
-                             caption = c('Summary of the design based estimates of fishery-independent biomass/abundance
+                             caption = c('Summary of the design-based estimates of fishery-independent biomass/abundance
                                          time-series.'),
                              label = 'tab:Design_Based',
                              digits = 2)    
@@ -1481,7 +1481,7 @@ colnames(Forecast_mod1)=c('Year',
                           'ACL (mt)',
                           #'Age 3+ biomass (mt)',
                           'Spawning Output',
-                          'Depletion')
+                          'Depletion (%)')
 
 # Make sure year is a factor, so you don't get decimals
 Forecast_mod1$Year = as.factor(Forecast_mod1$Year)
@@ -1492,7 +1492,7 @@ Forecast_mod1.table = xtable(Forecast_mod1,
                                          OFL, spawning biomass, and depletion for the
                                          base case model.'),
                              label = 'tab:Forecast_mod1',
-                             digits = c(0,0,0,0,0,2))
+                             digits = c(0,0,0,0,0,1))
 # Add alignment
 align(Forecast_mod1.table) = c('l',
                                'c',
@@ -1538,7 +1538,8 @@ print(Forecast_mod1.table,
                                              assumptions of catch levels. An entry of "--" 
                                              indicates that the stock is driven to very low 
                                              abundance under the particular scenario.', sep = '')), 
-                                     label='tab:Decision_table_mod1_back')
+                                     label='tab:Decision_table_mod1_back',
+                                     digits = c(0,0,0,0,0,1,0,1,0,1))
       
     # Assign alignment and add the header columns
         align(decision_mod1.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
