@@ -2,7 +2,7 @@
 #Executive Summary{-}
 
 ##Stock{-}
-This assessment reports the status of the `r spp` rockfish (\emph{`r spp.sci`})  off the US west coast from Northern California to the Canadian border using data through `r Dat_end_mod1`.  `r spp` are most abundant in the Gulf of Alaska and have been observed off of Japan, in the Bering Sea, and south to Baja California, though they are sparse south of Oregon and rare in southern California. Although neither catches nor other data from north of the US-Canada border were included in this assessment, the conectivity of these populations and the contribution to the biomass possibly through adult migration and/or larval dispersion is not certain. To date, no significant genetic differences have been found in the range covered by this assessment.
+This assessment reports the status of the `r spp` rockfish (\emph{`r spp.sci`})  off the US west coast from Northern California to the Canadian border using data through `r Dat_end_mod1`.  `r spp` are most abundant in the Gulf of Alaska and have been observed off of Japan, in the Bering Sea, and south to Baja California, though they are sparse south of Oregon and rare in southern California. Although neither catches nor other data from north of the US-Canada border were included in this assessment, the connectivity of these populations and the contribution to the biomass possibly through adult migration and/or larval dispersion is not certain. To date, no significant genetic differences have been found in the range covered by this assessment.
 
 
 ##Landings{-}
@@ -42,7 +42,7 @@ All of the data sources included in the base model for `r spp` have been re-eval
 
 The definition of fishing fleets have changed from those in the 2011 assessment.  Three fishing fleets were specified within the model: 1) a combined bottom trawl, mid-water trawl, and fixed gear fleet, where only a small fraction of `r spp` were captured by fixed gear (termed the fishery fleet), 2) the historical foreign fleet, and 3) the at-sea hake fishery.  The fleet grouping were based on discarding practices.  The fishery fleet estimated a retention curve based on discarding data and known management restrictions.  However, very little if any discarding is assumed to have occurred by the foreign fleet and the catch reported by the at-sea hake fishery accounts for both discarded and landed fish and hence, no additional mortality was estimated for each of these fleets.  
 
-The assessment uses landings data and discard-fraction estimates; catch-per-unit-effort and survey indices; length- or age-composition data for each year and fishery or survey (with conditional age-at-length compositional data for the NWFSC shelf-slope survey); information on weight-at-length, maturity-at-length, and fecundity-at-length; information on natural mortality and the steepness of the Beverton-Holt stock-recruitment relationship; and estimates of ageing error. Recruitment at "equilibrium spawning output", length-based selectivity of the fisheries and surveys, retention of the fishery, catchability of the surveys, growth, the time-series of spawning output, age and size structure, and current and projected future stock status are outputs of the model. Natural mortality (0.054 yr^-1^) and steepness (0.72) were fixed in the final model. This was done due to relatively flat likelihood surfaces, such that fixing parameters and then varying them in sensitivity analyses was deemed the best way to characterize uncertainty.
+The assessment uses landings data and discard-fraction estimates; catch-per-unit-effort and survey indices; length- or age-composition data for each year and fishery or survey (with conditional age-at-length compositional data for the NWFSC shelf-slope survey); information on weight-at-length, maturity-at-length, and fecundity-at-length; information on natural mortality and the steepness of the Beverton-Holt stock-recruitment relationship; and estimates of ageing error. Recruitment at "equilibrium spawning output", length-based selectivity of the fisheries and surveys, retention of the fishery, catchability of the surveys, growth, the time-series of spawning output, age and size structure, and current and projected future stock status are outputs of the model. Natural mortality (`r round(mod1$parameters[mod1$parameters$Label == "NatM_p_1_Fem_GP_1","Value"],3)` yr^-1^) and steepness (`r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`) were fixed in the final model. This was done due to relatively flat likelihood surfaces, such that fixing parameters and then varying them in sensitivity analyses was deemed the best way to characterize uncertainty.
 
 Although this assessment using many types of data since the 1980s, there is little information about steepness and natural mortality. Estimates of steepness are uncertain partly because of highly variable recruitment. Uncertainty in natural mortality is common in many fish stock assessments even when length and age data are available. 
 
@@ -71,7 +71,7 @@ The predicted spawning output from the base model generally showed a slight decl
 ![Time-series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
 
 
-![Estimated relative spawning output (depletion) with approximate 95% asymptotic confidnce intervals (dashed lines) for the base assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
+![Estimated spawning output depletion with approximate 95% asymptotic confidnce intervals (dashed lines) for the base assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 ```{r, results='asis'}
@@ -122,7 +122,7 @@ The spawning output of `r spp` reached a low in `r low.ssb`.  Landings for `r sp
 ![Estimated relative spawning potential ratio (1-SPR)/(1-SPR50%) for the base model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR50% harvest rate. The last year in the time-series is `r Dat_end_mod1`. \label{fig:SPR_all}](`r SPR.file`)
 
 
-![Phase plot of estimated (1-SPR)/(1-SPR50%) vs. relative spawning output (depletion) for the base case model.\label{fig:Phase_all}](`r Phase.file`)
+![Phase plot of estimated (1-SPR)/(1-SPR50%) vs. depletion (B/Btarget) for the base case model.\label{fig:Phase_all}](`r Phase.file`)
 
 \FloatBarrier
 
@@ -172,7 +172,7 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 
 \begin{enumerate}
 
-\item ADD STEEPNESS UNCERTAINTY
+\item The current data for `r spp` weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models the used the median to the 2017 steepness prior (0.72) resulted in an estimated a stock size near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey which were deemed implausible by the Scientific and Statistical Committee (SSC).  A steepness value in the final model was determined by calculating spawning biomass across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated which corresponded with a steepness value of 0.50.  Additional research for alternative methods for determining an appropriate steepness values when traditional approaches do not seem appropriate.  
 
 \item `r spp` off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the observation variability. While this comment is not intended to reflect badly on the STAT's capabilities, it is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
   
@@ -184,7 +184,7 @@ Exploitation rates on `r spp` exceeded MSY proxy target harvest rates during the
 
 ##Decision Table{-}    
 
-Model uncertainty has been described by the estimated uncertainty within the base model and by the sensitivities to different model structure. The estimated parameter that resulted in the most variability of predicted status and yield advice was natural mortality ($M$). The 12.5% and 87.5% quantiles based on spwaning output uncertainty were used to determine the low and high values for $M$ of 0.04725 and 0.0595 yr^-1^.
+Model uncertainty has been described by the estimated uncertainty within the base model and by the sensitivities to different model structure. The estimated parameter that resulted in the most variability of predicted status and yield advice was natural mortality ($M$). The 12.5% and 87.5% quantiles based on spawning output uncertainty were used to determine the low and high values for $M$ of 0.04725 and 0.0595 yr^-1^.
 
 Due to the sensitivity associated with the assessment given the assumed steepness value the assessment is classified as a Category 2 stock assessment. Therefore, the sigma for P* to determine the catch reduction to account for scientific uncertainty is 0.72, since the estimated sigma in the assessment is less than this for current spawning biomass (`r round(mod1$Pstar_sigma,2)`).
 
@@ -208,7 +208,7 @@ Due to the sensitivity associated with the assessment given the assumed steepnes
     print(decision_mod1.table, add.to.row = addtorow, include.rownames = FALSE, 
           caption.placement = 'top', 
           hline.after = c(-1, 0, 10, nrow(decision_mod1.table)), 
-          scalebox = .85, digits = 0)
+          scalebox = .85)
 ```
 
 

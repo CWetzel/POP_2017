@@ -554,8 +554,8 @@ align(mngmnt.table) = c('l',
       colnames(Fore_Table) = c('Year','OFL', "ABC", paste0('Spawning Output (',fecund_unit,')'), "Relative Depletion (%)") 
 
       # Create the table
-      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ABC (mt) and the estimated spawning output and relative depletion based on ACL removals.  The ACL values for 2017 and 2018 
-                                               are set at the harvest limits currently set by management.'),
+      OFL.table = xtable(Fore_Table, caption=c('Projections of potential OFL (mt) and ABC (mt) and the estimated spawning output and relative depletion based on ABC removals.  The 2017 and 2018 
+                                               removals are set at the harvest limits currently set by management of 281 mt per year.'),
                   label = 'tab:OFL_projection',
                   digits = 0)
       
@@ -581,11 +581,11 @@ align(mngmnt.table) = c('l',
                                    'Year',  
                                    'Catch',	
                                    'Spawning Output',	
-                                   'Depletion', 
+                                   'Depletion (%)', 
                                    'Spawning Output',	
-                                   'Depletion',	
+                                   'Depletion (%)',	
                                    'Spawning Output',	
-                                   'Depletion')
+                                   'Depletion (%)')
       
        decision_mod1.table = xtable(decision_mod1, 
                                     caption = c(paste('Summary of 10-year 
@@ -596,7 +596,8 @@ align(mngmnt.table) = c('l',
                                              Columns range over low, mid, and high
                                              states of nature, and rows range over different 
                                              assumptions of catch levels. The SPR50 catch stream is based on the equilibrium yield applying the SPR50 harvest rate.', sep = '')), 
-                                     label='tab:Decision_table_mod1')
+                                     label='tab:Decision_table_mod1', 
+                                     digits = 0 )
       
     # Assign alignment and add the header columns
         align(decision_mod1.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 

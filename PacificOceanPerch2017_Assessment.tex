@@ -219,7 +219,7 @@ most abundant in the Gulf of Alaska and have been observed off of Japan,
 in the Bering Sea, and south to Baja California, though they are sparse
 south of Oregon and rare in southern California. Although neither
 catches nor other data from north of the US-Canada border were included
-in this assessment, the conectivity of these populations and the
+in this assessment, the connectivity of these populations and the
 contribution to the biomass possibly through adult migration and/or
 larval dispersion is not certain. To date, no significant genetic
 differences have been found in the range covered by this assessment.
@@ -330,7 +330,7 @@ of the fisheries and surveys, retention of the fishery, catchability of
 the surveys, growth, the time-series of spawning output, age and size
 structure, and current and projected future stock status are outputs of
 the model. Natural mortality (0.054 yr\textsuperscript{-1}) and
-steepness (0.72) were fixed in the final model. This was done due to
+steepness (0.50) were fixed in the final model. This was done due to
 relatively flat likelihood surfaces, such that fixing parameters and
 then varying them in sensitivity analyses was deemed the best way to
 characterize uncertainty.
@@ -383,9 +383,9 @@ assessment model. \label{fig:Spawnbio_all}}
 \begin{figure}
 \centering
 \includegraphics{r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated relative spawning output (depletion) with approximate
-95\% asymptotic confidnce intervals (dashed lines) for the base
-assessment model. \label{fig:RelDeplete_all}}
+\caption{Estimated spawning output depletion with approximate 95\%
+asymptotic confidnce intervals (dashed lines) for the base assessment
+model. \label{fig:RelDeplete_all}}
 \end{figure}
 
 \begin{table}[ht]
@@ -509,9 +509,8 @@ The last year in the time-series is 2016. \label{fig:SPR_all}}
 \begin{figure}
 \centering
 \includegraphics{r4ss/plots_mod1/SPR4_phase.png}
-\caption{Phase plot of estimated (1-SPR)/(1-SPR50\%) vs.~relative
-spawning output (depletion) for the base case
-model.\label{fig:Phase_all}}
+\caption{Phase plot of estimated (1-SPR)/(1-SPR50\%) vs.~depletion
+(B/Btarget) for the base case model.\label{fig:Phase_all}}
 \end{figure}
 
 \FloatBarrier
@@ -658,7 +657,7 @@ Uncertainties}
 
 \begin{enumerate}
 
-\item ADD STEEPNESS UNCERTAINTY
+\item The current data for Pacific ocean perch weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models the used the median to the 2017 steepness prior (0.72) resulted in an estimated a stock size near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey which were deemed implausible by the Scientific and Statistical Committee (SSC).  A steepness value in the final model was determined by calculating spawning biomass across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated which corresponded with a steepness value of 0.50.  Additional research for alternative methods for determining an appropriate steepness values when traditional approaches do not seem appropriate.  
 
 \item Pacific ocean perch off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the observation variability. While this comment is not intended to reflect badly on the STAT's capabilities, it is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
   
@@ -675,7 +674,7 @@ Model uncertainty has been described by the estimated uncertainty within
 the base model and by the sensitivities to different model structure.
 The estimated parameter that resulted in the most variability of
 predicted status and yield advice was natural mortality (\(M\)). The
-12.5\% and 87.5\% quantiles based on spwaning output uncertainty were
+12.5\% and 87.5\% quantiles based on spawning output uncertainty were
 used to determine the low and high values for \(M\) of 0.04725 and
 0.0595 yr\textsuperscript{-1}.
 
@@ -687,8 +686,8 @@ in the assessment is less than this for current spawning biomass (0.27).
 
 \begin{table}[ht]
 \centering
-\caption{Projections of potential OFL (mt) and ABC (mt) and the estimated spawning output and relative depletion based on ACL removals.  The ACL values for 2017 and 2018 
-                                               are set at the harvest limits currently set by management.} 
+\caption{Projections of potential OFL (mt) and ABC (mt) and the estimated spawning output and relative depletion based on ABC removals.  The 2017 and 2018 
+                                               removals are set at the harvest limits currently set by management of 281 mt per year.} 
 \label{tab:OFL_projection}
 \begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.6in}>{\centering}p{1.1in}}
   \hline
@@ -730,29 +729,29 @@ Year & OFL & ABC & Spawning Output (million eggs) & Relative Depletion (\%) \\
                                & \multicolumn{2}{c}{M = 0.054} 
                                &  \multicolumn{2}{c}{M = 0.0595} \\
  \hline
- & Year & Catch & Spawning Output & Depletion & Spawning Output & Depletion & Spawning Output & Depletion \\ 
+ & Year & Catch & Spawning Output & Depletion (\%) & Spawning Output & Depletion (\%) & Spawning Output & Depletion (\%) \\ 
   \hline
- & 2019 & 4339.76 & 3943.77 & 62.92 & 5741.37 & 83.34 & 7505.04 & 96.82 \\ 
-   & 2020 & 4229.15 & 3909.49 & 62.37 & 5744.84 & 83.39 & 7541.79 & 97.29 \\ 
-   & 2021 & 4107.52 & 3857.94 & 61.55 & 5722.83 & 83.07 & 7546.05 & 97.35 \\ 
-  ABC & 2022 & 3983.93 & 3783.71 & 60.37 & 5666.34 & 82.25 & 7503.29 & 96.80 \\ 
-   & 2023 & 3862.33 & 3695.05 & 58.95 & 5586.48 & 81.09 & 7427.39 & 95.82 \\ 
-   & 2024 & 3747.84 & 3599.80 & 57.43 & 5494.03 & 79.75 & 7332.48 & 94.59 \\ 
-   & 2025 & 3643.98 & 3502.09 & 55.87 & 5394.68 & 78.31 & 7226.11 & 93.22 \\ 
-   & 2026 & 3550.87 & 3404.27 & 54.31 & 5291.93 & 76.82 & 7113.04 & 91.76 \\ 
-   & 2027 & 3466.85 & 3307.62 & 52.77 & 5187.98 & 75.31 & 6996.42 & 90.26 \\ 
-   & 2028 & 3389.32 & 3212.89 & 51.26 & 5084.38 & 73.80 & 6878.58 & 88.74 \\ 
+ & 2019 & 4340 & 3944 & 63 & 5741 & 83 & 7505 & 97 \\ 
+   & 2020 & 4229 & 3909 & 62 & 5745 & 83 & 7542 & 97 \\ 
+   & 2021 & 4108 & 3858 & 62 & 5723 & 83 & 7546 & 97 \\ 
+  ABC & 2022 & 3984 & 3784 & 60 & 5666 & 82 & 7503 & 97 \\ 
+   & 2023 & 3862 & 3695 & 59 & 5586 & 81 & 7427 & 96 \\ 
+   & 2024 & 3748 & 3600 & 57 & 5494 & 80 & 7332 & 95 \\ 
+   & 2025 & 3644 & 3502 & 56 & 5395 & 78 & 7226 & 93 \\ 
+   & 2026 & 3551 & 3404 & 54 & 5292 & 77 & 7113 & 92 \\ 
+   & 2027 & 3467 & 3308 & 53 & 5188 & 75 & 6996 & 90 \\ 
+   & 2028 & 3389 & 3213 & 51 & 5084 & 74 & 6879 & 89 \\ 
    \hline
- & 2019 & 1822.00 & 3943.77 & 62.92 & 5741.37 & 83.34 & 7505.04 & 96.82 \\ 
-   & 2020 & 1822.00 & 4022.28 & 64.17 & 5857.17 & 85.02 & 7653.65 & 98.73 \\ 
-   & 2021 & 1822.00 & 4082.53 & 65.13 & 5945.72 & 86.31 & 7767.53 & 100.20 \\ 
-  SPR50 & 2022 & 1822.00 & 4116.72 & 65.68 & 5995.61 & 87.03 & 7829.59 & 101.00 \\ 
-   & 2023 & 1822.00 & 4131.25 & 65.91 & 6016.17 & 87.33 & 7851.89 & 101.29 \\ 
-   & 2024 & 1822.00 & 4132.83 & 65.94 & 6017.09 & 87.34 & 7847.57 & 101.24 \\ 
-   & 2025 & 1822.00 & 4125.08 & 65.81 & 6003.62 & 87.15 & 7823.84 & 100.93 \\ 
-   & 2026 & 1822.00 & 4110.39 & 65.58 & 5979.34 & 86.79 & 7785.59 & 100.44 \\ 
-   & 2027 & 1822.00 & 4090.44 & 65.26 & 5946.86 & 86.32 & 7736.45 & 99.80 \\ 
-   & 2028 & 1822.00 & 4066.56 & 64.88 & 5908.30 & 85.76 & 7679.35 & 99.07 \\ 
+ & 2019 & 1822 & 3944 & 63 & 5741 & 83 & 7505 & 97 \\ 
+   & 2020 & 1822 & 4022 & 64 & 5857 & 85 & 7654 & 99 \\ 
+   & 2021 & 1822 & 4083 & 65 & 5946 & 86 & 7768 & 100 \\ 
+  SPR50 & 2022 & 1822 & 4117 & 66 & 5996 & 87 & 7830 & 101 \\ 
+   & 2023 & 1822 & 4131 & 66 & 6016 & 87 & 7852 & 101 \\ 
+   & 2024 & 1822 & 4133 & 66 & 6017 & 87 & 7848 & 101 \\ 
+   & 2025 & 1822 & 4125 & 66 & 6004 & 87 & 7824 & 101 \\ 
+   & 2026 & 1822 & 4110 & 66 & 5979 & 87 & 7786 & 100 \\ 
+   & 2027 & 1822 & 4090 & 65 & 5947 & 86 & 7736 & 100 \\ 
+   & 2028 & 1822 & 4067 & 65 & 5908 & 86 & 7679 & 99 \\ 
    \hline
 \end{tabular}
 }
