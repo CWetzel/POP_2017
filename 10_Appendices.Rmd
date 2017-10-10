@@ -210,7 +210,11 @@ print(Fish_Length.table,
 
 
 <!-- ************************************AUXILARY FILES************************************************ --> 
-#Appendix D. List of Auxiliary Files Available
+#Appendix D. SSC Discussion Regarding Steepness
+
+
+<!-- ************************************AUXILARY FILES************************************************ --> 
+#Appendix E. List of Auxiliary Files Available
 
 The listed files are also available as auxiliary files to accompany the assessment document:
 
