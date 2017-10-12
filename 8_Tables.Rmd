@@ -1259,12 +1259,13 @@ Recruits = print(mod1$timeseries$Recruit_0[ind], digits =0 )
 
 
 Tot.Mortality = aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch)$kill_bio
+Tot.Mortality = Tot.Mortality[2:length(Tot.Mortality)]
 SPR = as.numeric(print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$Label), 'Value'],digits = 2) )* SPR.target
-SPR = SPR[1:length(Tot.Mortality)]
+SPR = c( SPR[1:length(Tot.Mortality)], "-")
 #SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
-Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 3)))#, rep("-", Project_lastyr-LastYR))
+Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 3)), "-" ) #, rep("-", Project_lastyr-LastYR))
 
-#Tot.Mortality = c( print(Tot.Mortality, 0), rep("-", Project_lastyr-LastYR))
+Tot.Mortality = c( print(Tot.Mortality, 0), "-") #, rep("-", Project_lastyr-LastYR))
 
 
 # Bind all the columns together for the table
