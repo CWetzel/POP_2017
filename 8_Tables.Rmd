@@ -1242,20 +1242,29 @@ print(Like.table,
 <!-- *********************TIME SERIES TABLE************************* --> 
 ```{r, results='asis'}
 
-Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
-Bio_all = mod1$timeseries$Bio_all[mod1$timeseries$Yr >= Dat_start_mod1]
-SpawningB = as.numeric(print( mod1$timeseries$SpawnBio[mod1$timeseries$Yr >= Dat_start_mod1], digits = 0))
-SummaryBio = mod1$timeseries$Bio_smry[mod1$timeseries$Yr >= Dat_start_mod1]
+#Year = mod1$timeseries$Yr[mod1$timeseries$Yr >= Dat_start_mod1]
+#Bio_all = mod1$timeseries$Bio_all[mod1$timeseries$Yr >= Dat_start_mod1]
+#SpawningB = as.numeric(print( mod1$timeseries$SpawnBio[mod1$timeseries$Yr >= Dat_start_mod1], digits = 0))
+#SummaryBio = mod1$timeseries$Bio_smry[mod1$timeseries$Yr >= Dat_start_mod1]
+#Depletion = print(SpawningB / SpawningB[1], digits = 2)
+#Recruits = print(mod1$timeseries$Recruit_0[mod1$timeseries$Yr >= Dat_start_mod1], digits =0 )
+
+ind = mod1$timeseries$Yr >= Dat_start_mod1 & mod1$timeseries$Yr <= LastYR
+Year = mod1$timeseries$Yr[ind]
+Bio_all = mod1$timeseries$Bio_all[ind]
+SpawningB = as.numeric(print( mod1$timeseries$SpawnBio[ind], digits = 0))
+SummaryBio = mod1$timeseries$Bio_smry[ind]
 Depletion = print(SpawningB / SpawningB[1], digits = 2)
-Recruits = print(mod1$timeseries$Recruit_0[mod1$timeseries$Yr >= Dat_start_mod1], digits =0 )
+Recruits = print(mod1$timeseries$Recruit_0[ind], digits =0 )
 
 
 Tot.Mortality = aggregate(kill_bio ~ Yr, FUN = sum, mod1$catch)$kill_bio
 SPR = as.numeric(print(mod1$derived_quants[grep('SPRratio', mod1$derived_quants$Label), 'Value'],digits = 2) )* SPR.target
-SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
-Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 3)), rep("-", Project_lastyr-LastYR))
+SPR = SPR[1:length(Tot.Mortality)]
+#SPR = c( SPR[1:length(Tot.Mortality)],  rep("-", Project_lastyr-LastYR))
+Exploited = c( as.numeric(print(Tot.Mortality / SummaryBio[1:length(Tot.Mortality)], digits = 3)))#, rep("-", Project_lastyr-LastYR))
 
-Tot.Mortality = c( print(Tot.Mortality, 0), rep("-", Project_lastyr-LastYR))
+#Tot.Mortality = c( print(Tot.Mortality, 0), rep("-", Project_lastyr-LastYR))
 
 
 # Bind all the columns together for the table
