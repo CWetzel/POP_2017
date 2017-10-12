@@ -34,7 +34,7 @@
 <!-- *************************  FIGURE 2  ********************************* -->
 <!-- ********************************************************************** -->
   
-![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](r4ss/plots_mod1/data_plot.png)
+![Summary of data sources used in the `r mod1_label`. \label{fig:data_plot}](Figures/data_plot_wo_tri.png)
 
 \FloatBarrier
 
