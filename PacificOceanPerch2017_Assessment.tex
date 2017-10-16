@@ -657,7 +657,7 @@ Uncertainties}
 
 \begin{enumerate}
 
-\item The current data for Pacific ocean perch weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models the used the median to the 2017 steepness prior (0.72) resulted in an estimated a stock size near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey which were deemed implausible by the Scientific and Statistical Committee (SSC).  A steepness value in the final model was determined by calculating spawning biomass across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated which corresponded with a steepness value of 0.50.  Additional research for alternative methods for determining an appropriate steepness values when traditional approaches do not seem appropriate.  
+\item The current data for Pacific ocean perch weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models the used the mean to the 2017 steepness prior (0.72) resulted in an estimated a stock size near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey which were deemed implausible by the Scientific and Statistical Committee (SSC).  A steepness value in the final model was determined by calculating spawning biomass across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated which corresponded with a steepness value of 0.50.  Additional research for alternative methods for determining an appropriate steepness values when traditional approaches do not seem appropriate.  
 
 \item Pacific ocean perch off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the observation variability. While this comment is not intended to reflect badly on the STAT's capabilities, it is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
   
@@ -1690,7 +1690,7 @@ were based on maturity-at-age (Figure \ref{fig:mat_compare}).
 
 In this assessment, the beta prior developed from a meta-analysis of
 West Coast groundfish was updated to the 2017 value (James Thorson,
-personal communication, NWFSC, NOAA)in preliminary models, with
+personal communication, NWFSC, NOAA) in preliminary models, with
 steepness fixed at an alternative value in the final base model. The
 estimated spawning output, relative stock status, and model diagnostics
 in preliminary models using the steepness prior were deemed unrealistic
@@ -1818,13 +1818,13 @@ James Thorson (personal communication, NWFSC, NOAA) which was reviewed
 and endorsed by the Scientific and Statistical Committee (SSC) in 2017.
 The prior is a beta distribution with \(\mu\)=0.72 and \(\sigma\)=0.15.
 However, fixing steepness within the model resulted in what was deemed
-to be an unrealistic relative depletion level (e.g.~near unfished
-conditions) with very low catchability by the NWFSC shelf-slope survey.
-The SSC recommended fixing steepness, determined by the expected
+to be on the verge of implausible with very low catchability by the
+NWFSC shelf-slope survey. The Groundfish Subcommittee of the SSC (GFSC)
+recommended fixing steepness, determined by the expected
 (i.e.~arithmetic mean) spawning output value across a range of steepness
 values (see Appendix D, section
-\ref{appendix-d.-ssc-discussion-regarding-steepness} for SSC
-subcommittee comments). The steepness value of 0.50 that most closely
+\ref{appendix-d.-ssc-groundfish-subcommittee-discussion-regarding-steepness}
+for GFSC comments). The steepness value of 0.50 that most closely
 corresponded with the expected spawning output was used in the final
 base model. The previous assessment estimated and fixed steepness equal
 to 0.40. The current data do not contain information regarding
@@ -1972,9 +1972,9 @@ current model, there was no longer support for a steepness value of
 0.40. The likelihood profile was flat across various levels of steepness
 with a very small improvement in likelihood (\textless{}0.50 log
 likelihood units) at the lowest steepness values. Estimating steepness
-starting at the median of the ``type C'' prior, the meta-analysis prior
+starting at the mean of the ``type C'' prior, the meta-analysis prior
 evaluated omitting information from Pacific ocean perch, of 0.76
-resulted in very little if any movement from the median value due to the
+resulted in very little if any movement from the mean value due to the
 flat likelihood surface across values for this parameter with the final
 relative stock status for 2017 being estimated to \textgreater{} 100\%
 of unfished spawning output. The base model fixed steepness at 0.50,
@@ -1984,7 +1984,7 @@ assuming each value to be equally plausible. The expected (i.e
 arithmetic mean) spawning output was identified and the most closely
 corresponding steepness of 0.50 was selected for use in the final base
 model. Model sensitivities are provided when steepness was fixed at the
-2011 value of 0.40 or when fixed at the median of the current prior of
+2011 value of 0.40 or when fixed at the mean of the current prior of
 0.72.
 
 \subsubsection{Convergence}\label{convergence}
@@ -2090,11 +2090,11 @@ should be conducted.}
 STAR Recommendation: The next iteration of this assessment could be an
 update assessment.
 
-SSC Recommendation: Given the considerable uncertainty associated with
+GFSC Recommendation: Given the considerable uncertainty associated with
 the assessment, the GFSC recommends that the next assessment be a full
 assessment.
 
-\emph{STAT response: We agree with the SSC recommmendation.}
+\emph{STAT response: We agree with the GFSC recommmendation.}
 
 Additionally, a number of general recommendations were made for all West
 Coast assessments:
@@ -2406,7 +2406,7 @@ assumptions and data and were not performed in a cumulative fashion.
   
   \item Fixed steepness at the value assumed in the 2011 assessment of 0.40.
   
-  \item Fixed steepness at the median of the 2017 steepness prior of 0.72.
+  \item Fixed steepness at the mean of the 2017 steepness prior of 0.72.
   
   \item Maturity relationship used in the previous assessment.
   
@@ -5121,18 +5121,18 @@ Pacific ocean perch. \label{fig:Excluded_Data_depl}}
 
 \newpage
 
-\section{Appendix D. SSC Discussion Regarding
-Steepness}\label{appendix-d.-ssc-discussion-regarding-steepness}
+\section{Appendix D. SSC Groundfish Subcommittee Discussion Regarding
+Steepness}\label{appendix-d.-ssc-groundfish-subcommittee-discussion-regarding-steepness}
 
-The Pacific ocean perch base model is highly sensitive to steepness. The
-final base model the profile over steepness is flat across a wide range
-of potential values. The flat profile over steepness was in contrast to
-the previous assessment model from 2011 where the likelihood was
-minimized at a value of 0.40. The change in perceived information
+The Pacific ocean perch base model is highly sensitive to steepness. In
+the final base model the profile over steepness is flat across a wide
+range of potential values. The flat profile over steepness was in
+contrast to the previous assessment model from 2011 where the likelihood
+was minimized at a value of 0.40. The change in perceived information
 regarding steepness between this and the last assessment is due to the
 new data since 2011, the updated data weighting approach, and minor
 changes in model structure. Given the lack of information regarding
-steepness, preliminary models explored using the median of the 2017
+steepness, preliminary models explored using the mean of the 2017
 steepness prior, the approach endorsed by the SSC when there is not
 information regarding steepness for a specific stock. However, using the
 steepness prior of 0.72 resulted in Pacific ocean perch being estimated
@@ -5146,72 +5146,70 @@ from when steepness was assumed to be 0.40, the previous assessment
 value, and 0.72, the current steepness value. Over the course of the
 week of the STAR panel after many discussions both the STAR panel and
 the STAT team agreed that in the absence of information regarding
-steepness the base model should use the median of the prior. However,
-upon review by the SSC, it was concluded that the results of the
-assessment model were implausible when the steepness prior of 0.72. In
+steepness the base model should use the mean of the prior. However, upon
+review by the SSC, it was concluded that the results of the assessment
+model were implausible when the steepness prior of 0.72 was used. In
 particular, the value of catchability for Pacific ocean perch from the
 NWFSC shelf-slope survey was 0.05, far below that for other rockfish
-species observed off the US west coast. The SSC Groundfish Sub-Committee
-requested additional model exploration be done for the September 28,
-2017 meeting regarding steepness and re-examining the information
-provied by the Triennial shelf survey.
+species observed off the US west coast. The SSC requested additional
+model exploration be done and reviewed at the SSC Groundfish
+Subcommittee (GFSC) September 28, 2017 meeting regarding steepness and
+re-examining the information provided by the Triennial shelf survey.
 
 Preliminary models included the Triennial shelf survey which was removed
 from the final base model during the STAR panel due to model lack of fit
 to this data-set which was in contrast to all other available data and
 concerns that this survey did not sample a representative subset of the
-population off the US west coast. Additionally, the model results with
-and without the Triennial survey data, given the value of steepness,
-were negligible indicating that the other sources of information were
-the more influential data in the model. However, profiles over steepness
-from preliminary models which included the Triennial shelf survey
-indicated that the index of abundance supported low steepness values
-(there was no information from the length or age composition data). The
-perceived information regarding steepness from this index of abundance
-is due to a change in the abundance index between the first two data
-points of the Triennial shelf survey, 1980 and 1983, which are higher
-than the subsequent years that drop to lower abundance levels from 1986
-to 2004 (final year of the survey). A profile over steepness values when
-the Triennial shelf survey was used as a single time-series resulted in
-a profile that had a local minima of 0.75 with global minimum occurring
-at a steepness value of 0.27 (Figure \ref{fig:Tri_Profile}). The
-estimated stock status when assuming a steepness value of 0.27, a value
-that is far lower than any other observed steepness value for a US west
-coast groundfish stock, was less that 10\% of the unfished spawning
-output in 2017. The STAT team and the SSC Groundfish Sub-Committee
-agreed that this was not a plausible result given the extensive efforts
-to rebuild Pacific ocean perch, nor is the value of steepness plausible
-given the results of the steepness meta-analysis.
+population off the US west coast. Additionally, the estimates of
+spawning output and depletion with and without the Triennial survey
+data, given the value of steepness, were negligible indicating that the
+other sources of information were the more influential data in the
+model. However, profiles over steepness from preliminary models which
+included the Triennial shelf survey indicated that the index of
+abundance supported low steepness values (there was no information from
+the length or age composition data). The perceived information regarding
+steepness from this index of abundance is due to a change in the
+abundance index between the first two data points of the Triennial shelf
+survey, 1980 and 1983, which are higher than the subsequent years that
+drop to lower abundance levels from 1986 to 2004 (final year of the
+survey). A profile over steepness values when the Triennial shelf survey
+was used as a single time-series resulted in a profile that had a local
+minimum at 0.75 with global minimum occurring at a steepness value of
+0.27 (Figure \ref{fig:Tri_Profile}). The estimated stock status when
+assuming a steepness value of 0.27, a value that is far lower than any
+other estimated steepness value for a US west coast groundfish stock,
+was less that 10\% of the unfished spawning output in 2017. The STAT
+team and the SSC GFSC agreed that this was not a plausible based upon
+other estimated steepness values from US west coast groundfish.
 
-The models explored regarding steepness either using the median of the
+The models explored regarding steepness either using the mean of the
 prior or the value supported by the Triennial shelf survey index led to
 quite different estimates of depletion for Pacific ocean perch in 2017.
 Given the insufficient information to estimate steepness within the
 model an alternative approach for determining steepness was proposed by
-Dr.~Owen Hamel during the SSC Groundfish Sub-Committee held on September
-28, 2017. The subcommittee states that:
+Dr.~Owen Hamel during the SSC GFSC webinar held on September 28, 2017.
+The subcommittee states that:
 
-\emph{The GFSC {[}Groundfish Sub-Committee{]} therefore concluded that
-the available data are insufficient to estimate steepness. It is usual
-in this situation to base the assessment on the mean of the prior for
-steepness (0.72), but this value leads to an unrealistically low
-estimate of survey catchability (i.e.~model A {[}fixing steepness at
-0.27{]}), and the prior is rather diffuse with comparable support for
-values anywhere between 0.4 and 1.0. Dr.~Hamel provided a way to account
-for uncertainty in steepness that the GFSC recommends be adopted. This
-involves calculating current ending spawning output biomass for
-steepness values ranging from 0.25 to 0.95 in increments of 0.05 and
-assuming each value to be equally plausible). The expected (i.e.,
-arithmetic mean) ending spawning output is 5,364 million eggs, which
-corresponds most closely to a steepness value of 0.5 (5,296 million eggs
-for the run in the profile). Thus, the model in which steepness is set
-to 0.5 represents the expected ending spawning output given steepness
-values between 0.225 and 0.975 are considered equally likely.}
+\emph{The GFSC therefore concluded that the available data are
+insufficient to estimate steepness. It is usual in this situation to
+base the assessment on the mean of the prior for steepness (0.72), but
+this value leads to an unrealistically low estimate of survey
+catchability (i.e.~model A {[}fixing steepness at 0.27{]}), and the
+prior is rather diffuse with comparable support for values anywhere
+between 0.4 and 1.0. Dr.~Hamel provided a way to account for uncertainty
+in steepness that the GFSC recommends be adopted. This involves
+calculating current ending spawning output biomass for steepness values
+ranging from 0.25 to 0.95 in increments of 0.05 and assuming each value
+to be equally plausible). The expected (i.e., arithmetic mean) ending
+spawning output is 5,364 million eggs, which corresponds most closely to
+a steepness value of 0.5 (5,296 million eggs for the run in the
+profile). Thus, the model in which steepness is set to 0.5 represents
+the expected ending spawning output given steepness values between 0.225
+and 0.975 are considered equally likely.}
 
-\emph{The GFSC {[}Groundfish Sub-Committee{]} therefore recommends that
-the base model be revised to fix steepness to 0.5. The final base model
-should be retuned, checked by jittering, and presented to the SSC for
-final approval and adoption.}
+\emph{The GFSC therefore recommends that the base model be revised to
+fix steepness to 0.5. The final base model should be retuned, checked by
+jittering, and presented to the SSC for final approval and adoption.}
 
 The STAT team agreed with the recommendation to fix steepness at 0.50
 for the Pacific ocean perch base model.
