@@ -197,9 +197,9 @@ align(Exec_catch.table) = c('l', 'l',
  
   colnames(Spawn_Deplete) = c('Year', 
                               paste('Spawning Output (', fecund_unit, ')', sep = ''), 
-                              '~ 95% confidence interval',
-                              'Estimated depletion',
-                              '~ 95% confidence interval')
+                              '~ 95% Confidence Interval',
+                              'Estimated Depletion',
+                              '~ 95% Confidence Interval')
         
   # Assign a model number to the Spawn_deplete table, if you do cbind within this step
   assign(paste('SpawnDeplete_',mod_area,sep=''), Spawn_Deplete)
@@ -226,7 +226,8 @@ align(Exec_catch.table) = c('l', 'l',
 # Model 1 table ---------------------------------------------------------------
 Spawn_Deplete_mod1.table = xtable(SpawnDepletemod1, 
                            caption = paste0('Recent trend in estimated spawning output (', fecund_unit, ') and estimated relative spawning output (depletion).'), 
-                           label='tab:SpawningDeplete_mod1')#, digits=2)  
+                           label='tab:SpawningDeplete_mod1',  
+                           digits = c(0, 0, 0, 0, 3, 2)) 
 
 # Add column spacing    
 align(Spawn_Deplete_mod1.table) = c('l', 'l', 
@@ -276,7 +277,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   
   Recruittab=subset(Recruityrs, select = c('YEAR', 'Value', 'CI'))
   
-  colnames(Recruittab) = c('Year',paste0('Estimated Recruitment'), '~ 95% confidence interval')
+  colnames(Recruittab) = c('Year',paste0('Estimated Recruitment'), '~ 95% Confidence Interval')
   
   assign(paste('Recruittab_',mod_area,sep=''), Recruittab)
   
@@ -288,7 +289,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
   RecDevs$CI = paste0(print.numeric(RecDevs$lowerCI, digits = 3), ' - ', print.numeric(RecDevs$upperCI, digits = 3))
   RecDevs$Value = round(RecDevs$Value, digits = 3)
   RecDevtab=subset(RecDevs, select = c('Value', 'CI'))
-  colnames(RecDevtab) = c(paste0('Estimated Recruitment Devs.'), '~ 95% confidence interval')
+  colnames(RecDevtab) = c(paste0('Estimated Recruitment Devs.'), '~ 95% Confidence Interval')
   
   # Paste the data frames together
   Recruit_All = cbind(Recruittab_mod1, RecDevtab)
@@ -299,7 +300,8 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 # Model 1 table
 Recruit_mod1.table = xtable(Recruit_All, 
                             caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model', sep='')),
-                            label = 'tab:Recruit_mod1')
+                            label = 'tab:Recruit_mod1',
+                            digits = c(0, 0, 0, 0, 3, 2))
 
 align(Recruit_mod1.table) = c('l',
                               '>{\\centering}p{.8in}',
@@ -338,7 +340,7 @@ align(Recruit_mod1.table) = c('l',
   
   Exploittab = subset(Exploityrs, select=c('Value', 'CI'))
  
-   colnames(Exploittab) = c('Exploitation rate', '~ 95% confidence interval')
+   colnames(Exploittab) = c('Exploitation Rate', '~ 95% Confidence Interval')
         
         
   # Spawning potential ratio and calculate lower and upper 95% CI  
@@ -357,7 +359,7 @@ align(Recruit_mod1.table) = c('l',
   
   SPRratiotab$Year = as.factor(SPRratiotab$Year)
   
-  colnames(SPRratiotab) = c('Year', '(1-SPR)/ (1-SPR50%)', '~ 95% confidence interval')
+  colnames(SPRratiotab) = c('Year', '(1-SPR)/ (1-SPR50%)', '~ 95% Confidence Interval')
       
   assign(paste('SPRratio_Exploit_', mod_area, sep=''), cbind(SPRratiotab, Exploittab))
 
@@ -497,8 +499,8 @@ colnames(mngmnt) = c('Year',
                      'OFL (mt; ABC prior to 2011)',  
                      'ABC (mt)', 
                      'ACL (mt; OY prior to 2011)', 
-                     'Total landings (mt)',
-                     'Estimated total catch (mt)')
+                     'Total Landings (mt)',
+                     'Estimated Total Catch (mt)')
 
 # Create the management performance table
 mngmnt.table = xtable(mngmnt, 
