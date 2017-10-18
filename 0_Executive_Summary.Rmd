@@ -68,10 +68,10 @@ The predicted spawning output from the base model generally showed a slight decl
 
 ```
 
-![Time-series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
+![Estimated time-series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the base assessment model.  \label{fig:Spawnbio_all}](`r spawn.file`)
 
 
-![Estimated spawning output depletion with approximate 95% asymptotic confidnce intervals (dashed lines) for the base assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
+![Estimated time-series of relative spawning output (depletion) (circles and line: median; light broken lines: 95% credibility intervals) for the base assessment model. \label{fig:RelDeplete_all}](`r Bratio.file`)
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 ```{r, results='asis'}

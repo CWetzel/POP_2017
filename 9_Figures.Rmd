@@ -268,7 +268,7 @@
 <!-- ***********************Fits to the Indices**************************** --> 
 <!-- ********************************************************************** -->
 
-![Estimated fits to the CPUE and survey indices for `r spp`. \label{fig:index_fits}](r4ss/plots_mod1/POP_index_fits.png)
+![Estimated fits to the survey indices for `r spp`. \label{fig:index_fits}](r4ss/plots_mod1/POP_index_fits.png)
 
 \FloatBarrier 
 
@@ -415,7 +415,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
 <!-- ********************Time-Series Figures******************************* -->
 <!-- ====================================================================== -->
   
-![Estimated time-series of spawning output for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
+![Estimated time-series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for `r spp`. \label{fig:ssb}](r4ss/plots_mod1/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
   
 \FloatBarrier
 
@@ -423,7 +423,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
 
 \FloatBarrier
 
-![Estimated time-series of relative biomass for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+![Estimated time-series of relative spawning output (depletion) (circles and line: median; light broken lines: 95% credibility intervals) for `r spp`. \label{fig:depl}](r4ss/plots_mod1/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
   
 \FloatBarrier
 
@@ -441,7 +441,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
 
 \FloatBarrier
 
-![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens1_depl}](Figures/depl_sens1.png)
+![Time-series of relative spawning output (depletion) for model sensitivities for `r spp`. \label{fig:sens1_depl}](Figures/depl_sens1.png)
 
 \FloatBarrier
 
@@ -449,7 +449,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
 
 \FloatBarrier
 
-![Time-series of relative biomass for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
+![Time-series of relative spawning outptut (depletion) for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
 
 \FloatBarrier
   
@@ -481,7 +481,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
   
 \FloatBarrier
 
-![Trajectories of relative biomass across values of steepness. \label{fig:h_trajectory}](Figures/h_trajectories.png)
+![Trajectories of relative spawning output (depletion) across values of steepness. \label{fig:h_trajectory}](Figures/h_trajectories.png)
   
 \FloatBarrier
   
@@ -491,7 +491,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
   
 \FloatBarrier
 
-![Trajectories of relative biomass across values of natural mortality. \label{fig:m_trajectory}](Figures/m_trajectories.png)
+![Trajectories of relative spawning output (depletion) across values of natural mortality. \label{fig:m_trajectory}](Figures/m_trajectories.png)
   
 \FloatBarrier
   
