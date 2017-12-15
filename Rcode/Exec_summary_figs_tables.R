@@ -299,7 +299,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 
 # Model 1 table
 Recruit_mod1.table = xtable(Recruit_All, 
-                            caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model', sep='')),
+                            caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model. The recruitment deviaitons for 2016 and 2017 were fixed at zero within the model.', sep='')),
                             label = 'tab:Recruit_mod1',
                             digits = c(0, 0, 0, 0, 3, 2))
 
@@ -369,7 +369,7 @@ align(Recruit_mod1.table) = c('l',
 
 # Model 1 
 SPRratio_Exploit_mod1.table = xtable(SPRratio_Exploit_mod1, 
-                              caption=c(paste('Recent trend in spawning potential ratio (1-SPR)/(1-SPR50) and summary exploitation rate for ', spp, '.' , sep='')), 
+                              caption=c(paste('Recent trend in spawning potential ratio (1-SPR)/(1-SPR50) and summary exploitation rate for age 3+ biomass for ', spp, '.' , sep='')), 
                               label='tab:SPR_Exploit_mod1', digits = 3)  
       
 align(SPRratio_Exploit_mod1.table) = c('l','l',
@@ -507,7 +507,7 @@ mngmnt.table = xtable(mngmnt,
                       caption=c('Recent trend in total catch and  
                               landings (mt) relative to the management guidelines. 
                               Estimated total catch reflect the landings 
-                              plus the model estimated discarded biomass.'), 
+                              plus the model estimated discarded biomass based on discard rate data.'), 
                       label='tab:mnmgt_perform')
 # Add alignment
 align(mngmnt.table) = c('l',
@@ -590,10 +590,12 @@ align(mngmnt.table) = c('l',
                                    'Depletion (%)')
       
        decision_mod1.table = xtable(decision_mod1, 
-                                    caption = c(paste('Summary of 10-year 
+                                    caption = c(paste('Decision table summary of 10-year 
                                              projections beginning in ', LastYR+2,' 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
+                                             an axis of uncertainty for the base model. The removals in 2018 and 2019 were set at the defined management 
+                                             specification of 281 mt for each year assuming full attainment.
+                                             The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
                                              from the uncertainty around final spawning biomass.
                                              Columns range over low, mid, and high
                                              states of nature, and rows range over different 

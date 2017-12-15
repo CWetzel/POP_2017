@@ -315,7 +315,7 @@ practices. The fishery fleet estimated a retention curve based on
 discarding data and known management restrictions. However, very little
 if any discarding is assumed to have occurred by the foreign fleet and
 the catch reported by the at-sea hake fishery accounts for both
-discarded and landed fish and hence, no additional mortality was
+discarded and landed fish and hence, no additional discard mortality was
 estimated for each of these fleets.
 
 The assessment uses landings data and discard-fraction estimates; survey
@@ -335,7 +335,7 @@ relatively flat likelihood surfaces, such that fixing parameters and
 then varying them in sensitivity analyses was deemed the best way to
 characterize uncertainty.
 
-Although this assessment using many types of data since the 1980s, there
+Although this assessment uses many types of data since the 1980s, there
 is little information about steepness and natural mortality. Estimates
 of steepness are uncertain partly because of highly variable
 recruitment. Uncertainty in natural mortality is common in many fish
@@ -434,7 +434,7 @@ the base model with 95\% confidence or credibility intervals.
 
 \begin{table}[ht]
 \centering
-\caption{Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model} 
+\caption{Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model. The recruitment deviaitons for 2016 and 2017 were fixed at zero within the model.} 
 \label{tab:Recruit_mod1}
 \begin{tabular}{>{\centering}p{.8in}>{\centering}p{1.0in}>{\centering}p{1.4in}>{\centering}p{1.0in}>{\centering}p{1.4in}}
   \hline
@@ -473,7 +473,7 @@ significantly below target levels.
 
 \begin{table}[ht]
 \centering
-\caption{Recent trend in spawning potential ratio (1-SPR)/(1-SPR50) and summary exploitation rate for Pacific ocean perch.} 
+\caption{Recent trend in spawning potential ratio (1-SPR)/(1-SPR50) and summary exploitation rate for age 3+ biomass for Pacific ocean perch.} 
 \label{tab:SPR_Exploit_mod1}
 \begin{tabular}{l>{\centering}p{0.9in}>{\centering}p{1.2in}>{\centering}p{1.2in}>{\centering}p{1.2in}}
   \hline
@@ -510,7 +510,9 @@ The last year in the time-series is 2016. \label{fig:SPR_all}}
 \centering
 \includegraphics{r4ss/plots_mod1/SPR4_phase.png}
 \caption{Phase plot of estimated (1-SPR)/(1-SPR50\%) vs.~depletion
-(B/Btarget) for the base case model.\label{fig:Phase_all}}
+(B/Btarget) for the base case model. The red circle indicates 2016
+estimated status and exploitation for Pacific ocean perch.
+\label{fig:Phase_all}}
 \end{figure}
 
 \FloatBarrier
@@ -548,7 +550,7 @@ often targets larger, older fish and years of fishing mortality results
 in a truncated age-structure when compared to unfished conditions.
 Rockfish are often associated with habitats containing living structure
 such as sponges and corals, and fishing may alter that habitat to a less
-desirable state. This assessment provides a look at the effects of
+productive state. This assessment provides a look at the effects of
 fishing on age structure, and recent studies on essential fish habitat
 are beginning to characterize important locations for rockfish
 throughout their life history; however, there is little current
@@ -626,7 +628,7 @@ far below the Overfishing Limit (OFL) and Acceptable Biological Catch
 \caption{Recent trend in total catch and  
                               landings (mt) relative to the management guidelines. 
                               Estimated total catch reflect the landings 
-                              plus the model estimated discarded biomass.} 
+                              plus the model estimated discarded biomass based on discard rate data.} 
 \label{tab:mnmgt_perform}
 \scalebox{0.9}{
 \begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}>{\centering}p{1.1in}}
@@ -657,11 +659,11 @@ Uncertainties}
 
 \begin{enumerate}
 
-\item The current data for Pacific ocean perch weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models the used the mean to the 2017 steepness prior (0.72) resulted in an estimated a stock size near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey which was deemed implausible by the Scientific and Statistical Committee (SSC).  A steepness value in the final model was determined by calculating spawning output across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated and the steepness value most closely associated with the expected value was identified, a value of 0.50.  Additional research for alternative approaches for determining steepness values when traditional approaches do not seem appropriate should be identified.  
+\item The current data for Pacific ocean perch weighted according to the Francis weighting approach do not contain information regarding steepness.  The estimated final status is highly dependent upon the assumed steepness value, as is typical for most US west coast groundfish assessments.  The data available and the modeling approach applied in 2011 supported a steepness value of 0.40.  However, the current data no longer support this value.  Models that used the mean to the 2017 steepness prior (0.72) resulted in stock size estimates near unfished conditions leading to low survey catchabiltiy for the NWFSC shelf-slope survey that the Scientific and Statistical Committee (SSC) deemed implausible.  A steepness value for the final model was determined by a form of model averaging. Spawning output was calculated across a range of steepness values (0.25-0.95) which were considered equally likely.  The expected (i.e. arithmetic mean) ending spawning output was calculated and the steepness value most closely associated with the expected value was identified, a value of 0.50.  Additional research for alternative approaches for determining steepness values when traditional approaches do not seem appropriate should be identified.  
 
-\item Pacific ocean perch off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the observation variability. While this comment is not intended to reflect badly on the STAT's capabilities, it is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
+\item Pacific ocean perch off the US west coast may be a fraction of a much large population extending into Canada or even Alaska. Modelling only a part of the total population might contribute to the lack of correspondence between the survey indices and other data sources, as seen in the ln($R0$) profiles and age-structured production model diagnostics as well as some of the lack of fit to the observations. It is important to recognize that stock structure could potentially be a major source of uncertainty regarding the assessment results.
   
-\item The indices of abundance used in the final base model provide almost no information on population scale, as demonstrated in the ln($R0$) profiles examined during the review. The Triennial survey was the only index that provided signal with respect to population scale. However, this survey was removed in the final base model due to concerns about the quality of the survey and conflicts with other data. There are large amounts of composition data in the model, with both age- and length-compositions being included for some fleets. The compositional data and catch are providing the majority of the information on the estimated and derived quantities.
+\item The indices of abundance used in the final base model provide almost no information on population scale, as demonstrated in the ln($R0$) profiles examined during the review. The Triennial survey was the only index that provided signal with respect to population scale. However, this survey was removed in the final base model due to concerns about the quality of the survey and conflicts with other data.
 
 \item Use of conditional-age-at-length composition data provides information on parameters beyond those of the length-at-age relationship. The conditional-age-at-length data are robust to length-based processes (Piner et al. 2016), however they are also influenced by age-based processes (Lee et al. 2017). No age-based processes were used in the assessment model as a link to the data, meaning that the conditional-age-at-length data were assumed to be unbiased with respect to the population. The conditional-age-at-length data were shown to be very influential on the estimated dynamics beyond growth estimates. More theoretical work in this area is needed to understand how to best the use this type of information and what potential systems or observation model processes could invalidate the assumption of randomness at length.
 
@@ -672,19 +674,20 @@ Uncertainties}
 
 Model uncertainty has been described by the estimated uncertainty within
 the base model and by the sensitivities to different model structure.
-The results from the final base model were sensitivey to both the
-assumed steepness or natural mortality values. The STAT team and the
-STAR panel agreed to select natural mortality (\(M\)) as the main axis
-for uncertainty when projecting the population under alternative harvest
+The results from the final base model were sensitive to both the assumed
+steepness or natural mortality values. The STAT team and the STAR panel
+agreed to select natural mortality (\(M\)) as the main axis for
+uncertainty when projecting the population under alternative harvest
 strategies. The 12.5\% and 87.5\% quantiles based on spawning output
 uncertainty were used to determine the low and high values for \(M\) of
 0.04725 and 0.0595 yr\textsuperscript{-1}.
 
 Due to the sensitivity associated with the assessment given the assumed
 steepness value the assessment is classified as a Category 2 stock
-assessment. Therefore, the sigma for P* to determine the catch reduction
-to account for scientific uncertainty is 0.72, since the estimated sigma
-in the assessment is less than this for current spawning biomass (0.27).
+assessment, with a default sigma of 0.72. This default sigma is used to
+determine the catch reduction to account for scientific uncertainty
+because the estimated sigma for current spawning biomass in the
+assessment is (0.27).
 
 \begin{table}[ht]
 \centering
@@ -713,10 +716,12 @@ Year & OFL & ABC & Spawning Output (million eggs) & Relative Depletion (\%) \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of 10-year 
+\caption{Decision table summary of 10-year 
                                              projections beginning in 2019 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
+                                             an axis of uncertainty for the base model. The removals in 2018 and 2019 were set at the defined management 
+                                             specification of 281 mt for each year assuming full attainment.
+                                             The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
                                              from the uncertainty around final spawning biomass.
                                              Columns range over low, mid, and high
                                              states of nature, and rows range over different 
@@ -764,7 +769,7 @@ Year & OFL & ABC & Spawning Output (million eggs) & Relative Depletion (\%) \\
 \subsection*{Research and Data Needs}\label{research-and-data-needs}
 \addcontentsline{toc}{subsection}{Research and Data Needs}
 
-There are many areas of research that could be improved to benefit the
+There are many areas of research that could be undertaked to benefit the
 understanding and assessment of Pacific ocean perch. Below, are issues
 that are considered of importance.
 
@@ -772,7 +777,7 @@ that are considered of importance.
 
 \item \textbf{Natural mortality}: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for Pacific ocean perch. The collection of additional age data, re-reading of older age samples, reading old age samples that are unread, and improved understanding of the life history of Pacific ocean perch may reduce that uncertainty.
 
-\item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understating regarding the steepness parameter for US west coast Pacific ocean perch will reduce our uncertainty regarding current stock status.
+\item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understanding regarding the steepness parameter for US west coast Pacific ocean perch will reduce our uncertainty regarding current stock status.
 
 \item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for Pacific ocean perch off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west coast observations would help to define the connectivity between Pacific ocean perch north and south of the US-Canada border.
 
@@ -846,9 +851,10 @@ unique geography and oceanic conditions (Seeb and Gunderson
 \protect\hyperlink{ref-withler_co-existing_2001}{2001}) with, notably, a
 separate stock off of Vancouver Island, no significant genetic
 differences have been found in the range covered by this assessment.
-Pacific ocean perch show dimorphic growth, with females reaching a
-slightly larger size than males. Males and females are equally abundant
-on rearing grounds at age 1.5.
+However, studies looking for genetic difference in the range of this
+assessment are limited. Pacific ocean perch show dimorphic growth, with
+females reaching a slightly larger size than males. Males and females
+are equally abundant on rearing grounds at age 1.5.
 
 The Pacific ocean perch population has been modeled as a single stock
 off of the US west coast (essentially northern California to the
@@ -904,11 +910,11 @@ Pacific ocean perch stocks to levels that would produce Maximum
 Sustainable Yield (MSY) within 20 years. On the basis of cohort analysis
 (Gunderson \protect\hyperlink{ref-gunderson_results_1978}{1978}), the
 PFMC set Acceptable Biological Catch (ABC) levels at 600 mt for the US
-portion of the Vancouver INPFC area and 950 mt for the Columbia
-International North Pacific Fishery Commission (INPFC) area. To
-implement this strategy, the states of Oregon and Washington each
-established landing limits for Pacific ocean perch. Trawl trip limits of
-various forms remained in effect through 2016 (Table \ref{tab:Regs}).
+portion of the Vancouver International North Pacific Fishery Commission
+(INPFC) area and 950 mt for the Columbia INPFC area. To implement this
+strategy, the states of Oregon and Washington each established landing
+limits for Pacific ocean perch. Trawl trip limits of various forms
+remained in effect through 2016 (Table \ref{tab:Regs}).
 
 The landings of Pacific ocean perch have been historically governed by
 harvest guidelines and trip limits, while recently management has
@@ -952,7 +958,17 @@ quota, accounting for approximately 25\% of all rockfish landings by
 weight in the bottom trawl fleet. The Canadian Pacific ocean perch stock
 is broken into three separate areas that are individually assessed. The
 status of the stock within each area is above Canadian management
-targets.
+targets. The Canadian portion of the stock off the coast of British
+Columbia (PMFC management areas 3C and 3D) was assessed in 2013 to be at
+41\% of unfished virgin biomass (Edwards et al.
+\protect\hyperlink{ref-edwards_pacific_2014}{2014}). Removals averaged
+530 mt for the management area between 2006-2012. The removal history
+peaked during the foreign fishery years of the 1960s and have declined
+to lower levels in more recent years. Both natural mortality and
+steepness were estimated using priors within the British Columbia
+assessment. Natural mortality was estimated at
+0.069yr\textsuperscript{-1} for females and 0.072yr\textsuperscript{-1}
+for males. Steepness was estimated to be 0.70.
 
 \section{Data}\label{data}
 
@@ -994,7 +1010,8 @@ productivity of the stock. Using break and burn methods, Pacific ocean
 perch have been aged to over 100 years. Otoliths from
 fishery-independent and -dependent sources that were only surface age
 reads were excluded from this assessment due to the bias associated with
-these age reads.
+these age reads. The previous assessment also excluded the surface read
+otoliths.
 
 \subsubsection{Northwest Fisheries Science Center (NWFSC) Shelf-Slope
 Survey}\label{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}
@@ -1069,7 +1086,16 @@ Hamel (\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014}), which
 determined that the approximate realized sample size for shelf/slope
 rockfish species was \(2.43*N_{\text{tow}}\). The effective sample size
 of conditional-age-at-length data was set at the number of fish at each
-length by sex and by year.
+length by sex and by year (not expanded for fish that were captured but
+not measured).
+
+Fish with ages also have an associated length and each type of data have
+been used in the model. Age data from the NWFSC shelf-slope survey were
+used as conditional-age-at-length data within the model, which avoids
+double of the length and age data by explicitly stating the length
+associatted with each aged fish. Hence, the length and
+conditional-age-at-length data from the NWFSC shelf-slope survey were
+given full weight in likelihood calculations when model fitting.
 
 \subsubsection{Northwest Fisheries Science Center (NWFSC) Slope
 Survey}\label{northwest-fisheries-science-center-nwfsc-slope-survey}
@@ -1078,20 +1104,21 @@ The NWFSC slope survey covered waters throughout the summer from 183 m
 to 1,280 m north of \(34^\circ 30^\prime\) S, which is near Point
 Conception, from 1999 and 2002. Tows conducted between the depths of 183
 and 549 m were used to create an index of abundance using a bayesian
-delta-GLMM and the VAST delta-GLMM models. The estimated index of
-abundance is shown in Table \ref{tab:Index_Summary}. The stratification
-and modeling configuration are provided in Table \ref{tab:strata}. Based
-on the diagnostics of the bayesian delta-GLMM, which does not account
-for spatial effects, a gamma distribution allowing for additional
-probability of extreme catch events with year-vessel random effects was
-selected as the final model. The Q-Q plot does show a minimal departure
-from the assumed distribution (Figure \ref{fig:nw_slope_qq}), but was
-determined to be acceptable based on the alternative model
-distributions. The trend of abundance across the four surveys years was
-generally flat with high estimated annual variance. Sensitivities (not
-shown) were done evaluating the excluding of this index within the base
-model or using the VAST estimated index and neither approach was found
-to be influential on the model estimates.
+delta-GLMM model. The VAST delta-GLMM model was also explored but due to
+poor diagnostics this modeling approach was not used to create the final
+index. The estimated index of abundance is shown in Table
+\ref{tab:Index_Summary}. The stratification and modeling configuration
+are provided in Table \ref{tab:strata}. Based on the diagnostics of the
+bayesian delta-GLMM, which does not account for spatial effects, a gamma
+distribution allowing for additional probability of extreme catch events
+with year-vessel random effects was selected as the final model. The Q-Q
+plot does show a minimal departure from the assumed distribution (Figure
+\ref{fig:nw_slope_qq}), but was determined to be acceptable based on the
+alternative model distributions. The trend of abundance across the four
+surveys years was generally flat with high estimated annual variance.
+Sensitivities (not shown) were done evaluating the excluding of this
+index within the base model or using the VAST estimated index and
+neither approach was found to be influential on the model estimates.
 
 Length and age compositions were available for 2001 and 2002 and were
 expanded based upon the survey stratification (Tables
@@ -1107,6 +1134,11 @@ calculated according to Stewart and Hamel
 Section
 \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 
+Fish with ages also have an associated length and each type of data have
+been used in the model. To avoid double use of the length and age data
+from individual fish, the length and age data sources were each given
+0.50 weight in the likelihood calculations when model fitting.
+
 \subsubsection{Alaska Fisheries Science Center (AFSC) Slope
 Survey}\label{alaska-fisheries-science-center-afsc-slope-survey}
 
@@ -1114,14 +1146,16 @@ The AFSC slope survey operated during autumn (October-November) aboard
 the R/V Miller Freeman. Partial survey coverage of the US west coast
 occurred during 1988-96 and complete coverage (north of
 \(34^\circ 30^\prime\) S) during 1997, 1999, 2000, and 2001. Only the
-four years of consistent and complete surveys plus 1996, which surveyed
-north of \(43^\circ\) N latitude to the US-Canada border, were used in
-this assessment. These same data years were used in the last assessment.
-The number of tows with length data ranged from 19 in 2000 to 48 in 1996
-(Table \ref{tab:AFSC_Lengths}). Because a large number of positive tows
-occurred in 1996, it was decided to include that year, which surveyed
-from \(43^\circ\) N latitude to the US-Canada border. Therefore, only
-tows from \(43^\circ\) N latitude to the US-Canada border were used.
+four years of consistent and complete surveys (1997, 1999, 2000, and
+2001) plus 1996, which surveyed north of \(43^\circ\) N latitude to the
+US-Canada border, were used in this assessment. These same data years
+were used in the last assessment. The number of tows with length data
+ranged from 19 in 2000 to 48 in 1996 (Table \ref{tab:AFSC_Lengths}).
+Because a large number of positive tows occurred in 1996, it was decided
+to include that year, which surveyed from \(43^\circ\) N latitude to the
+US-Canada border. Therefore, only tows from \(43^\circ\) N latitude to
+the US-Canada border were used across all year to create and index of
+abundance.
 
 An index of abundance was estimated based on the data using the VAST
 delta-GLMM model. The estimated index of abundance is shown in Table
@@ -1135,14 +1169,14 @@ over time.
 Length compositions were available for each year the survey was
 conducted. No age data were available from this survey. The expanded
 length frequencies from this survey were generally of larger fish (
-\textgreater{} 30 cm), for 1997 where the highest frequency of fish were
-between 20 and 30 cm for both females and males (Figure
+\textgreater{} 30 cm), except for 1997 where the highest frequency of
+fish were between 20 and 30 cm for both females and males (Figure
 \ref{fig:afsc_Length}).
 
 The input sample sizes for length and marginal age composition data were
 calculated according to Stewart and Hamel
-(\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014}) described in
-Section
+(\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014}) described
+above in Section
 \ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
 
 \subsubsection{Pacific Ocean Perch
@@ -1162,17 +1196,21 @@ between the two survey years.
 
 Length and age compositions were expanded based on the survey
 stratification. The survey had 125 and 126 Pacific ocean perch tows
-(Table \ref{tab:POP_Lengths}) and ages were only available in 1985 due
-to surface reads for the 1979 data (Table \ref{tab:POP_Ages}). The
-length frequencies for both years are highest between the 30-45 cm range
-(Figure \ref{fig:POP_Length}) with ages in 1985 having a large number of
-fish age 40 and greater (Figure \ref{fig:POP_Age}).
+(Table \ref{tab:POP_Lengths}) and break-and-burn ages were available for
+1985 (Table \ref{tab:POP_Ages}). Only surface reads, considered to be
+biased, were available for the 1979 data. The length frequencies for
+both years are highest between the 30-45 cm range (Figure
+\ref{fig:POP_Length}) with ages in 1985 having a large number of fish
+age 40 and greater (Figure \ref{fig:POP_Age}).
 
 The input sample sizes for length and marginal age-composition data were
 calculated according to Stewart and Hamel
-(\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014}) described in
-Section
-\ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}.
+(\protect\hyperlink{ref-stewart_bootstrapping_2014}{2014}) described
+above in Section
+\ref{northwest-fisheries-science-center-nwfsc-shelf-slope-survey}. To
+avoid double use of the length and age data from individual fish, the
+length and age data sources were each given 0.50 weight in the
+likelihood calculations when model fitting.
 
 \subsubsection{Fishery Independent Data Not Included in the Base
 Model}\label{fishery-independent-data-not-included-in-the-base-model}
@@ -1207,7 +1245,8 @@ series, 2004, the NWFSC's Fishery Resource and Monitoring division
 (FRAM) conducted the survey and followed very similar protocols as the
 AFSC.
 
-The Triennial shelf survey was not used in the final base model for a
+Although the Triennial shelf survey was used in the 2011 assessment, it
+was not used in the final base model for the current assessment for a
 number of reasons. First, there were concerns regarding the varying
 sampling and targeting of specific species by year across the
 time-series. Secondly, the Triennial shelf survey targeted the shelf of
@@ -1234,8 +1273,8 @@ across years collected were consistent with primarily only larger
 Pacific ocean perch, 35-40 cm, being selected. All age data were based
 upon surface reads which unfortunately are highly biased at relatively
 young ages for Pacific ocean perch. Due to the lack of information
-regarding the collection of these data, they were not selected to be
-apart of the base model but a sensitivity was conducted which evaluated
+regarding the collection of these data, they were not selected to be a
+part of the base model but a sensitivity was conducted which evaluated
 the impact of these data.
 
 \subsection{Fishery-Dependent Data}\label{fishery-dependent-data}
@@ -1251,9 +1290,9 @@ Washington for the years 1908-2016 were obtained from Theresa Tsou
 ocean perch assessment to include a historical catch reconstruction
 provided by Washington state and, hence, the historical catches for
 Washington differ from those used in the 2011 assessment. WDFW also
-provided catches for 1981-2016 period to include re-distribution of the
-``URCK'' landings in the PacFIN database. These data are currently not
-available from PacFIN.
+provided catches for the 1981-2016 period to include re-distribution of
+the ``URCK'' landings in the PacFIN database. These data are currently
+not available from PacFIN.
 
 \textbf{Oregon}
 
@@ -1278,10 +1317,10 @@ obtained directly from John Field at the SWFSC due to database issues
 for the historical period for the California Cooperative Groundfish
 Survey data system, also known as CALCOM Database (128.114.3.187) for
 the years 1916-1980. The catches received included revisions in the
-catch history from 1948-1960 based on fish that were landed in northern
-California that were not included in the original reconstruction. A
-description of the historical reconstruction methods can be found in
-Ralston et al.
+catch history from 1948-1960 based on fish that were caught north of the
+California-Oregon border and landed in northern California which were
+not included in the original reconstruction. A description of the
+historical reconstruction methods can be found in Ralston et al.
 (\protect\hyperlink{ref-ralston_documentation_2010}{2010}). Recent
 landings (1981-2016) were obtained from PacFIN (retrieval dated May 2,
 2017, Pacific States Marine Fisheries Commission, Portland, Oregon;
@@ -1384,16 +1423,20 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The fishery fleet observed Pacific ocean perch that were generally
 greater than 30 cm across all years of available data (Figure
 \ref{fig:Comm_Length}). The fishery fleet age data has clear patterns
-showing a large cohort moving through the population (Figure
-\ref{fig:Comm_Age}). Lengths and ages were also available for the at-sea
-hake fishery and are shown in Figures \ref{fig:ASHOP_Length} and
-\ref{fig:ASHOP_Age}.
+showing two large cohorts moving through the population near the end of
+the time-series (Figure \ref{fig:Comm_Age}). Lengths and ages were also
+available for the at-sea hake fishery and are shown in Figures
+\ref{fig:ASHOP_Length} and \ref{fig:ASHOP_Age}.
+
+To avoid double use of the length and age data from individual fish, the
+length and age data sources were each given 0.50 weight in the
+likelihood calculations when model fitting.
 
 \subsubsection{Fishery Data Not Included in the Base
 Model}\label{fishery-data-not-included-in-the-base-model}
 
-Several dataset available from the fishery were explored but not used in
-the final assessment.
+Several datasets available from the fishery were explored but not used
+in the final assessment.
 
 \paragraph{Historical Commercial Catch-Per-Unit
 Effort}\label{historical-commercial-catch-per-unit-effort}
@@ -1435,7 +1478,7 @@ Historical Pacific ocean perch ages determined using scales and surface
 reading methods of otoliths resulted in estimates of natural mortality
 (\(M\)) between 0.10 and 0.20 yr\textsuperscript{-1} with a longevity
 less than 30 years (Gunderson
-\protect\hyperlink{ref-gunderson_population_1977}{1977}). Based on
+\protect\hyperlink{ref-gunderson_population_1977}{1977}). Based on the
 break-and-burn method of age determination using otoliths, the maximum
 age of Pacific ocean perch was revised to be 90 years (Chilton and
 Beamish \protect\hyperlink{ref-chilton_age_1982}{1982}). The updated
@@ -1518,7 +1561,9 @@ personal communication, NWFSC, NOAA). The 50\% size-at-maturity was
 estimated at 32.1 cm with maturity asymptoting to 1.0 for larger fish
 (Figure \ref{fig:mat}). Comparison between the maturity-at-age used in
 the previous assessment and the updated functional maturity-at-length is
-shown in Figure \ref{fig:mat_compare}.
+shown in Figure \ref{fig:mat_compare} showing that the new maturity
+curve has fish reaching 50\% maturity at older ages relative to the
+maturity-at-age used in the 2011 assessment.
 
 The fecundity-at-length has also been updated from the previous
 assessment based on new research. Dick et al.
@@ -1580,7 +1625,9 @@ and output diagnostics, publicly available at:
 \url{https://github.com/nwfsc-assess/nwfscAgeingError}. A non-linear
 standard error was estimated by age, where there is more variability in
 the age of older fish (Table \ref{tab:Age_Error} and Figure
-\ref{fig:Age_Error}).
+\ref{fig:Age_Error}). The 2011 assessment assumed a linear ageing error
+vector and is shown in Figure \ref{fig:Age_Error} for comparison with
+the updated ageing error applied in the current assessment.
 
 \subsection{History of Modeling Approaches Used for This
 Stock}\label{history-of-modeling-approaches-used-for-this-stock}
@@ -1608,7 +1655,7 @@ SPR harvest rate used to determine catches to 0.864 (in contrast to the
 default harvest rate of 0.50). The last full assessment of Pacific ocean
 perch was conducted in 2011 (Hamel and Ono
 \protect\hyperlink{ref-hamel_stock_2011}{2011}), which concluded that
-the stock was still well below the target biomass of \(40\%SB_{0}\)
+the stock was still well below the target biomass of \(40\%SB_{0}\),
 estimating the relative stock status at 19.1\%.
 
 \section{Assessment}\label{assessment}
@@ -1650,8 +1697,9 @@ mt, rather than 1940 as modeled in the previous assessment, given the
 new information regarding historical removals prior to 1940.
 Explorations were conducted relative to the model starting year and no
 differences were found between the 1918 start year compared to starting
-the model in 1892, which is the first year there is record landings of
-Pacific ocean perch between California, Oregon, and Washington.
+the model in 1892, which is the first year there is any record of
+landings of Pacific ocean perch between California, Oregon, and
+Washington.
 
 Selectivity in this model is assumed to be length-based and is modeled
 using double-normal selectivity for all fleets, except the Pacific ocean
@@ -1663,18 +1711,18 @@ This assessment allows for survey-specific selectivity.
 All fishery-independent indices have been re-evaluated for this
 assessment using a spatial-temporal delta generalized linear mixed model
 (VAST delta-GLMM) which is an updated approach from that used in 2011,
-which did not incorporate spatial effects. This assessment opted to not
-include the fishery CPUE and the Triennial shelf index and composition
-data based upon discussions during the STAR panel. The data used to
-create the CPUE index were not available for reanalysis and hence were
-excluded from this assessment due to questions regarding this index that
-could not be addressed. In regards to the Triennial survey, Pacific
-ocean perch is considered a slope species off the US west coast and this
-survey did not sample the prime habitat for Pacific ocean perch and had
-limited observations relative to the other surveys. It was concluded
-during the STAR panel that this data set was not a good source of
-information regarding this species and would not be included in the base
-model.
+which did not incorporate spatial autocorrelation effects. This
+assessment opted to not include the fishery CPUE and the Triennial shelf
+index and composition data based upon discussions during the STAR panel.
+The data used to create the CPUE index were not available for reanalysis
+and hence were excluded from this assessment due to questions regarding
+this index that could not be addressed. In regards to the Triennial
+survey, Pacific ocean perch is considered a slope species off the US
+west coast and this survey did not sample the prime habitat for Pacific
+ocean perch and had limited observations relative to the other surveys.
+It was concluded during the STAR panel that this data set was not a good
+source of information regarding this species and would not be included
+in the base model.
 
 Maturity and fecundity were updated for this assessment based upon new
 research. Fecundity for Pacific ocean perch used in this assessment was
@@ -1789,11 +1837,10 @@ are not available from the foreign fleet. The selectivity from this
 fleet was mirrored to the main fishery fleet.
 
 The following distributions were assumed for data fitting: survey
-indices were lognormal, total discards were lognormal, and multinomial
-error structure for compositional data.
+indices were lognormal, total discards were lognormal, and the
+compositional data had a multinomial error structure.
 
-\subsubsection{Modeling Software and Model
-Bridging}\label{modeling-software-and-model-bridging}
+\subsubsection{Modeling Software}\label{modeling-software}
 
 The STAT team used Stock Synthesis version 3.30.03.05 developed by
 Dr.~Richard Methot at the NWFSC (Methot and Wetzel
@@ -1820,20 +1867,24 @@ parameters based on an update of the Thorson-Dorn rockfish prior
 James Thorson (personal communication, NWFSC, NOAA) which was reviewed
 and endorsed by the Scientific and Statistical Committee (SSC) in 2017.
 The prior is a beta distribution with \(\mu\)=0.72 and \(\sigma\)=0.15.
-However, fixing steepness within the model resulted in what was deemed
-to be on the verge of implausible catchability for the NWFSC shelf-slope
-survey. The Groundfish Subcommittee of the SSC (GFSC) recommended fixing
-steepness, determined by the expected (i.e.~arithmetic mean) spawning
-output value across a range of steepness values (see Appendix D, section
+However, fixing steepness at 0.72 within the model resulted in a
+catchability coefficient for the NWFSC shelf-slope survey that was
+deemed to be implausibly low. The Groundfish Subcommittee of the SSC
+(GFSC) recommended determining a fixed value for steepness by a process
+of model averaging (see Appendix D, section
 \ref{appendix-d.-ssc-groundfish-subcommittee-discussion-regarding-steepness}
-for GFSC comments). The steepness value of 0.50 most closely
-corresponded with the expected spawning output and was used in the final
-base model. The previous assessment estimated and fixed steepness equal
-to 0.40. The current data do not contain information regarding
-steepness. This change in perception is likely due to the observation of
-large recruitment events in this assessment, updated data weighting
-approaches, and varying model specifications between the 2011 and the
-current model.
+for GFSC comments). Spawning output was calculated across a range of
+steepness values (0.25-0.95) which were considered equally likely. The
+expected (i.e.~arithmetic mean) ending spawning output was calculated
+and the steepness value most closely associated with the expected value
+was identified. The steepness value of 0.50 most closely corresponded
+with the expected spawning output and was used in the final base model.
+The previous assessment fixed steepness equal to 0.40 based on
+likelihood profile that had a minimum near 0.40. The current data and
+model structure are not informative regarding steepness. This change in
+perception is likely due to the observation of large recruitment events
+in this assessment, updated data weighting approaches, and varying model
+specifications between the 2011 and the current model.
 
 \subsubsection{Data Weighting}\label{data-weighting}
 
@@ -1884,7 +1935,7 @@ Fixed parameters in the model were as follows. Steepness was fixed at
 steepness. Natural mortality was fixed at 0.054 yr\textsuperscript{-1}
 for females and males, which is the median of the prior. The standard
 deviation of recruitment deviates was fixed at 0.70. Maturity-at-length
-was fixed as described in Section
+was fixed as described above in Section
 \ref{sex-ratio-maturation-and-fecundity}. Length-weight parameters were
 fixed at estimates using all length-weight observations (Figure
 \ref{fig:Wt_len_pred}).
@@ -1924,8 +1975,8 @@ representative of the coastwide population, instead of specific areas,
 and fishing mortality prior to 1918 was negligible. It also assumed that
 discards were low prior to 1992.
 
-\subsubsection{Alternate Models
-Considered}\label{alternate-models-considered}
+\subsubsection{Bridging Analysis and Alternate Models
+Considered}\label{bridging-analysis-and-alternate-models-considered}
 
 The exploration of models began by bridging from the 2011 assessment to
 Stock Synthesis version 3.30.03.05, which produced no discernible
@@ -1933,14 +1984,14 @@ difference (Figure \ref{fig:bridge}). The updated landings data and
 discard rates added to the 2011 assessment produced insignificant
 differences in the relative scale of the population although the updated
 historical removals resulted in an increase in the estimate of unfished
-spawning output (Figure \ref{fig:data_update}). Updating the survey
-indices produced small differences in the relative scale of the
-population. Adding age and length data each resulted in less of a
-population decline from the 1970s to pre-2000, resulting in an increase
-in the estimated 2017 final stock status. However, the addition of new
-data resulted in an early pattern within recruitment, indicating that
-the assumptions within the previous model may not represent the best fit
-to the current data.
+spawning output (Figures \ref{fig:data_ssb_update} and
+\ref{fig:data_update}). Updating the survey indices produced small
+differences in the relative scale of the population. Adding age and
+length data each resulted in less of a population decline from the 1970s
+to pre-2000, resulting in an increase in the estimated 2017 final stock
+status. However, the addition of new data resulted in an early pattern
+within recruitment, indicating that the assumptions within the previous
+model may not represent the best fit to the current data.
 
 This assessment estimated discards in the model, so time was spent
 investigating time blocks for changes in selectivity and retention to
@@ -1954,16 +2005,11 @@ changes in management.
 Natural mortality was also investigated and a new prior was developed
 assuming a maximum age of 100 years for females and males. The previous
 assessment estimated male natural mortality as an offset from a fixed
-female natural mortality. This assessment attempted to estimate natural
-mortality for both sexes using the 2017 updated prior, but based on the
-results of profiles over the parameter it was determined to be little to
-no information on natural mortality within the data and hence opted to
-fix the value for females within the base model. Upon additional
-exploration, the model estimated very little difference in male natural
-mortality relative to females (\textless{} 0.002) and in the interest of
-selecting the model that fit the data with the fewest parameters
-required, natural mortality for males was fixed equal to the female
-natural mortality in the base model.
+female natural mortality. Profiles over natural mortality indicated that
+the data provided little to no information on this parameter; hence
+natural mortality was fixed for both sexes to 0.054 within the base
+model. The model estimated very little difference in male natural
+mortality relative to females (\textless{} 0.002).
 
 Finally, multiple models were investigated where steepness was either
 estimated, fixed at the prior, or at an alternate value. The assessment
@@ -1978,15 +2024,17 @@ starting at the mean of the ``type C'' prior, the meta-analysis prior
 evaluated omitting information from Pacific ocean perch, of 0.76
 resulted in very little if any movement from the mean value due to the
 flat likelihood surface across values for this parameter with the final
-relative stock status for 2017 being estimated to \textgreater{} 100\%
-of unfished spawning output. The base model fixed steepness at 0.50,
-determined by calculating current ending spawning outputfor steepness
-values ranging from 0.25 to 0.95 in increments of 0.05 and assuming each
-value to be equally plausible. The expected (i.e arithmetic mean)
-spawning output was identified and the most closely corresponding
-steepness of 0.50 was selected for use in the final base model. Model
-sensitivities are provided when steepness was fixed at the 2011 value of
-0.40 or when fixed at the mean of the current prior of 0.72.
+relative stock status for 2017 being estimated to be \textgreater{}
+100\% of unfished spawning output. The base model with a fixed steepness
+at 0.50 was developed during the October 2017 SSC Groundfish
+subcommittee meeting with steepness determined by calculating current
+ending spawning output for steepness values ranging from 0.25 to 0.95 in
+increments of 0.05 and assuming each value to be equally plausible. The
+expected (i.e arithmetic mean) spawning output was identified and the
+most closely corresponding steepness of 0.50 was selected for use in the
+final base model. Model sensitivities are provided when steepness was
+fixed at the 2011 value of 0.40 or when fixed at the mean of the current
+prior of 0.72.
 
 \subsubsection{Convergence}\label{convergence}
 
@@ -2112,7 +2160,7 @@ evaluated to determine which West Coast species were well sampled.
 However, the treatment of keeping the data set as a single time-series
 or splitting into early or late periods may need to be considered on a
 species specific level. Changes in sampling range and timing may not
-impact or having differeing levels of impact for West Coast species.}
+impact or may have differeing levels of impact for West Coast species.}
 
 Recommendation: Explore the assumption that conditional age-at-length
 data are random samples of the age-composition.
@@ -2159,15 +2207,15 @@ The estimates of maximum length and the von Bertanlaffy growth
 coefficient, \(k\), were less than the the external estimates for males
 and female but were well within the 95\% confidence interval given the
 estimated uncertainty (Table \ref{tab:model_params}, Figures
-\ref{fig:sizeatage} and \ref{fig:length_compare}). Female and male
-Pacific ocean perch grow quickly at younger ages, reaching near maximum
-length by age 20, with female Pacific ocean perch reaching larger
-maximum lengths.
+\ref{fig:sizeatage} and \ref{fig:length_compare}). The majority of
+growth for female and male Pacific ocean perch growth occurs at younger
+ages, reaching near maximum length by age 20, with female Pacific ocean
+perch reaching larger maximum lengths.
 
 Selectivity curves were estimated for the fishery and survey fleets. The
 estimated selectivities for all fleets within the model are shown in
 Figure \ref{fig:selex}. The fishery selectivity was estimated to be dome
-shaped, reaching maximum selectivity for fish between 35 and 40 cm. An
+shaped, reaching maximum selectivity for fish between 35 and 40 cm. A
 shift in selectivity for the final asymptotic selectivity was estimated
 for the fishery for prior to the overfished declaration and post
 (1918-1999 and 2000-2016). The at-sea hake fishery was estimated to have
@@ -2205,7 +2253,8 @@ recruitment prior to 1970 and the uncertainty in those estimates is
 expressed in the model. The four lowest recruitments (in ascending
 order) occurred in 2012, 2003, 2005, and 2007. There are very large, but
 uncertain, estimates of recruitment in 2008, 2013, 2000, and 1999. The
-2008 recruitment event is estimated to be larger by an order of
+2008 recruitment event supported by both the fishery and the NWFSC
+shelf-slope composition data is estimated to be larger by an order of
 magnitude compared to other recruitments estimated in the model. The
 uncertainty interval around the number of recruits is large based on the
 uncertainty surrounding the spawning output in that year. However, the
@@ -2385,8 +2434,8 @@ to investigate the periods of strong and weak year classes further to
 see if it is an artifact of the data, a consistent autocorrelation, or a
 result of the environment.
 
-The stock-recruit curve resulting from a fixed value of steepness is
-shown in Figure \ref{fig:stock_recruit_curve} with estimated
+The stock-recruit curve resulting from a value of steepness fixed at
+0.50 is shown in Figure \ref{fig:stock_recruit_curve} with estimated
 recruitments also shown. The stock is predicted to have never fallen to
 low enough levels that the effects of steepness are obvious. However,
 the lowest levels of predicted spawning output showed some of the
@@ -2421,11 +2470,11 @@ assumptions and data and were not performed in a cumulative fashion.
   
   \item Include the historical commercial CPUE index.
   
-  \item Inclusion of available Canadian fishery and survey data (does not constitute all data used in Canadian assessments).  This sensitivity includes Canadian fishery landings (1997-2016 with landings ranging from 260-400 mt by year) and survey removals (2004, 2006, 2008, 2010, 2012, 2014, 2016), no fishery or survey index of abundance, but length- and age-composition data from both the fishery and survey.  
+  \item Inclusion of available Canadian fishery and survey data (does not constitute all data used in Canadian assessments).  This sensitivity includes Canadian fishery landings (1997-2016 with landings ranging from 260-400 mt by year) and survey removals (2004, 2006, 2008, 2010, 2012, 2014, 2016), no fishery or survey index of abundance, but length- and age-composition data from both the fishery and survey.  Fleet specific selectivity curves were estimated for the Canadian fishery and the survey.  
   
-  \item Inclusion of historical Washington research lengths.  
+  \item Inclusion of historical Washington research lengths.  A separate selectivity was estimated for this fleet.   
   
-  \item Inclusion of Oregon special projects length and age data, which are sampled at the dockside or processing facilities.  
+  \item Inclusion of Oregon special projects length and age data, which are sampled at the dockside or processing facilities.  The selectivity was mirrored to the fishery fleet since these data were collected from fishery samples.
   
 \end{enumerate}
 
@@ -2440,15 +2489,14 @@ survey data exhibited the largest changes in estimated stock status
 relative to the base model. The sensitivities that explored alternative
 steepness values differed the greatest from the base model. Assuming a
 the lower steepness value of 0.40 resulted in the final stock status
-being above the management target but having historically declining
-below the target. Using only the Triennial shelf survey data resulted in
-a reduction in stock size and status relative to the base model. The
-model estimated extended positive recruitments in the early period of
-the model in order to create an population age-structure that was
-consistent with the composition data resulting in an increase in biomass
-prior to the start of the foreign fishing fleet, indicating that
-potential model misspecification in the absence of the other survey
-data.
+being above the management target but having historically declined below
+the target. Using only the Triennial shelf survey data resulted in a
+reduction in stock size and status relative to the base model. The model
+estimated extended positive recruitments in the early period of the
+model in order to create an population age-structure that was consistent
+with the composition data resulting in an increase in biomass prior to
+the start of the foreign fishing fleet, indicating that potential model
+misspecification in the absence of the other survey data.
 
 Weighting the data according to the harmonic means resulted in a
 decrease in the estimated stock status relative to the base model with
@@ -2475,7 +2523,18 @@ data only through 2011, 2012, 2013, 2014, and 2015, progressively
 scale of the spawning population was basically unchanged for all of
 these retrospectives. The estimation of the 2008 recruitment deviation
 decreased as more data were removed. Overall, no alarming patterns were
-present in the retrospective analysis.
+present in the retrospective analysis. However, the retrospective
+pattern reflects the influence nature of the 2016 data which increases
+initial stock size and the increase in biomass in recent years.
+
+\subsubsection{Historic Analysis}\label{historic-analysis}
+
+The estimated 3+ summary biomass from previous assessments since 2000 is
+shown in Figure \ref{fig:historical_analysis}. The current assessment
+estimated an increase in initial summary biomass compared to previous
+assessments. Additionally, the composition data included in the 2017
+assessment showing strong 2008 and 2013 year classes drives a sharp
+increase of biomass at the end of the time-series.
 
 \subsubsection{Likelihood Profiles}\label{likelihood-profiles}
 
@@ -2495,11 +2554,12 @@ a wide range across different assumed values of steepness (Figure
 
 The negative log-likelihood was minimized at a natural mortality value
 of 0.06, but the 95\% confidence interval extends over values ranging
-from 0.035 - 0.08. The age and length data likelihood contribution was
-minimized at natural morality values ranging from 0.055-0.06 (Figure
-\ref{fig:m_like}). The relative depletion for Pacific ocean perch widely
-varied across alternative values of natural mortality (Figure
-\ref{fig:m_trajectory}).
+from 0.035 - 0.08. Male natural mortality was fixed to equal female
+natural mortality in the likelihood profile. The age and length data
+likelihood contribution was minimized at natural morality values ranging
+from 0.055-0.06 (Figure \ref{fig:m_like}). The relative depletion for
+Pacific ocean perch widely varied across alternative values of natural
+mortality (Figure \ref{fig:m_trajectory}).
 
 In regards to values of \(R_0\), the negative log-likelihood was
 minimized at approximately log(\(R_0\)) of 9.4 (Figure
@@ -2550,10 +2610,12 @@ Tables}\label{harvest-projections-and-decision-tables}
 A ten year projection of the base model with catches equal to the
 estimated ACL for years 2019-2028 and a catch allocation equal to the
 percentages for each fleet over the period of 2014-2016 predicts an
-increase in the spawning output due to large 2008 cohort, with a slight
-downturn beginning in 2023 (Table \ref{tab:Forecast_mod1}). Additional
-projections with the current ACL or the SPR50 MSY using the low and high
-states of nature are provided in Table
+increase in the spawning output due to the large 2008 cohort, with a
+slight downturn beginning in 2023 (Table \ref{tab:Forecast_mod1}). The
+removals in 2018 and 2019 were set at the defined management
+specification of 281 mt for each year assuming full attainment.
+Additional projections with the current ACL or the SPR50 MSY using the
+low and high states of nature are provided in Table
 \ref{tab:Decision_table_mod1_back} and show the spawning output
 remaining well above the management target for either catch level.
 
@@ -2579,7 +2641,7 @@ that are considered of importance.
 
 \item \textbf{Natural mortality}: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for Pacific ocean perch. The collection of additional age data, re-reading of older age samples, reading old age samples that are unread, and improved understanding of the life history of Pacific ocean perch may reduce that uncertainty.
 
-\item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understanting regarding the steepness of US west coast Pacific ocean perch will reduce our uncertainty regarding current stock status.
+\item \textbf{Steepness}: The amount of stock resilience, steepness, dictates the rate at which a stock can rebuild from low stock sizes.  Improved understanding regarding the steepness of US west coast Pacific ocean perch will reduce our uncertainty regarding current stock status.
 
 \item \textbf{Basin-wide understanding of stock structure, biology, connectivity, and distribution:} This is a stock assessment for Pacific ocean perch off of the west coast of the US and does not consider data from British Columbia or Alaska. Further investigating and comparing the data and predictions from British Columbia and Alaska to determine if there are similarities with the US west coast observations would help to define the connectivity between Pacific ocean perch north and south of the U.S.-Canada border.
 
@@ -2959,7 +3021,7 @@ Date & Area & Regulation \\
 
 \begin{table}[ht]
 \centering
-\caption{Recent trend in estimated total catch relative to management guidelines.} 
+\caption{Recent trend in estimated total catch relative to management guidelines. The estimated total catch includes the total landings plus the model estimated discard mortality based upon discard rate data.} 
 \label{tab:mnmgt_perform_tables}
 \begin{tabular}{>{\raggedleft}p{0.5in}>{\centering}p{1.0in}>{\centering}p{1.0in}>{\centering}p{1.0in}>{\centering}p{1.1in}>{\centering}p{1.1in}}
   \hline
@@ -3078,7 +3140,7 @@ Depth & 155-500 & 183-549 & 183-549 & 55-549 \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of NWFSC shelf-slope survey length samples used in the stock assessment.} 
+\caption{Summary of NWFSC shelf-slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:NWcombo_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3104,7 +3166,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of NWFSC shelf-slope survey age samples used in the stock assessment.} 
+\caption{Summary of NWFSC shelf-slope survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:NWcombo_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3130,7 +3192,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of NWFSC slope survey length samples used in the stock assessment.} 
+\caption{Summary of NWFSC slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:NWslope_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3144,7 +3206,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of NWFSC slope survey age samples used in the stock assessment.} 
+\caption{Summary of NWFSC slope survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:NWslope_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3158,7 +3220,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of AFSC slope survey length samples used in the stock assessment.} 
+\caption{Summary of AFSC slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:AFSC_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3175,7 +3237,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of Pacific ocean perch survey length samples used in the stock assessment.} 
+\caption{Summary of Pacific ocean perch survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:POP_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3189,7 +3251,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of Pacific ocean perch survey age samples used in the stock assessment.} 
+\caption{Summary of Pacific ocean perch survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:POP_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3202,7 +3264,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of discard rates used in the model by each data source.} 
+\caption{Summary of discard rates used in the model by each data source. The 1992 value was based on management restrictions that are assumed to have resulted in increased discarding relative to the earlier years with data.} 
 \label{tab:Discard}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{1.1in}>{\centering}p{.75in}>{\centering}p{1.1in}}
   \hline
@@ -3232,7 +3294,7 @@ Year & Source & Discard & Standard Error \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of commercial fishery length samples used in the stock assessment (continued on next page).} 
+\caption{Summary of commercial fishery length samples used in the stock assessment (continued on next page). Sample sizes were calculated according to method described above in Section \ref{fishery-length-and-age-data}.} 
 \label{tab:Comm_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3305,7 +3367,7 @@ Year & Trips & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of commercial fishery age samples used in the stock assessment.} 
+\caption{Summary of commercial fishery age samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \ref{fishery-length-and-age-data}.} 
 \label{tab:Comm_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3346,7 +3408,7 @@ Year & Trips & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of at-sea hake fishery length samples used in the stock assessment.} 
+\caption{Summary of at-sea hake fishery length samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \ref{fishery-length-and-age-data}.} 
 \label{tab:ASHOP_Lengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3372,7 +3434,7 @@ Year & Trips & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of at-sea hake fishery age samples used in the stock assessment.} 
+\caption{Summary of at-sea hake fishery age samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \ref{fishery-length-and-age-data}.} 
 \label{tab:ASHOP_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -3482,7 +3544,7 @@ Starting year & 1918 \\
 
 \begin{table}[ht]
 \centering
-\caption{Data weights applied when using Francis data weighting in the base model.} 
+\caption{Data weights applied when using Francis data weighting in the base model. The data weights were aquired after a single model weighting iteration.} 
 \label{tab:francis}
 \begin{tabular}{>{\raggedright}p{2in}>{\centering}p{.7in}>{\centering}p{.7in}}
   \hline
@@ -3930,7 +3992,8 @@ Fishery & 0.361 & 0.77 \\
 \centering
 \caption{Projection of potential
                                          OFL, spawning biomass, and depletion for the
-                                         base case model.} 
+                                         base case model. The removals in 2018 and 2019 
+                                         were set at the defined management specification of 281 mt for each year assuming full attainment.} 
 \label{tab:Forecast_mod1}
 \begin{tabular}{c>{\centering}p{1in}>{\centering}p{1in}>{\centering}p{1in}>{\centering}p{1in}}
   \hline
@@ -3954,10 +4017,11 @@ Year & OFL (mt) & ACL (mt) & Spawning Output & Depletion (\%) \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of 10-year 
+\caption{Decision table summary of 10-year 
                                              projections beginning in 2019 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. 
+                                             an axis of uncertainty for the base model. The removals in 2018 and 2019 
+                                             were set at the defined management specification of 281 mt for each year assuming full attainment.
                                              Columns range over low, mid, and high
                                              states of nature over natural mortality, and rows range over different 
                                              assumptions of catch levels. An entry of "--" 
@@ -4182,21 +4246,24 @@ ocean perch. \label{fig:ASHOP_Age}}
 \centering
 \includegraphics{Figures/allSexRatios.png}
 \caption{The estimated sex ratio of Pacific ocean perch at length from
-all biological data sources. \label{fig:sexratio}}
+all biological data sources. The size of the bubble is related to the
+numbers of observations by length. \label{fig:sexratio}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{Figures/allSexRatiosAge.png}
 \caption{The estimated sex ratio of Pacific ocean perch at age from all
-biological data sources. \label{fig:sexratio_Age}}
+biological data sources. The size of the bubble is related to the
+numbers of observations by age. \label{fig:sexratio_Age}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{Figures/Functional_Maturity.png}
 \caption{The estimated functional maturity of Pacific ocean perch at
-length. \label{fig:mat}}
+length. The size of the bubble is related to the numbers of maturity
+observations by length. \label{fig:mat}}
 \end{figure}
 
 \begin{figure}
@@ -4282,11 +4349,24 @@ version 3.30 and 3.24 for Pacific ocean perch for the 2011 assessment.
 
 \begin{figure}
 \centering
+\includegraphics{Figures/Data_spawnbio_uncertainty.png}
+\caption{Estimates of spawning output when each of the data sets used in
+the current assessment was added to the 2011 model without updating
+model assumptions. Each data source was included in an additive fashion
+where the final model ``+ Age'' is the 2011 model with all data sources
+updated. \label{fig:data_ssb_update}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
 \includegraphics{Figures/Data_Bratio_uncertainty.png}
-\caption{Each of the data sets used in the current assessment was added
-to the 2011 model without updating model assumptions. Each data source
-was included in an additive fashion where the final model ``+ Age'' is
-the 2011 model with all data sources updated. \label{fig:data_update}}
+\caption{Estimated of relative spawning output when each of the data
+sets used in the current assessment was added to the 2011 model without
+updating model assumptions. Each data source was included in an additive
+fashion where the final model ``+ Age'' is the 2011 model with all data
+sources updated. \label{fig:data_update}}
 \end{figure}
 
 \FloatBarrier
@@ -4764,6 +4844,15 @@ sensitivities for Pacific ocean perch. \label{fig:sens2_depl}}
 
 \begin{figure}
 \centering
+\includegraphics{Figures/historical_analysis.png}
+\caption{Pattern for estimated 3+ summary biomass from each assessment
+since 2000. \label{fig:historical_analysis}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
 \includegraphics{Figures/piner_panel_h.png}
 \caption{Likelihood profile across steepness values.
 \label{fig:piner_h}}
@@ -4783,7 +4872,8 @@ values of steepness. \label{fig:h_trajectory}}
 \begin{figure}
 \centering
 \includegraphics{Figures/piner_panel_m.png}
-\caption{Likelihood profile across natural mortality values.
+\caption{Likelihood profile across natural mortality values. Male
+natural mortality was fixed to equal female natural mortality.
 \label{fig:m_like}}
 \end{figure}
 
@@ -4953,7 +5043,7 @@ Data}\label{appendix-c.-description-of-cpue-and-triennial-data}
 
 Data on catch-per-unit-effort (CPUE) in mt/hr from the domestic fishery
 were combined for the INPFC Vancouver and Columbia areas Gunderson
-(\protect\hyperlink{ref-gunderson_population_1977}{1977})). Although
+(\protect\hyperlink{ref-gunderson_population_1977}{1977}). Although
 these data reflect catch rates for the US fleet, the highest catch rates
 coincided with the beginning of removals by the foreign fleet. This
 suggests that, barring unaccounted changes in fishing efficiency during
@@ -5032,7 +5122,7 @@ base model had only negligible changes in the stock size and status
 
 \begin{table}[ht]
 \centering
-\caption{Summary of Triennial shelf survey length samples.} 
+\caption{Summary of Triennial shelf survey length samples. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:TriennialLengths}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -5055,7 +5145,7 @@ Year & Tows & Fish & Sample Size \\
 
 \begin{table}[ht]
 \centering
-\caption{Summary of Triennial shelf survey age samples.} 
+\caption{Summary of Triennial shelf survey age samples. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.} 
 \label{tab:Triennial_Ages}
 \begin{tabular}{>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{.75in}>{\centering}p{1in}}
   \hline
@@ -5160,7 +5250,7 @@ additional model exploration be done and reviewed at the SSC Groundfish
 Subcommittee (GFSC) September 28, 2017 meeting regarding steepness and
 re-examining the information provided by the Triennial shelf survey.
 
-Preliminary models included the Triennial shelf survey which was removed
+Preliminary models included the Triennial shelf survey but was removed
 from the final base model during the STAR panel due to model lack of fit
 to this data-set which was in contrast to all other available data and
 concerns that this survey did not sample a representative subset of the
@@ -5278,6 +5368,11 @@ Dick, E.J. 2009. Modeling the Reproductive Potential of Rockfishes
 (\emph{Sebastes} Spp.). ProQuest. Available from
 \url{http://books.google.com/books?hl=en\&lr=\&id=0d6-3rhfynkC\&oi=fnd\&pg=PR7\&dq=\%22Synthesis+of+findings+regarding+the+reproductive\%22+\%22C:+Linear+interpolation+algorithms\%22+\%22for+yellowtail+rockfish+(S.+flavidus)\%22+\%22greater+than+zero,+based+on+the+2-level+relative+fecundity\%22+\%22A:+Methods+for+data+recovery+from+published\%22+\&ots=NR0UylgymD\&sig=58IaN_a3pJeYTPYVmJ1NYMABmvE}
 {[}accessed 27 February 2017{]}.
+
+\hypertarget{ref-edwards_pacific_2014}{}
+Edwards, A., Haigh, R., and Starr, P.J. 2014. Pacific Ocean Perch (
+\emph{Sebastes alutus}) stock assessment for the west coast of Vancouver
+Island, British Columbia. DFO Can. Sci. Advis. Sec. Res. Doc. 2013/093.
 
 \hypertarget{ref-field_status_2007}{}
 Field, J.C. 2007. Status of the Chilipepper rockfish, \emph{Sebastes

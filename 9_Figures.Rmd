@@ -144,11 +144,11 @@
 <!-- ********************************************************************** -->
 <!-- *****************Maturity and Fecundity FIGURES*********************** --> 
 <!-- ********************************************************************** -->
-![The estimated sex ratio of `r spp` at length from all biological data sources. \label{fig:sexratio}](Figures/allSexRatios.png)
+![The estimated sex ratio of `r spp` at length from all biological data sources.  The size of the bubble is related to the numbers of observations by length. \label{fig:sexratio}](Figures/allSexRatios.png)
 
-![The estimated sex ratio of `r spp` at age from all biological data sources. \label{fig:sexratio_Age}](Figures/allSexRatiosAge.png)
+![The estimated sex ratio of `r spp` at age from all biological data sources. The size of the bubble is related to the numbers of observations by age. \label{fig:sexratio_Age}](Figures/allSexRatiosAge.png)
 
-![The estimated functional maturity of `r spp` at length. \label{fig:mat}](Figures/Functional_Maturity.png)
+![The estimated functional maturity of `r spp` at length. The size of the bubble is related to the numbers of maturity observations by length. \label{fig:mat}](Figures/Functional_Maturity.png)
 
 ![Comparison between estimated maturity-at-length used in this assessment and maturity-at-age applied in the 2011 assessment of `r spp`. \label{fig:mat_compare}](Figures/Maturity_Comparison.png)
 
@@ -213,7 +213,11 @@
 
 \FloatBarrier 
 
-![Each of the data sets used in the current assessment was added to the 2011 model without updating model assumptions. Each data source was included in an additive fashion where the final model "+ Age" is the 2011 model with all data sources updated. \label{fig:data_update}](Figures/Data_Bratio_uncertainty.png)
+![Estimates of spawning output when each of the data sets used in the current assessment was added to the 2011 model without updating model assumptions. Each data source was included in an additive fashion where the final model "+ Age" is the 2011 model with all data sources updated. \label{fig:data_ssb_update}](Figures/Data_spawnbio_uncertainty.png)
+
+\FloatBarrier
+
+![Estimated of relative spawning output when each of the data sets used in the current assessment was added to the 2011 model without updating model assumptions. Each data source was included in an additive fashion where the final model "+ Age" is the 2011 model with all data sources updated. \label{fig:data_update}](Figures/Data_Bratio_uncertainty.png)
 
 \FloatBarrier
 
@@ -472,6 +476,14 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
   
 \FloatBarrier
 
+<!-- ********************************************************************** -->
+<!-- *****************Historical analysis FIGURES*********************** -->
+<!-- ********************************************************************** -->
+
+![Pattern for estimated 3+ summary biomass from each assessment since 2000. \label{fig:historical_analysis}](Figures/historical_analysis.png)
+  
+\FloatBarrier
+
 
 <!-- ********************************************************************** -->
 <!-- ******************Likelihood profile FIGURES************************** --> 
@@ -487,7 +499,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
   
   
 <!-- ***********M Likelihood profile FIGURES******************************* -->
-![Likelihood profile across natural mortality values. \label{fig:m_like}](Figures/piner_panel_m.png)
+![Likelihood profile across natural mortality values. Male natural mortality was fixed to equal female natural mortality.  \label{fig:m_like}](Figures/piner_panel_m.png)
   
 \FloatBarrier
 

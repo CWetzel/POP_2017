@@ -262,7 +262,7 @@ print(Regs.table,
 
   # Print management performance table - will have to edit the text file and 
   mngmnt.table2 = xtable(mngmnt, 
-                      caption=c('Recent trend in estimated total catch relative to management guidelines.'), 
+                      caption=c('Recent trend in estimated total catch relative to management guidelines. The estimated total catch includes the total landings plus the model estimated discard mortality based upon discard rate data.'), 
                       label='tab:mnmgt_perform_tables')
     
   # Add alignment
@@ -456,7 +456,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC shelf-slope survey length samples used in the stock assessment.'),
+                           caption = c('Summary of NWFSC shelf-slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:NWcombo_Lengths',
                            digits = 0)    
 # Add alignment  
@@ -485,7 +485,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC shelf-slope survey age samples used in the stock assessment.'),
+                           caption = c('Summary of NWFSC shelf-slope survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:NWcombo_Ages',
                            digits = 0)    
 # Add alignment  
@@ -515,7 +515,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC slope survey length samples used in the stock assessment.'),
+                           caption = c('Summary of NWFSC slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:NWslope_Lengths',
                            digits = 0)    
 # Add alignment  
@@ -545,7 +545,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of NWFSC slope survey age samples used in the stock assessment.'),
+                           caption = c('Summary of NWFSC slope survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:NWslope_Ages',
                            digits = 0)    
 # Add alignment  
@@ -575,7 +575,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of AFSC slope survey length samples used in the stock assessment.'),
+                           caption = c('Summary of AFSC slope survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:AFSC_Lengths',
                            digits = 0)    
 # Add alignment  
@@ -606,7 +606,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Pacific ocean perch survey length samples used in the stock assessment.'),
+                           caption = c('Summary of Pacific ocean perch survey length samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:POP_Lengths',
                            digits = 0)    
 # Add alignment  
@@ -636,7 +636,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of Pacific ocean perch survey age samples used in the stock assessment.'),
+                           caption = c('Summary of Pacific ocean perch survey age samples used in the stock assessment. The sample sizes were calculated according to                              Stewart and Hamel (2014), which determined that the approximate realized sample size for shelf/slope rockfish species was 2.43 fish per tow.'),
                            label = 'tab:POP_Ages',
                            digits = 0)    
 # Add alignment  
@@ -675,7 +675,7 @@ colnames(Discard) = c('Year',
 
 value = ifelse(mod1$discard_spec$units == 2, "discard rates", "total discard")
 Discard.table = xtable(Discard, 
-                       caption = paste('Summary of', value,'used in the model by each data source.'),
+                       caption = paste('Summary of', value,'used in the model by each data source. The 1992 value was based on management restrictions that are assumed to have resulted in increased discarding relative to the earlier years with data.'),
                        label = 'tab:Discard',
                        digits = 3)    
 # Add alignment  
@@ -709,7 +709,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of commercial fishery length samples used in the stock assessment (continued on next page).'),
+                           caption = c('Summary of commercial fishery length samples used in the stock assessment (continued on next page). Sample sizes were calculated according to method described above in Section \\ref{fishery-length-and-age-data}.'),
                            label = 'tab:Comm_Lengths',
                            digits = 0)    
 
@@ -741,7 +741,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           #caption = c('Summary of commercial fishery length samples used in the stock assessment.'),
+                           #caption = c('Summary of commercial fishery length samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \\ref{fishery-length-and-age-data}.'),
                            #label = 'tab:Comm_Lengths',
                            digits = 0)    
 
@@ -771,7 +771,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of commercial fishery age samples used in the stock assessment.'),
+                           caption = c('Summary of commercial fishery age samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \\ref{fishery-length-and-age-data}.'),
                            label = 'tab:Comm_Ages',
                            digits = 0)    
 # Add alignment  
@@ -802,7 +802,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of at-sea hake fishery length samples used in the stock assessment.'),
+                           caption = c('Summary of at-sea hake fishery length samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \\ref{fishery-length-and-age-data}.'),
                            label = 'tab:ASHOP_Lengths',
                            digits = 0)    
 
@@ -832,7 +832,7 @@ colnames(Fish_Length) = c('Year',
 
 # Index of abundance summary, create table   
 Fish_Length.table = xtable(Fish_Length, 
-                           caption = c('Summary of at-sea hake fishery age samples used in the stock assessment.'),
+                           caption = c('Summary of at-sea hake fishery age samples used in the stock assessment. Sample sizes were calculated according to method described above in Section \\ref{fishery-length-and-age-data}.'),
                            label = 'tab:ASHOP_Ages',
                            digits = 0)    
 # Add alignment  
@@ -925,7 +925,7 @@ colnames(harmonic) = c('Fleet',
 
 # Create sensitivities table
 Harmonic.table = xtable(harmonic, 
-                           caption = c('Data weights applied when using Francis data weighting in the base model.'),
+                           caption = c('Data weights applied when using Francis data weighting in the base model. The data weights were aquired after a single model weighting iteration.'),
                            label = 'tab:francis',
                            digits = 3)
 
@@ -1500,7 +1500,8 @@ Forecast_mod1$Year = as.factor(Forecast_mod1$Year)
 Forecast_mod1.table = xtable(Forecast_mod1,
                              caption = c('Projection of potential
                                          OFL, spawning biomass, and depletion for the
-                                         base case model.'),
+                                         base case model. The removals in 2018 and 2019 
+                                         were set at the defined management specification of 281 mt for each year assuming full attainment.'),
                              label = 'tab:Forecast_mod1',
                              digits = c(0,0,0,0,0,1))
 # Add alignment
@@ -1539,10 +1540,11 @@ print(Forecast_mod1.table,
                                    'Depletion (%)')
       
        decision_mod1.table = xtable(decision_mod1, 
-                                    caption = c(paste('Summary of 10-year 
+                                    caption = c(paste('Decision table summary of 10-year 
                                              projections beginning in ', LastYR+2,' 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. 
+                                             an axis of uncertainty for the base model. The removals in 2018 and 2019 
+                                             were set at the defined management specification of 281 mt for each year assuming full attainment.
                                              Columns range over low, mid, and high
                                              states of nature over natural mortality, and rows range over different 
                                              assumptions of catch levels. An entry of "--" 
