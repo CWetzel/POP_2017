@@ -593,7 +593,7 @@ align(mngmnt.table) = c('l',
                                     caption = c(paste('Decision table summary of 10-year 
                                              projections beginning in ', LastYR+2,' 
                                              for alternate states of nature based on 
-                                             an axis of uncertainty for the base model. The removals in 2018 and 2019 were set at the defined management 
+                                             an axis of uncertainty for the base model. The removals in 2017 and 2018 were set at the defined management 
                                              specification of 281 mt for each year assuming full attainment.
                                              The range of natural mortality values corresponded to the 12.5 and 87.5th quantile
                                              from the uncertainty around final spawning biomass.

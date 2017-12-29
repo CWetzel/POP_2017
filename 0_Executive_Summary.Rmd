@@ -216,7 +216,7 @@ Due to the sensitivity associated with the assessment given the assumed steepnes
 
 ##Research and Data Needs{-} 
 
-There are many areas of research that could be undertaked to benefit the understanding and assessment of `r spp`. Below, are issues that are considered of importance.
+There are many areas of research that could be undertaken to benefit the understanding and assessment of `r spp`. Below, are issues that are considered of importance.
 
 \begin{enumerate}
 
