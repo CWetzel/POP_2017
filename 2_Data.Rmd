@@ -24,7 +24,7 @@ Length compositions were expanded based upon the stratification and the age data
 
 The input sample sizes for length and marginal age-composition data for all fishery-independent surveys were calculated according to Stewart and Hamel [-@stewart_bootstrapping_2014], which determined that the approximate realized sample size for shelf/slope rockfish species was $2.43*N_{\text{tow}}$.  The effective sample size of conditional-age-at-length data was set at the number of fish at each length by sex and by year. The conditional-age-at-length data were not expanded and were binned by according to length, age, sex, and year.
 
-Fish with ages also have an associated length and each type of data have been used in the model. Age data from the NWFSC shelf-slope survey were used as conditional-age-at-length data within the model, which avoids double of the length and age data by explicitly stating the length associatted with each aged fish.  Hence, the length and conditional-age-at-length data from the NWFSC shelf-slope survey were given full weight in likelihood calculations when model fitting. 
+Fish with ages also have an associated length and each type of data have been used in the model. Age data from the NWFSC shelf-slope survey were used as conditional-age-at-length data within the model, which avoids double of the length and age data by explicitly stating the length associated with each aged fish.  Hence, the length and conditional-age-at-length data from the NWFSC shelf-slope survey were given full weight in likelihood calculations when model fitting. 
 
 ###Northwest Fisheries Science Center (NWFSC) Slope Survey  
 

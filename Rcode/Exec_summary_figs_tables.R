@@ -299,7 +299,7 @@ align(Spawn_Deplete_mod1.table) = c('l', 'l',
 
 # Model 1 table
 Recruit_mod1.table = xtable(Recruit_All, 
-                            caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model. The recruitment deviaitons for 2016 and 2017 were fixed at zero within the model.', sep='')),
+                            caption = c(paste('Recent estimated trend in recruitment and estimated recruitment deviations determined from the base model. The recruitment deviations for 2016 and 2017 were fixed at zero within the model.', sep='')),
                             label = 'tab:Recruit_mod1',
                             digits = c(0, 0, 0, 0, 3, 2))
 

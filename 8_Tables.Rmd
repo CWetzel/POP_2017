@@ -925,7 +925,7 @@ colnames(harmonic) = c('Fleet',
 
 # Create sensitivities table
 Harmonic.table = xtable(harmonic, 
-                           caption = c('Data weights applied when using Francis data weighting in the base model. The data weights were aquired after a single model weighting iteration.'),
+                           caption = c('Data weights applied when using Francis data weighting in the base model. The data weights were acquired after a single model weighting iteration.'),
                            label = 'tab:francis',
                            digits = 3)
 
@@ -1500,7 +1500,7 @@ Forecast_mod1$Year = as.factor(Forecast_mod1$Year)
 Forecast_mod1.table = xtable(Forecast_mod1,
                              caption = c('Projection of potential
                                          OFL, spawning biomass, and depletion for the
-                                         base case model. The removals in 2018 and 2019 
+                                         base case model. The removals in 2017 and 2018 
                                          were set at the defined management specification of 281 mt for each year assuming full attainment.'),
                              label = 'tab:Forecast_mod1',
                              digits = c(0,0,0,0,0,1))

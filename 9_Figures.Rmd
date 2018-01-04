@@ -453,7 +453,7 @@ cat('\n![', AALComp_mod1[3,caption_col], ' \\label{fig:weighting_nwfsccombo}](r4
 
 \FloatBarrier
 
-![Time-series of relative spawning outptut (depletion) for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
+![Time-series of relative spawning output (depletion) for model sensitivities for `r spp`. \label{fig:sens2_depl}](Figures/depl_sens2.png)
 
 \FloatBarrier
   

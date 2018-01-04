@@ -67,7 +67,7 @@ There were 163 estimated parameters in the base model. These included one parame
 
 Fixed parameters in the model were as follows. Steepness was fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_BH_steep","Value"],2)`. A sensitivity analysis and a likelihood profile were performed for steepness. Natural mortality was fixed at `r round(mod1$parameters[mod1$parameters$Label == "NatM_p_1_Fem_GP_1","Value"],3)` yr^-1^ for females and males, which is the median of the prior.  The standard deviation of recruitment deviates was fixed at `r print(mod1$parameters[mod1$parameters$Label == "SR_sigmaR","Value"],2)`. Maturity-at-length was fixed as described above in Section \ref{sex-ratio-maturation-and-fecundity}. Length-weight parameters were fixed at estimates using all length-weight observations (Figure \ref{fig:Wt_len_pred}).
 
-Dome-shaped selectivity was explored for all fleets within the model. Older `r spp` are often found in deeper waters and may move into areas that limit their availability to fishing gear, especially trawl gear. The final base model estimated dome-shaped selectivity for only the fishery.  The selectivties for the the at-sea hake fishery and all surveys were estimated asymptotic.
+Dome-shaped selectivity was explored for all fleets within the model. Older `r spp` are often found in deeper waters and may move into areas that limit their availability to fishing gear, especially trawl gear. The final base model estimated dome-shaped selectivity for only the fishery.  The selectivties for the at-sea hake fishery and all surveys were estimated asymptotic.
 
 ##Model Selection and Evaluation
 
@@ -102,7 +102,7 @@ Recommendation: Considering trans-boundary stock effects should be pursued. In p
 
 Recommendation: The benefits of adopting the complex model used this year should be evaluated relative to simpler assumptions and models. While the transition from the simpler old model to Stock Synthesis was shown to be similar for the historical period, the depletion estimates in the most recent years were different enough to warrant further investigation.
 
-*STAT response: This assessment was performed in Stock Synthesis, an integrated model, which can be modified to either simple or complex structural forms based upon the available data and the processes being modeled.  There were not addtional explorations of alternative modeling platforms.*
+*STAT response: This assessment was performed in Stock Synthesis, an integrated model, which can be modified to either simple or complex structural forms based upon the available data and the processes being modeled.  There were not additional explorations of alternative modeling platforms.*
 
 Recommendation: Discard estimates from observer programs should be presented, reviewed (similar to the catch reconstructions), and be made available to the assessment process.
 
@@ -114,7 +114,7 @@ Recommendation: The ability to allow different "plus groups" for specific data t
 
 Recommendation: Historical catch reconstruction estimates should be formally reviewed prior to being used in assessments and should be coordinated so that interactions between stocks are appropriately treated. The relative reliability of the catch estimates over time could provide an axis of uncertainty in future assessments.
 
-*STAT response: California and Oregon have undergone extensive work to create historical catch reconstructions.  This is the first assessment for `r spp` which includes a Washington historical catch reconstruction.  The data used in this assessment represent Washington state's current best estimate for historical catches.  An historical catch reconstruction meeting was held in November of 2016 where states discussed methods and approaches to improve historical catch estimates.  Additionally, both California and Washington are conducting research to estimate uncertainty surrounding historical catches which could be used to propegate uncertainty within the assessment.*
+*STAT response: California and Oregon have undergone extensive work to create historical catch reconstructions.  This is the first assessment for `r spp` which includes a Washington historical catch reconstruction.  The data used in this assessment represent Washington state's current best estimate for historical catches.  An historical catch reconstruction meeting was held in November of 2016 where states discussed methods and approaches to improve historical catch estimates.  Additionally, both California and Washington are conducting research to estimate uncertainty surrounding historical catches which could be used to propagate uncertainty within the assessment.*
 
 ##Response to the 2017 STAR Panel Requests
 The stock assessment review (STAR) panel for this assessment was held at the NWFSC in Seattle, WA from June 26-30, 2017.  David Sampson was the chair, while Norman Hall, Kevin Piner, and Yiota Apostolaki were invited reviewers.  It was a productive and busy review that thoroughly reviewed many facets of the assessments.  As mentioned above, changes to the data used in this assessment were made during the panel.  
@@ -127,7 +127,7 @@ STAR Recommendation: The next iteration of this assessment could be an update as
 
 GFSC Recommendation: Given the considerable uncertainty associated with the assessment, the GFSC recommends that the next assessment be a full assessment.
 
-*STAT response: We agree with the GFSC recommmendation.*
+*STAT response: We agree with the GFSC recommendation.*
 
 Additionally, a number of general recommendations were made for all West Coast assessments: 
 
@@ -155,7 +155,7 @@ Recommendation: Further explore the VAST approach for constructing relative abun
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:model_params} and the likelihood components are shown in Table \ref{tab:like}. Estimates of derived reference points and approximate 95% asymptotic confidence intervals are shown in Table \ref{tab:Ref_pts}. Estimates of stock size over time are shown in Table \ref{tab:Timeseries_mod1}. 
 
 ###Parameter Estimates
-The estimates of maximum length and the von Bertanlaffy growth coefficient, $k$, were less than the the external estimates for males and female but were well within the 95% confidence interval given the estimated uncertainty (Table \ref{tab:model_params}, Figures \ref{fig:sizeatage} and \ref{fig:length_compare}).  The majority of growth for female and male `r spp` growth occurs at younger ages, reaching near maximum length by age 20, with female `r spp` reaching  larger maximum lengths. 
+The estimates of maximum length and the von Bertanlaffy growth coefficient, $k$, were less than the external estimates for males and female but were well within the 95% confidence interval given the estimated uncertainty (Table \ref{tab:model_params}, Figures \ref{fig:sizeatage} and \ref{fig:length_compare}).  The majority of growth for female and male `r spp` growth occurs at younger ages, reaching near maximum length by age 20, with female `r spp` reaching  larger maximum lengths. 
 
 Selectivity curves were estimated for the fishery and survey fleets.  The estimated selectivities for all fleets within the model are shown in Figure \ref{fig:selex}.  The fishery selectivity was estimated to be dome shaped, reaching maximum selectivity for fish between 35 and 40 cm.  A shift in selectivity for the final asymptotic selectivity was estimated for the fishery for prior to the overfished declaration and post (1918-1999 and 2000-2016).  The at-sea hake fishery was estimated to have little selectivity for smaller `r spp` reaching full selectivity at the largest sizes. The foreign fleet for which only catch data are available was assumed to be identical to the main fishery, although a sensitivity was performed (not shown) that mirrored the foreign selectivity to that of the `r spp` survey selectivity resulting in a negligible difference in stock status. Survey selectivities were estimated to be asymptotic during model explorations with the final selectivity forced to be asymptotic in the final base model.   
 
